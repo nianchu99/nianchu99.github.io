@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nianchu.space/"/>
-  <updated>2019-11-28T07:56:58.772Z</updated>
+  <updated>2019-11-28T08:01:24.027Z</updated>
   <id>http://nianchu.space/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://nianchu.space/2019/11/28/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/"/>
     <id>http://nianchu.space/2019/11/28/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</id>
     <published>2019-11-28T07:56:58.772Z</published>
-    <updated>2019-11-28T07:56:58.772Z</updated>
+    <updated>2019-11-28T08:01:24.027Z</updated>
     
     <content type="html"><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><p>##strcmp()</p><h2 id="strchr"><a href="#strchr" class="headerlink" title="strchr()"></a>strchr()</h2><h2 id="strstr"><a href="#strstr" class="headerlink" title="strstr()"></a>strstr()</h2>]]></content>
     
