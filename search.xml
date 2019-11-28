@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>操作字符串的函数</title>
+    <url>/2019/11/28/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><p>##strcmp()</p>
+<h2 id="strchr"><a href="#strchr" class="headerlink" title="strchr()"></a>strchr()</h2><h2 id="strstr"><a href="#strstr" class="headerlink" title="strstr()"></a>strstr()</h2>]]></content>
+  </entry>
+  <entry>
     <title>gets,puts函数</title>
     <url>/2019/11/28/gets,puts%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
