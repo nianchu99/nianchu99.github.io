@@ -15,42 +15,6 @@
       </categories>
   </entry>
   <entry>
-    <title>C/gets,puts函数</title>
-    <url>/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C/操作字符串的函数</title>
-    <url>/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure>
-
-<p><em>输出结果是:</em>  <strong>I love you,999</strong></p>
-<h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Python/Python时间与日期</title>
     <url>/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</url>
     <content><![CDATA[<h1 id="Python时间与日期"><a href="#Python时间与日期" class="headerlink" title="Python时间与日期"></a>Python时间与日期</h1><h2 id="time-模块"><a href="#time-模块" class="headerlink" title="time()模块"></a>time()模块</h2><h3 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h3><blockquote>
@@ -148,6 +112,42 @@
 ]]></content>
       <categories>
         <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C/gets,puts函数</title>
+    <url>/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C/操作字符串的函数</title>
+    <url>/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure>
+
+<p><em>输出结果是:</em>  <strong>I love you,999</strong></p>
+<h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>C语言</category>
       </categories>
   </entry>
   <entry>
