@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nianchu.space/"/>
-  <updated>2019-11-30T14:18:06.202Z</updated>
+  <updated>2019-12-01T10:28:10.089Z</updated>
   <id>http://nianchu.space/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python/Python实例：冒泡排序法</title>
+    <link href="http://nianchu.space/2019/12/01/Python/Python%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E6%B3%95/"/>
+    <id>http://nianchu.space/2019/12/01/Python/Python%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E6%B3%95/</id>
+    <published>2019-12-01T10:28:10.089Z</published>
+    <updated>2019-12-01T10:28:10.089Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">maoPAO</span><span class="params">(sz)</span>:</span></span><br><span class="line">    n = len(sz)    <span class="comment">#用函数len获取数组的长度存储在变量n中</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range (n):             <span class="comment">#用两个循环来执行冒泡排序的步骤</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(n-i<span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> sz[j]&gt;sz[j+<span class="number">1</span>]:</span><br><span class="line">                sz[j],sz[j+<span class="number">1</span>]=sz[j+<span class="number">1</span>],sz[j]</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> range(n):            <span class="comment">#用一个循环，按大小顺序循环输出数组中的数字</span></span><br><span class="line">        print(sz[k])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">first=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">54</span>,<span class="number">43</span>]</span><br><span class="line">maoPAO(first)</span><br><span class="line"><span class="string">'''输出结果为你：</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">4</span></span><br><span class="line"><span class="string">43</span></span><br><span class="line"><span class="string">54'''</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://nianchu.space/categories/Python/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Python/Python实例：简单计算器的实现</title>
