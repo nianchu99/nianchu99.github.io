@@ -222,6 +222,77 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/" class="post-title-link" itemprop="url">C/C语言实例：随机数生成</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-12-02 13:03:00 / 修改时间：13:06:51" itemprop="dateCreated datePublished" datetime="2019-12-02T13:03:00+08:00">2019-12-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="C语言实例之随机数生成"><a href="#C语言实例之随机数生成" class="headerlink" title="C语言实例之随机数生成"></a>C语言实例之随机数生成</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*rand函数用来产生随机数，但是rand（）的内部是用线性同余法实现的，是伪随机数。在调用rand函数之前，可以使用srand函数设置随机数种子，如果没有设置随机数种子，rand函数在调用时，自动设计随机种子为1.随机种子相同，每次产生的随机数都是相同的，这就是为什么叫做伪随机数。*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span><span class="comment">//rand函数的头文件为：stdlib.h</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span><span class="comment">//strand()函数需要的参数为seed，通常利用time(0)的返回值作为seed。time.h是time的头文件</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    srand((<span class="keyword">int</span>)time(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">int</span> SJ[<span class="number">5</span>];<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        SJ[i]=rand()&amp;<span class="number">101</span>; <span class="comment">//获取0到100的随机数，包括100</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,SJ[i]);</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 100</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 5</span></span><br><span class="line"><span class="comment"> 32</span></span><br><span class="line"><span class="comment"> 这样就完成了随机数的输出</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/12/01/Python/Python%E5%AE%9E%E4%BE%8B%EF%BC%9A%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -473,7 +544,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -487,7 +558,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">Python/Python列表操作</a>
+            <a href="/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C/操作字符串的函数</a>
         </h1>
 
         <div class="post-meta">
@@ -496,24 +567,18 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-11-28 11:26:00" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+              <time title="创建时间：2019-11-28 11:26:00 / 修改时间：23:27:50" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-29 09:10:02" itemprop="dateModified" datetime="2019-11-29T09:10:02+08:00">2019-11-29</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
                   </a>
                 </span>
             </span>
@@ -529,15 +594,94 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="list操作"><a href="#list操作" class="headerlink" title="list操作"></a>list操作</h1><h2 id="索引及负数索引"><a href="#索引及负数索引" class="headerlink" title="索引及负数索引"></a>索引及负数索引</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#执行索引输出列表</span></span><br><span class="line">print(a[<span class="number">1</span>])</span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">3</span>])</span><br><span class="line">print(a[<span class="number">-1</span>])</span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">-1</span>])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''love</span></span><br><span class="line"><span class="string">['i', 'love', 'you']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['love']'''</span></span><br></pre></td></tr></table></figure>
+          <h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="元素的增加"><a href="#元素的增加" class="headerlink" title="元素的增加"></a>元素的增加</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">a.append(<span class="string">"999"</span>)<span class="comment">#尾部➕1</span></span><br><span class="line">print(a[:])</span><br><span class="line">a.insert(<span class="number">4</span>,<span class="string">'very much!'</span>)<span class="comment">#指定位置➕</span></span><br><span class="line">print(a[:])</span><br><span class="line">a.extend([<span class="string">"do"</span>,<span class="string">'you know'</span>])<span class="comment">#尾部➕2***注意extend的使用格式***</span></span><br><span class="line">print(a[:])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love', 'you', '999']</span></span><br><span class="line"><span class="string">['i', 'love', 'you', '999', 'very much!']</span></span><br><span class="line"><span class="string">['i', 'love', 'you', '999', 'very much!', 'do', 'you know']</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="元素的搜索"><a href="#元素的搜索" class="headerlink" title="元素的搜索"></a>元素的搜索</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用index对列表中的元素进行搜索，返回的是搜索元素在列表中的序号</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">print(a.index(<span class="string">'you'</span>))</span><br><span class="line"><span class="comment">#输出结果是：</span></span><br><span class="line"><span class="string">'''2</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p><em>输出结果是:</em>  <strong>I love you,999</strong></p>
+<h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="元素的删除"><a href="#元素的删除" class="headerlink" title="元素的删除"></a>元素的删除</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#remove方法</span></span><br><span class="line">a.remove(<span class="string">'you'</span>)<span class="comment">#如果列表中有多个"you"，则会删除第一个</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#pop方法</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">print(a.pop())<span class="comment">#执行pop方法的同时输出会输出被删掉的最后一个元素</span></span><br><span class="line">print(a)<span class="comment">#再次输出原有列表发现列表已经改变</span></span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['i', 'love']'''</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="列表的运算"><a href="#列表的运算" class="headerlink" title="列表的运算"></a>列表的运算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#注意只支持+和*</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">b =[<span class="string">'you'</span>,<span class="string">'!'</span>]</span><br><span class="line">c=[<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>]</span><br><span class="line">d = [<span class="string">'you'</span>]</span><br><span class="line">print(a+b)</span><br><span class="line">print(c*<span class="number">2</span>)</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love', 'you', 'you', '!']</span></span><br><span class="line"><span class="string">[2, 2, 2, 2, 2, 2]'''</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C/gets,puts函数</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-28 11:26:00 / 修改时间：14:18:56" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
       
@@ -707,7 +851,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -721,7 +865,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C/gets,puts函数</a>
+            <a href="/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">Python/Python列表操作</a>
         </h1>
 
         <div class="post-meta">
@@ -730,18 +874,24 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-28 11:26:00 / 修改时间：14:18:56" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+              <time title="创建时间：2019-11-28 11:26:00" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-29 09:10:02" itemprop="dateModified" datetime="2019-11-29T09:10:02+08:00">2019-11-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
-                    <span itemprop="name">C语言</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
             </span>
@@ -757,94 +907,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="list操作"><a href="#list操作" class="headerlink" title="list操作"></a>list操作</h1><h2 id="索引及负数索引"><a href="#索引及负数索引" class="headerlink" title="索引及负数索引"></a>索引及负数索引</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#执行索引输出列表</span></span><br><span class="line">print(a[<span class="number">1</span>])</span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">3</span>])</span><br><span class="line">print(a[<span class="number">-1</span>])</span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">-1</span>])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''love</span></span><br><span class="line"><span class="string">['i', 'love', 'you']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['love']'''</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="元素的增加"><a href="#元素的增加" class="headerlink" title="元素的增加"></a>元素的增加</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">a.append(<span class="string">"999"</span>)<span class="comment">#尾部➕1</span></span><br><span class="line">print(a[:])</span><br><span class="line">a.insert(<span class="number">4</span>,<span class="string">'very much!'</span>)<span class="comment">#指定位置➕</span></span><br><span class="line">print(a[:])</span><br><span class="line">a.extend([<span class="string">"do"</span>,<span class="string">'you know'</span>])<span class="comment">#尾部➕2***注意extend的使用格式***</span></span><br><span class="line">print(a[:])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love', 'you', '999']</span></span><br><span class="line"><span class="string">['i', 'love', 'you', '999', 'very much!']</span></span><br><span class="line"><span class="string">['i', 'love', 'you', '999', 'very much!', 'do', 'you know']</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="元素的搜索"><a href="#元素的搜索" class="headerlink" title="元素的搜索"></a>元素的搜索</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用index对列表中的元素进行搜索，返回的是搜索元素在列表中的序号</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">print(a.index(<span class="string">'you'</span>))</span><br><span class="line"><span class="comment">#输出结果是：</span></span><br><span class="line"><span class="string">'''2</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="元素的删除"><a href="#元素的删除" class="headerlink" title="元素的删除"></a>元素的删除</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#remove方法</span></span><br><span class="line">a.remove(<span class="string">'you'</span>)<span class="comment">#如果列表中有多个"you"，则会删除第一个</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#pop方法</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">print(a.pop())<span class="comment">#执行pop方法的同时输出会输出被删掉的最后一个元素</span></span><br><span class="line">print(a)<span class="comment">#再次输出原有列表发现列表已经改变</span></span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['i', 'love']'''</span></span><br></pre></td></tr></table></figure>
 
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C/操作字符串的函数</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-11-28 11:26:00 / 修改时间：23:27:50" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
-                    <span itemprop="name">C语言</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure>
-
-<p><em>输出结果是:</em>  <strong>I love you,999</strong></p>
-<h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
+<h2 id="列表的运算"><a href="#列表的运算" class="headerlink" title="列表的运算"></a>列表的运算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#注意只支持+和*</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">b =[<span class="string">'you'</span>,<span class="string">'!'</span>]</span><br><span class="line">c=[<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>]</span><br><span class="line">d = [<span class="string">'you'</span>]</span><br><span class="line">print(a+b)</span><br><span class="line">print(c*<span class="number">2</span>)</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love', 'you', 'you', '!']</span></span><br><span class="line"><span class="string">[2, 2, 2, 2, 2, 2]'''</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -1105,88 +1176,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/26/tensorflow/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/26/tensorflow/" class="post-title-link" itemprop="url">简单代码证明tensorflow安装且配置成功</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-26 18:08:00" itemprop="dateCreated datePublished" datetime="2019-11-26T18:08:00+08:00">2019-11-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-27 06:55:53" itemprop="dateModified" datetime="2019-11-27T06:55:53+08:00">2019-11-27</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tensorflow/" itemprop="url" rel="index">
-                    <span itemprop="name">Tensorflow</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>为了验证Tensorflow是否正确安装，我躺了很多的坑，因为下载了最新版本的tensorflow—<br>2.0，导致很多之前版本的方法都用不了，而网上那些代码大多是老版本的，所以一直报错。最后找到了2.0的教程，终于证实了自己已经正确安装。</p>
-<p>如果有时间，我可以考虑写一篇教程，帮助大家少走弯路。</p>
-<p>#这是第一个成功实现的tensorflow-2.0;</p>
-<p>i</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras <span class="keyword">import</span> layers</span><br><span class="line">print(tf.__version__)</span><br><span class="line">print(tf.keras.__version__)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1235,7 +1224,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1301,7 +1290,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18k字</span>
+  <span class="post-count">博客全站共18.2k字</span>
 </div>
 
         
