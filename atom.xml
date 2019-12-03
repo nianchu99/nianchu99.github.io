@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nianchu.space/"/>
-  <updated>2019-12-02T06:23:06.085Z</updated>
+  <updated>2019-12-03T03:11:42.365Z</updated>
   <id>http://nianchu.space/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tensorflow之自动求导实现</title>
+    <link href="http://nianchu.space/2019/12/26/Tensorflow/Tensorflow%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E5%AE%9E%E7%8E%B0/"/>
+    <id>http://nianchu.space/2019/12/26/Tensorflow/Tensorflow%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E5%AE%9E%E7%8E%B0/</id>
+    <published>2019-12-26T03:03:00.000Z</published>
+    <updated>2019-12-03T03:11:42.365Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自动求导机制</span></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf </span><br><span class="line"><span class="comment">#tf.Variable()用于声明一个变量，它需要一个初始值将其存储在initial_value中。</span></span><br><span class="line">x = tf.Variable(initial_value=<span class="number">3.</span>)<span class="comment">#Pyhon中可以使用整数后加小数点表示将该整数定义为浮点数类型。例如3.表示3.0</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> tape: </span><br><span class="line">    y = tf.math.log(x)<span class="comment">#这里math.log()表示的是底数为e(只是默认为e，可以修改)的对数函数，类似的，如果要计算y=x的平方的导数，将math.log()改为square即可</span></span><br><span class="line">y_grad = tape.gradient(y,x)</span><br><span class="line">print([y,y_grad])</span><br><span class="line"><span class="string">'''输出结果为：</span></span><br><span class="line"><span class="string">[&lt;tf.Tensor: id=93, shape=(), dtype=float32, numpy=1.0986123&gt;, &lt;tf.Tensor: id=96, shape=(), dtype=float32, numpy=0.33333334&gt;]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+      <category term="Tensorflow" scheme="http://nianchu.space/categories/Tensorflow/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>C/C语言之神奇代码</title>
@@ -137,30 +161,6 @@
   </entry>
   
   <entry>
-    <title>C/操作字符串的函数</title>
-    <link href="http://nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/"/>
-    <id>http://nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</id>
-    <published>2019-11-28T03:26:00.000Z</published>
-    <updated>2019-11-28T15:27:50.914Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure><h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure><p><em>输出结果是:</em>  <strong>I love you,999</strong></p><h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;操作字符串的函数&quot;&gt;&lt;a href=&quot;#操作字符串的函数&quot; class=&quot;headerlink&quot; title=&quot;操作字符串的函数&quot;&gt;&lt;/a&gt;操作字符串的函数&lt;/h1&gt;&lt;h2 id=&quot;strcpy&quot;&gt;&lt;a href=&quot;#strcpy&quot; class=&quot;headerli
-      
-    
-    </summary>
-    
-    
-      <category term="C语言" scheme="http://nianchu.space/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>C/gets,puts函数</title>
     <link href="http://nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/"/>
     <id>http://nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/</id>
@@ -174,6 +174,30 @@
       
       
         &lt;h1 id=&quot;gets-puts-函数&quot;&gt;&lt;a href=&quot;#gets-puts-函数&quot; class=&quot;headerlink&quot; title=&quot;gets(),puts()函数&quot;&gt;&lt;/a&gt;gets(),puts()函数&lt;/h1&gt;&lt;p&gt;使用gets(),puts()函数实现字符串的输
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="http://nianchu.space/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C/操作字符串的函数</title>
+    <link href="http://nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/"/>
+    <id>http://nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</id>
+    <published>2019-11-28T03:26:00.000Z</published>
+    <updated>2019-11-28T15:27:50.914Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure><h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure><p><em>输出结果是:</em>  <strong>I love you,999</strong></p><h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;操作字符串的函数&quot;&gt;&lt;a href=&quot;#操作字符串的函数&quot; class=&quot;headerlink&quot; title=&quot;操作字符串的函数&quot;&gt;&lt;/a&gt;操作字符串的函数&lt;/h1&gt;&lt;h2 id=&quot;strcpy&quot;&gt;&lt;a href=&quot;#strcpy&quot; class=&quot;headerli
       
     
     </summary>
@@ -284,8 +308,8 @@
   
   <entry>
     <title>简单代码证明tensorflow安装且配置成功</title>
-    <link href="http://nianchu.space/2019/11/26/tensorflow/"/>
-    <id>http://nianchu.space/2019/11/26/tensorflow/</id>
+    <link href="http://nianchu.space/2019/11/26/Tensorflow/tensorflow/"/>
+    <id>http://nianchu.space/2019/11/26/Tensorflow/tensorflow/</id>
     <published>2019-11-26T10:08:00.000Z</published>
     <updated>2019-11-26T22:55:53.062Z</updated>
     
