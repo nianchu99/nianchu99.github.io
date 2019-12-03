@@ -222,6 +222,155 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/" class="post-title-link" itemprop="url">Python/Python时间与日期</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-28 11:26:00" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-29 00:54:22" itemprop="dateModified" datetime="2019-11-29T00:54:22+08:00">2019-11-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Python时间与日期"><a href="#Python时间与日期" class="headerlink" title="Python时间与日期"></a>Python时间与日期</h1><h2 id="time-模块"><a href="#time-模块" class="headerlink" title="time()模块"></a>time()模块</h2><h3 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h3><blockquote>
+<p>时间间隔是以秒为单位的浮点小数。</p>
+</blockquote>
+<blockquote>
+<p>每个时间戳都以自从1970年1月1日午夜（历元）经过了多长时间来表示。</p>
+</blockquote>
+<p><strong>输出当前时间戳</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time <span class="keyword">as</span> ti</span><br><span class="line">now = ti.time()</span><br><span class="line">print(now)</span><br><span class="line"><span class="comment">#当前时间2019/11/28 23:55</span></span><br><span class="line"><span class="comment">#输出结果为</span></span><br><span class="line"><span class="comment">#1574956554.693932</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="获取当前时间"><a href="#获取当前时间" class="headerlink" title="获取当前时间"></a>获取当前时间</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time <span class="keyword">as</span> ti<span class="comment">#导入time模块</span></span><br><span class="line">Localtime=ti.localtime(ti.time())<span class="comment">#将当前时间戳的浮点数传递给localtime函数</span></span><br><span class="line">print(Localtime)<span class="comment">#输出当前时间</span></span><br><span class="line"><span class="comment">#输出结果：</span></span><br><span class="line"><span class="comment">#time.struct_time(tm_year=2019, tm_mon=11, tm_mday=29, tm_hour=0, tm_min=33, tm_sec=7, tm_wday=4, tm_yday=333, tm_isdst=0)</span></span><br><span class="line"><span class="comment">#当前时间是以时间元组方式输出的，下面会讲到时间元组</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="时间元组"><a href="#时间元组" class="headerlink" title="时间元组"></a>时间元组</h4><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>属性</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>tm_year</td>
+<td>2008</td>
+</tr>
+<tr>
+<td>1</td>
+<td>tm_mon</td>
+<td>1到12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>tm_mday</td>
+<td>1到31</td>
+</tr>
+<tr>
+<td>3</td>
+<td>tm_hour</td>
+<td>0到23</td>
+</tr>
+<tr>
+<td>4</td>
+<td>tm_min</td>
+<td>0到59</td>
+</tr>
+<tr>
+<td>5</td>
+<td>tm_sec</td>
+<td>0到61</td>
+</tr>
+<tr>
+<td>6</td>
+<td>tm_wday</td>
+<td>0到6(周一是0)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>tm_yday</td>
+<td>1到366</td>
+</tr>
+<tr>
+<td>8</td>
+<td>tm_isdst</td>
+<td>-1,0,1,-1是决定是否为夏令时的旗帜</td>
+</tr>
+</tbody></table>
+<h3 id="获取格式化时间"><a href="#获取格式化时间" class="headerlink" title="获取格式化时间"></a>获取格式化时间</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用了asctime()函数</span></span><br><span class="line"><span class="keyword">import</span> time <span class="keyword">as</span> ti</span><br><span class="line">now=ti.asctime(ti.localtime(ti.time()))</span><br><span class="line">print(now)</span><br><span class="line"><span class="comment">#输出结果是：</span></span><br><span class="line"><span class="comment"># Fri Nov 29 00:37:59 2019</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Calender-模块"><a href="#Calender-模块" class="headerlink" title="Calender()模块"></a>Calender()模块</h2><h3 id="获取某月月历"><a href="#获取某月月历" class="headerlink" title="获取某月月历"></a>获取某月月历</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> calendar <span class="keyword">as</span> ca</span><br><span class="line"><span class="comment">#使用了calenda模块</span></span><br><span class="line">yue = ca.month(<span class="number">2019</span>,<span class="number">11</span>)<span class="comment">#前面是年份，后面是月份</span></span><br><span class="line">print(<span class="string">"以下是2019年11月的月历"</span>)</span><br><span class="line">print(yue)</span><br><span class="line"><span class="comment">#输出结果是：</span></span><br><span class="line"><span class="string">'''以下是2019年11月的月历</span></span><br><span class="line"><span class="string">   November 2019</span></span><br><span class="line"><span class="string">Mo Tu We Th Fr Sa Su</span></span><br><span class="line"><span class="string">             1  2  3</span></span><br><span class="line"><span class="string"> 4  5  6  7  8  9 10</span></span><br><span class="line"><span class="string">11 12 13 14 15 16 17</span></span><br><span class="line"><span class="string">18 19 20 21 22 23 24</span></span><br><span class="line"><span class="string">25 26 27 28 29 30</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Process finished with exit code 0'''</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>time模块具体配置请参考Python官方文档。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%BA%94%E7%AB%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1072,87 +1221,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/24/%E9%A9%AC%E4%B8%81%C2%B7%E8%B7%AF%E5%BE%B7%E9%87%91%E8%AF%B4%EF%BC%9A%E2%80%9C%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A2%A6%E6%83%B3%EF%BC%8C%E6%88%91%E4%B9%9F%E4%B8%80%E6%A0%B7%E3%80%82%E2%80%9D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/24/%E9%A9%AC%E4%B8%81%C2%B7%E8%B7%AF%E5%BE%B7%E9%87%91%E8%AF%B4%EF%BC%9A%E2%80%9C%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A2%A6%E6%83%B3%EF%BC%8C%E6%88%91%E4%B9%9F%E4%B8%80%E6%A0%B7%E3%80%82%E2%80%9D/" class="post-title-link" itemprop="url">起航</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-24 00:00:00" itemprop="dateCreated datePublished" datetime="2019-11-24T00:00:00+08:00">2019-11-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-25 21:46:41" itemprop="dateModified" datetime="2019-11-25T21:46:41+08:00">2019-11-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AI/" itemprop="url" rel="index">
-                    <span itemprop="name">AI</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>马丁·路德金说：“每个人都有自己的梦想，我也一样。”<br>AI之路崎岖异常，我用努力做武器。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1196,7 +1269,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1262,7 +1335,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共18.5k字</span>
+  <span class="post-count">博客全站共19.3k字</span>
 </div>
 
         
