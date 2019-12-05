@@ -45,7 +45,7 @@
     <link href="http://nianchu.space/2019/12/03/Python/%E6%9C%AA%E5%91%BD%E5%90%8D/"/>
     <id>http://nianchu.space/2019/12/03/Python/%E6%9C%AA%E5%91%BD%E5%90%8D/</id>
     <published>2019-12-03T09:15:00.000Z</published>
-    <updated>2019-12-03T09:22:15.975Z</updated>
+    <updated>2019-12-03T09:22:15.000Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字符串相加</span></span><br><span class="line">a=<span class="string">"Hello world! "</span></span><br><span class="line">b=<span class="string">"I love you !"</span></span><br><span class="line">print(a+b)</span><br><span class="line"><span class="string">'''输出结果为：Hello world! I love you !'''</span></span><br><span class="line"><span class="comment">#字符串乘法</span></span><br><span class="line">print(a*<span class="number">3</span>)</span><br><span class="line"><span class="comment">#判断特定字符是否在字符串中</span></span><br><span class="line">print(<span class="string">'o'</span> <span class="keyword">in</span> a)</span><br><span class="line">print(<span class="string">'R'</span> <span class="keyword">in</span> a)</span><br><span class="line"><span class="comment">#字符串索引</span></span><br><span class="line">print(a[<span class="number">0</span>])<span class="comment">#输出H</span></span><br><span class="line"><span class="comment">#使用索引输出部分字符串</span></span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">5</span>])</span><br><span class="line"><span class="comment">#输出H,需要注意的是索引冒号后面的表示到这个数之前位置，也就是只输出到它之前的那个数字</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -60,6 +60,31 @@
     
     
       <category term="Python" scheme="http://nianchu.space/categories/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C/C语言两个数交换的两种方法</title>
+    <link href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/"/>
+    <id>http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</id>
+    <published>2019-12-02T05:03:00.000Z</published>
+    <updated>2019-12-05T03:03:42.178Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p><em>由于函数传递时实参无法改变，所以使用了全局变量来完成</em></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    c=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    a=<span class="number">3</span>;</span><br><span class="line">    b=<span class="number">2</span>;</span><br><span class="line">    jiaoHUAN(a, b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment">a:2,b:3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure><h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p><em>使用数组，从而避免使用了全局变量</em></p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a[<span class="number">2</span>])</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> zhongjian;</span><br><span class="line">    zhongjian=a[<span class="number">0</span>];</span><br><span class="line">    a[<span class="number">0</span>]=a[<span class="number">1</span>];</span><br><span class="line">    a[<span class="number">1</span>]=zhongjian;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a[<span class="number">0</span>],a[<span class="number">1</span>]);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b[<span class="number">2</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    jiaoHUAN(b);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> a:2,b:3</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h1&gt;&lt;p&gt;&lt;em&gt;由于函数传递时实参无法改变，所以使用了全局变量来完成&lt;/em&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight c
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="http://nianchu.space/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
   </entry>
@@ -92,30 +117,6 @@
   </entry>
   
   <entry>
-    <title>C/C语言实例：随机数生成</title>
-    <link href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/"/>
-    <id>http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/</id>
-    <published>2019-12-02T05:03:00.000Z</published>
-    <updated>2019-12-02T05:06:51.939Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="C语言实例之随机数生成"><a href="#C语言实例之随机数生成" class="headerlink" title="C语言实例之随机数生成"></a>C语言实例之随机数生成</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*rand函数用来产生随机数，但是rand（）的内部是用线性同余法实现的，是伪随机数。在调用rand函数之前，可以使用srand函数设置随机数种子，如果没有设置随机数种子，rand函数在调用时，自动设计随机种子为1.随机种子相同，每次产生的随机数都是相同的，这就是为什么叫做伪随机数。*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span><span class="comment">//rand函数的头文件为：stdlib.h</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span><span class="comment">//strand()函数需要的参数为seed，通常利用time(0)的返回值作为seed。time.h是time的头文件</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    srand((<span class="keyword">int</span>)time(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">int</span> SJ[<span class="number">5</span>];<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        SJ[i]=rand()&amp;<span class="number">101</span>; <span class="comment">//获取0到100的随机数，包括100</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,SJ[i]);</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 100</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 5</span></span><br><span class="line"><span class="comment"> 32</span></span><br><span class="line"><span class="comment"> 这样就完成了随机数的输出</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;C语言实例之随机数生成&quot;&gt;&lt;a href=&quot;#C语言实例之随机数生成&quot; class=&quot;headerlink&quot; title=&quot;C语言实例之随机数生成&quot;&gt;&lt;/a&gt;C语言实例之随机数生成&lt;/h1&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;t
-      
-    
-    </summary>
-    
-    
-      <category term="C语言" scheme="http://nianchu.space/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>C/C语言之神奇代码</title>
     <link href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B9%8B%E7%A5%9E%E5%A5%87%E4%BB%A3%E7%A0%81/"/>
     <id>http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B9%8B%E7%A5%9E%E5%A5%87%E4%BB%A3%E7%A0%81/</id>
@@ -129,6 +130,30 @@
       
       
         &lt;h1 id=&quot;C语言之神奇代码&quot;&gt;&lt;a href=&quot;#C语言之神奇代码&quot; class=&quot;headerlink&quot; title=&quot;C语言之神奇代码&quot;&gt;&lt;/a&gt;C语言之神奇代码&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;声明：这是网上看到的，还没去弄清楚是什么原理，就先放在这里吧！&lt;/stron
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="http://nianchu.space/categories/C%E8%AF%AD%E8%A8%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C/C语言实例：随机数生成</title>
+    <link href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/"/>
+    <id>http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/</id>
+    <published>2019-12-02T05:03:00.000Z</published>
+    <updated>2019-12-02T05:06:51.939Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="C语言实例之随机数生成"><a href="#C语言实例之随机数生成" class="headerlink" title="C语言实例之随机数生成"></a>C语言实例之随机数生成</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*rand函数用来产生随机数，但是rand（）的内部是用线性同余法实现的，是伪随机数。在调用rand函数之前，可以使用srand函数设置随机数种子，如果没有设置随机数种子，rand函数在调用时，自动设计随机种子为1.随机种子相同，每次产生的随机数都是相同的，这就是为什么叫做伪随机数。*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span><span class="comment">//rand函数的头文件为：stdlib.h</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span><span class="comment">//strand()函数需要的参数为seed，通常利用time(0)的返回值作为seed。time.h是time的头文件</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    srand((<span class="keyword">int</span>)time(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">int</span> SJ[<span class="number">5</span>];<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        SJ[i]=rand()&amp;<span class="number">101</span>; <span class="comment">//获取0到100的随机数，包括100</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,SJ[i]);</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 100</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 5</span></span><br><span class="line"><span class="comment"> 32</span></span><br><span class="line"><span class="comment"> 这样就完成了随机数的输出</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;C语言实例之随机数生成&quot;&gt;&lt;a href=&quot;#C语言实例之随机数生成&quot; class=&quot;headerlink&quot; title=&quot;C语言实例之随机数生成&quot;&gt;&lt;/a&gt;C语言实例之随机数生成&lt;/h1&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;t
       
     
     </summary>
@@ -260,30 +285,6 @@
   </entry>
   
   <entry>
-    <title>C/gets,puts函数</title>
-    <link href="http://nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/"/>
-    <id>http://nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/</id>
-    <published>2019-11-28T03:26:00.000Z</published>
-    <updated>2019-11-28T06:18:56.004Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;gets-puts-函数&quot;&gt;&lt;a href=&quot;#gets-puts-函数&quot; class=&quot;headerlink&quot; title=&quot;gets(),puts()函数&quot;&gt;&lt;/a&gt;gets(),puts()函数&lt;/h1&gt;&lt;p&gt;使用gets(),puts()函数实现字符串的输
-      
-    
-    </summary>
-    
-    
-      <category term="C语言" scheme="http://nianchu.space/categories/C%E8%AF%AD%E8%A8%80/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Python/Python时间与日期</title>
     <link href="http://nianchu.space/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/"/>
     <id>http://nianchu.space/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/</id>
@@ -303,6 +304,30 @@
     
     
       <category term="Python" scheme="http://nianchu.space/categories/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>C/gets,puts函数</title>
+    <link href="http://nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/"/>
+    <id>http://nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/</id>
+    <published>2019-11-28T03:26:00.000Z</published>
+    <updated>2019-11-28T06:18:56.004Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;gets-puts-函数&quot;&gt;&lt;a href=&quot;#gets-puts-函数&quot; class=&quot;headerlink&quot; title=&quot;gets(),puts()函数&quot;&gt;&lt;/a&gt;gets(),puts()函数&lt;/h1&gt;&lt;p&gt;使用gets(),puts()函数实现字符串的输
+      
+    
+    </summary>
+    
+    
+      <category term="C语言" scheme="http://nianchu.space/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
   </entry>
@@ -481,39 +506,6 @@
     
     
       <category term="小说（一）" scheme="http://nianchu.space/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>除了文艺，我一无所有</title>
-    <link href="http://nianchu.space/2019/11/25/%E6%96%87%E8%89%BA%E8%AF%97/"/>
-    <id>http://nianchu.space/2019/11/25/%E6%96%87%E8%89%BA%E8%AF%97/</id>
-    <published>2019-11-25T13:48:00.000Z</published>
-    <updated>2019-11-25T13:48:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a><p>除了文艺，我一无所有</p><p>（nianchu）</p><p>月光柔和</p><p>我在阴冷的窗前独酌</p><p>那婀娜的身影</p><p>是在等待谁的思念？</p><p>眼神迷离</p><p>年少的人儿在心中哭泣</p><p>这样的宿命</p><p>何时是个尽头？</p><p>翻开泛黄的书卷</p><p>走进心灵的旅程</p><p>灵魂深处本不该有孤寂的烟火</p><p>这条熟悉的路上</p><p>开着鲜艳的花朵</p><p>我心中念叨着的那</p><p>些荣耀的时刻</p><p>可怜如今的我</p><p>除了文艺</p><p>不剩什么</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-&lt;p&gt;除了文艺，我一无所有&lt;/p&gt;
-&lt;p&gt;（nianchu）&lt;/p&gt;
-&lt;p&gt;月光柔和&lt;/p&gt;
-&lt;p&gt;我在阴冷的窗前独酌&lt;/p&gt;
-&lt;p&gt;那婀娜的身影&lt;/p&gt;
-&lt;p&gt;是在等待谁的思念？&lt;/p&gt;
-&lt;p&gt;眼神迷离&lt;/p&gt;
-&lt;p&gt;年少的人儿在心中哭泣&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="文艺" scheme="http://nianchu.space/categories/%E6%96%87%E8%89%BA/"/>
     
     
   </entry>

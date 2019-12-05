@@ -49,17 +49,17 @@
   };
 </script>
 
-  <meta name="description" content="list操作索引及负数索引1234567891011a = [&amp;apos;i&amp;apos;,&amp;apos;love&amp;apos;,&amp;apos;you&amp;apos;]#执行索引输出列表print(a[1])print(a[0:3])print(a[-1])print(a[1:-1])#输出结果为：&amp;apos;&amp;apos;&amp;apos;love[&amp;apos;i&amp;apos;, &amp;apos;love&amp;apos;, &amp;apos;you&amp;apos;]you[&amp;apos;love&amp;apos;]&amp;apos;&amp;apos;&amp;apos;  元素的增加123456789101112a = [&amp;apos;i&amp;apos;,&amp;apos;love&amp;apos;,&amp;apos;you&amp;apos;]a">
+  <meta name="description" content="方法一由于函数传递时实参无法改变，所以使用了全局变量来完成 123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;int a,b;void jiaoHUAN(int a,int b)&amp;#123;    int c;    c=a;    a=b;    b=c;    printf(&quot;a:%d,b:%d\n&quot;,a,b);&amp;#125;int">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python&#x2F;Python列表操作">
-<meta property="og:url" content="http:&#x2F;&#x2F;nianchu.space&#x2F;2019&#x2F;11&#x2F;28&#x2F;Python&#x2F;Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C&#x2F;index.html">
+<meta property="og:title" content="C&#x2F;C语言两个数交换的两种方法">
+<meta property="og:url" content="http:&#x2F;&#x2F;nianchu.space&#x2F;2019&#x2F;12&#x2F;02&#x2F;C&#x2F;C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
-<meta property="og:description" content="list操作索引及负数索引1234567891011a = [&amp;apos;i&amp;apos;,&amp;apos;love&amp;apos;,&amp;apos;you&amp;apos;]#执行索引输出列表print(a[1])print(a[0:3])print(a[-1])print(a[1:-1])#输出结果为：&amp;apos;&amp;apos;&amp;apos;love[&amp;apos;i&amp;apos;, &amp;apos;love&amp;apos;, &amp;apos;you&amp;apos;]you[&amp;apos;love&amp;apos;]&amp;apos;&amp;apos;&amp;apos;  元素的增加123456789101112a = [&amp;apos;i&amp;apos;,&amp;apos;love&amp;apos;,&amp;apos;you&amp;apos;]a">
+<meta property="og:description" content="方法一由于函数传递时实参无法改变，所以使用了全局变量来完成 123456789101112131415161718192021#include &amp;lt;stdio.h&amp;gt;int a,b;void jiaoHUAN(int a,int b)&amp;#123;    int c;    c=a;    a=b;    b=c;    printf(&quot;a:%d,b:%d\n&quot;,a,b);&amp;#125;int">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-29T01:10:02.214Z">
+<meta property="og:updated_time" content="2019-12-05T03:03:42.178Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://nianchu.space/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/">
+<link rel="canonical" href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -73,7 +73,7 @@
   };
 </script>
 
-  <title>Python/Python列表操作 | nianchu-Blog</title>
+  <title>C/C语言两个数交换的两种方法 | nianchu-Blog</title>
   
 
 
@@ -225,7 +225,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -238,7 +238,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python/Python列表操作
+          C/C语言两个数交换的两种方法
         </h1>
 
         <div class="post-meta">
@@ -248,14 +248,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-11-28 11:26:00" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+              <time title="创建时间：2019-12-02 13:03:00" itemprop="dateCreated datePublished" datetime="2019-12-02T13:03:00+08:00">2019-12-02</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-29 09:10:02" itemprop="dateModified" datetime="2019-11-29T09:10:02+08:00">2019-11-29</time>
+                <time title="修改时间：2019-12-05 11:03:42" itemprop="dateModified" datetime="2019-12-05T11:03:42+08:00">2019-12-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -263,8 +263,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
                   </a>
                 </span>
             </span>
@@ -287,15 +287,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="list操作"><a href="#list操作" class="headerlink" title="list操作"></a>list操作</h1><h2 id="索引及负数索引"><a href="#索引及负数索引" class="headerlink" title="索引及负数索引"></a>索引及负数索引</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#执行索引输出列表</span></span><br><span class="line">print(a[<span class="number">1</span>])</span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">3</span>])</span><br><span class="line">print(a[<span class="number">-1</span>])</span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">-1</span>])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''love</span></span><br><span class="line"><span class="string">['i', 'love', 'you']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['love']'''</span></span><br></pre></td></tr></table></figure>
+        <h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p><em>由于函数传递时实参无法改变，所以使用了全局变量来完成</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    c=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    a=<span class="number">3</span>;</span><br><span class="line">    b=<span class="number">2</span>;</span><br><span class="line">    jiaoHUAN(a, b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment">a:2,b:3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="元素的增加"><a href="#元素的增加" class="headerlink" title="元素的增加"></a>元素的增加</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">a.append(<span class="string">"999"</span>)<span class="comment">#尾部➕1</span></span><br><span class="line">print(a[:])</span><br><span class="line">a.insert(<span class="number">4</span>,<span class="string">'very much!'</span>)<span class="comment">#指定位置➕</span></span><br><span class="line">print(a[:])</span><br><span class="line">a.extend([<span class="string">"do"</span>,<span class="string">'you know'</span>])<span class="comment">#尾部➕2***注意extend的使用格式***</span></span><br><span class="line">print(a[:])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love', 'you', '999']</span></span><br><span class="line"><span class="string">['i', 'love', 'you', '999', 'very much!']</span></span><br><span class="line"><span class="string">['i', 'love', 'you', '999', 'very much!', 'do', 'you know']</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="元素的搜索"><a href="#元素的搜索" class="headerlink" title="元素的搜索"></a>元素的搜索</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用index对列表中的元素进行搜索，返回的是搜索元素在列表中的序号</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">print(a.index(<span class="string">'you'</span>))</span><br><span class="line"><span class="comment">#输出结果是：</span></span><br><span class="line"><span class="string">'''2</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="元素的删除"><a href="#元素的删除" class="headerlink" title="元素的删除"></a>元素的删除</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#remove方法</span></span><br><span class="line">a.remove(<span class="string">'you'</span>)<span class="comment">#如果列表中有多个"you"，则会删除第一个</span></span><br><span class="line">print(a)</span><br><span class="line"><span class="comment">#pop方法</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">print(a.pop())<span class="comment">#执行pop方法的同时输出会输出被删掉的最后一个元素</span></span><br><span class="line">print(a)<span class="comment">#再次输出原有列表发现列表已经改变</span></span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['i', 'love']'''</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="列表的运算"><a href="#列表的运算" class="headerlink" title="列表的运算"></a>列表的运算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#注意只支持+和*</span></span><br><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">b =[<span class="string">'you'</span>,<span class="string">'!'</span>]</span><br><span class="line">c=[<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>]</span><br><span class="line">d = [<span class="string">'you'</span>]</span><br><span class="line">print(a+b)</span><br><span class="line">print(c*<span class="number">2</span>)</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love', 'you', 'you', '!']</span></span><br><span class="line"><span class="string">[2, 2, 2, 2, 2, 2]'''</span></span><br></pre></td></tr></table></figure>
+<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p><em>使用数组，从而避免使用了全局变量</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a[<span class="number">2</span>])</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> zhongjian;</span><br><span class="line">    zhongjian=a[<span class="number">0</span>];</span><br><span class="line">    a[<span class="number">0</span>]=a[<span class="number">1</span>];</span><br><span class="line">    a[<span class="number">1</span>]=zhongjian;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a[<span class="number">0</span>],a[<span class="number">1</span>]);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b[<span class="number">2</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    jiaoHUAN(b);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> a:2,b:3</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -312,7 +310,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://nianchu.space/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/" title="Python&#x2F;Python列表操作">http://nianchu.space/2019/11/28/Python/Python列表操作/</a>
+    <a href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/" title="C&#x2F;C语言两个数交换的两种方法">http://nianchu.space/2019/12/02/C/C语言两个数交换的两种方法/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -329,12 +327,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/" rel="prev" title="Python/Python时间与日期">
-      <i class="fa fa-chevron-left"></i> Python/Python时间与日期
+    <a href="/2019/12/02/C/C%E8%AF%AD%E8%A8%80exit()%E4%BD%BF%E7%94%A8/" rel="prev" title="C/C语言exit()使用">
+      <i class="fa fa-chevron-left"></i> C/C语言exit()使用
     </a></div>
       <div class="post-nav-item">
-    <a href="/2019/11/29/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BB%83%E4%B9%A0%E9%A2%98/" rel="next" title="字符串练习题">
-      字符串练习题 <i class="fa fa-chevron-right"></i>
+    <a href="/2019/12/03/Python/%E6%9C%AA%E5%91%BD%E5%90%8D/" rel="next" title="Python/未命名">
+      Python/未命名 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -373,7 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#list操作"><span class="nav-number">1.</span> <span class="nav-text">list操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#索引及负数索引"><span class="nav-number">1.1.</span> <span class="nav-text">索引及负数索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素的增加"><span class="nav-number">1.2.</span> <span class="nav-text">元素的增加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素的搜索"><span class="nav-number">1.3.</span> <span class="nav-text">元素的搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素的删除"><span class="nav-number">1.4.</span> <span class="nav-text">元素的删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表的运算"><span class="nav-number">1.5.</span> <span class="nav-text">列表的运算</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法一"><span class="nav-number">1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法二"><span class="nav-number">2.</span> <span class="nav-text">方法二</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
