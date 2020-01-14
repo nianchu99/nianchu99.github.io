@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://nianchu.space/"/>
-  <updated>2020-01-04T04:23:32.701Z</updated>
+  <updated>2020-01-14T13:19:26.794Z</updated>
   <id>http://nianchu.space/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>13.字符串查找</title>
+    <link href="http://nianchu.space/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/"/>
+    <id>http://nianchu.space/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/</id>
+    <published>2020-01-14T13:13:00.000Z</published>
+    <updated>2020-01-14T13:19:26.794Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="13-字符串查找"><a href="#13-字符串查找" class="headerlink" title="13.字符串查找"></a>13.字符串查找</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param source:</span></span><br><span class="line"><span class="string">    @param target:</span></span><br><span class="line"><span class="string">    @return: return the index</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, source, target)</span>:</span></span><br><span class="line">        geshu=<span class="number">0</span></span><br><span class="line">        a = len(source)</span><br><span class="line">        b = len(target)</span><br><span class="line">        <span class="keyword">if</span> source ==<span class="string">""</span> <span class="keyword">and</span> target ==<span class="string">""</span>:<span class="comment">#排除特殊情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> source !=<span class="string">""</span> <span class="keyword">and</span> target ==<span class="string">""</span>:<span class="comment">#继续排除特殊情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> target <span class="keyword">not</span> <span class="keyword">in</span> source:<span class="comment">#被查找字符串不在已知字符串的情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">else</span>:<span class="comment">#需要返回第一个出现位置的情况</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(a):</span><br><span class="line">                <span class="keyword">if</span> target[<span class="number">0</span>] == source[i]:</span><br><span class="line">                    <span class="keyword">for</span> j <span class="keyword">in</span> range(b):</span><br><span class="line">                        <span class="keyword">if</span> (i+j) &lt; a:<span class="comment">#避免字符串索引溢出</span></span><br><span class="line">                            <span class="keyword">if</span> source[i+j] == target[j]:</span><br><span class="line">                                geshu = geshu + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span> geshu == b:</span><br><span class="line">                             <span class="keyword">return</span> i</span><br><span class="line"></span><br><span class="line">so = Solution()</span><br><span class="line">print(so.strStr(<span class="string">"tartarget"</span>,<span class="string">"target"</span>))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;13-字符串查找&quot;&gt;&lt;a href=&quot;#13-字符串查找&quot; class=&quot;headerlink&quot; title=&quot;13.字符串查找&quot;&gt;&lt;/a&gt;13.字符串查找&lt;/h1&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c
+      
+    
+    </summary>
+    
+    
+      <category term="Lintcode刷题" scheme="http://nianchu.space/categories/Lintcode%E5%88%B7%E9%A2%98/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>往年期末试卷程序题</title>
@@ -473,30 +497,6 @@
     
     
       <category term="Python" scheme="http://nianchu.space/categories/Python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>C/操作字符串的函数</title>
-    <link href="http://nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/"/>
-    <id>http://nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</id>
-    <published>2019-11-28T03:26:00.000Z</published>
-    <updated>2019-11-28T15:27:50.914Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure><h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure><p><em>输出结果是:</em>  <strong>I love you,999</strong></p><h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;操作字符串的函数&quot;&gt;&lt;a href=&quot;#操作字符串的函数&quot; class=&quot;headerlink&quot; title=&quot;操作字符串的函数&quot;&gt;&lt;/a&gt;操作字符串的函数&lt;/h1&gt;&lt;h2 id=&quot;strcpy&quot;&gt;&lt;a href=&quot;#strcpy&quot; class=&quot;headerli
-      
-    
-    </summary>
-    
-    
-      <category term="C语言" scheme="http://nianchu.space/categories/C%E8%AF%AD%E8%A8%80/"/>
     
     
   </entry>

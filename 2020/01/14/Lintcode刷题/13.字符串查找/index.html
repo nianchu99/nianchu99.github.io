@@ -49,15 +49,17 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http:&#x2F;&#x2F;nianchu.space&#x2F;categories&#x2F;index.html">
+  <meta name="description" content="13.字符串查找1234567891011121314151617181920212223242526272829class Solution:    &quot;&quot;&quot;    @param source:    @param target:    @return: return the index    &quot;&quot;&quot;    def strStr(self, source, target):        gesh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="13.字符串查找">
+<meta property="og:url" content="http:&#x2F;&#x2F;nianchu.space&#x2F;2020&#x2F;01&#x2F;14&#x2F;Lintcode%E5%88%B7%E9%A2%98&#x2F;13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
+<meta property="og:description" content="13.字符串查找1234567891011121314151617181920212223242526272829class Solution:    &quot;&quot;&quot;    @param source:    @param target:    @return: return the index    &quot;&quot;&quot;    def strStr(self, source, target):        gesh">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-27T07:54:33.019Z">
+<meta property="og:updated_time" content="2020-01-14T13:19:26.794Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://nianchu.space/categories/">
+<link rel="canonical" href="http://nianchu.space/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/">
 
 
 <script id="page-configurations">
@@ -65,14 +67,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>categories | nianchu-Blog
-  </title>
+  <title>13.字符串查找 | nianchu-Blog</title>
   
 
 
@@ -215,52 +216,117 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">categories
-</h1>
-
-<div class="post-meta">
+      
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          13.字符串查找
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-14 21:13:00 / 修改时间：21:19:26" itemprop="dateCreated datePublished" datetime="2020-01-14T21:13:00+08:00">2020-01-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
+                    <span itemprop="name">Lintcode刷题</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="13-字符串查找"><a href="#13-字符串查找" class="headerlink" title="13.字符串查找"></a>13.字符串查找</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param source:</span></span><br><span class="line"><span class="string">    @param target:</span></span><br><span class="line"><span class="string">    @return: return the index</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, source, target)</span>:</span></span><br><span class="line">        geshu=<span class="number">0</span></span><br><span class="line">        a = len(source)</span><br><span class="line">        b = len(target)</span><br><span class="line">        <span class="keyword">if</span> source ==<span class="string">""</span> <span class="keyword">and</span> target ==<span class="string">""</span>:<span class="comment">#排除特殊情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> source !=<span class="string">""</span> <span class="keyword">and</span> target ==<span class="string">""</span>:<span class="comment">#继续排除特殊情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> target <span class="keyword">not</span> <span class="keyword">in</span> source:<span class="comment">#被查找字符串不在已知字符串的情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">else</span>:<span class="comment">#需要返回第一个出现位置的情况</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(a):</span><br><span class="line">                <span class="keyword">if</span> target[<span class="number">0</span>] == source[i]:</span><br><span class="line">                    <span class="keyword">for</span> j <span class="keyword">in</span> range(b):</span><br><span class="line">                        <span class="keyword">if</span> (i+j) &lt; a:<span class="comment">#避免字符串索引溢出</span></span><br><span class="line">                            <span class="keyword">if</span> source[i+j] == target[j]:</span><br><span class="line">                                geshu = geshu + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span> geshu == b:</span><br><span class="line">                             <span class="keyword">return</span> i</span><br><span class="line"></span><br><span class="line">so = Solution()</span><br><span class="line">print(so.strStr(<span class="string">"tartarget"</span>,<span class="string">"target"</span>))</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>nianchu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://nianchu.space/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/" title="13.字符串查找">http://nianchu.space/2020/01/14/Lintcode刷题/13.字符串查找/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
-</header>
 
-      
-      
-      
-      <div class="post-body">
-          <div class="category-all-page">
-            <div class="category-all-title">
-              目前共计 8 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/">C语言作业</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lintcode%E5%88%B7%E9%A2%98/">Lintcode刷题</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tensorflow/">Tensorflow</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/">小说（一）</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E8%89%BA/">文艺</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+      <footer class="post-footer">
+
         
-      </div>
-      
-      
-      
-    </div>
-    
 
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/04/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%A2%98/" rel="prev" title="往年期末试卷程序题">
+      <i class="fa fa-chevron-left"></i> 往年期末试卷程序题
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
   </div>
 
 
@@ -290,6 +356,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#13-字符串查找"><span class="nav-number">1.</span> <span class="nav-text">13.字符串查找</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
