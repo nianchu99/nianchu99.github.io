@@ -86,6 +86,30 @@
 
 <h1 id="enumerate-函数"><a href="#enumerate-函数" class="headerlink" title="enumerate()函数"></a>enumerate()函数</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">'''enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">names = <span class="string">'chenqiaochu'</span></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> enumerate(names):</span><br><span class="line">  print(key,value)</span><br><span class="line">  </span><br><span class="line"> <span class="string">'''output:</span></span><br><span class="line"><span class="string"> '''</span></span><br></pre></td></tr></table></figure>
 
+
+
+<h1 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h1><p><strong><em>Python不能直接将包含小数点的字符串’1127437398.85751’ 转换为整数</em></strong></p>
+<h1 id="关于字典键值对的输入"><a href="#关于字典键值对的输入" class="headerlink" title="关于字典键值对的输入"></a>关于字典键值对的输入</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = &#123;<span class="string">'name'</span> : <span class="string">'重庆'</span>,<span class="string">'mather'</span> : <span class="string">'China'</span> &#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> a.keys():</span><br><span class="line">    print(key, a[key])</span><br><span class="line"><span class="string">'''输出结果：</span></span><br><span class="line"><span class="string">name 重庆</span></span><br><span class="line"><span class="string">mather China</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="关于字典"><a href="#关于字典" class="headerlink" title="关于字典"></a>关于字典</h1><h2 id="键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。"><a href="#键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。" class="headerlink" title="键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。"></a>键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。</h2><h2 id="字典内置函数总结："><a href="#字典内置函数总结：" class="headerlink" title="字典内置函数总结："></a>字典内置函数总结：</h2><p>1.cmp(dict1,dict2):比较两个元素</p>
+<p>(比较方法见：)</p>
+<blockquote>
+<p> <a href="https://blog.csdn.net/b_11111/article/details/52830590" target="_blank" rel="noopener">https://blog.csdn.net/b_11111/article/details/52830590</a></p>
+</blockquote>
+<p>2.len()计算字典元素个数，即键的总数</p>
+<p>3.str()输出字典可打印的字符串表示</p>
+<p>4.type返回变量的类型，如果变量是字典就返回字典类型</p>
+<h1 id="字典内置方法总结："><a href="#字典内置方法总结：" class="headerlink" title="字典内置方法总结："></a>字典内置方法总结：</h1><p>1.clear删除字典内的所有元素</p>
+<p>2.copy返回一个字典的浅复制</p>
+<p>3.fromkeys(sep,[,val]):创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值</p>
+<p>4.get(key)返回指定键的值，如果值不在字典中就返回None</p>
+<p>5.has_key(key)如果键在字典dict中返回true,否则返回flase</p>
+<p>6.items：以列表返回可遍历的(键值对)元组数组</p>
+<p>7.keys：以列表返回一个字典所有的键</p>
+<p>8.values:以列表返回字典中的所有值</p>
+<p>9.update(dice2):把字典dict2中键值对更新到dict中</p>
+<p>10.pop：删除给定键key所对应的值，也一同删除了键，返回值为被删除的值</p>
+<p>11.popitem:返回并删除字典中最后一对键和值</p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -184,6 +208,20 @@
       </categories>
   </entry>
   <entry>
+    <title>C/函数指针</title>
+    <url>/2019/12/06/C/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/</url>
+    <content><![CDATA[<h1 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h1><h2 id="怎么使用函数指针"><a href="#怎么使用函数指针" class="headerlink" title="怎么使用函数指针"></a>怎么使用函数指针</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">suiji</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> rand();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> (*p)()=&amp;suiji;<span class="comment">//声明函数指针</span></span><br><span class="line">    <span class="keyword">int</span> a=p();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> 16807</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">huidiao</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">void</span> (*<span class="built_in">print</span>)(<span class="keyword">void</span>))</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;x; i++) &#123;</span><br><span class="line">        <span class="built_in">print</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">10</span>;</span><br><span class="line">    huidiao(a, <span class="built_in">print</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> </span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> </span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C/C语言指针</title>
     <url>/2019/12/06/C/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/</url>
     <content><![CDATA[<h1 id="C指针"><a href="#C指针" class="headerlink" title="C指针"></a>C指针</h1><h2 id="为什么学习指针"><a href="#为什么学习指针" class="headerlink" title="为什么学习指针"></a>为什么学习指针</h2><blockquote>
@@ -224,20 +262,6 @@
 
 
 <h2 id="从函数返回指针"><a href="#从函数返回指针" class="headerlink" title="从函数返回指针"></a>从函数返回指针</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C/函数指针</title>
-    <url>/2019/12/06/C/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/</url>
-    <content><![CDATA[<h1 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h1><h2 id="怎么使用函数指针"><a href="#怎么使用函数指针" class="headerlink" title="怎么使用函数指针"></a>怎么使用函数指针</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">suiji</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> rand();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> (*p)()=&amp;suiji;<span class="comment">//声明函数指针</span></span><br><span class="line">    <span class="keyword">int</span> a=p();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> 16807</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">huidiao</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">void</span> (*<span class="built_in">print</span>)(<span class="keyword">void</span>))</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;x; i++) &#123;</span><br><span class="line">        <span class="built_in">print</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">10</span>;</span><br><span class="line">    huidiao(a, <span class="built_in">print</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> </span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> </span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -291,18 +315,6 @@
       </categories>
   </entry>
   <entry>
-    <title>C/C语言之神奇代码</title>
-    <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B9%8B%E7%A5%9E%E5%A5%87%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<h1 id="C语言之神奇代码"><a href="#C语言之神奇代码" class="headerlink" title="C语言之神奇代码"></a>C语言之神奇代码</h1><p><strong>声明：这是网上看到的，还没去弄清楚是什么原理，就先放在这里吧！</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">main(_)&#123;_^<span class="number">448</span>&amp;&amp;main(-~_);<span class="built_in">putchar</span>(--_%<span class="number">64</span>?<span class="number">32</span>|-~<span class="number">7</span>[__TIME__-_/<span class="number">8</span>%<span class="number">8</span>][<span class="string">"&gt;'txiZ^(~z?"</span><span class="number">-48</span>]&gt;&gt;<span class="string">";;;====~$::199"</span>[_*<span class="number">2</span>&amp;<span class="number">8</span>|_/<span class="number">64</span>]/(_&amp;<span class="number">2</span>?<span class="number">1</span>:<span class="number">8</span>)%<span class="number">8</span>&amp;<span class="number">1</span>:<span class="number">10</span>);&#125;</span><br><span class="line"><span class="comment">/*直接复制上面代码到某一编辑器，然后运行就会出现当前的时间。很神奇吧！</span></span><br><span class="line"><span class="comment">下面是效果图：*/</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9icvhy003j30v60ccmy6.jpg" alt="神奇代码"></p>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-  </entry>
-  <entry>
     <title>C/C语言两个数交换的两种方法</title>
     <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p><em>由于函数传递时实参无法改变，所以使用了全局变量来完成</em></p>
@@ -313,6 +325,18 @@
 <h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p><em>使用数组，从而避免使用了全局变量</em></p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a[<span class="number">2</span>])</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> zhongjian;</span><br><span class="line">    zhongjian=a[<span class="number">0</span>];</span><br><span class="line">    a[<span class="number">0</span>]=a[<span class="number">1</span>];</span><br><span class="line">    a[<span class="number">1</span>]=zhongjian;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a[<span class="number">0</span>],a[<span class="number">1</span>]);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b[<span class="number">2</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    jiaoHUAN(b);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> a:2,b:3</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C/C语言之神奇代码</title>
+    <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B9%8B%E7%A5%9E%E5%A5%87%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<h1 id="C语言之神奇代码"><a href="#C语言之神奇代码" class="headerlink" title="C语言之神奇代码"></a>C语言之神奇代码</h1><p><strong>声明：这是网上看到的，还没去弄清楚是什么原理，就先放在这里吧！</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">main(_)&#123;_^<span class="number">448</span>&amp;&amp;main(-~_);<span class="built_in">putchar</span>(--_%<span class="number">64</span>?<span class="number">32</span>|-~<span class="number">7</span>[__TIME__-_/<span class="number">8</span>%<span class="number">8</span>][<span class="string">"&gt;'txiZ^(~z?"</span><span class="number">-48</span>]&gt;&gt;<span class="string">";;;====~$::199"</span>[_*<span class="number">2</span>&amp;<span class="number">8</span>|_/<span class="number">64</span>]/(_&amp;<span class="number">2</span>?<span class="number">1</span>:<span class="number">8</span>)%<span class="number">8</span>&amp;<span class="number">1</span>:<span class="number">10</span>);&#125;</span><br><span class="line"><span class="comment">/*直接复制上面代码到某一编辑器，然后运行就会出现当前的时间。很神奇吧！</span></span><br><span class="line"><span class="comment">下面是效果图：*/</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9icvhy003j30v60ccmy6.jpg" alt="神奇代码"></p>
 ]]></content>
       <categories>
         <category>C语言</category>
