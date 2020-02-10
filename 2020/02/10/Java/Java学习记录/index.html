@@ -49,15 +49,17 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http:&#x2F;&#x2F;nianchu.space&#x2F;tags&#x2F;index.html">
+  <meta name="description" content="分支结构ifswitch语法结构1234567switch (表达式) &amp;#123; case 值1:语句组1 case 值2:语句组2 case 值3:语句组3 ...case 判断值n: 语句组ndefault: 语句组n+1&amp;#125;   switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java&#x2F;Java学习记录">
+<meta property="og:url" content="http:&#x2F;&#x2F;nianchu.space&#x2F;2020&#x2F;02&#x2F;10&#x2F;Java&#x2F;Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
+<meta property="og:description" content="分支结构ifswitch语法结构1234567switch (表达式) &amp;#123; case 值1:语句组1 case 值2:语句组2 case 值3:语句组3 ...case 判断值n: 语句组ndefault: 语句组n+1&amp;#125;   switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-27T07:55:16.460Z">
+<meta property="og:updated_time" content="2020-02-10T03:29:40.127Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://nianchu.space/tags/">
+<link rel="canonical" href="http://nianchu.space/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
 
 
 <script id="page-configurations">
@@ -65,14 +67,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
-    isPage: true,
+    isPost: true,
+    isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>tags | nianchu-Blog
-  </title>
+  <title>Java/Java学习记录 | nianchu-Blog</title>
   
 
 
@@ -215,52 +216,120 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
-
-<div class="post-meta">
+      
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java/Java学习记录
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-10 11:30:00 / 修改时间：11:29:40" itemprop="dateCreated datePublished" datetime="2020-02-10T11:30:00+08:00">2020-02-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h1><h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><h3 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (表达式) &#123; <span class="keyword">case</span> 值<span class="number">1</span>:</span><br><span class="line">语句组<span class="number">1</span> <span class="keyword">case</span> 值<span class="number">2</span>:</span><br><span class="line">语句组<span class="number">2</span> <span class="keyword">case</span> 值<span class="number">3</span>:</span><br><span class="line">语句组<span class="number">3</span> ...</span><br><span class="line"><span class="keyword">case</span> 判断值n: 语句组n</span><br><span class="line"><span class="keyword">default</span>: 语句组n+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>nianchu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://nianchu.space/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" title="Java&#x2F;Java学习记录">http://nianchu.space/2020/02/10/Java/Java学习记录/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
-</header>
 
-      
-      
-      
-      <div class="post-body">
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-              暂无标签
-            </div>
-            <div class="tag-cloud-tags">
-              
-            </div>
-          </div>
+      <footer class="post-footer">
+
         
-      </div>
-      
-      
-      
-    </div>
-    
 
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/19/Python/Python%20itertools%E6%A8%A1%E5%9D%97/" rel="prev" title="Python/Python itertools模块">
+      <i class="fa fa-chevron-left"></i> Python/Python itertools模块
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
   </div>
 
 
@@ -290,6 +359,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分支结构"><span class="nav-number">1.</span> <span class="nav-text">分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#if"><span class="nav-number">1.1.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch"><span class="nav-number">1.2.</span> <span class="nav-text">switch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法结构"><span class="nav-number">1.2.1.</span> <span class="nav-text">语法结构</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
