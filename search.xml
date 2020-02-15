@@ -119,29 +119,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Python/Python itertools模块</title>
-    <url>/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p>Python内置的itertools模块中包含了一系列用来产生不同款类型迭代器的函数和类，这些函数的返回值都是一个迭代器。</p>
-<h1 id="迭代器函数类型"><a href="#迭代器函数类型" class="headerlink" title="迭代器函数类型"></a>迭代器函数类型</h1><p><em>无限迭代器</em>：生成一个无限序列，比如自然序列1，2，3，4…;</p>
-<p><em>有限迭代器</em>：接受一个或多个序列作为参数，进行组合、分组和过滤</p>
-<p><em>组合生成器</em>：序列的排列、组合，求序列的笛卡尔积等</p>
-<h2 id="无限迭代器"><a href="#无限迭代器" class="headerlink" title="无限迭代器"></a>无限迭代器</h2><h2 id="组合生成器"><a href="#组合生成器" class="headerlink" title="组合生成器"></a>组合生成器</h2><h3 id="product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"><a href="#product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。" class="headerlink" title="product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"></a>product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。</h3><p><strong>示例</strong></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> itertools.product(<span class="string">"12345"</span>,<span class="string">"ABCDE"</span>):</span><br><span class="line">    print(i,end=<span class="string">''</span>)</span><br><span class="line">    j = j+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">""</span>)</span><br><span class="line">print(<span class="string">"一共有&#123;&#125;种组合"</span>.format(j))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果为:</span></span><br><span class="line"><span class="string">('1', 'A')('1', 'B')('1', 'C')('1', 'D')('1', 'E')('2', 'A')('2', 'B')('2', 'C')('2', 'D')('2', 'E')('3', 'A')('3', 'B')('3', 'C')('3', 'D')('3', 'E')('4', 'A')('4', 'B')('4', 'C')('4', 'D')('4', 'E')('5', 'A')('5', 'B')('5', 'C')('5', 'D')('5', 'E')</span></span><br><span class="line"><span class="string">一共有25种组合</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="permutations-用于生成一个全排列"><a href="#permutations-用于生成一个全排列" class="headerlink" title="permutations: 用于生成一个全排列"></a>permutations: 用于生成一个全排列</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.permutations(nums)))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">[(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="combinations-用于求序列的组合"><a href="#combinations-用于求序列的组合" class="headerlink" title="combinations:用于求序列的组合"></a>combinations:用于求序列的组合</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.combinations(nums,<span class="number">2</span>)))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="⚠️注意区分product、permutations和combinations的区别"><a href="#⚠️注意区分product、permutations和combinations的区别" class="headerlink" title="⚠️注意区分product、permutations和combinations的区别"></a>⚠️注意区分product、permutations和combinations的区别</h4>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Python/Python小技巧</title>
     <url>/2020/01/14/Python/Python%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><h2 id="sorted-方法——可用于给字符串排序，通常是按照字母表的顺序"><a href="#sorted-方法——可用于给字符串排序，通常是按照字母表的顺序" class="headerlink" title="sorted()方法——可用于给字符串排序，通常是按照字母表的顺序"></a>sorted()方法——可用于给字符串排序，通常是按照字母表的顺序</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="string">"fadsfga"</span></span><br><span class="line">print(sorted(a))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">['a', 'a', 'd', 'f', 'f', 'g', 's']</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
@@ -204,6 +181,29 @@
 <p>把函数作为参数传入，这样的函数称为高阶函数，函数式编程就是指这种高度抽象的编程范式。</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Python/Python itertools模块</title>
+    <url>/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/</url>
+    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p>Python内置的itertools模块中包含了一系列用来产生不同款类型迭代器的函数和类，这些函数的返回值都是一个迭代器。</p>
+<h1 id="迭代器函数类型"><a href="#迭代器函数类型" class="headerlink" title="迭代器函数类型"></a>迭代器函数类型</h1><p><em>无限迭代器</em>：生成一个无限序列，比如自然序列1，2，3，4…;</p>
+<p><em>有限迭代器</em>：接受一个或多个序列作为参数，进行组合、分组和过滤</p>
+<p><em>组合生成器</em>：序列的排列、组合，求序列的笛卡尔积等</p>
+<h2 id="无限迭代器"><a href="#无限迭代器" class="headerlink" title="无限迭代器"></a>无限迭代器</h2><h2 id="组合生成器"><a href="#组合生成器" class="headerlink" title="组合生成器"></a>组合生成器</h2><h3 id="product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"><a href="#product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。" class="headerlink" title="product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"></a>product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。</h3><p><strong>示例</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> itertools.product(<span class="string">"12345"</span>,<span class="string">"ABCDE"</span>):</span><br><span class="line">    print(i,end=<span class="string">''</span>)</span><br><span class="line">    j = j+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">""</span>)</span><br><span class="line">print(<span class="string">"一共有&#123;&#125;种组合"</span>.format(j))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果为:</span></span><br><span class="line"><span class="string">('1', 'A')('1', 'B')('1', 'C')('1', 'D')('1', 'E')('2', 'A')('2', 'B')('2', 'C')('2', 'D')('2', 'E')('3', 'A')('3', 'B')('3', 'C')('3', 'D')('3', 'E')('4', 'A')('4', 'B')('4', 'C')('4', 'D')('4', 'E')('5', 'A')('5', 'B')('5', 'C')('5', 'D')('5', 'E')</span></span><br><span class="line"><span class="string">一共有25种组合</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="permutations-用于生成一个全排列"><a href="#permutations-用于生成一个全排列" class="headerlink" title="permutations: 用于生成一个全排列"></a>permutations: 用于生成一个全排列</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.permutations(nums)))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">[(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="combinations-用于求序列的组合"><a href="#combinations-用于求序列的组合" class="headerlink" title="combinations:用于求序列的组合"></a>combinations:用于求序列的组合</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.combinations(nums,<span class="number">2</span>)))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="⚠️注意区分product、permutations和combinations的区别"><a href="#⚠️注意区分product、permutations和combinations的区别" class="headerlink" title="⚠️注意区分product、permutations和combinations的区别"></a>⚠️注意区分product、permutations和combinations的区别</h4>]]></content>
       <categories>
         <category>Python</category>
       </categories>
@@ -537,42 +537,6 @@
       </categories>
   </entry>
   <entry>
-    <title>C/gets,puts函数</title>
-    <url>/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C/操作字符串的函数</title>
-    <url>/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</url>
-    <content><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure>
-
-<p><em>输出结果是:</em>  <strong>I love you,999</strong></p>
-<h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Python/Python列表操作</title>
     <url>/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h1 id="list操作"><a href="#list操作" class="headerlink" title="list操作"></a>list操作</h1><h2 id="索引及负数索引"><a href="#索引及负数索引" class="headerlink" title="索引及负数索引"></a>索引及负数索引</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#执行索引输出列表</span></span><br><span class="line">print(a[<span class="number">1</span>])</span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">3</span>])</span><br><span class="line">print(a[<span class="number">-1</span>])</span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">-1</span>])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''love</span></span><br><span class="line"><span class="string">['i', 'love', 'you']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['love']'''</span></span><br></pre></td></tr></table></figure>
@@ -670,6 +634,42 @@
 ]]></content>
       <categories>
         <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C/gets,puts函数</title>
+    <url>/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C/操作字符串的函数</title>
+    <url>/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure>
+
+<p><em>输出结果是:</em>  <strong>I love you,999</strong></p>
+<h2 id="srtlen"><a href="#srtlen" class="headerlink" title="srtlen()"></a>srtlen()</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strlen()用于获取字符串的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="keyword">int</span> len1=<span class="number">0</span>,len2=<span class="number">0</span>;</span><br><span class="line">len1=<span class="built_in">strlen</span>(a);</span><br><span class="line">len2=<span class="built_in">strlen</span>(b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a字符串的长度是：%d,b字符串的长度是:%d\n"</span>,len1,len2);&#125;</span><br><span class="line"><span class="comment">//输出两个字符串的长度</span></span><br><span class="line"><span class="comment">//输出结果分别是：a字符串的长度是：11,b字符串的长度是:4</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>C语言</category>
       </categories>
   </entry>
   <entry>

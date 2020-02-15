@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 4.0.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32X32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16X16.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
 
@@ -779,96 +779,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">Python/Python itertools模块</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-01-14 23:17:00" itemprop="dateCreated datePublished" datetime="2020-01-14T23:17:00+08:00">2020-01-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-15 19:10:00" itemprop="dateModified" datetime="2020-02-15T19:10:00+08:00">2020-02-15</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p>Python内置的itertools模块中包含了一系列用来产生不同款类型迭代器的函数和类，这些函数的返回值都是一个迭代器。</p>
-<h1 id="迭代器函数类型"><a href="#迭代器函数类型" class="headerlink" title="迭代器函数类型"></a>迭代器函数类型</h1><p><em>无限迭代器</em>：生成一个无限序列，比如自然序列1，2，3，4…;</p>
-<p><em>有限迭代器</em>：接受一个或多个序列作为参数，进行组合、分组和过滤</p>
-<p><em>组合生成器</em>：序列的排列、组合，求序列的笛卡尔积等</p>
-<h2 id="无限迭代器"><a href="#无限迭代器" class="headerlink" title="无限迭代器"></a>无限迭代器</h2><h2 id="组合生成器"><a href="#组合生成器" class="headerlink" title="组合生成器"></a>组合生成器</h2><h3 id="product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"><a href="#product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。" class="headerlink" title="product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"></a>product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。</h3><p><strong>示例</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> itertools.product(<span class="string">"12345"</span>,<span class="string">"ABCDE"</span>):</span><br><span class="line">    print(i,end=<span class="string">''</span>)</span><br><span class="line">    j = j+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">""</span>)</span><br><span class="line">print(<span class="string">"一共有&#123;&#125;种组合"</span>.format(j))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果为:</span></span><br><span class="line"><span class="string">('1', 'A')('1', 'B')('1', 'C')('1', 'D')('1', 'E')('2', 'A')('2', 'B')('2', 'C')('2', 'D')('2', 'E')('3', 'A')('3', 'B')('3', 'C')('3', 'D')('3', 'E')('4', 'A')('4', 'B')('4', 'C')('4', 'D')('4', 'E')('5', 'A')('5', 'B')('5', 'C')('5', 'D')('5', 'E')</span></span><br><span class="line"><span class="string">一共有25种组合</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="permutations-用于生成一个全排列"><a href="#permutations-用于生成一个全排列" class="headerlink" title="permutations: 用于生成一个全排列"></a>permutations: 用于生成一个全排列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.permutations(nums)))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">[(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="combinations-用于求序列的组合"><a href="#combinations-用于求序列的组合" class="headerlink" title="combinations:用于求序列的组合"></a>combinations:用于求序列的组合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.combinations(nums,<span class="number">2</span>)))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="⚠️注意区分product、permutations和combinations的区别"><a href="#⚠️注意区分product、permutations和combinations的区别" class="headerlink" title="⚠️注意区分product、permutations和combinations的区别"></a>⚠️注意区分product、permutations和combinations的区别</h4>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Python/Python%E5%B0%8F%E6%8A%80%E5%B7%A7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -985,6 +895,96 @@
 <p>把函数作为参数传入，这样的函数称为高阶函数，函数式编程就是指这种高度抽象的编程范式。</p>
 </blockquote>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">Python/Python itertools模块</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-14 23:17:00" itemprop="dateCreated datePublished" datetime="2020-01-14T23:17:00+08:00">2020-01-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-15 19:10:00" itemprop="dateModified" datetime="2020-02-15T19:10:00+08:00">2020-02-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p>Python内置的itertools模块中包含了一系列用来产生不同款类型迭代器的函数和类，这些函数的返回值都是一个迭代器。</p>
+<h1 id="迭代器函数类型"><a href="#迭代器函数类型" class="headerlink" title="迭代器函数类型"></a>迭代器函数类型</h1><p><em>无限迭代器</em>：生成一个无限序列，比如自然序列1，2，3，4…;</p>
+<p><em>有限迭代器</em>：接受一个或多个序列作为参数，进行组合、分组和过滤</p>
+<p><em>组合生成器</em>：序列的排列、组合，求序列的笛卡尔积等</p>
+<h2 id="无限迭代器"><a href="#无限迭代器" class="headerlink" title="无限迭代器"></a>无限迭代器</h2><h2 id="组合生成器"><a href="#组合生成器" class="headerlink" title="组合生成器"></a>组合生成器</h2><h3 id="product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"><a href="#product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。" class="headerlink" title="product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"></a>product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。</h3><p><strong>示例</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> itertools.product(<span class="string">"12345"</span>,<span class="string">"ABCDE"</span>):</span><br><span class="line">    print(i,end=<span class="string">''</span>)</span><br><span class="line">    j = j+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">""</span>)</span><br><span class="line">print(<span class="string">"一共有&#123;&#125;种组合"</span>.format(j))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果为:</span></span><br><span class="line"><span class="string">('1', 'A')('1', 'B')('1', 'C')('1', 'D')('1', 'E')('2', 'A')('2', 'B')('2', 'C')('2', 'D')('2', 'E')('3', 'A')('3', 'B')('3', 'C')('3', 'D')('3', 'E')('4', 'A')('4', 'B')('4', 'C')('4', 'D')('4', 'E')('5', 'A')('5', 'B')('5', 'C')('5', 'D')('5', 'E')</span></span><br><span class="line"><span class="string">一共有25种组合</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="permutations-用于生成一个全排列"><a href="#permutations-用于生成一个全排列" class="headerlink" title="permutations: 用于生成一个全排列"></a>permutations: 用于生成一个全排列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.permutations(nums)))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">[(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="combinations-用于求序列的组合"><a href="#combinations-用于求序列的组合" class="headerlink" title="combinations:用于求序列的组合"></a>combinations:用于求序列的组合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.combinations(nums,<span class="number">2</span>)))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="⚠️注意区分product、permutations和combinations的区别"><a href="#⚠️注意区分product、permutations和combinations的区别" class="headerlink" title="⚠️注意区分product、permutations和combinations的区别"></a>⚠️注意区分product、permutations和combinations的区别</h4>
       
     </div>
 
