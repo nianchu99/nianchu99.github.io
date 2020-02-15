@@ -222,6 +222,77 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">13.字符串查找</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-14 21:13:00 / 修改时间：21:19:26" itemprop="dateCreated datePublished" datetime="2020-01-14T21:13:00+08:00">2020-01-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
+                    <span itemprop="name">Lintcode刷题</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="13-字符串查找"><a href="#13-字符串查找" class="headerlink" title="13.字符串查找"></a>13.字符串查找</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param source:</span></span><br><span class="line"><span class="string">    @param target:</span></span><br><span class="line"><span class="string">    @return: return the index</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, source, target)</span>:</span></span><br><span class="line">        geshu=<span class="number">0</span></span><br><span class="line">        a = len(source)</span><br><span class="line">        b = len(target)</span><br><span class="line">        <span class="keyword">if</span> source ==<span class="string">""</span> <span class="keyword">and</span> target ==<span class="string">""</span>:<span class="comment">#排除特殊情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> source !=<span class="string">""</span> <span class="keyword">and</span> target ==<span class="string">""</span>:<span class="comment">#继续排除特殊情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> target <span class="keyword">not</span> <span class="keyword">in</span> source:<span class="comment">#被查找字符串不在已知字符串的情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">else</span>:<span class="comment">#需要返回第一个出现位置的情况</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(a):</span><br><span class="line">                <span class="keyword">if</span> target[<span class="number">0</span>] == source[i]:</span><br><span class="line">                    <span class="keyword">for</span> j <span class="keyword">in</span> range(b):</span><br><span class="line">                        <span class="keyword">if</span> (i+j) &lt; a:<span class="comment">#避免字符串索引溢出</span></span><br><span class="line">                            <span class="keyword">if</span> source[i+j] == target[j]:</span><br><span class="line">                                geshu = geshu + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span> geshu == b:</span><br><span class="line">                             <span class="keyword">return</span> i</span><br><span class="line"></span><br><span class="line">so = Solution()</span><br><span class="line">print(so.strStr(<span class="string">"tartarget"</span>,<span class="string">"target"</span>))</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://nianchu.space/2020/01/04/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -963,89 +1034,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C/C语言两个数交换的两种方法</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-12-02 13:03:00" itemprop="dateCreated datePublished" datetime="2019-12-02T13:03:00+08:00">2019-12-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-05 11:03:42" itemprop="dateModified" datetime="2019-12-05T11:03:42+08:00">2019-12-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
-                    <span itemprop="name">C语言</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p><em>由于函数传递时实参无法改变，所以使用了全局变量来完成</em></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    c=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    a=<span class="number">3</span>;</span><br><span class="line">    b=<span class="number">2</span>;</span><br><span class="line">    jiaoHUAN(a, b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment">a:2,b:3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p><em>使用数组，从而避免使用了全局变量</em></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a[<span class="number">2</span>])</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> zhongjian;</span><br><span class="line">    zhongjian=a[<span class="number">0</span>];</span><br><span class="line">    a[<span class="number">0</span>]=a[<span class="number">1</span>];</span><br><span class="line">    a[<span class="number">1</span>]=zhongjian;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a[<span class="number">0</span>],a[<span class="number">1</span>]);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b[<span class="number">2</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    jiaoHUAN(b);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> a:2,b:3</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1094,7 +1082,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">42</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
