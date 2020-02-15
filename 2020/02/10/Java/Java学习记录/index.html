@@ -49,14 +49,14 @@
   };
 </script>
 
-  <meta name="description" content="分支结构ifswitch语法结构1234567switch (表达式) &amp;#123; case 值1:语句组1 case 值2:语句组2 case 值3:语句组3 ...case 判断值n: 语句组ndefault: 语句组n+1&amp;#125;   switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。">
+  <meta name="description" content="分支结构ifswitch语法结构1234567switch (表达式) &amp;#123; case 值1:语句组1 case 值2:语句组2 case 值3:语句组3 ...case 判断值n: 语句组ndefault: 语句组n+1&amp;#125;   switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。  循环结构whiledo-wh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java&#x2F;Java学习记录">
 <meta property="og:url" content="http:&#x2F;&#x2F;nianchu.space&#x2F;2020&#x2F;02&#x2F;10&#x2F;Java&#x2F;Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
-<meta property="og:description" content="分支结构ifswitch语法结构1234567switch (表达式) &amp;#123; case 值1:语句组1 case 值2:语句组2 case 值3:语句组3 ...case 判断值n: 语句组ndefault: 语句组n+1&amp;#125;   switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。">
+<meta property="og:description" content="分支结构ifswitch语法结构1234567switch (表达式) &amp;#123; case 值1:语句组1 case 值2:语句组2 case 值3:语句组3 ...case 判断值n: 语句组ndefault: 语句组n+1&amp;#125;   switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。  循环结构whiledo-wh">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-10T03:29:40.127Z">
+<meta property="og:updated_time" content="2020-02-13T04:23:48.802Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://nianchu.space/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
@@ -247,10 +247,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-02-10 11:30:00 / 修改时间：11:29:40" itemprop="dateCreated datePublished" datetime="2020-02-10T11:30:00+08:00">2020-02-10</time>
+              <time title="创建时间：2020-02-10 11:30:00" itemprop="dateCreated datePublished" datetime="2020-02-10T11:30:00+08:00">2020-02-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-13 12:23:48" itemprop="dateModified" datetime="2020-02-13T12:23:48+08:00">2020-02-13</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -286,7 +292,45 @@
 <blockquote>
 <p>switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。</p>
 </blockquote>
+<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><h2 id="while"><a href="#while" class="headerlink" title="while"></a>while</h2><h2 id="do-while"><a href="#do-while" class="headerlink" title="do-while"></a>do-while</h2><h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><h2 id="for-each语句"><a href="#for-each语句" class="headerlink" title="for-each语句"></a>for-each语句</h2><blockquote>
+<p>Java 5之后提供了一种专门用于遍历集合的for循环——for-each循环。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span>[ ]numbers = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>&#125;;</span><br><span class="line">		System.out.printf(<span class="string">"for-each 语句%n"</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> number : numbers) &#123;</span><br><span class="line">			System.out.printf(<span class="string">"%d%n"</span>,number);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 输出结果：</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">for-each 语句</span></span><br><span class="line"><span class="comment">1</span></span><br><span class="line"><span class="comment">3</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">7</span></span><br><span class="line"><span class="comment">9</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
+
+
+<h1 id="跳转语句"><a href="#跳转语句" class="headerlink" title="跳转语句"></a>跳转语句</h1><blockquote>
+<p>跳转语句能够改变程序的执行顺序，可以实现程序的跳转。</p>
+</blockquote>
+<h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><h3 id="break-不带标签"><a href="#break-不带标签" class="headerlink" title="break;不带标签"></a>break;不带标签</h3><h3 id="break-label；带标签"><a href="#break-label；带标签" class="headerlink" title="break label；带标签"></a>break label；带标签</h3><blockquote>
+<p>默认情况下，break只会跳出最近的内循环。如果要跳出代码第1行的外循环， 可以为外循环添加一个标签，注意在定义标签的时候后面跟一个冒号</p>
+</blockquote>
+<blockquote>
+<p>添加标签对于多层嵌套循环是很有必要的，适 当使用可以提高程序的执行效率。</p>
+</blockquote>
+<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><h3 id="带标签"><a href="#带标签" class="headerlink" title="带标签"></a>带标签</h3><h3 id="不带标签"><a href="#不带标签" class="headerlink" title="不带标签"></a>不带标签</h3><p><strong>例子</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> nianchu;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a=<span class="number">5</span>,b=<span class="number">2</span>;</span><br><span class="line">		x1:<span class="keyword">for</span>(a=<span class="number">0</span>;a&lt;<span class="number">3</span>;a++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(b=<span class="number">0</span>;b&lt;<span class="number">3</span>;b++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(a==b) &#123;</span><br><span class="line">					<span class="keyword">continue</span> x1;</span><br><span class="line">				&#125;</span><br><span class="line">				System.out.printf(<span class="string">"(%d,%d)"</span>,a,b);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 输出结果：</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">(1,0)(2,0)(2,1)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><h2 id="输出时可以用-号将要输出的两部分连在一起"><a href="#输出时可以用-号将要输出的两部分连在一起" class="headerlink" title="输出时可以用+号将要输出的两部分连在一起"></a>输出时可以用+号将要输出的两部分连在一起</h2><p>实例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">	System.out.println(<span class="string">"C"</span> + <span class="string">"LOVE"</span> + <span class="string">"L"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取数组的长度"><a href="#获取数组的长度" class="headerlink" title="获取数组的长度"></a>获取数组的长度</h2><blockquote>
+<p>numbers.length</p>
+</blockquote>
+<h2 id="print-printf-println的区别"><a href="#print-printf-println的区别" class="headerlink" title="print,printf,println的区别"></a>print,printf,println的区别</h2><p>​    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf主要是继承了C语言的printf的一些特性，可以进行格式化输出</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print就是一般的标准输出，但是不换行</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">println和print基本没什么差别，就是最后会换行</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -318,8 +362,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/19/Python/Python%20itertools%E6%A8%A1%E5%9D%97/" rel="prev" title="Python/Python itertools模块">
-      <i class="fa fa-chevron-left"></i> Python/Python itertools模块
+    <a href="/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/" rel="prev" title="Java/Java打印九九乘法表">
+      <i class="fa fa-chevron-left"></i> Java/Java打印九九乘法表
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -359,7 +403,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分支结构"><span class="nav-number">1.</span> <span class="nav-text">分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#if"><span class="nav-number">1.1.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch"><span class="nav-number">1.2.</span> <span class="nav-text">switch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法结构"><span class="nav-number">1.2.1.</span> <span class="nav-text">语法结构</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分支结构"><span class="nav-number">1.</span> <span class="nav-text">分支结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#if"><span class="nav-number">1.1.</span> <span class="nav-text">if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#switch"><span class="nav-number">1.2.</span> <span class="nav-text">switch</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法结构"><span class="nav-number">1.2.1.</span> <span class="nav-text">语法结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环结构"><span class="nav-number">2.</span> <span class="nav-text">循环结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#while"><span class="nav-number">2.1.</span> <span class="nav-text">while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#do-while"><span class="nav-number">2.2.</span> <span class="nav-text">do-while</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for"><span class="nav-number">2.3.</span> <span class="nav-text">for</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-each语句"><span class="nav-number">2.4.</span> <span class="nav-text">for-each语句</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#跳转语句"><span class="nav-number">3.</span> <span class="nav-text">跳转语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#break"><span class="nav-number">3.1.</span> <span class="nav-text">break</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#break-不带标签"><span class="nav-number">3.1.1.</span> <span class="nav-text">break;不带标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#break-label；带标签"><span class="nav-number">3.1.2.</span> <span class="nav-text">break label；带标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#continue"><span class="nav-number">3.2.</span> <span class="nav-text">continue</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#带标签"><span class="nav-number">3.2.1.</span> <span class="nav-text">带标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不带标签"><span class="nav-number">3.2.2.</span> <span class="nav-text">不带标签</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小技巧"><span class="nav-number">4.</span> <span class="nav-text">小技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#输出时可以用-号将要输出的两部分连在一起"><span class="nav-number">4.1.</span> <span class="nav-text">输出时可以用+号将要输出的两部分连在一起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取数组的长度"><span class="nav-number">4.2.</span> <span class="nav-text">获取数组的长度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#print-printf-println的区别"><span class="nav-number">4.3.</span> <span class="nav-text">print,printf,println的区别</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -373,7 +417,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -439,7 +483,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共26k字</span>
+  <span class="post-count">博客全站共26.9k字</span>
 </div>
 
         
