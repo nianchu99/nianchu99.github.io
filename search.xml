@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python/sum函数</title>
+    <url>/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Java/Java学习记录</title>
     <url>/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h1><h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><h3 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (表达式) &#123; <span class="keyword">case</span> 值<span class="number">1</span>:</span><br><span class="line">语句组<span class="number">1</span> <span class="keyword">case</span> 值<span class="number">2</span>:</span><br><span class="line">语句组<span class="number">2</span> <span class="keyword">case</span> 值<span class="number">3</span>:</span><br><span class="line">语句组<span class="number">3</span> ...</span><br><span class="line"><span class="keyword">case</span> 判断值n: 语句组n</span><br><span class="line"><span class="keyword">default</span>: 语句组n+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
