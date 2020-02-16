@@ -49,12 +49,14 @@
   };
 </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="1234567891011121314151617# 序列求和print(sum([1,2,3,4,5,6,7,8,9,]))# sum函数的原型是sum(iterable,start).可以设置一个初始值print(sum([1,2,3,4,5,6,7,8,9,],5))# 展开2层的嵌套列表iterable = [[1,2],[3,4],[5,6],[7,8]]print(sum(iterab">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Python&#x2F;sum函数">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;15&#x2F;Python&#x2F;sum%E5%87%BD%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
+<meta property="og:description" content="1234567891011121314151617# 序列求和print(sum([1,2,3,4,5,6,7,8,9,]))# sum函数的原型是sum(iterable,start).可以设置一个初始值print(sum([1,2,3,4,5,6,7,8,9,],5))# 展开2层的嵌套列表iterable = [[1,2],[3,4],[5,6],[7,8]]print(sum(iterab">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-15T12:00:45.212Z">
+<meta property="og:updated_time" content="2020-02-16T01:46:55.112Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://www.nianchu.space/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/">
@@ -246,10 +248,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-02-15 20:00:00 / 修改时间：20:00:45" itemprop="dateCreated datePublished" datetime="2020-02-15T20:00:00+08:00">2020-02-15</time>
+              <time title="创建时间：2020-02-15 20:00:00" itemprop="dateCreated datePublished" datetime="2020-02-15T20:00:00+08:00">2020-02-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-16 09:46:55" itemprop="dateModified" datetime="2020-02-16T09:46:55+08:00">2020-02-16</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -280,7 +288,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 序列求和</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,]))</span><br><span class="line"><span class="comment"># sum函数的原型是sum(iterable,start).可以设置一个初始值</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,],<span class="number">5</span>))</span><br><span class="line"><span class="comment"># 展开2层的嵌套列表</span></span><br><span class="line">iterable = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]]</span><br><span class="line">print(sum(iterable,[<span class="number">0</span>]))<span class="comment"># 后面的start可以为空</span></span><br><span class="line"><span class="comment"># sum函数与下列函数等效</span></span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">    start += element</span><br><span class="line">print(start)</span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="comment"># sum 函数可以看作reduce()的特殊情况</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> add</span><br><span class="line">print(reduce(add,iterable,start))</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -312,8 +322,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="prev" title="Java/Java学习记录">
-      <i class="fa fa-chevron-left"></i> Java/Java学习记录
+    <a href="/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/" rel="prev" title="Java/Java打印九九乘法表">
+      <i class="fa fa-chevron-left"></i> Java/Java打印九九乘法表
     </a></div>
       <div class="post-nav-item">
     <a href="/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/" rel="next" title="Python/Python—函数式子编程">
@@ -435,7 +445,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共26.9k字</span>
+  <span class="post-count">博客全站共27.4k字</span>
 </div>
 
         
