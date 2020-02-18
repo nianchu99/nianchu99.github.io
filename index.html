@@ -324,7 +324,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/pytho%E7%9A%84and%E8%BF%94%E5%9B%9E%E5%80%BC/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Python/yield/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -338,7 +338,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/17/pytho%E7%9A%84and%E8%BF%94%E5%9B%9E%E5%80%BC/" class="post-title-link" itemprop="url">pytho的and返回值</a>
+            <a href="/2020/02/18/Python/yield/" class="post-title-link" itemprop="url">yield</a>
         </h1>
 
         <div class="post-meta">
@@ -350,7 +350,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-17 15:12:38 / 修改时间：15:12:50" itemprop="dateCreated datePublished" datetime="2020-02-17T15:12:38+08:00">2020-02-17</time>
+              <time title="创建时间：2020-02-18 14:26:16 / 修改时间：14:26:54" itemprop="dateCreated datePublished" datetime="2020-02-18T14:26:16+08:00">2020-02-18</time>
             </span>
 
           
@@ -364,7 +364,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yield</span></span><br><span class="line"><span class="comment"># 带有yield的函数在Python中被称为generator(生成器)</span></span><br><span class="line"><span class="comment">##   如何生成斐波那契数列</span></span><br><span class="line"><span class="comment"># 第一版</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def fab(max):</span></span><br><span class="line"><span class="string">	n, a , b  = 0, 0, 1</span></span><br><span class="line"><span class="string">	while n &lt; max:</span></span><br><span class="line"><span class="string">		print(b)</span></span><br><span class="line"><span class="string">		a , b  = b, a + b</span></span><br><span class="line"><span class="string">		n = n + 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">fab(6)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">## 输出斐波那契数列前N个第二版</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def fab(max):</span></span><br><span class="line"><span class="string">	n, a, b = 0, 0, 1</span></span><br><span class="line"><span class="string">	L = []</span></span><br><span class="line"><span class="string">	while n &lt; max:</span></span><br><span class="line"><span class="string">		L.append(b)</span></span><br><span class="line"><span class="string">		a, b = b, a + b</span></span><br><span class="line"><span class="string">		n = n + 1</span></span><br><span class="line"><span class="string">	return L</span></span><br><span class="line"><span class="string">for n in fab(5):</span></span><br><span class="line"><span class="string">	print(n)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">'''改写后的fab函数通过满足返回List能够满足复用性的要求，但是，随着max越来越大，会导致程序所占内存越来越大</span></span><br><span class="line"><span class="string">所以更好的做法是通过iterable对象来迭代'''</span></span><br><span class="line"><span class="comment">### 第三版 -----有错</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">class Fab(object):</span></span><br><span class="line"><span class="string">	def __int__(self, max):</span></span><br><span class="line"><span class="string">		self.max = max</span></span><br><span class="line"><span class="string">		self.n, self.a, self.b = 0, 0, 1</span></span><br><span class="line"><span class="string">	def __iter__(self):</span></span><br><span class="line"><span class="string">		return self</span></span><br><span class="line"><span class="string">	def next(self):</span></span><br><span class="line"><span class="string">		if self.n &lt; self.max:</span></span><br><span class="line"><span class="string">			r = self.b</span></span><br><span class="line"><span class="string">			self.a, self.b =self.b, self.a + self.b</span></span><br><span class="line"><span class="string">			self.n = n + 1</span></span><br><span class="line"><span class="string">			return r</span></span><br><span class="line"><span class="string">		raise StopIteration()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">for n in Fab(5):</span></span><br><span class="line"><span class="string">	print(n)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">#### 第四版</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fab</span><span class="params">(max)</span>:</span></span><br><span class="line">	n , a, b = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">	<span class="keyword">while</span> n  &lt; max:</span><br><span class="line">		<span class="keyword">yield</span> b</span><br><span class="line">		a, b = b, a + b</span><br><span class="line">		n = n+ <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> fab(<span class="number">5</span>):</span><br><span class="line">	print(n)</span><br><span class="line"><span class="string">"""简单的讲：yield就是把一个函数变成一个generator，带有yield的函数不再是一个普通函数，Python解释器会将其视为一个</span></span><br><span class="line"><span class="string">generator，调用fab(5)不会执行fab函数，而是返回一个iterable对象！</span></span><br><span class="line"><span class="string">结论：一个带有 yield 的函数就是一个 generator，它和普通函数不同，生成一个 generator 看起</span></span><br><span class="line"><span class="string">来像函数调用，但不会执行任何函数代码，直到对其调用 next()（在 for 循环中会自动调用 next()）</span></span><br><span class="line"><span class="string">才开始执行。虽然执行流程仍按函数的流程执行，但每执行到一个 yield 语句就会中断，并返回一个迭</span></span><br><span class="line"><span class="string">代值，下次执行时从 yield 的下一个语句继续执行。看起来就好像一个函数在正常执行的过程中被</span></span><br><span class="line"><span class="string"> yield 中断了数次，每次中断都会通过 yield 返回当前的迭代值。yield 的好处是显而易见的，把</span></span><br><span class="line"><span class="string"> 一个函数改写为一个 generator 就获得了迭代能力，比起用类的实例保存状态来计算下一个 next() </span></span><br><span class="line"><span class="string"> 的值，不仅代码简洁，而且执行流程异常清晰</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 可以使用 isgeneratorfunction来判断是不是一个特殊的generator函数</span></span><br><span class="line"><span class="keyword">from</span> inspect <span class="keyword">import</span> isgeneratorfunction</span><br><span class="line">print(isgeneratorfunction(fab))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">5</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -383,7 +383,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Strip%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/pytho%E7%9A%84and%E8%BF%94%E5%9B%9E%E5%80%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -397,7 +397,66 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/17/Strip%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Strip方法</a>
+            <a href="/2020/02/17/Python/pytho%E7%9A%84and%E8%BF%94%E5%9B%9E%E5%80%BC/" class="post-title-link" itemprop="url">pytho的and返回值</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-17 15:12:38 / 修改时间：15:26:52" itemprop="dateCreated datePublished" datetime="2020-02-17T15:12:38+08:00">2020-02-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python的and返回值</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">在布尔上下文中从左到右演算表达式的值，如果布尔上下文中的所有值都为真，那么 and 返回最后一个值。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">如果布尔上下文中的某个值为假，则 and 返回第一个假值。</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 实例1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">re</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n + <span class="number">1</span> <span class="keyword">and</span> n ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line">print(re(<span class="number">0</span>))<span class="comment">#因为非零即假，所以返回第一个表达式的值</span></span><br><span class="line">print(re(<span class="number">100</span>))<span class="comment"># 因为100为真，所以返回后一个表达式的值</span></span><br><span class="line"><span class="comment"># 实例2</span></span><br><span class="line"><span class="string">"""对于字符串而言，其中有空格的字符串为假，否则为真"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">st</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(st(<span class="string">'happy '</span>))<span class="comment">#这里有空格为假的，则返回后一个表达式的值。经过strip方法之后，末尾的空格被剔除了</span></span><br><span class="line">print(st(<span class="string">'names'</span>))<span class="comment"># 这里为空格，则直接返回这个字符串</span></span><br><span class="line">print(st(<span class="string">'fa fdaf'</span>))<span class="comment"># strip只对首尾的对象管用</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">0</span></span><br><span class="line"><span class="string">10000</span></span><br><span class="line"><span class="string">happy</span></span><br><span class="line"><span class="string">names</span></span><br><span class="line"><span class="string">fa fdaf</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/Strip%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/17/Python/Strip%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Strip方法</a>
         </h1>
 
         <div class="post-meta">
@@ -442,7 +501,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/filter%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -456,7 +515,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/17/filter%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">filter函数</a>
+            <a href="/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">filter函数</a>
         </h1>
 
         <div class="post-meta">
@@ -468,7 +527,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-17 11:56:47 / 修改时间：11:57:00" itemprop="dateCreated datePublished" datetime="2020-02-17T11:56:47+08:00">2020-02-17</time>
+              <time title="创建时间：2020-02-17 11:56:47 / 修改时间：15:35:14" itemprop="dateCreated datePublished" datetime="2020-02-17T11:56:47+08:00">2020-02-17</time>
             </span>
 
           
@@ -482,7 +541,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># filter ： Python内建的filter函数用于过滤序列</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">和map()类似。filter也接收一个序列。区别是：filter把传入额函数依次作用于每个元素，然后根据</span></span><br><span class="line"><span class="string">返回值是True 还是Flase决定保留还是丢弃该元素</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">            <span class="comment">#在一个list中删掉偶数，只保留奇数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line">print(list(filter(is_odd, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>])))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把一个序列中的空字符串删掉</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_empty</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</span><br><span class="line"></span><br><span class="line">print(list(filter(not_empty,[<span class="string">'a'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>])))</span><br><span class="line"><span class="string">"""返回值：</span></span><br><span class="line"><span class="string">['a', 'B', 'C', 'D']</span></span><br><span class="line"><span class="string">注意到：filter函数返回的是一个lterator，也就是一个惰性序列，所以要强迫fliter完成计算结果，需要用到方法list</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -501,7 +560,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -515,7 +574,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/17/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/" class="post-title-link" itemprop="url">课程导入</a>
+            <a href="/2020/02/17/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/" class="post-title-link" itemprop="url">课程导入</a>
         </h1>
 
         <div class="post-meta">
@@ -809,78 +868,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/" class="post-title-link" itemprop="url">Java/Java打印九九乘法表</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-02-10 11:30:00 / 修改时间：15:55:33" itemprop="dateCreated datePublished" datetime="2020-02-10T11:30:00+08:00">2020-02-10</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> nianchu;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>,j = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(i= <span class="number">1</span>;i  &lt;= <span class="number">9</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++) &#123;</span><br><span class="line">				System.out.printf(<span class="string">"%d*%d=%d"</span>,j,i,j*i);</span><br><span class="line">				System.out.printf(<span class="string">"  "</span>);</span><br><span class="line">				<span class="keyword">if</span>(j==i) &#123;</span><br><span class="line">					System.out.printf(<span class="string">"%n"</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 输出结果：</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">1*1=1  </span></span><br><span class="line"><span class="comment">1*2=2  2*2=4  </span></span><br><span class="line"><span class="comment">1*3=3  2*3=6  3*3=9  </span></span><br><span class="line"><span class="comment">1*4=4  2*4=8  3*4=12  4*4=16  </span></span><br><span class="line"><span class="comment">1*5=5  2*5=10  3*5=15  4*5=20  5*5=25  </span></span><br><span class="line"><span class="comment">1*6=6  2*6=12  3*6=18  4*6=24  5*6=30  6*6=36  </span></span><br><span class="line"><span class="comment">1*7=7  2*7=14  3*7=21  4*7=28  5*7=35  6*7=42  7*7=49  </span></span><br><span class="line"><span class="comment">1*8=8  2*8=16  3*8=24  4*8=32  5*8=40  6*8=48  7*8=56  8*8=64  </span></span><br><span class="line"><span class="comment">1*9=9  2*9=18  3*9=27  4*9=36  5*9=45  6*9=54  7*9=63  8*9=72  9*9=81  </span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1044,7 +1031,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1116,7 +1103,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共27.8k字</span>
+  <span class="post-count">博客全站共28.8k字</span>
 </div>
 
         
