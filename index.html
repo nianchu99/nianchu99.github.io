@@ -324,7 +324,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/19/%E3%80%8AMatlab%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/20/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83%E5%92%8C%E6%88%AA%E5%8F%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -338,7 +338,68 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/19/%E3%80%8AMatlab%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/" class="post-title-link" itemprop="url">《Matlab从入门到精通》</a>
+            <a href="/2020/02/20/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83%E5%92%8C%E6%88%AA%E5%8F%96/" class="post-title-link" itemprop="url">java字符串比较和截取</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-20 17:32:47 / 修改时间：17:35:46" itemprop="dateCreated datePublished" datetime="2020-02-20T17:32:47+08:00">2020-02-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="字符串比较和截取"><a href="#字符串比较和截取" class="headerlink" title="字符串比较和截取"></a>字符串比较和截取</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串比较</span></span><br><span class="line">String s11 = <span class="string">"xiaolei"</span>;</span><br><span class="line">String s12 = <span class="string">"zlei"</span>;</span><br><span class="line">String s13 =<span class="string">"Xiaolei"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//1 比较相等</span></span><br><span class="line"><span class="comment">//1.1 包括大小写</span></span><br><span class="line">System.out.println(s11.equals(s12));<span class="comment">//flase</span></span><br><span class="line">System.out.println(s11.equals(s13));<span class="comment">//flase</span></span><br><span class="line"><span class="comment">//1.2 忽视大小写</span></span><br><span class="line">System.out.println(s11.equalsIgnoreCase(s13));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2 比较大小</span></span><br><span class="line"><span class="comment">//2.1 不忽略大小写</span></span><br><span class="line">System.out.println(s11.compareTo(s12));<span class="comment">//20；依次比较两字符串相应位置的ASCII码的大小。如果相同比较下一位，如果不同就返回此位置字符与参照字符的ASCII码的差值。如果完全相同，就返回0</span></span><br><span class="line"><span class="comment">//2.2 忽略大小写</span></span><br><span class="line"><span class="comment">// 使用compareToIgnoreCase起到忽略大小写的作用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3 比较前缀和后缀</span></span><br><span class="line"><span class="comment">//3.1 比较前缀boolean startsWith();</span></span><br><span class="line">System.out.println(s11.startsWith(<span class="string">"i"</span>));<span class="comment">//flase</span></span><br><span class="line">System.out.println(s11.startsWith(<span class="string">"x"</span>));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3.2 比较后缀</span></span><br><span class="line">System.out.println(s11.endsWith(<span class="string">"i"</span>));<span class="comment">//true</span></span><br><span class="line">System.out.println(s11.endsWith(<span class="string">"x"</span>));<span class="comment">//flase</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 比较前后缀小实例</span></span><br><span class="line"><span class="keyword">int</span> docNumbers = <span class="number">0</span>,javaNumbers=<span class="number">0</span>;</span><br><span class="line">String [] docFloder = &#123;<span class="string">"javaTest.doc"</span>,<span class="string">"PythonTest.docx"</span>,<span class="string">"MatlabTest.m"</span>,<span class="string">"javaFinal.ppt"</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(String doc: docFloder) &#123;</span><br><span class="line">	<span class="keyword">if</span> (doc.endsWith(<span class="string">".doc"</span>)) &#123;</span><br><span class="line">		docNumbers++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (String doc: docFloder) &#123;</span><br><span class="line">	<span class="keyword">if</span>(doc.startsWith(<span class="string">"java"</span>)) &#123;</span><br><span class="line">		javaNumbers++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">"doc文档个数为 "</span>+docNumbers);</span><br><span class="line">System.out.println(<span class="string">"java相关文档格个数为 "</span>+javaNumbers);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 知识补充：trim() tool and toLowerCase() tool</span></span><br><span class="line"><span class="comment">// trim() 去掉字符串前后空白</span></span><br><span class="line"><span class="comment">// toLowerCase() 将字符串全部转化为小写</span></span><br><span class="line">System.out.println(<span class="string">"ABCDEFG"</span>.toLowerCase());</span><br><span class="line">System.out.println(<span class="string">"   abcdefg   "</span>);</span><br><span class="line">System.out.println(<span class="string">"  abcdefg  "</span>.trim().toUpperCase());<span class="comment">//去除字符串空白以后再将字符串全部转化为大写</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*Output:</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">-2</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">doc文档个数为 1</span></span><br><span class="line"><span class="comment">java相关文档格个数为 2</span></span><br><span class="line"><span class="comment">abcdefg</span></span><br><span class="line"><span class="comment">  abcdefg   </span></span><br><span class="line"><span class="comment">ABCDEFG 	</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串截取</span></span><br><span class="line"><span class="comment">// 1 String substring(int beginIndex) //唯一参数为指定开始索引，这一方法会截取从开始索引到字符串末尾的子字符串</span></span><br><span class="line"><span class="comment">// 2 String substring(int beginIndex, int endIndex) //包含两个参数，开始索引和结束索引，需要注意的是所截取的字符串包括开始索引处的字符，但是不包括结束索引处的字符</span></span><br><span class="line"><span class="comment">//coding：</span></span><br><span class="line">String s_jiequString = <span class="string">"ABCDEFGHIGKLMNOPQRST"</span>;</span><br><span class="line">System.out.println(s_jiequString.substring(<span class="number">4</span>));</span><br><span class="line">System.out.println(s_jiequString.substring(<span class="number">4</span>, <span class="number">9</span>));</span><br><span class="line"><span class="comment">/*Output: </span></span><br><span class="line"><span class="comment"> * EFGHIGKLMNOPQRST</span></span><br><span class="line"><span class="comment"> * EFGHI</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 知识补充 ：使用split方法分割字符串</span></span><br><span class="line"><span class="comment">//split ：参数是字符串，返回值是String[]</span></span><br><span class="line">String s_fengeString = <span class="string">"abdabcdbafaga"</span>;</span><br><span class="line">String[] s_fenge_results= s_fengeString.split(<span class="string">"a"</span>);</span><br><span class="line"><span class="keyword">for</span> (String s_fenge_result:s_fenge_results) &#123;</span><br><span class="line">	System.out.println(s_fenge_result);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Output</span></span><br><span class="line"><span class="comment">bd</span></span><br><span class="line"><span class="comment">bcdb</span></span><br><span class="line"><span class="comment">f</span></span><br><span class="line"><span class="comment">g</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/19/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/%E3%80%8AMatlab%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/19/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/%E3%80%8AMatlab%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/" class="post-title-link" itemprop="url">《Matlab从入门到精通》</a>
         </h1>
 
         <div class="post-meta">
@@ -428,6 +489,72 @@
 
 <p><strong><em>实例代码</em></strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">String sourceString = <span class="string">"There is a string accessing exemple"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获得字符串长度</span></span><br><span class="line"><span class="keyword">int</span> len = sourceString.length();</span><br><span class="line"><span class="comment">//获得索引位置16的字符串</span></span><br><span class="line"><span class="keyword">char</span> ch = sourceString.charAt(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//查找字符和子字符串</span></span><br><span class="line"><span class="keyword">int</span> firstChar1 = sourceString.indexOf(<span class="string">'r'</span>);<span class="comment">//从前往后搜索字符</span></span><br><span class="line"><span class="keyword">int</span> lastChar1 = sourceString.lastIndexOf(<span class="string">'r'</span>);<span class="comment">//从后往前搜索字符</span></span><br><span class="line"><span class="keyword">int</span> firststr1 = sourceString.indexOf(<span class="string">"ing"</span>);<span class="comment">//从前往后搜索字符串</span></span><br><span class="line"><span class="keyword">int</span> laststr1 = sourceString.lastIndexOf(<span class="string">"ing"</span>);<span class="comment">//从后往前搜索字符串</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> firstchar2 = sourceString.indexOf(<span class="string">'e'</span>, <span class="number">15</span>);<span class="comment">//从索引为15的位置开始</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 也就是说：indexOf和lastIndexOf都还可以接收一个开始的索引</span></span><br><span class="line"><span class="comment"> * 需要注意的是：如果没有找到，是不能够从头直接跳到尾巴去接着找，</span></span><br><span class="line"><span class="comment"> * 也不能从尾巴跳到头部去继续找，这种情况下，就只能算作找不到，</span></span><br><span class="line"><span class="comment"> * 返回-1</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/" class="post-title-link" itemprop="url">java-字符串拼接</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-18 23:23:08" itemprop="dateCreated datePublished" datetime="2020-02-18T23:23:08+08:00">2020-02-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-19 00:57:44" itemprop="dateModified" datetime="2020-02-19T00:57:44+08:00">2020-02-19</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h1><p>由于String字符串是不可变字符串，所以String字符串进行拼接以后会产生一个新的对象。</p>
+<h2 id="1-使用-号（可以连接任何类型数据拼接成为字符串）"><a href="#1-使用-号（可以连接任何类型数据拼接成为字符串）" class="headerlink" title="1 使用 + 号（可以连接任何类型数据拼接成为字符串）"></a>1 使用 + 号（可以连接任何类型数据拼接成为字符串）</h2><h2 id="2-使用-concat-String-str-方法-只能拼接String字符串"><a href="#2-使用-concat-String-str-方法-只能拼接String字符串" class="headerlink" title="2 使用 concat(String str)方法(只能拼接String字符串)"></a>2 使用 concat(String str)方法(只能拼接String字符串)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//字符串拼接</span></span><br><span class="line"><span class="comment">//使用+运算符连接</span></span><br><span class="line">String s1 = <span class="string">"Hello"</span>;</span><br><span class="line">String s2 = s1 + <span class="string">" World"</span>;</span><br><span class="line">System.out.println(s2);</span><br><span class="line"></span><br><span class="line">String s4 = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//使用+运算符连接，支持+=赋值运算符</span></span><br><span class="line">s4 += <span class="string">" "</span>;</span><br><span class="line">s4 += <span class="string">"World"</span>;</span><br><span class="line">System.out.println(s4);</span><br><span class="line"></span><br><span class="line">String s5 =<span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//使用concat连接</span></span><br><span class="line">s5 = s5.concat(<span class="string">" "</span>).concat(<span class="string">"World!"</span>);<span class="comment">//concat的参数和返回值都是String,所以可以连续调用该方法进行多个字符串的拼接</span></span><br><span class="line"><span class="keyword">int</span> age = <span class="number">18</span>;</span><br><span class="line">String s6 = <span class="string">"她的年龄是"</span> + age + <span class="string">"岁"</span>;</span><br><span class="line">System.out.println(s6);</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> score = <span class="string">'A'</span>;</span><br><span class="line">String s7 = <span class="string">"她的英语成绩是"</span> + score;</span><br><span class="line">System.out.println(s7);</span><br><span class="line"></span><br><span class="line">java.util.Date nowDate = <span class="keyword">new</span> java.util.Date();</span><br><span class="line"><span class="comment">//对象拼接自动调用toString()方法</span></span><br><span class="line"><span class="comment">/*这里解释一下：</span></span><br><span class="line"><span class="comment"> * Java中所有对象都有一个toString()方法，该方法可以将对象转换为字符串，而且拼接过程中会自动调用这个方法。</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * java.util.Date类是java的日期类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">String s8 = <span class="string">"今天是： "</span> + nowDate;</span><br><span class="line">System.out.println(s8);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 输出结果：</span></span><br><span class="line"><span class="comment"> *Hello World</span></span><br><span class="line"><span class="comment">*Hello World</span></span><br><span class="line"><span class="comment">*她的年龄是18岁</span></span><br><span class="line"><span class="comment">*她的英语成绩是A</span></span><br><span class="line"><span class="comment">*今天是： Wed Feb 19 00:54:22 CST 2020</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -792,156 +919,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/17/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/" class="post-title-link" itemprop="url">课程导入</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-02-17 10:53:53 / 修改时间：11:34:30" itemprop="dateCreated datePublished" datetime="2020-02-17T10:53:53+08:00">2020-02-17</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="什么叫计算"><a href="#什么叫计算" class="headerlink" title="什么叫计算"></a>什么叫计算</h1><p>1 算术运算</p>
-<p>2 较复杂的运算：即根据已知量求出未知量</p>
-<h1 id="什么叫科学计算"><a href="#什么叫科学计算" class="headerlink" title="什么叫科学计算"></a>什么叫科学计算</h1><p>对于复杂的数值计算问题，可以利用计算机进行问题求解</p>
-<blockquote>
-<p>利用计算机进行数值计算的方法叫做数值计算</p>
-</blockquote>
-<h1 id="科学计算与Matlab语言的关系"><a href="#科学计算与Matlab语言的关系" class="headerlink" title="科学计算与Matlab语言的关系"></a>科学计算与Matlab语言的关系</h1><blockquote>
-<p>数值问题 ——&gt; 求解算法 ——&gt; 程序实现——&gt; 结果分析</p>
-</blockquote>
-<p>Matlab是矩阵实验室的缩写</p>
-<h2 id="Matlab语言的主要功能"><a href="#Matlab语言的主要功能" class="headerlink" title="Matlab语言的主要功能"></a>Matlab语言的主要功能</h2><p>例如：可以求解一元二次方程</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p = [<span class="number">1</span>,<span class="number">-3</span>,<span class="number">1</span>];</span><br><span class="line">x = roots(p)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/" class="post-title-link" itemprop="url">廖雪峰Python教程练习题</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-16 23:54:37" itemprop="dateCreated datePublished" datetime="2020-02-16T23:54:37+08:00">2020-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-17 15:13:56" itemprop="dateModified" datetime="2020-02-17T15:13:56+08:00">2020-02-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># names.py</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> name.capitalize()</span><br><span class="line"></span><br><span class="line">L1 = [<span class="string">'adam'</span>, <span class="string">'LISA'</span>, <span class="string">'barT'</span>]</span><br><span class="line">L2 = list(map(normalize, L1))</span><br><span class="line">print(L2)</span><br><span class="line"><span class="comment"># 求积</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prod</span><span class="params">(L)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">prod1</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * y</span><br><span class="line">    <span class="keyword">return</span> reduce(prod1, L)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))</span><br><span class="line"><span class="comment"># 转换字符串</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">先记住这个结果，等会实现需要用到</span></span><br><span class="line"><span class="string">a = '123.456'</span></span><br><span class="line"><span class="string">n = a.index('.')</span></span><br><span class="line"><span class="string">b = [x for x in a[:n]]</span></span><br><span class="line"><span class="string">print(b)</span></span><br><span class="line"><span class="string">结果：</span></span><br><span class="line"><span class="string">['1', '2', '3']</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2float</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">    n = s.index(<span class="string">'.'</span>)</span><br><span class="line">    s1 = list(map(int, [x <span class="keyword">for</span> x <span class="keyword">in</span> s[:n]]))</span><br><span class="line">    s2 = list(map(int, [y <span class="keyword">for</span> y <span class="keyword">in</span> s[n+<span class="number">1</span>: ]]))</span><br><span class="line">    <span class="keyword">return</span> reduce(fn,s1) + (reduce(fn, s2) / <span class="number">10</span> ** len(s2))</span><br><span class="line"></span><br><span class="line">print(str2float(<span class="string">'123.456'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">['Adam', 'Lisa', 'Bart']</span></span><br><span class="line"><span class="string">3 * 5 * 7 * 9 = 945</span></span><br><span class="line"><span class="string">123.456</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -990,7 +967,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">53</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1062,7 +1039,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共31.4k字</span>
+  <span class="post-count">博客全站共32.3k字</span>
 </div>
 
         
