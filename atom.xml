@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.nianchu.space/"/>
-  <updated>2020-02-21T17:39:42.937Z</updated>
+  <updated>2020-02-24T15:18:02.415Z</updated>
   <id>http://www.nianchu.space/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java面向对象基础(重难点)</title>
+    <link href="http://www.nianchu.space/2020/02/24/Java/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/"/>
+    <id>http://www.nianchu.space/2020/02/24/Java/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/</id>
+    <published>2020-02-24T15:09:27.000Z</published>
+    <updated>2020-02-24T15:18:02.415Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="静态方法和实例方法的问题："><a href="#静态方法和实例方法的问题：" class="headerlink" title="静态方法和实例方法的问题："></a>静态方法和实例方法的问题：</h1><p>有static修饰的是静态方法，没有static修饰的方法是实例方法。</p><p>静态方法可以访问静态变量和其他静态方法，不可以访问实例方法，实例变量；实例方法可以访问实例变量、其他实例方法、静态变量、静态方法。(记住这一点是很有必要的。)</p><h1 id="静态代码块"><a href="#静态代码块" class="headerlink" title="静态代码块"></a>静态代码块</h1><p>如果初始化静态变量不是简单常量，需要进行计算才能初始化，可以使用静态(static)代码块，静态 代码块在类第一次加载时执行，并只执行一次。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//静态代码块的格式如下：</span></span><br><span class="line"><span class="keyword">static</span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"静态代码块被调用..."</span>);</span><br><span class="line">  <span class="comment">//还可以再这里初始化静态变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;静态方法和实例方法的问题：&quot;&gt;&lt;a href=&quot;#静态方法和实例方法的问题：&quot; class=&quot;headerlink&quot; title=&quot;静态方法和实例方法的问题：&quot;&gt;&lt;/a&gt;静态方法和实例方法的问题：&lt;/h1&gt;&lt;p&gt;有static修饰的是静态方法，没有static修饰
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="http://www.nianchu.space/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>可变字符串的插入删除和替换</title>
+    <link href="http://www.nianchu.space/2020/02/22/Java/%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4%E5%92%8C%E6%9B%BF%E6%8D%A2/"/>
+    <id>http://www.nianchu.space/2020/02/22/Java/%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4%E5%92%8C%E6%9B%BF%E6%8D%A2/</id>
+    <published>2020-02-22T15:34:43.000Z</published>
+    <updated>2020-02-22T15:35:27.297Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2.22 字符串插入、删除、替换</span></span><br><span class="line"><span class="comment">// 插入</span></span><br><span class="line">StringBuffer str = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">str.insert(<span class="number">11</span>,<span class="string">" very "</span>);</span><br><span class="line">System.out.println(str);<span class="comment">// Today is a very good day!</span></span><br><span class="line"><span class="comment">//删除和替换</span></span><br><span class="line">StringBuffer str1 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">StringBuffer str2 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">StringBuffer str3 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">System.out.println(str1.delete(<span class="number">0</span>, <span class="number">5</span>));<span class="comment">// is a good day!</span></span><br><span class="line">System.out.println(str2.delete(<span class="number">0</span>, <span class="number">5</span>));<span class="comment">// is a good day!</span></span><br><span class="line">System.out.println(str3.replace(<span class="number">0</span>,<span class="number">5</span>,<span class="string">"Tomorrow "</span>));<span class="comment">//Tomorrow  is a good day!</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="http://www.nianchu.space/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>java_可变字符串</title>
@@ -290,7 +338,7 @@
     <link href="http://www.nianchu.space/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/"/>
     <id>http://www.nianchu.space/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/</id>
     <published>2020-02-16T15:54:37.000Z</published>
-    <updated>2020-02-17T07:13:56.015Z</updated>
+    <updated>2020-02-24T15:20:16.152Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># names.py</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> name.capitalize()</span><br><span class="line"></span><br><span class="line">L1 = [<span class="string">'adam'</span>, <span class="string">'LISA'</span>, <span class="string">'barT'</span>]</span><br><span class="line">L2 = list(map(normalize, L1))</span><br><span class="line">print(L2)</span><br><span class="line"><span class="comment"># 求积</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prod</span><span class="params">(L)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">prod1</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * y</span><br><span class="line">    <span class="keyword">return</span> reduce(prod1, L)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))</span><br><span class="line"><span class="comment"># 转换字符串</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">先记住这个结果，等会实现需要用到</span></span><br><span class="line"><span class="string">a = '123.456'</span></span><br><span class="line"><span class="string">n = a.index('.')</span></span><br><span class="line"><span class="string">b = [x for x in a[:n]]</span></span><br><span class="line"><span class="string">print(b)</span></span><br><span class="line"><span class="string">结果：</span></span><br><span class="line"><span class="string">['1', '2', '3']</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2float</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">    n = s.index(<span class="string">'.'</span>)</span><br><span class="line">    s1 = list(map(int, [x <span class="keyword">for</span> x <span class="keyword">in</span> s[:n]]))</span><br><span class="line">    s2 = list(map(int, [y <span class="keyword">for</span> y <span class="keyword">in</span> s[n+<span class="number">1</span>: ]]))</span><br><span class="line">    <span class="keyword">return</span> reduce(fn,s1) + (reduce(fn, s2) / <span class="number">10</span> ** len(s2))</span><br><span class="line"></span><br><span class="line">print(str2float(<span class="string">'123.456'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">['Adam', 'Lisa', 'Bart']</span></span><br><span class="line"><span class="string">3 * 5 * 7 * 9 = 945</span></span><br><span class="line"><span class="string">123.456</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -308,8 +356,6 @@
     
     
       <category term="python" scheme="http://www.nianchu.space/tags/python/"/>
-    
-      <category term="learning" scheme="http://www.nianchu.space/tags/learning/"/>
     
   </entry>
   
@@ -454,54 +500,6 @@
     
     
       <category term="Lintcode刷题" scheme="http://www.nianchu.space/categories/Lintcode%E5%88%B7%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>14.二分查找</title>
-    <link href="http://www.nianchu.space/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
-    <id>http://www.nianchu.space/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</id>
-    <published>2020-01-17T15:22:00.000Z</published>
-    <updated>2020-01-17T17:34:11.999Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><strong>描述</strong></h3><p>给定一个排序的整数数组（升序）和一个要查找的整数<code>target</code>，用<code>O(logn)</code>的时间查找到target第一次出现的下标（从0开始），如果target不存在于数组中，返回<code>-1</code>。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param nums: The integer array.</span></span><br><span class="line"><span class="string">    @param target: Target to find.</span></span><br><span class="line"><span class="string">    @return: The first position of target. Position starts from 0.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">binarySearch</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">            low = <span class="number">0</span></span><br><span class="line">            high = len(nums) - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> low &lt;= high:</span><br><span class="line">                mid = low + (high - low) // <span class="number">2</span></span><br><span class="line">                <span class="keyword">if</span>  nums[mid] == target:</span><br><span class="line">                    <span class="keyword">while</span>(mid &gt;= <span class="number">0</span>):<span class="comment">#新增加的while和if用于解决有重复数字的情况，并保证每次都输出第一次出现的target的下标</span></span><br><span class="line">                        <span class="keyword">if</span> nums[mid] != target:</span><br><span class="line">                            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">                        mid = mid - <span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> mid &lt;= <span class="number">-1</span>:</span><br><span class="line">                        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">                    <span class="keyword">return</span> mid + <span class="number">1</span><span class="comment">#多减了一次，所以输出时+1</span></span><br><span class="line">                <span class="keyword">elif</span>  target &gt; nums[mid]:</span><br><span class="line">                    low = mid + <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    high = mid - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nums = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="number">18</span>]</span><br><span class="line">so = Solution()</span><br><span class="line">print(so.binarySearch(nums,<span class="number">9</span>))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;给定一个排序的整数数组（升序）和一个要查找的整数&lt;code&gt;target&lt;/code&gt;，用&lt;code&gt;O(
-      
-    
-    </summary>
-    
-    
-      <category term="Lintcode刷题" scheme="http://www.nianchu.space/categories/Lintcode%E5%88%B7%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Python/Python itertools模块</title>
-    <link href="http://www.nianchu.space/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/"/>
-    <id>http://www.nianchu.space/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/</id>
-    <published>2020-01-14T15:17:00.000Z</published>
-    <updated>2020-02-15T11:10:00.959Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p>Python内置的itertools模块中包含了一系列用来产生不同款类型迭代器的函数和类，这些函数的返回值都是一个迭代器。</p><h1 id="迭代器函数类型"><a href="#迭代器函数类型" class="headerlink" title="迭代器函数类型"></a>迭代器函数类型</h1><p><em>无限迭代器</em>：生成一个无限序列，比如自然序列1，2，3，4…;</p><p><em>有限迭代器</em>：接受一个或多个序列作为参数，进行组合、分组和过滤</p><p><em>组合生成器</em>：序列的排列、组合，求序列的笛卡尔积等</p><h2 id="无限迭代器"><a href="#无限迭代器" class="headerlink" title="无限迭代器"></a>无限迭代器</h2><h2 id="组合生成器"><a href="#组合生成器" class="headerlink" title="组合生成器"></a>组合生成器</h2><h3 id="product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"><a href="#product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。" class="headerlink" title="product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"></a>product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。</h3><p><strong>示例</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> itertools.product(<span class="string">"12345"</span>,<span class="string">"ABCDE"</span>):</span><br><span class="line">    print(i,end=<span class="string">''</span>)</span><br><span class="line">    j = j+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">""</span>)</span><br><span class="line">print(<span class="string">"一共有&#123;&#125;种组合"</span>.format(j))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果为:</span></span><br><span class="line"><span class="string">('1', 'A')('1', 'B')('1', 'C')('1', 'D')('1', 'E')('2', 'A')('2', 'B')('2', 'C')('2', 'D')('2', 'E')('3', 'A')('3', 'B')('3', 'C')('3', 'D')('3', 'E')('4', 'A')('4', 'B')('4', 'C')('4', 'D')('4', 'E')('5', 'A')('5', 'B')('5', 'C')('5', 'D')('5', 'E')</span></span><br><span class="line"><span class="string">一共有25种组合</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure><h3 id="permutations-用于生成一个全排列"><a href="#permutations-用于生成一个全排列" class="headerlink" title="permutations: 用于生成一个全排列"></a>permutations: 用于生成一个全排列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.permutations(nums)))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">[(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure><h3 id="combinations-用于求序列的组合"><a href="#combinations-用于求序列的组合" class="headerlink" title="combinations:用于求序列的组合"></a>combinations:用于求序列的组合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.combinations(nums,<span class="number">2</span>)))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure><h4 id="⚠️注意区分product、permutations和combinations的区别"><a href="#⚠️注意区分product、permutations和combinations的区别" class="headerlink" title="⚠️注意区分product、permutations和combinations的区别"></a>⚠️注意区分product、permutations和combinations的区别</h4>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;h1 id=&quot;说明：&quot;&gt;&lt;a href=&quot;#说明：&quot; class=&quot;headerlink&quot; title=&quot;说明：&quot;&gt;&lt;/a&gt;说明：&lt;/h1&gt;&lt;p&gt;Python内
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://www.nianchu.space/categories/Python/"/>
     
     
   </entry>

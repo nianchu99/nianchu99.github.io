@@ -222,6 +222,197 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/12/06/C/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/06/C/C%E8%AF%AD%E8%A8%80%E6%8C%87%E9%92%88/" class="post-title-link" itemprop="url">C/C语言指针</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-12-06 00:00:00 / 修改时间：17:34:43" itemprop="dateCreated datePublished" datetime="2019-12-06T00:00:00+08:00">2019-12-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="C指针"><a href="#C指针" class="headerlink" title="C指针"></a>C指针</h1><h2 id="为什么学习指针"><a href="#为什么学习指针" class="headerlink" title="为什么学习指针"></a>为什么学习指针</h2><blockquote>
+<p>通过指针，可以简化一些C编程任务的执行，还有一些任务，如动态内存的分配，没有指针是无法执行的。</p>
+</blockquote>
+<h2 id="什么是指针"><a href="#什么是指针" class="headerlink" title="什么是指针"></a>什么是指针</h2><blockquote>
+<p>指针是一个变量，其值为另一个变量的地址，即，内存位置的直接地址。就像其他变量或常量一样，使用指针存储其他变量地址之前，需要对其进行声明，</p>
+</blockquote>
+<h2 id="指针的简单使用"><a href="#指针的简单使用" class="headerlink" title="指针的简单使用"></a>指针的简单使用</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//指针学习</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="comment">/*指针的简单使用*/</span></span><br><span class="line">    <span class="keyword">int</span> number=<span class="number">20</span>;<span class="comment">/*实际变量的声明*/</span></span><br><span class="line">    <span class="keyword">int</span> *num;<span class="comment">/*指针变量的声明*/</span></span><br><span class="line">    num=&amp;number;<span class="comment">/*在指针变量中存储number的地址*/</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"number的地址是L：%p\n"</span>,num);<span class="comment">//两种打印number地址的方式</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"number的地址是L：%p\n"</span>,&amp;number);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"number的s值是:%d\n"</span>,*num);<span class="comment">//两种打印number值的方式。</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"number的s值是:%d\n"</span>,number);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> number的地址是L：0x7ffeefbff4ec</span></span><br><span class="line"><span class="comment"> number的地址是L：0x7ffeefbff4ec</span></span><br><span class="line"><span class="comment"> number的s值是:20</span></span><br><span class="line"><span class="comment"> number的s值是:20</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="C中的NULL指针"><a href="#C中的NULL指针" class="headerlink" title="C中的NULL指针"></a>C中的NULL指针</h2><blockquote>
+<p>在变量声明的时候，如果没有确切的地址可以赋值，为指针变量赋一个 NULL 值是一个良好的编程习惯。赋为 NULL 值的指针被称为<strong>空</strong>指针。</p>
+</blockquote>
+<blockquote>
+<p>在大多数的操作系统上，程序不允许访问地址为 0 的内存，因为该内存是操作系统保留的。然而，内存地址 0 有特别重要的意义，它表明该指针不指向一个可访问的内存位置。但按照惯例，如果指针包含空值（零值），则假定它不指向任何东西。</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//检查一个空指针</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> *Zero =<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span> (!Zero) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"这是一个空指针\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 这是一个空指针</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="指针的算术运算"><a href="#指针的算术运算" class="headerlink" title="指针的算术运算"></a>指针的算术运算</h2><h3 id="指针的递增递减"><a href="#指针的递增递减" class="headerlink" title="指针的递增递减"></a>指针的递增递减</h3><blockquote>
+<p>我们喜欢在程序中使用指针代替数组，因为变量指针可以递增，而数组不能递增，数组可以看成一个指针常量。下面的程序递增变量指针，以便顺序访问数组中的每一个元素：</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//定增一个指针</span></span><br><span class="line">    <span class="keyword">int</span> number[<span class="number">4</span>]=&#123;<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1314</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> *num=number;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="number">3</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"number存储值为：%d\n"</span>,*num);</span><br><span class="line">        i++;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//递减一个指针</span></span><br><span class="line">    <span class="keyword">int</span> number1[<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> *num1=&amp;number1[<span class="number">3</span>];<span class="comment">//这里注意递减时指针的指向是不一样的</span></span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">3</span>;</span><br><span class="line">    <span class="keyword">while</span> (j&gt;=<span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"number1存储值为：%d\n"</span>,*num1);</span><br><span class="line">        j--;</span><br><span class="line">        num1--;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> number存储值为：5</span></span><br><span class="line"><span class="comment"> number存储值为：2</span></span><br><span class="line"><span class="comment"> number存储值为：1</span></span><br><span class="line"><span class="comment"> number存储值为：1314</span></span><br><span class="line"><span class="comment"> number1存储值为：4</span></span><br><span class="line"><span class="comment"> number1存储值为：3</span></span><br><span class="line"><span class="comment"> number1存储值为：2</span></span><br><span class="line"><span class="comment"> number1存储值为：1</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="指针的比较"><a href="#指针的比较" class="headerlink" title="指针的比较"></a>指针的比较</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//通过指针的比较来输出数组中的字符</span></span><br><span class="line">    <span class="keyword">int</span> number[<span class="number">4</span>]=&#123;<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1314</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> *num=number;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (num&lt;=&amp;number[<span class="number">3</span>]) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"number[%d]:%d\n"</span>,i,*num);</span><br><span class="line">        i++;</span><br><span class="line">        num++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> number[0]:5</span></span><br><span class="line"><span class="comment"> number[1]:2</span></span><br><span class="line"><span class="comment"> number[2]:1</span></span><br><span class="line"><span class="comment"> number[3]:1314</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="指针数组"><a href="#指针数组" class="headerlink" title="指针数组"></a>指针数组</h2><h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//指针数组</span></span><br><span class="line">    <span class="comment">//整数指针</span></span><br><span class="line">    <span class="keyword">int</span> number[<span class="number">4</span>]=&#123;<span class="number">5</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">1314</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,*num[<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">3</span>; i++) &#123;</span><br><span class="line">        num[i]=&amp;number[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"number[%d]:%d\n"</span>,i,*num[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">" \n"</span>);</span><br><span class="line">    <span class="comment">//用一个指向字符的指针数组来存储一个字符串列表</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"这就是我想要对你说的话：\n"</span>);</span><br><span class="line">    <span class="keyword">char</span> *zifu[]=&#123;<span class="string">"I love you!"</span>,<span class="string">"I love python!"</span>,<span class="string">"But i love you best!"</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (j=<span class="number">0</span>; j&lt;<span class="number">3</span>; j++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%s\n"</span>,zifu[j]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> number[0]:5</span></span><br><span class="line"><span class="comment"> number[1]:2</span></span><br><span class="line"><span class="comment"> number[2]:1</span></span><br><span class="line"><span class="comment"> number[3]:1314</span></span><br><span class="line"><span class="comment">  </span></span><br><span class="line"><span class="comment"> 这就是我想要对你说的话：</span></span><br><span class="line"><span class="comment"> I love you!</span></span><br><span class="line"><span class="comment"> I love python!</span></span><br><span class="line"><span class="comment"> But i love you best!</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="指向指针的指针"><a href="#指向指针的指针" class="headerlink" title="指向指针的指针"></a>指向指针的指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="comment">//定义指向指针的指针时，一定要使用两个*号</span></span><br><span class="line">    <span class="keyword">int</span> num=<span class="number">20</span>;</span><br><span class="line">    <span class="keyword">int</span> *zz=&amp;num;</span><br><span class="line">    <span class="keyword">int</span> **zzz=&amp;zz;</span><br><span class="line">    <span class="comment">//使用三种方法分别打印出变量num的值</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"num的值是：%d\n"</span>,num);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"num的值是：%d\n"</span>,*zz);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"num的值是：%d\n"</span>,**zzz);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> num的值是：20</span></span><br><span class="line"><span class="comment"> num的值是：20</span></span><br><span class="line"><span class="comment"> num的值是：20</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="传递指针给函数"><a href="#传递指针给函数" class="headerlink" title="传递指针给函数"></a>传递指针给函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sj</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">long</span> *zz)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="comment">//通过传递指针给函数，可以直接修改原参数（实参），而不是引用实参到形参。</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> shijian;</span><br><span class="line">    sj(&amp;shijian);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"当前时间参数是：%ld\n"</span>,shijian);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sj</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">long</span> *zz)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    *zz=time(<span class="literal">NULL</span>);</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 当前时间参数是：1575623559</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="能接受指针作为参数的函数，也能接受数组作为参数"><a href="#能接受指针作为参数的函数，也能接受数组作为参数" class="headerlink" title="能接受指针作为参数的函数，也能接受数组作为参数"></a>能接受指针作为参数的函数，也能接受数组作为参数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span>  *zz)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="comment">//通过传递指针给函数，可以直接修改原参数（实参），而不是引用实参到形参。</span></span><br><span class="line">    <span class="keyword">int</span> number[<span class="number">6</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line">    <span class="keyword">double</span> jieguo;</span><br><span class="line">    jieguo=<span class="built_in">get</span>(number);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"它们的平均数是：%lf\n"</span>,jieguo);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> *zz)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;<span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">5</span>; i++) &#123;</span><br><span class="line">        sum=sum+zz[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">double</span>)sum/<span class="number">6</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 它们的平均数是：3.500000</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="从函数返回指针"><a href="#从函数返回指针" class="headerlink" title="从函数返回指针"></a>从函数返回指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/12/06/C/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/06/C/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/" class="post-title-link" itemprop="url">C/函数指针</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-06 00:00:00" itemprop="dateCreated datePublished" datetime="2019-12-06T00:00:00+08:00">2019-12-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-12 11:34:03" itemprop="dateModified" datetime="2019-12-12T11:34:03+08:00">2019-12-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="函数指针"><a href="#函数指针" class="headerlink" title="函数指针"></a>函数指针</h1><h2 id="怎么使用函数指针"><a href="#怎么使用函数指针" class="headerlink" title="怎么使用函数指针"></a>怎么使用函数指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">suiji</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> rand();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> (*p)()=&amp;suiji;<span class="comment">//声明函数指针</span></span><br><span class="line">    <span class="keyword">int</span> a=p();</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> 16807</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">huidiao</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">void</span> (*<span class="built_in">print</span>)(<span class="keyword">void</span>))</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;x; i++) &#123;</span><br><span class="line">        <span class="built_in">print</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"*\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a=<span class="number">10</span>;</span><br><span class="line">    huidiao(a, <span class="built_in">print</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> </span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> </span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/12/05/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/C%E8%AF%AD%E8%A8%80%EF%BC%9A%E5%87%BD%E6%95%B0%E7%BB%83%E4%B9%A0%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -369,90 +560,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C/C语言两个数交换的两种方法</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-12-02 13:03:00" itemprop="dateCreated datePublished" datetime="2019-12-02T13:03:00+08:00">2019-12-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-05 11:03:42" itemprop="dateModified" datetime="2019-12-05T11:03:42+08:00">2019-12-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
-                    <span itemprop="name">C语言</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p><em>由于函数传递时实参无法改变，所以使用了全局变量来完成</em></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    c=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    a=<span class="number">3</span>;</span><br><span class="line">    b=<span class="number">2</span>;</span><br><span class="line">    jiaoHUAN(a, b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment">a:2,b:3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p><em>使用数组，从而避免使用了全局变量</em></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a[<span class="number">2</span>])</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> zhongjian;</span><br><span class="line">    zhongjian=a[<span class="number">0</span>];</span><br><span class="line">    a[<span class="number">0</span>]=a[<span class="number">1</span>];</span><br><span class="line">    a[<span class="number">1</span>]=zhongjian;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a[<span class="number">0</span>],a[<span class="number">1</span>]);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b[<span class="number">2</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    jiaoHUAN(b);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> a:2,b:3</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80exit()%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -524,6 +631,90 @@
 
 
 
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">C/C语言两个数交换的两种方法</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-02 13:03:00" itemprop="dateCreated datePublished" datetime="2019-12-02T13:03:00+08:00">2019-12-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-05 11:03:42" itemprop="dateModified" datetime="2019-12-05T11:03:42+08:00">2019-12-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p><em>由于函数传递时实参无法改变，所以使用了全局变量来完成</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">    c=a;</span><br><span class="line">    a=b;</span><br><span class="line">    b=c;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    a=<span class="number">3</span>;</span><br><span class="line">    b=<span class="number">2</span>;</span><br><span class="line">    jiaoHUAN(a, b);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment">a:2,b:3</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p><em>使用数组，从而避免使用了全局变量</em></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jiaoHUAN</span><span class="params">(<span class="keyword">int</span> a[<span class="number">2</span>])</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> zhongjian;</span><br><span class="line">    zhongjian=a[<span class="number">0</span>];</span><br><span class="line">    a[<span class="number">0</span>]=a[<span class="number">1</span>];</span><br><span class="line">    a[<span class="number">1</span>]=zhongjian;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"a:%d,b:%d\n"</span>,a[<span class="number">0</span>],a[<span class="number">1</span>]);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> b[<span class="number">2</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    jiaoHUAN(b);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> a:2,b:3</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -853,189 +1044,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/30/Python/Python%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%AE%80%E5%8D%95%E8%AE%A1%E7%AE%97%E5%99%A8%E7%9A%84%E5%AE%9E%E7%8E%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/30/Python/Python%E5%AE%9E%E4%BE%8B%EF%BC%9A%E7%AE%80%E5%8D%95%E8%AE%A1%E7%AE%97%E5%99%A8%E7%9A%84%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">Python/Python实例：简单计算器的实现</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2019-11-30 22:17:00 / 修改时间：22:18:06" itemprop="dateCreated datePublished" datetime="2019-11-30T22:17:00+08:00">2019-11-30</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Pyton实现简单的计算器，满足加减乘除</span></span><br><span class="line"><span class="comment">#定义函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x+y</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">subtract</span><span class="params">(x,y)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> x-y</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">multiply</span><span class="params">(x,y)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> x*y</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">devide</span><span class="params">(x,y)</span>:</span></span><br><span class="line">  <span class="keyword">return</span> x/y</span><br><span class="line">print(<span class="string">"1-&gt;加法"</span>)                      <span class="comment">#规定选择</span></span><br><span class="line">print(<span class="string">"2-&gt;减法"</span>)</span><br><span class="line">print(<span class="string">"3-&gt;乘法"</span>)</span><br><span class="line">print(<span class="string">"4-&gt;除法"</span>)</span><br><span class="line">yours=int(input(<span class="string">"请选择运算类型："</span>))<span class="comment">#获取用户选择</span></span><br><span class="line">a=int(input(<span class="string">"first number"</span>))     <span class="comment">#获取要运算的数字</span></span><br><span class="line">b=int(input(<span class="string">"second number"</span>))</span><br><span class="line"><span class="keyword">if</span> yours==<span class="number">1</span>:                    <span class="comment">#判断用户需要的运算类型并输出结果</span></span><br><span class="line">     print(<span class="string">"&#123;&#125;+&#123;&#125;=&#123;&#125;"</span>.format(a,b,add(a,b)))</span><br><span class="line"><span class="keyword">elif</span> yours==<span class="number">2</span>:</span><br><span class="line">    print(<span class="string">'&#123;&#125;-&#123;&#125;=&#123;&#125;'</span>.format(a,b,subtract(a,b)))</span><br><span class="line"><span class="keyword">elif</span> yours==<span class="number">3</span>:</span><br><span class="line">    print(<span class="string">'&#123;&#125;-&#123;&#125;=&#123;&#125;'</span>.format(a, b, multiply(a, b)))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">'&#123;&#125;-&#123;&#125;=&#123;&#125;'</span>.format(a, b,devide(a, b)))</span><br><span class="line"></span><br><span class="line"><span class="string">'''运行结果为：</span></span><br><span class="line"><span class="string">1-&gt;加法</span></span><br><span class="line"><span class="string">2-&gt;减法</span></span><br><span class="line"><span class="string">3-&gt;乘法</span></span><br><span class="line"><span class="string">4-&gt;除法</span></span><br><span class="line"><span class="string">请选择运算类型：4</span></span><br><span class="line"><span class="string">first number1000</span></span><br><span class="line"><span class="string">second number10</span></span><br><span class="line"><span class="string">1000-10=100.0</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/29/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BB%83%E4%B9%A0%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/29/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BB%83%E4%B9%A0%E9%A2%98/" class="post-title-link" itemprop="url">字符串练习题</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-11-29 00:00:00" itemprop="dateCreated datePublished" datetime="2019-11-29T00:00:00+08:00">2019-11-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-01 15:09:09" itemprop="dateModified" datetime="2019-12-01T15:09:09+08:00">2019-12-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index">
-                    <span itemprop="name">C语言作业</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="字符串练习题"><a href="#字符串练习题" class="headerlink" title="字符串练习题"></a>字符串练习题</h1><h2 id="基础练习"><a href="#基础练习" class="headerlink" title="基础练习"></a>基础练习</h2><h3 id="1-编写程序，对任意输入的字符串，统计其中的大写字母和小写字母的个数。例如，-输入字符-串-AAaaBBb123CCccccd-，则应输出结果-upper-6，-lower-8。"><a href="#1-编写程序，对任意输入的字符串，统计其中的大写字母和小写字母的个数。例如，-输入字符-串-AAaaBBb123CCccccd-，则应输出结果-upper-6，-lower-8。" class="headerlink" title="1.编写程序，对任意输入的字符串，统计其中的大写字母和小写字母的个数。例如， 输入字符 串: AAaaBBb123CCccccd ，则应输出结果:upper = 6， lower = 8。"></a>1.编写程序，对任意输入的字符串，统计其中的大写字母和小写字母的个数。例如， 输入字符 串: AAaaBBb123CCccccd ，则应输出结果:upper = 6， lower = 8。</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jc1</span><span class="params">(<span class="keyword">char</span> zifu[],<span class="keyword">int</span> i,<span class="keyword">int</span> upper,<span class="keyword">int</span> lower)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jc1</span><span class="params">(<span class="keyword">char</span> zifu[],<span class="keyword">int</span> i,<span class="keyword">int</span> upper,<span class="keyword">int</span> lower)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="built_in">strlen</span>(zifu)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]&gt;=<span class="number">65</span>&amp;&amp;zifu[i]&lt;=<span class="number">90</span>) &#123;</span><br><span class="line">            upper++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (zifu[i]&gt;=<span class="number">97</span>&amp;&amp;zifu[i]&lt;=<span class="number">122</span>)&#123;</span><br><span class="line">            lower++;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"upper:%d,lower:%d\n"</span>,upper,lower);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> zifu1[]=&#123;<span class="string">"Hello the world"</span>&#125;;</span><br><span class="line">    jc1(zifu1,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">char</span> zifu2[]=&#123;<span class="string">"Python is the best LANGUAGE!"</span>&#125;;</span><br><span class="line">    jc1(zifu2,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为</span></span><br><span class="line"><span class="comment">upper:1,lower:12</span></span><br><span class="line"><span class="comment">upper:9,lower:14</span></span><br><span class="line"><span class="comment">Program ended with exit code: 0	*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-用字符数组存储任意输入的一串字符，求其最大字符。"><a href="#2-用字符数组存储任意输入的一串字符，求其最大字符。" class="headerlink" title="2. 用字符数组存储任意输入的一串字符，求其最大字符。"></a>2. 用字符数组存储任意输入的一串字符，求其最大字符。</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//基础2</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jc2</span><span class="params">(<span class="keyword">char</span> zifu[],<span class="keyword">int</span> i,<span class="keyword">char</span> <span class="built_in">max</span>)</span></span>;<span class="comment">//声明函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jc2</span><span class="params">(<span class="keyword">char</span> zifu[],<span class="keyword">int</span> i,<span class="keyword">char</span> <span class="built_in">max</span>)</span><span class="comment">//定义函数，其中定义了字符数组zifu,整型变量i，字符型变量max</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="built_in">max</span>=zifu[<span class="number">0</span>];                    <span class="comment">//初始化字符型变量max等于字符数组中第一个字符,并认为其为最大字符</span></span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="built_in">strlen</span>(zifu)<span class="number">-1</span>) &#123;           <span class="comment">//限制循环次数，防止下标越界</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">max</span>&lt;zifu[i]) &#123;          <span class="comment">//判断max这个字符是否小于后一个字符</span></span><br><span class="line">            <span class="built_in">max</span>=zifu[i];            <span class="comment">//如果比后一个字符小，就让后一个字符称为max</span></span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"最大的字符是：%c\n"</span>,<span class="built_in">max</span>);<span class="comment">//输出max字符的值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>                          <span class="comment">//调用函数</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> zifu1[]=&#123;<span class="string">"Hello the world"</span>&#125;;</span><br><span class="line">    jc2(zifu1,<span class="number">1</span>,<span class="string">'\0'</span>);</span><br><span class="line">    <span class="keyword">char</span> zifu2[]=&#123;<span class="string">"Python is the best LANGUAGE!"</span>&#125;;</span><br><span class="line">    jc2(zifu2,<span class="number">1</span>,<span class="string">'\0'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 最大的字符是：w</span></span><br><span class="line"><span class="comment"> 最大的字符是：y</span></span><br><span class="line"><span class="comment"> Program ended with exit code: 0*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-编写一个程序，将字符数组s2中的全部字符复制到字符数组s1中，不用-strcpy-函数。注意，复-制时，’-0’-也要复制过去。‘-0’-后面的字符不复制。"><a href="#3-编写一个程序，将字符数组s2中的全部字符复制到字符数组s1中，不用-strcpy-函数。注意，复-制时，’-0’-也要复制过去。‘-0’-后面的字符不复制。" class="headerlink" title="3. 编写一个程序，将字符数组s2中的全部字符复制到字符数组s1中，不用 strcpy 函数。注意，复 制时，’ \0’ 也要复制过去。‘ \0’ 后面的字符不复制。"></a>3. 编写一个程序，将字符数组s2中的全部字符复制到字符数组s1中，不用 strcpy 函数。注意，复 制时，’ \0’ 也要复制过去。‘ \0’ 后面的字符不复制。</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//基础3</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"string.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">copy</span><span class="params">(<span class="keyword">char</span> zifu1[],<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>;<span class="comment">//声明函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">copy</span><span class="params">(<span class="keyword">char</span> zifu1[],<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;<span class="comment">//定义函数，其中包括三个参数：字符数组zifu1,整型变量i，整型变量j.</span></span><br><span class="line">    <span class="keyword">char</span> zifu2[<span class="built_in">strlen</span>(zifu1)+<span class="number">1</span>];<span class="comment">//定义一个长度和zifu1相同的空字符数组</span></span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="built_in">strlen</span>(zifu1)) &#123;<span class="comment">//执行循环，控制次数</span></span><br><span class="line">        zifu2[i]=zifu1[i];<span class="comment">//将zufu1原样复制到zifu2</span></span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (j&lt;=<span class="built_in">strlen</span>(zifu2)<span class="number">-1</span>) &#123;<span class="comment">//这里-1是为了输出不包括末尾的f'\0'</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c"</span>,zifu2[j]);<span class="comment">//执行输出1</span></span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);            <span class="comment">//换行</span></span><br><span class="line">    j=<span class="number">0</span>;                     <span class="comment">//重新初始化j</span></span><br><span class="line">    <span class="keyword">while</span> (j&lt;=<span class="built_in">strlen</span>(zifu2)) &#123;<span class="comment">//这里没有-1，是为了和输出1做比较</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c"</span>,zifu2[j]);<span class="comment">//执行输出2</span></span><br><span class="line">        j++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);           <span class="comment">//换行</span></span><br><span class="line">&#125;                           <span class="comment">//输出结果1和2相同，说明zifu1末尾的'\0'也复制到了zifu2当中</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>                  <span class="comment">//执行函数，完成任务</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> zifu1[]=&#123;<span class="string">"Hello the world"</span>&#125;;</span><br><span class="line">    copy(zifu1,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出结果为：</span></span><br><span class="line"><span class="comment">//Hello the world</span></span><br><span class="line"><span class="comment">//Hello the world</span></span><br><span class="line"><span class="comment">//Program ended with exit code: 0</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-对字符串-a-中的字符由小到大排序。"><a href="#4-对字符串-a-中的字符由小到大排序。" class="headerlink" title="4. 对字符串 a 中的字符由小到大排序。"></a>4. 对字符串 a 中的字符由小到大排序。</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//基础4</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"string.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">px</span><span class="params">(<span class="keyword">char</span> zifu[],<span class="keyword">int</span> i,<span class="keyword">int</span> j,<span class="keyword">char</span> exchange)</span></span>;        <span class="comment">//声明函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">px</span><span class="params">(<span class="keyword">char</span> zifu[],<span class="keyword">int</span> i,<span class="keyword">int</span> j,<span class="keyword">char</span> exchange)</span></span>&#123;        <span class="comment">//定义函数，其中包括四个参数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"原来的字符串是：\n%s\n"</span>,zifu);</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>;i&lt;=<span class="built_in">strlen</span>(zifu)<span class="number">-1</span>;i++) &#123;                   <span class="comment">//执行两个循环，使用冒泡排序法对字符串中的字符按照从小到大的顺序排列</span></span><br><span class="line">        <span class="keyword">for</span> (j=<span class="number">0</span>; j&lt;=<span class="built_in">strlen</span>(zifu)<span class="number">-1</span>-i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (zifu[j]&gt;zifu[j+<span class="number">1</span>]) &#123;</span><br><span class="line">                exchange=zifu[j+<span class="number">1</span>];</span><br><span class="line">                zifu[j+<span class="number">1</span>]=zifu[j];</span><br><span class="line">                zifu[j]=exchange;</span><br><span class="line">            &#125;</span><br><span class="line">            exchange=<span class="string">'\0'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    i=<span class="number">0</span>;                                            <span class="comment">//让i重新等于0，避免呢过多的变量定义</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"重新排序后的字符数组是：\n"</span>);</span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="built_in">strlen</span>(zifu)+<span class="number">1</span>) &#123;                     <span class="comment">//执行循环，输出字符串</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%c"</span>,zifu[i]);</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);                                   <span class="comment">//为了多个测试结果的美观，多输出两个换行</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>                                          <span class="comment">//调用函数，实现多组测试</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> zifu1[]=<span class="string">"bcadefzrea?!#%^"</span>;</span><br><span class="line">    px(zifu1,<span class="number">0</span>,<span class="number">0</span>,<span class="string">'\0'</span>);</span><br><span class="line">    <span class="keyword">char</span> zifu2[]=<span class="string">"987654321123456789"</span>;</span><br><span class="line">       px(zifu2,<span class="number">0</span>,<span class="number">0</span>,<span class="string">'\0'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*原来的字符串是：</span></span><br><span class="line"><span class="comment">bcadefzrea?!#%^</span></span><br><span class="line"><span class="comment">重新排序后的字符数组是：</span></span><br><span class="line"><span class="comment">!#%?^aabcdeefrz</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">原来的字符串是：</span></span><br><span class="line"><span class="comment">987654321123456789</span></span><br><span class="line"><span class="comment">重新排序后的字符数组是：</span></span><br><span class="line"><span class="comment">112233445566778899</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">Program ended with exit code: 0*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="6-下面程序输入一字符串，并将其中的大写字母改变成小写字母，完成程序。"><a href="#6-下面程序输入一字符串，并将其中的大写字母改变成小写字母，完成程序。" class="headerlink" title="6.下面程序输入一字符串，并将其中的大写字母改变成小写字母，完成程序。"></a>6.下面程序输入一字符串，并将其中的大写字母改变成小写字母，完成程序。</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>                                 </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> s[<span class="number">120</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Enter a string.\n"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s);              </span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="number">119</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i]&gt;=<span class="string">'A'</span>&amp;&amp;s[i]&lt;=<span class="string">'Z'</span>) &#123;</span><br><span class="line">            s[i]=s[i]-<span class="string">'A'</span>+<span class="string">'a'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>,s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>答案为：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>                                  <span class="comment">//因为是填空题，所以只进行了一组测试</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> s[<span class="number">120</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Enter a string.\n"</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%[^\n]%*c"</span>,s);              <span class="comment">//scanf函数获取含空格字符串不能使用%s,因此这里改为了%[^\n]%*c</span></span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="number">119</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (s[i]&gt;=<span class="string">'A'</span>&amp;&amp;s[i]&lt;=<span class="string">'Z'</span>) &#123;</span><br><span class="line">            s[i]=s[i]-<span class="string">'A'</span>+<span class="string">'a'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s\n"</span>,s);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> Enter a string.</span></span><br><span class="line"><span class="comment"> I LOVE pyhton!</span></span><br><span class="line"><span class="comment"> i  love pyhton!</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><h3 id="1-设计并测试一个函数，其功能是输出输入行-长度-lt-1024-里所有的单词，并丢掉该行中其-他的字符。一个单词的定义是一串字符，其中不含空格、制表符和换行符等其它字符。例如，-输入行-1234word-12number-234-输出-word-number"><a href="#1-设计并测试一个函数，其功能是输出输入行-长度-lt-1024-里所有的单词，并丢掉该行中其-他的字符。一个单词的定义是一串字符，其中不含空格、制表符和换行符等其它字符。例如，-输入行-1234word-12number-234-输出-word-number" class="headerlink" title="1.设计并测试一个函数，其功能是输出输入行(长度 &lt;=1024 )里所有的单词，并丢掉该行中其 他的字符。一个单词的定义是一串字符，其中不含空格、制表符和换行符等其它字符。例如， 输入行: 1234word?_12number +234 输出: word number"></a>1.设计并测试一个函数，其功能是输出输入行(长度 &lt;=1024 )里所有的单词，并丢掉该行中其 他的字符。一个单词的定义是一串字符，其中不含空格、制表符和换行符等其它字符。例如， 输入行: 1234word?_12number <em>+</em>234 输出: word number</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//进阶1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"string.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jj1</span><span class="params">(<span class="keyword">char</span> zifu[],<span class="keyword">int</span> i)</span></span>;                        <span class="comment">//声明函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">jj1</span><span class="params">(<span class="keyword">char</span> zifu[],<span class="keyword">int</span> i)</span></span>&#123;                        <span class="comment">//定义一个无返回类型且包含两个形参的函数</span></span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="built_in">strlen</span>(zifu)<span class="number">-1</span>) &#123;                     <span class="comment">//执行循环，控制次数，其中用strlen函数获取字符串的长度</span></span><br><span class="line">        <span class="keyword">if</span> ((zifu[i]&gt;=<span class="string">'A'</span>&amp;&amp;zifu[i]&lt;+<span class="string">'Z'</span>)||(zifu[i]&gt;=<span class="string">'a'</span>&amp;&amp;zifu[i]&lt;+<span class="string">'z'</span>)) &#123;<span class="comment">//使用if判断字符数组中的每一个字符是否在字母表中</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%c"</span>,zifu[i]);                                        <span class="comment">//如果是，则依次输出每个字符</span></span><br><span class="line">        &#125;</span><br><span class="line">       <span class="keyword">else</span>&#123;                                                             <span class="comment">//否则，输出一个空格，确保不同单词之间的间隔</span></span><br><span class="line">                  <span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">              &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);                                                       <span class="comment">//函数末尾输出一个空格，确保完成一次函数后换行再执行下一次</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;                                                             <span class="comment">//在主函数中，执行自定义函数jj1</span></span><br><span class="line">    <span class="keyword">char</span> zifu1[]=&#123;<span class="string">"happy2019cqut*&amp;^%$world&#125;+)@™"</span>&#125;;</span><br><span class="line">    jj1(zifu1,<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">char</span> zifu2[]=&#123;<span class="string">"1234word?_12number _+_234"</span>&#125;;</span><br><span class="line">    jj1(zifu2,<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> happy    cqut     world</span></span><br><span class="line"><span class="comment">    word    number</span></span><br><span class="line"><span class="comment">Program ended with exit code: 0</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="6-输入一个字符串，统计各字母出现的次数，并按字母出现的多少输出-先输出字母出现多的，-次数相同的按字母表顺序输出，不出现的字母不输出-。-例-输入-5b3a-4-hdeh5dh-输出-h-3-d-2-a-1-b-1-e-1"><a href="#6-输入一个字符串，统计各字母出现的次数，并按字母出现的多少输出-先输出字母出现多的，-次数相同的按字母表顺序输出，不出现的字母不输出-。-例-输入-5b3a-4-hdeh5dh-输出-h-3-d-2-a-1-b-1-e-1" class="headerlink" title="6.输入一个字符串，统计各字母出现的次数，并按字母出现的多少输出(先输出字母出现多的， 次数相同的按字母表顺序输出，不出现的字母不输出)。 例:输入: 5b3a+4-hdeh5dh? 输出: h 3 d 2 a 1 b 1 e 1"></a>6.输入一个字符串，统计各字母出现的次数，并按字母出现的多少输出(先输出字母出现多的， 次数相同的按字母表顺序输出，不出现的字母不输出)。 例:输入: 5b3a+4-hdeh5dh? 输出: h 3 d 2 a 1 b 1 e 1</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//进阶6                                     //本题没有进行多组测试，因为要计算每一个字母的个数m，这本身就是一种测试</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"string.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> letter[<span class="number">26</span>];<span class="keyword">int</span> i=<span class="number">0</span>;<span class="keyword">int</span> j=<span class="number">0</span>;<span class="keyword">int</span> h=<span class="number">0</span>;;<span class="keyword">unsigned</span> <span class="keyword">long</span> m=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (h&lt;=<span class="number">25</span>) &#123;                         <span class="comment">//执行循环，初始化整型数组letter，使其每一个数s都为0</span></span><br><span class="line">        letter[h]=<span class="number">0</span>;</span><br><span class="line">        h++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">char</span> zifu[]=<span class="string">"hhhddabefgasifgagfaffgagcnmaohgvzf"</span>;<span class="comment">//初始化字符串</span></span><br><span class="line">    m=<span class="built_in">strlen</span>(zifu);</span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="built_in">strlen</span>(zifu)<span class="number">-1</span>) &#123;            <span class="comment">//执行循环，统计26个字母出现的次数</span></span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'A'</span>||zifu[i]==<span class="string">'a'</span>) &#123;</span><br><span class="line">            letter[<span class="number">0</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'B'</span>||zifu[i]==<span class="string">'b'</span>) &#123;</span><br><span class="line">            letter[<span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'C'</span>||zifu[i]==<span class="string">'c'</span>) &#123;</span><br><span class="line">            letter[<span class="number">2</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'D'</span>||zifu[i]==<span class="string">'d'</span>) &#123;</span><br><span class="line">            letter[<span class="number">3</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'E'</span>||zifu[i]==<span class="string">'e'</span>) &#123;</span><br><span class="line">            letter[<span class="number">4</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'F'</span>||zifu[i]==<span class="string">'f'</span>) &#123;</span><br><span class="line">            letter[<span class="number">5</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'G'</span>||zifu[i]==<span class="string">'g'</span>) &#123;</span><br><span class="line">            letter[<span class="number">6</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'H'</span>||zifu[i]==<span class="string">'h'</span>) &#123;</span><br><span class="line">            letter[<span class="number">7</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'I'</span>||zifu[i]==<span class="string">'i'</span>) &#123;</span><br><span class="line">            letter[<span class="number">8</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'J'</span>||zifu[i]==<span class="string">'j'</span>) &#123;</span><br><span class="line">            letter[<span class="number">9</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'K'</span>||zifu[i]==<span class="string">'k'</span>) &#123;</span><br><span class="line">            letter[<span class="number">10</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'L'</span>||zifu[i]==<span class="string">'l'</span>) &#123;</span><br><span class="line">            letter[<span class="number">11</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'M'</span>||zifu[i]==<span class="string">'m'</span>) &#123;</span><br><span class="line">            letter[<span class="number">12</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'N'</span>||zifu[i]==<span class="string">'n'</span>) &#123;</span><br><span class="line">            letter[<span class="number">13</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'O'</span>||zifu[i]==<span class="string">'o'</span>) &#123;</span><br><span class="line">            letter[<span class="number">14</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'P'</span>||zifu[i]==<span class="string">'p'</span>) &#123;</span><br><span class="line">            letter[<span class="number">15</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'Q'</span>||zifu[i]==<span class="string">'q'</span>) &#123;</span><br><span class="line">            letter[<span class="number">16</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'R'</span>||zifu[i]==<span class="string">'r'</span>) &#123;</span><br><span class="line">            letter[<span class="number">17</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'S'</span>||zifu[i]==<span class="string">'s'</span>) &#123;</span><br><span class="line">            letter[<span class="number">18</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'T'</span>||zifu[i]==<span class="string">'t'</span>) &#123;</span><br><span class="line">            letter[<span class="number">19</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'U'</span>||zifu[i]==<span class="string">'u'</span>) &#123;</span><br><span class="line">            letter[<span class="number">20</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'V'</span>||zifu[i]==<span class="string">'v'</span>) &#123;</span><br><span class="line">            letter[<span class="number">21</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'W'</span>||zifu[i]==<span class="string">'w'</span>) &#123;</span><br><span class="line">            letter[<span class="number">22</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'X'</span>||zifu[i]==<span class="string">'x'</span>) &#123;</span><br><span class="line">            letter[<span class="number">23</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'Y'</span>||zifu[i]==<span class="string">'y'</span>) &#123;</span><br><span class="line">            letter[<span class="number">24</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (zifu[i]==<span class="string">'Z'</span>||zifu[i]==<span class="string">'z'</span>) &#123;</span><br><span class="line">            letter[<span class="number">25</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (m&gt;=<span class="number">1</span>) &#123;j=<span class="number">0</span>;          <span class="comment">//执行循环控制次数，以确保只输出字母个数超过1的</span></span><br><span class="line">        <span class="keyword">while</span> (j&lt;=<span class="number">25</span>) &#123;         <span class="comment">//执行熏黄，从高到低比较字母个数</span></span><br><span class="line">            <span class="keyword">if</span> (letter[j]==m) &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"%c:%d\n"</span>,j+<span class="number">97</span>,letter[j]);<span class="comment">//输出字母个数和</span></span><br><span class="line">            &#125;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        m=m<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*运行结果为：:6</span></span><br><span class="line"><span class="comment">f:6</span></span><br><span class="line"><span class="comment">g:6</span></span><br><span class="line"><span class="comment">h:4</span></span><br><span class="line"><span class="comment">d:2</span></span><br><span class="line"><span class="comment">b:1</span></span><br><span class="line"><span class="comment">c:1</span></span><br><span class="line"><span class="comment">e:1</span></span><br><span class="line"><span class="comment">i:1</span></span><br><span class="line"><span class="comment">m:1</span></span><br><span class="line"><span class="comment">n:1</span></span><br><span class="line"><span class="comment">o:1</span></span><br><span class="line"><span class="comment">s:1</span></span><br><span class="line"><span class="comment">v:1</span></span><br><span class="line"><span class="comment">z:1</span></span><br><span class="line"><span class="comment">Program ended with exit code: 0*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h3 id="7-有一篇文章，共有-3-行文字，每行有80个字符。要求分别统计出其中英文大写字母、小写字母、-数字、空格以及其它字符的个数。"><a href="#7-有一篇文章，共有-3-行文字，每行有80个字符。要求分别统计出其中英文大写字母、小写字母、-数字、空格以及其它字符的个数。" class="headerlink" title="7. 有一篇文章，共有 3 行文字，每行有80个字符。要求分别统计出其中英文大写字母、小写字母、 数字、空格以及其它字符的个数。"></a>7. 有一篇文章，共有 3 行文字，每行有80个字符。要求分别统计出其中英文大写字母、小写字母、 数字、空格以及其它字符的个数。</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;                  //Name:雷博闻 Student ID：11923040207</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"string.h"</span>                 <span class="comment">//进阶7</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> zifu[<span class="number">3</span>][<span class="number">80</span>]=&#123;                                                                      <span class="comment">//c定义一个多维字符数组并初始化</span></span><br><span class="line">        <span class="string">"Its name might sound a little plain, but the grey-headed albatross is the most e"</span>,</span><br><span class="line">        <span class="string">"Not only a majestic bird, the grey-headed albatross is a literal a world recoreq"</span>,</span><br><span class="line">        <span class="string">"In 2003, The Guinness Book of Records gave them the title of world’s fastest h"</span></span><br><span class="line">                        &#125;;</span><br><span class="line">            <span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>,upper=<span class="number">0</span>,lower=<span class="number">0</span>,numbers=<span class="number">0</span>,others=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (i&lt;=<span class="number">2</span>) &#123;j=<span class="number">0</span>;                                                                      <span class="comment">//外循环，控制行数。j=0是为了重新初始化k列数</span></span><br><span class="line">        <span class="keyword">while</span> (j&lt;=<span class="number">79</span>) &#123;                                                                     <span class="comment">//内循环，控制列数</span></span><br><span class="line">            <span class="keyword">if</span>((zifu[i][j]&gt;=<span class="string">'A'</span>)&amp;&amp;(zifu[i][j]&lt;=<span class="string">'Z'</span>))&#123;                                       <span class="comment">//判断该字符是否是大写字母，是则upper+1，不是则进行下一判断</span></span><br><span class="line">                upper++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> ((zifu[i][j]&gt;=<span class="string">'a'</span>)&amp;&amp;(zifu[i][j]&lt;=<span class="string">'z'</span>))&#123;                                 <span class="comment">//判断该字符是否是小写字母，是则lower+1，不是则进行下一判断</span></span><br><span class="line">                lower++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> ((zifu[i][j]&gt;=<span class="string">'0'</span>)&amp;&amp;(zifu[i][j]&lt;=<span class="string">'9'</span>))&#123;                                 <span class="comment">//判断该字符是否是数字，是则numbers+1，不是则进行下一判断</span></span><br><span class="line">                numbers++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                others++;</span><br><span class="line">                <span class="comment">//都不满足，则others+1</span></span><br><span class="line">            &#125;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"大写字母的个数是：%d\n小写字母的个数是：%d\n数字的个数是在：%d\n其他字符的个数是：%d\n"</span>,upper,lower,numbers,others);</span><br><span class="line">    <span class="comment">//分别输出upper，lower，numbers和others的值</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,upper+lower+numbers+others);<span class="comment">//输出upper，lower，numbers和others值的综合，总和为240，则程序正确</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果：</span></span><br><span class="line"><span class="comment"> 大写字母的个数是：7</span></span><br><span class="line"><span class="comment"> 小写字母的个数是：180</span></span><br><span class="line"><span class="comment"> 数字的个数是在：4</span></span><br><span class="line"><span class="comment"> 其他字符的个数是：49</span></span><br><span class="line"><span class="comment"> 240</span></span><br><span class="line"><span class="comment"> Program ended with exit code: 0*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1084,7 +1092,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-count">56</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1097,7 +1105,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1156,7 +1164,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.1k字</span>
+  <span class="post-count">博客全站共34.4k字</span>
 </div>
 
         

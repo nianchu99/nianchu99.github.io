@@ -324,6 +324,127 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/24/Java/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/24/Java/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">Java面向对象基础(重难点)</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-24 23:09:27 / 修改时间：23:18:02" itemprop="dateCreated datePublished" datetime="2020-02-24T23:09:27+08:00">2020-02-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="静态方法和实例方法的问题："><a href="#静态方法和实例方法的问题：" class="headerlink" title="静态方法和实例方法的问题："></a>静态方法和实例方法的问题：</h1><p>有static修饰的是静态方法，没有static修饰的方法是实例方法。</p>
+<p>静态方法可以访问静态变量和其他静态方法，不可以访问实例方法，实例变量；实例方法可以访问实例变量、其他实例方法、静态变量、静态方法。(记住这一点是很有必要的。)</p>
+<h1 id="静态代码块"><a href="#静态代码块" class="headerlink" title="静态代码块"></a>静态代码块</h1><p>如果初始化静态变量不是简单常量，需要进行计算才能初始化，可以使用静态(static)代码块，静态 代码块在类第一次加载时执行，并只执行一次。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//静态代码块的格式如下：</span></span><br><span class="line"><span class="keyword">static</span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"静态代码块被调用..."</span>);</span><br><span class="line">  <span class="comment">//还可以再这里初始化静态变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/22/Java/%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4%E5%92%8C%E6%9B%BF%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/22/Java/%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4%E5%92%8C%E6%9B%BF%E6%8D%A2/" class="post-title-link" itemprop="url">可变字符串的插入删除和替换</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-22 23:34:43 / 修改时间：23:35:27" itemprop="dateCreated datePublished" datetime="2020-02-22T23:34:43+08:00">2020-02-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2.22 字符串插入、删除、替换</span></span><br><span class="line">		<span class="comment">// 插入</span></span><br><span class="line">		StringBuffer str = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">		str.insert(<span class="number">11</span>,<span class="string">" very "</span>);</span><br><span class="line">		System.out.println(str);<span class="comment">// Today is a very good day!</span></span><br><span class="line">		<span class="comment">//删除和替换</span></span><br><span class="line">		StringBuffer str1 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">		StringBuffer str2 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">		StringBuffer str3 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">		System.out.println(str1.delete(<span class="number">0</span>, <span class="number">5</span>));<span class="comment">// is a good day!</span></span><br><span class="line">		System.out.println(str2.delete(<span class="number">0</span>, <span class="number">5</span>));<span class="comment">// is a good day!</span></span><br><span class="line">		System.out.println(str3.replace(<span class="number">0</span>,<span class="number">5</span>,<span class="string">"Tomorrow "</span>));<span class="comment">//Tomorrow  is a good day!</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/22/Java/java-%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -807,124 +928,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/pytho%E7%9A%84and%E8%BF%94%E5%9B%9E%E5%80%BC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/17/Python/pytho%E7%9A%84and%E8%BF%94%E5%9B%9E%E5%80%BC/" class="post-title-link" itemprop="url">pytho的and返回值</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-02-17 15:12:38 / 修改时间：15:26:52" itemprop="dateCreated datePublished" datetime="2020-02-17T15:12:38+08:00">2020-02-17</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python的and返回值</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">在布尔上下文中从左到右演算表达式的值，如果布尔上下文中的所有值都为真，那么 and 返回最后一个值。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">如果布尔上下文中的某个值为假，则 and 返回第一个假值。</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 实例1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">re</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n + <span class="number">1</span> <span class="keyword">and</span> n ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line">print(re(<span class="number">0</span>))<span class="comment">#因为非零即假，所以返回第一个表达式的值</span></span><br><span class="line">print(re(<span class="number">100</span>))<span class="comment"># 因为100为真，所以返回后一个表达式的值</span></span><br><span class="line"><span class="comment"># 实例2</span></span><br><span class="line"><span class="string">"""对于字符串而言，其中有空格的字符串为假，否则为真"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">st</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(st(<span class="string">'happy '</span>))<span class="comment">#这里有空格为假的，则返回后一个表达式的值。经过strip方法之后，末尾的空格被剔除了</span></span><br><span class="line">print(st(<span class="string">'names'</span>))<span class="comment"># 这里为空格，则直接返回这个字符串</span></span><br><span class="line">print(st(<span class="string">'fa fdaf'</span>))<span class="comment"># strip只对首尾的对象管用</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">0</span></span><br><span class="line"><span class="string">10000</span></span><br><span class="line"><span class="string">happy</span></span><br><span class="line"><span class="string">names</span></span><br><span class="line"><span class="string">fa fdaf</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/Strip%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/17/Python/Strip%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Strip方法</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-02-17 12:09:16 / 修改时间：12:17:05" itemprop="dateCreated datePublished" datetime="2020-02-17T12:09:16+08:00">2020-02-17</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># strip方法用于移除字符串头尾的字符（默认为空格或者换行符）或字符序列</span></span><br><span class="line">strs = <span class="string">"happp "</span></span><br><span class="line">print(strs.strip())</span><br><span class="line"></span><br><span class="line">print(strs.strip().strip(<span class="string">'p'</span>))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">happp</span></span><br><span class="line"><span class="string">ha</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -973,7 +976,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-count">56</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -986,7 +989,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1045,7 +1048,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.1k字</span>
+  <span class="post-count">博客全站共34.4k字</span>
 </div>
 
         
