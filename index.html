@@ -324,6 +324,76 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/26/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/26/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/" class="post-title-link" itemprop="url">Matlab基本运算</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-26 22:28:17" itemprop="dateCreated datePublished" datetime="2020-02-26T22:28:17+08:00">2020-02-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-27 00:03:32" itemprop="dateModified" datetime="2020-02-27T00:03:32+08:00">2020-02-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h1><h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><h2 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h2><h2 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h2><p>左除</p>
+<p>右除法</p>
+<p>非奇异性矩阵是什么意思</p>
+<h2 id="点运算"><a href="#点运算" class="headerlink" title="点运算"></a>点运算</h2><h1 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h1><p>注意不等于的关系运算符是~=</p>
+<p>成立返回1，不成立返回0</p>
+<h1 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 总结：Matlab的运算都是在矩阵意义下进行的，单个数据的算术运算只是矩阵运算的一种特例</span></span><br><span class="line"><span class="comment">% 加减运算 ：</span></span><br><span class="line"><span class="comment">% 矩阵之间：</span></span><br><span class="line">A = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>] </span><br><span class="line">B = [<span class="number">7</span>:<span class="number">9</span>;<span class="number">100</span>:<span class="number">102</span>]</span><br><span class="line">B - A </span><br><span class="line"><span class="comment">% 矩阵和标量之间</span></span><br><span class="line">c = <span class="number">100</span>;</span><br><span class="line">B - c</span><br><span class="line"></span><br><span class="line"><span class="comment">% 乘法运算就只能在矩阵之间了，而且要求A的列数与B的行数相等，此时称A、B矩阵是可乘的，或称A和B两矩阵维数和大小相容：</span></span><br><span class="line">C = [<span class="number">1</span>:<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>];</span><br><span class="line">D = [<span class="number">11</span>,<span class="number">20</span>;<span class="number">12</span>,<span class="number">21</span>]</span><br><span class="line">D * C <span class="comment">% 特别注意，两矩阵相乘，A*B不等于就是B*A。要想成功计算，一定保证是A的列数与B的行数相等。是不能交换的。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 除法运算??在Matlab中，有两种不同的矩阵除法运算，一个是右除，一个是左除</span></span><br><span class="line"><span class="comment">% 书上说如果A矩阵是非奇异方阵，则B/A等效于B*inv(A),A/B等效于inv(A)*B.而这两种不同的计算方法的计算结果是不一样的。</span></span><br><span class="line"><span class="comment">% 但是对于两个标量来说，左除和右除的效果是一样的。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 乘方运算：一个矩阵的乘方运算可以表示成A ^x,要求：A为方阵，x为标量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 点运算</span></span><br><span class="line"><span class="comment">% 两矩阵进行点运算是指它们的对应元素进行相关运算，要求两矩阵同型。</span></span><br><span class="line">E = A;</span><br><span class="line">F = A.* E</span><br><span class="line"></span><br><span class="line"><span class="comment">% 关系运算 </span></span><br><span class="line"><span class="comment">% 当两个比较量是标量时，直接比较两个数字的大小，关系成立，表达式的结果为1，否则为0</span></span><br><span class="line"><span class="comment">% 当两个是同型的矩阵时，比较是对两矩阵相同位置的元素按标量关系运算规则逐个进行，最终结果是一个只有1和0的同型矩阵</span></span><br><span class="line"><span class="comment">% 当一个是标量，另一个是矩阵时，则把标量与矩阵中的每一个元素按标量规则进行比较，同样结果是一个只含有0和1的同型矩阵</span></span><br><span class="line">A1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>];</span><br><span class="line">A2 = [<span class="number">0</span>:<span class="number">2</span>;<span class="number">21</span>:<span class="number">23</span>];</span><br><span class="line">A3 = (A1&lt; A2)<span class="comment">% 结果：[0 0 0;1 1 1]</span></span><br><span class="line">A4 = (A2&gt;<span class="number">0</span>) <span class="comment">% 结果：[0 1 1;1 1 1]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 逻辑运算</span></span><br><span class="line"><span class="comment">% &amp;｜ ～</span></span><br><span class="line"><span class="comment">% &amp; :两个非零才为1</span></span><br><span class="line"><span class="comment">% ｜：一个非零则为1</span></span><br><span class="line"><span class="comment">% 若参与逻辑运算的是两个同型矩阵，那么将对矩阵相同位置上的元素按标量规则逐个进行运算，结果是包含0、1的同型矩阵</span></span><br><span class="line"><span class="comment">% 若参与逻辑运算的是一个标量和一个矩阵，则把标量与矩阵中的每一个元素按标量规则进行比较，同样结果是一个只含有0和1的同型矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 实例： 水仙花数</span></span><br><span class="line"></span><br><span class="line">m = [<span class="number">100</span>:<span class="number">999</span>]; <span class="comment">% 生成所有三位正整数</span></span><br><span class="line">m1 = <span class="built_in">rem</span>(m,<span class="number">10</span>); <span class="comment">% 个</span></span><br><span class="line">m2 = <span class="built_in">rem</span>(<span class="built_in">fix</span>(m/<span class="number">10</span>),<span class="number">10</span>);<span class="comment">% 十 </span></span><br><span class="line">m3 = <span class="built_in">fix</span>(m/<span class="number">100</span>); <span class="comment">% 百</span></span><br><span class="line"><span class="built_in">j</span> = <span class="built_in">find</span>(m == m1.^<span class="number">3</span>+m2.^<span class="number">3</span>+m3.^<span class="number">3</span>);<span class="comment">% 是水仙花数的序号</span></span><br><span class="line"><span class="built_in">i</span> = <span class="built_in">find</span>(~(m == m1.^<span class="number">3</span>+m2.^<span class="number">3</span>+m3.^<span class="number">3</span>)); <span class="comment">% 不是水仙花数的序号</span></span><br><span class="line"><span class="comment">% 然后分别传递给矩阵m</span></span><br><span class="line">result = m(<span class="built_in">j</span>) </span><br><span class="line">result1 = m(<span class="built_in">i</span>)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/24/Java/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -869,65 +939,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Python/yield/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/18/Python/yield/" class="post-title-link" itemprop="url">yield</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-02-18 14:26:16 / 修改时间：14:26:54" itemprop="dateCreated datePublished" datetime="2020-02-18T14:26:16+08:00">2020-02-18</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yield</span></span><br><span class="line"><span class="comment"># 带有yield的函数在Python中被称为generator(生成器)</span></span><br><span class="line"><span class="comment">##   如何生成斐波那契数列</span></span><br><span class="line"><span class="comment"># 第一版</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def fab(max):</span></span><br><span class="line"><span class="string">	n, a , b  = 0, 0, 1</span></span><br><span class="line"><span class="string">	while n &lt; max:</span></span><br><span class="line"><span class="string">		print(b)</span></span><br><span class="line"><span class="string">		a , b  = b, a + b</span></span><br><span class="line"><span class="string">		n = n + 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">fab(6)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">## 输出斐波那契数列前N个第二版</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def fab(max):</span></span><br><span class="line"><span class="string">	n, a, b = 0, 0, 1</span></span><br><span class="line"><span class="string">	L = []</span></span><br><span class="line"><span class="string">	while n &lt; max:</span></span><br><span class="line"><span class="string">		L.append(b)</span></span><br><span class="line"><span class="string">		a, b = b, a + b</span></span><br><span class="line"><span class="string">		n = n + 1</span></span><br><span class="line"><span class="string">	return L</span></span><br><span class="line"><span class="string">for n in fab(5):</span></span><br><span class="line"><span class="string">	print(n)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">'''改写后的fab函数通过满足返回List能够满足复用性的要求，但是，随着max越来越大，会导致程序所占内存越来越大</span></span><br><span class="line"><span class="string">所以更好的做法是通过iterable对象来迭代'''</span></span><br><span class="line"><span class="comment">### 第三版 -----有错</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">class Fab(object):</span></span><br><span class="line"><span class="string">	def __int__(self, max):</span></span><br><span class="line"><span class="string">		self.max = max</span></span><br><span class="line"><span class="string">		self.n, self.a, self.b = 0, 0, 1</span></span><br><span class="line"><span class="string">	def __iter__(self):</span></span><br><span class="line"><span class="string">		return self</span></span><br><span class="line"><span class="string">	def next(self):</span></span><br><span class="line"><span class="string">		if self.n &lt; self.max:</span></span><br><span class="line"><span class="string">			r = self.b</span></span><br><span class="line"><span class="string">			self.a, self.b =self.b, self.a + self.b</span></span><br><span class="line"><span class="string">			self.n = n + 1</span></span><br><span class="line"><span class="string">			return r</span></span><br><span class="line"><span class="string">		raise StopIteration()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">for n in Fab(5):</span></span><br><span class="line"><span class="string">	print(n)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">#### 第四版</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fab</span><span class="params">(max)</span>:</span></span><br><span class="line">	n , a, b = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">	<span class="keyword">while</span> n  &lt; max:</span><br><span class="line">		<span class="keyword">yield</span> b</span><br><span class="line">		a, b = b, a + b</span><br><span class="line">		n = n+ <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> fab(<span class="number">5</span>):</span><br><span class="line">	print(n)</span><br><span class="line"><span class="string">"""简单的讲：yield就是把一个函数变成一个generator，带有yield的函数不再是一个普通函数，Python解释器会将其视为一个</span></span><br><span class="line"><span class="string">generator，调用fab(5)不会执行fab函数，而是返回一个iterable对象！</span></span><br><span class="line"><span class="string">结论：一个带有 yield 的函数就是一个 generator，它和普通函数不同，生成一个 generator 看起</span></span><br><span class="line"><span class="string">来像函数调用，但不会执行任何函数代码，直到对其调用 next()（在 for 循环中会自动调用 next()）</span></span><br><span class="line"><span class="string">才开始执行。虽然执行流程仍按函数的流程执行，但每执行到一个 yield 语句就会中断，并返回一个迭</span></span><br><span class="line"><span class="string">代值，下次执行时从 yield 的下一个语句继续执行。看起来就好像一个函数在正常执行的过程中被</span></span><br><span class="line"><span class="string"> yield 中断了数次，每次中断都会通过 yield 返回当前的迭代值。yield 的好处是显而易见的，把</span></span><br><span class="line"><span class="string"> 一个函数改写为一个 generator 就获得了迭代能力，比起用类的实例保存状态来计算下一个 next() </span></span><br><span class="line"><span class="string"> 的值，不仅代码简洁，而且执行流程异常清晰</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 可以使用 isgeneratorfunction来判断是不是一个特殊的generator函数</span></span><br><span class="line"><span class="keyword">from</span> inspect <span class="keyword">import</span> isgeneratorfunction</span><br><span class="line">print(isgeneratorfunction(fab))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">5</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -976,7 +987,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1048,7 +1059,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.4k字</span>
+  <span class="post-count">博客全站共35.2k字</span>
 </div>
 
         
