@@ -49,17 +49,17 @@
   };
 </script>
 
-  <meta name="description" content="方法重载(overload)适用于解决以下问题：调用功能相似方法时传统的做法是编写多个有着不同名字的方法，这样既麻烦且不美观 解决方法——方法重载(overload) 前提：各个方法的功能都相似； 不是所有的语言都有这个机制例如javascript没有这个机制 优点：使用的方法名字一样，区分的依据是实参的数据类型；程序员调用方法的时候比较方便，虽然调用的不同的方法，但是感觉就像是在使用一个方法一样">
+  <meta name="description" content="随便写点 _划线是会指向最后一次表达式的值 以单个下划线开头命名的方法或者变量,就是说明它是仅提供给内部使用的 ##下划线特殊使用 有关继承和类。看懂了就行，不应该使用这种奇怪的用法。_Person__name = “nianchu”class Person():    def print_name(self):        return __name print(Person().print_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docs&#x2F;15839740292429">
-<meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;03&#x2F;12&#x2F;docs&#x2F;15839740292429&#x2F;index.html">
+<meta property="og:title" content="Python&#x2F;Python随便写点">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;03&#x2F;09&#x2F;Python&#x2F;Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
-<meta property="og:description" content="方法重载(overload)适用于解决以下问题：调用功能相似方法时传统的做法是编写多个有着不同名字的方法，这样既麻烦且不美观 解决方法——方法重载(overload) 前提：各个方法的功能都相似； 不是所有的语言都有这个机制例如javascript没有这个机制 优点：使用的方法名字一样，区分的依据是实参的数据类型；程序员调用方法的时候比较方便，虽然调用的不同的方法，但是感觉就像是在使用一个方法一样">
+<meta property="og:description" content="随便写点 _划线是会指向最后一次表达式的值 以单个下划线开头命名的方法或者变量,就是说明它是仅提供给内部使用的 ##下划线特殊使用 有关继承和类。看懂了就行，不应该使用这种奇怪的用法。_Person__name = “nianchu”class Person():    def print_name(self):        return __name print(Person().print_">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-12T02:23:42.175Z">
+<meta property="og:updated_time" content="2020-03-09T15:41:29.749Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://www.nianchu.space/2020/03/12/docs/15839740292429/">
+<link rel="canonical" href="http://www.nianchu.space/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">
 
 
 <script id="page-configurations">
@@ -73,7 +73,7 @@
   };
 </script>
 
-  <title>docs/15839740292429 | nianchu-Blog</title>
+  <title>Python/Python随便写点 | nianchu-Blog</title>
   
 
 
@@ -225,7 +225,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/docs/15839740292429/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -238,7 +238,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          docs/15839740292429
+          Python/Python随便写点
         </h1>
 
         <div class="post-meta">
@@ -250,7 +250,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-12 08:47:09 / 修改时间：10:23:42" itemprop="dateCreated datePublished" datetime="2020-03-12T08:47:09+08:00">2020-03-12</time>
+              <time title="创建时间：2020-03-09 23:22:44 / 修改时间：23:41:29" itemprop="dateCreated datePublished" datetime="2020-03-09T23:22:44+08:00">2020-03-09</time>
             </span>
 
           
@@ -271,23 +271,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="方法重载-overload"><a href="#方法重载-overload" class="headerlink" title="方法重载(overload)"></a>方法重载(overload)</h1><h2 id="适用于解决以下问题："><a href="#适用于解决以下问题：" class="headerlink" title="适用于解决以下问题："></a>适用于解决以下问题：</h2><p>调用功能相似方法时传统的做法是编写多个有着不同名字的方法，这样既麻烦且不美观</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>——方法重载(overload)</p>
-<h2 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h2><p>各个方法的功能都相似；</p>
-<h2 id="不是所有的语言都有这个机制"><a href="#不是所有的语言都有这个机制" class="headerlink" title="不是所有的语言都有这个机制"></a>不是所有的语言都有这个机制</h2><p>例如javascript没有这个机制</p>
-<h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><p>使用的方法名字一样，区分的依据是实参的数据类型；<br>程序员调用方法的时候比较方便，虽然调用的不同的方法，但是感觉就像是在使用一个方法一样，不需要记忆更多的方法；<br>同时代码更加美观。</p>
-<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>功能不相似的时候尽可能让方法的方法名不同。</p>
-<h2 id="思考问题："><a href="#思考问题：" class="headerlink" title="思考问题："></a>思考问题：</h2><p> 1.方法重载又被称为：overload<br>2.什么时候考虑使用方法重载：<br>功能相似的时候，尽可能让方法名相同；<br>【但是：功能不同/不相似的时候，尽可能不使用方法重载】<br>3.满足什么条件才构成方法重载</p>
-<ul>
-<li>在同一个类中</li>
-<li>方法名相同</li>
-<li>参数列表不同：<ul>
-<li>数量不同</li>
-<li>顺序不同</li>
-<li>类型不同 </li>
-</ul>
-</li>
-</ul>
+        <h1 id="随便写点"><a href="#随便写点" class="headerlink" title="随便写点"></a>随便写点</h1><p> _划线是会指向最后一次表达式的值</p>
+<p>以单个下划线开头命名的方法或者变量,就是说明它是仅提供给内部使用的</p>
+<p>##下划线特殊使用 有关继承和类。看懂了就行，不应该使用这种奇怪的用法。<br>_Person__name = “nianchu”<br>class Person():<br>    def print_name(self):<br>        return __name</p>
+<p>print(Person().print_name())</p>
 
     </div>
 
@@ -303,7 +290,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.nianchu.space/2020/03/12/docs/15839740292429/" title="docs&#x2F;15839740292429">http://www.nianchu.space/2020/03/12/docs/15839740292429/</a>
+    <a href="http://www.nianchu.space/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/" title="Python&#x2F;Python随便写点">http://www.nianchu.space/2020/03/09/Python/Python随便写点/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -320,10 +307,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/03/12/docs/15839733472957/" rel="prev" title="docs/15839733472957">
-      <i class="fa fa-chevron-left"></i> docs/15839733472957
+    <a href="/2020/03/09/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/" rel="prev" title="Java/Java学习记录1">
+      <i class="fa fa-chevron-left"></i> Java/Java学习记录1
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/09/Python/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="next" title="Python/Python正则表达式">
+      Python/Python正则表达式 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -361,7 +351,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#方法重载-overload"><span class="nav-number">1.</span> <span class="nav-text">方法重载(overload)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#适用于解决以下问题："><span class="nav-number">1.1.</span> <span class="nav-text">适用于解决以下问题：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方法"><span class="nav-number">1.2.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前提："><span class="nav-number">1.3.</span> <span class="nav-text">前提：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不是所有的语言都有这个机制"><span class="nav-number">1.4.</span> <span class="nav-text">不是所有的语言都有这个机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点："><span class="nav-number">1.5.</span> <span class="nav-text">优点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意："><span class="nav-number">1.6.</span> <span class="nav-text">注意：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思考问题："><span class="nav-number">1.7.</span> <span class="nav-text">思考问题：</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#随便写点"><span class="nav-number">1.</span> <span class="nav-text">随便写点</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -375,7 +365,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -447,7 +437,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.6k字</span>
+  <span class="post-count">博客全站共36.7k字</span>
 </div>
 
         

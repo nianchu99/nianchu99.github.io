@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.nianchu.space/"/>
-  <updated>2020-03-12T02:23:42.175Z</updated>
+  <updated>2020-03-12T03:33:40.395Z</updated>
   <id>http://www.nianchu.space/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>docs/15839740292429</title>
-    <link href="http://www.nianchu.space/2020/03/12/docs/15839740292429/"/>
-    <id>http://www.nianchu.space/2020/03/12/docs/15839740292429/</id>
+    <title>Java/方法重载</title>
+    <link href="http://www.nianchu.space/2020/03/12/Java/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/"/>
+    <id>http://www.nianchu.space/2020/03/12/Java/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/</id>
     <published>2020-03-12T00:47:09.243Z</published>
-    <updated>2020-03-12T02:23:42.175Z</updated>
+    <updated>2020-03-12T03:33:40.395Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="方法重载-overload"><a href="#方法重载-overload" class="headerlink" title="方法重载(overload)"></a>方法重载(overload)</h1><h2 id="适用于解决以下问题："><a href="#适用于解决以下问题：" class="headerlink" title="适用于解决以下问题："></a>适用于解决以下问题：</h2><p>调用功能相似方法时传统的做法是编写多个有着不同名字的方法，这样既麻烦且不美观</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>——方法重载(overload)</p><h2 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h2><p>各个方法的功能都相似；</p><h2 id="不是所有的语言都有这个机制"><a href="#不是所有的语言都有这个机制" class="headerlink" title="不是所有的语言都有这个机制"></a>不是所有的语言都有这个机制</h2><p>例如javascript没有这个机制</p><h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><p>使用的方法名字一样，区分的依据是实参的数据类型；<br>程序员调用方法的时候比较方便，虽然调用的不同的方法，但是感觉就像是在使用一个方法一样，不需要记忆更多的方法；<br>同时代码更加美观。</p><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>功能不相似的时候尽可能让方法的方法名不同。</p><h2 id="思考问题："><a href="#思考问题：" class="headerlink" title="思考问题："></a>思考问题：</h2><p> 1.方法重载又被称为：overload<br>2.什么时候考虑使用方法重载：<br>功能相似的时候，尽可能让方法名相同；<br>【但是：功能不同/不相似的时候，尽可能不使用方法重载】<br>3.满足什么条件才构成方法重载</p><ul><li>在同一个类中</li><li>方法名相同</li><li>参数列表不同：<ul><li>数量不同</li><li>顺序不同</li><li>类型不同 </li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="方法重载-overload"><a href="#方法重载-overload" class="headerlink" title="方法重载(overload)"></a>方法重载(overload)</h1><h2 id="适用于解决以下问题："><a href="#适用于解决以下问题：" class="headerlink" title="适用于解决以下问题："></a>适用于解决以下问题：</h2><p>调用功能相似方法时传统的做法是编写多个有着不同名字的方法，这样既麻烦且不美观</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>——方法重载(overload)</p><h2 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h2><p>各个方法的功能都相似；</p><h2 id="不是所有的语言都有这个机制"><a href="#不是所有的语言都有这个机制" class="headerlink" title="不是所有的语言都有这个机制"></a>不是所有的语言都有这个机制</h2><p>例如javascript没有这个机制</p><h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><p>使用的方法名字一样，区分的依据是实参的数据类型；<br>程序员调用方法的时候比较方便，虽然调用的不同的方法，但是感觉就像是在使用一个方法一样，不需要记忆更多的方法；<br>同时代码更加美观。</p><h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>功能不相似的时候尽可能让方法的方法名不同。</p><h2 id="思考问题："><a href="#思考问题：" class="headerlink" title="思考问题："></a>思考问题：</h2><p> 1.方法重载又被称为：overload<br>2.什么时候考虑使用方法重载：<br>功能相似的时候，尽可能让方法名相同；<br>【但是：功能不同/不相似的时候，尽可能不使用方法重载】<br>3.满足什么条件才构成方法重载</p><ul><li>在同一个类中</li><li>方法名相同</li><li>参数列表不同：<ul><li>数量不同</li><li>顺序不同</li><li>类型不同 </li></ul></li></ul><p>4.方法重载和什么有关系，和什么没有关系？</p><ul><li>方法重载和方法名 + 参数列表有关系</li><li>方法重载和返回值类型无关</li><li>方法重载和修饰符列表无关(即与是否有public等等无关)<h2 id="方法重载的具体应用"><a href="#方法重载的具体应用" class="headerlink" title="方法重载的具体应用"></a>方法重载的具体应用</h2>使用下面的自定义类，利用其中的各个重载方法就可以实现简单快速地输出各种类型的值。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SelfPrint</span></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">byte</span> data)</span></span>&#123;</span><br><span class="line">System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">short</span> data)</span></span>&#123;</span><br><span class="line">System.out.println( data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">long</span> data)</span></span>&#123;</span><br><span class="line">System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">float</span> data)</span></span>&#123;</span><br><span class="line">System.out.println(data);&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">double</span> data)</span></span>&#123;</span><br><span class="line">System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">boolean</span> data)</span></span>&#123;</span><br><span class="line">System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">char</span> data)</span></span>&#123;</span><br><span class="line">System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(String data)</span></span>&#123;</span><br><span class="line">System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
@@ -39,9 +39,9 @@
   </entry>
   
   <entry>
-    <title>docs/15839733472957</title>
-    <link href="http://www.nianchu.space/2020/03/12/docs/15839733472957/"/>
-    <id>http://www.nianchu.space/2020/03/12/docs/15839733472957/</id>
+    <title>起航/经验之谈</title>
+    <link href="http://www.nianchu.space/2020/03/12/%E8%B5%B7%E8%88%AA/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/"/>
+    <id>http://www.nianchu.space/2020/03/12/%E8%B5%B7%E8%88%AA/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/</id>
     <published>2020-03-12T00:35:47.296Z</published>
     <updated>2020-03-12T00:38:09.814Z</updated>
     
@@ -61,53 +61,9 @@
   </entry>
   
   <entry>
-    <title>docs/15839733125716</title>
-    <link href="http://www.nianchu.space/2020/03/12/docs/15839733125716/"/>
-    <id>http://www.nianchu.space/2020/03/12/docs/15839733125716/</id>
-    <published>2020-03-12T00:35:12.572Z</published>
-    <updated>2020-03-12T00:35:12.572Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>docs/15839378365523</title>
-    <link href="http://www.nianchu.space/2020/03/11/docs/15839378365523/"/>
-    <id>http://www.nianchu.space/2020/03/11/docs/15839378365523/</id>
-    <published>2020-03-11T14:43:56.553Z</published>
-    <updated>2020-03-11T15:10:14.528Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Should-College-Student-Be-Allowed-to-Get-Married"><a href="#Should-College-Student-Be-Allowed-to-Get-Married" class="headerlink" title="Should College Student Be Allowed to Get Married?"></a>Should College Student Be Allowed to Get Married?</h1><p>Love is one thing that is very import to everyone.So it’s not surprising to see more and more college students getting married.</p><p>But different people have different ideas about this event. Some think it’s not a bad thing, because they think getting married early will make college        students better to adapt to the real  social life. After all, if there are no special circumstances, anyone will eventually get married. Others don’t agree with this point. And they think study is the main and only target for college student, so they should try their best to learn, to read, not having a nice day with their wives or husbands.</p><p>As for me, I can’t indicate which point is<br>better. And i think, study is absolutely the most important thing, but if you meet the right man or women that you want to live with him or her forever, and you promise you don’t give up study, I think getting  married will become a beautiful  thing too. </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Should-College-Student-Be-Allowed-to-Get-Married&quot;&gt;&lt;a href=&quot;#Should-College-Student-Be-Allowed-to-Get-Married&quot; class=&quot;headerlink&quot; tit
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>docs/15838347787961</title>
-    <link href="http://www.nianchu.space/2020/03/10/docs/15838347787961/"/>
-    <id>http://www.nianchu.space/2020/03/10/docs/15838347787961/</id>
+    <title>Matlab-课程记录/Matlab常见函数</title>
+    <link href="http://www.nianchu.space/2020/03/10/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/"/>
+    <id>http://www.nianchu.space/2020/03/10/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/</id>
     <published>2020-03-10T10:06:18.796Z</published>
     <updated>2020-03-10T10:09:47.810Z</updated>
     
@@ -127,53 +83,9 @@
   </entry>
   
   <entry>
-    <title>docs/15838346987598</title>
-    <link href="http://www.nianchu.space/2020/03/10/docs/15838346987598/"/>
-    <id>http://www.nianchu.space/2020/03/10/docs/15838346987598/</id>
-    <published>2020-03-10T10:04:58.760Z</published>
-    <updated>2020-03-10T10:04:58.760Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>docs/15838344708418</title>
-    <link href="http://www.nianchu.space/2020/03/10/docs/15838344708418/"/>
-    <id>http://www.nianchu.space/2020/03/10/docs/15838344708418/</id>
-    <published>2020-03-10T10:01:10.842Z</published>
-    <updated>2020-03-10T10:01:10.842Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h1&gt;
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>docs/15837685933337</title>
-    <link href="http://www.nianchu.space/2020/03/09/docs/15837685933337/"/>
-    <id>http://www.nianchu.space/2020/03/09/docs/15837685933337/</id>
+    <title>Python/Python正则表达式</title>
+    <link href="http://www.nianchu.space/2020/03/09/Python/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://www.nianchu.space/2020/03/09/Python/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
     <published>2020-03-09T15:43:13.334Z</published>
     <updated>2020-03-09T15:45:51.221Z</updated>
     
@@ -193,9 +105,9 @@
   </entry>
   
   <entry>
-    <title>docs/15837673649117</title>
-    <link href="http://www.nianchu.space/2020/03/09/docs/15837673649117/"/>
-    <id>http://www.nianchu.space/2020/03/09/docs/15837673649117/</id>
+    <title>Python/Python随便写点</title>
+    <link href="http://www.nianchu.space/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/"/>
+    <id>http://www.nianchu.space/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/</id>
     <published>2020-03-09T15:22:44.912Z</published>
     <updated>2020-03-09T15:41:29.749Z</updated>
     
@@ -216,13 +128,13 @@
   </entry>
   
   <entry>
-    <title>docs/15837196346628</title>
-    <link href="http://www.nianchu.space/2020/03/09/docs/15837196346628/"/>
-    <id>http://www.nianchu.space/2020/03/09/docs/15837196346628/</id>
+    <title>Java/Java学习记录1</title>
+    <link href="http://www.nianchu.space/2020/03/09/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/"/>
+    <id>http://www.nianchu.space/2020/03/09/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/</id>
     <published>2020-03-09T02:07:14.663Z</published>
-    <updated>2020-03-09T02:20:27.179Z</updated>
+    <updated>2020-03-12T04:31:55.156Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Java学习记录"><a href="#Java学习记录" class="headerlink" title="Java学习记录"></a>Java学习记录</h1><p>用于记录那些零星的不成系统的需要注意的问题</p><h2 id="next-和nextLine-的区别"><a href="#next-和nextLine-的区别" class="headerlink" title="next()和nextLine()的区别"></a>next()和nextLine()的区别</h2><p>next()特点：<br>1、一定要读取到有效字符后才可以结束输入，<br>2、对输入有效字符之前遇到的空白，next()方法会自动将其去掉，<br>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符.<br>next()不能得到带有空格的字符串</p><p>nextLine()特点：<br>1、以Enter为结束符,也就是说nextLine()方法返回的是输入回车之前的所有字符。<br>2、可以获得空白.</p><h2 id="Java中字符串可以像整数一样交换顺序"><a href="#Java中字符串可以像整数一样交换顺序" class="headerlink" title="Java中字符串可以像整数一样交换顺序"></a>Java中字符串可以像整数一样交换顺序</h2><h2 id="为什么Math-sin-Math-PI-为什么不等于0"><a href="#为什么Math-sin-Math-PI-为什么不等于0" class="headerlink" title="为什么Math.sin(Math.PI)为什么不等于0?"></a>为什么Math.sin(Math.PI)为什么不等于0?</h2><p>解释：<br>1.常规代数里，是等于0，但是cpu运算的时候，只是近似等于0<br>2.计算机语言数值型数据都是二进制表达的，所以在进行浮点计算时候是很难精确的，Math.sin(Math.PI)是通过微积分计算公式计算出来的，会存在精度上面的误差结果是：1.2246063538223772e-16</p><p>综上，浮点数的运算，往往并不是我们期望的结果，可以通过Math.round() 函数来解决。</p><h2 id="常见计算结果类型"><a href="#常见计算结果类型" class="headerlink" title="常见计算结果类型"></a>常见计算结果类型</h2><p>Math,pow计算结果是小数<br>Math.log计算结果也是小数</p><h2 id="如何利用Math-random生成各个范围的整数"><a href="#如何利用Math-random生成各个范围的整数" class="headerlink" title="如何利用Math.random生成各个范围的整数"></a>如何利用Math.random生成各个范围的整数</h2><p><strong>* 以下这是阿里巴巴编码规范插件的提示 *</strong><br>** 注意 Math.random() 这个方法返回是double类型，注意取值的范围[0,1)（能够取到零值，注意除零异常），如果想获取整数类型的随机数，不要将x放大10的若干倍然后取整，直接使用Random对象的nextInt或者nextLong方法. **</p><h2 id="Unicode的问题"><a href="#Unicode的问题" class="headerlink" title="Unicode的问题"></a>Unicode的问题</h2><h2 id="小技巧可以这样输出一个双引号"><a href="#小技巧可以这样输出一个双引号" class="headerlink" title="小技巧可以这样输出一个双引号:"></a>小技巧可以这样输出一个双引号:</h2><p>System.out.println(‘“‘);    // prints “</p><p>字符串操作之:concat.contains??忘记了</p><p>记录怎样实现字符串的强制转换</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Java学习记录"><a href="#Java学习记录" class="headerlink" title="Java学习记录"></a>Java学习记录</h1><p>用于记录那些零星的不成系统的需要注意的问题</p><h2 id="next-和nextLine-的区别"><a href="#next-和nextLine-的区别" class="headerlink" title="next()和nextLine()的区别"></a>next()和nextLine()的区别</h2><p>next()特点：<br>1、一定要读取到有效字符后才可以结束输入，<br>2、对输入有效字符之前遇到的空白，next()方法会自动将其去掉，<br>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符.<br>next()不能得到带有空格的字符串</p><p>nextLine()特点：<br>1、以Enter为结束符,也就是说nextLine()方法返回的是输入回车之前的所有字符。<br>2、可以获得空白.</p><h2 id="Java中字符串可以像整数一样交换顺序"><a href="#Java中字符串可以像整数一样交换顺序" class="headerlink" title="Java中字符串可以像整数一样交换顺序"></a>Java中字符串可以像整数一样交换顺序</h2><h2 id="为什么Math-sin-Math-PI-为什么不等于0"><a href="#为什么Math-sin-Math-PI-为什么不等于0" class="headerlink" title="为什么Math.sin(Math.PI)为什么不等于0?"></a>为什么Math.sin(Math.PI)为什么不等于0?</h2><p>解释：<br>1.常规代数里，是等于0，但是cpu运算的时候，只是近似等于0<br>2.计算机语言数值型数据都是二进制表达的，所以在进行浮点计算时候是很难精确的，Math.sin(Math.PI)是通过微积分计算公式计算出来的，会存在精度上面的误差结果是：1.2246063538223772e-16</p><p>综上，浮点数的运算，往往并不是我们期望的结果，可以通过Math.round() 函数来解决。</p><h2 id="常见计算结果类型"><a href="#常见计算结果类型" class="headerlink" title="常见计算结果类型"></a>常见计算结果类型</h2><p>Math,pow计算结果是小数<br>Math.log计算结果也是小数</p><h2 id="如何利用Math-random生成各个范围的整数"><a href="#如何利用Math-random生成各个范围的整数" class="headerlink" title="如何利用Math.random生成各个范围的整数"></a>如何利用Math.random生成各个范围的整数</h2><p><strong>* 以下这是阿里巴巴编码规范插件的提示 *</strong><br>** 注意 Math.random() 这个方法返回是double类型，注意取值的范围[0,1)（能够取到零值，注意除零异常），如果想获取整数类型的随机数，不要将x放大10的若干倍然后取整，直接使用Random对象的nextInt或者nextLong方法. **</p><h2 id="Unicode的问题"><a href="#Unicode的问题" class="headerlink" title="Unicode的问题"></a>Unicode的问题</h2><h2 id="小技巧可以这样输出一个双引号"><a href="#小技巧可以这样输出一个双引号" class="headerlink" title="小技巧可以这样输出一个双引号:"></a>小技巧可以这样输出一个双引号:</h2><p>System.out.println(‘“‘);    // prints “</p><p>字符串操作之:concat.contains??忘记了</p><p>记录怎样实现字符串的强制转换</p><h2 id="Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。"><a href="#Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。" class="headerlink" title="Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。"></a>Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。</h2>]]></content>
     
     <summary type="html">
     
@@ -341,8 +253,8 @@
   
   <entry>
     <title>Matlab基本运算</title>
-    <link href="http://www.nianchu.space/2020/02/26/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/"/>
-    <id>http://www.nianchu.space/2020/02/26/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/</id>
+    <link href="http://www.nianchu.space/2020/02/26/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/"/>
+    <id>http://www.nianchu.space/2020/02/26/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/</id>
     <published>2020-02-26T14:28:17.000Z</published>
     <updated>2020-02-26T16:03:32.332Z</updated>
     
@@ -480,6 +392,105 @@
     
     
       <category term="Matlab" scheme="http://www.nianchu.space/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串查找</title>
+    <link href="http://www.nianchu.space/2020/02/19/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/"/>
+    <id>http://www.nianchu.space/2020/02/19/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/</id>
+    <published>2020-02-18T16:58:05.000Z</published>
+    <updated>2020-02-18T17:19:33.402Z</updated>
+    
+    <content type="html"><![CDATA[<p>在String类中提供了indexOf和lastIndexOf方法用于查找字符或字符串，返回值是查找的字符串所在的位置，-1表示没有找到。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String的Char At(int index)方法可以返回索引index所在位置的字符</span><br></pre></td></tr></table></figure><p><strong><em>实例代码</em></strong></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">String sourceString = <span class="string">"There is a string accessing exemple"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获得字符串长度</span></span><br><span class="line"><span class="keyword">int</span> len = sourceString.length();</span><br><span class="line"><span class="comment">//获得索引位置16的字符串</span></span><br><span class="line"><span class="keyword">char</span> ch = sourceString.charAt(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//查找字符和子字符串</span></span><br><span class="line"><span class="keyword">int</span> firstChar1 = sourceString.indexOf(<span class="string">'r'</span>);<span class="comment">//从前往后搜索字符</span></span><br><span class="line"><span class="keyword">int</span> lastChar1 = sourceString.lastIndexOf(<span class="string">'r'</span>);<span class="comment">//从后往前搜索字符</span></span><br><span class="line"><span class="keyword">int</span> firststr1 = sourceString.indexOf(<span class="string">"ing"</span>);<span class="comment">//从前往后搜索字符串</span></span><br><span class="line"><span class="keyword">int</span> laststr1 = sourceString.lastIndexOf(<span class="string">"ing"</span>);<span class="comment">//从后往前搜索字符串</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> firstchar2 = sourceString.indexOf(<span class="string">'e'</span>, <span class="number">15</span>);<span class="comment">//从索引为15的位置开始</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 也就是说：indexOf和lastIndexOf都还可以接收一个开始的索引</span></span><br><span class="line"><span class="comment"> * 需要注意的是：如果没有找到，是不能够从头直接跳到尾巴去接着找，</span></span><br><span class="line"><span class="comment"> * 也不能从尾巴跳到头部去继续找，这种情况下，就只能算作找不到，</span></span><br><span class="line"><span class="comment"> * 返回-1</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在String类中提供了indexOf和lastIndexOf方法用于查找字符或字符串，返回值是查找的字符串所在的位置，-1表示没有找到。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="http://www.nianchu.space/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java-字符串拼接</title>
+    <link href="http://www.nianchu.space/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/"/>
+    <id>http://www.nianchu.space/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/</id>
+    <published>2020-02-18T15:23:08.000Z</published>
+    <updated>2020-02-18T16:57:44.470Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h1><p>由于String字符串是不可变字符串，所以String字符串进行拼接以后会产生一个新的对象。</p><h2 id="1-使用-号（可以连接任何类型数据拼接成为字符串）"><a href="#1-使用-号（可以连接任何类型数据拼接成为字符串）" class="headerlink" title="1 使用 + 号（可以连接任何类型数据拼接成为字符串）"></a>1 使用 + 号（可以连接任何类型数据拼接成为字符串）</h2><h2 id="2-使用-concat-String-str-方法-只能拼接String字符串"><a href="#2-使用-concat-String-str-方法-只能拼接String字符串" class="headerlink" title="2 使用 concat(String str)方法(只能拼接String字符串)"></a>2 使用 concat(String str)方法(只能拼接String字符串)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//字符串拼接</span></span><br><span class="line"><span class="comment">//使用+运算符连接</span></span><br><span class="line">String s1 = <span class="string">"Hello"</span>;</span><br><span class="line">String s2 = s1 + <span class="string">" World"</span>;</span><br><span class="line">System.out.println(s2);</span><br><span class="line"></span><br><span class="line">String s4 = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//使用+运算符连接，支持+=赋值运算符</span></span><br><span class="line">s4 += <span class="string">" "</span>;</span><br><span class="line">s4 += <span class="string">"World"</span>;</span><br><span class="line">System.out.println(s4);</span><br><span class="line"></span><br><span class="line">String s5 =<span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//使用concat连接</span></span><br><span class="line">s5 = s5.concat(<span class="string">" "</span>).concat(<span class="string">"World!"</span>);<span class="comment">//concat的参数和返回值都是String,所以可以连续调用该方法进行多个字符串的拼接</span></span><br><span class="line"><span class="keyword">int</span> age = <span class="number">18</span>;</span><br><span class="line">String s6 = <span class="string">"她的年龄是"</span> + age + <span class="string">"岁"</span>;</span><br><span class="line">System.out.println(s6);</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> score = <span class="string">'A'</span>;</span><br><span class="line">String s7 = <span class="string">"她的英语成绩是"</span> + score;</span><br><span class="line">System.out.println(s7);</span><br><span class="line"></span><br><span class="line">java.util.Date nowDate = <span class="keyword">new</span> java.util.Date();</span><br><span class="line"><span class="comment">//对象拼接自动调用toString()方法</span></span><br><span class="line"><span class="comment">/*这里解释一下：</span></span><br><span class="line"><span class="comment"> * Java中所有对象都有一个toString()方法，该方法可以将对象转换为字符串，而且拼接过程中会自动调用这个方法。</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * java.util.Date类是java的日期类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">String s8 = <span class="string">"今天是： "</span> + nowDate;</span><br><span class="line">System.out.println(s8);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 输出结果：</span></span><br><span class="line"><span class="comment"> *Hello World</span></span><br><span class="line"><span class="comment">*Hello World</span></span><br><span class="line"><span class="comment">*她的年龄是18岁</span></span><br><span class="line"><span class="comment">*她的英语成绩是A</span></span><br><span class="line"><span class="comment">*今天是： Wed Feb 19 00:54:22 CST 2020</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;字符串拼接&quot;&gt;&lt;a href=&quot;#字符串拼接&quot; class=&quot;headerlink&quot; title=&quot;字符串拼接&quot;&gt;&lt;/a&gt;字符串拼接&lt;/h1&gt;&lt;p&gt;由于String字符串是不可变字符串，所以String字符串进行拼接以后会产生一个新的对象。&lt;/p&gt;
+&lt;h2 id=
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java" scheme="http://www.nianchu.space/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab基础</title>
+    <link href="http://www.nianchu.space/2020/02/18/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%9F%BA%E7%A1%80/"/>
+    <id>http://www.nianchu.space/2020/02/18/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%9F%BA%E7%A1%80/</id>
+    <published>2020-02-18T08:26:37.000Z</published>
+    <updated>2020-02-18T15:18:09.880Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>如果命令很长，可以分两行来输入。（需要利用续行符…）</p><h2 id="设置当前文件夹"><a href="#设置当前文件夹" class="headerlink" title="设置当前文件夹"></a>设置当前文件夹</h2><p>步骤：先建立文件夹，然后在Matlab命令行中用cd命令+路径设置</p><h2 id="工作区也称为工作区，用于变量的显示-以表格形式-和操作-可以编辑，删除"><a href="#工作区也称为工作区，用于变量的显示-以表格形式-和操作-可以编辑，删除" class="headerlink" title="工作区也称为工作区，用于变量的显示(以表格形式)和操作(可以编辑，删除)"></a>工作区也称为工作区，用于变量的显示(以表格形式)和操作(可以编辑，删除)</h2><h2 id="Matlab的搜索路径"><a href="#Matlab的搜索路径" class="headerlink" title="Matlab的搜索路径"></a>Matlab的搜索路径</h2><p>在命令行中输入一条命令后，Matlab</p><p>变量 –&gt;内部函数–&gt;程序文件</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%&#123;Matlab的搜索路径有一定的顺序：变量&gt;内部函数&gt;程序文件,下面是一个实例:&#125;%</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%这里的sin是内部函数，正弦，所以结果应该是:0.8415</span></span><br><span class="line"><span class="built_in">sin</span>=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; <span class="comment">%这里定义sin为一个变量，包含5个向量元素，不是内部函数了</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%因为变量的级别高于内部函数，所以这个命令的结果是1而不是0.8415</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%&#123;Matlab的搜索路径有一定的顺序：变量&gt;内部函数&gt;程序文件,下面是一个实例:&#125;%</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%这里的sin是内部函数，正弦，所以结果应该是:0.8415</span></span><br><span class="line"><span class="built_in">sin</span>=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; <span class="comment">%这里定义sin为一个变量，包含5个向量元素，不是内部函数了</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%因为变量的级别高于内部函数，所以这个命令的结果是1而不是0.8415</span></span><br><span class="line"><span class="comment">%&#123;此时如果要计算sin的本来值，可以在工作区将已经定义的sin变量删除&#125;%</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Matlab的文件搜索</span></span><br><span class="line"><span class="comment">% 如何设置文件搜索路径</span></span><br><span class="line"><span class="comment">% 1 使用path命令。例如&gt;&gt;path(path,'需要搜索的路径')</span></span><br><span class="line"><span class="comment">% 2 在窗口上设置</span></span><br><span class="line"><span class="comment">% 搜索的顺序：1 当前文件；2 已经设置的搜索路径中；3 如果两个位置都没有搜索结果则会报错</span></span><br></pre></td></tr></table></figure><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="整型："><a href="#整型：" class="headerlink" title="整型："></a>整型：</h4><p>分为：</p><p>1:有符号整数</p><p>2: 无符号整数</p><p>然后又分别分为8，16，32，64位整数</p><p>需要记住：</p><p>int是带符号，uint是不带符号</p><p>带符号8位整数的最大值是127</p><p>提供了数据类型转换函数</p><h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><p>同样提供了类型转换函数：</p><p>1 single函数：将其他类型的数据转换为单精度型</p><p>2 double函数：将其他类型的数据转换为双精度型</p><h4 id="复型"><a href="#复型" class="headerlink" title="复型"></a>复型</h4><p>复型数据包括实部和虚部两个部分，都默认为双精度单位，用i或者j来表示</p><p>常用函数有两个：</p><p>real：获取复数的实部</p><p>imag：获取复数的虚部</p><h3 id="数值数据的输出格式"><a href="#数值数据的输出格式" class="headerlink" title="数值数据的输出格式"></a>数值数据的输出格式</h3><p>使用format命令，格式是：</p><blockquote><p>format 格式符</p></blockquote><p><strong>注意：format命令只影响数据输出的格式，而不影响数据的计算和存储</strong></p><h3 id="常用数学函数"><a href="#常用数学函数" class="headerlink" title="常用数学函数"></a>常用数学函数</h3><p>调用方法：</p><p>函数名(函数自变量的值)</p><p><strong><em>函数在运算时是将函数逐项作用于矩阵的每个元素上，所以最后运算的结果就是一个与自变量同类型的矩阵</em></strong></p><p>即<strong>作用于矩阵，结果是矩阵</strong></p><p><em>1 函数的调用格式：(实例)</em></p><p><em>2 常用函数的应用</em></p><blockquote><p>三角函数</p></blockquote><p>三角函数也分为两种类型：</p><p>以弧度为单位的函数和以角度为单位的函数，如果是以角度为单位的函数，则在调用时应该在函数名后面加上d，以示区别。</p><blockquote><p>abs函数</p></blockquote><p>可以用来求实数的绝对值、复数的模、字符串的ASCII码值，具体操作见后面代码</p><blockquote><p>取整函数</p></blockquote><p>有round、fix、floor、ceil四种类型，具体实例见文章尾部</p><p> <em>3 函数应用举例</em></p><blockquote><p>1 分别求一个三位正整数的个、十、百位</p></blockquote><blockquote><p>2 求[1,100]区间的所有素数</p></blockquote><p>代码见后面。</p><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 转换函数实例</span></span><br><span class="line">class(<span class="number">4</span>)</span><br><span class="line">(class(single(<span class="number">4</span>)))</span><br><span class="line"><span class="comment">%&#123;结果分别是ans ='double'，ans ='single'&#125;%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">%format来设置数值数据的输出形式</span></span><br><span class="line"><span class="comment">% 格式：format 格式符</span></span><br><span class="line"><span class="comment">% 实例：</span></span><br><span class="line">format long </span><br><span class="line"><span class="number">50</span>/<span class="number">3</span></span><br><span class="line"><span class="comment">% 此时的输出结果是：16.666666666666668</span></span><br><span class="line">format</span><br><span class="line"><span class="number">50</span>/<span class="number">3</span></span><br><span class="line"><span class="comment">% 重置以后结果变回了：16.6667</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%常用函数实例</span></span><br><span class="line"><span class="comment">%exp函数实例</span></span><br><span class="line"><span class="comment">% 在matlab中exp意思是以自然常数e为底的指数函数。返回 e（自然对数的底）的幂次方。</span></span><br><span class="line">A = [<span class="number">4</span>,<span class="number">2</span>;<span class="number">3</span>,<span class="number">6</span>]</span><br><span class="line">B = <span class="built_in">exp</span>(A)</span><br><span class="line"><span class="comment">%&#123;输出结果：B =54.5982    7.3891 20.0855  403.4288&#125;%</span></span><br><span class="line"><span class="comment">% 上行结果格式和真实情况不同</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%三角函数的两种调用方法：</span></span><br><span class="line"><span class="comment">% 1</span></span><br><span class="line"><span class="built_in">cos</span>(<span class="built_in">pi</span>)</span><br><span class="line"><span class="comment">% 2 </span></span><br><span class="line"><span class="built_in">cosd</span>(<span class="number">180</span>)</span><br><span class="line"><span class="comment">% 两种方法结果肯定是一样的</span></span><br><span class="line"><span class="comment">% 结果：-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%abs函数使用实例：</span></span><br><span class="line"><span class="comment">% 1 求绝对值</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="number">-100</span>)</span><br><span class="line"><span class="comment">% ans = 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%2 求复数的模</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="number">5</span>+<span class="number">12</span><span class="built_in">i</span>)</span><br><span class="line"><span class="comment">% ans = 13</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%3 求字符串的ASCII码</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="string">'abd'</span>)</span><br><span class="line"><span class="comment">% ans 87 98 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 取整函数</span></span><br><span class="line"><span class="comment">% 1 round:按照四舍五入取整</span></span><br><span class="line"><span class="comment">% 2 ceil：向上取整，即取大于等于这个数的第一个整数</span></span><br><span class="line"><span class="comment">% 3 floor：向下取整，取小于等于这个数的第一个整数</span></span><br><span class="line"><span class="comment">% 4 fix： 取靠近0的那个整数，也就是舍去小数取整</span></span><br><span class="line"><span class="comment">% 实例：</span></span><br><span class="line"><span class="built_in">round</span>(<span class="number">4.7</span>)</span><br><span class="line"><span class="built_in">fix</span>(<span class="number">-3.2</span>)</span><br><span class="line"><span class="built_in">floor</span>(<span class="number">3.6</span>)</span><br><span class="line"><span class="built_in">ceil</span>(<span class="number">-3.8</span>)</span><br><span class="line"><span class="comment">%ans=5;ans=-3;ans=3;ans=-3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 函数应用举例1：分别求出一个三位整数的个位、十位、百位</span></span><br><span class="line"><span class="comment">% rem是取余函数</span></span><br><span class="line">m=<span class="number">345</span>;</span><br><span class="line">m1=<span class="built_in">rem</span>(m,<span class="number">10</span>)<span class="comment">%个位数</span></span><br><span class="line">m2=<span class="built_in">rem</span>(<span class="built_in">fix</span>(m/<span class="number">10</span>),<span class="number">10</span>)</span><br><span class="line">m3=<span class="built_in">fix</span>(m/<span class="number">100</span>)</span><br><span class="line"><span class="comment">% m1=5;m2=4;m3=3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%函数应用举例2：求[1,00]区间的所有素数</span></span><br><span class="line">x=<span class="number">1</span>:<span class="number">100</span>;</span><br><span class="line">k=<span class="built_in">isprime</span>(x);<span class="comment">%isprime用来判断一个数是否能被2整除，能为真，不能则为假</span></span><br><span class="line">k1=<span class="built_in">find</span>(k);<span class="comment">%find用来找出为真的x序列</span></span><br><span class="line">p=x(k1)<span class="comment">%输出1到100之间的素数</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;系统环境&quot;&gt;&lt;a href=&quot;#系统环境&quot; class=&quot;headerlink&quot; title=&quot;系统环境&quot;&gt;&lt;/a&gt;系统环境&lt;/h1&gt;&lt;p&gt;如果命令很长，可以分两行来输入。（需要利用续行符…）&lt;/p&gt;
+&lt;h2 id=&quot;设置当前文件夹&quot;&gt;&lt;a href=&quot;#设置当前
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Matlab" scheme="http://www.nianchu.space/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yield</title>
+    <link href="http://www.nianchu.space/2020/02/18/Python/yield/"/>
+    <id>http://www.nianchu.space/2020/02/18/Python/yield/</id>
+    <published>2020-02-18T06:26:16.000Z</published>
+    <updated>2020-02-18T06:26:54.138Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yield</span></span><br><span class="line"><span class="comment"># 带有yield的函数在Python中被称为generator(生成器)</span></span><br><span class="line"><span class="comment">##   如何生成斐波那契数列</span></span><br><span class="line"><span class="comment"># 第一版</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def fab(max):</span></span><br><span class="line"><span class="string">n, a , b  = 0, 0, 1</span></span><br><span class="line"><span class="string">while n &lt; max:</span></span><br><span class="line"><span class="string">print(b)</span></span><br><span class="line"><span class="string">a , b  = b, a + b</span></span><br><span class="line"><span class="string">n = n + 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">fab(6)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">## 输出斐波那契数列前N个第二版</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def fab(max):</span></span><br><span class="line"><span class="string">n, a, b = 0, 0, 1</span></span><br><span class="line"><span class="string">L = []</span></span><br><span class="line"><span class="string">while n &lt; max:</span></span><br><span class="line"><span class="string">L.append(b)</span></span><br><span class="line"><span class="string">a, b = b, a + b</span></span><br><span class="line"><span class="string">n = n + 1</span></span><br><span class="line"><span class="string">return L</span></span><br><span class="line"><span class="string">for n in fab(5):</span></span><br><span class="line"><span class="string">print(n)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">'''改写后的fab函数通过满足返回List能够满足复用性的要求，但是，随着max越来越大，会导致程序所占内存越来越大</span></span><br><span class="line"><span class="string">所以更好的做法是通过iterable对象来迭代'''</span></span><br><span class="line"><span class="comment">### 第三版 -----有错</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">class Fab(object):</span></span><br><span class="line"><span class="string">def __int__(self, max):</span></span><br><span class="line"><span class="string">self.max = max</span></span><br><span class="line"><span class="string">self.n, self.a, self.b = 0, 0, 1</span></span><br><span class="line"><span class="string">def __iter__(self):</span></span><br><span class="line"><span class="string">return self</span></span><br><span class="line"><span class="string">def next(self):</span></span><br><span class="line"><span class="string">if self.n &lt; self.max:</span></span><br><span class="line"><span class="string">r = self.b</span></span><br><span class="line"><span class="string">self.a, self.b =self.b, self.a + self.b</span></span><br><span class="line"><span class="string">self.n = n + 1</span></span><br><span class="line"><span class="string">return r</span></span><br><span class="line"><span class="string">raise StopIteration()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">for n in Fab(5):</span></span><br><span class="line"><span class="string">print(n)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">#### 第四版</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fab</span><span class="params">(max)</span>:</span></span><br><span class="line">n , a, b = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> n  &lt; max:</span><br><span class="line"><span class="keyword">yield</span> b</span><br><span class="line">a, b = b, a + b</span><br><span class="line">n = n+ <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> fab(<span class="number">5</span>):</span><br><span class="line">print(n)</span><br><span class="line"><span class="string">"""简单的讲：yield就是把一个函数变成一个generator，带有yield的函数不再是一个普通函数，Python解释器会将其视为一个</span></span><br><span class="line"><span class="string">generator，调用fab(5)不会执行fab函数，而是返回一个iterable对象！</span></span><br><span class="line"><span class="string">结论：一个带有 yield 的函数就是一个 generator，它和普通函数不同，生成一个 generator 看起</span></span><br><span class="line"><span class="string">来像函数调用，但不会执行任何函数代码，直到对其调用 next()（在 for 循环中会自动调用 next()）</span></span><br><span class="line"><span class="string">才开始执行。虽然执行流程仍按函数的流程执行，但每执行到一个 yield 语句就会中断，并返回一个迭</span></span><br><span class="line"><span class="string">代值，下次执行时从 yield 的下一个语句继续执行。看起来就好像一个函数在正常执行的过程中被</span></span><br><span class="line"><span class="string"> yield 中断了数次，每次中断都会通过 yield 返回当前的迭代值。yield 的好处是显而易见的，把</span></span><br><span class="line"><span class="string"> 一个函数改写为一个 generator 就获得了迭代能力，比起用类的实例保存状态来计算下一个 next() </span></span><br><span class="line"><span class="string"> 的值，不仅代码简洁，而且执行流程异常清晰</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 可以使用 isgeneratorfunction来判断是不是一个特殊的generator函数</span></span><br><span class="line"><span class="keyword">from</span> inspect <span class="keyword">import</span> isgeneratorfunction</span><br><span class="line">print(isgeneratorfunction(fab))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">5</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+    
+      <category term="python" scheme="http://www.nianchu.space/tags/python/"/>
     
   </entry>
   

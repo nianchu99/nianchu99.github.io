@@ -324,7 +324,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/docs/15839740292429/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/Java/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -338,7 +338,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/12/docs/15839740292429/" class="post-title-link" itemprop="url">docs/15839740292429</a>
+            <a href="/2020/03/12/Java/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/" class="post-title-link" itemprop="url">Java/方法重载</a>
         </h1>
 
         <div class="post-meta">
@@ -350,7 +350,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-12 08:47:09 / 修改时间：10:23:42" itemprop="dateCreated datePublished" datetime="2020-03-12T08:47:09+08:00">2020-03-12</time>
+              <time title="创建时间：2020-03-12 08:47:09 / 修改时间：11:33:40" itemprop="dateCreated datePublished" datetime="2020-03-12T08:47:09+08:00">2020-03-12</time>
             </span>
 
           
@@ -381,6 +381,14 @@
 </ul>
 </li>
 </ul>
+<p>4.方法重载和什么有关系，和什么没有关系？</p>
+<ul>
+<li>方法重载和方法名 + 参数列表有关系</li>
+<li>方法重载和返回值类型无关</li>
+<li>方法重载和修饰符列表无关(即与是否有public等等无关)<h2 id="方法重载的具体应用"><a href="#方法重载的具体应用" class="headerlink" title="方法重载的具体应用"></a>方法重载的具体应用</h2>使用下面的自定义类，利用其中的各个重载方法就可以实现简单快速地输出各种类型的值。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SelfPrint</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">byte</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">short</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println( data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">long</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">float</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">double</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">boolean</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">char</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(String data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 
       
     </div>
@@ -400,7 +408,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/docs/15839733472957/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/%E8%B5%B7%E8%88%AA/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -414,7 +422,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/12/docs/15839733472957/" class="post-title-link" itemprop="url">docs/15839733472957</a>
+            <a href="/2020/03/12/%E8%B5%B7%E8%88%AA/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/" class="post-title-link" itemprop="url">起航/经验之谈</a>
         </h1>
 
         <div class="post-meta">
@@ -460,7 +468,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/docs/15839733125716/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/10/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -474,127 +482,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/12/docs/15839733125716/" class="post-title-link" itemprop="url">docs/15839733125716</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-12 08:35:12" itemprop="dateCreated datePublished" datetime="2020-03-12T08:35:12+08:00">2020-03-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/11/docs/15839378365523/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/11/docs/15839378365523/" class="post-title-link" itemprop="url">docs/15839378365523</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-11 22:43:56 / 修改时间：23:10:14" itemprop="dateCreated datePublished" datetime="2020-03-11T22:43:56+08:00">2020-03-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Should-College-Student-Be-Allowed-to-Get-Married"><a href="#Should-College-Student-Be-Allowed-to-Get-Married" class="headerlink" title="Should College Student Be Allowed to Get Married?"></a>Should College Student Be Allowed to Get Married?</h1><p>Love is one thing that is very import to everyone.So it’s not surprising to see more and more college students getting married.</p>
-<p>But different people have different ideas about this event. Some think it’s not a bad thing, because they think getting married early will make college        students better to adapt to the real  social life. After all, if there are no special circumstances, anyone will eventually get married. Others don’t agree with this point. And they think study is the main and only target for college student, so they should try their best to learn, to read, not having a nice day with their wives or husbands.</p>
-<p>As for me, I can’t indicate which point is<br>better. And i think, study is absolutely the most important thing, but if you meet the right man or women that you want to live with him or her forever, and you promise you don’t give up study, I think getting  married will become a beautiful  thing too. </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/10/docs/15838347787961/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/10/docs/15838347787961/" class="post-title-link" itemprop="url">docs/15838347787961</a>
+            <a href="/2020/03/10/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Matlab-课程记录/Matlab常见函数</a>
         </h1>
 
         <div class="post-meta">
@@ -639,7 +527,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/10/docs/15838346987598/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/Python/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -653,123 +541,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/10/docs/15838346987598/" class="post-title-link" itemprop="url">docs/15838346987598</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-10 18:04:58" itemprop="dateCreated datePublished" datetime="2020-03-10T18:04:58+08:00">2020-03-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/10/docs/15838344708418/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/10/docs/15838344708418/" class="post-title-link" itemprop="url">docs/15838344708418</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-10 18:01:10" itemprop="dateCreated datePublished" datetime="2020-03-10T18:01:10+08:00">2020-03-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/docs/15837685933337/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/09/docs/15837685933337/" class="post-title-link" itemprop="url">docs/15837685933337</a>
+            <a href="/2020/03/09/Python/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">Python/Python正则表达式</a>
         </h1>
 
         <div class="post-meta">
@@ -816,7 +588,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/docs/15837673649117/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -830,7 +602,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/09/docs/15837673649117/" class="post-title-link" itemprop="url">docs/15837673649117</a>
+            <a href="/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/" class="post-title-link" itemprop="url">Python/Python随便写点</a>
         </h1>
 
         <div class="post-meta">
@@ -875,11 +647,271 @@
   
   
 
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/09/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/" class="post-title-link" itemprop="url">Java/Java学习记录1</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-09 10:07:14" itemprop="dateCreated datePublished" datetime="2020-03-09T10:07:14+08:00">2020-03-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-12 12:31:55" itemprop="dateModified" datetime="2020-03-12T12:31:55+08:00">2020-03-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java学习记录"><a href="#Java学习记录" class="headerlink" title="Java学习记录"></a>Java学习记录</h1><p>用于记录那些零星的不成系统的需要注意的问题</p>
+<h2 id="next-和nextLine-的区别"><a href="#next-和nextLine-的区别" class="headerlink" title="next()和nextLine()的区别"></a>next()和nextLine()的区别</h2><p>next()特点：<br>1、一定要读取到有效字符后才可以结束输入，<br>2、对输入有效字符之前遇到的空白，next()方法会自动将其去掉，<br>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符.<br>next()不能得到带有空格的字符串</p>
+<p>nextLine()特点：<br>1、以Enter为结束符,也就是说nextLine()方法返回的是输入回车之前的所有字符。<br>2、可以获得空白.</p>
+<h2 id="Java中字符串可以像整数一样交换顺序"><a href="#Java中字符串可以像整数一样交换顺序" class="headerlink" title="Java中字符串可以像整数一样交换顺序"></a>Java中字符串可以像整数一样交换顺序</h2><h2 id="为什么Math-sin-Math-PI-为什么不等于0"><a href="#为什么Math-sin-Math-PI-为什么不等于0" class="headerlink" title="为什么Math.sin(Math.PI)为什么不等于0?"></a>为什么Math.sin(Math.PI)为什么不等于0?</h2><p>解释：<br>1.常规代数里，是等于0，但是cpu运算的时候，只是近似等于0<br>2.计算机语言数值型数据都是二进制表达的，所以在进行浮点计算时候是很难精确的，Math.sin(Math.PI)是通过微积分计算公式计算出来的，会存在精度上面的误差结果是：1.2246063538223772e-16</p>
+<p>综上，浮点数的运算，往往并不是我们期望的结果，可以通过Math.round() 函数来解决。</p>
+<h2 id="常见计算结果类型"><a href="#常见计算结果类型" class="headerlink" title="常见计算结果类型"></a>常见计算结果类型</h2><p>Math,pow计算结果是小数<br>Math.log计算结果也是小数</p>
+<h2 id="如何利用Math-random生成各个范围的整数"><a href="#如何利用Math-random生成各个范围的整数" class="headerlink" title="如何利用Math.random生成各个范围的整数"></a>如何利用Math.random生成各个范围的整数</h2><p><strong>* 以下这是阿里巴巴编码规范插件的提示 *</strong><br>** 注意 Math.random() 这个方法返回是double类型，注意取值的范围[0,1)（能够取到零值，注意除零异常），如果想获取整数类型的随机数，不要将x放大10的若干倍然后取整，直接使用Random对象的nextInt或者nextLong方法. **</p>
+<h2 id="Unicode的问题"><a href="#Unicode的问题" class="headerlink" title="Unicode的问题"></a>Unicode的问题</h2><h2 id="小技巧可以这样输出一个双引号"><a href="#小技巧可以这样输出一个双引号" class="headerlink" title="小技巧可以这样输出一个双引号:"></a>小技巧可以这样输出一个双引号:</h2><p>System.out.println(‘“‘);    // prints “</p>
+<p>字符串操作之:concat.contains??忘记了</p>
+<p>记录怎样实现字符串的强制转换</p>
+<h2 id="Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。"><a href="#Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。" class="headerlink" title="Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。"></a>Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/07/Java/Java%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/07/Java/Java%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Java输出数据对齐方法</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-07 11:56:42 / 修改时间：11:57:41" itemprop="dateCreated datePublished" datetime="2020-03-07T11:56:42+08:00">2020-03-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>System.out.printf(“%-10s”,”abc”);      //输出10列，左对齐(-号表示左对齐)<br>System.out.printf(“%8d”,23);          //输出8列， 右对齐</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/07/Java/Magic-value/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/07/Java/Magic-value/" class="post-title-link" itemprop="url">Magic value</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-07 09:55:44 / 修改时间：10:00:16" itemprop="dateCreated datePublished" datetime="2020-03-07T09:55:44+08:00">2020-03-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天记录一个编程领域的名词：魔法数值、魔法数字、魔法值。</p>
+<p><strong>在编程领域，上述三个名词都指的是莫名其妙出现的数字。</strong></p>
+<p>解读：</p>
+<p>采用魔法值的代码。数字的意义必须通过详细阅读才能推断出来。使用魔法数值使代码的可读性大大下降。</p>
+<p><strong><em>在Java语言中，对于有名字的值的定义，可以使用static final 或者enum来声明</em></strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/06/Java/Java%E4%B9%8BMath-round/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/06/Java/Java%E4%B9%8BMath-round/" class="post-title-link" itemprop="url">Java之Math.round</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-06 19:07:42 / 修改时间：19:08:48" itemprop="dateCreated datePublished" datetime="2020-03-06T19:07:42+08:00">2020-03-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Java 中 Math.round的用法:</p>
+<p>1、参数的小数点后第一位&lt;5，运算结果为参数整数部分。<br>2、参数的小数点后第一位&gt;5，运算结果为参数整数部分绝对值+1，符号（即正负）不变。<br>3、参数的小数点后第一位=5，正数运算结果为整数部分+1，负数运算结果为整数部分。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
   </div>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -923,7 +955,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -995,7 +1027,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.6k字</span>
+  <span class="post-count">博客全站共36.7k字</span>
 </div>
 
         

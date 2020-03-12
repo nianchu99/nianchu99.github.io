@@ -222,260 +222,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/docs/15837196346628/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/09/docs/15837196346628/" class="post-title-link" itemprop="url">docs/15837196346628</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-09 10:07:14 / 修改时间：10:20:27" itemprop="dateCreated datePublished" datetime="2020-03-09T10:07:14+08:00">2020-03-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java学习记录"><a href="#Java学习记录" class="headerlink" title="Java学习记录"></a>Java学习记录</h1><p>用于记录那些零星的不成系统的需要注意的问题</p>
-<h2 id="next-和nextLine-的区别"><a href="#next-和nextLine-的区别" class="headerlink" title="next()和nextLine()的区别"></a>next()和nextLine()的区别</h2><p>next()特点：<br>1、一定要读取到有效字符后才可以结束输入，<br>2、对输入有效字符之前遇到的空白，next()方法会自动将其去掉，<br>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符.<br>next()不能得到带有空格的字符串</p>
-<p>nextLine()特点：<br>1、以Enter为结束符,也就是说nextLine()方法返回的是输入回车之前的所有字符。<br>2、可以获得空白.</p>
-<h2 id="Java中字符串可以像整数一样交换顺序"><a href="#Java中字符串可以像整数一样交换顺序" class="headerlink" title="Java中字符串可以像整数一样交换顺序"></a>Java中字符串可以像整数一样交换顺序</h2><h2 id="为什么Math-sin-Math-PI-为什么不等于0"><a href="#为什么Math-sin-Math-PI-为什么不等于0" class="headerlink" title="为什么Math.sin(Math.PI)为什么不等于0?"></a>为什么Math.sin(Math.PI)为什么不等于0?</h2><p>解释：<br>1.常规代数里，是等于0，但是cpu运算的时候，只是近似等于0<br>2.计算机语言数值型数据都是二进制表达的，所以在进行浮点计算时候是很难精确的，Math.sin(Math.PI)是通过微积分计算公式计算出来的，会存在精度上面的误差结果是：1.2246063538223772e-16</p>
-<p>综上，浮点数的运算，往往并不是我们期望的结果，可以通过Math.round() 函数来解决。</p>
-<h2 id="常见计算结果类型"><a href="#常见计算结果类型" class="headerlink" title="常见计算结果类型"></a>常见计算结果类型</h2><p>Math,pow计算结果是小数<br>Math.log计算结果也是小数</p>
-<h2 id="如何利用Math-random生成各个范围的整数"><a href="#如何利用Math-random生成各个范围的整数" class="headerlink" title="如何利用Math.random生成各个范围的整数"></a>如何利用Math.random生成各个范围的整数</h2><p><strong>* 以下这是阿里巴巴编码规范插件的提示 *</strong><br>** 注意 Math.random() 这个方法返回是double类型，注意取值的范围[0,1)（能够取到零值，注意除零异常），如果想获取整数类型的随机数，不要将x放大10的若干倍然后取整，直接使用Random对象的nextInt或者nextLong方法. **</p>
-<h2 id="Unicode的问题"><a href="#Unicode的问题" class="headerlink" title="Unicode的问题"></a>Unicode的问题</h2><h2 id="小技巧可以这样输出一个双引号"><a href="#小技巧可以这样输出一个双引号" class="headerlink" title="小技巧可以这样输出一个双引号:"></a>小技巧可以这样输出一个双引号:</h2><p>System.out.println(‘“‘);    // prints “</p>
-<p>字符串操作之:concat.contains??忘记了</p>
-<p>记录怎样实现字符串的强制转换</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/07/Java/Java%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/07/Java/Java%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Java输出数据对齐方法</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-07 11:56:42 / 修改时间：11:57:41" itemprop="dateCreated datePublished" datetime="2020-03-07T11:56:42+08:00">2020-03-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>System.out.printf(“%-10s”,”abc”);      //输出10列，左对齐(-号表示左对齐)<br>System.out.printf(“%8d”,23);          //输出8列， 右对齐</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/07/Java/Magic-value/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/07/Java/Magic-value/" class="post-title-link" itemprop="url">Magic value</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-07 09:55:44 / 修改时间：10:00:16" itemprop="dateCreated datePublished" datetime="2020-03-07T09:55:44+08:00">2020-03-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今天记录一个编程领域的名词：魔法数值、魔法数字、魔法值。</p>
-<p><strong>在编程领域，上述三个名词都指的是莫名其妙出现的数字。</strong></p>
-<p>解读：</p>
-<p>采用魔法值的代码。数字的意义必须通过详细阅读才能推断出来。使用魔法数值使代码的可读性大大下降。</p>
-<p><strong><em>在Java语言中，对于有名字的值的定义，可以使用static final 或者enum来声明</em></strong></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/06/Java/Java%E4%B9%8BMath-round/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/06/Java/Java%E4%B9%8BMath-round/" class="post-title-link" itemprop="url">Java之Math.round</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-06 19:07:42 / 修改时间：19:08:48" itemprop="dateCreated datePublished" datetime="2020-03-06T19:07:42+08:00">2020-03-06</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Java 中 Math.round的用法:</p>
-<p>1、参数的小数点后第一位&lt;5，运算结果为参数整数部分。<br>2、参数的小数点后第一位&gt;5，运算结果为参数整数部分绝对值+1，符号（即正负）不变。<br>3、参数的小数点后第一位=5，正数运算结果为整数部分+1，负数运算结果为整数部分。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/06/Java/Java%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -542,7 +288,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/26/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/26/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -556,7 +302,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/26/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/" class="post-title-link" itemprop="url">Matlab基本运算</a>
+            <a href="/2020/02/26/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/" class="post-title-link" itemprop="url">Matlab基本运算</a>
         </h1>
 
         <div class="post-meta">
@@ -849,11 +595,319 @@
   
   
 
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/19/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/%E3%80%8AMatlab%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/19/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/%E3%80%8AMatlab%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/" class="post-title-link" itemprop="url">《Matlab从入门到精通》</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-19 22:14:54" itemprop="dateCreated datePublished" datetime="2020-02-19T22:14:54+08:00">2020-02-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-21 23:37:24" itemprop="dateModified" datetime="2020-02-21T23:37:24+08:00">2020-02-21</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 双精度(double)：8字节；单精度(single)：4字节</span></span><br><span class="line"><span class="comment">% 复数还可以使用函数来产生复数??complex;complex接收两个参数，前一个是实部，后一个是虚数;前一个参数可以为零，但是后面的参数不行</span></span><br><span class="line"><span class="comment">% inf和-inf来表示正无穷大和负无穷大；除法运算中除数为0或者运算结果溢出都会导致inf或者-inf的结果。</span></span><br><span class="line">x=<span class="built_in">exp</span>(<span class="number">1000000</span>)</span><br><span class="line">x=<span class="built_in">log</span>(<span class="number">0</span>)</span><br><span class="line"><span class="comment">% 上述两行代码的输出结果分别为：Inf,-Inf</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% NaN用来表示一个既不是实数也不是复数的数值。NAN是Not A Number的缩写。类似0/0,inf/inf这样的表达式得到的结果均为NAN</span></span><br><span class="line"><span class="built_in">inf</span>/-<span class="built_in">inf</span></span><br><span class="line"><span class="built_in">nan</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 逻辑类型</span></span><br><span class="line"><span class="comment">% 逻辑类型用1和0来表示。</span></span><br><span class="line"><span class="comment">% 函数logical()来得到逻辑类型的数值。它可以把任何非零的数值转换为逻辑true(1)，反过来也可以</span></span><br><span class="line">x = logical(<span class="number">-1</span>)</span><br><span class="line"><span class="comment">% x = logical 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 字符和字符串</span></span><br><span class="line"><span class="comment">% Matlab中规定用char数据类型来表示一个字符串。一个char类型的1*n的数组则可以称为字符串String。Matlab中char类型都是以2字节的unicode字符来存储的</span></span><br><span class="line"><span class="comment">% 可以使用一对单引号来表示字符串：</span></span><br><span class="line">str = <span class="string">"I love china!"</span></span><br><span class="line"><span class="comment">% 也可以使用char函数来构造字符串，下面的代码将得到字符串'AB'</span></span><br><span class="line">str=char([<span class="number">65</span> <span class="number">66</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">% 函数句柄</span></span><br><span class="line"><span class="comment">% 是用来提供间接调用函数的数据类型。函数句柄可以转递给其他函数以便该函数所代表的函数就可以被调用。函数句柄还可以储存起来，以便以后利用。</span></span><br><span class="line"><span class="comment">% 函数句柄可以用符号@后面跟着函数名来表示。下面的函数句柄使得自定义变量可以用来代替tan函数的功能</span></span><br><span class="line">f=@<span class="built_in">tan</span></span><br><span class="line">jieguo=f(<span class="built_in">pi</span>/<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% 结构体类型</span></span><br><span class="line"><span class="comment">% 结构体是根据属性名组织起来的不同类型数据的集合。</span></span><br><span class="line"><span class="comment">% 有一种容易与结构体类型混淆的数据类型是单元数组类型。它们之间既有相同点，也有不同点：“单元数组类型，它是一种特殊类型的MATLAB 7.0数组，</span></span><br><span class="line"><span class="comment">% 它的每一个元素叫做单元，而每一个单元包含MATLAB 7.0数组。结构体和单元数组的共同之处在于它们都提供了一种分级存储机制来存储不同类型的数据，</span></span><br><span class="line"><span class="comment">% 不同之处是组织数据的方式不一样。结构体数组里的数据是通过属性名来引用的，而在单元数组里，数据是通过单元数组下标引用来操作的。”</span></span><br><span class="line"><span class="comment">% 结构体数组是由数据容器组成的数组，这种数组容器称为结构体的属性。结构体的任何一个属性可以包含任何一种类型的数据。</span></span><br><span class="line"><span class="comment">% 和其他数据类型一样，结构体也是一个数组，一个单独的结构体就是一个1*1结构体数组。</span></span><br><span class="line"><span class="comment">% 可以构造任何维数和形状的结构体数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 结构体构造</span></span><br><span class="line"><span class="comment">% 1 利用赋值语句</span></span><br><span class="line">Student(<span class="number">1</span>).Name=<span class="string">'xiaoming'</span>;</span><br><span class="line">Student(<span class="number">1</span>).Score=<span class="number">100</span>;</span><br><span class="line">Student(<span class="number">1</span>).fees=[<span class="number">6500</span>,<span class="number">10000</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在上面的基础上把结构体数组扩展成1*2的结构体</span></span><br><span class="line"></span><br><span class="line">Student(<span class="number">2</span>).Name=<span class="string">'xiaolei'</span>;</span><br><span class="line">Student(<span class="number">2</span>).Score=<span class="number">100</span>;</span><br><span class="line">Student(<span class="number">2</span>).fees=[<span class="number">6500</span>,<span class="number">10000</span>];</span><br><span class="line">Student(<span class="number">1</span>) <span class="comment">%多维结构数组输出时要用括号加上标量</span></span><br><span class="line">Student(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% 2 利用函数struct()来定义</span></span><br><span class="line"><span class="comment">% (1)单独使用struct函数</span></span><br><span class="line">Student(<span class="number">3</span>)=struct(<span class="string">'Name'</span>,<span class="string">'xiaohong'</span>,<span class="string">'Score'</span>,<span class="number">99</span>,<span class="string">'fees'</span>,[]);</span><br><span class="line">Student(<span class="number">3</span>)</span><br><span class="line"><span class="comment">% struct函数和repmat函数配合使用</span></span><br><span class="line"><span class="comment">% struct函数的输入为单元数组(后两种没有搞懂暂时)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">% 访问结构体数组的数据</span></span><br><span class="line">Personel=struct(<span class="string">'Name'</span>,&#123;<span class="string">'xiaolei'</span>,<span class="string">'dalei'</span>,<span class="string">'zhonglei'</span>&#125;,<span class="string">'Score'</span>,&#123;[<span class="number">100</span>,<span class="number">8</span>,<span class="number">100</span>],[<span class="number">0</span>,<span class="number">60</span>,<span class="number">90</span>],[<span class="number">100</span>,<span class="number">50</span>,<span class="number">100</span>]&#125;);</span><br><span class="line">New=Personel(<span class="number">1</span>:<span class="number">2</span>)<span class="comment">% 生成新的结构体</span></span><br><span class="line">News=New(<span class="number">1</span>)<span class="comment">% 访问新结构体的第一维数据</span></span><br><span class="line">New(<span class="number">2</span>).Name<span class="comment">% 访问第一维数据的Name值</span></span><br><span class="line">Personel(<span class="number">3</span>).Score(<span class="number">2</span>)<span class="comment">% 访问第三个人的Score中的第三个值</span></span><br><span class="line">Personel.Name <span class="comment">% 用于访问结构体数组中所有元素的某个属性</span></span><br><span class="line"><span class="comment">% 使用矩阵合并符来合并上面输出的结果</span></span><br><span class="line">Personel_hebing=[Personel.Name]<span class="comment">% 'xiaoleidaleizhonglei'</span></span><br><span class="line"><span class="comment">% 也可以把它们合并在一个单元数组中</span></span><br><span class="line">Personel=&#123;Personel.Name&#125; <span class="comment">%     &#123;'xiaolei'&#125;    &#123;'dalei'&#125;    &#123;'zhonglei'&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">% 单元数组类型</span></span><br><span class="line"><span class="comment">% 1 单元数组的构造</span></span><br><span class="line"><span class="comment">% (1)左标志法</span></span><br><span class="line">c&#123;<span class="number">1</span>,<span class="number">1</span>&#125;=<span class="string">'nianchu'</span>;</span><br><span class="line">c&#123;<span class="number">1</span>,<span class="number">2</span>&#125;=<span class="built_in">eye</span>(<span class="number">3</span>,<span class="number">3</span>);</span><br><span class="line">c&#123;<span class="number">2</span>,<span class="number">1</span>&#125;=@<span class="built_in">sec</span>;</span><br><span class="line">c&#123;<span class="number">2</span>,<span class="number">2</span>&#125;=<span class="built_in">false</span>;</span><br><span class="line">c&#123;<span class="number">3</span>,<span class="number">1</span>&#125;=<span class="built_in">true</span>;</span><br><span class="line">c</span><br><span class="line"></span><br><span class="line"><span class="comment">% 2.21</span></span><br><span class="line"><span class="comment">% (2)右标志法</span></span><br><span class="line"><span class="comment">% 右标志法和左标志法类似，只是将左边的标志符&#123;&#125;用括号代替，而在右边添加标志符即可</span></span><br><span class="line"><span class="comment">% 代码实现：</span></span><br><span class="line">a(<span class="number">1</span>,<span class="number">1</span>)=&#123;<span class="string">"xiaochu"</span>&#125;;</span><br><span class="line">a(<span class="number">1</span>,<span class="number">2</span>)=&#123;<span class="built_in">eye</span>(<span class="number">4</span>,<span class="number">4</span>)&#125;;</span><br><span class="line">a(<span class="number">2</span>,<span class="number">1</span>)=&#123;@<span class="built_in">tan</span>&#125;;</span><br><span class="line">a(<span class="number">2</span>,<span class="number">2</span>)=&#123;[]&#125;;</span><br><span class="line"><span class="comment">% 或者下面这样：</span></span><br><span class="line">b=&#123;<span class="string">"chuntian"</span>,[<span class="number">341</span>,<span class="number">434</span>];<span class="string">'dream'</span>,<span class="string">'weiling'</span>&#125;;</span><br><span class="line">b</span><br><span class="line"></span><br><span class="line"><span class="comment">% 知识补充：eye（）函数的用法——返回单位矩阵：当eye(m,n)中m和n参数不相等时，单位矩阵会出现全0行或列</span></span><br><span class="line"><span class="comment">% 1 返回N*N的单位矩阵</span></span><br><span class="line"><span class="comment">% 2 返回M*N的单位矩阵</span></span><br><span class="line"><span class="comment">% 3 返回和给定矩阵一样大小的单位矩阵</span></span><br><span class="line"><span class="comment">% 4 无参数时返回标量1</span></span><br><span class="line"><span class="comment">% 代码实现：</span></span><br><span class="line">a1=<span class="built_in">eye</span>(<span class="number">3</span>)</span><br><span class="line">a2=<span class="built_in">eye</span>(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">a3=<span class="built_in">eye</span>([<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">a4=<span class="built_in">eye</span>(<span class="built_in">size</span>(b))</span><br><span class="line">a4=<span class="built_in">eye</span>()</span><br><span class="line"><span class="comment">% 补充：～eye(m,n)为eye(m,n)中1，0完全对换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 显示单元数组的方法：</span></span><br><span class="line"><span class="comment">% 1 直接用数组的名字</span></span><br><span class="line"><span class="comment">% 2 使用函数celldisp()——使用此函数会隔行依次输出数组中的元素</span></span><br><span class="line"><span class="comment">% 法2代码实现</span></span><br><span class="line">celldisp(a)</span><br><span class="line"><span class="comment">% 说明：celldisp函数的显示格式与直接输入单元组名的显示格式是不同的。celldisp函数更适用于具有大量数据的单元数组的显示</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 单元数组的读取</span></span><br><span class="line"><span class="comment">% 1 读取全面c数组中&#123;1,1&#125;处的字符串：</span></span><br><span class="line">Str=c&#123;<span class="number">1</span>,<span class="number">1</span>&#125;</span><br><span class="line"><span class="comment">% 2 读取单元数组中若干个单元的数据，例如读取第二行的数据：</span></span><br><span class="line">c(<span class="number">2</span>,:)</span><br><span class="line"><span class="comment">% 读取单元数组的第一列</span></span><br><span class="line">c(:,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% 单元数组的删除</span></span><br><span class="line"><span class="comment">% 将空矩阵赋给单元数组的某一行或者某一列是可以删除这一行或者这一列</span></span><br><span class="line"><span class="comment">% 删掉c单元数组中第二列的值</span></span><br><span class="line">c(:,<span class="number">2</span>)=[]</span><br><span class="line"></span><br><span class="line"><span class="comment">% 矩阵的基本操作</span></span><br><span class="line"><span class="comment">% Matlab是基于矩阵运算的一个软件，所有数据均以二维矩阵或高维数组的形式存储，Matlab又称为矩阵实验室</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 名词介绍：</span></span><br><span class="line"><span class="comment">% 标量：1*1的矩阵</span></span><br><span class="line"><span class="comment">% 向量： 1*n的矩阵</span></span><br><span class="line"><span class="comment">% 空矩阵： 至少有一堆的长度为0的矩阵称为空矩阵，用[]表示</span></span><br><span class="line">Number=<span class="number">1.5</span>;</span><br><span class="line">whos Number</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">% 矩阵的构造</span></span><br><span class="line"><span class="comment">% 1 简单矩阵构造(略)</span></span><br><span class="line"><span class="comment">% 2 特殊矩阵构造：</span></span><br><span class="line"><span class="comment">% 举例：</span></span><br><span class="line"><span class="comment">% ones——产生矩阵元素全为1的矩阵</span></span><br><span class="line"><span class="comment">% zeros——产生矩阵元素全为0的矩阵</span></span><br><span class="line"><span class="comment">% eye——上面已经介绍过了</span></span><br><span class="line"><span class="built_in">ones</span>(<span class="number">2</span>)</span><br><span class="line"><span class="built_in">ones</span>(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">zeros</span>(<span class="number">2</span>)</span><br><span class="line"><span class="built_in">zeros</span>(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="comment">% diag 把向量转化为对角矩阵或者得到矩阵的对角元素</span></span><br><span class="line"><span class="comment">% magic 产生魔方矩阵，即每行、每列之和相等的矩阵</span></span><br><span class="line"><span class="comment">% rand 产生0-1均匀分布的随机数（此函数是以机器时间作为随机种子的，因而每次运行得到的结果都是不同的 ）</span></span><br><span class="line"><span class="comment">% randn 产生均值为0，方差为1高斯分布的随机数</span></span><br><span class="line"><span class="comment">% randperm 产生整数1-n的随机排列</span></span><br><span class="line"><span class="comment">% compan 长生多项式的伴随矩阵</span></span><br><span class="line"><span class="comment">% Diga之对角矩阵和对角元素</span></span><br><span class="line"><span class="comment">% 形成对角矩阵</span></span><br><span class="line">Strs=<span class="string">'I will be a successful man'</span></span><br><span class="line">Value=[<span class="number">9</span> <span class="number">9</span> <span class="number">9</span> <span class="number">2</span> <span class="number">7</span> <span class="number">2</span>]</span><br><span class="line">X=<span class="built_in">diag</span>(Strs,<span class="number">-1</span>)</span><br><span class="line">X=<span class="built_in">diag</span>(Value,<span class="number">0</span>)</span><br><span class="line"><span class="comment">% 获得对角元素</span></span><br><span class="line">Values=<span class="built_in">diag</span>(X,<span class="number">0</span>)</span><br><span class="line"><span class="comment">% 注意：当k=0时，v为X的主对角线；当k&gt;0时，v为上方第k条对角线；当k&lt;0时，v为下方第k条对角线。</span></span><br><span class="line"><span class="comment">% 如果k的值缺失，则默认为主对角</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/19/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/19/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">字符串查找</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-19 00:58:05 / 修改时间：01:19:33" itemprop="dateCreated datePublished" datetime="2020-02-19T00:58:05+08:00">2020-02-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在String类中提供了indexOf和lastIndexOf方法用于查找字符或字符串，返回值是查找的字符串所在的位置，-1表示没有找到。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String的Char At(int index)方法可以返回索引index所在位置的字符</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>实例代码</em></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">String sourceString = <span class="string">"There is a string accessing exemple"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获得字符串长度</span></span><br><span class="line"><span class="keyword">int</span> len = sourceString.length();</span><br><span class="line"><span class="comment">//获得索引位置16的字符串</span></span><br><span class="line"><span class="keyword">char</span> ch = sourceString.charAt(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//查找字符和子字符串</span></span><br><span class="line"><span class="keyword">int</span> firstChar1 = sourceString.indexOf(<span class="string">'r'</span>);<span class="comment">//从前往后搜索字符</span></span><br><span class="line"><span class="keyword">int</span> lastChar1 = sourceString.lastIndexOf(<span class="string">'r'</span>);<span class="comment">//从后往前搜索字符</span></span><br><span class="line"><span class="keyword">int</span> firststr1 = sourceString.indexOf(<span class="string">"ing"</span>);<span class="comment">//从前往后搜索字符串</span></span><br><span class="line"><span class="keyword">int</span> laststr1 = sourceString.lastIndexOf(<span class="string">"ing"</span>);<span class="comment">//从后往前搜索字符串</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> firstchar2 = sourceString.indexOf(<span class="string">'e'</span>, <span class="number">15</span>);<span class="comment">//从索引为15的位置开始</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 也就是说：indexOf和lastIndexOf都还可以接收一个开始的索引</span></span><br><span class="line"><span class="comment"> * 需要注意的是：如果没有找到，是不能够从头直接跳到尾巴去接着找，</span></span><br><span class="line"><span class="comment"> * 也不能从尾巴跳到头部去继续找，这种情况下，就只能算作找不到，</span></span><br><span class="line"><span class="comment"> * 返回-1</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/" class="post-title-link" itemprop="url">java-字符串拼接</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-18 23:23:08" itemprop="dateCreated datePublished" datetime="2020-02-18T23:23:08+08:00">2020-02-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-19 00:57:44" itemprop="dateModified" datetime="2020-02-19T00:57:44+08:00">2020-02-19</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h1><p>由于String字符串是不可变字符串，所以String字符串进行拼接以后会产生一个新的对象。</p>
+<h2 id="1-使用-号（可以连接任何类型数据拼接成为字符串）"><a href="#1-使用-号（可以连接任何类型数据拼接成为字符串）" class="headerlink" title="1 使用 + 号（可以连接任何类型数据拼接成为字符串）"></a>1 使用 + 号（可以连接任何类型数据拼接成为字符串）</h2><h2 id="2-使用-concat-String-str-方法-只能拼接String字符串"><a href="#2-使用-concat-String-str-方法-只能拼接String字符串" class="headerlink" title="2 使用 concat(String str)方法(只能拼接String字符串)"></a>2 使用 concat(String str)方法(只能拼接String字符串)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//字符串拼接</span></span><br><span class="line"><span class="comment">//使用+运算符连接</span></span><br><span class="line">String s1 = <span class="string">"Hello"</span>;</span><br><span class="line">String s2 = s1 + <span class="string">" World"</span>;</span><br><span class="line">System.out.println(s2);</span><br><span class="line"></span><br><span class="line">String s4 = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//使用+运算符连接，支持+=赋值运算符</span></span><br><span class="line">s4 += <span class="string">" "</span>;</span><br><span class="line">s4 += <span class="string">"World"</span>;</span><br><span class="line">System.out.println(s4);</span><br><span class="line"></span><br><span class="line">String s5 =<span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//使用concat连接</span></span><br><span class="line">s5 = s5.concat(<span class="string">" "</span>).concat(<span class="string">"World!"</span>);<span class="comment">//concat的参数和返回值都是String,所以可以连续调用该方法进行多个字符串的拼接</span></span><br><span class="line"><span class="keyword">int</span> age = <span class="number">18</span>;</span><br><span class="line">String s6 = <span class="string">"她的年龄是"</span> + age + <span class="string">"岁"</span>;</span><br><span class="line">System.out.println(s6);</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> score = <span class="string">'A'</span>;</span><br><span class="line">String s7 = <span class="string">"她的英语成绩是"</span> + score;</span><br><span class="line">System.out.println(s7);</span><br><span class="line"></span><br><span class="line">java.util.Date nowDate = <span class="keyword">new</span> java.util.Date();</span><br><span class="line"><span class="comment">//对象拼接自动调用toString()方法</span></span><br><span class="line"><span class="comment">/*这里解释一下：</span></span><br><span class="line"><span class="comment"> * Java中所有对象都有一个toString()方法，该方法可以将对象转换为字符串，而且拼接过程中会自动调用这个方法。</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * java.util.Date类是java的日期类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">String s8 = <span class="string">"今天是： "</span> + nowDate;</span><br><span class="line">System.out.println(s8);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 输出结果：</span></span><br><span class="line"><span class="comment"> *Hello World</span></span><br><span class="line"><span class="comment">*Hello World</span></span><br><span class="line"><span class="comment">*她的年龄是18岁</span></span><br><span class="line"><span class="comment">*她的英语成绩是A</span></span><br><span class="line"><span class="comment">*今天是： Wed Feb 19 00:54:22 CST 2020</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/18/Matlab-%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/Matlab%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">Matlab基础</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-18 16:26:37 / 修改时间：23:18:09" itemprop="dateCreated datePublished" datetime="2020-02-18T16:26:37+08:00">2020-02-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>如果命令很长，可以分两行来输入。（需要利用续行符…）</p>
+<h2 id="设置当前文件夹"><a href="#设置当前文件夹" class="headerlink" title="设置当前文件夹"></a>设置当前文件夹</h2><p>步骤：先建立文件夹，然后在Matlab命令行中用cd命令+路径设置</p>
+<h2 id="工作区也称为工作区，用于变量的显示-以表格形式-和操作-可以编辑，删除"><a href="#工作区也称为工作区，用于变量的显示-以表格形式-和操作-可以编辑，删除" class="headerlink" title="工作区也称为工作区，用于变量的显示(以表格形式)和操作(可以编辑，删除)"></a>工作区也称为工作区，用于变量的显示(以表格形式)和操作(可以编辑，删除)</h2><h2 id="Matlab的搜索路径"><a href="#Matlab的搜索路径" class="headerlink" title="Matlab的搜索路径"></a>Matlab的搜索路径</h2><p>在命令行中输入一条命令后，Matlab</p>
+<p>变量 –&gt;内部函数–&gt;程序文件</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%&#123;Matlab的搜索路径有一定的顺序：变量&gt;内部函数&gt;程序文件,下面是一个实例:&#125;%</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%这里的sin是内部函数，正弦，所以结果应该是:0.8415</span></span><br><span class="line"><span class="built_in">sin</span>=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; <span class="comment">%这里定义sin为一个变量，包含5个向量元素，不是内部函数了</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%因为变量的级别高于内部函数，所以这个命令的结果是1而不是0.8415</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%&#123;Matlab的搜索路径有一定的顺序：变量&gt;内部函数&gt;程序文件,下面是一个实例:&#125;%</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%这里的sin是内部函数，正弦，所以结果应该是:0.8415</span></span><br><span class="line"><span class="built_in">sin</span>=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; <span class="comment">%这里定义sin为一个变量，包含5个向量元素，不是内部函数了</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%因为变量的级别高于内部函数，所以这个命令的结果是1而不是0.8415</span></span><br><span class="line"><span class="comment">%&#123;此时如果要计算sin的本来值，可以在工作区将已经定义的sin变量删除&#125;%</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Matlab的文件搜索</span></span><br><span class="line"><span class="comment">% 如何设置文件搜索路径</span></span><br><span class="line"><span class="comment">% 1 使用path命令。例如&gt;&gt;path(path,'需要搜索的路径')</span></span><br><span class="line"><span class="comment">% 2 在窗口上设置</span></span><br><span class="line"><span class="comment">% 搜索的顺序：1 当前文件；2 已经设置的搜索路径中；3 如果两个位置都没有搜索结果则会报错</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="整型："><a href="#整型：" class="headerlink" title="整型："></a>整型：</h4><p>分为：</p>
+<p>1:有符号整数</p>
+<p>2: 无符号整数</p>
+<p>然后又分别分为8，16，32，64位整数</p>
+<p>需要记住：</p>
+<p>int是带符号，uint是不带符号</p>
+<p>带符号8位整数的最大值是127</p>
+<p>提供了数据类型转换函数</p>
+<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><p>同样提供了类型转换函数：</p>
+<p>1 single函数：将其他类型的数据转换为单精度型</p>
+<p>2 double函数：将其他类型的数据转换为双精度型</p>
+<h4 id="复型"><a href="#复型" class="headerlink" title="复型"></a>复型</h4><p>复型数据包括实部和虚部两个部分，都默认为双精度单位，用i或者j来表示</p>
+<p>常用函数有两个：</p>
+<p>real：获取复数的实部</p>
+<p>imag：获取复数的虚部</p>
+<h3 id="数值数据的输出格式"><a href="#数值数据的输出格式" class="headerlink" title="数值数据的输出格式"></a>数值数据的输出格式</h3><p>使用format命令，格式是：</p>
+<blockquote>
+<p>format 格式符</p>
+</blockquote>
+<p><strong>注意：format命令只影响数据输出的格式，而不影响数据的计算和存储</strong></p>
+<h3 id="常用数学函数"><a href="#常用数学函数" class="headerlink" title="常用数学函数"></a>常用数学函数</h3><p>调用方法：</p>
+<p>函数名(函数自变量的值)</p>
+<p><strong><em>函数在运算时是将函数逐项作用于矩阵的每个元素上，所以最后运算的结果就是一个与自变量同类型的矩阵</em></strong></p>
+<p>即<strong>作用于矩阵，结果是矩阵</strong></p>
+<p><em>1 函数的调用格式：(实例)</em></p>
+<p><em>2 常用函数的应用</em></p>
+<blockquote>
+<p>三角函数</p>
+</blockquote>
+<p>三角函数也分为两种类型：</p>
+<p>以弧度为单位的函数和以角度为单位的函数，如果是以角度为单位的函数，则在调用时应该在函数名后面加上d，以示区别。</p>
+<blockquote>
+<p>abs函数</p>
+</blockquote>
+<p>可以用来求实数的绝对值、复数的模、字符串的ASCII码值，具体操作见后面代码</p>
+<blockquote>
+<p>取整函数</p>
+</blockquote>
+<p>有round、fix、floor、ceil四种类型，具体实例见文章尾部</p>
+<p> <em>3 函数应用举例</em></p>
+<blockquote>
+<p>1 分别求一个三位正整数的个、十、百位</p>
+</blockquote>
+<blockquote>
+<p>2 求[1,100]区间的所有素数</p>
+</blockquote>
+<p>代码见后面。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 转换函数实例</span></span><br><span class="line">class(<span class="number">4</span>)</span><br><span class="line">(class(single(<span class="number">4</span>)))</span><br><span class="line"><span class="comment">%&#123;结果分别是ans ='double'，ans ='single'&#125;%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">%format来设置数值数据的输出形式</span></span><br><span class="line"><span class="comment">% 格式：format 格式符</span></span><br><span class="line"><span class="comment">% 实例：</span></span><br><span class="line">format long </span><br><span class="line"><span class="number">50</span>/<span class="number">3</span></span><br><span class="line"><span class="comment">% 此时的输出结果是：16.666666666666668</span></span><br><span class="line">format</span><br><span class="line"><span class="number">50</span>/<span class="number">3</span></span><br><span class="line"><span class="comment">% 重置以后结果变回了：16.6667</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%常用函数实例</span></span><br><span class="line"><span class="comment">%exp函数实例</span></span><br><span class="line"><span class="comment">% 在matlab中exp意思是以自然常数e为底的指数函数。返回 e（自然对数的底）的幂次方。</span></span><br><span class="line">A = [<span class="number">4</span>,<span class="number">2</span>;<span class="number">3</span>,<span class="number">6</span>]</span><br><span class="line">B = <span class="built_in">exp</span>(A)</span><br><span class="line"><span class="comment">%&#123;输出结果：B =54.5982    7.3891 20.0855  403.4288&#125;%</span></span><br><span class="line"><span class="comment">% 上行结果格式和真实情况不同</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%三角函数的两种调用方法：</span></span><br><span class="line"><span class="comment">% 1</span></span><br><span class="line"><span class="built_in">cos</span>(<span class="built_in">pi</span>)</span><br><span class="line"><span class="comment">% 2 </span></span><br><span class="line"><span class="built_in">cosd</span>(<span class="number">180</span>)</span><br><span class="line"><span class="comment">% 两种方法结果肯定是一样的</span></span><br><span class="line"><span class="comment">% 结果：-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%abs函数使用实例：</span></span><br><span class="line"><span class="comment">% 1 求绝对值</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="number">-100</span>)</span><br><span class="line"><span class="comment">% ans = 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%2 求复数的模</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="number">5</span>+<span class="number">12</span><span class="built_in">i</span>)</span><br><span class="line"><span class="comment">% ans = 13</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%3 求字符串的ASCII码</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="string">'abd'</span>)</span><br><span class="line"><span class="comment">% ans 87 98 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 取整函数</span></span><br><span class="line"><span class="comment">% 1 round:按照四舍五入取整</span></span><br><span class="line"><span class="comment">% 2 ceil：向上取整，即取大于等于这个数的第一个整数</span></span><br><span class="line"><span class="comment">% 3 floor：向下取整，取小于等于这个数的第一个整数</span></span><br><span class="line"><span class="comment">% 4 fix： 取靠近0的那个整数，也就是舍去小数取整</span></span><br><span class="line"><span class="comment">% 实例：</span></span><br><span class="line"><span class="built_in">round</span>(<span class="number">4.7</span>)</span><br><span class="line"><span class="built_in">fix</span>(<span class="number">-3.2</span>)</span><br><span class="line"><span class="built_in">floor</span>(<span class="number">3.6</span>)</span><br><span class="line"><span class="built_in">ceil</span>(<span class="number">-3.8</span>)</span><br><span class="line"><span class="comment">%ans=5;ans=-3;ans=3;ans=-3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 函数应用举例1：分别求出一个三位整数的个位、十位、百位</span></span><br><span class="line"><span class="comment">% rem是取余函数</span></span><br><span class="line">m=<span class="number">345</span>;</span><br><span class="line">m1=<span class="built_in">rem</span>(m,<span class="number">10</span>)<span class="comment">%个位数</span></span><br><span class="line">m2=<span class="built_in">rem</span>(<span class="built_in">fix</span>(m/<span class="number">10</span>),<span class="number">10</span>)</span><br><span class="line">m3=<span class="built_in">fix</span>(m/<span class="number">100</span>)</span><br><span class="line"><span class="comment">% m1=5;m2=4;m3=3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%函数应用举例2：求[1,00]区间的所有素数</span></span><br><span class="line">x=<span class="number">1</span>:<span class="number">100</span>;</span><br><span class="line">k=<span class="built_in">isprime</span>(x);<span class="comment">%isprime用来判断一个数是否能被2整除，能为真，不能则为假</span></span><br><span class="line">k1=<span class="built_in">find</span>(k);<span class="comment">%find用来找出为真的x序列</span></span><br><span class="line">p=x(k1)<span class="comment">%输出1到100之间的素数</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -897,7 +951,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -969,7 +1023,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36.6k字</span>
+  <span class="post-count">博客全站共36.7k字</span>
 </div>
 
         
