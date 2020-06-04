@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32X32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16X16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://www.nianchu.space').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="二进制I&#x2F;O17.1 引言文件分类：  可以使用文本编辑器进行处理(读取、创建或者修改)的文件被称为文本文件。所有 所有其他的文件都被称为二进制文件。 不能使用文本编辑器来读取二进制文件——它们是为让程序来读取而设计的。就像，Java源程序存储在文本文件中，可以使用文本编辑器读取，而Java类是二进制文件，由Java虚拟机读取。 可以简单的认为： 文本文件是由字符序列构成的，而二进制是由位bit序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java&#x2F;二进制IO">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;05&#x2F;31&#x2F;Java&#x2F;%E4%BA%8C%E8%BF%9B%E5%88%B6IO&#x2F;index.html">
+<meta property="og:site_name" content="nianchu-Blog">
+<meta property="og:description" content="二进制I&#x2F;O17.1 引言文件分类：  可以使用文本编辑器进行处理(读取、创建或者修改)的文件被称为文本文件。所有 所有其他的文件都被称为二进制文件。 不能使用文本编辑器来读取二进制文件——它们是为让程序来读取而设计的。就像，Java源程序存储在文本文件中，可以使用文本编辑器读取，而Java类是二进制文件，由Java虚拟机读取。 可以简单的认为： 文本文件是由字符序列构成的，而二进制是由位bit序">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfbv5k8kqkj31dy0k6k5z.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfbv5x8lkdj31cy0ny1kx.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfbvanos7bj318s0do4a6.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfbveid9yij31ce0e819x.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfd1fe1k2fj31b80l27r0.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfd1fnrp7jj31cw0monow.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfd1uojv8pj30u00zcb2a.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfe0eogrfpj31bm0i8dvx.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfe0fug543j31c80pukca.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfe7lzpgqtj31bi0e4ak6.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfexci82n0j31bc0u07wh.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfexlt416tj310r0u0b29.jpg">
+<meta property="og:updated_time" content="2020-06-03T14:09:20.673Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gfbv5k8kqkj31dy0k6k5z.jpg">
+
+<link rel="canonical" href="http://www.nianchu.space/2020/05/31/Java/%E4%BA%8C%E8%BF%9B%E5%88%B6IO/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Java/二进制IO | nianchu-Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">nianchu-Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/nianchu99" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/31/Java/%E4%BA%8C%E8%BF%9B%E5%88%B6IO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java/二进制IO
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-31 19:11:01" itemprop="dateCreated datePublished" datetime="2020-05-31T19:11:01+08:00">2020-05-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-03 22:09:20" itemprop="dateModified" datetime="2020-06-03T22:09:20+08:00">2020-06-03</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="二进制I-O"><a href="#二进制I-O" class="headerlink" title="二进制I/O"></a>二进制I/O</h1><h2 id="17-1-引言"><a href="#17-1-引言" class="headerlink" title="17.1 引言"></a>17.1 引言</h2><p><strong>文件分类：</strong> </p>
+<p>可以使用文本编辑器进行处理(读取、创建或者修改)的文件被称为文本文件。所有</p>
+<p>所有其他的文件都被称为二进制文件。</p>
+<p>不能使用文本编辑器来读取二进制文件——它们是为让程序来读取而设计的。就像，Java源程序存储在文本文件中，可以使用文本编辑器读取，而Java类是二进制文件，由Java虚拟机读取。</p>
+<p>可以简单的认为： 文本文件是由字符序列构成的，而二进制是由位bit序列构成的。</p>
+<p>二进制文件的优势在于它的处理效率比文本文件高。</p>
+<h2 id="17-2-在Java中如何处理文本I-O"><a href="#17-2-在Java中如何处理文本I-O" class="headerlink" title="17.2 在Java中如何处理文本I/O"></a>17.2 在Java中如何处理文本I/O</h2><p>要点提示： 使用Scanner类读取文本数据，使用PrintWriter类写文本数据。</p>
+<p>File类： 封装了文件或路径属性，但是不包含从/向文件读/写数据的方法。</p>
+<p>I/O类： 包含从/向文件读/写数据的方法。</p>
+<p>输出对象： 输出流</p>
+<p>输入对象： 输入流</p>
+<h2 id="17-3-文本I-O与二进制I-O"><a href="#17-3-文本I-O与二进制I-O" class="headerlink" title="17.3 文本I/O与二进制I/O"></a>17.3 文本I/O与二进制I/O</h2><p><strong>要点提示 ：</strong>二进制I/O不涉及编码和解码，所以更高效</p>
+<p>计算机并不区分二进制文件和文本文件。所有的文件都是以二进制形式来存储的，从本质上来说，所有的文件都是二进制的。</p>
+<p>文本I/O能提供一层抽象，用于字符串层次的编码和解码。对于文本I/O，编码和解码是自动进行的。</p>
+<p>对于文本编辑器或文本输出程序创建的文件，应该使用文本输入来读取，对于Java二进制输出程序创建的文件，应该使用二进制输入来读取。</p>
+<p>二进制I/O不需要编码和解码，所以它的效率更高。同时，由于二进制文件与主机的编码方案无关，因此，它是可移植的。这也是Java的类文件存储为二进制文件的原因。</p>
+<h2 id="17-4-二进制I-O类"><a href="#17-4-二进制I-O类" class="headerlink" title="17.4 二进制I/O类"></a>17.4 二进制I/O类</h2><p>*<em>要点提示： *</em>抽象类InputStream是读取二进制数据的根类，抽象类是OutputStream是写入二进制数据的根类。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfbv5k8kqkj31dy0k6k5z.jpg" alt="image-20200531193633640"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfbv5x8lkdj31cy0ny1kx.jpg" alt="image-20200531193655448"></p>
+<p>注意： 二进制I/O类中所有方法都声明为抛出java.io.IOException或java.io.IOException的子类</p>
+<p>![image-20200531193942861](/Users/bowenkei/Library/Application Support/typora-user-images/image-20200531193942861.png)</p>
+<h3 id="17-4-1-FileInputStream和FileOutputStream"><a href="#17-4-1-FileInputStream和FileOutputStream" class="headerlink" title="17.4.1 FileInputStream和FileOutputStream"></a>17.4.1 FileInputStream和FileOutputStream</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfbvanos7bj318s0do4a6.jpg" alt="image-20200531194126051"></p>
+<p>如果为一个不存在的文件创建一个FileInputStream对象，将会发生java.io.FileNotFountException异常</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfbveid9yij31ce0e819x.jpg" alt="image-20200531194506941"></p>
+<p>使用FileOutputStream构造方法创建对象时，如果这个文件不存在，就会创建一个新的文件</p>
+<p>当文件已存在的时候，使用以下两个方法将会删除点文件中已经存在的内容： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileOutputStream(file: File)</span><br><span class="line">  FileOutputStream(filename: String)</span><br></pre></td></tr></table></figure>
+
+<p>为了既保留文件现有内容又可以给文件追加新数据，可以在创建一个FileOutputStream对象时，添加append参数，并将其值设置为true。</p>
+<p>几乎所有的I/O类都会抛出java.io.IOException。所以，必须在方法中声明会抛出java.io.IOException异常，或者将代码放到try-catch块中。</p>
+<p><strong>程序清单17-1使用二进制I/O将从1到10的10个字节值写入一个名为temp.dat的文件，再把他们从文件中读出来。</strong></p>
+<p>使用try-with-resource来声明和创建输入输出流，从而在使用后可以自动关闭。</p>
+<p>java.io.InputStream和java.io.OutputStream实现了AutoClosable接口。</p>
+<p>AutoClosable接口定义了close()方法，用来个关闭资源。任何AutoClosable类型的对象可以用于try-with-resources语法中，实现自动关闭。</p>
+<p>二进制文件可以从程序中读取它，但是不能用文本编辑器阅读它。</p>
+<p><strong>提示：</strong>当流不再使用时，记得使用close()方法将其关闭，或者使用try-with-resource语句自动关闭。不关闭流可能会在输出文件中造成数据受损，或导致其他的程序设计错误。</p>
+<p>*<em>注意： *</em>FileInputStream类的实例可以作为参数去构造一个Scanner=对象， FileOutputStream类的实例可以作为参数构造一个Printerwriter对象。可以创建一个PrintWriter对象来向文件中追加文本。如果xx.txt不存在，就会创建这个文件。如果xx.txt文件已经存在，就将新数据追加到该文件中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Printer(<span class="keyword">new</span> FileOutputStream(<span class="string">"xx.txt"</span>, <span class="keyword">true</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="FileterInputStream-和-FilterOutputStream"><a href="#FileterInputStream-和-FilterOutputStream" class="headerlink" title="FileterInputStream 和 FilterOutputStream"></a>FileterInputStream 和 FilterOutputStream</h3><p>过滤器数据流(file stream)是为某种目的过滤字节的数据流。读取整数值、双精度值和字符串，那就需要一个过滤类来包装字节输入流。使用过滤器类就可以读取整数值、双精度值和字符串，而不是字节或字符。</p>
+<p>FileterInputStream 和 FilterOutputStream是过滤数据的基类。需要处理基本数值类型时，就是用DataInputStream和DataOutputStream类来过滤字节。</p>
+<p>###DataInputStream和DataOutputStream </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfd1fe1k2fj31b80l27r0.jpg" alt="image-20200601195913906"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfd1fnrp7jj31cw0monow.jpg" alt="image-20200601195934714"></p>
+<p>基本类型的值不需要做任何转化就可以从内存复制到输出数据流。字符串的字符可以写成多种形式 ：</p>
+<ol>
+<li>二进制I/O中的字符与字符串</li>
+</ol>
+<p>一个统一码由两个字节构成。writerChar(char c )方法将字符c的统一码写入输出流。writerChars(String s )方法将字符串s中的所有字符的统一码写到输出流中。writeBytes(String s )方法将字符串s中的每个字符的统一码的低字节写入到输出流。统一码的高字节被抛弃。</p>
+<p>writeBytes(String s )方法适用于由ASCII码构成的字符串，ASCII码仅存储统一码的低字节。如果毕业字符串包含非ASCII码的字符，就必须使用writeChars方法实现写入这个字符串。</p>
+<p>writeUTF(String s )方法将两个字节的长度信息写入输入流，后面紧跟着的是字符串s中的每个字符的改进版UTF-8的形式。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfd1uojv8pj30u00zcb2a.jpg" alt="image-20200601201352901"></p>
+<p>*<em>警告： *</em></p>
+<p>应该按存储的顺序和格式读取文件中的数据。</p>
+<ol start="3">
+<li>检测文件的末尾</li>
+</ol>
+<p>如果达到InputStream的末尾之后还继续从中读取数据，就会发生EOFException异常。这个异常可以用来检查是否已经到达文件末尾。</p>
+<h3 id="BufferedInputStream-和-BufferedOutputStream"><a href="#BufferedInputStream-和-BufferedOutputStream" class="headerlink" title="BufferedInputStream 和 BufferedOutputStream"></a>BufferedInputStream 和 BufferedOutputStream</h3><p>BufferedInputStream 和 BufferedOutputStream没有包含新的方法，它们的方法都是从InputStream 和OutputStream继承而来的。它们在后来管理了一个缓冲区，根据要求自动从磁盘中读取数据和写入数据。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfe0eogrfpj31bm0i8dvx.jpg" alt="image-20200602160930843"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfe0fug543j31c80pukca.jpg" alt="image-20200602161036165"></p>
+<p>缓冲区指定大小是512字节。</p>
+<p>*<em>提示： *</em>应该总是使用缓冲区I/O来加速输入和输出。</p>
+<h2 id="17-5-示例学习：-复制文件"><a href="#17-5-示例学习：-复制文件" class="headerlink" title="17.5 示例学习： 复制文件"></a>17.5 示例学习： 复制文件</h2><h2 id="17-6-对象I-O"><a href="#17-6-对象I-O" class="headerlink" title="17.6 对象I/O"></a>17.6 对象I/O</h2><p><strong>要点提示：</strong>ObjectInputStream 和ObjectOutputStream类可以用于读/写可序列化的对象。</p>
+<p>ObjectInputStream 和ObjectOutputStream类除了实现基本数据类型与字符串的输入和输出之外，还可以实现对象的输入和输出。因而，可以使用ObjectInputStream 和ObjectOutputStream类代替DataInputStream和DataOutputStream。</p>
+<p>读取时为了得到所需的数据类型，必须使用Java安全的类型转换。例如： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date date = (Date)(inputStream.readObject());</span><br></pre></td></tr></table></figure>
+
+<p>readObject()方法可能会抛出ClassNotFoundException.注意使用时要抛出它</p>
+<h3 id="17-6-1-Serializable-接口"><a href="#17-6-1-Serializable-接口" class="headerlink" title="17.6.1 Serializable 接口"></a>17.6.1 Serializable 接口</h3><p>可以写入到输出流中的对象被称为可序化的。</p>
+<p>可序化对象的类必须实现Serializable接口。</p>
+<p>Serializable是一个标记接口。它没有方法，不需要在类中为实现Serializable接口增加额外的代码。实现这个接口可以启动Java的序列化机制，自动完成存储对象和数组的过程。</p>
+<p>Java提供一个内在机制自动完成写对象的过程。这个过程称为对象序列化(object serialization),它是在ObjectOutputStream中实现的。相反，读取对象的过程称作反对象序列化(object deserialization),它是在ObjectInputStream中实现的。</p>
+<p>试图存储一个不支持Serializable接口的对象会引起一个NotSerializableexception异常。</p>
+<p>当存储一个可序列化对象时，会对该对象的类进行编码。编码包括类名、类的签名、对象实例变量的值以及该对象引用的任何其他对象的闭团，但是不存储对象静态变量的值。</p>
+<p><strong>注意： 非序列化的数据域</strong></p>
+<p>如果一个对象是Serializable的实例，但它包含了非序列化的实例数据域，那么就不可以序列化这个对象。为了使该对象是可序列化的，需要给这些数据域加上关键字transient,告诉Java虚拟机将对象写入流时忽略这些数据域。看下面的例子： </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfe7lzpgqtj31bi0e4ak6.jpg" alt="image-20200602201849302"></p>
+<p><strong>注意： 重复的对象</strong></p>
+<p>如果一个对象不止一次写入对象流，不会存储对象的多分副本。第一次写入一个对象时，就会为它创建一个序列号。Java虚拟机将对象的所有内容和序列号一起写入对象流。以后每次存储时，如果再写入相同的对象，就只存储序列号。读出这些对象时，它们的引用相同，因为在内存中实际上存储的只是一个对象。</p>
+<h3 id="17-6-2-序列化数组"><a href="#17-6-2-序列化数组" class="headerlink" title="17.6.2 序列化数组"></a>17.6.2 序列化数组</h3><p>如果数组中所有元素都是可序列化的，那这个数组就是可序列化的。一个完整的数组可以使用writeObject方法写入文件，随后使用readObject方法恢复。</p>
+<h2 id="17-7-随机访问文件"><a href="#17-7-随机访问文件" class="headerlink" title="17.7 随机访问文件"></a>17.7 随机访问文件</h2><p>*<em>要点提示： *</em>Java提供了RandomAccessFile类，允许从文件的任何位置进行数据的读写。</p>
+<p>只读的流或者只写的流被称为顺序(sequential)流。使用顺序流打开的文件被称为顺序访问文件。顺序访问文件的内容不能更新。</p>
+<p>使用RandomAccessFile类打开的文件称为随机访问文件。</p>
+<p>RandomAccessFile类实现了DateInput和DataOutput接口。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfexci82n0j31bc0u07wh.jpg" alt="image-20200603110915507"></p>
+<p>创建一个RandomAccessFile时，可以指定两种模式(“r”，“rw”)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RandomAccessFile raf = <span class="keyword">new</span> RandomAccessFile(<span class="string">"test.dat"</span>, <span class="string">"rw"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>如果test.dat 已经存在，则创建raf以便访问这个文件，否则就创建一个名为test.dat的新文件，再创建raf以便访问这个文件。raf.length()返回给定时刻文件test.dat中的字节数。向文件中追加数据，raf.length就会增加。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfexlt416tj310r0u0b29.jpg" alt="image-20200603111803022"></p>
+<p>在RandomAccessFile中使用setLength(0)方法将文件长度设置为0。这样做的效果是将文件的原有内容删除。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>nianchu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.nianchu.space/2020/05/31/Java/%E4%BA%8C%E8%BF%9B%E5%88%B6IO/" title="Java&#x2F;二进制IO">http://www.nianchu.space/2020/05/31/Java/二进制IO/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/22/Java/JavaFx%20UI%E7%BB%84%E4%BB%B6%E5%92%8C%E5%A4%9A%E5%AA%92%E4%BD%93/" rel="prev" title="JavaFx UI组件和多媒体">
+      <i class="fa fa-chevron-left"></i> JavaFx UI组件和多媒体
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/06/01/HTML/HTML/" rel="next" title="HTML/HTML">
+      HTML/HTML <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二进制I-O"><span class="nav-number">1.</span> <span class="nav-text">二进制I/O</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#17-1-引言"><span class="nav-number">1.1.</span> <span class="nav-text">17.1 引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-2-在Java中如何处理文本I-O"><span class="nav-number">1.2.</span> <span class="nav-text">17.2 在Java中如何处理文本I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-3-文本I-O与二进制I-O"><span class="nav-number">1.3.</span> <span class="nav-text">17.3 文本I/O与二进制I/O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-4-二进制I-O类"><span class="nav-number">1.4.</span> <span class="nav-text">17.4 二进制I/O类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#17-4-1-FileInputStream和FileOutputStream"><span class="nav-number">1.4.1.</span> <span class="nav-text">17.4.1 FileInputStream和FileOutputStream</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FileterInputStream-和-FilterOutputStream"><span class="nav-number">1.4.2.</span> <span class="nav-text">FileterInputStream 和 FilterOutputStream</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BufferedInputStream-和-BufferedOutputStream"><span class="nav-number">1.4.3.</span> <span class="nav-text">BufferedInputStream 和 BufferedOutputStream</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-5-示例学习：-复制文件"><span class="nav-number">1.5.</span> <span class="nav-text">17.5 示例学习： 复制文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-6-对象I-O"><span class="nav-number">1.6.</span> <span class="nav-text">17.6 对象I/O</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#17-6-1-Serializable-接口"><span class="nav-number">1.6.1.</span> <span class="nav-text">17.6.1 Serializable 接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-6-2-序列化数组"><span class="nav-number">1.6.2.</span> <span class="nav-text">17.6.2 序列化数组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-7-随机访问文件"><span class="nav-number">1.7.</span> <span class="nav-text">17.7 随机访问文件</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nianchu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nianchu99?tab=projects" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nianchu99?tab=projects" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:l17623029272@163.com" title="E-Mail → mailto:l17623029272@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/2795043945/profile?topnav=1&wvr=6" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2795043945&#x2F;profile?topnav=1&amp;wvr=6" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-nianchu"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by nianchu</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共76.3k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

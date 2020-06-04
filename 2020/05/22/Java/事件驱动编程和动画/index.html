@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32X32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16X16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://www.nianchu.space').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Java 事件驱动编程和动画引言要点提示： 可以编写代码以处理诸如单击按钮、鼠标移动以及按键盘之类的时间。 为了响应一个按钮单击事件，你需要编写代码来处理按钮单击动作。按钮是一个事件源对象，即动作起源的地方。需要创建一个能对一个按钮动作事件进行处理的对象，即事件处理器。  不是多有对象都可以成为一个动作事件的处理器。要成为一个动作事件的处理器，必须满足两个要求：   该对象必须是EventHand">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java&#x2F;事件驱动编程和动画">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;05&#x2F;22&#x2F;Java&#x2F;%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E5%8A%A8%E7%94%BB&#x2F;index.html">
+<meta property="og:site_name" content="nianchu-Blog">
+<meta property="og:description" content="Java 事件驱动编程和动画引言要点提示： 可以编写代码以处理诸如单击按钮、鼠标移动以及按键盘之类的时间。 为了响应一个按钮单击事件，你需要编写代码来处理按钮单击动作。按钮是一个事件源对象，即动作起源的地方。需要创建一个能对一个按钮动作事件进行处理的对象，即事件处理器。  不是多有对象都可以成为一个动作事件的处理器。要成为一个动作事件的处理器，必须满足两个要求：   该对象必须是EventHand">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf10yxo1j2j31h00ccn5y.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf11rhaq5ej31go0ictj7.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf11uy6ln2j31i20u0qv5.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf124m0abdj31so0is7vo.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf1a0ynvklj31sm0m81c4.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf3fxuqocej31v00l04qp.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf3kcgren1j31so0u0n49.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf3l1fsp2ej31ni0k4b11.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf3l7ne7h0j31us0gu4e3.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf3l7uwigwj31ue0ho18h.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf3r5dr678j31ui0rchdt.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf3rd7dkj4j31os0u0kjl.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf53fa5cbdj31tw0tahdt.jpg">
+<meta property="og:updated_time" content="2020-05-27T07:18:19.265Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;large&#x2F;007S8ZIlly1gf10yxo1j2j31h00ccn5y.jpg">
+
+<link rel="canonical" href="http://www.nianchu.space/2020/05/22/Java/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E5%8A%A8%E7%94%BB/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Java/事件驱动编程和动画 | nianchu-Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">nianchu-Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/nianchu99" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/22/Java/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E5%8A%A8%E7%94%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java/事件驱动编程和动画
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-22 10:32:31" itemprop="dateCreated datePublished" datetime="2020-05-22T10:32:31+08:00">2020-05-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-27 15:18:19" itemprop="dateModified" datetime="2020-05-27T15:18:19+08:00">2020-05-27</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Java-事件驱动编程和动画"><a href="#Java-事件驱动编程和动画" class="headerlink" title="Java 事件驱动编程和动画"></a>Java 事件驱动编程和动画</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>要点提示： 可以编写代码以处理诸如单击按钮、鼠标移动以及按键盘之类的时间。</p>
+<p>为了响应一个按钮单击事件，你需要编写代码来处理按钮单击动作。按钮是一个事件源对象，即动作起源的地方。需要创建一个能对一个按钮动作事件进行处理的对象，即事件处理器。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf10yxo1j2j31h00ccn5y.jpg" alt="image-20200522103644432"></p>
+<p>不是多有对象都可以成为一个动作事件的处理器。要成为一个动作事件的处理器，必须满足两个要求： </p>
+<ol>
+<li>该对象必须是EventHandler<T extends Event>接口的一个示例。接口定义了所有处理器的共同行为。T extends Event是一个Event子类型的泛型。</li>
+<li>EventHandler对象handler必须使用方法source.setOnAction(handler)和事件源对象注册</li>
+<li>EventHandler <ActionEvent> 接口包含了 handle ( ActionEvent ) 方法用于处理动作事件。你的处理器类必须覆盖这个方法来响应事件 。 15 ActionEvent 事件的代码 。</li>
+</ol>
+<h2 id="事件和事件源"><a href="#事件和事件源" class="headerlink" title="事件和事件源"></a>事件和事件源</h2><p>要点提示： 事件是从一个事件源上产生的对象。触发一个事件意味着产生一个事件并委托处理器处理该事件。</p>
+<p>事件驱动编程： 当运行一个Java GUI程序的时候，程序和用户进行交互，并且事件驱动它的执行。这称为事件驱动编程。 </p>
+<p>事件可以被定义为一个告知程序某件事发生的信号。</p>
+<p>事件由外部的用户动作，比如鼠标的移动、单击和键盘按键所触发。</p>
+<p>事件源对象： 产生一个事件并且出发它的组件称为事件源对象，或称为源对象或者源组件。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf11rhaq5ej31go0ictj7.jpg" alt="image-20200522110409887"></p>
+<p><strong>注意</strong>：如果一个组件可以触发一个事件，那么这个组件的任何子类都可以触发同样类型的事件。比如，每个JavaFX形状、布局面板和组件都可以触发MouseEvent和KeyEvent事件，因为Node是形状、布局面板和组件的超类。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf11uy6ln2j31i20u0qv5.jpg" alt="image-20200522110728861"></p>
+<h2 id="注册处理器和处理事件"><a href="#注册处理器和处理事件" class="headerlink" title="注册处理器和处理事件"></a>注册处理器和处理事件</h2><p><strong>要点提示</strong>： 处理器是一个对象，<strong>它必须通过一个事件源对象进行注册，并且它必须是一个恰当的事件处理接口的实例。</strong></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf124m0abdj31so0is7vo.jpg" alt="image-20200522111645923"></p>
+<p><strong>技巧：</strong>设计一个类来建模一个包含了支持方法的面板是一个好的策略，这样相关的方法和面板都耦在一个对象中来。</p>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><p>要点提示： 内部类，或者称为嵌套类，是一个定义在另外一个类范围中的类。内部类对于定义处理器非常有用。</p>
+<p>一个内部类可以如常规类一样使用。通常，在一个类只被它的外部类所使用的时候，才将它定义为内部类。</p>
+<p>一个内部类具有下面的特征：</p>
+<ul>
+<li>一个内部类被被编译为OuterClassName$InnerClassName的类。</li>
+<li>一个内部类可以引用定义在它所在的外部类中的数据和方法。所以，没有必要将外部类对象的引用传递给内部类的构造方法。内部类可以使程序更加精简。</li>
+<li>一个内部类可以使用可见性修饰符所定义，和应用于一个类中的成员的可见性规则一样</li>
+<li>一个内部类可以被定义为static。一个static的内部类可以使用外部类的名字所访问。一个static的内部类不能访问外部类中非静态成员。</li>
+<li>内部类对象通常在外部类中所创建。也可以从另外一个类中来创建一个内部类的对象。如果内部类是非静态的，你必须先创建一个外部类的实例，然后使用以下语法来创建一个内部类的对象。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OuterClass.InnerClass innerObject = outerObject.<span class="keyword">new</span> InnerClass();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果内部类是静态的，使用以下语法来创建一个内部类对象。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OuterClass.InnerClass innerObject = <span class="keyword">new</span> OuterClass.InnerClass();</span><br></pre></td></tr></table></figure>
+
+<p>内部类的用途： </p>
+<ul>
+<li>将相互依赖的类结合到一个主类中</li>
+<li>避免类名的冲突</li>
+</ul>
+<p>一个处理器类被设计为针对一个GUI组件创建一个处理器对象(比如，一个按钮)。处理器类不会被其他应用所共享，所以将它定义在主类里面作为一个内部类是恰如其分的。</p>
+<h2 id="匿名内部类处理器"><a href="#匿名内部类处理器" class="headerlink" title="匿名内部类处理器"></a>匿名内部类处理器</h2><p><strong>要点提示</strong>：一个匿名内部类是一个没有名字的内部类。它将进一步实现定义一个内部类以及创建一个内部类的实例。</p>
+<p>下面是一个内部类被匿名内部类替代的示例： </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf1a0ynvklj31sm0m81c4.jpg" alt="image-20200522154958242"></p>
+<p>匿名内部类的语法如下所示： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> superClassName/InterfaceName()&#123;</span><br><span class="line"><span class="comment">// Implement or override methods in superclass or interface</span></span><br><span class="line"><span class="comment">// Other methods if necessary</span></span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>匿名内部类是一种特殊类型的内部类，它被当作一个内部类对待，同时具有下面的特征： </p>
+<ul>
+<li>一个匿名内部类必须总是从一个父类继承或者实现一个接口，但是它不能有显式的extends或者implements子句</li>
+<li>一个匿名内部类必须实现父类或者接口中的所有抽象方法</li>
+<li>一个匿名内部类总是使用它父类的无参构造方法来创建一个实例。如果一个匿名内部类实现一个接口，构造方法是Object().</li>
+<li>一个匿名内部类被编译成一个名为OuterClassName$n.class。</li>
+</ul>
+<p>例如如果外部类Test有两个匿名的内部类，它们将被编译成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 使用lambda表达式简化事件处理</span><br><span class="line"></span><br><span class="line">要点提示： lambda表达式可以用于极大简化事件处理器的代码编写.</span><br><span class="line"></span><br><span class="line">lambda表达式可以被看作使用精简语法的匿名内部类。</span><br><span class="line"></span><br><span class="line">如图是将匿名内部类用lambda表达式代替的一个例子：</span><br><span class="line"></span><br><span class="line">![image-20200524001209498](https://tva1.sinaimg.cn/large/007S8ZIlly1gf2u5ud8zgj31qq0kmdrp.jpg)</span><br><span class="line"></span><br><span class="line">一个lambda表达式的基础语法是： </span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">(type1 parm1, type2 parm2, ...) -&gt; expression</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(type1 parm1, type2 parm2, ...) -&gt; &#123;statements;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一个参数的数据类型既可以显式声明，也可以由编译器隐式推断。如果只有一个参数，并且没有显示的数据类型，圆括号可以被省略。</p>
+<p>因而上面(截图)的例子可以表示为： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">e -&gt; &#123;</span><br><span class="line">  <span class="comment">// Code for processing event e</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3fxuqocej31v00l04qp.jpg" alt="image-20200524124547574"></p>
+<h2 id="示例学习：-贷款计算器"><a href="#示例学习：-贷款计算器" class="headerlink" title="示例学习： 贷款计算器"></a>示例学习： 贷款计算器</h2><h2 id="示例学习-鼠标事件"><a href="#示例学习-鼠标事件" class="headerlink" title="示例学习: 鼠标事件"></a>示例学习: 鼠标事件</h2><p><strong>要点提示：</strong>当一个鼠标按键在一个节点或者一个场景中被按下、释放、单击、移动或者拖动时，一个MouseEvent事件被触发。</p>
+<p>MouseEvent对象捕捉事件，例如和它相关的单击数、鼠标位置或者那个叫鼠标按键被按下： </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3kcgren1j31so0u0n49.jpg" alt="image-20200524151800627"></p>
+<p>四个常数——PRIMARY,SECONDARY,MIDDLE和None在MouseEvent中被定义，表明鼠标的左、右、中以及无按钮。shiyonggetButton()方法来探测哪个按钮被按下。</p>
+<p>在任何节点和场景都可触发鼠标事件。</p>
+<h2 id="键盘事件-KeyEvent"><a href="#键盘事件-KeyEvent" class="headerlink" title="键盘事件 KeyEvent"></a>键盘事件 KeyEvent</h2><p><strong>要点提示:</strong>在一个节点或者一个场景上面只要按下、释放或者敲击键盘，就会触发一个KeyEvent事件。</p>
+<p>键盘事件使得可以采用键盘来控制和执行动作，或者从键盘获得输入。KeyEvent对象描述了事件的性质(即，一个按键被按下释放或者敲击)以及键值。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3l1fsp2ej31ni0k4b11.jpg" alt="image-20200524154213607"></p>
+<p>每个键盘事件有一个相关的编码，可以通过KeyEvent的getCode()方法返回。键的编码是定义在KeyCode中的常量。KeyCode是一个enum类型的变量。</p>
+<p>对于按下键和释放键的事件，getCode()返回表中的值， getText()返回一个描述键的代码的字符串， getCharacter()返回一个空字符串。对于敲击键额事件，geCode()返回UNDEFINED, getcCharacter()返回相应的Unicode字符或者和敲击事件相关的一个字符序列。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3l7ne7h0j31us0gu4e3.jpg" alt="image-20200524154812371"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3l7uwigwj31ue0ho18h.jpg" alt="image-20200524154825125"></p>
+<p><strong>注意</strong></p>
+<p>在一个枚举类型值的switch语句中，case后面跟的是枚举常量。常量是不受限制的(unqalified)即无须加KeyCode等类限定。例如： 在case子句中使用keyCode.DOWN将出现错误。</p>
+<p>只有一个被拒交的节点可以接受KeyEvent事件。在一个text上调用requestFocus()使得text可以接受键盘输入。<strong>这个方法必须在舞台被显示后调用。</strong></p>
+<p><strong>注意：</strong> 单击一个按钮之后，circlePane将不再被聚焦，为了修复这个问题，可以在每次按钮被单击后，在circlePane上再次调用requestFocus()。</p>
+<h2 id="可观察对象的监听器"><a href="#可观察对象的监听器" class="headerlink" title="可观察对象的监听器"></a>可观察对象的监听器</h2><p>*<em>要点提示： *</em>可以通过添加一个监听器来处理可观察对象中的值的变化</p>
+<p>一个Observable类的实例被认为是一个可观察对象，它包含了一个addListener(InvalidationListener listener)方法用于添加监听器。监听器类必须实现InvalidationListenr接口以重写invalidate(Observable o)方法，从而可以处理值的改变。一旦observable中的值改变了，通过调用invalidate(Observable o)方法，监听器得到通知。每个绑定属性都是Observable的实例。  </p>
+<p>可以使用lambda来简化添加监听器的流程。注意处理器使用的是e，监听器使用的是ov。</p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>*<em>要点提示： *</em>JavaFx中的Animaiton类为所有的动画制作提供了核心功能。</p>
+<p>JavaFX提供了许多Animation的具体子类。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3r5dr678j31ui0rchdt.jpg" alt="image-20200524191335802"></p>
+<p>其中autoReverse是一个Boolean属性，表示下一周期中动画是否要倒转方向。cycleCount表示了该动画的循环次数。使用Tiemline.INDEFINTE表示无限循环。rate定义了动画的速度。一个负的rate值表示动画的相反方向。status是只读属性，表明了动画的状态(Animation.Status.PAUSED、Animation.Status.RUNNING和Animation.Status.STOPPED)。方法pause(),play(),stop()分别表示暂停、播放和终止动画。</p>
+<h3 id="PathTrasition"><a href="#PathTrasition" class="headerlink" title="PathTrasition"></a>PathTrasition</h3><p>PathTrasition类制作一个在给定时间，节点沿着一条路从一个端点到另一个端点的移动动画，PathTransition是Animation的子类型。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3rd7dkj4j31os0u0kjl.jpg" alt="image-20200524192103626"></p>
+<p>Duration类定义了持续事件。它是一个不可更改的类。这个类定义类常量INDEFINTE，ONE，UNKNOW和ZERO来代表一个无限循环、1毫秒、未知以及哦的持续时间。可以使用new Duration(double millis)来创建一个Duration实例，使用add、substract、multiply和divide方法来执行算数操作，还可以使用toHours(),toMinutes(),toSeconds()和tomMillis()来返回持续时间值中的小时数、分钟数、秒钟数和毫秒数。还可以使用comPareTo来比较两个持续时间。</p>
+<p>常量NONE和ORTHOGONAL_TO_TANGET在PathTransiton.OrientationType中定义。后者确定节点在沿着几何路径移动的过程中是否和路径的切线保持垂直。</p>
+<h2 id="FadeTransition"><a href="#FadeTransition" class="headerlink" title="FadeTransition"></a>FadeTransition</h2><p>FadeTransition类在一个给定的时间内，通过改变一个节点的透明度来产生动画。FadeTransition是Animation的子类型。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf53fa5cbdj31tw0tahdt.jpg" alt="image-20200525230347355"></p>
+<h2 id="Timeline"><a href="#Timeline" class="headerlink" title="Timeline"></a>Timeline</h2><p>PathTransition和FadeTransition定义类的特定的动画。Timeline类可以通过使用一个或者更多的KeyFrame(关键帧)来编写任意动画。每个KeyFrame在一个给定的时间间隔内顺序执行。Timeline继承自Animation。</p>
+<p>通过new Timeline(KeyFrame… keyframe)来构建一个Timeline。</p>
+<p>一个KeyFrame可以使用以下语句来构建：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> KeyFrame(Duration duration, EeventHandler&lt;ActionEvent&gt; onFinished)</span><br></pre></td></tr></table></figure>
+
+<p>处理器onFinished方法当这个关键帧的持续时间结束后被调用。</p>
+<h2 id="示例学习-：弹球"><a href="#示例学习-：弹球" class="headerlink" title="示例学习 ：弹球"></a>示例学习 ：弹球</h2>
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>nianchu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.nianchu.space/2020/05/22/Java/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E5%8A%A8%E7%94%BB/" title="Java&#x2F;事件驱动编程和动画">http://www.nianchu.space/2020/05/22/Java/事件驱动编程和动画/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/20/Java/W3Cschool/JavaFX/JavaFX%20%E5%A4%8D%E9%80%89%E6%A1%86/" rel="prev" title="Java/W3Cschool/JavaFX/JavaFX 复选框">
+      <i class="fa fa-chevron-left"></i> Java/W3Cschool/JavaFX/JavaFX 复选框
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/22/Java/JavaFx%20UI%E7%BB%84%E4%BB%B6%E5%92%8C%E5%A4%9A%E5%AA%92%E4%BD%93/" rel="next" title="JavaFx UI组件和多媒体">
+      JavaFx UI组件和多媒体 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-事件驱动编程和动画"><span class="nav-number">1.</span> <span class="nav-text">Java 事件驱动编程和动画</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件和事件源"><span class="nav-number">1.2.</span> <span class="nav-text">事件和事件源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册处理器和处理事件"><span class="nav-number">1.3.</span> <span class="nav-text">注册处理器和处理事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部类"><span class="nav-number">1.4.</span> <span class="nav-text">内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名内部类处理器"><span class="nav-number">1.5.</span> <span class="nav-text">匿名内部类处理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例学习：-贷款计算器"><span class="nav-number">1.6.</span> <span class="nav-text">示例学习： 贷款计算器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例学习-鼠标事件"><span class="nav-number">1.7.</span> <span class="nav-text">示例学习: 鼠标事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#键盘事件-KeyEvent"><span class="nav-number">1.8.</span> <span class="nav-text">键盘事件 KeyEvent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可观察对象的监听器"><span class="nav-number">1.9.</span> <span class="nav-text">可观察对象的监听器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画"><span class="nav-number">1.10.</span> <span class="nav-text">动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PathTrasition"><span class="nav-number">1.10.1.</span> <span class="nav-text">PathTrasition</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FadeTransition"><span class="nav-number">1.11.</span> <span class="nav-text">FadeTransition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Timeline"><span class="nav-number">1.12.</span> <span class="nav-text">Timeline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例学习-：弹球"><span class="nav-number">1.13.</span> <span class="nav-text">示例学习 ：弹球</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nianchu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nianchu99?tab=projects" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nianchu99?tab=projects" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:l17623029272@163.com" title="E-Mail → mailto:l17623029272@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/2795043945/profile?topnav=1&wvr=6" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2795043945&#x2F;profile?topnav=1&amp;wvr=6" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-nianchu"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by nianchu</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共76.3k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

@@ -222,7 +222,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/Python/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/09/Java/Java_%E5%A4%9A%E6%80%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -236,7 +236,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/09/Python/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">Python/Python正则表达式</a>
+            <a href="/2020/04/09/Java/Java_%E5%A4%9A%E6%80%81/" class="post-title-link" itemprop="url">Java/Java_多态</a>
         </h1>
 
         <div class="post-meta">
@@ -248,7 +248,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-09 23:43:13 / 修改时间：23:45:51" itemprop="dateCreated datePublished" datetime="2020-03-09T23:43:13+08:00">2020-03-09</time>
+              <time title="创建时间：2020-04-09 08:59:35 / 修改时间：09:32:34" itemprop="dateCreated datePublished" datetime="2020-04-09T08:59:35+08:00">2020-04-09</time>
             </span>
 
           
@@ -262,8 +262,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="正则表达式入门"><a href="#正则表达式入门" class="headerlink" title="正则表达式入门"></a>正则表达式入门</h1><h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>import re </p>
-<h2 id="创建一种格式"><a href="#创建一种格式" class="headerlink" title="创建一种格式"></a>创建一种格式</h2><p>phoneNumber = re.compile(r’\d\d\d-\d\d\d-\d\d\d\d’)</p>
+          <h1 id="Java-多态"><a href="#Java-多态" class="headerlink" title="Java_多态"></a>Java_多态</h1><p>多态是同一个行为具有不同表现形式或形态的能力<br>多态就是同一个接口，使用不同的实例而执行不同的操作。</p>
+<h2 id="多态性的优点"><a href="#多态性的优点" class="headerlink" title="多态性的优点"></a>多态性的优点</h2><ul>
+<li>消除类型之间的耦合关系</li>
+<li>可替换性</li>
+<li>可扩充性</li>
+<li>借口性</li>
+<li>灵活性</li>
+<li>简化性<h2 id="多态存在的三个必要条件"><a href="#多态存在的三个必要条件" class="headerlink" title="多态存在的三个必要条件"></a>多态存在的三个必要条件</h2></li>
+<li>继承</li>
+<li>重写</li>
+<li>父类引用指向子类对象</li>
+</ul>
+<p>当使用多态方式调用方法时，首先检测父类中是否有该方法，如果没有，则编译错误；如果有，再去调用子类的同名方法。<br>多态的好处：可以使程序有良好的扩展，并可以对所有类的对象进行通用处理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">public class DuoTai &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show(new Cat()); // 以Cat对象调用show方法</span><br><span class="line">        show(new Dog()); // 以Dog对象调用show方法</span><br><span class="line"></span><br><span class="line">        Animal a = new Cat(); // 向上转型</span><br><span class="line">        a.eat();               // 调用的是Cat的eat</span><br><span class="line">        Cat c = (Cat)a;         // 向下转型</span><br><span class="line">        c.work();               // 调用的是Cat的work</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void show(Animal a)&#123;</span><br><span class="line">        a.eat();</span><br><span class="line">        if (a instanceof Cat)&#123; // 猫做的事情</span><br><span class="line">            Cat c = (Cat)a;</span><br><span class="line">            c.work();</span><br><span class="line">        &#125;</span><br><span class="line">        else if (a instanceof Dog)&#123;  // 狗做的事情</span><br><span class="line">            Dog c = (Dog) a;</span><br><span class="line">            c.work();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">abstract class Animal&#123;</span><br><span class="line">    abstract void eat();</span><br><span class="line">&#125;</span><br><span class="line">class Cat extends Animal&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(&quot;吃鱼&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public void work()&#123;</span><br><span class="line">        System.out.println(&quot;抓老鼠&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends Animal&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(&quot;吃骨头&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public void work()&#123;</span><br><span class="line">        System.out.println(&quot;看家&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h2><p>虚函数的存在是为了多态<br>Java中其实并没有虚函数的概念，它的普通函数就相当于C++的虚函数，动态绑定是Java的默认行为。如果Java中不希望某个函数具有虚函数特性，可以加上final关键字编程非虚函数</p>
+<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>也就是子类能够重写父类的方法。<br>当子类对象调用重写的方法时，调用的是子类的方法，而不是父类中被重写的方法。<br>要想调用父类中被重写的方法，则必须使用关键字super。</p>
 
       
     </div>
@@ -283,7 +299,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/04/Python/Python-PIL%E5%8C%85%E4%B8%ADImage%E6%A8%A1%E5%9D%97%E7%9A%84convert()%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -297,7 +313,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/09/Python/Python%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/" class="post-title-link" itemprop="url">Python/Python随便写点</a>
+            <a href="/2020/04/04/Python/Python-PIL%E5%8C%85%E4%B8%ADImage%E6%A8%A1%E5%9D%97%E7%9A%84convert()%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">Python/Python-PIL包中Image模块的convert()函数的具体使用</a>
         </h1>
 
         <div class="post-meta">
@@ -309,7 +325,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-09 23:22:44 / 修改时间：23:41:29" itemprop="dateCreated datePublished" datetime="2020-03-09T23:22:44+08:00">2020-03-09</time>
+              <time title="创建时间：2020-04-04 20:39:12 / 修改时间：20:49:20" itemprop="dateCreated datePublished" datetime="2020-04-04T20:39:12+08:00">2020-04-04</time>
             </span>
 
           
@@ -323,10 +339,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="随便写点"><a href="#随便写点" class="headerlink" title="随便写点"></a>随便写点</h1><p> _划线是会指向最后一次表达式的值</p>
-<p>以单个下划线开头命名的方法或者变量,就是说明它是仅提供给内部使用的</p>
-<p>##下划线特殊使用 有关继承和类。看懂了就行，不应该使用这种奇怪的用法。<br>_Person__name = “nianchu”<br>class Person():<br>    def print_name(self):<br>        return __name</p>
-<p>print(Person().print_name())</p>
+          <h1 id="PIL包中Image模块的convert-函数的具体使用"><a href="#PIL包中Image模块的convert-函数的具体使用" class="headerlink" title="PIL包中Image模块的convert()函数的具体使用"></a>PIL包中Image模块的convert()函数的具体使用</h1><h2 id="RGB到灰度转换公式"><a href="#RGB到灰度转换公式" class="headerlink" title="RGB到灰度转换公式"></a>RGB到灰度转换公式</h2><p>RGB到灰度转换公式：Y’ = 0.299 R  + 0.587 G + 0.114 B</p>
+<h2 id="convert-函数"><a href="#convert-函数" class="headerlink" title="convert 函数"></a>convert 函数</h2><p>convert函数，用于不同模式之间的转换。PIL中有9种不同模式，分别为1，L，P，RGB， RGBA, CMYK, YCbCr,I,F.</p>
+<p>其中模式”1”为二值图像，每个像素用8bit，0表示黑，255表示白。</p>
+<p>其中“L”为灰色图像，它的每个像素用8个bit表示，0表示黑，255表示白，其他数字表示不同的灰度。在PIL中，从模式“RGB”转换为“L”模式是按照下面的公式转换的。<br>L = 0.299 R  + 0.587 G + 0.114 B</p>
 
       
     </div>
@@ -346,7 +362,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/07/Java/Java%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/02/Java/Java-static/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -360,7 +376,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/07/Java/Java%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE%E5%AF%B9%E9%BD%90%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Java输出数据对齐方法</a>
+            <a href="/2020/04/02/Java/Java-static/" class="post-title-link" itemprop="url">Java/Java-static</a>
         </h1>
 
         <div class="post-meta">
@@ -372,7 +388,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-07 11:56:42 / 修改时间：11:57:41" itemprop="dateCreated datePublished" datetime="2020-03-07T11:56:42+08:00">2020-03-07</time>
+              <time title="创建时间：2020-04-02 09:24:41 / 修改时间：10:18:06" itemprop="dateCreated datePublished" datetime="2020-04-02T09:24:41+08:00">2020-04-02</time>
             </span>
 
           
@@ -386,7 +402,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>System.out.printf(“%-10s”,”abc”);      //输出10列，左对齐(-号表示左对齐)<br>System.out.printf(“%8d”,23);          //输出8列， 右对齐</p>
+          <h1 id="static-详解"><a href="#static-详解" class="headerlink" title="static 详解"></a>static 详解</h1><h2 id="实例变量"><a href="#实例变量" class="headerlink" title="实例变量"></a>实例变量</h2><p>是一个java对象就有一个，100个对象就有100个。<br>实例变量存储在java对象内部，在堆内存中，在构造方法执行的时候初始化</p>
+<h2 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h2><p>所有对象的该变量值一样，这种特征属于类级别的特征，可以提升为整个模版的特征，可以在变量前添加static关键字修饰</p>
+<p>静态变量在类加载的时候初始化，不需要创建对象，内存就开辟了</p>
+<p>静态变量存储在方法区内存当中</p>
+<p>静态变量访问时直接用类名访问，而不用实例对象名</p>
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>什么时候成员变量声明为实例变量？<br>    - 所有对象都有这个属性，但是这个属性的值会随着对象的变化而变化(不同的对象的这个属性具体的值不同)<br>什么时候成员变量声明为静态变量呢？<br>    - 所有对象都有这个属性，并且所有对象的这个属性的值是一样的，建议定义为静态变量，节省内存的开销。</p>
+<p>静态变量在类加载的时候初始化，内存在方法去内存中开辟/访问的时候不需要创建对象，直接使用”类名.静态变量名”的方式访问。(也可以用引用的方式访问，但是会被警告)</p>
+<p>所有静态的数据都可以采用类名.,也可以采用引用.,但是建议采用类名.的方式访问。<br>采用引用.的方式访问的时候，即使引用是null，也不会出现空指针异常。因为访问静态的数据不需要对象的存在。</p>
+<p>static关键字：<br>    - 翻译为静态<br>    - 修饰的方法是静态方法<br>    - 修饰的变量是静态变量<br>    - 所有static修饰的元素称为静态的，都可以可以采用类名.,也可以采用引用.,但是建议采用类名.的方式访问。<br>    - static修饰的所有元素都是类级别的特征，和具体的对象无关</p>
 
       
     </div>
@@ -406,7 +430,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/07/Java/Magic-value/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/01/Java/Java-BigInteger%E5%92%8CBigDecimal%E7%B1%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -420,7 +444,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/07/Java/Magic-value/" class="post-title-link" itemprop="url">Magic value</a>
+            <a href="/2020/04/01/Java/Java-BigInteger%E5%92%8CBigDecimal%E7%B1%BB/" class="post-title-link" itemprop="url">Java/Java-BigInteger和BigDecimal类</a>
         </h1>
 
         <div class="post-meta">
@@ -432,7 +456,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-07 09:55:44 / 修改时间：10:00:16" itemprop="dateCreated datePublished" datetime="2020-03-07T09:55:44+08:00">2020-03-07</time>
+              <time title="创建时间：2020-04-01 15:25:06 / 修改时间：17:44:17" itemprop="dateCreated datePublished" datetime="2020-04-01T15:25:06+08:00">2020-04-01</time>
             </span>
 
           
@@ -446,11 +470,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>今天记录一个编程领域的名词：魔法数值、魔法数字、魔法值。</p>
-<p><strong>在编程领域，上述三个名词都指的是莫名其妙出现的数字。</strong></p>
-<p>解读：</p>
-<p>采用魔法值的代码。数字的意义必须通过详细阅读才能推断出来。使用魔法数值使代码的可读性大大下降。</p>
-<p><strong><em>在Java语言中，对于有名字的值的定义，可以使用static final 或者enum来声明</em></strong></p>
+          <h1 id="Java-BigInteger和BigDecimal类"><a href="#Java-BigInteger和BigDecimal类" class="headerlink" title="Java-BigInteger和BigDecimal类"></a>Java-BigInteger和BigDecimal类</h1><h2 id="要点提示：Java-BigInteger和BigDecimal类可以用于表示任意大小和精度的整数或者十进制数"><a href="#要点提示：Java-BigInteger和BigDecimal类可以用于表示任意大小和精度的整数或者十进制数" class="headerlink" title="要点提示：Java-BigInteger和BigDecimal类可以用于表示任意大小和精度的整数或者十进制数"></a>要点提示：Java-BigInteger和BigDecimal类可以用于表示任意大小和精度的整数或者十进制数</h2><h2 id="BigInteger"><a href="#BigInteger" class="headerlink" title="BigInteger"></a>BigInteger</h2><p> BigInteger的实例可以用来表示任意大小的整数。可以使用new  BigInteger(String) 和new BigDecimal(String)来创建 BigInteger 和 BigDecimal的实例，使用add、subtract、multiple、divide和remainder方法完成算术运算，使用compareTo方法比较两个大数字。</p>
+<p>对BigDecimal对象的精度没有限制。如果结果不能终止，那么divide方法会抛出ArithmeticException异常。但是，可以使用重载的divide(BigDecimal d, int scale, int roundingMode)方法来指定尺度和舍入方法来避免这个异常。这里的scale是指小数点后最小的整数位数。</p>
 
       
     </div>
@@ -470,7 +491,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/06/Java/Java%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/31/Matlab/Matlab-%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E8%AF%BE%E5%A0%82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -484,74 +505,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/06/Java/Java%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Java常用方法</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-06 19:07:42" itemprop="dateCreated datePublished" datetime="2020-03-06T19:07:42+08:00">2020-03-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-18 19:53:20" itemprop="dateModified" datetime="2020-03-18T19:53:20+08:00">2020-03-18</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java常用方法"><a href="#Java常用方法" class="headerlink" title="Java常用方法"></a>Java常用方法</h1><h2 id="toRadians"><a href="#toRadians" class="headerlink" title="toRadians"></a>toRadians</h2><p>作用：将以度数为单位的角度转换为以弧度为单位的角度</p>
-<h2 id="arraycopy-int-arr-int-star-int-arr2-int-start2-length"><a href="#arraycopy-int-arr-int-star-int-arr2-int-start2-length" class="headerlink" title="arraycopy(int[] arr, int star,int[] arr2, int start2, length);"></a>arraycopy(int[] arr, int star,int[] arr2, int start2, length);</h2><p>具体用法：<br>    5个参数，<br>第一个参数是要被复制的数组<br>第二个参数是被复制的数字开始复制的下标<br>第三个参数是目标数组，也就是要把数据放进来的数组<br>第四个参数是从目标数据第几个下标开始放入数据<br>第五个参数表示从被复制的数组中拿几个数值放到目标数组中</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/06/Java/Java%E4%B9%8BMath-round/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/06/Java/Java%E4%B9%8BMath-round/" class="post-title-link" itemprop="url">Java之Math.round</a>
+            <a href="/2020/03/31/Matlab/Matlab-%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E8%AF%BE%E5%A0%82/" class="post-title-link" itemprop="url">Matlab/Matlab-数值计算课堂</a>
         </h1>
 
         <div class="post-meta">
@@ -563,7 +517,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-03-06 19:07:42 / 修改时间：19:08:48" itemprop="dateCreated datePublished" datetime="2020-03-06T19:07:42+08:00">2020-03-06</time>
+              <time title="创建时间：2020-03-31 16:42:26 / 修改时间：19:01:43" itemprop="dateCreated datePublished" datetime="2020-03-31T16:42:26+08:00">2020-03-31</time>
             </span>
 
           
@@ -577,8 +531,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Java 中 Math.round的用法:</p>
-<p>1、参数的小数点后第一位&lt;5，运算结果为参数整数部分。<br>2、参数的小数点后第一位&gt;5，运算结果为参数整数部分绝对值+1，符号（即正负）不变。<br>3、参数的小数点后第一位=5，正数运算结果为整数部分+1，负数运算结果为整数部分。</p>
+          <h1 id="5Matlab-数值计算-课堂"><a href="#5Matlab-数值计算-课堂" class="headerlink" title="5Matlab-数值计算(课堂)"></a>5Matlab-数值计算(课堂)</h1><h2 id="5-1-线性方程组求解"><a href="#5-1-线性方程组求解" class="headerlink" title="5.1 线性方程组求解"></a>5.1 线性方程组求解</h2><h3 id="5-1-1-直接求接法"><a href="#5-1-1-直接求接法" class="headerlink" title="5.1.1 直接求接法"></a>5.1.1 直接求接法</h3><p>已知线性方程组： Ax=b;<br>其中A为已知的n阶方阵，b是含n个分量的已知列向量，而x为含n个分量的未知列向量。<br>如图：<br><img src="media/15856452203645.jpg" alt="-w893"></p>
+<ul>
+<li>1 逆矩阵解法<br>对于方程组Ax=b,根据线性代数知识可知,x=b/A;其中1/A为矩阵A的逆矩阵。<br>实例：求解线性方程组的解；<br><img src="media/15856455181525.jpg" alt="-w523"></li>
+</ul>
+<h2 id="5-2-非线性方程求解"><a href="#5-2-非线性方程求解" class="headerlink" title="5.2 非线性方程求解"></a>5.2 非线性方程求解</h2><p>非线性方程组通常很难求其解析解，更多的是通过数值分析求其近似值。</p>
+<h3 id="5-2-1-非线性方程数值求解基本原理"><a href="#5-2-1-非线性方程数值求解基本原理" class="headerlink" title="5.2.1 非线性方程数值求解基本原理"></a>5.2.1 非线性方程数值求解基本原理</h3><p>牛顿算法……</p>
+<ul>
+<li>1.solve 命令求解非线性方程</li>
+</ul>
 
       
     </div>
@@ -598,7 +559,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/26/Matlab/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/31/Matlab/Matlab-%E7%9F%A9%E9%98%B5%E5%92%8C%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -612,77 +573,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/26/Matlab/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/" class="post-title-link" itemprop="url">Matlab基本运算</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-26 22:28:17" itemprop="dateCreated datePublished" datetime="2020-02-26T22:28:17+08:00">2020-02-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-27 00:03:32" itemprop="dateModified" datetime="2020-02-27T00:03:32+08:00">2020-02-27</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h1><h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><h2 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h2><h2 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h2><p>左除</p>
-<p>右除法</p>
-<p>非奇异性矩阵是什么意思</p>
-<h2 id="点运算"><a href="#点运算" class="headerlink" title="点运算"></a>点运算</h2><h1 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h1><p>注意不等于的关系运算符是~=</p>
-<p>成立返回1，不成立返回0</p>
-<h1 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 总结：Matlab的运算都是在矩阵意义下进行的，单个数据的算术运算只是矩阵运算的一种特例</span></span><br><span class="line"><span class="comment">% 加减运算 ：</span></span><br><span class="line"><span class="comment">% 矩阵之间：</span></span><br><span class="line">A = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>] </span><br><span class="line">B = [<span class="number">7</span>:<span class="number">9</span>;<span class="number">100</span>:<span class="number">102</span>]</span><br><span class="line">B - A </span><br><span class="line"><span class="comment">% 矩阵和标量之间</span></span><br><span class="line">c = <span class="number">100</span>;</span><br><span class="line">B - c</span><br><span class="line"></span><br><span class="line"><span class="comment">% 乘法运算就只能在矩阵之间了，而且要求A的列数与B的行数相等，此时称A、B矩阵是可乘的，或称A和B两矩阵维数和大小相容：</span></span><br><span class="line">C = [<span class="number">1</span>:<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>];</span><br><span class="line">D = [<span class="number">11</span>,<span class="number">20</span>;<span class="number">12</span>,<span class="number">21</span>]</span><br><span class="line">D * C <span class="comment">% 特别注意，两矩阵相乘，A*B不等于就是B*A。要想成功计算，一定保证是A的列数与B的行数相等。是不能交换的。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 除法运算??在Matlab中，有两种不同的矩阵除法运算，一个是右除，一个是左除</span></span><br><span class="line"><span class="comment">% 书上说如果A矩阵是非奇异方阵，则B/A等效于B*inv(A),A/B等效于inv(A)*B.而这两种不同的计算方法的计算结果是不一样的。</span></span><br><span class="line"><span class="comment">% 但是对于两个标量来说，左除和右除的效果是一样的。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 乘方运算：一个矩阵的乘方运算可以表示成A ^x,要求：A为方阵，x为标量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 点运算</span></span><br><span class="line"><span class="comment">% 两矩阵进行点运算是指它们的对应元素进行相关运算，要求两矩阵同型。</span></span><br><span class="line">E = A;</span><br><span class="line">F = A.* E</span><br><span class="line"></span><br><span class="line"><span class="comment">% 关系运算 </span></span><br><span class="line"><span class="comment">% 当两个比较量是标量时，直接比较两个数字的大小，关系成立，表达式的结果为1，否则为0</span></span><br><span class="line"><span class="comment">% 当两个是同型的矩阵时，比较是对两矩阵相同位置的元素按标量关系运算规则逐个进行，最终结果是一个只有1和0的同型矩阵</span></span><br><span class="line"><span class="comment">% 当一个是标量，另一个是矩阵时，则把标量与矩阵中的每一个元素按标量规则进行比较，同样结果是一个只含有0和1的同型矩阵</span></span><br><span class="line">A1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>];</span><br><span class="line">A2 = [<span class="number">0</span>:<span class="number">2</span>;<span class="number">21</span>:<span class="number">23</span>];</span><br><span class="line">A3 = (A1&lt; A2)<span class="comment">% 结果：[0 0 0;1 1 1]</span></span><br><span class="line">A4 = (A2&gt;<span class="number">0</span>) <span class="comment">% 结果：[0 1 1;1 1 1]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 逻辑运算</span></span><br><span class="line"><span class="comment">% &amp;｜ ～</span></span><br><span class="line"><span class="comment">% &amp; :两个非零才为1</span></span><br><span class="line"><span class="comment">% ｜：一个非零则为1</span></span><br><span class="line"><span class="comment">% 若参与逻辑运算的是两个同型矩阵，那么将对矩阵相同位置上的元素按标量规则逐个进行运算，结果是包含0、1的同型矩阵</span></span><br><span class="line"><span class="comment">% 若参与逻辑运算的是一个标量和一个矩阵，则把标量与矩阵中的每一个元素按标量规则进行比较，同样结果是一个只含有0和1的同型矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 实例： 水仙花数</span></span><br><span class="line"></span><br><span class="line">m = [<span class="number">100</span>:<span class="number">999</span>]; <span class="comment">% 生成所有三位正整数</span></span><br><span class="line">m1 = <span class="built_in">rem</span>(m,<span class="number">10</span>); <span class="comment">% 个</span></span><br><span class="line">m2 = <span class="built_in">rem</span>(<span class="built_in">fix</span>(m/<span class="number">10</span>),<span class="number">10</span>);<span class="comment">% 十 </span></span><br><span class="line">m3 = <span class="built_in">fix</span>(m/<span class="number">100</span>); <span class="comment">% 百</span></span><br><span class="line"><span class="built_in">j</span> = <span class="built_in">find</span>(m == m1.^<span class="number">3</span>+m2.^<span class="number">3</span>+m3.^<span class="number">3</span>);<span class="comment">% 是水仙花数的序号</span></span><br><span class="line"><span class="built_in">i</span> = <span class="built_in">find</span>(~(m == m1.^<span class="number">3</span>+m2.^<span class="number">3</span>+m3.^<span class="number">3</span>)); <span class="comment">% 不是水仙花数的序号</span></span><br><span class="line"><span class="comment">% 然后分别传递给矩阵m</span></span><br><span class="line">result = m(<span class="built_in">j</span>) </span><br><span class="line">result1 = m(<span class="built_in">i</span>)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/24/Java/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/24/Java/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">Java面向对象基础(重难点)</a>
+            <a href="/2020/03/31/Matlab/Matlab-%E7%9F%A9%E9%98%B5%E5%92%8C%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97/" class="post-title-link" itemprop="url">Matlab/Matlab-矩阵和数组运算</a>
         </h1>
 
         <div class="post-meta">
@@ -694,7 +585,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-24 23:09:27 / 修改时间：23:18:02" itemprop="dateCreated datePublished" datetime="2020-02-24T23:09:27+08:00">2020-02-24</time>
+              <time title="创建时间：2020-03-31 16:33:29 / 修改时间：16:41:18" itemprop="dateCreated datePublished" datetime="2020-03-31T16:33:29+08:00">2020-03-31</time>
             </span>
 
           
@@ -708,10 +599,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="静态方法和实例方法的问题："><a href="#静态方法和实例方法的问题：" class="headerlink" title="静态方法和实例方法的问题："></a>静态方法和实例方法的问题：</h1><p>有static修饰的是静态方法，没有static修饰的方法是实例方法。</p>
-<p>静态方法可以访问静态变量和其他静态方法，不可以访问实例方法，实例变量；实例方法可以访问实例变量、其他实例方法、静态变量、静态方法。(记住这一点是很有必要的。)</p>
-<h1 id="静态代码块"><a href="#静态代码块" class="headerlink" title="静态代码块"></a>静态代码块</h1><p>如果初始化静态变量不是简单常量，需要进行计算才能初始化，可以使用静态(static)代码块，静态 代码块在类第一次加载时执行，并只执行一次。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//静态代码块的格式如下：</span></span><br><span class="line"><span class="keyword">static</span>&#123;</span><br><span class="line">  System.out.println(<span class="string">"静态代码块被调用..."</span>);</span><br><span class="line">  <span class="comment">//还可以再这里初始化静态变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="Matlab-矩阵和数组运算"><a href="#Matlab-矩阵和数组运算" class="headerlink" title="Matlab-矩阵和数组运算"></a>Matlab-矩阵和数组运算</h1><p>矩阵运算有明确而严格的数学规则，矩阵运算规则是按照线性代数运算法则定义的；<br>数组运算是按照数组的元素逐个进行的。</p>
+<h2 id="1-矩阵运算的函数"><a href="#1-矩阵运算的函数" class="headerlink" title="1 矩阵运算的函数"></a>1 矩阵运算的函数</h2><ul>
+<li>det()</li>
+<li>rank()</li>
+<li>inv()</li>
+</ul>
+
       
     </div>
 
@@ -730,7 +624,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/22/Java/%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4%E5%92%8C%E6%9B%BF%E6%8D%A2/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/31/Java/Java-%E7%B1%BB%E7%9A%84%E6%8A%BD%E8%B1%A1%E5%92%8C%E5%B0%81%E8%A3%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -744,7 +638,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/22/Java/%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8F%92%E5%85%A5%E5%88%A0%E9%99%A4%E5%92%8C%E6%9B%BF%E6%8D%A2/" class="post-title-link" itemprop="url">可变字符串的插入删除和替换</a>
+            <a href="/2020/03/31/Java/Java-%E7%B1%BB%E7%9A%84%E6%8A%BD%E8%B1%A1%E5%92%8C%E5%B0%81%E8%A3%85/" class="post-title-link" itemprop="url">Java/Java-类的抽象和封装</a>
         </h1>
 
         <div class="post-meta">
@@ -756,7 +650,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-22 23:34:43 / 修改时间：23:35:27" itemprop="dateCreated datePublished" datetime="2020-02-22T23:34:43+08:00">2020-02-22</time>
+              <time title="创建时间：2020-03-31 10:07:42 / 修改时间：10:25:43" itemprop="dateCreated datePublished" datetime="2020-03-31T10:07:42+08:00">2020-03-31</time>
             </span>
 
           
@@ -770,7 +664,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2.22 字符串插入、删除、替换</span></span><br><span class="line">		<span class="comment">// 插入</span></span><br><span class="line">		StringBuffer str = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">		str.insert(<span class="number">11</span>,<span class="string">" very "</span>);</span><br><span class="line">		System.out.println(str);<span class="comment">// Today is a very good day!</span></span><br><span class="line">		<span class="comment">//删除和替换</span></span><br><span class="line">		StringBuffer str1 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">		StringBuffer str2 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">		StringBuffer str3 = <span class="keyword">new</span> StringBuffer(<span class="string">"Today is a good day!"</span>);</span><br><span class="line">		System.out.println(str1.delete(<span class="number">0</span>, <span class="number">5</span>));<span class="comment">// is a good day!</span></span><br><span class="line">		System.out.println(str2.delete(<span class="number">0</span>, <span class="number">5</span>));<span class="comment">// is a good day!</span></span><br><span class="line">		System.out.println(str3.replace(<span class="number">0</span>,<span class="number">5</span>,<span class="string">"Tomorrow "</span>));<span class="comment">//Tomorrow  is a good day!</span></span><br></pre></td></tr></table></figure>
+          <h1 id="类的抽象和封装"><a href="#类的抽象和封装" class="headerlink" title="类的抽象和封装"></a>类的抽象和封装</h1><p>要点提示： 类的抽象是指将类的实现和类的使用分离开，实现的细节被封装并且对用户隐藏，这被称为类的封装</p>
+<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
+<li><p>类的合约：<br>  从类外可以访问的方法和数据域的集合以及预期这些成员如何行为的描述，合称为“类的合约”</p>
+</li>
+<li><p>类的封装：<br>  实现的细节经过封装，对用户隐藏起来，这称为类的封装。</p>
+</li>
+<li><p>抽象数据类型： 类也被称为是一种抽象数据类型</p>
+<h2 id="形象比喻"><a href="#形象比喻" class="headerlink" title="形象比喻"></a>形象比喻</h2><p>类的实现就像是一个对客户隐藏的黑匣子。<br>客户通过类的合约使用该类</p>
+</li>
+</ul>
+
       
     </div>
 
@@ -789,7 +693,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/22/Java/java-%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/28/Java/Java-%E5%90%91%E6%96%B9%E6%B3%95%E4%BC%A0%E9%80%92%E5%AF%B9%E8%B1%A1%E5%8F%82%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -803,7 +707,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/22/Java/java-%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="post-title-link" itemprop="url">java_可变字符串</a>
+            <a href="/2020/03/28/Java/Java-%E5%90%91%E6%96%B9%E6%B3%95%E4%BC%A0%E9%80%92%E5%AF%B9%E8%B1%A1%E5%8F%82%E6%95%B0/" class="post-title-link" itemprop="url">Java/Java-向方法传递对象参数</a>
         </h1>
 
         <div class="post-meta">
@@ -815,7 +719,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-22 01:38:39 / 修改时间：01:39:42" itemprop="dateCreated datePublished" datetime="2020-02-22T01:38:39+08:00">2020-02-22</time>
+              <time title="创建时间：2020-03-28 22:29:15 / 修改时间：22:34:28" itemprop="dateCreated datePublished" datetime="2020-03-28T22:29:15+08:00">2020-03-28</time>
             </span>
 
           
@@ -829,7 +733,133 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 2.21</span></span><br><span class="line"><span class="comment">// 可变字符串：可变字符串在追加、删除、修改、插入和拼接等操作时不会产生新的对象</span></span><br><span class="line"><span class="comment">// Java中提供了两个可变字符串类型，StringBuffer and StringBuilder，中文翻译为字符串缓冲区</span></span><br><span class="line"><span class="comment">// 理解：字符串长度和字符串缓冲区</span></span><br><span class="line"><span class="comment">// 字符串长度和字符串缓冲区容量区别。字符串长度是指在字符串缓冲区中目前所包含字符 串长度，</span></span><br><span class="line"><span class="comment">// 通过length()获得;字符串缓冲区容量是缓冲区中所能容纳的最大字符数，通过capacity() 获得。</span></span><br><span class="line"><span class="comment">// 当所容纳的字符超过这个长度时，字符串缓冲区自动扩充容量，但这是以牺牲性能为代价 的扩容。</span></span><br><span class="line"><span class="comment">// 字符串长度和字符串缓冲区容量示例代码：</span></span><br><span class="line">StringBuilder nameString = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">System.out.println(nameString.length());</span><br><span class="line">System.out.println(nameString.capacity());<span class="comment">//长度为零，而容量为16</span></span><br><span class="line"></span><br><span class="line">StringBuilder nameString1 = <span class="keyword">new</span> StringBuilder(<span class="string">"xiaolei"</span>);</span><br><span class="line">System.out.println(nameString1.length());</span><br><span class="line">System.out.println(nameString1.capacity());<span class="comment">//长度为7，而容量为16</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//字符串缓冲区初始容量是16，超过之后会扩容,现在通过一个for循环来证明这个事情</span></span><br><span class="line">StringBuilder teStringBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">17</span>;i++) &#123;</span><br><span class="line">	teStringBuilder.append(<span class="number">8</span>);</span><br><span class="line">	System.out.println(<span class="string">"包含的字符串长度为："</span> + teStringBuilder.length());</span><br><span class="line">	System.out.println(<span class="string">"字符串缓冲区容量为："</span> + teStringBuilder.capacity());</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//由输出结果我们可以看到，最后当字符串长度为17的时候，字符串缓冲区的容量变成了34</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串追加——append</span></span><br><span class="line"><span class="comment">// 添加字符串</span></span><br><span class="line">StringBuilder stringBuilder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">System.out.println(stringBuilder.append(<span class="string">"Hello"</span>).append(<span class="string">" "</span>).append(<span class="string">"World!"</span>));</span><br><span class="line"><span class="comment">// 添加布尔值，转义符和空对象</span></span><br><span class="line">StringBuffer stringBuffer = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">Object object = <span class="keyword">null</span>;</span><br><span class="line">System.out.println(stringBuffer.append(<span class="keyword">false</span>).append(<span class="string">"\t"</span>).append(object));</span><br><span class="line"><span class="comment">// 添加数值</span></span><br><span class="line">StringBuffer numBuffer = <span class="keyword">new</span> StringBuffer();</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">	numBuffer.append(i);</span><br><span class="line">	i++;</span><br><span class="line">	System.out.println(numBuffer);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Output</span></span><br><span class="line"><span class="comment"> * 0</span></span><br><span class="line"><span class="comment">16</span></span><br><span class="line"><span class="comment">7</span></span><br><span class="line"><span class="comment">23</span></span><br><span class="line"><span class="comment">包含的字符串长度为：1</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：2</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：3</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：4</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：5</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：6</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：7</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：8</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：9</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：10</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：11</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：12</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：13</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：14</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：15</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：16</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：16</span></span><br><span class="line"><span class="comment">包含的字符串长度为：17</span></span><br><span class="line"><span class="comment">字符串缓冲区容量为：34</span></span><br><span class="line"><span class="comment">Hello World!</span></span><br><span class="line"><span class="comment">false	null</span></span><br><span class="line"><span class="comment">0</span></span><br><span class="line"><span class="comment">01</span></span><br><span class="line"><span class="comment">012</span></span><br><span class="line"><span class="comment">0123</span></span><br><span class="line"><span class="comment">01234</span></span><br><span class="line"><span class="comment">012345</span></span><br><span class="line"><span class="comment">0123456</span></span><br><span class="line"><span class="comment">01234567</span></span><br><span class="line"><span class="comment">012345678</span></span><br><span class="line"><span class="comment">0123456789</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+          <h1 id="Java-向方法传递对象参数"><a href="#Java-向方法传递对象参数" class="headerlink" title="Java-向方法传递对象参数"></a>Java-向方法传递对象参数</h1><h2 id="提示：给方法传递一个对象，是将对象的引用传递给方法"><a href="#提示：给方法传递一个对象，是将对象的引用传递给方法" class="headerlink" title="提示：给方法传递一个对象，是将对象的引用传递给方法"></a>提示：给方法传递一个对象，是将对象的引用传递给方法</h2><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>java 只用一个参数传递方式:值传递。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/28/Java/Java-%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/28/Java/Java-%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">Java/Java-对象数组</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-28 22:19:30 / 修改时间：22:25:37" itemprop="dateCreated datePublished" datetime="2020-03-28T22:19:30+08:00">2020-03-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java-对象数组"><a href="#Java-对象数组" class="headerlink" title="Java-对象数组"></a>Java-对象数组</h1><h2 id="要点提示：数组既可以存储基本类型值，也可以存储对象。"><a href="#要点提示：数组既可以存储基本类型值，也可以存储对象。" class="headerlink" title="要点提示：数组既可以存储基本类型值，也可以存储对象。"></a>要点提示：数组既可以存储基本类型值，也可以存储对象。</h2><h2 id="创建对象数组"><a href="#创建对象数组" class="headerlink" title="创建对象数组"></a>创建对象数组</h2><p>以下代码创建了10个Circle对象的数组<br>Circle[] circleArray= new Circle[10];</p>
+<h2 id="初始化数组"><a href="#初始化数组" class="headerlink" title="初始化数组"></a>初始化数组</h2><p>为了给一个对象数组进行初始化，可以通过循环实现<br>示例代码:<br>for(int i =0; i &lt; circleArray.length; i++){<br>    circleArray[i] = new Circle();<br>} </p>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>当使用new操作符创建对象数组后，这个数组中的每个元素都是默认值为null的引用变量。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/28/Java/Java-%E6%95%B0%E6%8D%AE%E5%9F%9F%E5%B0%81%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/28/Java/Java-%E6%95%B0%E6%8D%AE%E5%9F%9F%E5%B0%81%E8%A3%85/" class="post-title-link" itemprop="url">Java/Java-数据域封装</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-28 21:54:59 / 修改时间：22:00:39" itemprop="dateCreated datePublished" datetime="2020-03-28T21:54:59+08:00">2020-03-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数据区封装"><a href="#数据区封装" class="headerlink" title="数据区封装"></a>数据区封装</h1><p>提示: 将数据域设为私有保护数据，并且使易于维护。</p>
+<p>为了避免对数据域的直接修改，应该使用private修改符将数据域生命为私有的，这称为数据域封装(data field encapsulation).</p>
+<h2 id="访问私有数据域"><a href="#访问私有数据域" class="headerlink" title="访问私有数据域"></a>访问私有数据域</h2><p>get(访问器)</p>
+<h2 id="修改私有数据域"><a href="#修改私有数据域" class="headerlink" title="修改私有数据域"></a>修改私有数据域</h2><p>set(修改器)</p>
+
       
     </div>
 
@@ -848,7 +878,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -892,7 +922,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -964,7 +994,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41.5k字</span>
+  <span class="post-count">博客全站共76.3k字</span>
 </div>
 
         

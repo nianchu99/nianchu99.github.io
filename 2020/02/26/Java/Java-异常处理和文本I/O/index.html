@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32X32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16X16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://www.nianchu.space').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Java-异常处理和文本I&#x2F;O异常处理概述要点提示：异常是从方法抛出的。方法的调用者可以捕获以及处理该异常 java可以让一个方法可以抛出一个异常，该异常可以被调用者捕获和处理。 (书中的例子)在这种情况下，抛出的值为new ArithmeticException(“Divisor cannot be zero”),称为一个异常。异常就是一个从异常类创建的对象。在这种情况下，异常类就是java.l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java&#x2F;Java-异常处理和文本I\O">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;index.html">
+<meta property="og:site_name" content="nianchu-Blog">
+<meta property="og:description" content="Java-异常处理和文本I&#x2F;O异常处理概述要点提示：异常是从方法抛出的。方法的调用者可以捕获以及处理该异常 java可以让一个方法可以抛出一个异常，该异常可以被调用者捕获和处理。 (书中的例子)在这种情况下，抛出的值为new ArithmeticException(“Divisor cannot be zero”),称为一个异常。异常就是一个从异常类创建的对象。在这种情况下，异常类就是java.l">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878071407711.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878081327997.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878083370996.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878088878447.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878094134772.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878096247534.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878314324548.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878314425513.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878315889991.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878316852638.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878318295653.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878899426819.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878900814431.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878913236238.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878963885056.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878965955605.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15879076595179.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15879077241331.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15879085940993.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15879097560591.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15879714308600.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15879715940217.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15881308836609.jpg">
+<meta property="og:updated_time" content="2020-04-29T03:44:55.474Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;02&#x2F;26&#x2F;Java&#x2F;Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI&#x2F;O&#x2F;media&#x2F;15878071407711.jpg">
+
+<link rel="canonical" href="http://www.nianchu.space/2020/02/26/Java/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI/O/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Java/Java-异常处理和文本I\O | nianchu-Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">nianchu-Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/nianchu99" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/26/Java/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI%5CO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java/Java-异常处理和文本I\O
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-26 15:13:19" itemprop="dateCreated datePublished" datetime="2020-02-26T15:13:19+08:00">2020-02-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-29 11:44:55" itemprop="dateModified" datetime="2020-04-29T11:44:55+08:00">2020-04-29</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Java-异常处理和文本I-O"><a href="#Java-异常处理和文本I-O" class="headerlink" title="Java-异常处理和文本I/O"></a>Java-异常处理和文本I/O</h1><h2 id="异常处理概述"><a href="#异常处理概述" class="headerlink" title="异常处理概述"></a>异常处理概述</h2><p>要点提示：异常是从方法抛出的。方法的调用者可以捕获以及处理该异常</p>
+<p>java可以让一个方法可以抛出一个异常，该异常可以被调用者捕获和处理。</p>
+<p>(书中的例子)在这种情况下，抛出的值为new ArithmeticException(“Divisor cannot be zero”),称为一个异常。异常就是一个从异常类创建的对象。在这种情况下，异常类就是java.lang.ArithmeticException.</p>
+<p>构造方法ArithmeticException(str)被调用用以构建一个异常，其中str是描述异常的消息。</p>
+<p>当异常被抛出时，正常的执行流程就会被中断。就它的名字所提示的，“抛出异常”就是将异常从一个地方传递到另一个地方。调用方法的语句包含在一个try块和一个catch块中。try块包含了正常情况下执行的代码。异常被catch块所捕获。catch块中的代码执行以处理异常。之后，catch块之后的语句被执行。</p>
+<p>throw语句类似于方法的调用，但不同于调用方法的是，它调用的是catch块。从某种意义上讲，catch块就像带参数的方法定义，这些参数匹配抛出的值的类型。但是，它不像方法，在执行catch块之后，程序控制不返回到throw语句；而是执行catch块之后的下一条语句。</p>
+<p>catch块的头部<br>catch(xxxException ex)<br>标识符ex的作用就像是方法中的参数。所以这个参数称为catch块的参数。ex之前的类型指定了catch块可以捕获的异常类型。一旦捕获该异常，就能从catch块体中的参数访问这个抛出的值。<br>try-throw-catch块的模版如下<br><img src="media/15878071407711.jpg" alt="-w732"></p>
+<p>一个异常可能是通过try块中的trow语句直接抛出，或者调用一个可能会抛出异常的方法而抛出</p>
+<h2 id="异常类型"><a href="#异常类型" class="headerlink" title="异常类型"></a>异常类型</h2><p>要点提示：异常使对象，而对象都采用类来定义。异常的根类是java.lang.Throwable。</p>
+<p>注意： 类名Error、Exception和RuntimeException有时候容易引起混淆。它们都是异常，这里讨论的错误都是发生在运行时。<br>Throwable类是所有异常的根。所有的java异常都直接或间接地继承自Throwable。可以通过继承<br>Exception或者Exception的子类来创建自己的异常类。</p>
+<p>异常类分为三种主要类型： </p>
+<ul>
+<li>系统异常(system error）是由java虚拟机抛出的，用Error类表示。Error类描述的是内部系统错误。这样的错误很少发生。如果发生，除了可以通知用户以及尽量稳妥地终止程序外，几乎什么都不能做。</li>
+<li>异常（exception）是用Exception类表示的，它描述的是由程序和外部环境所引起的错误，这些错误能被程序捕获和处理。<br><img src="media/15878081327997.jpg" alt="-w922"></li>
+<li>运行时异常（runtime exception）是用RuntimeException类表示的。它描述的是程序设计错误，例如，错误的类型转换、访问一个越界数组或数值错误。运行时异常通常是由Java虚拟机抛出的。</li>
+<li><img src="media/15878083370996.jpg" alt="-w951"><br>RuntimeException和Error以及它们的子类都被称为免检异常。所有其他异常都被称为必检异常，意思是说编译器会强制程序猿通过try-catch块处理它们，或者在方法头进行声明。</li>
+</ul>
+<p>大多数情况下，免检异常都会反映出程序设计上不可恢复的逻辑错误。</p>
+<p>免检异常可能在程序的任何一个地方出现。</p>
+<p>为避免过多地使用try-catch模块，java语言不强制要求程序猿编写代码捕获或声明免检异常。</p>
+<h2 id="关于异常处理的更多知识"><a href="#关于异常处理的更多知识" class="headerlink" title="关于异常处理的更多知识"></a>关于异常处理的更多知识</h2><p>要点提示： 异常的处理器是通过当前的方法开始，沿着方法调用链，按照异常的反向传播方向找到的。</p>
+<p>java的异常处理模型基于三种操作： 声明一个异常（declaring an exception）、抛出一个异常（throw an exception）和捕获一个异常（catching a exception）<br><img src="media/15878088878447.jpg" alt="-w909"></p>
+<h3 id="声明异常"><a href="#声明异常" class="headerlink" title="声明异常"></a>声明异常</h3><p><strong><em>在java中，当前执行的语句必属于某个方法。Java解释器调用main方法开始执行一个程序。</em></strong><br>每个方法都必须声明它可能抛出的必检异常的类型，因此java不要求在方法显式声明Error和RuntimeException。但是，方法要抛出的其他异常都必须在方法头中显式声明，这样，方法的调用者会被告知有异常。</p>
+<p>在方法中声明一个异常，要在方法头中使用关键字throws。</p>
+<p>public void myMethod() throws IOException</p>
+<p>如果方法可能会抛出多个异常，就可以在关键字throws之后添加一个用逗号分隔的异常列表。</p>
+<p>注意： <strong><em>如果方法没有在父类中声明异常，那么就不能在子类中对其进行继承来声明异常。</em></strong></p>
+<h3 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h3><p>检测到错误的程序可以创建一个合适的异常类型的i实例并抛出它，这就称为一个异常。<br>示例：<br><img src="media/15878094134772.jpg" alt="-w740"><br>注意： 通常，Java API中的每个异常至少有两个构造方法： 一个无参构造方法和一个带有描述这个异常的String参数的构造方法。这个参数就叫做异常消息（额exception message），它可以用getMessage()获取。</p>
+<p>提示： <strong>* 声明异常的关键字是throws， 抛出异常的关键字是throw *</strong></p>
+<h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><p><img src="media/15878096247534.jpg" alt="-w827"><br>如果在执行try块的过程中没有出现异常，则跳过catch子句。</p>
+<p>异常处理器： try块中的某条语句抛出异常，java就会跳过try中剩余的语句，然后开始查找处理这个异常的代码的过程。处理这个异常的代码称为异常处理器。</p>
+<p>寻找处理器的过程称为捕获一个异常。</p>
+<p>下面截图是详细说明<br><img src="media/15878314324548.jpg" alt="-w920"><br><img src="media/15878314425513.jpg" alt="-w902"></p>
+<p>注意： 一个通用的父类可以派生出各种异常类。如果一个catch块可以捕获一个父类的异常对象，它就能捕获那个父类的所有子类的异常对象。<br><img src="media/15878315889991.jpg" alt="-w865"><br><img src="media/15878316852638.jpg" alt="-w890"></p>
+<h3 id="从异常中获取信息"><a href="#从异常中获取信息" class="headerlink" title="从异常中获取信息"></a>从异常中获取信息</h3><p>异常对象包含过于异常的有价值的信息。</p>
+<p>Throwable类<br><img src="media/15878318295653.jpg" alt="-w827"><br>stackTraceElement[] 中的每个元素表示一个方法调用<br>stackTraceElement[] 数组中的元素有下列的方法可以调用：</p>
+<ul>
+<li>getMethodName() 获得每个元素的方法</li>
+<li>getClassName() 获得每个元素的类名</li>
+<li>getLineNumber() 获得每个元素的异常行号</li>
+</ul>
+<h3 id="示例学习：-声明、抛出和捕获异常"><a href="#示例学习：-声明、抛出和捕获异常" class="headerlink" title="示例学习： 声明、抛出和捕获异常"></a>示例学习： 声明、抛出和捕获异常</h3><p>不管是否在方法头中声明，每个方法都能抛出RuntimeException异常(免检异常)</p>
+<p>注意： 在异常事件中，执行仍然会继续。如果处理器没有捕获到这个异常，程序会突然中断。</p>
+<p>如果方法抛出RuntimeException和Error之外的异常，那么此方法就必须在try-catch块内调用</p>
+<h2 id="finally-语句"><a href="#finally-语句" class="headerlink" title="finally 语句"></a>finally 语句</h2><p>要点提示： 无论异常是否产生，finally子句总是会被执行的。<br>finally子句的语法：<br><img src="media/15878899426819.jpg" alt="-w739"><br>在任何情况下，finally块中的代码都会被执行，不论try块中是否出现异常或者是否被捕获。<br><img src="media/15878900814431.jpg" alt="-w888"></p>
+<h2 id="链式异常"><a href="#链式异常" class="headerlink" title="链式异常"></a>链式异常</h2><p>要点提示： 和其他异常一起抛出一个异常<br>catch块重新抛出原始的异常。有时候，可能需要同原始异常一起抛出一个新异常（带有附加信息），这称为链式异常。</p>
+<p>似乎是先抛出新异常，然后再抛出原始异常。</p>
+<h2 id="创建自定义异常类"><a href="#创建自定义异常类" class="headerlink" title="创建自定义异常类"></a>创建自定义异常类</h2><p>要点提示： 可以通过能够派生出java.lang.Exception 类来定义个自定义异常类</p>
+<p>java提供相当多的异常类，尽量不要使用它们而不妖创建自己的异常类。</p>
+<p>当遇到不能用预定义的异常类恰当描述问题，那么就可以通过派生Exception类或其他子类。<br><img src="media/15878913236238.jpg" alt="-w944"></p>
+<p>提示：<br>Java API中的大多数异常都包含两个构造方法：一个无参构造方法和一个带消息参数的构造方法。</p>
+<p>要创建一个InvalidRadiusException类，必须传递一个半径。</p>
+<h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h2><p>本章介绍如何使用File类获取文件/目录的属性以及删除和重命名文件/目录，以及创建目录。<br>要点提示： File类包含了获得一个文件/目录的属性，以及对文件/目录进行改名和删除的方法。</p>
+<p>存储在程序中的数据是暂时的，当程序终止时它们就会丢失。为了能够永久地保存程序中创建的数据，需要将它们存储到磁盘或其他永久存储设备的文件中。</p>
+<p>在文件系统中，每个文件都存放在一个目录中。</p>
+<ul>
+<li>绝对文件名<br>是由文件名和它的完整路径以及驱动器字母组成。</li>
+</ul>
+<p>绝对文件是依赖机器的。</p>
+<ul>
+<li>相对文件名是相对于当前工作目录的。对于相对文件名而言，完整目录被忽略。</li>
+</ul>
+<p>File类意图提供了一种抽象，这种抽象是指以不依赖机器的方式来处理很多依赖于机器的文件和路径名的复杂性。</p>
+<p>File类包含许多获取文件属性的方法，以及重命名和删除文件和目录的方法。</p>
+<p><strong><em>但是</em></strong>，File类不包含读写文件内容的方法。<br><img src="media/15878963885056.jpg" alt="-w908"></p>
+<p>File类是文件名及其目录路径的一个<strong>包装类</strong>。<br><img src="media/15878965955605.jpg" alt="-w862"></p>
+<p>可以用File类的isDirectory()方法来判断这个对象是否表示一个目录，还可以使用isFile()方法来判断这个对象是否表示一个文件名。</p>
+<p><strong>警告</strong>：在Windows中目录的分隔符是反斜杠\，但是在Java中，反斜杠是一个特殊字符，应该写成\的形式。</p>
+<p><strong>注意：</strong>构建一个File实例并不会在机器上创建一个文件。不管文件是否存在，都可以创建任意文件名的File实例。可以调用File实例上的exists()方法来判断这个文件是否存在。</p>
+<p>在程序中，不要直接使用绝对文件名，因为这样可能会使程序不能在其他平台上工作。</p>
+<p>应该使用于当前目录相关的文件名。</p>
+<p>斜杠/是Java的目录分隔符，这点和UNIX是一样的。</p>
+<h2 id="文件输入和输出"><a href="#文件输入和输出" class="headerlink" title="文件输入和输出"></a>文件输入和输出</h2><p>要点提示： 使用Scanner类从文件中读取文本数据，使用PrintWriter类向文本文件输入数据。</p>
+<p>File对象封装了文件或路径的属性，但是它既不包括创建文件的方法，也不包括从/向文件读/写数据（称为数据输入输出，简称I/O）的方法。</p>
+<p>为了完成I/O操作，需要使用恰当的I/O类创建对象。这些对象包含从/向文件读/写数据的方法。</p>
+<p>文本文件本质上是存储在磁盘上的字符。</p>
+<h3 id="使用PrintWriter写数据"><a href="#使用PrintWriter写数据" class="headerlink" title="使用PrintWriter写数据"></a>使用PrintWriter写数据</h3><p>java.io.PrintWriter类可用来创建一个文本文件写入数据。首先，必须为一个文本文件创建一个PrintWriter对象。<br><img src="media/15879076595179.jpg" alt="-w615"></p>
+<p>PrintWriter对象上有print、println和printf方法，可以使用它们向文件写入数据。<br><img src="media/15879077241331.jpg" alt="-w916"></p>
+<p>Java强制要求编写代码来处理I/O异常。</p>
+<pre><code>System.out.println();是控制台的标准Java对象。</code></pre><p>必须使用close()方法关闭文件。如果没有调用该方法，数据就不能正确地保存在文件中。</p>
+<h3 id="使用try-with-resources-自动关闭资源"><a href="#使用try-with-resources-自动关闭资源" class="headerlink" title="使用try-with-resources 自动关闭资源"></a>使用try-with-resources 自动关闭资源</h3><p>程序员经常会忘记关闭文件。JDK 7 提供了下面的新的try-with-resources 语法来自动关闭文件。<br><img src="media/15879085940993.jpg" alt="-w458"></p>
+<p>关键字try后声明和创建了一个资源。<br><strong>注意：</strong> 资源放在括号中。资源必须是AutoCloseable的子类型，比如PrintWriter，具有一个close方法。</p>
+<p>资源的声明和创建必须是在同一行语句中，可以在括号中进行多个资源的声明和创建。紧接着就是资源声明的块中的语句使用资源。快结束后，资源的close()方法自动调用以关闭资源。使用try-with-resources不仅可以避免错误，还可以简化代码。</p>
+<h3 id="使用Scanner读数据"><a href="#使用Scanner读数据" class="headerlink" title="使用Scanner读数据"></a>使用Scanner读数据</h3><p>Scanner类用来从控制台读取字符串和基本数据类型数值。<br>Scanner可以将输入分为由空白字符串分隔的标记。为了能从键盘读取，需要为System.in创建一个Scanner。</p>
+<p>为了从文件中读取，为文件创建一个Scanner，如下<br>            Scanner input = new Scanner(new File(filename));</p>
+<p>如同给出了Scanner中常用的方法。<br><img src="media/15879097560591.jpg" alt="-w854"></p>
+<p>从文件中读取数据使没有必要管斌输入文件，但这样做是一种释放文件占用的资源的好方法。可以使用try-with-resources语法重写该程序。</p>
+<p>scanner中默认分隔符是空格，可以将分隔符理解为标记。</p>
+<h3 id="Scanner-如何工作"><a href="#Scanner-如何工作" class="headerlink" title="Scanner 如何工作"></a>Scanner 如何工作</h3><p>nextInt()等方法都被称为标记读取方法。因为它们会读取用分隔符分隔开的标记。默认情况下，分隔符是空格。<br>可以使用useDelimiter(String regex)方法设置新的分隔模式。</p>
+<p>输入方法的工作原理：<br>一个标记方法首先跳过任意分隔符，然后读取一个以分隔符结束的标记。然后，对于nextByte，nextShort等，这个标记就分别被自动地转换为一个byte，short等类型。对于next()方法而言是无须做转换的。如果标记和期望的类型不匹配，就会抛出一个运行异常java.util.InputMismathcException.</p>
+<p>方法next()和nextLine()都会读取一个字符串。前者读取一个由分隔符分隔的字符串，但是后者会读取一个以换行符结束的行。</p>
+<p><strong>注意：</strong>行分隔符是由系统定义的，在WIndows平台上是\r\n， 而在UNIX上是\n。</p>
+<p>为了得到特定平台上的行分隔符，使用<br>String lineSeparator = System.getProperty(“line.separator”);</p>
+<p>如果从键盘输入，每行就以回车键(Enter key)结束，它对应\n字符。</p>
+<p><strong><em>有关nextLine()的问题</em></strong><br><img src="media/15879714308600.jpg" alt="-w904"></p>
+<p>可以使用Scanner类从文件或者键盘读取数据。也可以使用Scanner类从一个字符串扫描数据。</p>
+<h3 id="实例学习：-替换文本"><a href="#实例学习：-替换文本" class="headerlink" title="实例学习： 替换文本"></a>实例学习： 替换文本</h3><p><img src="media/15879715940217.jpg" alt="-w887"></p>
+<h2 id="从Web上读取数据"><a href="#从Web上读取数据" class="headerlink" title="从Web上读取数据"></a>从Web上读取数据</h2><p>要点提示： 如同从电脑中的文件读取数据一样，也可以从Web上的文件中读取数据<br>URL全名：Uniform Resource Locator, 统一资源定位器</p>
+<p>为了读取一个文件，首先要使用java.net.URL类的构造方法，为该文件创建一个URL对象。</p>
+<p>要让URL类来识别一个有效的URL，前缀http:// 是必须的。</p>
+<p>创建一个URL对象后，可以使用URL类中定义的openStream()方法来打开输入流和用输入流创建如下Scanner对象。</p>
+<p>Scanner input = new Scanner(url.openStream());<br>(这里的意思是input就是给定url的内容)</p>
+<h2 id="实例学习：-Web-爬虫"><a href="#实例学习：-Web-爬虫" class="headerlink" title="实例学习： Web 爬虫"></a>实例学习： Web 爬虫</h2><p>要点提示： 学习开发一个程序，可以跟随超链接来遍历Web。<br>World Wide Web,缩写为WWW、W3或者Web，是一个因特网上的相互链接的超文本文档。使用Web浏览器，可以查看一个文档，以及跟随超链接查看其他文档。</p>
+<p>Web爬虫，可以跟随超链接来自动遍历Web的程序。</p>
+<p>客户程序从一个Web服务器上获取文件。</p>
+<p>程序的算法如下：<br><img src="media/15881308836609.jpg" alt="-w1048"></p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>nianchu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.nianchu.space/2020/02/26/Java/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI/O/" title="Java&#x2F;Java-异常处理和文本I\O">http://www.nianchu.space/2020/02/26/Java/Java-异常处理和文本I/O/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/26/JavaScript/JavaScript/" rel="prev" title="JavaScript/JavaScript">
+      <i class="fa fa-chevron-left"></i> JavaScript/JavaScript
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/02/26/Matlab/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/" rel="next" title="Matlab基本运算">
+      Matlab基本运算 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-异常处理和文本I-O"><span class="nav-number">1.</span> <span class="nav-text">Java-异常处理和文本I/O</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理概述"><span class="nav-number">1.1.</span> <span class="nav-text">异常处理概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常类型"><span class="nav-number">1.2.</span> <span class="nav-text">异常类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于异常处理的更多知识"><span class="nav-number">1.3.</span> <span class="nav-text">关于异常处理的更多知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明异常"><span class="nav-number">1.3.1.</span> <span class="nav-text">声明异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抛出异常"><span class="nav-number">1.3.2.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#捕获异常"><span class="nav-number">1.3.3.</span> <span class="nav-text">捕获异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从异常中获取信息"><span class="nav-number">1.3.4.</span> <span class="nav-text">从异常中获取信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例学习：-声明、抛出和捕获异常"><span class="nav-number">1.3.5.</span> <span class="nav-text">示例学习： 声明、抛出和捕获异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#finally-语句"><span class="nav-number">1.4.</span> <span class="nav-text">finally 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链式异常"><span class="nav-number">1.5.</span> <span class="nav-text">链式异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建自定义异常类"><span class="nav-number">1.6.</span> <span class="nav-text">创建自定义异常类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File类"><span class="nav-number">1.7.</span> <span class="nav-text">File类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件输入和输出"><span class="nav-number">1.8.</span> <span class="nav-text">文件输入和输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用PrintWriter写数据"><span class="nav-number">1.8.1.</span> <span class="nav-text">使用PrintWriter写数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用try-with-resources-自动关闭资源"><span class="nav-number">1.8.2.</span> <span class="nav-text">使用try-with-resources 自动关闭资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Scanner读数据"><span class="nav-number">1.8.3.</span> <span class="nav-text">使用Scanner读数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scanner-如何工作"><span class="nav-number">1.8.4.</span> <span class="nav-text">Scanner 如何工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例学习：-替换文本"><span class="nav-number">1.8.5.</span> <span class="nav-text">实例学习： 替换文本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从Web上读取数据"><span class="nav-number">1.9.</span> <span class="nav-text">从Web上读取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例学习：-Web-爬虫"><span class="nav-number">1.10.</span> <span class="nav-text">实例学习： Web 爬虫</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nianchu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nianchu99?tab=projects" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nianchu99?tab=projects" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:l17623029272@163.com" title="E-Mail → mailto:l17623029272@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/2795043945/profile?topnav=1&wvr=6" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2795043945&#x2F;profile?topnav=1&amp;wvr=6" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-nianchu"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by nianchu</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共76.3k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

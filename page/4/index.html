@@ -222,7 +222,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/20/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83%E5%92%8C%E6%88%AA%E5%8F%96/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/26/C/C%E7%BB%93%E6%9E%84%E4%BD%93%E5%86%8D%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -236,68 +236,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/20/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83%E5%92%8C%E6%88%AA%E5%8F%96/" class="post-title-link" itemprop="url">java字符串比较和截取</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-02-20 17:32:47 / 修改时间：17:35:46" itemprop="dateCreated datePublished" datetime="2020-02-20T17:32:47+08:00">2020-02-20</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="字符串比较和截取"><a href="#字符串比较和截取" class="headerlink" title="字符串比较和截取"></a>字符串比较和截取</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 字符串比较</span></span><br><span class="line">String s11 = <span class="string">"xiaolei"</span>;</span><br><span class="line">String s12 = <span class="string">"zlei"</span>;</span><br><span class="line">String s13 =<span class="string">"Xiaolei"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//1 比较相等</span></span><br><span class="line"><span class="comment">//1.1 包括大小写</span></span><br><span class="line">System.out.println(s11.equals(s12));<span class="comment">//flase</span></span><br><span class="line">System.out.println(s11.equals(s13));<span class="comment">//flase</span></span><br><span class="line"><span class="comment">//1.2 忽视大小写</span></span><br><span class="line">System.out.println(s11.equalsIgnoreCase(s13));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//2 比较大小</span></span><br><span class="line"><span class="comment">//2.1 不忽略大小写</span></span><br><span class="line">System.out.println(s11.compareTo(s12));<span class="comment">//20；依次比较两字符串相应位置的ASCII码的大小。如果相同比较下一位，如果不同就返回此位置字符与参照字符的ASCII码的差值。如果完全相同，就返回0</span></span><br><span class="line"><span class="comment">//2.2 忽略大小写</span></span><br><span class="line"><span class="comment">// 使用compareToIgnoreCase起到忽略大小写的作用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3 比较前缀和后缀</span></span><br><span class="line"><span class="comment">//3.1 比较前缀boolean startsWith();</span></span><br><span class="line">System.out.println(s11.startsWith(<span class="string">"i"</span>));<span class="comment">//flase</span></span><br><span class="line">System.out.println(s11.startsWith(<span class="string">"x"</span>));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3.2 比较后缀</span></span><br><span class="line">System.out.println(s11.endsWith(<span class="string">"i"</span>));<span class="comment">//true</span></span><br><span class="line">System.out.println(s11.endsWith(<span class="string">"x"</span>));<span class="comment">//flase</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 比较前后缀小实例</span></span><br><span class="line"><span class="keyword">int</span> docNumbers = <span class="number">0</span>,javaNumbers=<span class="number">0</span>;</span><br><span class="line">String [] docFloder = &#123;<span class="string">"javaTest.doc"</span>,<span class="string">"PythonTest.docx"</span>,<span class="string">"MatlabTest.m"</span>,<span class="string">"javaFinal.ppt"</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(String doc: docFloder) &#123;</span><br><span class="line">	<span class="keyword">if</span> (doc.endsWith(<span class="string">".doc"</span>)) &#123;</span><br><span class="line">		docNumbers++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (String doc: docFloder) &#123;</span><br><span class="line">	<span class="keyword">if</span>(doc.startsWith(<span class="string">"java"</span>)) &#123;</span><br><span class="line">		javaNumbers++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">"doc文档个数为 "</span>+docNumbers);</span><br><span class="line">System.out.println(<span class="string">"java相关文档格个数为 "</span>+javaNumbers);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 知识补充：trim() tool and toLowerCase() tool</span></span><br><span class="line"><span class="comment">// trim() 去掉字符串前后空白</span></span><br><span class="line"><span class="comment">// toLowerCase() 将字符串全部转化为小写</span></span><br><span class="line">System.out.println(<span class="string">"ABCDEFG"</span>.toLowerCase());</span><br><span class="line">System.out.println(<span class="string">"   abcdefg   "</span>);</span><br><span class="line">System.out.println(<span class="string">"  abcdefg  "</span>.trim().toUpperCase());<span class="comment">//去除字符串空白以后再将字符串全部转化为大写</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*Output:</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">-2</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">true</span></span><br><span class="line"><span class="comment">false</span></span><br><span class="line"><span class="comment">doc文档个数为 1</span></span><br><span class="line"><span class="comment">java相关文档格个数为 2</span></span><br><span class="line"><span class="comment">abcdefg</span></span><br><span class="line"><span class="comment">  abcdefg   </span></span><br><span class="line"><span class="comment">ABCDEFG 	</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 字符串截取</span></span><br><span class="line"><span class="comment">// 1 String substring(int beginIndex) //唯一参数为指定开始索引，这一方法会截取从开始索引到字符串末尾的子字符串</span></span><br><span class="line"><span class="comment">// 2 String substring(int beginIndex, int endIndex) //包含两个参数，开始索引和结束索引，需要注意的是所截取的字符串包括开始索引处的字符，但是不包括结束索引处的字符</span></span><br><span class="line"><span class="comment">//coding：</span></span><br><span class="line">String s_jiequString = <span class="string">"ABCDEFGHIGKLMNOPQRST"</span>;</span><br><span class="line">System.out.println(s_jiequString.substring(<span class="number">4</span>));</span><br><span class="line">System.out.println(s_jiequString.substring(<span class="number">4</span>, <span class="number">9</span>));</span><br><span class="line"><span class="comment">/*Output: </span></span><br><span class="line"><span class="comment"> * EFGHIGKLMNOPQRST</span></span><br><span class="line"><span class="comment"> * EFGHI</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 知识补充 ：使用split方法分割字符串</span></span><br><span class="line"><span class="comment">//split ：参数是字符串，返回值是String[]</span></span><br><span class="line">String s_fengeString = <span class="string">"abdabcdbafaga"</span>;</span><br><span class="line">String[] s_fenge_results= s_fengeString.split(<span class="string">"a"</span>);</span><br><span class="line"><span class="keyword">for</span> (String s_fenge_result:s_fenge_results) &#123;</span><br><span class="line">	System.out.println(s_fenge_result);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Output</span></span><br><span class="line"><span class="comment">bd</span></span><br><span class="line"><span class="comment">bcdb</span></span><br><span class="line"><span class="comment">f</span></span><br><span class="line"><span class="comment">g</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/19/Matlab/%E3%80%8AMatlab%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/19/Matlab/%E3%80%8AMatlab%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%8B/" class="post-title-link" itemprop="url">《Matlab从入门到精通》</a>
+            <a href="/2020/03/26/C/C%E7%BB%93%E6%9E%84%E4%BD%93%E5%86%8D%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">C/C结构体再学习</a>
         </h1>
 
         <div class="post-meta">
@@ -308,14 +247,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-19 22:14:54" itemprop="dateCreated datePublished" datetime="2020-02-19T22:14:54+08:00">2020-02-19</time>
+              <time title="创建时间：2020-03-26 23:30:05" itemprop="dateCreated datePublished" datetime="2020-03-26T23:30:05+08:00">2020-03-26</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-21 23:37:24" itemprop="dateModified" datetime="2020-02-21T23:37:24+08:00">2020-02-21</time>
+                <time title="修改时间：2020-03-29 22:58:38" itemprop="dateModified" datetime="2020-03-29T22:58:38+08:00">2020-03-29</time>
               </span>
 
           
@@ -329,7 +268,46 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 双精度(double)：8字节；单精度(single)：4字节</span></span><br><span class="line"><span class="comment">% 复数还可以使用函数来产生复数??complex;complex接收两个参数，前一个是实部，后一个是虚数;前一个参数可以为零，但是后面的参数不行</span></span><br><span class="line"><span class="comment">% inf和-inf来表示正无穷大和负无穷大；除法运算中除数为0或者运算结果溢出都会导致inf或者-inf的结果。</span></span><br><span class="line">x=<span class="built_in">exp</span>(<span class="number">1000000</span>)</span><br><span class="line">x=<span class="built_in">log</span>(<span class="number">0</span>)</span><br><span class="line"><span class="comment">% 上述两行代码的输出结果分别为：Inf,-Inf</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% NaN用来表示一个既不是实数也不是复数的数值。NAN是Not A Number的缩写。类似0/0,inf/inf这样的表达式得到的结果均为NAN</span></span><br><span class="line"><span class="built_in">inf</span>/-<span class="built_in">inf</span></span><br><span class="line"><span class="built_in">nan</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 逻辑类型</span></span><br><span class="line"><span class="comment">% 逻辑类型用1和0来表示。</span></span><br><span class="line"><span class="comment">% 函数logical()来得到逻辑类型的数值。它可以把任何非零的数值转换为逻辑true(1)，反过来也可以</span></span><br><span class="line">x = logical(<span class="number">-1</span>)</span><br><span class="line"><span class="comment">% x = logical 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 字符和字符串</span></span><br><span class="line"><span class="comment">% Matlab中规定用char数据类型来表示一个字符串。一个char类型的1*n的数组则可以称为字符串String。Matlab中char类型都是以2字节的unicode字符来存储的</span></span><br><span class="line"><span class="comment">% 可以使用一对单引号来表示字符串：</span></span><br><span class="line">str = <span class="string">"I love china!"</span></span><br><span class="line"><span class="comment">% 也可以使用char函数来构造字符串，下面的代码将得到字符串'AB'</span></span><br><span class="line">str=char([<span class="number">65</span> <span class="number">66</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">% 函数句柄</span></span><br><span class="line"><span class="comment">% 是用来提供间接调用函数的数据类型。函数句柄可以转递给其他函数以便该函数所代表的函数就可以被调用。函数句柄还可以储存起来，以便以后利用。</span></span><br><span class="line"><span class="comment">% 函数句柄可以用符号@后面跟着函数名来表示。下面的函数句柄使得自定义变量可以用来代替tan函数的功能</span></span><br><span class="line">f=@<span class="built_in">tan</span></span><br><span class="line">jieguo=f(<span class="built_in">pi</span>/<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% 结构体类型</span></span><br><span class="line"><span class="comment">% 结构体是根据属性名组织起来的不同类型数据的集合。</span></span><br><span class="line"><span class="comment">% 有一种容易与结构体类型混淆的数据类型是单元数组类型。它们之间既有相同点，也有不同点：“单元数组类型，它是一种特殊类型的MATLAB 7.0数组，</span></span><br><span class="line"><span class="comment">% 它的每一个元素叫做单元，而每一个单元包含MATLAB 7.0数组。结构体和单元数组的共同之处在于它们都提供了一种分级存储机制来存储不同类型的数据，</span></span><br><span class="line"><span class="comment">% 不同之处是组织数据的方式不一样。结构体数组里的数据是通过属性名来引用的，而在单元数组里，数据是通过单元数组下标引用来操作的。”</span></span><br><span class="line"><span class="comment">% 结构体数组是由数据容器组成的数组，这种数组容器称为结构体的属性。结构体的任何一个属性可以包含任何一种类型的数据。</span></span><br><span class="line"><span class="comment">% 和其他数据类型一样，结构体也是一个数组，一个单独的结构体就是一个1*1结构体数组。</span></span><br><span class="line"><span class="comment">% 可以构造任何维数和形状的结构体数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 结构体构造</span></span><br><span class="line"><span class="comment">% 1 利用赋值语句</span></span><br><span class="line">Student(<span class="number">1</span>).Name=<span class="string">'xiaoming'</span>;</span><br><span class="line">Student(<span class="number">1</span>).Score=<span class="number">100</span>;</span><br><span class="line">Student(<span class="number">1</span>).fees=[<span class="number">6500</span>,<span class="number">10000</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">% 在上面的基础上把结构体数组扩展成1*2的结构体</span></span><br><span class="line"></span><br><span class="line">Student(<span class="number">2</span>).Name=<span class="string">'xiaolei'</span>;</span><br><span class="line">Student(<span class="number">2</span>).Score=<span class="number">100</span>;</span><br><span class="line">Student(<span class="number">2</span>).fees=[<span class="number">6500</span>,<span class="number">10000</span>];</span><br><span class="line">Student(<span class="number">1</span>) <span class="comment">%多维结构数组输出时要用括号加上标量</span></span><br><span class="line">Student(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% 2 利用函数struct()来定义</span></span><br><span class="line"><span class="comment">% (1)单独使用struct函数</span></span><br><span class="line">Student(<span class="number">3</span>)=struct(<span class="string">'Name'</span>,<span class="string">'xiaohong'</span>,<span class="string">'Score'</span>,<span class="number">99</span>,<span class="string">'fees'</span>,[]);</span><br><span class="line">Student(<span class="number">3</span>)</span><br><span class="line"><span class="comment">% struct函数和repmat函数配合使用</span></span><br><span class="line"><span class="comment">% struct函数的输入为单元数组(后两种没有搞懂暂时)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">% 访问结构体数组的数据</span></span><br><span class="line">Personel=struct(<span class="string">'Name'</span>,&#123;<span class="string">'xiaolei'</span>,<span class="string">'dalei'</span>,<span class="string">'zhonglei'</span>&#125;,<span class="string">'Score'</span>,&#123;[<span class="number">100</span>,<span class="number">8</span>,<span class="number">100</span>],[<span class="number">0</span>,<span class="number">60</span>,<span class="number">90</span>],[<span class="number">100</span>,<span class="number">50</span>,<span class="number">100</span>]&#125;);</span><br><span class="line">New=Personel(<span class="number">1</span>:<span class="number">2</span>)<span class="comment">% 生成新的结构体</span></span><br><span class="line">News=New(<span class="number">1</span>)<span class="comment">% 访问新结构体的第一维数据</span></span><br><span class="line">New(<span class="number">2</span>).Name<span class="comment">% 访问第一维数据的Name值</span></span><br><span class="line">Personel(<span class="number">3</span>).Score(<span class="number">2</span>)<span class="comment">% 访问第三个人的Score中的第三个值</span></span><br><span class="line">Personel.Name <span class="comment">% 用于访问结构体数组中所有元素的某个属性</span></span><br><span class="line"><span class="comment">% 使用矩阵合并符来合并上面输出的结果</span></span><br><span class="line">Personel_hebing=[Personel.Name]<span class="comment">% 'xiaoleidaleizhonglei'</span></span><br><span class="line"><span class="comment">% 也可以把它们合并在一个单元数组中</span></span><br><span class="line">Personel=&#123;Personel.Name&#125; <span class="comment">%     &#123;'xiaolei'&#125;    &#123;'dalei'&#125;    &#123;'zhonglei'&#125;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">% 单元数组类型</span></span><br><span class="line"><span class="comment">% 1 单元数组的构造</span></span><br><span class="line"><span class="comment">% (1)左标志法</span></span><br><span class="line">c&#123;<span class="number">1</span>,<span class="number">1</span>&#125;=<span class="string">'nianchu'</span>;</span><br><span class="line">c&#123;<span class="number">1</span>,<span class="number">2</span>&#125;=<span class="built_in">eye</span>(<span class="number">3</span>,<span class="number">3</span>);</span><br><span class="line">c&#123;<span class="number">2</span>,<span class="number">1</span>&#125;=@<span class="built_in">sec</span>;</span><br><span class="line">c&#123;<span class="number">2</span>,<span class="number">2</span>&#125;=<span class="built_in">false</span>;</span><br><span class="line">c&#123;<span class="number">3</span>,<span class="number">1</span>&#125;=<span class="built_in">true</span>;</span><br><span class="line">c</span><br><span class="line"></span><br><span class="line"><span class="comment">% 2.21</span></span><br><span class="line"><span class="comment">% (2)右标志法</span></span><br><span class="line"><span class="comment">% 右标志法和左标志法类似，只是将左边的标志符&#123;&#125;用括号代替，而在右边添加标志符即可</span></span><br><span class="line"><span class="comment">% 代码实现：</span></span><br><span class="line">a(<span class="number">1</span>,<span class="number">1</span>)=&#123;<span class="string">"xiaochu"</span>&#125;;</span><br><span class="line">a(<span class="number">1</span>,<span class="number">2</span>)=&#123;<span class="built_in">eye</span>(<span class="number">4</span>,<span class="number">4</span>)&#125;;</span><br><span class="line">a(<span class="number">2</span>,<span class="number">1</span>)=&#123;@<span class="built_in">tan</span>&#125;;</span><br><span class="line">a(<span class="number">2</span>,<span class="number">2</span>)=&#123;[]&#125;;</span><br><span class="line"><span class="comment">% 或者下面这样：</span></span><br><span class="line">b=&#123;<span class="string">"chuntian"</span>,[<span class="number">341</span>,<span class="number">434</span>];<span class="string">'dream'</span>,<span class="string">'weiling'</span>&#125;;</span><br><span class="line">b</span><br><span class="line"></span><br><span class="line"><span class="comment">% 知识补充：eye（）函数的用法——返回单位矩阵：当eye(m,n)中m和n参数不相等时，单位矩阵会出现全0行或列</span></span><br><span class="line"><span class="comment">% 1 返回N*N的单位矩阵</span></span><br><span class="line"><span class="comment">% 2 返回M*N的单位矩阵</span></span><br><span class="line"><span class="comment">% 3 返回和给定矩阵一样大小的单位矩阵</span></span><br><span class="line"><span class="comment">% 4 无参数时返回标量1</span></span><br><span class="line"><span class="comment">% 代码实现：</span></span><br><span class="line">a1=<span class="built_in">eye</span>(<span class="number">3</span>)</span><br><span class="line">a2=<span class="built_in">eye</span>(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">a3=<span class="built_in">eye</span>([<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">a4=<span class="built_in">eye</span>(<span class="built_in">size</span>(b))</span><br><span class="line">a4=<span class="built_in">eye</span>()</span><br><span class="line"><span class="comment">% 补充：～eye(m,n)为eye(m,n)中1，0完全对换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 显示单元数组的方法：</span></span><br><span class="line"><span class="comment">% 1 直接用数组的名字</span></span><br><span class="line"><span class="comment">% 2 使用函数celldisp()——使用此函数会隔行依次输出数组中的元素</span></span><br><span class="line"><span class="comment">% 法2代码实现</span></span><br><span class="line">celldisp(a)</span><br><span class="line"><span class="comment">% 说明：celldisp函数的显示格式与直接输入单元组名的显示格式是不同的。celldisp函数更适用于具有大量数据的单元数组的显示</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 单元数组的读取</span></span><br><span class="line"><span class="comment">% 1 读取全面c数组中&#123;1,1&#125;处的字符串：</span></span><br><span class="line">Str=c&#123;<span class="number">1</span>,<span class="number">1</span>&#125;</span><br><span class="line"><span class="comment">% 2 读取单元数组中若干个单元的数据，例如读取第二行的数据：</span></span><br><span class="line">c(<span class="number">2</span>,:)</span><br><span class="line"><span class="comment">% 读取单元数组的第一列</span></span><br><span class="line">c(:,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">% 单元数组的删除</span></span><br><span class="line"><span class="comment">% 将空矩阵赋给单元数组的某一行或者某一列是可以删除这一行或者这一列</span></span><br><span class="line"><span class="comment">% 删掉c单元数组中第二列的值</span></span><br><span class="line">c(:,<span class="number">2</span>)=[]</span><br><span class="line"></span><br><span class="line"><span class="comment">% 矩阵的基本操作</span></span><br><span class="line"><span class="comment">% Matlab是基于矩阵运算的一个软件，所有数据均以二维矩阵或高维数组的形式存储，Matlab又称为矩阵实验室</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 名词介绍：</span></span><br><span class="line"><span class="comment">% 标量：1*1的矩阵</span></span><br><span class="line"><span class="comment">% 向量： 1*n的矩阵</span></span><br><span class="line"><span class="comment">% 空矩阵： 至少有一堆的长度为0的矩阵称为空矩阵，用[]表示</span></span><br><span class="line">Number=<span class="number">1.5</span>;</span><br><span class="line">whos Number</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">% 矩阵的构造</span></span><br><span class="line"><span class="comment">% 1 简单矩阵构造(略)</span></span><br><span class="line"><span class="comment">% 2 特殊矩阵构造：</span></span><br><span class="line"><span class="comment">% 举例：</span></span><br><span class="line"><span class="comment">% ones——产生矩阵元素全为1的矩阵</span></span><br><span class="line"><span class="comment">% zeros——产生矩阵元素全为0的矩阵</span></span><br><span class="line"><span class="comment">% eye——上面已经介绍过了</span></span><br><span class="line"><span class="built_in">ones</span>(<span class="number">2</span>)</span><br><span class="line"><span class="built_in">ones</span>(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="built_in">zeros</span>(<span class="number">2</span>)</span><br><span class="line"><span class="built_in">zeros</span>(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line"><span class="comment">% diag 把向量转化为对角矩阵或者得到矩阵的对角元素</span></span><br><span class="line"><span class="comment">% magic 产生魔方矩阵，即每行、每列之和相等的矩阵</span></span><br><span class="line"><span class="comment">% rand 产生0-1均匀分布的随机数（此函数是以机器时间作为随机种子的，因而每次运行得到的结果都是不同的 ）</span></span><br><span class="line"><span class="comment">% randn 产生均值为0，方差为1高斯分布的随机数</span></span><br><span class="line"><span class="comment">% randperm 产生整数1-n的随机排列</span></span><br><span class="line"><span class="comment">% compan 长生多项式的伴随矩阵</span></span><br><span class="line"><span class="comment">% Diga之对角矩阵和对角元素</span></span><br><span class="line"><span class="comment">% 形成对角矩阵</span></span><br><span class="line">Strs=<span class="string">'I will be a successful man'</span></span><br><span class="line">Value=[<span class="number">9</span> <span class="number">9</span> <span class="number">9</span> <span class="number">2</span> <span class="number">7</span> <span class="number">2</span>]</span><br><span class="line">X=<span class="built_in">diag</span>(Strs,<span class="number">-1</span>)</span><br><span class="line">X=<span class="built_in">diag</span>(Value,<span class="number">0</span>)</span><br><span class="line"><span class="comment">% 获得对角元素</span></span><br><span class="line">Values=<span class="built_in">diag</span>(X,<span class="number">0</span>)</span><br><span class="line"><span class="comment">% 注意：当k=0时，v为X的主对角线；当k&gt;0时，v为上方第k条对角线；当k&lt;0时，v为下方第k条对角线。</span></span><br><span class="line"><span class="comment">% 如果k的值缺失，则默认为主对角</span></span><br></pre></td></tr></table></figure>
+          <h1 id="Struct"><a href="#Struct" class="headerlink" title="Struct"></a>Struct</h1><h2 id="语句格式"><a href="#语句格式" class="headerlink" title="语句格式"></a>语句格式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct tag&#123;</span><br><span class="line">    member-list</span><br><span class="line">     member-list</span><br><span class="line">      member-list</span><br><span class="line">      ...</span><br><span class="line">&#125; variable-list ;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>tag:结构体标签</li>
+<li>member-list：标准的变量定义。例如:int i; float j;</li>
+<li>variable-list: 结构变量，定义在结构的末尾，最后一个分号之前，可以指定一个或者多个结构变量。</li>
+</ul>
+<h2 id="用法详解"><a href="#用法详解" class="headerlink" title="用法详解"></a>用法详解</h2><p><strong>一般情况下</strong><br>tag, member-list, variable-list这三部分至少要出现2个。<br><img src="media/15852388489634.jpg" alt="-w834"></p>
+<p>结构体的成语可以包含其他结构体，也可以包含指向自己结构体类型的指针。而通常这种指针的应用是为了实现一些更高级的数据结构(如链表和树)。<br><img src="media/15852388708573.jpg" alt="-w827"></p>
+<p>如果两个结构体互相包含，则需要对其中一个结构体进行不完整声明。<br><img src="media/15852387316754.jpg" alt="-w808"></p>
+<h2 id="结构体变量的初始化"><a href="#结构体变量的初始化" class="headerlink" title="结构体变量的初始化"></a>结构体变量的初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">struct Books</span><br><span class="line">&#123;</span><br><span class="line">    char title[50];</span><br><span class="line">    char author[50];</span><br><span class="line">    char subject[100];</span><br><span class="line">    int book_id;</span><br><span class="line">&#125; book = &#123;&quot;结构体&quot;, &quot;nianchu&quot;, &quot;Programming&quot;, 123321&#125;;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">printf(&quot;title : %s\nauthor: %s\nsubject: %s\nbook_id: %d\n&quot;, book.title, book.author, book.subject, book.book_id)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="访问结构体成员"><a href="#访问结构体成员" class="headerlink" title="访问结构体成员"></a>访问结构体成员</h2><ul>
+<li>成员访问运算符(.)</li>
+<li>使用struct关键字来定义结构体类型的变量<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">struct Books Book1;;</span><br><span class="line">   </span><br><span class="line">    </span><br><span class="line">    /* Book1 详情*/</span><br><span class="line">    strcpy(Book1.title,&quot;Matlab程序设计&quot;);</span><br><span class="line">    strcpy(Book1.author,&quot;bowenki&quot;);</span><br><span class="line">    strcpy(Book1.subject,&quot;编程语言&quot;);</span><br><span class="line">    Book1.book_id = 123456;</span><br><span class="line">    </span><br><span class="line">    /* 输出Book1的详细信息*/</span><br><span class="line">    printf(&quot;These is information about Book1:\nTitle:%s\nAuthor:%s\nSubject:%s\nBook_id:%d&quot;, Book1.title, Book1.author,Book1.subject,Book1.book_id);</span><br></pre></td></tr></table></figure>
+<h2 id="结构作为函数参数"><a href="#结构作为函数参数" class="headerlink" title="结构作为函数参数"></a>结构作为函数参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">struct Books &#123;</span><br><span class="line">    char title[50];</span><br><span class="line">    char author[50];</span><br><span class="line">    char subject[100];</span><br><span class="line">    int book_id;</span><br><span class="line">    </span><br><span class="line">&#125; book = &#123;&quot;C语言&quot;, &quot;niaochu.space&quot;,&quot;编程语言&quot;, 123&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void printStruct(struct Books book);</span><br><span class="line"> </span><br><span class="line">void printStruct(struct Books book)&#123;</span><br><span class="line">    printf(&quot;Title:%s\n&quot;,book.title);</span><br><span class="line">       printf(&quot;Author:%s\n&quot;,book.author);</span><br><span class="line">        printf(&quot;Subject:%s\n&quot;,book.subject);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    struct Books Book1;</span><br><span class="line">    </span><br><span class="line">    strcpy(Book1.title,&quot;Matlab程序设计&quot;);</span><br><span class="line">    strcpy(Book1.author,&quot;bowenki&quot;);</span><br><span class="line">    strcpy(Book1.subject,&quot;编程语言&quot;);</span><br><span class="line">    Book1.book_id = 123456;</span><br><span class="line">    printStruct(Book1);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="指向结构的指针"><a href="#指向结构的指针" class="headerlink" title="指向结构的指针"></a>指向结构的指针</h2>为了使用指向该结构的指针访问结构的成员，必须使用-&gt;运算符号<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int main()&#123;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    struct Books *pointBook;</span><br><span class="line">    struct Books Book2;</span><br><span class="line">    pointBook = &amp; Book2;</span><br><span class="line">    </span><br><span class="line">    /* 给Book2初始化*/</span><br><span class="line">    strcpy(pointBook -&gt; title, &quot;我真的要疯了&quot;);</span><br><span class="line">    strcpy(pointBook -&gt; author,&quot;我太难了&quot;);</span><br><span class="line">    strcpy(pointBook -&gt; subject, &quot;神啊，救救我吧&quot;);</span><br><span class="line">    </span><br><span class="line">    printStruct(Book2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="位域"><a href="#位域" class="headerlink" title="位域"></a>位域</h3><h4 id="前情提示："><a href="#前情提示：" class="headerlink" title="前情提示："></a>前情提示：</h4>  有些信息在存储中，并不需要占用一个完整的字符，而只需要占用几个或一个二进制位。这时候，可以使用位域。<h4 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h4><ul>
+<li>用1位二进位存放一个开关变量，只有0和1两种状态</li>
+<li>读取外部文件格式– 可以读取非标准的文件格式。例如：9位的整数<h4 id="位域的定义和位域变量的说明"><a href="#位域的定义和位域变量的说明" class="headerlink" title="位域的定义和位域变量的说明"></a>位域的定义和位域变量的说明</h4>位域定义和结构体定义相仿：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">struct 位域结构名</span><br><span class="line">&#123;</span><br><span class="line">位域列表</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>其中位域列表的形式为：<br>类型说明符 位域名： 位域长度<br>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">struct bs&#123;</span><br><span class="line">    int a:8;</span><br><span class="line">    int b;</span><br><span class="line">    int c;</span><br><span class="line">    </span><br><span class="line">&#125; data;</span><br></pre></td></tr></table></figure>
+<p>对于位域的几点说明：</p>
+<ul>
+<li>一个位域存储在同一个字节中，如一个字节中所剩余空间不够存放另一个位域时，则会从下一个单元起存放该位域。也可以有意使某位域从下一单元开始：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">struct bs&#123;</span><br><span class="line">    unsigned a:4;</span><br><span class="line">    unsigned  : 4; /* 空域 */</span><br><span class="line">    unsigned b:4;  /* 从下一单元开始存放 */</span><br><span class="line">    unsigned c : 4;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>由于位于不允许跨两个字节，因此位域的长度不能大于一个字节的长度，也就是说不能超过8位二进位。</li>
+<li>位域可以是无名位域，这时它只用来作填充或调整位置。无名的位域是不能使用的。</li>
+</ul>
+<p><strong>* 位域在本质上就是一种结构体类型，但是其成员是按二进制分配的。 *</strong></p>
+<h4 id="位域的使用"><a href="#位域的使用" class="headerlink" title="位域的使用"></a>位域的使用</h4><p>位域的使用和结构体相同，存在下面两种方法：</p>
+<ul>
+<li>位域变量名.位域名</li>
+<li>位域变量名 -&gt; 位域名</li>
+</ul>
+<p>位域使用的实例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">main()&#123;</span><br><span class="line">    struct bs&#123;</span><br><span class="line">        unsigned a:1;</span><br><span class="line">        unsigned b: 3;</span><br><span class="line">        unsigned c : 4;</span><br><span class="line">        </span><br><span class="line">    &#125;bit, *pbit;</span><br><span class="line">    </span><br><span class="line">    bit.a = 1;</span><br><span class="line">    bit.b = 7;</span><br><span class="line">    bit.c 15;</span><br><span class="line">    printf(&quot;%d,%d,%d,\n&quot;,bit.a, bit.b, bit.c );</span><br><span class="line">    pbit = &amp; bit;</span><br><span class="line">    pbit -&gt; a = 0;</span><br><span class="line">    pbit -&gt; b = 0;</span><br><span class="line">    pbit -&gt; a = 0;</span><br><span class="line">    pbit -&gt; b&amp;3;</span><br><span class="line">    pbit -&gt; c|=1;</span><br><span class="line">     printf(&quot;%d,%d,%d,\n&quot;,pbit-&gt;a, pbit-&gt;b, pbit-&gt;c );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -348,7 +326,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/19/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/24/Matlab/TestError/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -362,70 +340,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/19/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">字符串查找</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-02-19 00:58:05 / 修改时间：01:19:33" itemprop="dateCreated datePublished" datetime="2020-02-19T00:58:05+08:00">2020-02-19</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在String类中提供了indexOf和lastIndexOf方法用于查找字符或字符串，返回值是查找的字符串所在的位置，-1表示没有找到。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String的Char At(int index)方法可以返回索引index所在位置的字符</span><br></pre></td></tr></table></figure>
-
-<p><strong><em>实例代码</em></strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">String sourceString = <span class="string">"There is a string accessing exemple"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获得字符串长度</span></span><br><span class="line"><span class="keyword">int</span> len = sourceString.length();</span><br><span class="line"><span class="comment">//获得索引位置16的字符串</span></span><br><span class="line"><span class="keyword">char</span> ch = sourceString.charAt(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//查找字符和子字符串</span></span><br><span class="line"><span class="keyword">int</span> firstChar1 = sourceString.indexOf(<span class="string">'r'</span>);<span class="comment">//从前往后搜索字符</span></span><br><span class="line"><span class="keyword">int</span> lastChar1 = sourceString.lastIndexOf(<span class="string">'r'</span>);<span class="comment">//从后往前搜索字符</span></span><br><span class="line"><span class="keyword">int</span> firststr1 = sourceString.indexOf(<span class="string">"ing"</span>);<span class="comment">//从前往后搜索字符串</span></span><br><span class="line"><span class="keyword">int</span> laststr1 = sourceString.lastIndexOf(<span class="string">"ing"</span>);<span class="comment">//从后往前搜索字符串</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> firstchar2 = sourceString.indexOf(<span class="string">'e'</span>, <span class="number">15</span>);<span class="comment">//从索引为15的位置开始</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 也就是说：indexOf和lastIndexOf都还可以接收一个开始的索引</span></span><br><span class="line"><span class="comment"> * 需要注意的是：如果没有找到，是不能够从头直接跳到尾巴去接着找，</span></span><br><span class="line"><span class="comment"> * 也不能从尾巴跳到头部去继续找，这种情况下，就只能算作找不到，</span></span><br><span class="line"><span class="comment"> * 返回-1</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/" class="post-title-link" itemprop="url">java-字符串拼接</a>
+            <a href="/2020/03/24/Matlab/TestError/" class="post-title-link" itemprop="url">Matlab/TestError</a>
         </h1>
 
         <div class="post-meta">
@@ -436,14 +351,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-18 23:23:08" itemprop="dateCreated datePublished" datetime="2020-02-18T23:23:08+08:00">2020-02-18</time>
+              <time title="创建时间：2020-03-24 16:26:44" itemprop="dateCreated datePublished" datetime="2020-03-24T16:26:44+08:00">2020-03-24</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-19 00:57:44" itemprop="dateModified" datetime="2020-02-19T00:57:44+08:00">2020-02-19</time>
+                <time title="修改时间：2020-04-21 17:20:18" itemprop="dateModified" datetime="2020-04-21T17:20:18+08:00">2020-04-21</time>
               </span>
 
           
@@ -457,8 +372,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h1><p>由于String字符串是不可变字符串，所以String字符串进行拼接以后会产生一个新的对象。</p>
-<h2 id="1-使用-号（可以连接任何类型数据拼接成为字符串）"><a href="#1-使用-号（可以连接任何类型数据拼接成为字符串）" class="headerlink" title="1 使用 + 号（可以连接任何类型数据拼接成为字符串）"></a>1 使用 + 号（可以连接任何类型数据拼接成为字符串）</h2><h2 id="2-使用-concat-String-str-方法-只能拼接String字符串"><a href="#2-使用-concat-String-str-方法-只能拼接String字符串" class="headerlink" title="2 使用 concat(String str)方法(只能拼接String字符串)"></a>2 使用 concat(String str)方法(只能拼接String字符串)</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//字符串拼接</span></span><br><span class="line"><span class="comment">//使用+运算符连接</span></span><br><span class="line">String s1 = <span class="string">"Hello"</span>;</span><br><span class="line">String s2 = s1 + <span class="string">" World"</span>;</span><br><span class="line">System.out.println(s2);</span><br><span class="line"></span><br><span class="line">String s4 = <span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//使用+运算符连接，支持+=赋值运算符</span></span><br><span class="line">s4 += <span class="string">" "</span>;</span><br><span class="line">s4 += <span class="string">"World"</span>;</span><br><span class="line">System.out.println(s4);</span><br><span class="line"></span><br><span class="line">String s5 =<span class="string">"Hello"</span>;</span><br><span class="line"><span class="comment">//使用concat连接</span></span><br><span class="line">s5 = s5.concat(<span class="string">" "</span>).concat(<span class="string">"World!"</span>);<span class="comment">//concat的参数和返回值都是String,所以可以连续调用该方法进行多个字符串的拼接</span></span><br><span class="line"><span class="keyword">int</span> age = <span class="number">18</span>;</span><br><span class="line">String s6 = <span class="string">"她的年龄是"</span> + age + <span class="string">"岁"</span>;</span><br><span class="line">System.out.println(s6);</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> score = <span class="string">'A'</span>;</span><br><span class="line">String s7 = <span class="string">"她的英语成绩是"</span> + score;</span><br><span class="line">System.out.println(s7);</span><br><span class="line"></span><br><span class="line">java.util.Date nowDate = <span class="keyword">new</span> java.util.Date();</span><br><span class="line"><span class="comment">//对象拼接自动调用toString()方法</span></span><br><span class="line"><span class="comment">/*这里解释一下：</span></span><br><span class="line"><span class="comment"> * Java中所有对象都有一个toString()方法，该方法可以将对象转换为字符串，而且拼接过程中会自动调用这个方法。</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * java.util.Date类是java的日期类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">String s8 = <span class="string">"今天是： "</span> + nowDate;</span><br><span class="line">System.out.println(s8);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 输出结果：</span></span><br><span class="line"><span class="comment"> *Hello World</span></span><br><span class="line"><span class="comment">*Hello World</span></span><br><span class="line"><span class="comment">*她的年龄是18岁</span></span><br><span class="line"><span class="comment">*她的英语成绩是A</span></span><br><span class="line"><span class="comment">*今天是： Wed Feb 19 00:54:22 CST 2020</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+          <h1 id="TestError"><a href="#TestError" class="headerlink" title="TestError"></a>TestError</h1><h2 id="实验四-程序设计"><a href="#实验四-程序设计" class="headerlink" title="实验四 程序设计"></a>实验四 程序设计</h2><ul>
+<li>1<br><img src="media/15856431299967.jpg" alt="-w1184"><br>分析：没有仔细审题，[1,2]是函数ftest的输入，但不是f1的输入。</li>
+<li>2 </li>
+<li><img src="media/15856431642897.jpg" alt="-w1195"><br>分析：在以下情况下，不重复声明则会出错：<br>  当子函数中有和全局变量A相同的变量名时，不重复声明时A的值是子函数中局部变量A的值，而不是全局变量A的值。<br>  因而，为了m文件的安全与正常运行，在子函数中需要使用全局变量A时，最好通过重复声明。<h2 id="实验五-符号计算"><a href="#实验五-符号计算" class="headerlink" title="实验五 符号计算"></a>实验五 符号计算</h2><ul>
+<li>1.在desolve()函数中，若没有指定变量，则默认变量为t</li>
+<li><ol start="2">
+<li>利用符号计算实现方程求解的函数是()</li>
+</ol>
+<ul>
+<li>roots</li>
+<li>solve</li>
+<li>dsolve</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="实验七"><a href="#实验七" class="headerlink" title="实验七"></a>实验七</h2><ol>
+<li><p><img src="media/15874576536120.jpg" alt="-w1189"></p>
+<p>. <img src="media/15874576901987.jpg" alt="-w1189"></p>
+</li>
+</ol>
+
       
     </div>
 
@@ -477,7 +413,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Matlab/Matlab%E5%9F%BA%E7%A1%80/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/19/Java/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -491,7 +427,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/18/Matlab/Matlab%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">Matlab基础</a>
+            <a href="/2020/03/19/Java/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/" class="post-title-link" itemprop="url">Java对象和类</a>
         </h1>
 
         <div class="post-meta">
@@ -502,14 +438,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-18 16:26:37" itemprop="dateCreated datePublished" datetime="2020-02-18T16:26:37+08:00">2020-02-18</time>
+              <time title="创建时间：2020-03-19 14:31:00" itemprop="dateCreated datePublished" datetime="2020-03-19T14:31:00+08:00">2020-03-19</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-21 11:33:19" itemprop="dateModified" datetime="2020-03-21T11:33:19+08:00">2020-03-21</time>
+                <time title="修改时间：2020-03-26 16:18:13" itemprop="dateModified" datetime="2020-03-26T16:18:13+08:00">2020-03-26</time>
               </span>
 
           
@@ -523,62 +459,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h1><p>如果命令很长，可以分两行来输入。（需要利用续行符…）</p>
-<h2 id="设置当前文件夹"><a href="#设置当前文件夹" class="headerlink" title="设置当前文件夹"></a>设置当前文件夹</h2><p>步骤：先建立文件夹，然后在Matlab命令行中用cd命令+路径设置</p>
-<h2 id="工作区也称为工作区，用于变量的显示-以表格形式-和操作-可以编辑，删除"><a href="#工作区也称为工作区，用于变量的显示-以表格形式-和操作-可以编辑，删除" class="headerlink" title="工作区也称为工作区，用于变量的显示(以表格形式)和操作(可以编辑，删除)"></a>工作区也称为工作区，用于变量的显示(以表格形式)和操作(可以编辑，删除)</h2><h2 id="Matlab的搜索路径"><a href="#Matlab的搜索路径" class="headerlink" title="Matlab的搜索路径"></a>Matlab的搜索路径</h2><p>在命令行中输入一条命令后，Matlab</p>
-<p>变量 –&gt;内部函数–&gt;程序文件</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%&#123;Matlab的搜索路径有一定的顺序：变量&gt;内部函数&gt;程序文件,下面是一个实例:&#125;%</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%这里的sin是内部函数，正弦，所以结果应该是:0.8415</span></span><br><span class="line"><span class="built_in">sin</span>=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; <span class="comment">%这里定义sin为一个变量，包含5个向量元素，不是内部函数了</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%因为变量的级别高于内部函数，所以这个命令的结果是1而不是0.8415</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%&#123;Matlab的搜索路径有一定的顺序：变量&gt;内部函数&gt;程序文件,下面是一个实例:&#125;%</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%这里的sin是内部函数，正弦，所以结果应该是:0.8415</span></span><br><span class="line"><span class="built_in">sin</span>=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; <span class="comment">%这里定义sin为一个变量，包含5个向量元素，不是内部函数了</span></span><br><span class="line">x=<span class="built_in">sin</span>(<span class="number">1</span>) <span class="comment">%因为变量的级别高于内部函数，所以这个命令的结果是1而不是0.8415</span></span><br><span class="line"><span class="comment">%&#123;此时如果要计算sin的本来值，可以在工作区将已经定义的sin变量删除&#125;%</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Matlab的文件搜索</span></span><br><span class="line"><span class="comment">% 如何设置文件搜索路径</span></span><br><span class="line"><span class="comment">% 1 使用path命令。例如&gt;&gt;path(path,'需要搜索的路径')</span></span><br><span class="line"><span class="comment">% 2 在窗口上设置</span></span><br><span class="line"><span class="comment">% 搜索的顺序：1 当前文件；2 已经设置的搜索路径中；3 如果两个位置都没有搜索结果则会报错</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="整型："><a href="#整型：" class="headerlink" title="整型："></a>整型：</h4><p>分为：</p>
-<p>1:有符号整数</p>
-<p>2: 无符号整数</p>
-<p>然后又分别分为8，16，32，64位整数</p>
-<p>需要记住：</p>
-<p>int是带符号，uint是不带符号</p>
-<p>带符号8位整数的最大值是127</p>
-<p>提供了数据类型转换函数</p>
-<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><p>同样提供了类型转换函数：</p>
-<p>1 single函数：将其他类型的数据转换为单精度型</p>
-<p>2 double函数：将其他类型的数据转换为双精度型</p>
-<h4 id="复型"><a href="#复型" class="headerlink" title="复型"></a>复型</h4><p>复型数据包括实部和虚部两个部分，都默认为双精度单位，用i或者j来表示</p>
-<p>常用函数有两个：</p>
-<p>real：获取复数的实部</p>
-<p>imag：获取复数的虚部</p>
-<h3 id="数值数据的输出格式"><a href="#数值数据的输出格式" class="headerlink" title="数值数据的输出格式"></a>数值数据的输出格式</h3><p>使用format命令，格式是：</p>
-<blockquote>
-<p>format 格式符</p>
-</blockquote>
-<p><strong>注意：format命令只影响数据输出的格式，而不影响数据的计算和存储</strong></p>
-<h3 id="常用数学函数"><a href="#常用数学函数" class="headerlink" title="常用数学函数"></a>常用数学函数</h3><p>调用方法：</p>
-<p>函数名(函数自变量的值)</p>
-<p><strong><em>函数在运算时是将函数逐项作用于矩阵的每个元素上，所以最后运算的结果就是一个与自变量同类型的矩阵</em></strong></p>
-<p>即<strong>作用于矩阵，结果是矩阵</strong></p>
-<p><em>1 函数的调用格式：(实例)</em></p>
-<p><em>2 常用函数的应用</em></p>
-<blockquote>
-<p>三角函数</p>
-</blockquote>
-<p>三角函数也分为两种类型：</p>
-<p>以弧度为单位的函数和以角度为单位的函数，如果是以角度为单位的函数，则在调用时应该在函数名后面加上d，以示区别。</p>
-<blockquote>
-<p>abs函数</p>
-</blockquote>
-<p>可以用来求实数的绝对值、复数的模、字符串的ASCII码值，具体操作见后面代码</p>
-<blockquote>
-<p>取整函数</p>
-</blockquote>
-<p>有round、fix、floor、ceil四种类型，具体实例见文章尾部</p>
-<p> <em>3 函数应用举例</em></p>
-<blockquote>
-<p>1 分别求一个三位正整数的个、十、百位</p>
-</blockquote>
-<blockquote>
-<p>2 求[1,100]区间的所有素数</p>
-</blockquote>
-<p>代码见后面。</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 转换函数实例</span></span><br><span class="line">class(<span class="number">4</span>)</span><br><span class="line">(class(single(<span class="number">4</span>)))</span><br><span class="line"><span class="comment">%&#123;结果分别是ans ='double'，ans ='single'&#125;%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">%format来设置数值数据的输出形式</span></span><br><span class="line"><span class="comment">% 格式：format 格式符</span></span><br><span class="line"><span class="comment">% 实例：</span></span><br><span class="line">format long </span><br><span class="line"><span class="number">50</span>/<span class="number">3</span></span><br><span class="line"><span class="comment">% 此时的输出结果是：16.666666666666668</span></span><br><span class="line">format</span><br><span class="line"><span class="number">50</span>/<span class="number">3</span></span><br><span class="line"><span class="comment">% 重置以后结果变回了：16.6667</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%常用函数实例</span></span><br><span class="line"><span class="comment">%exp函数实例</span></span><br><span class="line"><span class="comment">% 在matlab中exp意思是以自然常数e为底的指数函数。返回 e（自然对数的底）的幂次方。</span></span><br><span class="line">A = [<span class="number">4</span>,<span class="number">2</span>;<span class="number">3</span>,<span class="number">6</span>]</span><br><span class="line">B = <span class="built_in">exp</span>(A)</span><br><span class="line"><span class="comment">%&#123;输出结果：B =54.5982    7.3891 20.0855  403.4288&#125;%</span></span><br><span class="line"><span class="comment">% 上行结果格式和真实情况不同</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%三角函数的两种调用方法：</span></span><br><span class="line"><span class="comment">% 1</span></span><br><span class="line"><span class="built_in">cos</span>(<span class="built_in">pi</span>)</span><br><span class="line"><span class="comment">% 2 </span></span><br><span class="line"><span class="built_in">cosd</span>(<span class="number">180</span>)</span><br><span class="line"><span class="comment">% 两种方法结果肯定是一样的</span></span><br><span class="line"><span class="comment">% 结果：-1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%abs函数使用实例：</span></span><br><span class="line"><span class="comment">% 1 求绝对值</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="number">-100</span>)</span><br><span class="line"><span class="comment">% ans = 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%2 求复数的模</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="number">5</span>+<span class="number">12</span><span class="built_in">i</span>)</span><br><span class="line"><span class="comment">% ans = 13</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%3 求字符串的ASCII码</span></span><br><span class="line"><span class="built_in">abs</span>(<span class="string">'abd'</span>)</span><br><span class="line"><span class="comment">% ans 87 98 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 取整函数</span></span><br><span class="line"><span class="comment">% 1 round:按照四舍五入取整</span></span><br><span class="line"><span class="comment">% 2 ceil：向上取整，即取大于等于这个数的第一个整数</span></span><br><span class="line"><span class="comment">% 3 floor：向下取整，取小于等于这个数的第一个整数</span></span><br><span class="line"><span class="comment">% 4 fix： 取靠近0的那个整数，也就是舍去小数取整</span></span><br><span class="line"><span class="comment">% 实例：</span></span><br><span class="line"><span class="built_in">round</span>(<span class="number">4.7</span>)</span><br><span class="line"><span class="built_in">fix</span>(<span class="number">-3.2</span>)</span><br><span class="line"><span class="built_in">floor</span>(<span class="number">3.6</span>)</span><br><span class="line"><span class="built_in">ceil</span>(<span class="number">-3.8</span>)</span><br><span class="line"><span class="comment">%ans=5;ans=-3;ans=3;ans=-3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 函数应用举例1：分别求出一个三位整数的个位、十位、百位</span></span><br><span class="line"><span class="comment">% rem是取余函数</span></span><br><span class="line">m=<span class="number">345</span>;</span><br><span class="line">m1=<span class="built_in">rem</span>(m,<span class="number">10</span>)<span class="comment">%个位数</span></span><br><span class="line">m2=<span class="built_in">rem</span>(<span class="built_in">fix</span>(m/<span class="number">10</span>),<span class="number">10</span>)</span><br><span class="line">m3=<span class="built_in">fix</span>(m/<span class="number">100</span>)</span><br><span class="line"><span class="comment">% m1=5;m2=4;m3=3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%函数应用举例2：求[1,00]区间的所有素数</span></span><br><span class="line">x=<span class="number">1</span>:<span class="number">100</span>;</span><br><span class="line">k=<span class="built_in">isprime</span>(x);<span class="comment">%isprime用来判断一个数是否能被2整除，能为真，不能则为假</span></span><br><span class="line">k1=<span class="built_in">find</span>(k);<span class="comment">%find用来找出为真的x序列</span></span><br><span class="line">p=x(k1)<span class="comment">%输出1到100之间的素数</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="对句柄的理解"><a href="#对句柄的理解" class="headerlink" title="对句柄的理解"></a>对句柄的理解</h3><p>句柄是matlab语言独有的参数，相当于C语言的指针。 </p>
+          <h1 id="对象和类"><a href="#对象和类" class="headerlink" title="对象和类"></a>对象和类</h1><p>面向对象程序设计，它会有助于更有效地开发GUI(图形用户界面)和大型软件系统。</p>
+<h2 id="为对象定义类"><a href="#为对象定义类" class="headerlink" title="为对象定义类"></a>为对象定义类</h2><p>对象object</p>
+<ul>
+<li>状态state： 是由具有当前值的数据域来表示的。例如： 圆对象具有一个数据域radius</li>
+<li>行为behavior：是由方法定义的</li>
+</ul>
+<h2 id="常见类："><a href="#常见类：" class="headerlink" title="常见类："></a>常见类：</h2><p>Date(long)：<br>    - Date类接受一个long参数。作为自从1970年1月1日0点开始的流逝时间<br>    - 这个可以省略。省略时，默认为输出当前时间。<br>    - 具体用法如下：<br>    · 创建Date类<br>    Date date = new Date(l); //<br>    date.setTime(l);// 这行命令可用于修改流逝时间</p>
+<h2 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h2><p>如果想让一个类的所有实例共享数据，就要使用静态变量，也称为类变量。<br>静态变量将变量值存储在一个公共的内存地址。因为它是公共的地址，所以如果某一个对象修改了静态变量的值，那么同一个类中的所有对象都会收到影响。</p>
+<h2 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h2><p>无须创建类的实例就可以调用静态方法。</p>
+<p>实例方法和实例变量都是属于实例的，所有它们在实例创建之后才能使用。</p>
 
       
     </div>
@@ -598,7 +488,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Python/yield/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/16/Matlab/Matlab%E6%8F%AD%E7%A7%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -612,7 +502,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/18/Python/yield/" class="post-title-link" itemprop="url">yield</a>
+            <a href="/2020/03/16/Matlab/Matlab%E6%8F%AD%E7%A7%98/" class="post-title-link" itemprop="url">Matlab/Matlab揭秘</a>
         </h1>
 
         <div class="post-meta">
@@ -622,10 +512,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-02-18 14:26:16 / 修改时间：14:26:54" itemprop="dateCreated datePublished" datetime="2020-02-18T14:26:16+08:00">2020-02-18</time>
+              <time title="创建时间：2020-03-16 08:19:07" itemprop="dateCreated datePublished" datetime="2020-03-16T08:19:07+08:00">2020-03-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-17 19:26:13" itemprop="dateModified" datetime="2020-03-17T19:26:13+08:00">2020-03-17</time>
+              </span>
 
           
 
@@ -638,7 +534,73 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yield</span></span><br><span class="line"><span class="comment"># 带有yield的函数在Python中被称为generator(生成器)</span></span><br><span class="line"><span class="comment">##   如何生成斐波那契数列</span></span><br><span class="line"><span class="comment"># 第一版</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def fab(max):</span></span><br><span class="line"><span class="string">	n, a , b  = 0, 0, 1</span></span><br><span class="line"><span class="string">	while n &lt; max:</span></span><br><span class="line"><span class="string">		print(b)</span></span><br><span class="line"><span class="string">		a , b  = b, a + b</span></span><br><span class="line"><span class="string">		n = n + 1</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">fab(6)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">## 输出斐波那契数列前N个第二版</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">def fab(max):</span></span><br><span class="line"><span class="string">	n, a, b = 0, 0, 1</span></span><br><span class="line"><span class="string">	L = []</span></span><br><span class="line"><span class="string">	while n &lt; max:</span></span><br><span class="line"><span class="string">		L.append(b)</span></span><br><span class="line"><span class="string">		a, b = b, a + b</span></span><br><span class="line"><span class="string">		n = n + 1</span></span><br><span class="line"><span class="string">	return L</span></span><br><span class="line"><span class="string">for n in fab(5):</span></span><br><span class="line"><span class="string">	print(n)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">'''改写后的fab函数通过满足返回List能够满足复用性的要求，但是，随着max越来越大，会导致程序所占内存越来越大</span></span><br><span class="line"><span class="string">所以更好的做法是通过iterable对象来迭代'''</span></span><br><span class="line"><span class="comment">### 第三版 -----有错</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">class Fab(object):</span></span><br><span class="line"><span class="string">	def __int__(self, max):</span></span><br><span class="line"><span class="string">		self.max = max</span></span><br><span class="line"><span class="string">		self.n, self.a, self.b = 0, 0, 1</span></span><br><span class="line"><span class="string">	def __iter__(self):</span></span><br><span class="line"><span class="string">		return self</span></span><br><span class="line"><span class="string">	def next(self):</span></span><br><span class="line"><span class="string">		if self.n &lt; self.max:</span></span><br><span class="line"><span class="string">			r = self.b</span></span><br><span class="line"><span class="string">			self.a, self.b =self.b, self.a + self.b</span></span><br><span class="line"><span class="string">			self.n = n + 1</span></span><br><span class="line"><span class="string">			return r</span></span><br><span class="line"><span class="string">		raise StopIteration()</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">for n in Fab(5):</span></span><br><span class="line"><span class="string">	print(n)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">#### 第四版</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fab</span><span class="params">(max)</span>:</span></span><br><span class="line">	n , a, b = <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">	<span class="keyword">while</span> n  &lt; max:</span><br><span class="line">		<span class="keyword">yield</span> b</span><br><span class="line">		a, b = b, a + b</span><br><span class="line">		n = n+ <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> fab(<span class="number">5</span>):</span><br><span class="line">	print(n)</span><br><span class="line"><span class="string">"""简单的讲：yield就是把一个函数变成一个generator，带有yield的函数不再是一个普通函数，Python解释器会将其视为一个</span></span><br><span class="line"><span class="string">generator，调用fab(5)不会执行fab函数，而是返回一个iterable对象！</span></span><br><span class="line"><span class="string">结论：一个带有 yield 的函数就是一个 generator，它和普通函数不同，生成一个 generator 看起</span></span><br><span class="line"><span class="string">来像函数调用，但不会执行任何函数代码，直到对其调用 next()（在 for 循环中会自动调用 next()）</span></span><br><span class="line"><span class="string">才开始执行。虽然执行流程仍按函数的流程执行，但每执行到一个 yield 语句就会中断，并返回一个迭</span></span><br><span class="line"><span class="string">代值，下次执行时从 yield 的下一个语句继续执行。看起来就好像一个函数在正常执行的过程中被</span></span><br><span class="line"><span class="string"> yield 中断了数次，每次中断都会通过 yield 返回当前的迭代值。yield 的好处是显而易见的，把</span></span><br><span class="line"><span class="string"> 一个函数改写为一个 generator 就获得了迭代能力，比起用类的实例保存状态来计算下一个 next() </span></span><br><span class="line"><span class="string"> 的值，不仅代码简洁，而且执行流程异常清晰</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 可以使用 isgeneratorfunction来判断是不是一个特殊的generator函数</span></span><br><span class="line"><span class="keyword">from</span> inspect <span class="keyword">import</span> isgeneratorfunction</span><br><span class="line">print(isgeneratorfunction(fab))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">1</span></span><br><span class="line"><span class="string">2</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">5</span></span><br><span class="line"><span class="string">True</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <h1 id="Matlab揭秘"><a href="#Matlab揭秘" class="headerlink" title="Matlab揭秘"></a>Matlab揭秘</h1><h2 id="Matlab环境"><a href="#Matlab环境" class="headerlink" title="Matlab环境"></a>Matlab环境</h2><h3 id="基本数学定义式"><a href="#基本数学定义式" class="headerlink" title="基本数学定义式"></a>基本数学定义式</h3><ul>
+<li><p>圆周率：pi</p>
+</li>
+<li><p>e的a次方：exp(a)</p>
+</li>
+<li><p>平方根sqrt()</p>
+</li>
+<li><p>得到x的自然对数:log(x)</p>
+</li>
+<li><p>以10为底的对数：log10(x)</p>
+</li>
+<li><p>反三角函数：在三角函数前面加上a：atan,acos</p>
+</li>
+<li><p>复数</p>
+<ul>
+<li>-1的平方根定义为：<br><img src="media/15843183175347.jpg" alt=""></li>
+</ul>
+</li>
+<li><p>计算a的b次方：<br>  a^b</p>
+</li>
+<li><p>让计算的结果以有理数的形式显示<br>  format rat<br>  2 / 5</p>
+<h1 id="向量与矩阵"><a href="#向量与矩阵" class="headerlink" title="向量与矩阵"></a>向量与矩阵</h1><h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><h3 id="列向量："><a href="#列向量：" class="headerlink" title="列向量："></a>列向量：</h3></li>
+<li><p>a = [2; 1; 4]</p>
+</li>
+<li><p>对列向量进行数量乘法：<br>  c = 3;<br>  b = a * 3;</p>
+<h3 id="行向量"><a href="#行向量" class="headerlink" title="行向量"></a>行向量</h3></li>
+<li><p>用空格分隔或者逗号分隔</p>
+<h3 id="对列向量和行向量进行转置转换"><a href="#对列向量和行向量进行转置转换" class="headerlink" title="对列向量和行向量进行转置转换"></a>对列向量和行向量进行转置转换</h3></li>
+<li><p>用’表示转置操作</p>
+</li>
+<li><p>将列向量转置为行向量：<br>a = [2; 1; 4];<br>b = a’</p>
+</li>
+</ul>
+<h3 id="使用两个向量进行相加或者相减来创建第三个向量"><a href="#使用两个向量进行相加或者相减来创建第三个向量" class="headerlink" title="使用两个向量进行相加或者相减来创建第三个向量"></a>使用两个向量进行相加或者相减来创建第三个向量</h3><ul>
+<li>前提：<br>两个向量之间必须类型相同，长度相同</li>
+</ul>
+<h3 id="从已存存变量创建大变量"><a href="#从已存存变量创建大变量" class="headerlink" title="从已存存变量创建大变量"></a>从已存存变量创建大变量</h3><pre><code>- 前提：
+两个向量之间必须类型相同，长度相同</code></pre><h3 id="创建等差元素向量"><a href="#创建等差元素向量" class="headerlink" title="创建等差元素向量"></a>创建等差元素向量</h3><ul>
+<li>a<a href="其中b是步长">a:b:c</a></li>
+<li>使用linspace(自动确认元素之间的增量)<ul>
+<li>linspace(a,b) 默认创建100个a到b之间的等差向量</li>
+<li>linspace(a,b,n) 创建n个    <h3 id="特征化向量"><a href="#特征化向量" class="headerlink" title="特征化向量"></a>特征化向量</h3></li>
+</ul>
+</li>
+<li>length： 返回向量中包含元素的个数<br>  即可应用到行向量和列向量，也可以应用到矩阵</li>
+<li>max 或者 min 命令可以找出向量中最大值和最小值</li>
+<li>sum：求和</li>
+<li>求向量的模：<ul>
+<li>(没有复数)先使用对每一元素使用(.*)，然后sum求和，最后sqrt开方</li>
+<li>(有复数时)：<br>  &amp; 需要先计算出该向量的共轭复数根<br>  &amp; 用conj来计算向量的共轭复数向量</li>
+</ul>
+</li>
+<li>abs返回绝对值</li>
+</ul>
+<h3 id="向量的点乘和叉乘-数量积和向量积"><a href="#向量的点乘和叉乘-数量积和向量积" class="headerlink" title="向量的点乘和叉乘(数量积和向量积)"></a>向量的点乘和叉乘(数量积和向量积)</h3><pre><code>$ 点乘
+    - dot(a,b)计算a、b两向量的点乘
+    - 用点乘来计算向量的模： sqrt(dot(a,a))
+    - 对于有复数元素的向量，dot操作也能正常计算
+$ 叉乘
+    - 要计算叉乘，这两个向量必须是三维的 
+    - 使用cross(a,b)来计算叉乘</code></pre><h2 id="矩阵基本操作"><a href="#矩阵基本操作" class="headerlink" title="矩阵基本操作"></a>矩阵基本操作</h2><h2 id="第三章-绘图与图形"><a href="#第三章-绘图与图形" class="headerlink" title="第三章 绘图与图形"></a>第三章 绘图与图形</h2><h3 id="2D绘图基础"><a href="#2D绘图基础" class="headerlink" title="2D绘图基础"></a>2D绘图基础</h3><ul>
+<li>plot</li>
+<li>xlabel(‘name’),ylabel(‘name’) :设置坐标轴的标签<br>  例如：plot(x, y), xlabel(‘x’), ylabel(‘cos(x)’);</li>
+<li></li>
+<li></li>
+</ul>
+
       
     </div>
 
@@ -657,7 +619,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/pytho%E7%9A%84and%E8%BF%94%E5%9B%9E%E5%80%BC/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/15/Python/Python%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -671,7 +633,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/17/Python/pytho%E7%9A%84and%E8%BF%94%E5%9B%9E%E5%80%BC/" class="post-title-link" itemprop="url">pytho的and返回值</a>
+            <a href="/2020/03/15/Python/Python%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">Python零散的知识</a>
         </h1>
 
         <div class="post-meta">
@@ -681,10 +643,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-02-17 15:12:38 / 修改时间：15:26:52" itemprop="dateCreated datePublished" datetime="2020-02-17T15:12:38+08:00">2020-02-17</time>
+              <time title="创建时间：2020-03-15 23:52:37" itemprop="dateCreated datePublished" datetime="2020-03-15T23:52:37+08:00">2020-03-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-20 16:16:57" itemprop="dateModified" datetime="2020-04-20T16:16:57+08:00">2020-04-20</time>
+              </span>
 
           
 
@@ -697,7 +665,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python的and返回值</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">在布尔上下文中从左到右演算表达式的值，如果布尔上下文中的所有值都为真，那么 and 返回最后一个值。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">如果布尔上下文中的某个值为假，则 and 返回第一个假值。</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 实例1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">re</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n + <span class="number">1</span> <span class="keyword">and</span> n ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line">print(re(<span class="number">0</span>))<span class="comment">#因为非零即假，所以返回第一个表达式的值</span></span><br><span class="line">print(re(<span class="number">100</span>))<span class="comment"># 因为100为真，所以返回后一个表达式的值</span></span><br><span class="line"><span class="comment"># 实例2</span></span><br><span class="line"><span class="string">"""对于字符串而言，其中有空格的字符串为假，否则为真"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">st</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(st(<span class="string">'happy '</span>))<span class="comment">#这里有空格为假的，则返回后一个表达式的值。经过strip方法之后，末尾的空格被剔除了</span></span><br><span class="line">print(st(<span class="string">'names'</span>))<span class="comment"># 这里为空格，则直接返回这个字符串</span></span><br><span class="line">print(st(<span class="string">'fa fdaf'</span>))<span class="comment"># strip只对首尾的对象管用</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">0</span></span><br><span class="line"><span class="string">10000</span></span><br><span class="line"><span class="string">happy</span></span><br><span class="line"><span class="string">names</span></span><br><span class="line"><span class="string">fa fdaf</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <h1 id="Python零散知识"><a href="#Python零散知识" class="headerlink" title="Python零散知识"></a>Python零散知识</h1><h2 id="range范围问题"><a href="#range范围问题" class="headerlink" title="range范围问题"></a>range范围问题</h2><ul>
+<li>range(1,10):包含1，但是不包含10</li>
+</ul>
+<h2 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h2><p>指数 **<br>取整 // </p>
+<h2 id="sys-exit"><a href="#sys-exit" class="headerlink" title="sys.exit()"></a>sys.exit()</h2><p>使用sys.exit()可以提前结束程序，使用时先导入sys</p>
+<h2 id="None"><a href="#None" class="headerlink" title="None"></a>None</h2><p>与java中null相对应的是none</p>
+<h2 id="print"><a href="#print" class="headerlink" title="print"></a>print</h2><p>print的返回值是None</p>
+<p>print默认换行，想要不换行。使用如下：<br>print(‘不换行’.end=’’)</p>
+<p>类似地，使用sep关键字参数，可以替换默认的分割字符串(空格)</p>
+<h2 id="global"><a href="#global" class="headerlink" title="global"></a>global</h2><p>Python中可以使用global声明一个全局变量</p>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>错误可以由try和except语句来处理。那些可能出错的语句被放在try子句中。如果发生错误，程序执行就转到接下来的except子句开始处。</p>
+<p><strong><em>需要注意的是</em></strong><br>，一旦执行跳到except子句的代码，就不会回到try子句。它会继续照常向下执行。</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>列表是一个值，它包含多个字构成的序列。术语“列表”指的是列表本身(它作为一个值，可以保存在变量中，或者传递给函数，而不是指列表之内的那些值)</p>
+<ul>
+<li><p>切片<br>包含第一个下标但是不包括第二个下标</p>
+</li>
+<li><p>列表连接和复制<br>像字符串一样，+用于列表连接，*用于列表复制</p>
+</li>
+<li><p>del语句用于删除</p>
+</li>
+<li><p>多重赋值技巧<br><img src="media/15873694897724.jpg" alt="-w661"></p>
+</li>
+<li><p>用index()方法在列表中查找值<br>返回下标</p>
+</li>
+<li><p>append和insert<br>前者将值添加到末尾，insert添加到指定位置</p>
+</li>
+<li><p>remove方法从列表中删除值<br>如果该值在列表中出现多次，只删除第一次出现的值</p>
+</li>
+<li><p>逆向排序<br>spam.sort(reverse=True)<br>其中spam是一个列表</p>
+</li>
+</ul>
+<p><strong>注意</strong><br>不能对既有数字又有字符串值的列表排序</p>
+<p>sort方法对字符串排序是，使用的是“ASCII”字符顺序</p>
+<ul>
+<li>列表和字符串的区别<br>列表是可变的，字符串是不可变的。<h2 id="元组和列表的区别"><a href="#元组和列表的区别" class="headerlink" title="元组和列表的区别"></a>元组和列表的区别</h2>元组符号： ()<br>元组也是不可变的。<br>元组不能让他的值被修改、添加和删除</li>
+</ul>
+<p><strong>注意</strong><br>如果元组中只有一个值，你可以在括号内该值后面跟上一个逗号，表明这种情况，否则，Python会认为你只是在一个普通括号内输入了一个值</p>
+<h2 id="受用list-和tuple-函数来转换类型"><a href="#受用list-和tuple-函数来转换类型" class="headerlink" title="受用list()和tuple()函数来转换类型"></a>受用list()和tuple()函数来转换类型</h2><p>前者是列表，后者是元组</p>
+<h2 id="列表的引用"><a href="#列表的引用" class="headerlink" title="列表的引用"></a>列表的引用</h2><p><img src="media/15873706020062.jpg" alt="-w623"></p>
+<h2 id="续行符-‘-’"><a href="#续行符-‘-’" class="headerlink" title="续行符 ‘\’"></a>续行符 ‘\’</h2><p>在行末使用\可以将一条指令写成多行</p>
+
       
     </div>
 
@@ -716,7 +724,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/Strip%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/15/Matlab/Matlab%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -730,7 +738,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/17/Python/Strip%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Strip方法</a>
+            <a href="/2020/03/15/Matlab/Matlab%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">Matlab的矩阵分析与处理</a>
         </h1>
 
         <div class="post-meta">
@@ -742,7 +750,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-17 12:09:16 / 修改时间：12:17:05" itemprop="dateCreated datePublished" datetime="2020-02-17T12:09:16+08:00">2020-02-17</time>
+              <time title="创建时间：2020-03-15 22:53:37 / 修改时间：23:07:58" itemprop="dateCreated datePublished" datetime="2020-03-15T22:53:37+08:00">2020-03-15</time>
             </span>
 
           
@@ -756,7 +764,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># strip方法用于移除字符串头尾的字符（默认为空格或者换行符）或字符序列</span></span><br><span class="line">strs = <span class="string">"happp "</span></span><br><span class="line">print(strs.strip())</span><br><span class="line"></span><br><span class="line">print(strs.strip().strip(<span class="string">'p'</span>))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">happp</span></span><br><span class="line"><span class="string">ha</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <h1 id="矩阵的分析与处理"><a href="#矩阵的分析与处理" class="headerlink" title="矩阵的分析与处理"></a>矩阵的分析与处理</h1><h2 id="矩阵的行列式"><a href="#矩阵的行列式" class="headerlink" title="矩阵的行列式"></a>矩阵的行列式</h2><p>在Matlab中，求方阵A的行列式值的函数是det函数；<br>调用格式：<br>    B=det(A)<br>    (其中A是矩阵，B是行列式值的结果)</p>
+<h2 id="矩阵的秩与迹"><a href="#矩阵的秩与迹" class="headerlink" title="矩阵的秩与迹"></a>矩阵的秩与迹</h2><h3 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h3><p>B=rank(A)</p>
+<h3 id="矩阵的迹"><a href="#矩阵的迹" class="headerlink" title="矩阵的迹"></a>矩阵的迹</h3><p>B=trace(A)</p>
+<h2 id="矩阵的逆与伪逆"><a href="#矩阵的逆与伪逆" class="headerlink" title="矩阵的逆与伪逆"></a>矩阵的逆与伪逆</h2><h3 id="矩阵的逆"><a href="#矩阵的逆" class="headerlink" title="矩阵的逆"></a>矩阵的逆</h3><p>B=inv(A)</p>
+<h3 id="矩阵的伪逆"><a href="#矩阵的伪逆" class="headerlink" title="矩阵的伪逆"></a>矩阵的伪逆</h3><p>B=pinv(A)</p>
+<ul>
+<li>说明：如果矩阵A不是一个方阵，或者A是一个非满秩的方阵时，矩阵A没有逆 矩阵，但可以找到一个与A的转置矩阵A T 同型的矩阵B，使得 AꞏBꞏA=A BꞏAꞏB=B<br> 此时称矩阵B为矩阵A的伪逆，也称为广义逆矩阵。</li>
+</ul>
+<h2 id="线性方程的求解"><a href="#线性方程的求解" class="headerlink" title="线性方程的求解"></a>线性方程的求解</h2><p>看图：<br><img src="media/15842848727792.jpg" alt=""></p>
+
       
     </div>
 
@@ -775,7 +792,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/15/Matlab/Test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -789,7 +806,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">filter函数</a>
+            <a href="/2020/03/15/Matlab/Test/" class="post-title-link" itemprop="url">Matlab/Test</a>
         </h1>
 
         <div class="post-meta">
@@ -799,10 +816,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-02-17 11:56:47 / 修改时间：15:35:14" itemprop="dateCreated datePublished" datetime="2020-02-17T11:56:47+08:00">2020-02-17</time>
+              <time title="创建时间：2020-03-15 00:14:16" itemprop="dateCreated datePublished" datetime="2020-03-15T00:14:16+08:00">2020-03-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-20 15:02:26" itemprop="dateModified" datetime="2020-04-20T15:02:26+08:00">2020-04-20</time>
+              </span>
 
           
 
@@ -815,7 +838,59 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># filter ： Python内建的filter函数用于过滤序列</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">和map()类似。filter也接收一个序列。区别是：filter把传入额函数依次作用于每个元素，然后根据</span></span><br><span class="line"><span class="string">返回值是True 还是Flase决定保留还是丢弃该元素</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">            <span class="comment">#在一个list中删掉偶数，只保留奇数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line">print(list(filter(is_odd, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>])))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把一个序列中的空字符串删掉</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_empty</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</span><br><span class="line"></span><br><span class="line">print(list(filter(not_empty,[<span class="string">'a'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>])))</span><br><span class="line"><span class="string">"""返回值：</span></span><br><span class="line"><span class="string">['a', 'B', 'C', 'D']</span></span><br><span class="line"><span class="string">注意到：filter函数返回的是一个lterator，也就是一个惰性序列，所以要强迫fliter完成计算结果，需要用到方法list</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">% Test 1</span><br><span class="line">% (1)生成一个空矩阵A</span><br><span class="line">A = []</span><br><span class="line">% 对A进行赋值，取值为5行5列的单位矩阵</span><br><span class="line">A = eye(5)</span><br><span class="line">% 将矩阵A存储在硬盘上的Matlab数据文件A.mat中</span><br><span class="line">save A.mat A</span><br><span class="line"></span><br><span class="line">%(2) 利用函数xlsread读取硬盘上电子表格</span><br><span class="line">% data.xls中的第一个工作表区域中</span><br><span class="line">% A2:C5的区域的数据(自行敲入)，并赋值给矩阵</span><br><span class="line">% B，然后利用命令保存矩阵B到硬盘上的B.mat文件中。</span><br><span class="line"></span><br><span class="line">B =xlsread(&apos;data1.xlsx&apos;, 1,  &apos;A2:C5&apos;)</span><br><span class="line">save B.mat B</span><br><span class="line"></span><br><span class="line">% (3) 利用load实现将数据文件A.mat 和 B.mat</span><br><span class="line">% 载入到内存中，然后将A、B两个变量保存到MATLAB数据文件AB.mat中</span><br><span class="line">load A.mat</span><br><span class="line">load B.mat</span><br><span class="line">save AB.mat A B</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Test 3</p>
+<ul>
+<li>将大些字母转换为小写的两种方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">% 创建由数值和大小写字母构成的字符</span><br><span class="line">str = &apos;gfAFHSKFHsag354346&apos;</span><br><span class="line">% 将大写字母转换为小写字母</span><br><span class="line">str = lower(str) % first</span><br><span class="line"></span><br><span class="line">% second</span><br><span class="line">% upper = find(str &gt;=&apos;A&apos; &amp; str &lt;= &apos;Z&apos;);</span><br><span class="line">% str(upper) = str(upper) + 32;</span><br><span class="line">% new = char(str)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">% 创建由数值和大小写字母构成的字符</span><br><span class="line">str = &apos;gfAFHSKFHsag354346&apos;</span><br><span class="line">% 将大写字母转换为小写字母</span><br><span class="line">str = lower(str)</span><br><span class="line"></span><br><span class="line">upper = find(str &gt;=&apos;0&apos; &amp; str &lt;= &apos;9&apos;);</span><br><span class="line">str(upper) = 0;</span><br><span class="line">str = char(str);</span><br><span class="line">% 去掉尾部的空格</span><br><span class="line">str = deblank(str)</span><br><span class="line"></span><br><span class="line">% 在str的前面添加&apos;New strings: &apos;形成一个新的字符串</span><br><span class="line">add = &apos;New strings: &apos;;</span><br><span class="line">newStr = ([add, str])</span><br><span class="line">% 统计字符串的字符数</span><br><span class="line">strSize = size(newStr)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Test 4</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">% 1 结构数组</span><br><span class="line">course=struct(&apos;courseName&apos;,&#123;&apos;Matlab程序设计&apos;,&apos;Java程序设计&apos;,&apos;线性代数&apos;,&apos;高等数学&apos;,&apos;大学物理&apos;&#125;,&apos;score&apos;,&#123;2,2,2,2,2&#125;,&apos;degreeOfDifficulty&apos;,&#123;&apos;difficult&apos;,&apos;difficult&apos;,&apos;difficult&apos;,&apos;medium&apos;,&apos;difficult&apos;&#125;)</span><br><span class="line">% 新添教师姓名</span><br><span class="line">course(1).teacherName = &apos;肖老师&apos;;</span><br><span class="line">course(2).teacherName = &apos;龙老师&apos;;</span><br><span class="line">course(3).teacherName = &apos;全老师&apos;;</span><br><span class="line">course(4).teacherName = &apos;宋老师&apos;;</span><br><span class="line">course(5).teacherName = &apos;王老师&apos;;</span><br><span class="line">% 显示course</span><br><span class="line">course</span><br><span class="line">% 删除难易信息</span><br><span class="line">course(1).degreeOfDifficulty = [];</span><br><span class="line">course(2).degreeOfDifficulty = [];</span><br><span class="line">course(3).degreeOfDifficulty = [];</span><br><span class="line">course(4).degreeOfDifficulty = [];</span><br><span class="line">course(5).degreeOfDifficulty = [];</span><br><span class="line">% 显示course</span><br><span class="line">course</span><br><span class="line"></span><br><span class="line">% 2 创建元胞数组</span><br><span class="line"></span><br><span class="line">course=cell(6,3);</span><br><span class="line">% 设置第一栏</span><br><span class="line">course(1,1)=&#123;&apos;courseName&apos;&#125;;</span><br><span class="line">course(1,2)=&#123;&apos;score&apos;&#125;;</span><br><span class="line">course(1,3)=&#123;&apos;degreeOfDifficulty&apos;&#125;;</span><br><span class="line"></span><br><span class="line">% 填写courseName信息</span><br><span class="line">course(2,1)=&#123;&apos;Matlab程序设计&apos;&#125;;</span><br><span class="line">course(3,1)=&#123;&apos;Java程序设计&apos;&#125;;</span><br><span class="line">course(4,1)=&#123;&apos;线性代数&apos;&#125;;</span><br><span class="line">course(5,1)=&#123;&apos;高等数学&apos;&#125;;</span><br><span class="line">course(6,1)=&#123;&apos;大学物理&apos;&#125;;</span><br><span class="line"></span><br><span class="line">% 填写score信息</span><br><span class="line">course(2,2)=&#123;2&#125;;</span><br><span class="line">course(3,2)=&#123;2&#125;;</span><br><span class="line">course(4,2)=&#123;2&#125;;</span><br><span class="line">course(5,2)=&#123;2&#125;;</span><br><span class="line">course(6,2)=&#123;2&#125;;</span><br><span class="line"></span><br><span class="line">% 填写degreeOfDifficulty信息</span><br><span class="line">course(2,3)=&#123;&apos;difficult&apos;&#125;;</span><br><span class="line">course(3,3)=&#123;&apos;difficult&apos;&#125;;</span><br><span class="line">course(4,3)=&#123;&apos;difficult&apos;&#125;;</span><br><span class="line">course(5,3)=&#123;&apos;medium&apos;&#125;;</span><br><span class="line">course(6,3)=&#123;&apos;difficult&apos;&#125;;</span><br><span class="line"></span><br><span class="line">% 添加第四个信息教师姓名</span><br><span class="line">course(1,4)=&#123;&apos;teacherName&apos;&#125;;</span><br><span class="line">course(2,4) = &#123;&apos;肖老师&apos;&#125;;</span><br><span class="line">course(3,4)=&#123;&apos;龙老师&apos;&#125;;</span><br><span class="line">course(4,4)=&#123;&apos;全老师&apos;&#125;;</span><br><span class="line">course(5,4)=&#123;&apos;宋老师&apos;&#125;;</span><br><span class="line">course(6,4)=&#123;&apos;王老师&apos;&#125;;</span><br><span class="line"></span><br><span class="line">% 删除难易程度信息</span><br><span class="line">course(1,3)=&#123;[]&#125;;</span><br><span class="line">course(2,3)=&#123;[]&#125;;</span><br><span class="line">course(3,3)=&#123;[]&#125;;</span><br><span class="line">course(4,3)=&#123;[]&#125;;</span><br><span class="line">course(5,3)=&#123;[]&#125;;</span><br><span class="line">course(6,3)=&#123;[]&#125;;</span><br><span class="line"></span><br><span class="line">% 显示course</span><br><span class="line">course</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Test 5</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">% 创建系数矩阵</span><br><span class="line">numbers=[1 -1 1;2 1 1;1 -1 -2];</span><br><span class="line"></span><br><span class="line">% 行列式</span><br><span class="line">A=det(numbers)</span><br><span class="line"></span><br><span class="line">% 迹</span><br><span class="line">B=trace(numbers)</span><br><span class="line"></span><br><span class="line">% 秩</span><br><span class="line">C=rank(numbers)</span><br><span class="line"></span><br><span class="line">% 逆</span><br><span class="line">D=inv(numbers)</span><br><span class="line"></span><br><span class="line">% 求解方程组</span><br><span class="line">b=[1 2 4];</span><br><span class="line">x=inv(A)*b</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Test 6</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">% Test 6</span><br><span class="line">A =  [-10000:10000];</span><br><span class="line">num=find(A&gt;1000 &amp; mod(A,17)==0);</span><br><span class="line">Size=size(A(num))</span><br><span class="line">All=A(num);</span><br><span class="line">B=All(end-9:end)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br></pre></td><td class="code"><pre><span class="line">% 简答与编程三 数据可视化</span><br><span class="line">% Test 1</span><br><span class="line">% 分别绘图</span><br><span class="line">% sin(x)</span><br><span class="line">x1=linspace(0,4*pi,2000);</span><br><span class="line">plot(x1,sin(x1))</span><br><span class="line"></span><br><span class="line">% cos(x)</span><br><span class="line">x2=linspace(-pi,3*pi,2000);</span><br><span class="line">plot(x2,cos(x2))</span><br><span class="line"></span><br><span class="line">% tan(x)</span><br><span class="line">x3=linspace(0,4*pi,2000);</span><br><span class="line">plot(x3,tan(x3))</span><br><span class="line"></span><br><span class="line">% 绘制在一幅图中</span><br><span class="line">subplot(131);</span><br><span class="line">plot(x1,sin(x1))</span><br><span class="line">subplot(132);</span><br><span class="line">plot(x2,cos(x2))</span><br><span class="line">subplot(133);</span><br><span class="line">plot(x3,tan(x3))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% Test 2</span><br><span class="line">% sin(x)</span><br><span class="line">x1=linspace(0,4*pi,2000);</span><br><span class="line">plot(x1,sin(x1),&apos;k&apos;)</span><br><span class="line">axis auto;</span><br><span class="line">hold on;</span><br><span class="line"></span><br><span class="line">% cos(x)</span><br><span class="line">x2=linspace(-pi,3*pi,2000);</span><br><span class="line">plot(x2,cos(x2),&apos;--g*&apos;,&apos;linewidth&apos;,3)</span><br><span class="line">hold on;</span><br><span class="line"></span><br><span class="line">% tan(x)</span><br><span class="line">x3=linspace(0,4*pi,2000);</span><br><span class="line">plot(x3,tan(x3),&apos;-.ro&apos;,&apos;linewidth&apos;,2);</span><br><span class="line"></span><br><span class="line">% 图例标注</span><br><span class="line">legend(&apos;sin(x)&apos;,&apos;cos(x)&apos;,&apos;tan(x)&apos;,&apos;4&apos;);</span><br><span class="line"></span><br><span class="line">% Test3</span><br><span class="line">x=linspace(-3,3,49);</span><br><span class="line">y=linspace(-3,3,49);</span><br><span class="line">[xx,yy]=meshgrid(x,y); %确定作图的范围</span><br><span class="line">zz=xx.^2/8-yy.^2/3; </span><br><span class="line"></span><br><span class="line">% 使用mesh函数</span><br><span class="line">mesh(xx,yy,zz)</span><br><span class="line"></span><br><span class="line">% 使用surf函数</span><br><span class="line">surf(xx,yy,zz)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% Test4</span><br><span class="line"></span><br><span class="line">% sin(x)</span><br><span class="line">x1=linspace(0,4*pi,2000);</span><br><span class="line">p1=plot(x1,sin(x1));</span><br><span class="line">hold on;</span><br><span class="line">% cos(x)</span><br><span class="line">x2=linspace(-pi,3*pi,2000);</span><br><span class="line">p2=plot(x2,cos(x2));</span><br><span class="line"></span><br><span class="line">% 获取图形句柄并修改曲线属性</span><br><span class="line">h1=findobj(p1);</span><br><span class="line">set(h1,&apos;color&apos;,&apos;r&apos;)</span><br><span class="line">set(h1,&apos;linewidth&apos;,2)</span><br><span class="line">h2=findobj(p2);</span><br><span class="line">set(h2,&apos;color&apos;,&apos;g&apos;,&apos;linestyle&apos;,&apos;--&apos;)</span><br><span class="line"></span><br><span class="line">% 简答与编程五 程序设计</span><br><span class="line">% Test 01</span><br><span class="line">% swith </span><br><span class="line">score1 = input(&apos;Please enter your score1:&apos;);</span><br><span class="line">switch score1</span><br><span class="line">    case num2cell(90:100)</span><br><span class="line">        disp(&apos;A&apos;)</span><br><span class="line">    case num2cell(80:89)</span><br><span class="line">        disp(&apos;B&apos;)</span><br><span class="line">    case num2cell(70:79)</span><br><span class="line">        disp(&apos;C&apos;)        </span><br><span class="line">    case num2cell(60:69)</span><br><span class="line">        disp(&apos;D&apos;)</span><br><span class="line">    case num2cell(0:59)</span><br><span class="line">        disp(&apos;E&apos;)</span><br><span class="line">    otherwise</span><br><span class="line">        error(&apos;Inputting Error!&apos;)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">% if</span><br><span class="line">score2 = input(&apos;Please enter your score2:&apos;);</span><br><span class="line">if (score2 &gt;= 90 &amp; score2 &lt;= 100)</span><br><span class="line">        disp(&apos;A&apos;)</span><br><span class="line">elseif (score2 &gt;= 80 &amp; score2 &lt;= 89)</span><br><span class="line">        disp(&apos;B&apos;)</span><br><span class="line">elseif (score2 &gt;= 70 &amp; score2 &lt;= 79)</span><br><span class="line">       disp(&apos;C&apos;)        </span><br><span class="line">elseif (score2 &gt;= 60 &amp; score2 &lt;= 69)</span><br><span class="line">        disp(&apos;D&apos;)</span><br><span class="line">elseif (score2 &gt;= 0 &amp; score2 &lt;= 59)</span><br><span class="line">        disp(&apos;E&apos;)</span><br><span class="line">else</span><br><span class="line">        error(&apos;Inputting Error!&apos;)</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% Test 02 </span><br><span class="line">% 数值计算：计算出0-1000之间所有是4的倍数的整数的和</span><br><span class="line">% for循环</span><br><span class="line">s1=0;</span><br><span class="line">for i = 0:4:1000</span><br><span class="line">    s1=s1+i;</span><br><span class="line">   </span><br><span class="line">end</span><br><span class="line">s1</span><br><span class="line"></span><br><span class="line">% while 循环</span><br><span class="line">num=0;</span><br><span class="line">s2=0;</span><br><span class="line">while num&lt;=1000</span><br><span class="line">    s2=s2+num;</span><br><span class="line">    num=num+4;</span><br><span class="line">end</span><br><span class="line">s2</span><br><span class="line">% 不使用循环语句</span><br><span class="line">s3=sum(0:4:1000)</span><br><span class="line">% 显然s1,s2,s3的值都是相等的</span><br><span class="line"></span><br><span class="line">% 符号计算</span><br><span class="line">% 计算出 1+1/2^2+1/3^2+...+1/k^2+...的前10项和</span><br><span class="line"></span><br><span class="line">% for 循环</span><br><span class="line">s4=0;</span><br><span class="line">for j = 1:10</span><br><span class="line">    s4=s4+1/j^2;</span><br><span class="line">end</span><br><span class="line">s4</span><br><span class="line">% while 循环</span><br><span class="line">s5 = 0;</span><br><span class="line">num1=1;</span><br><span class="line">while num1&lt;=10</span><br><span class="line">    s5=s5+1/num1^2;</span><br><span class="line">    num1=num1+1;</span><br><span class="line">end</span><br><span class="line">s5</span><br><span class="line">% 不使用循环语句</span><br><span class="line">syms  k</span><br><span class="line">s6=symsum(1/k^2,1,10)</span><br><span class="line"></span><br><span class="line">% Test  02&apos;!!!!</span><br><span class="line">% for 循环</span><br><span class="line">s1= 0;</span><br><span class="line">for i = 0:10000001;</span><br><span class="line">    s1=s1+0.2^i;</span><br><span class="line">    </span><br><span class="line">end</span><br><span class="line">s1</span><br><span class="line"></span><br><span class="line">% while循环</span><br><span class="line">num=0;</span><br><span class="line">s2=0;</span><br><span class="line">while num&lt;=1000000</span><br><span class="line">    s2=s2+0.2^num;</span><br><span class="line">    num=num+1;</span><br><span class="line">end</span><br><span class="line">s2</span><br><span class="line"></span><br><span class="line">% 很显然s1和s2是相等的。</span><br><span class="line"></span><br><span class="line">% Test 03</span><br><span class="line">function [] = Test(varargin)</span><br><span class="line">% Test 给定不同的输入绘画出不同的图形</span><br><span class="line">% 当没有输入量时，画出单位圆</span><br><span class="line">% 当输入量是大于2的整数N时，绘制正N边形并在图片名中反映显示多边形的真实边数</span><br><span class="line">% 当输入量是&quot;非自然数数&quot;时，给出&quot;出错提示&quot;。</span><br><span class="line">% Author:雷博闻</span><br><span class="line">% Time: 2020/03/25</span><br><span class="line">if nargin == 0</span><br><span class="line">    angle=0:pi/360:2*pi;</span><br><span class="line">figure(1);</span><br><span class="line">plot(1*sin(angle),1*cos(angle));</span><br><span class="line">axis tight</span><br><span class="line">axis equal</span><br><span class="line"></span><br><span class="line">elseif nargin ==1</span><br><span class="line">    a = varargin&#123;1&#125;;</span><br><span class="line">    if a &gt; 2 &amp; rem(a,1)==0</span><br><span class="line">        pgon=nsidedpoly(a);</span><br><span class="line">        figure(1);</span><br><span class="line">        plot(pgon)</span><br><span class="line">        title([&apos;正&apos;,num2str(a),&apos;边形&apos;])</span><br><span class="line">        axis equal</span><br><span class="line">        axis tight</span><br><span class="line"></span><br><span class="line">    elseif a&lt;0 | (a&gt;=0 &amp; rem(a,1)~=0)</span><br><span class="line">        error(&apos;请输入一个自然数！&apos;)</span><br><span class="line">    else</span><br><span class="line">        error(&apos;超出范围&apos;)</span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% Test 04</span><br><span class="line">n=[2:100];</span><br><span class="line">number=0;</span><br><span class="line">tem=0;</span><br><span class="line">sum=0;</span><br><span class="line">for i=1:length(n)-1</span><br><span class="line">        tem=n(i)*n(i+1)-1;</span><br><span class="line">        for j=2:floor(tem/2)</span><br><span class="line">            if rem(tem,j)~=0 </span><br><span class="line">                if j==floor(tem/2)</span><br><span class="line">                    disp([num2str(n(i)),&apos;和&apos;,num2str(n(i + 1)),&apos;是一对亲密数&apos;])</span><br><span class="line">                    number=number+1;</span><br><span class="line">                    sum=sum+tem;</span><br><span class="line">                end</span><br><span class="line">            else</span><br><span class="line">                break;</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">number</span><br><span class="line">sum</span><br><span class="line"></span><br><span class="line">%  简答与编程5 数值计算</span><br><span class="line">% Test1</span><br><span class="line">function [] =Test</span><br><span class="line">A = [27 6 -1;6 15 2;1 1 54];</span><br><span class="line">b = [85;5;110];</span><br><span class="line"></span><br><span class="line">% LU 分解法</span><br><span class="line">[L,U] = lu(A);</span><br><span class="line">X = U\(L\b)</span><br><span class="line"></span><br><span class="line">% 雅可比迭代法</span><br><span class="line">[x1,n1]=jacobi(A,b, [0;0;0],1.0e-3)</span><br><span class="line"></span><br><span class="line">% G-S迭代法</span><br><span class="line">[x2,n2]=gauseidel(A,b, [0;0;0],1.0e-3)</span><br><span class="line"></span><br><span class="line">function [y,n] = jacobi(A,b,x0,ep)</span><br><span class="line">% 雅可比迭代法算法</span><br><span class="line">D = diag(diag(A));</span><br><span class="line">L = -tril(A,-1);</span><br><span class="line">U=-triu(A,1);</span><br><span class="line">B=D\(L+U);</span><br><span class="line">f=D\b;</span><br><span class="line">y=B*x0+f;</span><br><span class="line">n=1;</span><br><span class="line">while norm(y-x0) &gt;= ep</span><br><span class="line">    x0=y;</span><br><span class="line">    y=B*x0+f;</span><br><span class="line">    n=n+1;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">function [y,n]=gauseidel(A,b,x0,ep)</span><br><span class="line">D = diag(diag(A));</span><br><span class="line">L = -tril(A,-1);</span><br><span class="line">U=-triu(A,1);</span><br><span class="line">B=(D-L)\U;</span><br><span class="line">f=(D-L)\b;</span><br><span class="line">y=B*x0+f;</span><br><span class="line">n=1;</span><br><span class="line">while norm(y-x0) &gt;= ep</span><br><span class="line">    x0=y;</span><br><span class="line">    y=B*x0+f;</span><br><span class="line">    n=n+1;</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">% Test 2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function [] = Test()</span><br><span class="line">% 主函数</span><br><span class="line">% solve 命令求解</span><br><span class="line">syms x</span><br><span class="line">answer=solve(x.^3 - 3*x+1);</span><br><span class="line">vpa(answer)</span><br><span class="line"></span><br><span class="line">% 实现逐步搜索法求方程的解</span><br><span class="line">tic</span><br><span class="line">X=StepSearch(-10,10,0.001,0.0001)</span><br><span class="line">toc</span><br><span class="line">% 实现二分法</span><br><span class="line">tic</span><br><span class="line"> [k1,x1,wuca1,yx1]=erfen(-2,-1,0.0001);</span><br><span class="line"> x1</span><br><span class="line">  [k2,x2,wuca2,yx2]=erfen(0,1,0.0001);</span><br><span class="line">  x2</span><br><span class="line">    [k3,x3,wuca3,yx3]=erfen(1,2,0.0001);</span><br><span class="line">    x3</span><br><span class="line">toc</span><br><span class="line"></span><br><span class="line">function y = funs(x)</span><br><span class="line"></span><br><span class="line">y = x.^3 - 3 * x + 1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function r=StepSearch(a,b,h,tol)</span><br><span class="line">% 逐步搜索法算法</span><br><span class="line">X=a:h:b;n=(b-a)/h+1;m=0; </span><br><span class="line">Y=funs(X);</span><br><span class="line">X(n+1)=X(n);Y(n+1)=Y(n);</span><br><span class="line">k=2; </span><br><span class="line">    while(k&lt;=n)</span><br><span class="line">        sk=Y(k)*Y(k-1);</span><br><span class="line">        if sk&lt;=0</span><br><span class="line">            m=m+1;</span><br><span class="line">            if(abs(Y(k))&lt;abs(Y(k-1)))</span><br><span class="line">                r(m)=X(k);</span><br><span class="line">                k=k+1;</span><br><span class="line">            else</span><br><span class="line">                r(m)=X(k-1);</span><br><span class="line">            end</span><br><span class="line">        else</span><br><span class="line">            xielv=(Y(k+1)-Y(k))* (Y(k)-Y(k-1));</span><br><span class="line">            if (abs(Y(k))&lt;tol)&amp;( xielv&lt;=0)</span><br><span class="line">                m=m+1;r(m)=X(k);</span><br><span class="line">            end</span><br><span class="line">        end</span><br><span class="line">        k=k+1;    </span><br><span class="line">        </span><br><span class="line">    end</span><br><span class="line">    </span><br><span class="line">     </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">function [k,x,wuca,yx]=erfen(a,b,abtol)</span><br><span class="line">     % 二分法算法</span><br><span class="line">     a(1)=a; b(1)=b; </span><br><span class="line"></span><br><span class="line">ya=funs(a(1)); yb=funs(b(1)); %程序中调用的fun.m为函数</span><br><span class="line"></span><br><span class="line">if ya* yb&gt;0</span><br><span class="line"></span><br><span class="line">disp(&apos;注意：ya*yb&gt;0,请重新调整区间端点a和b.&apos;), return</span><br><span class="line">end</span><br><span class="line">max1=-1+ceil((log(b-a)- log(abtol))/log(2)); %ceil是向正方向取整</span><br><span class="line">for k=1:max1+1</span><br><span class="line"></span><br><span class="line">    ya=funs(a); b; yb=funs(b); x=(a+b)/2;</span><br><span class="line"></span><br><span class="line">yx=funs(x); wuca=abs(b-a)/2; k=k-1;</span><br><span class="line">[k,a,b,x,wuca,ya,yb,yx];</span><br><span class="line"></span><br><span class="line">if yx == 0</span><br><span class="line">    a=x;b=x;</span><br><span class="line">elseif yb*yx&gt;0</span><br><span class="line">    b=x;yb=yx;</span><br><span class="line">else</span><br><span class="line">    a=x;ya=yx;</span><br><span class="line">    </span><br><span class="line">end</span><br><span class="line">if b-a&lt;abtol,return,end </span><br><span class="line">end</span><br><span class="line">k=max1;x;wuca;yx=funs(x);</span><br><span class="line"></span><br><span class="line">%  简答与编程5 数值计算</span><br><span class="line">% Test3 </span><br><span class="line">x=linspace(-5,5,10); % 已知数据点的x坐标</span><br><span class="line">y=1./(1+x.^2); % 已知数据点y坐标</span><br><span class="line">x0=linspace(-5,5,10); % 已知数据点x坐标</span><br><span class="line">y0=1./(1+x0.^2); % 已知数据点y坐标</span><br><span class="line">x1=linspace(-5,5,10);</span><br><span class="line">y1=interp1(x,y,x1,&apos;linear&apos;); % 线性插值</span><br><span class="line">y2=interp1(x,y,x1,&apos;spline&apos;); % 三次样条插值</span><br><span class="line">y3=interp1(x,y,x1,&apos;pchip&apos;); % 三次Hermite插值</span><br><span class="line">y4=interp1(x,y,x1,&apos;nearest&apos;); % 最邻近插值</span><br><span class="line"></span><br><span class="line">% 作图</span><br><span class="line">figure(1)</span><br><span class="line">plot(x0,y0,&apos;-&apos;,x,y,&apos;og&apos;,x1,y1,&apos;*r&apos;);</span><br><span class="line">legend(&apos;被插值曲线&apos;,&apos;已知离散数据点&apos;,&apos;线性插值数据点 &apos;,&apos;location&apos;,&apos;NorthWest&apos;);</span><br><span class="line">title(&apos;interp with linear&apos;)</span><br><span class="line">figure(2) </span><br><span class="line">plot(x0,y0,&apos;-&apos;,x,y,&apos;og&apos;,x1,y4,&apos;hr&apos;);</span><br><span class="line">legend(&apos;被插值曲线&apos;,&apos;已知离散数据点&apos;,&apos;线性插值数据点 &apos;,&apos;location&apos;,&apos;NorthWest&apos;);</span><br><span class="line">title(&apos;interp with cubic&apos;)</span><br><span class="line">figure(3) </span><br><span class="line">plot(x0,y0,&apos;-&apos;,x,y,&apos;og&apos;,x1,y2,&apos;sr&apos;);</span><br><span class="line">legend(&apos;被插值曲线&apos;,&apos;已知离散数据点&apos;,&apos;线性插值数据点 &apos;,&apos;location&apos;,&apos;NorthWest&apos;);</span><br><span class="line">title(&apos;interp with spline&apos;)</span><br><span class="line">figure(4)</span><br><span class="line">plot(x0,y0,&apos;-&apos;,x,y,&apos;og&apos;,x1,y3,&apos;dr&apos;);</span><br><span class="line">legend(&apos;被插值曲线&apos;,&apos;已知离散数据点&apos;,&apos;线性插值数据点 &apos;,&apos;location&apos;,&apos;NorthWest&apos;);</span><br><span class="line">title(&apos;interp with pchip&apos;)</span><br><span class="line"></span><br><span class="line">%  简答与编程5 数值计算</span><br><span class="line">% Test4</span><br><span class="line">x=1.23;</span><br><span class="line">h=[0.1,0.01,0.001,0.0001];</span><br><span class="line">x1=x+h;</span><br><span class="line">x2=x-h;</span><br><span class="line">y = 7.*x.*(sin(3.*x)+cos(3.*x));</span><br><span class="line">y1= 7.*x1.*(sin(3.*x1)+cos(3.*x1));</span><br><span class="line">y2=7.*x2.*(sin(3.*x2)+cos(3.*x2));</span><br><span class="line">yCS=(y1-y2)./(2*h) % 差商数值求导</span><br><span class="line">syms x;</span><br><span class="line">f=7.*x.*(sin(3.*x)+cos(3.*x));</span><br><span class="line">dy=diff(f,x); % 理论导数符号表达式</span><br><span class="line">dyl=eval(subs(dy,x,1.23)) ;% 理论导数</span><br><span class="line">detF=yCS-dyl % 差商求导误差</span><br><span class="line"></span><br><span class="line">% Test 05 </span><br><span class="line"></span><br><span class="line">h=(exp(1)-1)/20;</span><br><span class="line">x=1:h:exp(1);</span><br><span class="line">y=2.*x.^3.*log(5*x);</span><br><span class="line">z1=sum(y(1:20))*h;</span><br><span class="line">z2=sum(y(2:21)*h);</span><br><span class="line">z=(z1+z2)/2,z3=trapz(y)*h,z3h=trapz(x,y)</span><br></pre></td></tr></table></figure>
+<h2 id="简答与编程六-符号计算"><a href="#简答与编程六-符号计算" class="headerlink" title="简答与编程六 符号计算"></a>简答与编程六 符号计算</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line">%  简答与编程六 符号计算</span><br><span class="line">%  Test 1</span><br><span class="line">% 展开成傅立叶级数</span><br><span class="line">l=1/2;</span><br><span class="line">syms x n;</span><br><span class="line">f=1-x^2;</span><br><span class="line">a0=int(f*cos(0),-l,l)/l</span><br><span class="line">an=int(f*cos(n*pi*x/l),-l,l)/l</span><br><span class="line">bn=int(f*sin(n*pi*x/l),-l,l)/l</span><br><span class="line"></span><br><span class="line">% 简答与编程六 符号计算</span><br><span class="line">% Test 2</span><br><span class="line">x = sym(&apos;x&apos;);</span><br><span class="line">y = sym(&apos;y&apos;);</span><br><span class="line">z = sym(&apos;z&apos;);</span><br><span class="line">[xx,yy,zz]=solve(x-y^2+z==10,x+y-5*z==0,2*x-4*y+z==0&apos;,x,y,z);</span><br><span class="line"></span><br><span class="line">%  Test3</span><br><span class="line">%%输入信号 </span><br><span class="line">t=0:1e-3:20;%时域信号的时间范围 </span><br><span class="line">x=sin(t)+sin(1.5*t+1)+5*cos(0.5*t)+2*randn(size(t));%时域信号x</span><br><span class="line">w=[0:1e-2:2];%想要观察的频率范围</span><br><span class="line">%%预定义 </span><br><span class="line">y=w;</span><br><span class="line">a=w;</span><br><span class="line">j=sqrt(-1);</span><br><span class="line">%%计算频点 </span><br><span class="line">for i=1:length(w)</span><br><span class="line">f=trapz(t,x.*exp(-j*w(i)*t));</span><br><span class="line">y(i)=abs(f);</span><br><span class="line">a(i)=angle(f);</span><br><span class="line">end</span><br><span class="line">%%输出 </span><br><span class="line">subplot(3,1,1),</span><br><span class="line">plot(t,x)</span><br><span class="line">subplot(3,1,2),</span><br><span class="line">plot(w,y)</span><br><span class="line">subplot(3,1,3),</span><br><span class="line">plot(w,a)</span><br><span class="line"></span><br><span class="line">% Test 04</span><br><span class="line">% f1</span><br><span class="line"></span><br><span class="line">s1=taylor(1/(5+cos(x)),x,5)</span><br><span class="line"></span><br><span class="line">% f2</span><br><span class="line">s2=taylor(exp(x* sin(x)),x,12)</span><br><span class="line">% Test 05</span><br><span class="line">% （1）求展开式，并求方程的根。</span><br><span class="line">syms x;</span><br><span class="line">f=(x^2+x)*(x-1);</span><br><span class="line">g=x^2+2*x+1;</span><br><span class="line">a=expand(f+g)</span><br><span class="line">solve(f+g,x)</span><br><span class="line">% (2)求 f(x)/g(x)的商式和余式</span><br><span class="line">p1=sym2poly(f);</span><br><span class="line">p2=sym2poly(g);</span><br><span class="line">[Q,r]=deconv(p1,p2); % 其中Q是商式系数，r是余式系数</span><br><span class="line">Qa=poly2sym(Q) % 商式</span><br><span class="line">ra=poly2sym(r) % 余式</span><br><span class="line">% Test 06</span><br><span class="line">syms x y</span><br><span class="line">f =x*y^2-y^3;</span><br><span class="line">fx1=diff(f,x,1) % 对x的1阶</span><br><span class="line">fx2=diff(f,x,2) % 对x的2阶</span><br><span class="line"></span><br><span class="line">fy1=diff(f,y,1) % 对y的1阶</span><br><span class="line">fy2=diff(f,y,2) % 对y的2阶</span><br><span class="line">% Test 07</span><br><span class="line">syms x;</span><br><span class="line">f = (1+x)^(1/x);</span><br><span class="line">a=limit(f,x,0)</span><br><span class="line">% Test 08</span><br><span class="line">% (1)</span><br><span class="line">syms a x;</span><br><span class="line">f1=sin(a*x);</span><br><span class="line">a1=int(f1,0,pi/2)</span><br><span class="line">% (2)</span><br><span class="line">f2=x/log(x);</span><br><span class="line">a2=int(f2,2,3)</span><br><span class="line"></span><br><span class="line">% Test09</span><br><span class="line">syms x y z</span><br><span class="line">y1=@(x) sqrt(x);</span><br><span class="line">y2=@(x) x.^2;</span><br><span class="line">z1=@(x,y) sqrt(x.*y);</span><br><span class="line">z2=@(x,y) x.^2.*y;</span><br><span class="line">fun=@(x,y,z) x.^2+y.^2+z.^2;</span><br><span class="line">a=integral3(fun,1,2,y1,y2,z1,z2)</span><br><span class="line"></span><br><span class="line">% Test 10</span><br><span class="line">syms x;</span><br><span class="line">g=x^3-6*x^2+11*x-6;</span><br><span class="line">% (1)因式</span><br><span class="line">a1=factor(g)</span><br><span class="line">% (2)嵌套式</span><br><span class="line">a2=horner(g)</span><br><span class="line">simplify(a2)</span><br></pre></td></tr></table></figure>
+
+<h2 id="GUI-Test"><a href="#GUI-Test" class="headerlink" title="GUI Test"></a>GUI Test</h2><p>function varargout = Test03(varargin)</p>
+<p>gui_Singleton = 1;<br>gui_State = struct(‘gui_Name’,       mfilename, …<br>                   ‘gui_Singleton’,  gui_Singleton, …<br>                   ‘gui_OpeningFcn’, @Test03_OpeningFcn, …<br>                   ‘gui_OutputFcn’,  @Test03_OutputFcn, …<br>                   ‘gui_LayoutFcn’,  [] , …<br>                   ‘gui_Callback’,   []);<br>if nargin &amp;&amp; ischar(varargin{1})<br>    gui_State.gui_Callback = str2func(varargin{1});<br>end</p>
+<p>if nargout<br>    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});<br>else<br>    gui_mainfcn(gui_State, varargin{:});<br>end<br>% End initialization code - DO NOT EDIT<br>defaultanswers={‘5’};<br>answer=inputdlg(‘Enter your grade’,’Enter’,1,defaultanswers,’on’);<br>answer1=str2num(char(answer));<br>if answer1 &gt;= 90 &amp;&amp; answer1 &lt;= 100<br>    msgbox(“优秀”,’成绩分析’,’none’,’on’)<br>elseif  answer1 &gt;= 80 &amp;&amp; answer1 &lt;= 89<br>    msgbox(“良好”,’成绩分析’,’none’,’on’)<br>    elseif  answer1 &gt;= 70 &amp;&amp; answer1 &lt;= 79<br>    msgbox(“中等”,’成绩分析’,’none’,’on’)<br>    elseif  answer1 &gt;= 60 &amp;&amp; answer1 &lt;= 69<br>    msgbox(“合格”,’成绩分析’,’help’,’on’)<br>else<br>        msgbox(“不合格”,’Result’,’warn’,’on’)<br>end</p>
+<p>% — Executes just before Test03 is made visible.<br>function Test03_OpeningFcn(hObject, eventdata, handles, varargin)<br>% This function has no output args, see OutputFcn.<br>% hObject    handle to figure<br>% eventdata  reserved - to be defined in a future version of MATLAB<br>% handles    structure with handles and user data (see GUIDATA)<br>% varargin   command line arguments to Test03 (see VARARGIN)</p>
+<p>% Choose default command line output for Test03<br>handles.output = hObject;<br>ha=axes(‘units’,’normalized’,’pos’,[0 0 1 1]);</p>
+<p> uistack(ha,’down’);</p>
+<p> ii=imread(‘p1.jpg’);</p>
+<p>%设置程序的背景图为p1.jpg</p>
+<p> image(ii);</p>
+<p> colormap gray</p>
+<p> set(ha,’handlevisibility’,’off’,’visible’,’off’);</p>
+<p>% Update handles structure<br>guidata(hObject, handles);</p>
+<p>% UIWAIT makes Test03 wait for user response (see UIRESUME)<br>% uiwait(handles.figure1);</p>
+<p>% — Outputs from this function are returned to the command line.<br>function varargout = Test03_OutputFcn(hObject, eventdata, handles)<br>% varargout  cell array for returning output args (see VARARGOUT);<br>% hObject    handle to figure<br>% eventdata  reserved - to be defined in a future version of MATLAB<br>% handles    structure with handles and user data (see GUIDATA)</p>
+<p>% Get default command line output from handles structure<br>varargout{1} = handles.output;</p>
+<p>% — Executes during object creation, after setting all properties.<br>function axes1_CreateFcn(hObject, eventdata, handles)<br>% hObject    handle to axes1 (see GCBO)<br>% eventdata  reserved - to be defined in a future version of MATLAB<br>% handles    empty - handles not created until after all CreateFcns called</p>
+<p>% Hint: place code in OpeningFcn to populate axes1</p>
+<p>function edit1_Callback(hObject, eventdata, handles)<br>% hObject    handle to edit1 (see GCBO)<br>% eventdata  reserved - to be defined in a future version of MATLAB<br>% handles    structure with handles and user data (see GUIDATA)</p>
+<p>% Hints: get(hObject,’String’) returns contents of edit1 as text<br>%        str2double(get(hObject,’String’)) returns contents of edit1 as a double</p>
+<p>% — Executes during object creation, after setting all properties.<br>function edit1_CreateFcn(hObject, eventdata, handles)<br>% hObject    handle to edit1 (see GCBO)<br>% eventdata  reserved - to be defined in a future version of MATLAB<br>% handles    empty - handles not created until after all CreateFcns called</p>
+<p>% Hint: edit controls usually have a white background on Windows.<br>%       See ISPC and COMPUTER.<br>if ispc &amp;&amp; isequal(get(hObject,’BackgroundColor’), get(0,’defaultUicontrolBackgroundColor’))<br>    set(hObject,’BackgroundColor’,’white’);<br>end</p>
+<p>function varargout = Test04(varargin)<br>% TEST04 MATLAB code for Test04.fig<br>% Begin initialization code - DO NOT EDIT<br>gui_Singleton = 1;<br>gui_State = struct(‘gui_Name’,       mfilename, …<br>                   ‘gui_Singleton’,  gui_Singleton, …<br>                   ‘gui_OpeningFcn’, @Test04_OpeningFcn, …<br>                   ‘gui_OutputFcn’,  @Test04_OutputFcn, …<br>                   ‘gui_LayoutFcn’,  [] , …<br>                   ‘gui_Callback’,   []);<br>if nargin &amp;&amp; ischar(varargin{1})<br>    gui_State.gui_Callback = str2func(varargin{1});<br>end</p>
+<p>if nargout<br>    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});<br>else<br>    gui_mainfcn(gui_State, varargin{:});<br>end<br>% End initialization code - DO NOT EDIT<br>users={‘123’,’321’;’456’,’789’};% 存储一系列账号和密码<br>[x,y]=size(users);<br>prompt={‘请输入账号:’,’请输入密码:’}<br>name=’输入’;<br>numlines=1;<br>defaultanswer={‘000’,’000’};<br>input=inputdlg(prompt,name,numlines,defaultanswer);<br>input1=str2num(char(input));<br>for i=1:x<br>    if input1(1)==str2num(char(users(i,1)))<br>        if input1(2)==str2num(char(users(i,2)))<br>            msgbox(‘欢迎登录本系统’,’Welcome ‘,’none’)<br>            break<br>        else<br>            msgbox(‘输入有误，请重新输入账号和密码’,’出错’,’error’)<br>            break<br>        end<br>    else<br>        msgbox(‘输入有误，请重新输入账号和密码’,’出错’,’error’)<br>        break<br>    end<br>end</p>
+<p>% — Executes just before Test04 is made visible.<br>function Test04_OpeningFcn(hObject, eventdata, handles, varargin)<br>% This function has no output args, see OutputFcn.<br>% hObject    handle to figure<br>% eventdata  reserved - to be defined in a future version of MATLAB<br>% handles    structure with handles and user data (see GUIDATA)<br>% varargin   command line arguments to Test04 (see VARARGIN)</p>
+<p>% Choose default command line output for Test04<br>handles.output = hObject;</p>
+<p>% Update handles structure<br>guidata(hObject, handles);</p>
+<p>% UIWAIT makes Test04 wait for user response (see UIRESUME)<br>% uiwait(handles.figure1);</p>
+<p>% — Outputs from this function are returned to the command line.<br>function varargout = Test04_OutputFcn(hObject, eventdata, handles)<br>% varargout  cell array for returning output args (see VARARGOUT);<br>% hObject    handle to figure<br>% eventdata  reserved - to be defined in a future version of MATLAB<br>% handles    structure with handles and user data (see GUIDATA)</p>
+<p>% Get default command line output from handles structure<br>varargout{1} = handles.output;</p>
+
       
     </div>
 
@@ -834,7 +909,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/15/Matlab/Matlab%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%BE%E5%A0%82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -848,7 +923,81 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/" class="post-title-link" itemprop="url">课程导入</a>
+            <a href="/2020/03/15/Matlab/Matlab%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%BE%E5%A0%82/" class="post-title-link" itemprop="url">Matlab/Matlab字符串课堂</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-15 00:02:11" itemprop="dateCreated datePublished" datetime="2020-03-15T00:02:11+08:00">2020-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-17 19:06:34" itemprop="dateModified" datetime="2020-03-17T19:06:34+08:00">2020-03-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><ul>
+<li>size(str)获取字符数组的大小</li>
+<li>s1 = s([3, 4])得到子字符串</li>
+<li>abs 和 double 都可以用来获取串数组所对应的ascii码数值数组。</li>
+<li>char可把ascii码数组变位机串数组 </li>
+</ul>
+<h1 id="第三章-Matlab数据可视化"><a href="#第三章-Matlab数据可视化" class="headerlink" title="第三章 Matlab数据可视化"></a>第三章 Matlab数据可视化</h1><h2 id="二维数据可视化"><a href="#二维数据可视化" class="headerlink" title="二维数据可视化"></a>二维数据可视化</h2><p>二维数据可视化是将平面坐标上的数据点连接起来的平面图形。除直角坐标外，还可以采用对书坐标、极坐标</p>
+<h3 id="基本二维曲线绘制"><a href="#基本二维曲线绘制" class="headerlink" title="基本二维曲线绘制"></a>基本二维曲线绘制</h3><p>plot函数<br>    - plot(y)<br>        y可以是向量<br>        实数、矩阵或复数向量<br>    - plot(x,y)<br>        * 当x是向量，y是有一维与x同维的矩阵<br>        * 当x为向量，y为矩阵；<br>        * 当x、y均为矩阵时，使用plot(x,y):<br>          此时，x、y是具有相同维数的矩阵；绘图时，       以x的列向量作为横坐标，以y对应的列向量作为纵坐标，当x、y具有n列时，同时绘制出n条曲线。</p>
+<h3 id="绘图辅助操作"><a href="#绘图辅助操作" class="headerlink" title="绘图辅助操作"></a>绘图辅助操作</h3><p>绘图辅助操作实在plot函数的基础上增加颜色、线型等输入参数          </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/14/Matlab/Matlab%E5%AD%97%E7%AC%A6%E4%B8%B2book/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/14/Matlab/Matlab%E5%AD%97%E7%AC%A6%E4%B8%B2book/" class="post-title-link" itemprop="url">Matlab/Matlab字符串book</a>
         </h1>
 
         <div class="post-meta">
@@ -860,7 +1009,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-17 10:53:53 / 修改时间：11:34:30" itemprop="dateCreated datePublished" datetime="2020-02-17T10:53:53+08:00">2020-02-17</time>
+              <time title="创建时间：2020-03-14 23:32:42 / 修改时间：23:52:06" itemprop="dateCreated datePublished" datetime="2020-03-14T23:32:42+08:00">2020-03-14</time>
             </span>
 
           
@@ -874,19 +1023,84 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="什么叫计算"><a href="#什么叫计算" class="headerlink" title="什么叫计算"></a>什么叫计算</h1><p>1 算术运算</p>
-<p>2 较复杂的运算：即根据已知量求出未知量</p>
-<h1 id="什么叫科学计算"><a href="#什么叫科学计算" class="headerlink" title="什么叫科学计算"></a>什么叫科学计算</h1><p>对于复杂的数值计算问题，可以利用计算机进行问题求解</p>
-<blockquote>
-<p>利用计算机进行数值计算的方法叫做数值计算</p>
-</blockquote>
-<h1 id="科学计算与Matlab语言的关系"><a href="#科学计算与Matlab语言的关系" class="headerlink" title="科学计算与Matlab语言的关系"></a>科学计算与Matlab语言的关系</h1><blockquote>
-<p>数值问题 ——&gt; 求解算法 ——&gt; 程序实现——&gt; 结果分析</p>
-</blockquote>
-<p>Matlab是矩阵实验室的缩写</p>
-<h2 id="Matlab语言的主要功能"><a href="#Matlab语言的主要功能" class="headerlink" title="Matlab语言的主要功能"></a>Matlab语言的主要功能</h2><p>例如：可以求解一元二次方程</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p = [<span class="number">1</span>,<span class="number">-3</span>,<span class="number">1</span>];</span><br><span class="line">x = roots(p)</span><br></pre></td></tr></table></figure>
+          <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="字符串处理函数"><a href="#字符串处理函数" class="headerlink" title="字符串处理函数"></a>字符串处理函数</h2><h3 id="字符串的构造"><a href="#字符串的构造" class="headerlink" title="字符串的构造"></a>字符串的构造</h3><ul>
+<li>创建字符数组<ul>
+<li>用一对单引号来表示字符串</li>
+<li>字符串合并函数strcat来得到一个新的函数(对应Java中的concat) : 语法 ： strcat(a, b)<br>  &amp; 注意：strcat在合并字符串的同时会把字符串结尾的空格删除.<br>  &amp; 要想保留这些空格，可以用矩阵合并符来实现字符串合并。<pre><code>例如： c = [a, b]</code></pre></li>
+<li>构造二维字符串数组时，要注意保持二维字符数组的每一行具有相同的长度。<br>  &amp; 当构造的多个字符串具有不同长度时，可以在字符串的尾部添加空格来强制实现字符串具有相同的长度。</li>
+</ul>
+</li>
+</ul>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/14/Matlab/Matlab%E7%9F%A9%E9%98%B5%E7%9A%84%E8%AE%BF%E9%97%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/14/Matlab/Matlab%E7%9F%A9%E9%98%B5%E7%9A%84%E8%AE%BF%E9%97%AE/" class="post-title-link" itemprop="url">Matlab矩阵的访问</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-14 18:01:37 / 修改时间：18:11:10" itemprop="dateCreated datePublished" datetime="2020-03-14T18:01:37+08:00">2020-03-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Matalb矩阵元素的访问"><a href="#Matalb矩阵元素的访问" class="headerlink" title="Matalb矩阵元素的访问"></a>Matalb矩阵元素的访问</h1><h2 id="通过下标来引用矩阵的元素"><a href="#通过下标来引用矩阵的元素" class="headerlink" title="通过下标来引用矩阵的元素"></a>通过下标来引用矩阵的元素</h2><ul>
+<li>先行后列</li>
+<li>下标越界时Matlab会自动扩展矩阵，为给定值的位置默认为零。<h2 id="通过序号来引用矩阵的元素"><a href="#通过序号来引用矩阵的元素" class="headerlink" title="通过序号来引用矩阵的元素"></a>通过序号来引用矩阵的元素</h2></li>
+</ul>
+<h2 id="通过冒号表达式来或者子矩阵"><a href="#通过冒号表达式来或者子矩阵" class="headerlink" title="通过冒号表达式来或者子矩阵"></a>通过冒号表达式来或者子矩阵</h2><ul>
+<li>获得第n行所有元素<pre><code>* A(n,:)</code></pre></li>
+<li>获得第n列的所有元素<pre><code>* A(:,n)</code></pre></li>
+<li>获得第2到5行且3到4列中的元素<pre><code>* A(2 : 5;3 : 4)</code></pre></li>
+<li>获得n到m行的所有元素<pre><code>* A(n : m, : )</code></pre></li>
+<li>获得n到m列的所有元素<pre><code>* A(:,n : m)</code></pre>&amp; 注意：end在Matlab中表示某一维的末尾下标</li>
+</ul>
 
       
     </div>
@@ -906,7 +1120,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -950,7 +1164,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1022,7 +1236,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41.5k字</span>
+  <span class="post-count">博客全站共76.3k字</span>
 </div>
 
         

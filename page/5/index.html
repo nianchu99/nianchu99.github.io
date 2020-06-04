@@ -222,7 +222,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/14/Matlab/Matlab%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -236,7 +236,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/" class="post-title-link" itemprop="url">廖雪峰Python教程练习题</a>
+            <a href="/2020/03/14/Matlab/Matlab%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">Matlab零散的知识</a>
         </h1>
 
         <div class="post-meta">
@@ -247,26 +247,15 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-16 23:54:37" itemprop="dateCreated datePublished" datetime="2020-02-16T23:54:37+08:00">2020-02-16</time>
+              <time title="创建时间：2020-03-14 18:01:37" itemprop="dateCreated datePublished" datetime="2020-03-14T18:01:37+08:00">2020-03-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-24 23:20:16" itemprop="dateModified" datetime="2020-02-24T23:20:16+08:00">2020-02-24</time>
+                <time title="修改时间：2020-04-18 15:40:44" itemprop="dateModified" datetime="2020-04-18T15:40:44+08:00">2020-04-18</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
 
           
 
@@ -279,7 +268,170 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># names.py</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> name.capitalize()</span><br><span class="line"></span><br><span class="line">L1 = [<span class="string">'adam'</span>, <span class="string">'LISA'</span>, <span class="string">'barT'</span>]</span><br><span class="line">L2 = list(map(normalize, L1))</span><br><span class="line">print(L2)</span><br><span class="line"><span class="comment"># 求积</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prod</span><span class="params">(L)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">prod1</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * y</span><br><span class="line">    <span class="keyword">return</span> reduce(prod1, L)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))</span><br><span class="line"><span class="comment"># 转换字符串</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">先记住这个结果，等会实现需要用到</span></span><br><span class="line"><span class="string">a = '123.456'</span></span><br><span class="line"><span class="string">n = a.index('.')</span></span><br><span class="line"><span class="string">b = [x for x in a[:n]]</span></span><br><span class="line"><span class="string">print(b)</span></span><br><span class="line"><span class="string">结果：</span></span><br><span class="line"><span class="string">['1', '2', '3']</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2float</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">    n = s.index(<span class="string">'.'</span>)</span><br><span class="line">    s1 = list(map(int, [x <span class="keyword">for</span> x <span class="keyword">in</span> s[:n]]))</span><br><span class="line">    s2 = list(map(int, [y <span class="keyword">for</span> y <span class="keyword">in</span> s[n+<span class="number">1</span>: ]]))</span><br><span class="line">    <span class="keyword">return</span> reduce(fn,s1) + (reduce(fn, s2) / <span class="number">10</span> ** len(s2))</span><br><span class="line"></span><br><span class="line">print(str2float(<span class="string">'123.456'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">['Adam', 'Lisa', 'Bart']</span></span><br><span class="line"><span class="string">3 * 5 * 7 * 9 = 945</span></span><br><span class="line"><span class="string">123.456</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <h1 id="Matlab零散知识"><a href="#Matlab零散知识" class="headerlink" title="Matlab零散知识"></a>Matlab零散知识</h1><h2 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h2><ul>
+<li><p>在矩阵的乘法中，有一种矩阵起着特殊的作用，如同数的乘法中的1，这样的矩阵被称为单位矩阵。</p>
+</li>
+<li><p>它是一个方阵，从左上角到右下角的对角线(称为主对角线)上的元素均为1，除此之外全部为0.根据单位矩阵的特点，任何矩阵与单位矩阵相乘都等于本身，而单位矩阵因此独特性在高等数学中也有广泛应用。</p>
+</li>
+<li><p>在Matlab中单位矩阵用eye(n,m)生成</p>
+<h2 id="变量的存取"><a href="#变量的存取" class="headerlink" title="变量的存取"></a>变量的存取</h2><h3 id="1-使用命令实现变量的存取-load-取-save-存"><a href="#1-使用命令实现变量的存取-load-取-save-存" class="headerlink" title="1 使用命令实现变量的存取(load:取,save:存)"></a>1 使用命令实现变量的存取(load:取,save:存)</h3></li>
+<li><p>格式1<br>  load 文件名 变量名;<br>  save 文件名 变量名；<br>例如：</p>
+<figure class="highlight plain"><figcaption><span>Matlab</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">save file1.mat A;</span><br></pre></td></tr></table></figure></li>
+<li><p>格式2<br>  S = load(‘文件名’, ‘格式’, ‘变量名’)<br>  save(‘文件名’, ‘格式’, ‘变量名’)<br>例如：</p>
+<figure class="highlight plain"><figcaption><span>Matlab</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">save(&apos;file1.mat&apos;, &apos;-mat&apos;, &apos;A&apos;)</span><br><span class="line">save(&apos;file1.txt&apos;, &apos;-ascii&apos;, &apos;A&apos;)</span><br><span class="line">save(&apos;file2.txt&apos;, &apos;-ascii&apos;, &apos;tabs&apos;, &apos;A&apos;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>其中格式有：<ul>
+<li>‘-mat’ : 二进制格式</li>
+<li>‘-ascii’ : 8位文本格式</li>
+<li>‘-ascii’,’-tabs’: 以8位文本和table分隔符分割的格式<h3 id="2-使用交互式实现变量的存取"><a href="#2-使用交互式实现变量的存取" class="headerlink" title="2 使用交互式实现变量的存取"></a>2 使用交互式实现变量的存取</h3>即通过鼠标点击工作空间窗口来实现</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="对Excle文件的读取"><a href="#对Excle文件的读取" class="headerlink" title="对Excle文件的读取"></a>对Excle文件的读取</h2><p>例子：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">num</span><br><span class="line">=xlsread(&apos;data.xls&apos;,&apos;Sheet1&apos;,&apos;B3:F6&apos;)</span><br></pre></td></tr></table></figure><br>    <strong>进行Excel表格读取时请注意，关闭需要打开的工作表，否则进程占用，无法读取。</strong><br>    *<em>进行Excel表格读取时请注意,数据范围那一项中间不能留有空格，即’A2:D4’ 而不是’A2 : D4’ *</em></p>
+<h2 id="类型转换问题"><a href="#类型转换问题" class="headerlink" title="类型转换问题"></a>类型转换问题</h2><ul>
+<li>abs和double可以将字符转换为ascii码</li>
+<li>number2str将数字转换为字符</li>
+<li>char将ascii码转换为字符<h2 id="Matlab中步长的意思是：差值而不是间隔。例如："><a href="#Matlab中步长的意思是：差值而不是间隔。例如：" class="headerlink" title="Matlab中步长的意思是：差值而不是间隔。例如："></a>Matlab中步长的意思是：差值而不是间隔。例如：</h2>x[1:2:12] :结果就为 1 3 5 7 9 11<h2 id="数组距离问题："><a href="#数组距离问题：" class="headerlink" title="数组距离问题："></a>数组距离问题：</h2>(end-10:end)之间有11个元素<h2 id="矩阵索引问题："><a href="#矩阵索引问题：" class="headerlink" title="矩阵索引问题："></a>矩阵索引问题：</h2></li>
+<li>无法对临时矩阵进行索引<h2 id="修改命令行错误："><a href="#修改命令行错误：" class="headerlink" title="修改命令行错误："></a>修改命令行错误：</h2>有时候我们输入表达式时会带有错误，当你按 ENTER 回车后才意识到，这时没必须重 新输入整行，只需使用方向键向上移动，修正错误，然后按回车重新输入，MATLAB 会修 正输出<h2 id="还可以在命令窗口中输入-quit-命令，这样也能关闭-MATLAB。"><a href="#还可以在命令窗口中输入-quit-命令，这样也能关闭-MATLAB。" class="headerlink" title="还可以在命令窗口中输入 quit 命令，这样也能关闭 MATLAB。"></a>还可以在命令窗口中输入 quit 命令，这样也能关闭 MATLAB。</h2></li>
+</ul>
+<h2 id="x和x的区别："><a href="#x和x的区别：" class="headerlink" title=".x和x的区别："></a>.x和x的区别：</h2><ul>
+<li>前者是矩阵中的元素相乘</li>
+<li>后者是两个矩阵相乘 </li>
+</ul>
+<h2 id="绘画三维图形时，使用的meshgrid命令"><a href="#绘画三维图形时，使用的meshgrid命令" class="headerlink" title="绘画三维图形时，使用的meshgrid命令"></a>绘画三维图形时，使用的meshgrid命令</h2><h2 id="命令文件和函数文件的区别和联系："><a href="#命令文件和函数文件的区别和联系：" class="headerlink" title="命令文件和函数文件的区别和联系："></a>命令文件和函数文件的区别和联系：</h2><p>(1)命令文件没有输入参数,也不返回输出参数,而函数文件可以带输入参数,也可以返回输出参数。 (2)命令文件对MATLAB工作空间中的变量进行操作,命令执行的结果返回到工作空间中,所产生的变量为全局变量,而函数文件中定义的变量为局部变量,不在工作空间中显示,当函数文件执行后,这些变量被清除。 (3)命令文件可以直接运行,而函数文件不能直接运行,要以函数调用的方式运行。</p>
+<h2 id="创建符号常量的意义："><a href="#创建符号常量的意义：" class="headerlink" title="创建符号常量的意义："></a>创建符号常量的意义：</h2><p>可以避免精度损失的问题<br>例如计算机中1/3的值是0.3333333，但如果x=syms(‘1/3’),则x始终是1/3而不是0.33333</p>
+<h2 id="计算伴随矩阵"><a href="#计算伴随矩阵" class="headerlink" title="计算伴随矩阵"></a>计算伴随矩阵</h2><p> inv(A)*det(A)</p>
+<h2 id="将cell数组转化为矩阵"><a href="#将cell数组转化为矩阵" class="headerlink" title="将cell数组转化为矩阵"></a>将cell数组转化为矩阵</h2><h3 id="若cell中的元素为含有数字的字符串"><a href="#若cell中的元素为含有数字的字符串" class="headerlink" title="若cell中的元素为含有数字的字符串"></a>若cell中的元素为含有数字的字符串</h3><p> str2num(char(answer));</p>
+<h3 id="若cell中的元素为数值型，则使用cell2amt"><a href="#若cell中的元素为数值型，则使用cell2amt" class="headerlink" title="若cell中的元素为数值型，则使用cell2amt"></a>若cell中的元素为数值型，则使用cell2amt</h3><h2 id="临时"><a href="#临时" class="headerlink" title="临时"></a>临时</h2><p> prompt={‘请输入正弦函数的振幅:’,’请输入正弦函数的频率:’};<br>name=’输入’;<br>numlines=1;<br>defaultanswer={‘5’,’10’};<br>answer=inputdlg(prompt,name,numlines,defaultanswer);<br>answer1=str2num(char(answer));<br>amplitude=answer1(1);<br>frequency=answer1(2);<br>axes(handles.axes1);<br>x=0:pi/180:2<em>pi;<br>y=amplitude</em>sin(frequency<em>2</em>pi);<br>plot(x,y)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/14/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/14/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%951/" class="post-title-link" itemprop="url">Java/Java学习记录1</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-14 13:57:00" itemprop="dateCreated datePublished" datetime="2020-03-14T13:57:00+08:00">2020-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-31 15:57:57" itemprop="dateModified" datetime="2020-05-31T15:57:57+08:00">2020-05-31</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java学习记录"><a href="#Java学习记录" class="headerlink" title="Java学习记录"></a>Java学习记录</h1><p>用于记录那些零星的不成系统的需要注意的问题</p>
+<h2 id="next-和nextLine-的区别"><a href="#next-和nextLine-的区别" class="headerlink" title="next()和nextLine()的区别"></a>next()和nextLine()的区别</h2><p>next()特点：<br>1、一定要读取到有效字符后才可以结束输入，<br>2、对输入有效字符之前遇到的空白，next()方法会自动将其去掉，<br>3、只有输入有效字符后才将其后面输入的空白作为分隔符或者结束符.<br>next()不能得到带有空格的字符串</p>
+<p>nextLine()特点：<br>1、以Enter为结束符,也就是说nextLine()方法返回的是输入回车之前的所有字符。<br>2、可以获得空白.</p>
+<h2 id="Java中字符串可以像整数一样交换顺序"><a href="#Java中字符串可以像整数一样交换顺序" class="headerlink" title="Java中字符串可以像整数一样交换顺序"></a>Java中字符串可以像整数一样交换顺序</h2><h2 id="为什么Math-sin-Math-PI-为什么不等于0"><a href="#为什么Math-sin-Math-PI-为什么不等于0" class="headerlink" title="为什么Math.sin(Math.PI)为什么不等于0?"></a>为什么Math.sin(Math.PI)为什么不等于0?</h2><p>解释：<br>1.常规代数里，是等于0，但是cpu运算的时候，只是近似等于0<br>2.计算机语言数值型数据都是二进制表达的，所以在进行浮点计算时候是很难精确的，Math.sin(Math.PI)是通过微积分计算公式计算出来的，会存在精度上面的误差结果是：1.2246063538223772e-16</p>
+<p>综上，浮点数的运算，往往并不是我们期望的结果，可以通过Math.round() 函数来解决。</p>
+<h2 id="常见计算结果类型"><a href="#常见计算结果类型" class="headerlink" title="常见计算结果类型"></a>常见计算结果类型</h2><p>Math,pow计算结果是小数<br>Math.log计算结果也是小数</p>
+<h2 id="如何利用Math-random生成各个范围的整数"><a href="#如何利用Math-random生成各个范围的整数" class="headerlink" title="如何利用Math.random生成各个范围的整数"></a>如何利用Math.random生成各个范围的整数</h2><p><strong>* 以下这是阿里巴巴编码规范插件的提示 *</strong><br>** 注意 Math.random() 这个方法返回是double类型，注意取值的范围[0,1)（能够取到零值，注意除零异常），如果想获取整数类型的随机数，不要将x放大10的若干倍然后取整，直接使用Random对象的nextInt或者nextLong方法. **</p>
+<h2 id="Unicode的问题"><a href="#Unicode的问题" class="headerlink" title="Unicode的问题"></a>Unicode的问题</h2><h2 id="小技巧可以这样输出一个双引号"><a href="#小技巧可以这样输出一个双引号" class="headerlink" title="小技巧可以这样输出一个双引号:"></a>小技巧可以这样输出一个双引号:</h2><p>System.out.println(‘“‘);    // prints “</p>
+<p>字符串操作之:concat用于java中字符串的拼接。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="string">'Hello'</span>;</span><br><span class="line"></span><br><span class="line">String s2 = <span class="string">" World!"</span></span><br><span class="line"></span><br><span class="line">String s3 = s1.concat.(s2);</span><br><span class="line">System.out.println(s3);</span><br><span class="line"><span class="comment">// Output:Hello world</span></span><br></pre></td></tr></table></figure>
+
+<p>记录怎样实现字符串的强制转换</p>
+<h2 id="Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。"><a href="#Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。" class="headerlink" title="Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。"></a>Java中使用数组之前必须先定义和声明，不能不经过声明和定义就直接在方法中作为参数调用方法。</h2><h2 id="注意，在Java中只能有一个主类，它的名字和文件名相同，其他的类一定不能使用这个名字。"><a href="#注意，在Java中只能有一个主类，它的名字和文件名相同，其他的类一定不能使用这个名字。" class="headerlink" title="注意，在Java中只能有一个主类，它的名字和文件名相同，其他的类一定不能使用这个名字。"></a>注意，在Java中只能有一个主类，它的名字和文件名相同，其他的类一定不能使用这个名字。</h2><h2 id="有关Unicode的问题"><a href="#有关Unicode的问题" class="headerlink" title="有关Unicode的问题"></a>有关Unicode的问题</h2><p>每个字符都有一个唯一的在十六进制数0到FFFF(即十进制的65535)之间的Unicode。分别用’\u0000’ 和 ‘\uFFFF’表示。</p>
+<h2 id="匿名数组——没有显式地引用变量。常用于给方法传递参数"><a href="#匿名数组——没有显式地引用变量。常用于给方法传递参数" class="headerlink" title="匿名数组——没有显式地引用变量。常用于给方法传递参数"></a>匿名数组——没有显式地引用变量。常用于给方法传递参数</h2><p>printArray(new int[]{1, 3, 3})</p>
+<h2 id="调用方法时参数的传递："><a href="#调用方法时参数的传递：" class="headerlink" title="调用方法时参数的传递："></a>调用方法时参数的传递：</h2><ul>
+<li><p>对于基本数据类型参数，传递的是实参的值</p>
+</li>
+<li><p>对于数组类型参数，参数值是数组的引用，给方法传递的是这个引用。<br>  更好的说法是参数传递的是共享信息(pass-by-sharing)。即方法中的数组和传递的数组是一样的。所以，如果改变方法中的数组，将会看到方法外的数组也变化了。</p>
+</li>
+<li><p>注意下列的区别：<br>  <img src="media/15844557606878.jpg" alt=""><br>对于以上区别，可以将方法添加一个返回值，然后在mian方法中直接print方法调用，可以获得变量的改变。</p>
+</li>
+</ul>
+<h2 id="可变长参数列表"><a href="#可变长参数列表" class="headerlink" title="可变长参数列表"></a>可变长参数列表</h2><p><img src="media/15845342366528.jpg" alt="-w736"></p>
+<p><strong>需要注意的是：</strong></p>
+<ul>
+<li>只允许使用一个可变长度参数。</li>
+<li>可变长度参数仅被允许放置在参数列表的最后。</li>
+<li>不允许从方法中返回可变长度类型。</li>
+</ul>
+<h2 id="java-util-Arrays-sort："><a href="#java-util-Arrays-sort：" class="headerlink" title="java.util.Arrays.sort："></a>java.util.Arrays.sort：</h2><p>java.util.Arrays.sort方法已重载，因此可以用于对除布尔值以外的任何原始类型的数组进行排序。这种排序方法不会创建新方法，元素将被排序到作为方法参数给出的数组中。</p>
+<h2 id="java-util-Arrays-toString"><a href="#java-util-Arrays-toString" class="headerlink" title="java.util.Arrays.toString"></a>java.util.Arrays.toString</h2><p>返回对象的字符串表示</p>
+<h2 id="java-util-Arrays-fill"><a href="#java-util-Arrays-fill" class="headerlink" title="java.util.Arrays.fill"></a>java.util.Arrays.fill</h2><p>填充数组</p>
+<h2 id="System-currentTimeMillis"><a href="#System-currentTimeMillis" class="headerlink" title="System.currentTimeMillis"></a>System.currentTimeMillis</h2><p>用于获取当前已经经过了多少毫秒(开始时间是“那个”时间，大家都知道吧)</p>
+<h2 id="Random类基本用法"><a href="#Random类基本用法" class="headerlink" title="Random类基本用法"></a>Random类基本用法</h2><p>// 创建一个实例对象<br>Random random = new Random(1000);其中1000是seed，这个值最好是随机使得获取的伪随机数更加随机<br>int number = random.nextInt(1000); 其中的1000是bound，使用该语句可以获得一个在从零到bound(不包括)之间的伪随机数。</p>
+<h2 id="关于boolean类型"><a href="#关于boolean类型" class="headerlink" title="关于boolean类型"></a>关于boolean类型</h2><p>在java中boolean类型默认为false。<br>即如果不给定是true还是false，boolean类型变量的默认值是false。</p>
+<h2 id="判断字符是否是数字"><a href="#判断字符是否是数字" class="headerlink" title="判断字符是否是数字"></a>判断字符是否是数字</h2><p>使用：<br>Character.isDigit()</p>
+<p><strong><em>注意：</em></strong>只能判断单个字符，不能判断字符串，但是可以通过循环实现判断字符串是不是数字。</p>
+<h2 id="将字符串转换为大写"><a href="#将字符串转换为大写" class="headerlink" title="将字符串转换为大写"></a>将字符串转换为大写</h2><p>str.toUpperCase();</p>
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String<img src="media/15881323713956.jpg" alt="-w947"></h2><p>如果查找的是字符串，返回的int值是字符串中第一个字符的索引<br><img src="media/15881327467300.jpg" alt="-w948"></p>
+<h2 id="获取伪随机数"><a href="#获取伪随机数" class="headerlink" title="获取伪随机数"></a>获取伪随机数</h2><p><img src="media/15881801792829.jpg" alt="-w490"></p>
+<h2 id="使用int强制转换char得到的是ascii码，即"><a href="#使用int强制转换char得到的是ascii码，即" class="headerlink" title="使用int强制转换char得到的是ascii码，即"></a>使用int强制转换char得到的是ascii码，即</h2><p>(int)StringName.charAt(i)是行不通的。</p>
+<h2 id="二进制转十进制算法"><a href="#二进制转十进制算法" class="headerlink" title="二进制转十进制算法"></a>二进制转十进制算法</h2><p><img src="media/15881827738782.jpg" alt="-w1173"></p>
+<h2 id="关于try-catch嵌套"><a href="#关于try-catch嵌套" class="headerlink" title="关于try-catch嵌套"></a>关于try-catch嵌套</h2><p><img src="media/15882093550361.jpg" alt="-w714"></p>
+<h2 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h2><p><img src="media/15882093966305.jpg" alt="-w574"></p>
+<h2 id="一个关于try-catch嵌套的例子"><a href="#一个关于try-catch嵌套的例子" class="headerlink" title="一个关于try-catch嵌套的例子"></a>一个关于try-catch嵌套的例子</h2><p>``<br>public class Content0804 {<br>    public static void main(String[] args) {<br>        Scanner in = new Scanner(System.in);<br>        System.out.print(“请输入一个整数: “);<br>        while (true){<br>            String line = in.nextLine();<br>            try {<br>                int num = Integer.parseInt(line);<br>                System.out.println(Integer.toBinaryString(num));<br>                break;<br>            }catch (Exception e){<br>                try {<br>                    new BigInteger(line);<br>                    System.out.println(“整数过大，请输入一个整数”);<br>                }catch (Exception e1){<br>                    try {<br>                        new BigDecimal(line);<br>                        System.out.println(“输入的是一个小数，请输入一个整数”);<br>                    }catch (Exception e2){<br>                        System.out.println(“输入的是非法字符，请重新输入一个整数‚”);<br>                    }<br>                }<br>            }<br>        }<br>    }<br>}</p>
+<p>``</p>
+<h2 id="如何同入理解API"><a href="#如何同入理解API" class="headerlink" title="如何同入理解API"></a>如何同入理解API</h2><p><a href="https://www.zhihu.com/question/21430743" target="_blank" rel="noopener">https://www.zhihu.com/question/21430743</a></p>
+<h2 id="java-jdk源码"><a href="#java-jdk源码" class="headerlink" title="java jdk源码"></a>java jdk源码</h2><p><a href="https://gitee.com/huangtianyu/jdk-source" target="_blank" rel="noopener">https://gitee.com/huangtianyu/jdk-source</a></p>
+<h2 id="string-getBytes"><a href="#string-getBytes" class="headerlink" title="string.getBytes()"></a>string.getBytes()</h2><p> void    getBytes(int srcBegin, int srcEnd, byte[] dst, int dstBegin)<br>          已过时。 该方法无法将字符正确转换为字节。从 JDK 1.1 起，完成该转换的首选方法是通过 getBytes() 方法，该方法使用平台的默认字符集。</p>
+<h2 id="System-getProperty"><a href="#System-getProperty" class="headerlink" title="System.getProperty()"></a>System.getProperty()</h2><p>这个函数可以获取到java JVM以及操作系统的一些参数</p>
+<p><img src="media/15882983884775.jpg" alt="-w870"></p>
+<h2 id="Interger类"><a href="#Interger类" class="headerlink" title="Interger类"></a>Interger类</h2><p><img src="media/15886647366194.jpg" alt="-w860"><br><img src="media/15886652589427.jpg" alt="-w559"><br>##Interger.parseInt(String s, int radix)<br><img src="media/15886667237755.jpg" alt="-w710"><br>意思是前一个字符形式的数字是后面这个radix进制的，然后输出的时候自动将这个radix进制的s数字转换为十进制的</p>
+<h2 id="关于StringBuilder"><a href="#关于StringBuilder" class="headerlink" title="关于StringBuilder"></a>关于StringBuilder</h2><p>s1.substring(2)中给定的是start的下标，这种情况下默认为从开始值到最后的下标</p>
+<h2 id="关于protected和private的简单说明"><a href="#关于protected和private的简单说明" class="headerlink" title="关于protected和private的简单说明"></a>关于protected和private的简单说明</h2><p><img src="media/15886948683254.jpg" alt="-w643"></p>
+<p>即：<br>默认情况下，一个类可以访问同一个包中的，而外部的类无法访问它。</p>
+<p>protected使其他包中的类无法访问该类，但是其他包中他的子类可以访问它。而同一个包中可以随意访问</p>
+<p>private表示只有在该类中才能使用</p>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><p>Number的compareTo(Integer)方法未定义</p>
+<h2 id="关于接口和抽象类的一些知识"><a href="#关于接口和抽象类的一些知识" class="headerlink" title="关于接口和抽象类的一些知识"></a>关于接口和抽象类的一些知识</h2><p>接口中定义的方法都是公共的</p>
+<p>##输出圆周率的方法</p>
+<p>表示如下： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"\u03c0"</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -300,7 +452,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/14/Java/Java%E6%96%B9%E6%B3%95%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -314,284 +466,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/" class="post-title-link" itemprop="url">Python/Python—函数式子编程</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-15 20:00:00" itemprop="dateCreated datePublished" datetime="2020-02-15T20:00:00+08:00">2020-02-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-16 10:16:07" itemprop="dateModified" datetime="2020-02-16T10:16:07+08:00">2020-02-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一个最简单的高阶函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y,f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (f(x)+f(y))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(add(<span class="number">500</span>,<span class="number">20</span>,abs))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># map函数</span></span><br><span class="line"><span class="string">"""map函数接受两个参数，一个是函数，一个是lterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的lterable返回"""</span></span><br><span class="line"><span class="comment"># 代码实现：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sq</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x * x</span><br><span class="line">print(list(map(sq,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>])))</span><br><span class="line"><span class="comment">#reduce函数</span></span><br><span class="line"><span class="comment"># reduce函数：reduce把一个函数作用在一个序列[x1, x2, x3, …]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算</span></span><br><span class="line"><span class="comment">## 用reduce函数实现序列的求和</span></span><br><span class="line"><span class="comment"># 使用时需要先导入一个模块</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line">numbers = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">17</span>,<span class="number">19</span>]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">print(reduce(add,numbers))</span><br><span class="line"><span class="comment"># 其实用sum函数求和更简单</span></span><br><span class="line">print(sum(numbers))</span><br><span class="line"><span class="comment">## reduce的妙用：将[1，3，5，7，9，]变为整数13579</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">print(reduce(f,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>]))</span><br><span class="line"><span class="comment">## map + reduce 实现str转int</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">char2num</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">'0'</span>:<span class="number">0</span>,<span class="string">'1'</span>:<span class="number">1</span>,<span class="string">'2'</span>:<span class="number">2</span>,<span class="string">'3'</span>:<span class="number">3</span>,<span class="string">'4'</span>:<span class="number">4</span>,<span class="string">'5'</span>:<span class="number">5</span>,<span class="string">'6'</span>:<span class="number">6</span>,<span class="string">'7'</span>:<span class="number">7</span>,<span class="string">'8'</span>:<span class="number">8</span>,<span class="string">'9'</span>:<span class="number">9</span>&#125;[s]</span><br><span class="line"><span class="comment"># 上一行函数是简单的给出key调用字典的value。s必须在字典key里。关键在于字符串在python里是可以</span></span><br><span class="line"><span class="comment"># 被当做list用的。map(char2num, '13579')把字符串'13579'当list用，于是就变成了</span></span><br><span class="line"><span class="comment"># map(char2num, ['1','3','5','7','9'])得到的是[1, 3, 5, 7, 9]</span></span><br><span class="line">reduce(f,map(char2num, <span class="string">'13579'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string">[1, 9, 25, 49, 81]</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">13579</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Python/sum函数</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-15 20:00:00" itemprop="dateCreated datePublished" datetime="2020-02-15T20:00:00+08:00">2020-02-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-16 09:46:55" itemprop="dateModified" datetime="2020-02-16T09:46:55+08:00">2020-02-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 序列求和</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,]))</span><br><span class="line"><span class="comment"># sum函数的原型是sum(iterable,start).可以设置一个初始值</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,],<span class="number">5</span>))</span><br><span class="line"><span class="comment"># 展开2层的嵌套列表</span></span><br><span class="line">iterable = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]]</span><br><span class="line">print(sum(iterable,[<span class="number">0</span>]))<span class="comment"># 后面的start可以为空</span></span><br><span class="line"><span class="comment"># sum函数与下列函数等效</span></span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">    start += element</span><br><span class="line">print(start)</span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="comment"># sum 函数可以看作reduce()的特殊情况</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> add</span><br><span class="line">print(reduce(add,iterable,start))</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">Java/Java学习记录</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-10 11:30:00" itemprop="dateCreated datePublished" datetime="2020-02-10T11:30:00+08:00">2020-02-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-13 12:23:48" itemprop="dateModified" datetime="2020-02-13T12:23:48+08:00">2020-02-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h1><h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><h3 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (表达式) &#123; <span class="keyword">case</span> 值<span class="number">1</span>:</span><br><span class="line">语句组<span class="number">1</span> <span class="keyword">case</span> 值<span class="number">2</span>:</span><br><span class="line">语句组<span class="number">2</span> <span class="keyword">case</span> 值<span class="number">3</span>:</span><br><span class="line">语句组<span class="number">3</span> ...</span><br><span class="line"><span class="keyword">case</span> 判断值n: 语句组n</span><br><span class="line"><span class="keyword">default</span>: 语句组n+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。</p>
-</blockquote>
-<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><h2 id="while"><a href="#while" class="headerlink" title="while"></a>while</h2><h2 id="do-while"><a href="#do-while" class="headerlink" title="do-while"></a>do-while</h2><h2 id="for"><a href="#for" class="headerlink" title="for"></a>for</h2><h2 id="for-each语句"><a href="#for-each语句" class="headerlink" title="for-each语句"></a>for-each语句</h2><blockquote>
-<p>Java 5之后提供了一种专门用于遍历集合的for循环——for-each循环。</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span>[ ]numbers = &#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>&#125;;</span><br><span class="line">		System.out.printf(<span class="string">"for-each 语句%n"</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> number : numbers) &#123;</span><br><span class="line">			System.out.printf(<span class="string">"%d%n"</span>,number);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 输出结果：</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">for-each 语句</span></span><br><span class="line"><span class="comment">1</span></span><br><span class="line"><span class="comment">3</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">7</span></span><br><span class="line"><span class="comment">9</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="跳转语句"><a href="#跳转语句" class="headerlink" title="跳转语句"></a>跳转语句</h1><blockquote>
-<p>跳转语句能够改变程序的执行顺序，可以实现程序的跳转。</p>
-</blockquote>
-<h2 id="break"><a href="#break" class="headerlink" title="break"></a>break</h2><h3 id="break-不带标签"><a href="#break-不带标签" class="headerlink" title="break;不带标签"></a>break;不带标签</h3><h3 id="break-label；带标签"><a href="#break-label；带标签" class="headerlink" title="break label；带标签"></a>break label；带标签</h3><blockquote>
-<p>默认情况下，break只会跳出最近的内循环。如果要跳出代码第1行的外循环， 可以为外循环添加一个标签，注意在定义标签的时候后面跟一个冒号</p>
-</blockquote>
-<blockquote>
-<p>添加标签对于多层嵌套循环是很有必要的，适 当使用可以提高程序的执行效率。</p>
-</blockquote>
-<h2 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h2><h3 id="带标签"><a href="#带标签" class="headerlink" title="带标签"></a>带标签</h3><h3 id="不带标签"><a href="#不带标签" class="headerlink" title="不带标签"></a>不带标签</h3><p><strong>例子</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> nianchu;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a=<span class="number">5</span>,b=<span class="number">2</span>;</span><br><span class="line">		x1:<span class="keyword">for</span>(a=<span class="number">0</span>;a&lt;<span class="number">3</span>;a++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(b=<span class="number">0</span>;b&lt;<span class="number">3</span>;b++) &#123;</span><br><span class="line">				<span class="keyword">if</span>(a==b) &#123;</span><br><span class="line">					<span class="keyword">continue</span> x1;</span><br><span class="line">				&#125;</span><br><span class="line">				System.out.printf(<span class="string">"(%d,%d)"</span>,a,b);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 输出结果：</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">(1,0)(2,0)(2,1)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h1><h2 id="输出时可以用-号将要输出的两部分连在一起"><a href="#输出时可以用-号将要输出的两部分连在一起" class="headerlink" title="输出时可以用+号将要输出的两部分连在一起"></a>输出时可以用+号将要输出的两部分连在一起</h2><p>实例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">	System.out.println(<span class="string">"C"</span> + <span class="string">"LOVE"</span> + <span class="string">"L"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="获取数组的长度"><a href="#获取数组的长度" class="headerlink" title="获取数组的长度"></a>获取数组的长度</h2><blockquote>
-<p>numbers.length</p>
-</blockquote>
-<h2 id="print-printf-println的区别"><a href="#print-printf-println的区别" class="headerlink" title="print,printf,println的区别"></a>print,printf,println的区别</h2><p>​    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">printf主要是继承了C语言的printf的一些特性，可以进行格式化输出</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print就是一般的标准输出，但是不换行</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">println和print基本没什么差别，就是最后会换行</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/" class="post-title-link" itemprop="url">Java/Java打印九九乘法表</a>
+            <a href="/2020/03/14/Java/Java%E6%96%B9%E6%B3%95%E9%80%92%E5%BD%92%E8%B0%83%E7%94%A8/" class="post-title-link" itemprop="url">方法的递归调用</a>
         </h1>
 
         <div class="post-meta">
@@ -603,18 +478,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-10 11:30:00 / 修改时间：15:55:33" itemprop="dateCreated datePublished" datetime="2020-02-10T11:30:00+08:00">2020-02-10</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
+              <time title="创建时间：2020-03-14 13:24:00 / 修改时间：13:42:55" itemprop="dateCreated datePublished" datetime="2020-03-14T13:24:00+08:00">2020-03-14</time>
             </span>
 
           
@@ -628,8 +492,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> nianchu;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>,j = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(i= <span class="number">1</span>;i  &lt;= <span class="number">9</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++) &#123;</span><br><span class="line">				System.out.printf(<span class="string">"%d*%d=%d"</span>,j,i,j*i);</span><br><span class="line">				System.out.printf(<span class="string">"  "</span>);</span><br><span class="line">				<span class="keyword">if</span>(j==i) &#123;</span><br><span class="line">					System.out.printf(<span class="string">"%n"</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 输出结果：</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">1*1=1  </span></span><br><span class="line"><span class="comment">1*2=2  2*2=4  </span></span><br><span class="line"><span class="comment">1*3=3  2*3=6  3*3=9  </span></span><br><span class="line"><span class="comment">1*4=4  2*4=8  3*4=12  4*4=16  </span></span><br><span class="line"><span class="comment">1*5=5  2*5=10  3*5=15  4*5=20  5*5=25  </span></span><br><span class="line"><span class="comment">1*6=6  2*6=12  3*6=18  4*6=24  5*6=30  6*6=36  </span></span><br><span class="line"><span class="comment">1*7=7  2*7=14  3*7=21  4*7=28  5*7=35  6*7=42  7*7=49  </span></span><br><span class="line"><span class="comment">1*8=8  2*8=16  3*8=24  4*8=32  5*8=40  6*8=48  7*8=56  8*8=64  </span></span><br><span class="line"><span class="comment">1*9=9  2*9=18  3*9=27  4*9=36  5*9=45  6*9=54  7*9=63  8*9=72  9*9=81  </span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
+          <h1 id="关于方法的递归调用"><a href="#关于方法的递归调用" class="headerlink" title="关于方法的递归调用"></a>关于方法的递归调用</h1><ol>
+<li><p>什么是递归调用</p>
+<ul>
+<li>例如：<br>a(){<br>a();}</li>
+</ul>
+</li>
+<li><p>递归调用是很耗费栈内存的，递归算法可以不用的时候尽量别用</p>
+</li>
+<li><p>递归调用而没有结束命令时，会出现以下的错误【注意，不是异常，是错误Error】：<br> java.lang.StackOverflowError</p>
+<pre><code>- 栈内存溢出错误
+- 错误发生无法挽回，只有一个结果，就是 JVM停止工作。</code></pre></li>
+<li><p>递归必须有结束条件，没有结束条件，是一定会发生栈内存溢出错误。   </p>
+</li>
+<li><p>递归即使有了结束条件，即使结束条件是正确的，也可能会发生栈内存错误，因为递归得太深了。</p>
+</li>
+</ol>
+<p>注意：<br>    - 递归可以不使用尽量别用<br>    - 但有些情况下该功能的实现必须依靠递归方   式。例如，目录拷贝。</p>
+<p> 应用：<br>        - 递归用于计算求和   </p>
 
       
     </div>
@@ -649,7 +529,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/15.%E5%85%A8%E6%8E%92%E5%88%97/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/14/Java/Java%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -663,7 +543,76 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/15.%E5%85%A8%E6%8E%92%E5%88%97/" class="post-title-link" itemprop="url">15.全排列</a>
+            <a href="/2020/03/14/Java/Java%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF/" class="post-title-link" itemprop="url">Java错误</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-14 13:24:00" itemprop="dateCreated datePublished" datetime="2020-03-14T13:24:00+08:00">2020-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-27 16:29:07" itemprop="dateModified" datetime="2020-04-27T16:29:07+08:00">2020-04-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="致命错误"><a href="#致命错误" class="headerlink" title="致命错误"></a>致命错误</h1><h2 id="Intellij中能编译但是java时找不到类："><a href="#Intellij中能编译但是java时找不到类：" class="headerlink" title="Intellij中能编译但是java时找不到类："></a>Intellij中能编译但是java时找不到类：</h2><p><img src="media/15843720037405.jpg" alt=""></p>
+<p>这里说更清楚一点，应该在存放编译后的文件的目录下运行java程序，我这里是bin。src中存放的是.java文件，bin中存放的是.class文件。</p>
+<h2 id="使用nextLine时读区不了数据，原因如下："><a href="#使用nextLine时读区不了数据，原因如下：" class="headerlink" title="使用nextLine时读区不了数据，原因如下："></a>使用nextLine时读区不了数据，原因如下：</h2><p><img src="media/15865995531271.jpg" alt="-w1081"></p>
+<p><strong>* 解决办法 *</strong><br>String s = input.nextLine();之前添加如下代码：<br>input.nextLine();</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/14/Java/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%AC%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/14/Java/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%AC%E5%BC%8F/" class="post-title-link" itemprop="url">Java/十六进制转十进制的公式</a>
         </h1>
 
         <div class="post-meta">
@@ -675,18 +624,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-19 22:06:00 / 修改时间：22:08:40" itemprop="dateCreated datePublished" datetime="2020-01-19T22:06:00+08:00">2020-01-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
-                    <span itemprop="name">Lintcode刷题</span>
-                  </a>
-                </span>
+              <time title="创建时间：2020-03-14 11:36:01 / 修改时间：11:36:47" itemprop="dateCreated datePublished" datetime="2020-03-14T11:36:01+08:00">2020-03-14</time>
             </span>
 
           
@@ -700,18 +638,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><strong>描述</strong></h3><p>给定一个数字列表，返回其所有可能的排列。</p>
-<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a><strong>样例</strong></h3><p><strong>样例 1：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：[1]</span><br><span class="line">输出：</span><br><span class="line">[</span><br><span class="line">  [1]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<p><strong>样例 2：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入：[1,2,3]</span><br><span class="line">输出：</span><br><span class="line">[</span><br><span class="line">  [1,2,3],</span><br><span class="line">  [1,3,2],</span><br><span class="line">  [2,1,3],</span><br><span class="line">  [2,3,1],</span><br><span class="line">  [3,1,2],</span><br><span class="line">  [3,2,1]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a><em>实现</em></h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> itertools</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param: nums: A list of integers.</span></span><br><span class="line"><span class="string">    @return: A list of permutations.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">permute</span><span class="params">(self, nums)</span>:</span></span><br><span class="line">        pailie = list(itertools.permutations(nums))  <span class="comment"># 要list一下，不然它只是一个对象</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> pailie</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">so = Solution()</span><br><span class="line">print(so.permute([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]))</span><br></pre></td></tr></table></figure>
-
-
+          <h1 id="十六进制转十进制的公式"><a href="#十六进制转十进制的公式" class="headerlink" title="十六进制转十进制的公式"></a>十六进制转十进制的公式</h1><p>(我自己从来没记过嘿嘿)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hexToDecimal</span><span class="params">(String hex)</span></span>&#123;</span><br><span class="line">       <span class="keyword">int</span> decimalValue = <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; hex.length(); i++) &#123;</span><br><span class="line">     <span class="comment">//</span></span><br><span class="line">       <span class="keyword">char</span> hexChar  = hex.charAt(i);</span><br><span class="line">       decimalValue = decimalValue * <span class="number">16</span> + hexCharToDecimal(hexChar);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> decimalValue;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -730,7 +658,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/22.%E5%88%97%E8%A1%A8%E6%89%81%E5%B9%B3%E5%8C%96/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/Java/Java%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%AE%9E%E7%8E%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -744,7 +672,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/22.%E5%88%97%E8%A1%A8%E6%89%81%E5%B9%B3%E5%8C%96/" class="post-title-link" itemprop="url">22.列表扁平化</a>
+            <a href="/2020/03/12/Java/Java%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">Java常用函数</a>
         </h1>
 
         <div class="post-meta">
@@ -756,18 +684,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-19 11:59:00 / 修改时间：11:59:51" itemprop="dateCreated datePublished" datetime="2020-01-19T11:59:00+08:00">2020-01-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
-                    <span itemprop="name">Lintcode刷题</span>
-                  </a>
-                </span>
+              <time title="创建时间：2020-03-12 23:40:00 / 修改时间：23:40:50" itemprop="dateCreated datePublished" datetime="2020-03-12T23:40:00+08:00">2020-03-12</time>
             </span>
 
           
@@ -781,9 +698,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="22-列表扁平化"><a href="#22-列表扁平化" class="headerlink" title="22. 列表扁平化"></a>22. 列表扁平化</h3><p>给定一个列表，该列表中的每个元素要么是个列表，要么是整数。将其变成一个只包含整数的简单列表。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># @param nestedList a list, each element in the list</span></span><br><span class="line">    <span class="comment"># can be a list or integer, for example [1,2,[1,2]]</span></span><br><span class="line">    <span class="comment"># @return &#123;int[]&#125; a list of integer</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">flatten</span><span class="params">(self, nestedList)</span>:</span></span><br><span class="line">        a = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nestedList)):<span class="comment">#用于判断给定列表中的元素是否含有列表（注：这一目的主要是为了结束递归的死循环）</span></span><br><span class="line">            <span class="keyword">if</span> type(nestedList[i]) == list:<span class="comment">#如果有就将列表中的列表分别取出来放到新的列表中</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> range(len(nestedList)):</span><br><span class="line">                    <span class="keyword">if</span> type(nestedList[j]) != list:</span><br><span class="line">                        a.append(nestedList[j])</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="keyword">for</span> k <span class="keyword">in</span> range(len(nestedList[j])):</span><br><span class="line">                            a.append((nestedList[j])[k])</span><br><span class="line">                <span class="keyword">return</span> Solution.flatten(self,a)<span class="comment">#使用递归完成多次“套娃”的情况</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> nestedList<span class="comment">#如果没有就直接返回这个列表</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nums = [<span class="number">4</span>,[<span class="number">3</span>,[<span class="number">2</span>,[<span class="number">1</span>]]]]</span><br><span class="line">so = Solution()</span><br><span class="line">print(so.flatten(nums))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">[4, 3, 2, 1]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
+          <h1 id="冒泡排序-Java"><a href="#冒泡排序-Java" class="headerlink" title="冒泡排序(Java)"></a>冒泡排序(Java)</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span>[] indexOfSmallElement(<span class="keyword">double</span>[] array)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">double</span> exchange = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; ++i) &#123;</span><br><span class="line">  <span class="comment">// loop 1</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; array.length - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">      <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>])&#123;</span><br><span class="line">          exchange = array[j];</span><br><span class="line">          array[j] = array[j + <span class="number">1</span>];</span><br><span class="line">          array[j + <span class="number">1</span>] = exchange;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -803,7 +718,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/Java/Java%E5%B8%B8%E8%A7%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -817,7 +732,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">14.二分查找</a>
+            <a href="/2020/03/12/Java/Java%E5%B8%B8%E8%A7%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">Java/Java常见类型转换</a>
         </h1>
 
         <div class="post-meta">
@@ -827,26 +742,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-01-17 23:22:00" itemprop="dateCreated datePublished" datetime="2020-01-17T23:22:00+08:00">2020-01-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-18 01:34:11" itemprop="dateModified" datetime="2020-01-18T01:34:11+08:00">2020-01-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
-                    <span itemprop="name">Lintcode刷题</span>
-                  </a>
-                </span>
+              <time title="创建时间：2020-03-12 14:44:07 / 修改时间：15:03:34" itemprop="dateCreated datePublished" datetime="2020-03-12T14:44:07+08:00">2020-03-12</time>
             </span>
 
           
@@ -860,9 +758,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><strong>描述</strong></h3><p>给定一个排序的整数数组（升序）和一个要查找的整数<code>target</code>，用<code>O(logn)</code>的时间查找到target第一次出现的下标（从0开始），如果target不存在于数组中，返回<code>-1</code>。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param nums: The integer array.</span></span><br><span class="line"><span class="string">    @param target: Target to find.</span></span><br><span class="line"><span class="string">    @return: The first position of target. Position starts from 0.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">binarySearch</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">            low = <span class="number">0</span></span><br><span class="line">            high = len(nums) - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> low &lt;= high:</span><br><span class="line">                mid = low + (high - low) // <span class="number">2</span></span><br><span class="line">                <span class="keyword">if</span>  nums[mid] == target:</span><br><span class="line">                    <span class="keyword">while</span>(mid &gt;= <span class="number">0</span>):<span class="comment">#新增加的while和if用于解决有重复数字的情况，并保证每次都输出第一次出现的target的下标</span></span><br><span class="line">                        <span class="keyword">if</span> nums[mid] != target:</span><br><span class="line">                            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">                        mid = mid - <span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> mid &lt;= <span class="number">-1</span>:</span><br><span class="line">                        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">                    <span class="keyword">return</span> mid + <span class="number">1</span><span class="comment">#多减了一次，所以输出时+1</span></span><br><span class="line">                <span class="keyword">elif</span>  target &gt; nums[mid]:</span><br><span class="line">                    low = mid + <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    high = mid - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nums = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="number">18</span>]</span><br><span class="line">so = Solution()</span><br><span class="line">print(so.binarySearch(nums,<span class="number">9</span>))</span><br></pre></td></tr></table></figure>
-
+          <h1 id="常见类型转换"><a href="#常见类型转换" class="headerlink" title="常见类型转换"></a>常见类型转换</h1><h2 id="long-与-int"><a href="#long-与-int" class="headerlink" title="long 与 int"></a>long 与 int</h2><p>一.将long型转化为int型，这里的long型是基础类型：</p>
+<p>long   a = 10;     int b = (int)a;   </p>
+<p>二.将Long型转换为int 型的，这里的Long型是包装类型：</p>
+<p>Long a = 10; int b=a.intValue();</p>
+<p>三.将int型转化为long型，这里的int型是基础类型：</p>
+<p>int a = 10;long b = (int)a;</p>
+<p>四.将Integer型转化为long型，这里的Integer型是包装类型：</p>
+<p>int a = 10;Long b = a.longValue();</p>
+<h2 id="int-和-String"><a href="#int-和-String" class="headerlink" title="int 和 String"></a>int 和 String</h2><p><a href="https://blog.csdn.net/u012050154/article/details/51320638" target="_blank" rel="noopener">https://blog.csdn.net/u012050154/article/details/51320638</a></p>
 
       
     </div>
@@ -882,7 +786,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Python/Python%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/Java/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -896,7 +800,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/14/Python/Python%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">Python/Python小技巧</a>
+            <a href="/2020/03/12/Java/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/" class="post-title-link" itemprop="url">Java/方法重载</a>
         </h1>
 
         <div class="post-meta">
@@ -907,25 +811,98 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-01-14 23:17:00" itemprop="dateCreated datePublished" datetime="2020-01-14T23:17:00+08:00">2020-01-14</time>
+              <time title="创建时间：2020-03-12 08:47:09" itemprop="dateCreated datePublished" datetime="2020-03-12T08:47:09+08:00">2020-03-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-16 12:48:57" itemprop="dateModified" datetime="2020-02-16T12:48:57+08:00">2020-02-16</time>
+                <time title="修改时间：2020-03-19 14:56:13" itemprop="dateModified" datetime="2020-03-19T14:56:13+08:00">2020-03-19</time>
               </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="方法重载-overload"><a href="#方法重载-overload" class="headerlink" title="方法重载(overload)"></a>方法重载(overload)</h1><h2 id="适用于解决以下问题："><a href="#适用于解决以下问题：" class="headerlink" title="适用于解决以下问题："></a>适用于解决以下问题：</h2><p>调用功能相似方法时传统的做法是编写多个有着不同名字的方法，这样既麻烦且不美观</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>——方法重载(overload)</p>
+<h2 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h2><p>各个方法的功能都相似；</p>
+<h2 id="不是所有的语言都有这个机制"><a href="#不是所有的语言都有这个机制" class="headerlink" title="不是所有的语言都有这个机制"></a>不是所有的语言都有这个机制</h2><p>例如javascript没有这个机制</p>
+<h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><p>使用的方法名字一样，区分的依据是实参的数据类型；<br>程序员调用方法的时候比较方便，虽然调用的不同的方法，但是感觉就像是在使用一个方法一样，不需要记忆更多的方法；<br>同时代码更加美观。</p>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>功能不相似的时候尽可能让方法的方法名不同。</p>
+<h2 id="思考问题："><a href="#思考问题：" class="headerlink" title="思考问题："></a>思考问题：</h2><p> 1.方法重载又被称为：overload<br>2.什么时候考虑使用方法重载：<br>功能相似的时候，尽可能让方法名相同；<br>【但是：功能不同/不相似的时候，尽可能不使用方法重载】<br>3.满足什么条件才构成方法重载</p>
+<ul>
+<li>在同一个类中</li>
+<li>方法名相同</li>
+<li>参数列表不同：<ul>
+<li>数量不同</li>
+<li>顺序不同</li>
+<li>类型不同 </li>
+</ul>
+</li>
+</ul>
+<p>4.方法重载和什么有关系，和什么没有关系？</p>
+<ul>
+<li>方法重载和方法名 + 参数列表有关系</li>
+<li>方法重载和返回值类型无关</li>
+<li>方法重载和修饰符列表无关(即与是否有public等等无关)<h2 id="方法重载的具体应用"><a href="#方法重载的具体应用" class="headerlink" title="方法重载的具体应用"></a>方法重载的具体应用</h2>使用下面的自定义类，利用其中的各个重载方法就可以实现简单快速地输出各种类型的值。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SelfPrint</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">byte</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">short</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println( data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">long</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">float</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">double</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">boolean</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">char</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(String data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="构造方法也可以重载"><a href="#构造方法也可以重载" class="headerlink" title="构造方法也可以重载"></a>构造方法也可以重载</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/%E8%B5%B7%E8%88%AA/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/12/%E8%B5%B7%E8%88%AA/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/" class="post-title-link" itemprop="url">起航/经验之谈</a>
+        </h1>
+
+        <div class="post-meta">
+          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-12 08:35:47 / 修改时间：08:38:09" itemprop="dateCreated datePublished" datetime="2020-03-12T08:35:47+08:00">2020-03-12</time>
             </span>
 
           
@@ -939,71 +916,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><h2 id="sorted-方法——可用于给字符串排序，通常是按照字母表的顺序"><a href="#sorted-方法——可用于给字符串排序，通常是按照字母表的顺序" class="headerlink" title="sorted()方法——可用于给字符串排序，通常是按照字母表的顺序"></a>sorted()方法——可用于给字符串排序，通常是按照字母表的顺序</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">"fadsfga"</span></span><br><span class="line">print(sorted(a))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">['a', 'a', 'd', 'f', 'f', 'g', 's']</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="count-方法"><a href="#count-方法" class="headerlink" title="count()方法"></a>count()方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'fnsadfgdsgsadfdsa'</span></span><br><span class="line">b = a.count(<span class="string">'f'</span>)</span><br><span class="line">print(b)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="ord-函数"><a href="#ord-函数" class="headerlink" title="ord()函数"></a>ord()函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## ord()函数# ord() 函数以一个字符作为参数，返回参数对应的 ASCII 数值，便于和后面捕捉的键位关联</span></span><br><span class="line"></span><br><span class="line">print(ord(<span class="string">'a'</span>))</span><br><span class="line">print(ord(<span class="string">'A'</span>))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">97</span></span><br><span class="line"><span class="string">65</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="二元、三元表达式"><a href="#二元、三元表达式" class="headerlink" title="二元、三元表达式"></a>二元、三元表达式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 二元表达式</span></span><br><span class="line"></span><br><span class="line">init = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">number = <span class="number">100</span> <span class="keyword">if</span> init <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">print(number)</span><br><span class="line"></span><br><span class="line"><span class="comment">##三元表达</span></span><br><span class="line">wide= <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">new_w = <span class="number">299</span> <span class="keyword">if</span>  wide&gt;<span class="number">0</span> <span class="keyword">else</span> <span class="string">'sdf'</span> <span class="keyword">if</span> wide==<span class="number">0</span> <span class="keyword">else</span> <span class="number">28</span></span><br><span class="line">print(new_w)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">28</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="randrange——获取指定范围内的随机数"><a href="#randrange——获取指定范围内的随机数" class="headerlink" title="randrange——获取指定范围内的随机数"></a>randrange——获取指定范围内的随机数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## randrange---给定一个范围，获取范围之内的随机数</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">print(random.randrange(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="enumerate-函数"><a href="#enumerate-函数" class="headerlink" title="enumerate()函数"></a>enumerate()函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">names = <span class="string">'chenqiaochu'</span></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> enumerate(names):</span><br><span class="line">  print(key,value)</span><br><span class="line">  </span><br><span class="line"> <span class="string">'''output:</span></span><br><span class="line"><span class="string"> '''</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h2><p><strong><em>Python不能直接将包含小数点的字符串’1127437398.85751’ 转换为整数</em></strong></p>
-<h2 id="关于字典键值对的输入"><a href="#关于字典键值对的输入" class="headerlink" title="关于字典键值对的输入"></a>关于字典键值对的输入</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'name'</span> : <span class="string">'重庆'</span>,<span class="string">'mather'</span> : <span class="string">'China'</span> &#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> a.keys():</span><br><span class="line">    print(key, a[key])</span><br><span class="line"><span class="string">'''输出结果：</span></span><br><span class="line"><span class="string">name 重庆</span></span><br><span class="line"><span class="string">mather China</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="关于字典"><a href="#关于字典" class="headerlink" title="关于字典"></a>关于字典</h2><h2 id="键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。"><a href="#键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。" class="headerlink" title="键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。"></a>键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。</h2><h2 id="字典内置函数总结："><a href="#字典内置函数总结：" class="headerlink" title="字典内置函数总结："></a>字典内置函数总结：</h2><p>1.cmp(dict1,dict2):比较两个元素</p>
-<p>(比较方法见：)</p>
-<blockquote>
-<p> <a href="https://blog.csdn.net/b_11111/article/details/52830590" target="_blank" rel="noopener">https://blog.csdn.net/b_11111/article/details/52830590</a></p>
-</blockquote>
-<p>2.len()计算字典元素个数，即键的总数</p>
-<p>3.str()输出字典可打印的字符串表示</p>
-<p>4.type返回变量的类型，如果变量是字典就返回字典类型</p>
-<h2 id="字典内置方法总结："><a href="#字典内置方法总结：" class="headerlink" title="字典内置方法总结："></a>字典内置方法总结：</h2><p>1.clear删除字典内的所有元素</p>
-<p>2.copy返回一个字典的浅复制</p>
-<p>3.fromkeys(sep,[,val]):创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值</p>
-<p>4.get(key)返回指定键的值，如果值不在字典中就返回None</p>
-<p>5.has_key(key)如果键在字典dict中返回true,否则返回flase</p>
-<p>6.items：以列表返回可遍历的(键值对)元组数组</p>
-<p>7.keys：以列表返回一个字典所有的键</p>
-<p>8.values:以列表返回字典中的所有值</p>
-<p>9.update(dice2):把字典dict2中键值对更新到dict中</p>
-<p>10.pop：删除给定键key所对应的值，也一同删除了键，返回值为被删除的值</p>
-<p>11.popitem:返回并删除字典中最后一对键和值</p>
-<h2 id="用字典中的元素创建一个新的字典"><a href="#用字典中的元素创建一个新的字典" class="headerlink" title="用字典中的元素创建一个新的字典"></a>用字典中的元素创建一个新的字典</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">dicts = &#123;&#125;</span><br><span class="line">dicts[<span class="string">'first'</span>] = <span class="string">"china"</span></span><br><span class="line">dicts[<span class="string">'lover'</span>] = <span class="string">'chongqing'</span></span><br><span class="line"># 用列表中的元素重新创建一个新列表</span><br><span class="line">dicts1 = &#123;&#125;</span><br><span class="line">print(dicts[<span class="string">'first'</span>])</span><br><span class="line">dicts1 = &#123;<span class="string">'a'</span>:dicts[<span class="string">'first'</span>],<span class="string">'b'</span>:dicts[<span class="string">'lover'</span>]&#125;</span><br><span class="line">print(dicts1)</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">&#123;'</span>a<span class="string">': '</span>chenqiaochu<span class="string">', '</span>b<span class="string">': '</span>leibowen<span class="string">'&#125;</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="变量可以指向函数"><a href="#变量可以指向函数" class="headerlink" title="变量可以指向函数"></a>变量可以指向函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">f = abs</span><br><span class="line">print(f(<span class="number">-100</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果:</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="函数名其实就是指向函数的变"><a href="#函数名其实就是指向函数的变" class="headerlink" title="函数名其实就是指向函数的变"></a>函数名其实就是指向函数的变</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">abs =<span class="number">10</span></span><br><span class="line">print(abs)</span><br><span class="line">print(abs(<span class="number">-200</span>))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">10</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "/Users/bowenkei/Desktop/Python/项目2-数据可视化/test.py", line 3, in &lt;module&gt;</span></span><br><span class="line"><span class="string">    print(abs(-200))</span></span><br><span class="line"><span class="string">TypeError: 'int' object is not callable</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 有结果可以看出，此时abs已经失去了原有函数的意思了</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="传入函数"><a href="#传入函数" class="headerlink" title="传入函数"></a>传入函数</h2><blockquote>
-<p>既然变量可以指向函数，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数。</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 最简单的高阶函数</span></span><br><span class="line"><span class="comment"># 一个最简单的高阶函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y,f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (f(x)+f(y))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(add(<span class="number">500</span>,<span class="number">20</span>,abs))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>编写高阶函数，就是让函数的参数能够接收别的函数。</p>
-<p>把函数作为参数传入，这样的函数称为高阶函数，函数式编程就是指这种高度抽象的编程范式。</p>
-</blockquote>
-<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><blockquote>
-<p>capitalize()函数 - 将字符串改为首位大写其余小写</p>
-</blockquote>
-<blockquote>
-<p>title()函数 - 将字符串改为每个单词都是首字母大写其余小写份形式</p>
-</blockquote>
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="邮箱："><a href="#邮箱：" class="headerlink" title="邮箱："></a>邮箱：</h2><p>求职简历中邮箱不要使用@qq.com后缀的；</p>
 
       
     </div>
@@ -1023,7 +936,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/10/Matlab/Matlab%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1037,7 +950,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">Python/Python itertools模块</a>
+            <a href="/2020/03/10/Matlab/Matlab%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Matlab/Matlab常见函数</a>
         </h1>
 
         <div class="post-meta">
@@ -1048,26 +961,15 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-01-14 23:17:00" itemprop="dateCreated datePublished" datetime="2020-01-14T23:17:00+08:00">2020-01-14</time>
+              <time title="创建时间：2020-03-10 18:06:18" itemprop="dateCreated datePublished" datetime="2020-03-10T18:06:18+08:00">2020-03-10</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-15 19:10:00" itemprop="dateModified" datetime="2020-02-15T19:10:00+08:00">2020-02-15</time>
+                <time title="修改时间：2020-04-08 01:36:21" itemprop="dateModified" datetime="2020-04-08T01:36:21+08:00">2020-04-08</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
 
           
 
@@ -1080,22 +982,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p>Python内置的itertools模块中包含了一系列用来产生不同款类型迭代器的函数和类，这些函数的返回值都是一个迭代器。</p>
-<h1 id="迭代器函数类型"><a href="#迭代器函数类型" class="headerlink" title="迭代器函数类型"></a>迭代器函数类型</h1><p><em>无限迭代器</em>：生成一个无限序列，比如自然序列1，2，3，4…;</p>
-<p><em>有限迭代器</em>：接受一个或多个序列作为参数，进行组合、分组和过滤</p>
-<p><em>组合生成器</em>：序列的排列、组合，求序列的笛卡尔积等</p>
-<h2 id="无限迭代器"><a href="#无限迭代器" class="headerlink" title="无限迭代器"></a>无限迭代器</h2><h2 id="组合生成器"><a href="#组合生成器" class="headerlink" title="组合生成器"></a>组合生成器</h2><h3 id="product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"><a href="#product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。" class="headerlink" title="product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"></a>product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。</h3><p><strong>示例</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> itertools.product(<span class="string">"12345"</span>,<span class="string">"ABCDE"</span>):</span><br><span class="line">    print(i,end=<span class="string">''</span>)</span><br><span class="line">    j = j+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">""</span>)</span><br><span class="line">print(<span class="string">"一共有&#123;&#125;种组合"</span>.format(j))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果为:</span></span><br><span class="line"><span class="string">('1', 'A')('1', 'B')('1', 'C')('1', 'D')('1', 'E')('2', 'A')('2', 'B')('2', 'C')('2', 'D')('2', 'E')('3', 'A')('3', 'B')('3', 'C')('3', 'D')('3', 'E')('4', 'A')('4', 'B')('4', 'C')('4', 'D')('4', 'E')('5', 'A')('5', 'B')('5', 'C')('5', 'D')('5', 'E')</span></span><br><span class="line"><span class="string">一共有25种组合</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <h1 id="常见函数"><a href="#常见函数" class="headerlink" title="常见函数"></a>常见函数</h1><h2 id="生成矩阵的特殊函数"><a href="#生成矩阵的特殊函数" class="headerlink" title="生成矩阵的特殊函数"></a>生成矩阵的特殊函数</h2><ul>
+<li>eye(n) 生成n*n且对角线为1的矩阵,即单位矩阵 </li>
+<li>ones() 生成n*n且全部为1的矩阵</li>
+<li>zeros() 产生矩阵元素全为0的矩阵</li>
+<li>randn() 产生均值为0、方差为1的标准正态分布随机矩阵</li>
+</ul>
+<h2 id="disp函数"><a href="#disp函数" class="headerlink" title="disp函数"></a>disp函数</h2><h2 id="diag-由给定元素为主对角线生成一个矩阵"><a href="#diag-由给定元素为主对角线生成一个矩阵" class="headerlink" title="diag:由给定元素为主对角线生成一个矩阵"></a>diag:由给定元素为主对角线生成一个矩阵</h2><h2 id="rmfield-s-’name’-用于删除s结构体数组中的name一栏；"><a href="#rmfield-s-’name’-用于删除s结构体数组中的name一栏；" class="headerlink" title="rmfield(s,’name’):用于删除s结构体数组中的name一栏；"></a>rmfield(s,’name’):用于删除s结构体数组中的name一栏；</h2><h2 id="deconv函数-除法"><a href="#deconv函数-除法" class="headerlink" title="deconv函数(除法)"></a>deconv函数(除法)</h2><p><img src="media/15862632188045.jpg" alt="-w749"></p>
+<h2 id="conv-和上一个函数类似，这个是乘法"><a href="#conv-和上一个函数类似，这个是乘法" class="headerlink" title="conv 和上一个函数类似，这个是乘法"></a>conv 和上一个函数类似，这个是乘法</h2><h2 id="poly2sym"><a href="#poly2sym" class="headerlink" title="poly2sym"></a>poly2sym</h2><p>将多项式系数的向量表示转换为函数形式</p>
+<h2 id="sym2poly"><a href="#sym2poly" class="headerlink" title="sym2poly"></a>sym2poly</h2><p>和上一个函数用法相反</p>
+<h2 id="horner-函数"><a href="#horner-函数" class="headerlink" title="horner 函数"></a>horner 函数</h2><p>给出符号表达式的嵌套形式</p>
 
-
-
-<h3 id="permutations-用于生成一个全排列"><a href="#permutations-用于生成一个全排列" class="headerlink" title="permutations: 用于生成一个全排列"></a>permutations: 用于生成一个全排列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.permutations(nums)))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">[(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="combinations-用于求序列的组合"><a href="#combinations-用于求序列的组合" class="headerlink" title="combinations:用于求序列的组合"></a>combinations:用于求序列的组合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.combinations(nums,<span class="number">2</span>)))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="⚠️注意区分product、permutations和combinations的区别"><a href="#⚠️注意区分product、permutations和combinations的区别" class="headerlink" title="⚠️注意区分product、permutations和combinations的区别"></a>⚠️注意区分product、permutations和combinations的区别</h4>
       
     </div>
 
@@ -1114,7 +1011,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1158,7 +1055,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1230,7 +1127,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41.5k字</span>
+  <span class="post-count">博客全站共76.3k字</span>
 </div>
 
         

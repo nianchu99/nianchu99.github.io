@@ -49,13 +49,20 @@
   };
 </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="TestError实验四 程序设计 1分析：没有仔细审题，[1,2]是函数ftest的输入，但不是f1的输入。 2  分析：在以下情况下，不重复声明则会出错：  当子函数中有和全局变量A相同的变量名时，不重复声明时A的值是子函数中局部变量A的值，而不是全局变量A的值。  因而，为了m文件的安全与正常运行，在子函数中需要使用全局变量A时，最好通过重复声明。实验五 符号计算 1.在desolve()函">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Matlab&#x2F;TestError">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;03&#x2F;24&#x2F;Matlab&#x2F;TestError&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
+<meta property="og:description" content="TestError实验四 程序设计 1分析：没有仔细审题，[1,2]是函数ftest的输入，但不是f1的输入。 2  分析：在以下情况下，不重复声明则会出错：  当子函数中有和全局变量A相同的变量名时，不重复声明时A的值是子函数中局部变量A的值，而不是全局变量A的值。  因而，为了m文件的安全与正常运行，在子函数中需要使用全局变量A时，最好通过重复声明。实验五 符号计算 1.在desolve()函">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-24T08:39:09.286Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;03&#x2F;24&#x2F;Matlab&#x2F;TestError&#x2F;media&#x2F;15856431299967.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;03&#x2F;24&#x2F;Matlab&#x2F;TestError&#x2F;media&#x2F;15856431642897.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;03&#x2F;24&#x2F;Matlab&#x2F;TestError&#x2F;media&#x2F;15874576536120.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;03&#x2F;24&#x2F;Matlab&#x2F;TestError&#x2F;media&#x2F;15874576901987.jpg">
+<meta property="og:updated_time" content="2020-04-21T09:20:18.761Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;03&#x2F;24&#x2F;Matlab&#x2F;TestError&#x2F;media&#x2F;15856431299967.jpg">
 
 <link rel="canonical" href="http://www.nianchu.space/2020/03/24/Matlab/TestError/">
 
@@ -246,10 +253,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-03-24 16:26:44 / 修改时间：16:39:09" itemprop="dateCreated datePublished" datetime="2020-03-24T16:26:44+08:00">2020-03-24</time>
+              <time title="创建时间：2020-03-24 16:26:44" itemprop="dateCreated datePublished" datetime="2020-03-24T16:26:44+08:00">2020-03-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-21 17:20:18" itemprop="dateModified" datetime="2020-04-21T17:20:18+08:00">2020-04-21</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -269,7 +282,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h1 id="TestError"><a href="#TestError" class="headerlink" title="TestError"></a>TestError</h1><h2 id="实验四-程序设计"><a href="#实验四-程序设计" class="headerlink" title="实验四 程序设计"></a>实验四 程序设计</h2><ul>
+<li>1<br><img src="media/15856431299967.jpg" alt="-w1184"><br>分析：没有仔细审题，[1,2]是函数ftest的输入，但不是f1的输入。</li>
+<li>2 </li>
+<li><img src="media/15856431642897.jpg" alt="-w1195"><br>分析：在以下情况下，不重复声明则会出错：<br>  当子函数中有和全局变量A相同的变量名时，不重复声明时A的值是子函数中局部变量A的值，而不是全局变量A的值。<br>  因而，为了m文件的安全与正常运行，在子函数中需要使用全局变量A时，最好通过重复声明。<h2 id="实验五-符号计算"><a href="#实验五-符号计算" class="headerlink" title="实验五 符号计算"></a>实验五 符号计算</h2><ul>
+<li>1.在desolve()函数中，若没有指定变量，则默认变量为t</li>
+<li><ol start="2">
+<li>利用符号计算实现方程求解的函数是()</li>
+</ol>
+<ul>
+<li>roots</li>
+<li>solve</li>
+<li>dsolve</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="实验七"><a href="#实验七" class="headerlink" title="实验七"></a>实验七</h2><ol>
+<li><p><img src="media/15874576536120.jpg" alt="-w1189"></p>
+<p>. <img src="media/15874576901987.jpg" alt="-w1189"></p>
+</li>
+</ol>
+
     </div>
 
     
@@ -304,7 +339,10 @@
     <a href="/2020/03/19/Java/Java%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/" rel="prev" title="Java对象和类">
       <i class="fa fa-chevron-left"></i> Java对象和类
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/03/26/C/C%E7%BB%93%E6%9E%84%E4%BD%93%E5%86%8D%E5%AD%A6%E4%B9%A0/" rel="next" title="C/C结构体再学习">
+      C/C结构体再学习 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -342,6 +380,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TestError"><span class="nav-number">1.</span> <span class="nav-text">TestError</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实验四-程序设计"><span class="nav-number">1.1.</span> <span class="nav-text">实验四 程序设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验五-符号计算"><span class="nav-number">1.2.</span> <span class="nav-text">实验五 符号计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验七"><span class="nav-number">1.3.</span> <span class="nav-text">实验七</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -355,7 +394,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">82</span>
+          <span class="site-state-item-count">114</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -427,7 +466,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41.5k字</span>
+  <span class="post-count">博客全站共76.3k字</span>
 </div>
 
         

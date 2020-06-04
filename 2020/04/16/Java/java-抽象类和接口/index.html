@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32X32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16X16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://www.nianchu.space').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="抽象类要点提示： 父类中定义了相关子类的共同行为。接口可以拥有定义类的共同行为(包括非相关的类) 抽象类要点提示： 抽象类不可以用于创建对象。抽象类可以包含抽象方法，这些方法将在具体的子类中实现。  抽象类定义： 类的设计应该确保父类包含它的子类的共同特征。有时候，一个父类设计得非常抽象，以至于它都没任何具体的实例。这样的类称为抽象类。  抽象方法：  抽象类和常规类很像，但是不能使用new操作符">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java&#x2F;java-抽象类和接口">
+<meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;04&#x2F;16&#x2F;Java&#x2F;java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3&#x2F;index.html">
+<meta property="og:site_name" content="nianchu-Blog">
+<meta property="og:description" content="抽象类要点提示： 父类中定义了相关子类的共同行为。接口可以拥有定义类的共同行为(包括非相关的类) 抽象类要点提示： 抽象类不可以用于创建对象。抽象类可以包含抽象方法，这些方法将在具体的子类中实现。  抽象类定义： 类的设计应该确保父类包含它的子类的共同特征。有时候，一个父类设计得非常抽象，以至于它都没任何具体的实例。这样的类称为抽象类。  抽象方法：  抽象类和常规类很像，但是不能使用new操作符">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;04&#x2F;16&#x2F;Java&#x2F;java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3&#x2F;media&#x2F;15869985945845.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;04&#x2F;16&#x2F;Java&#x2F;java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3&#x2F;media&#x2F;15870270601472.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;04&#x2F;16&#x2F;Java&#x2F;java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3&#x2F;media&#x2F;15870516633639.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;04&#x2F;16&#x2F;Java&#x2F;java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3&#x2F;media&#x2F;15870522012115.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;04&#x2F;16&#x2F;Java&#x2F;java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3&#x2F;media&#x2F;15875645623585.jpg">
+<meta property="og:updated_time" content="2020-04-22T14:46:28.902Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;2020&#x2F;04&#x2F;16&#x2F;Java&#x2F;java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3&#x2F;media&#x2F;15869985945845.jpg">
+
+<link rel="canonical" href="http://www.nianchu.space/2020/04/16/Java/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Java/java-抽象类和接口 | nianchu-Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">nianchu-Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/nianchu99" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/16/Java/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java/java-抽象类和接口
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-16 08:48:24" itemprop="dateCreated datePublished" datetime="2020-04-16T08:48:24+08:00">2020-04-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-22 22:46:28" itemprop="dateModified" datetime="2020-04-22T22:46:28+08:00">2020-04-22</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><p>要点提示： 父类中定义了相关子类的共同行为。接口可以拥有定义类的共同行为(包括非相关的类)</p>
+<h2 id="抽象类-1"><a href="#抽象类-1" class="headerlink" title="抽象类"></a>抽象类</h2><p>要点提示： 抽象类不可以用于创建对象。抽象类可以包含抽象方法，这些方法将在具体的子类中实现。</p>
+<ul>
+<li><p>抽象类定义： 类的设计应该确保父类包含它的子类的共同特征。有时候，一个父类设计得非常抽象，以至于它都没任何具体的实例。这样的类称为抽象类。</p>
+</li>
+<li><p>抽象方法：<br><img src="media/15869985945845.jpg" alt="-w1084"></p>
+</li>
+<li><p>抽象类和常规类很像，但是不能使用new操作符创建它的实例。抽象方法只有定义而没有实现。他的实现由子类实现。一个包含对象方法的类的必须声明为抽象类。</p>
+</li>
+<li><p>抽象类的沟造方法定义为protected，它只能被子类使用。创建一个具体的子类的实例时，它的父类的构造方法被调用以初始化父类中定义的数据域。</p>
+</li>
+</ul>
+<h3 id="为何要使用抽象方法"><a href="#为何要使用抽象方法" class="headerlink" title="为何要使用抽象方法"></a>为何要使用抽象方法</h3><p>使用抽象方法以后，JVM在运行时可以根据对象的类型动态地决定调用哪一个方法。</p>
+<h3 id="抽象类的几点说明"><a href="#抽象类的几点说明" class="headerlink" title="抽象类的几点说明"></a>抽象类的几点说明</h3><ul>
+<li>抽象方法不能包含在非抽象类中。如果抽象父类的子类不能实现所有的抽象方法，那么子类也必须定义为抽象的。即在抽象类扩展的非抽象子类中，必须实现所有的抽象方法。另外，抽象方法是<em>非静态</em>的。</li>
+<li>抽象类不能使用new关键字来初始化。但是仍然可以定义它的构造方法，这个构造方法在它的子类的构造方法中调用。</li>
+<li>抽象方法的类必须是抽象的。但是，可以定义一个不包含抽象方法的抽象类。这种情况下，不能使用new创建该类的实例。这种类是用来定义新子类的基类的。</li>
+<li>子类可以覆盖分类的方法并将它定义为abstract。</li>
+<li>即使子类的父类是具体的，这个子类也可以是抽象的。</li>
+<li>不能使用new从一个抽象类创建一个实例。但是抽象类可以用作一种数据类型。<br>下面语句用来创建一个元素是GeometricObject类型的数组：<br>GeometricObject[] objects = new GeometricObject[10];<br>然后可以创建一个GeometricObject的实例，并将它的引用赋值给数组。<br>object[0] = new Circle();// Circle是GeometricObject的子类</li>
+</ul>
+<h2 id="示例学习：-抽象的Number类"><a href="#示例学习：-抽象的Number类" class="headerlink" title="示例学习： 抽象的Number类"></a>示例学习： 抽象的Number类</h2><p>要点提示： Number类是数值包装类、BigInteger以及BigDecimal的父类。</p>
+<h2 id="示例学习：-Calendar和GregorianCalendar"><a href="#示例学习：-Calendar和GregorianCalendar" class="headerlink" title="示例学习： Calendar和GregorianCalendar"></a>示例学习： Calendar和GregorianCalendar</h2><p>要点提示： GregorianCalendar是抽象类Calendar的一个具体子类。</p>
+<p>一个Date的实例表示以毫秒为精度的特定时刻。Calendar是一个抽象的基类，可以提取出详细的日历信息。例如： 年、月、日、小时、分钟和秒。<br>GregorianCalendar是一个支持公历的类。<br>Calendar类中的add方法是抽象的，因为它的实现依赖于某个具体的日历系统。</p>
+<p>可以使用new GregorianCalendar()利用当前时间构造一个默认的GregorianCalendar对象，可以使用GregorianCalendar(year, month, date)利用指定的year、month和date(日)构造一个GregorianCalendar对象。参数month是基于0的，即0代表1月</p>
+<p>在Calendar类中定义的get(int field)方法在从Calendar类中提取日期和时间信息方面是很有用的。日期和时间域都被定义为常量。</p>
+<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>要点提示： 接口是一种与类相似的结构，只包含常量和抽象方法</p>
+<p>接口在很多方面都与抽象类很相似，但是它的目的是指明相关或者不相关类的多个对象的共同行为。例如，使用正确的接口，可以指明这些对象是可比较的、可食用的，以及可克隆的。<br>定义接口：<br><img src="media/15870270601472.jpg" alt="-w975"></p>
+<p>在java中，接口被看作是一种特殊的类。就像常规类一样，每个接口都被编译为独立的字节码文件。使用接口或多或少有点像使用抽象类。即：</p>
+<ul>
+<li>可以使用接口作为引用变量的数据类型或类型转换的结果。</li>
+<li>不能使用new操作符创建接口的实例。</li>
+</ul>
+<p>可以使用Edible接口来明确一个对象是否是可食用的。这需要使用implements关键字让对象的类实现这个接口来完成。</p>
+<h2 id="Comparable接口"><a href="#Comparable接口" class="headerlink" title="Comparable接口"></a>Comparable接口</h2><p>要点提示： Comparable接口定义了compoareTo方法，用于比较对象。<br>接口的定义如下：<br>// Interface for comparing objects, defined in java.lang<br>package java.lang;<br>public interface Comparable<E><br>{ public int compareTo(E o);<br>}</p>
+<p>Comparable 方法判断这个对象相对于给定对象o的<em>顺序</em>，并且当这个对象小于、等于或大于给定对象o时，分别返回负整数、0或正整数。</p>
+<p>Comparable接口是一个泛型接口。在实现该接口时，泛型类型E被替换成一种具体的类型。</p>
+<p>由于所有Comparable对象都有compareTo方法，如果对象是Comparable接口类型的实例的话，Java API中的java.util.Arrays.sort(Object[])方法就可以使用compareTo方法对数组中的对象进行比较和排序。</p>
+<h2 id="Cloneable接口"><a href="#Cloneable接口" class="headerlink" title="Cloneable接口"></a>Cloneable接口</h2><p>要点提示： Cloneable接口给出了一个可克隆的对象。</p>
+<p>经常会出现需要创建一个对象拷贝的情况。为了实现这个目的，需要使用clone方法并理解Cloneable接口。</p>
+<p>接口通常包括常量和抽象方法，但是Cloneable接口是一个特殊情况。在java.lang包中的Cloneable接口的定义如下：<br>package java.lang;<br>public interface Cloneable {<br>}</p>
+<p>也就是说，这个接口是空的。<br>一个带空体的接口被称为标记接口(maker interface).一个标记接口及不包括常量也不包括方法。它用来表示一个类拥有某种特定的属性。实现Cloneable接口的类标记为可克隆的，而且它的对象可以使用在Object类中定义的clone()类方法。</p>
+<p>Java库中的很多类（例如，Date、Calendar和ArrayList）实现Cloneable。这样这些类的实例可以被克隆。</p>
+<p>为了定义一个自定义类来实现Cloneable接口，这个类必须覆盖Object类中的clone()方法。</p>
+<h3 id="浅复制、-深复制"><a href="#浅复制、-深复制" class="headerlink" title="浅复制、 深复制"></a>浅复制、 深复制</h3><p>意思是：<br>Object类中的clone方法将原始对象的每个数据域赋值给目标对象。如果一个数据域是基本类型，复制的就是它的值，例如，area(double 类型)的值从house1复制到house2.如果一个数据域是对象，复制的就只是该域的引用。例如，域whenBuilt是Date类，所以，它的引用被复制给house2。<br>因此，尽管，house1==house2为假，但是house1.whenBuilt==house2.whenBuilt为真。这称为浅复制(shallow copy)而不是深复制(deep copy),这意味着如果数据域是对象类型，那么复制的是对象的引用，而不是它的内容。</p>
+<h2 id="接口与抽象类"><a href="#接口与抽象类" class="headerlink" title="接口与抽象类"></a>接口与抽象类</h2><p>要点提示：一个类可以实现多个接口，但是只能继承一个父类。<br>接口的使用和抽象类的使用基本相似，但是，定义一个接口与定义一个抽象类有所不同。<br><img src="media/15870516633639.jpg" alt="-w1096"></p>
+<p>利用关键字extands，接口可以继承其他接口。这样的接口称为子接口(subinterface)。</p>
+<p>接口可以扩展其他接口而不是类。一个类可以扩展它的父类同时实现多个接口。</p>
+<p>所有的类共享一个根类Object，但是接口没有共同的根。<em>与此类似，接口也可以定义一种类型。一个接口类型的变量可以引用实现该接口的类的实例</em>。如果一个类实现了一个接口，那么这个接口就类似于该类的一个父类。可以将接口当作一种数据类型使用，将接口类型的变量转换为它的子类，反过来也可以。</p>
+<p>注意：类名是一个名词。接口名可以是形容词或者名词。</p>
+<p>设计指南：<br><img src="media/15870522012115.jpg" alt="-w1131"></p>
+<p>通常，推荐使用接口而非抽象类，因为接口可以定义非相关类共有的父类型。接口比类更灵活。</p>
+<h2 id="实例学习：-Rational类"><a href="#实例学习：-Rational类" class="headerlink" title="实例学习： Rational类"></a>实例学习： Rational类</h2><p>设计一个Rational类，用于表示和处理有理数。</p>
+<h2 id="类的设计原则"><a href="#类的设计原则" class="headerlink" title="类的设计原则"></a>类的设计原则</h2><p>要点提示： 类的设计原则有助于设计出合理的类</p>
+<h3 id="内聚性"><a href="#内聚性" class="headerlink" title="内聚性"></a>内聚性</h3><p>类应该描述一个单一的实体，而所有的类操作应该在逻辑上互相配合，只吃一个一致的目的。</p>
+<p>如果一个实体担负太多的职责，就应该按各自的职责分成几个类</p>
+<h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3><p>遵循标准Java程序设计风格和命名习惯。为类、数据域和方法选取具有信息的名字。通常的风格是将数据声明至于构造方法之前，并且将构造方法置于方法之前。</p>
+<p>选择名字要保持一致。给类似的操作选择不同的名字并非良好的实践。</p>
+<p>一般来说，应该具有一致性地提供一个公共无参构造方法，用于构建默认实例。如果一个类不支持无参的构造方法，要用文档写出原因。如果没有显式定义构造方法，即假定有一个空方法体的公共默认无参构造方法。</p>
+<p>如果不想用户创建类的对象，可以在类中声明一个私有的构造方法，Match类就是如此</p>
+<h3 id="封装性"><a href="#封装性" class="headerlink" title="封装性"></a>封装性</h3><p>一个类应该使用private修饰符隐藏其数据，以免用户直接访问它。这使类更易于维护。</p>
+<p><strong>只在</strong>希望数据域可读的情况下，才提供get方法；也只希望数据域可更新的情况下，才提供set方法。</p>
+<h3 id="清晰性"><a href="#清晰性" class="headerlink" title="清晰性"></a>清晰性</h3><p>类应该有一个很清晰的合约，从而易于解释和理解。</p>
+<p>用户可以以各种不同组合、顺序，以及在各种环境中结合使用多个类。因此，在设计一个类时，这个类不应该限制用户如何以及何时使用该类；以一种方式设计属性，以容许用户按值的任何顺序和任何组合来设置；设计方法应该使得实现的功能与它们出现的顺序无关。</p>
+<p>不应该声明一个来自其他数据域的数据域。<br>例如：<br><img src="media/15875645623585.jpg" alt="-w1122"></p>
+<h3 id="完整性"><a href="#完整性" class="headerlink" title="完整性"></a>完整性</h3><p>类是为许多不同用户的使用而设计的。为了能在一个广泛的应用中使用，一个类应该通过属性和方法提供多种方案以适应用户的不同需求。</p>
+<h3 id="实例和静态"><a href="#实例和静态" class="headerlink" title="实例和静态"></a>实例和静态</h3><p>依赖于类的具体实例的变量或方法必须是一个实例变量或方法。</p>
+<p>如果一个变量被类的所有实例所共享，那就应该将它声明为静态的。</p>
+<p>如果方法 不依赖于某个具体的实例，那就应该将它声明为静态方法。</p>
+<p>应该总是使用类名(而不是引用变量)引用静态变量和方法，以增强可读性并避免错误。</p>
+<p>不要从构造方法中传入参数初始化<em>静态</em>数据。最好使用set方法改变静态数据域。</p>
+<p>实例和静态是面向对象程序设计不可或缺的部分。数据域或方法要么是实例的，要么是静态的。不要错误地忽视了静态数据域或方法。</p>
+<p>构造方法永远都是实例方法，因为它是用来创建具体实例的。一个静态变量或方法可以从实例中调用，但是不能从静态方法中调用实例变量或方法。</p>
+<h3 id="继承和聚合"><a href="#继承和聚合" class="headerlink" title="继承和聚合"></a>继承和聚合</h3><p>继承和聚合之间的差异，就是is-a(是一种)和has-a(具有)之间的关系。<br>这里解释一下后者：<br>人具有名字，因此，可以使用<em>聚合</em>来对Person类和Name类之间的关系建模。</p>
+<h3 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h3><p>接口和抽象类都可以用于为对象指定共同的行为。</p>
+<p>如何决定是采用接口还是抽象类？<br>同常，比较强的is-a关系清晰地描述了父子关系，应该采用类的继承关系来建模。弱的is-a关系，也称为is-kind-of(是一类)关系，表明一个对象拥有某种属性。弱的is-a关系可以使用接口来建模。</p>
+<p>接口比抽象类更灵活，因为一个子类只能继承一个父类，但是却可以实现任意个数的接口。然而，接口不能具有具体的方法。可以结合接口和抽象类的优点，创建一个接口，使用一个抽象类来实现它。可以视其方便使用接口或抽象类。</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>nianchu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://www.nianchu.space/2020/04/16/Java/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" title="Java&#x2F;java-抽象类和接口">http://www.nianchu.space/2020/04/16/Java/java-抽象类和接口/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/12/Java/Java-%E6%9C%89%E5%85%B3%E9%87%8D%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/" rel="prev" title="Java/Java-有关重写的问题">
+      <i class="fa fa-chevron-left"></i> Java/Java-有关重写的问题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/30/Java/Java-%E9%83%91%E8%8E%89%E7%89%88%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81%E8%AF%BE%E4%BB%B6/" rel="next" title="Java/Java-郑莉版输入输出流课件">
+      Java/Java-郑莉版输入输出流课件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#抽象类"><span class="nav-number">1.</span> <span class="nav-text">抽象类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象类-1"><span class="nav-number">1.1.</span> <span class="nav-text">抽象类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为何要使用抽象方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">为何要使用抽象方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象类的几点说明"><span class="nav-number">1.1.2.</span> <span class="nav-text">抽象类的几点说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例学习：-抽象的Number类"><span class="nav-number">1.2.</span> <span class="nav-text">示例学习： 抽象的Number类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例学习：-Calendar和GregorianCalendar"><span class="nav-number">1.3.</span> <span class="nav-text">示例学习： Calendar和GregorianCalendar</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口"><span class="nav-number">2.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparable接口"><span class="nav-number">2.1.</span> <span class="nav-text">Comparable接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cloneable接口"><span class="nav-number">2.2.</span> <span class="nav-text">Cloneable接口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浅复制、-深复制"><span class="nav-number">2.2.1.</span> <span class="nav-text">浅复制、 深复制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口与抽象类"><span class="nav-number">2.3.</span> <span class="nav-text">接口与抽象类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例学习：-Rational类"><span class="nav-number">2.4.</span> <span class="nav-text">实例学习： Rational类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的设计原则"><span class="nav-number">2.5.</span> <span class="nav-text">类的设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内聚性"><span class="nav-number">2.5.1.</span> <span class="nav-text">内聚性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一致性"><span class="nav-number">2.5.2.</span> <span class="nav-text">一致性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#封装性"><span class="nav-number">2.5.3.</span> <span class="nav-text">封装性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清晰性"><span class="nav-number">2.5.4.</span> <span class="nav-text">清晰性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完整性"><span class="nav-number">2.5.5.</span> <span class="nav-text">完整性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例和静态"><span class="nav-number">2.5.6.</span> <span class="nav-text">实例和静态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承和聚合"><span class="nav-number">2.5.7.</span> <span class="nav-text">继承和聚合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口和抽象类"><span class="nav-number">2.5.8.</span> <span class="nav-text">接口和抽象类</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nianchu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nianchu99?tab=projects" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nianchu99?tab=projects" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:l17623029272@163.com" title="E-Mail → mailto:l17623029272@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/2795043945/profile?topnav=1&wvr=6" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2795043945&#x2F;profile?topnav=1&amp;wvr=6" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-nianchu"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by nianchu</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共76.3k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
