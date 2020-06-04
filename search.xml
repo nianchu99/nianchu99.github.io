@@ -1684,6 +1684,16 @@ $ 叉乘
       </tags>
   </entry>
   <entry>
+    <title>JavaScript/JavaScript</title>
+    <url>/2020/02/26/JavaScript/JavaScript/</url>
+    <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><ol>
+<li>HTML 定义了网页的内容</li>
+<li>CSS 描述了网页的布局</li>
+<li>JavaScript 网页的行为</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Java/Java-异常处理和文本I\O</title>
     <url>/2020/02/26/Java/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI%5CO/</url>
     <content><![CDATA[<h1 id="Java-异常处理和文本I-O"><a href="#Java-异常处理和文本I-O" class="headerlink" title="Java-异常处理和文本I/O"></a>Java-异常处理和文本I/O</h1><h2 id="异常处理概述"><a href="#异常处理概述" class="headerlink" title="异常处理概述"></a>异常处理概述</h2><p>要点提示：异常是从方法抛出的。方法的调用者可以捕获以及处理该异常</p>
@@ -1792,16 +1802,6 @@ $ 叉乘
 <p>Web爬虫，可以跟随超链接来自动遍历Web的程序。</p>
 <p>客户程序从一个Web服务器上获取文件。</p>
 <p>程序的算法如下：<br><img src="media/15881308836609.jpg" alt="-w1048"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>JavaScript/JavaScript</title>
-    <url>/2020/02/26/JavaScript/JavaScript/</url>
-    <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><ol>
-<li>HTML 定义了网页的内容</li>
-<li>CSS 描述了网页的布局</li>
-<li>JavaScript 网页的行为</li>
-</ol>
 ]]></content>
   </entry>
   <entry>
@@ -2397,6 +2397,18 @@ $ 叉乘
       </categories>
   </entry>
   <entry>
+    <title>C/C语言之神奇代码</title>
+    <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B9%8B%E7%A5%9E%E5%A5%87%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<h1 id="C语言之神奇代码"><a href="#C语言之神奇代码" class="headerlink" title="C语言之神奇代码"></a>C语言之神奇代码</h1><p><strong>声明：这是网上看到的，还没去弄清楚是什么原理，就先放在这里吧！</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">main(_)&#123;_^<span class="number">448</span>&amp;&amp;main(-~_);<span class="built_in">putchar</span>(--_%<span class="number">64</span>?<span class="number">32</span>|-~<span class="number">7</span>[__TIME__-_/<span class="number">8</span>%<span class="number">8</span>][<span class="string">"&gt;'txiZ^(~z?"</span><span class="number">-48</span>]&gt;&gt;<span class="string">";;;====~$::199"</span>[_*<span class="number">2</span>&amp;<span class="number">8</span>|_/<span class="number">64</span>]/(_&amp;<span class="number">2</span>?<span class="number">1</span>:<span class="number">8</span>)%<span class="number">8</span>&amp;<span class="number">1</span>:<span class="number">10</span>);&#125;</span><br><span class="line"><span class="comment">/*直接复制上面代码到某一编辑器，然后运行就会出现当前的时间。很神奇吧！</span></span><br><span class="line"><span class="comment">下面是效果图：*/</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9icvhy003j30v60ccmy6.jpg" alt="神奇代码"></p>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+  </entry>
+  <entry>
     <title>C/C语言两个数交换的两种方法</title>
     <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B8%A4%E4%B8%AA%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p><em>由于函数传递时实参无法改变，所以使用了全局变量来完成</em></p>
@@ -2430,18 +2442,6 @@ $ 叉乘
 
 
 
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>C/C语言之神奇代码</title>
-    <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B9%8B%E7%A5%9E%E5%A5%87%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<h1 id="C语言之神奇代码"><a href="#C语言之神奇代码" class="headerlink" title="C语言之神奇代码"></a>C语言之神奇代码</h1><p><strong>声明：这是网上看到的，还没去弄清楚是什么原理，就先放在这里吧！</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">main(_)&#123;_^<span class="number">448</span>&amp;&amp;main(-~_);<span class="built_in">putchar</span>(--_%<span class="number">64</span>?<span class="number">32</span>|-~<span class="number">7</span>[__TIME__-_/<span class="number">8</span>%<span class="number">8</span>][<span class="string">"&gt;'txiZ^(~z?"</span><span class="number">-48</span>]&gt;&gt;<span class="string">";;;====~$::199"</span>[_*<span class="number">2</span>&amp;<span class="number">8</span>|_/<span class="number">64</span>]/(_&amp;<span class="number">2</span>?<span class="number">1</span>:<span class="number">8</span>)%<span class="number">8</span>&amp;<span class="number">1</span>:<span class="number">10</span>);&#125;</span><br><span class="line"><span class="comment">/*直接复制上面代码到某一编辑器，然后运行就会出现当前的时间。很神奇吧！</span></span><br><span class="line"><span class="comment">下面是效果图：*/</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9icvhy003j30v60ccmy6.jpg" alt="神奇代码"></p>
 ]]></content>
       <categories>
         <category>C语言</category>
