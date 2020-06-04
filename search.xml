@@ -1360,25 +1360,6 @@ $ 叉乘
 ]]></content>
   </entry>
   <entry>
-    <title>Matlab矩阵的访问</title>
-    <url>/2020/03/14/Matlab/Matlab%E7%9F%A9%E9%98%B5%E7%9A%84%E8%AE%BF%E9%97%AE/</url>
-    <content><![CDATA[<h1 id="Matalb矩阵元素的访问"><a href="#Matalb矩阵元素的访问" class="headerlink" title="Matalb矩阵元素的访问"></a>Matalb矩阵元素的访问</h1><h2 id="通过下标来引用矩阵的元素"><a href="#通过下标来引用矩阵的元素" class="headerlink" title="通过下标来引用矩阵的元素"></a>通过下标来引用矩阵的元素</h2><ul>
-<li>先行后列</li>
-<li>下标越界时Matlab会自动扩展矩阵，为给定值的位置默认为零。<h2 id="通过序号来引用矩阵的元素"><a href="#通过序号来引用矩阵的元素" class="headerlink" title="通过序号来引用矩阵的元素"></a>通过序号来引用矩阵的元素</h2></li>
-</ul>
-<h2 id="通过冒号表达式来或者子矩阵"><a href="#通过冒号表达式来或者子矩阵" class="headerlink" title="通过冒号表达式来或者子矩阵"></a>通过冒号表达式来或者子矩阵</h2><ul>
-<li>获得第n行所有元素<pre><code>* A(n,:)</code></pre></li>
-<li>获得第n列的所有元素<pre><code>* A(:,n)</code></pre></li>
-<li>获得第2到5行且3到4列中的元素<pre><code>* A(2 : 5;3 : 4)</code></pre></li>
-<li>获得n到m行的所有元素<pre><code>* A(n : m, : )</code></pre></li>
-<li>获得n到m列的所有元素<pre><code>* A(:,n : m)</code></pre>&amp; 注意：end在Matlab中表示某一维的末尾下标</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Matlab</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Matlab零散的知识</title>
     <url>/2020/03/14/Matlab/Matlab%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<h1 id="Matlab零散知识"><a href="#Matlab零散知识" class="headerlink" title="Matlab零散知识"></a>Matlab零散知识</h1><h2 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h2><ul>
@@ -1418,6 +1399,25 @@ $ 叉乘
 <h2 id="计算伴随矩阵"><a href="#计算伴随矩阵" class="headerlink" title="计算伴随矩阵"></a>计算伴随矩阵</h2><p> inv(A)*det(A)</p>
 <h2 id="将cell数组转化为矩阵"><a href="#将cell数组转化为矩阵" class="headerlink" title="将cell数组转化为矩阵"></a>将cell数组转化为矩阵</h2><h3 id="若cell中的元素为含有数字的字符串"><a href="#若cell中的元素为含有数字的字符串" class="headerlink" title="若cell中的元素为含有数字的字符串"></a>若cell中的元素为含有数字的字符串</h3><p> str2num(char(answer));</p>
 <h3 id="若cell中的元素为数值型，则使用cell2amt"><a href="#若cell中的元素为数值型，则使用cell2amt" class="headerlink" title="若cell中的元素为数值型，则使用cell2amt"></a>若cell中的元素为数值型，则使用cell2amt</h3><h2 id="临时"><a href="#临时" class="headerlink" title="临时"></a>临时</h2><p> prompt={‘请输入正弦函数的振幅:’,’请输入正弦函数的频率:’};<br>name=’输入’;<br>numlines=1;<br>defaultanswer={‘5’,’10’};<br>answer=inputdlg(prompt,name,numlines,defaultanswer);<br>answer1=str2num(char(answer));<br>amplitude=answer1(1);<br>frequency=answer1(2);<br>axes(handles.axes1);<br>x=0:pi/180:2<em>pi;<br>y=amplitude</em>sin(frequency<em>2</em>pi);<br>plot(x,y)</p>
+]]></content>
+      <tags>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Matlab矩阵的访问</title>
+    <url>/2020/03/14/Matlab/Matlab%E7%9F%A9%E9%98%B5%E7%9A%84%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<h1 id="Matalb矩阵元素的访问"><a href="#Matalb矩阵元素的访问" class="headerlink" title="Matalb矩阵元素的访问"></a>Matalb矩阵元素的访问</h1><h2 id="通过下标来引用矩阵的元素"><a href="#通过下标来引用矩阵的元素" class="headerlink" title="通过下标来引用矩阵的元素"></a>通过下标来引用矩阵的元素</h2><ul>
+<li>先行后列</li>
+<li>下标越界时Matlab会自动扩展矩阵，为给定值的位置默认为零。<h2 id="通过序号来引用矩阵的元素"><a href="#通过序号来引用矩阵的元素" class="headerlink" title="通过序号来引用矩阵的元素"></a>通过序号来引用矩阵的元素</h2></li>
+</ul>
+<h2 id="通过冒号表达式来或者子矩阵"><a href="#通过冒号表达式来或者子矩阵" class="headerlink" title="通过冒号表达式来或者子矩阵"></a>通过冒号表达式来或者子矩阵</h2><ul>
+<li>获得第n行所有元素<pre><code>* A(n,:)</code></pre></li>
+<li>获得第n列的所有元素<pre><code>* A(:,n)</code></pre></li>
+<li>获得第2到5行且3到4列中的元素<pre><code>* A(2 : 5;3 : 4)</code></pre></li>
+<li>获得n到m行的所有元素<pre><code>* A(n : m, : )</code></pre></li>
+<li>获得n到m列的所有元素<pre><code>* A(:,n : m)</code></pre>&amp; 注意：end在Matlab中表示某一维的末尾下标</li>
+</ul>
 ]]></content>
       <tags>
         <tag>Matlab</tag>
@@ -1684,6 +1684,16 @@ $ 叉乘
       </tags>
   </entry>
   <entry>
+    <title>JavaScript/JavaScript</title>
+    <url>/2020/02/26/JavaScript/JavaScript/</url>
+    <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><ol>
+<li>HTML 定义了网页的内容</li>
+<li>CSS 描述了网页的布局</li>
+<li>JavaScript 网页的行为</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Java/Java-异常处理和文本I\O</title>
     <url>/2020/02/26/Java/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI%5CO/</url>
     <content><![CDATA[<h1 id="Java-异常处理和文本I-O"><a href="#Java-异常处理和文本I-O" class="headerlink" title="Java-异常处理和文本I/O"></a>Java-异常处理和文本I/O</h1><h2 id="异常处理概述"><a href="#异常处理概述" class="headerlink" title="异常处理概述"></a>异常处理概述</h2><p>要点提示：异常是从方法抛出的。方法的调用者可以捕获以及处理该异常</p>
@@ -1792,16 +1802,6 @@ $ 叉乘
 <p>Web爬虫，可以跟随超链接来自动遍历Web的程序。</p>
 <p>客户程序从一个Web服务器上获取文件。</p>
 <p>程序的算法如下：<br><img src="media/15881308836609.jpg" alt="-w1048"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>JavaScript/JavaScript</title>
-    <url>/2020/02/26/JavaScript/JavaScript/</url>
-    <content><![CDATA[<h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><ol>
-<li>HTML 定义了网页的内容</li>
-<li>CSS 描述了网页的布局</li>
-<li>JavaScript 网页的行为</li>
-</ol>
 ]]></content>
   </entry>
   <entry>
@@ -2436,22 +2436,22 @@ $ 叉乘
       </categories>
   </entry>
   <entry>
-    <title>C/C语言实例：随机数生成</title>
-    <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/</url>
-    <content><![CDATA[<h1 id="C语言实例之随机数生成"><a href="#C语言实例之随机数生成" class="headerlink" title="C语言实例之随机数生成"></a>C语言实例之随机数生成</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*rand函数用来产生随机数，但是rand（）的内部是用线性同余法实现的，是伪随机数。在调用rand函数之前，可以使用srand函数设置随机数种子，如果没有设置随机数种子，rand函数在调用时，自动设计随机种子为1.随机种子相同，每次产生的随机数都是相同的，这就是为什么叫做伪随机数。*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span><span class="comment">//rand函数的头文件为：stdlib.h</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span><span class="comment">//strand()函数需要的参数为seed，通常利用time(0)的返回值作为seed。time.h是time的头文件</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    srand((<span class="keyword">int</span>)time(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">int</span> SJ[<span class="number">5</span>];<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        SJ[i]=rand()&amp;<span class="number">101</span>; <span class="comment">//获取0到100的随机数，包括100</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,SJ[i]);</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 100</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 5</span></span><br><span class="line"><span class="comment"> 32</span></span><br><span class="line"><span class="comment"> 这样就完成了随机数的输出</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-  </entry>
-  <entry>
     <title>C/C语言之神奇代码</title>
     <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E4%B9%8B%E7%A5%9E%E5%A5%87%E4%BB%A3%E7%A0%81/</url>
     <content><![CDATA[<h1 id="C语言之神奇代码"><a href="#C语言之神奇代码" class="headerlink" title="C语言之神奇代码"></a>C语言之神奇代码</h1><p><strong>声明：这是网上看到的，还没去弄清楚是什么原理，就先放在这里吧！</strong></p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">main(_)&#123;_^<span class="number">448</span>&amp;&amp;main(-~_);<span class="built_in">putchar</span>(--_%<span class="number">64</span>?<span class="number">32</span>|-~<span class="number">7</span>[__TIME__-_/<span class="number">8</span>%<span class="number">8</span>][<span class="string">"&gt;'txiZ^(~z?"</span><span class="number">-48</span>]&gt;&gt;<span class="string">";;;====~$::199"</span>[_*<span class="number">2</span>&amp;<span class="number">8</span>|_/<span class="number">64</span>]/(_&amp;<span class="number">2</span>?<span class="number">1</span>:<span class="number">8</span>)%<span class="number">8</span>&amp;<span class="number">1</span>:<span class="number">10</span>);&#125;</span><br><span class="line"><span class="comment">/*直接复制上面代码到某一编辑器，然后运行就会出现当前的时间。很神奇吧！</span></span><br><span class="line"><span class="comment">下面是效果图：*/</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://tva1.sinaimg.cn/large/006tNbRwly1g9icvhy003j30v60ccmy6.jpg" alt="神奇代码"></p>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C/C语言实例：随机数生成</title>
+    <url>/2019/12/02/C/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E4%BE%8B%EF%BC%9A%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%94%9F%E6%88%90/</url>
+    <content><![CDATA[<h1 id="C语言实例之随机数生成"><a href="#C语言实例之随机数生成" class="headerlink" title="C语言实例之随机数生成"></a>C语言实例之随机数生成</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*rand函数用来产生随机数，但是rand（）的内部是用线性同余法实现的，是伪随机数。在调用rand函数之前，可以使用srand函数设置随机数种子，如果没有设置随机数种子，rand函数在调用时，自动设计随机种子为1.随机种子相同，每次产生的随机数都是相同的，这就是为什么叫做伪随机数。*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdlib.h"</span><span class="comment">//rand函数的头文件为：stdlib.h</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"time.h"</span><span class="comment">//strand()函数需要的参数为seed，通常利用time(0)的返回值作为seed。time.h是time的头文件</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    srand((<span class="keyword">int</span>)time(<span class="number">0</span>));</span><br><span class="line">    <span class="keyword">int</span> SJ[<span class="number">5</span>];<span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        SJ[i]=rand()&amp;<span class="number">101</span>; <span class="comment">//获取0到100的随机数，包括100</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;=<span class="number">4</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,SJ[i]);</span><br><span class="line"><span class="comment">/*输出结果为：</span></span><br><span class="line"><span class="comment"> 100</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 33</span></span><br><span class="line"><span class="comment"> 5</span></span><br><span class="line"><span class="comment"> 32</span></span><br><span class="line"><span class="comment"> 这样就完成了随机数的输出</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>C语言</category>
