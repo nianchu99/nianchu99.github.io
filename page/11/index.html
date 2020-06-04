@@ -1,93 +1,279 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32X32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16X16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
 
-  
-  <title>nianchu-Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://www.nianchu.space').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="nianchu-Blog">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;page&#x2F;11&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.nianchu.space/page/11/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>nianchu-Blog</title>
   
-    <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">nianchu-Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.nianchu.space"></form>
-      </div>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">nianchu-Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-C/gets,puts函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2019-11-28T03:26:00.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
 
   </div>
-  <div class="article-inner">
+</div>
+    </header>
+
     
-    
-      <header class="article-header">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/nianchu99" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/">C/gets,puts函数</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C/gets,puts函数</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-28 11:26:00 / 修改时间：14:18:56" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
+          <h1 id="gets-puts-函数"><a href="#gets-puts-函数" class="headerlink" title="gets(),puts()函数"></a>gets(),puts()函数</h1><p>使用gets(),puts()函数实现字符串的输入和输出</p>
 <h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdio.h"</span>`</span></span><br><span class="line"></span><br><span class="line">`\<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;`</span></span></span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;  **<span class="keyword">char</span>** you[]=&#123;<span class="string">"12345"</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">char</span>** password[<span class="number">100</span>]=&#123;&#125;;`</span><br><span class="line"></span><br><span class="line">  `gets(password);`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (<span class="built_in">strcmp</span>(password,you)==<span class="number">0</span>) &#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"Welcome!"</span>);`</span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>**&#123;`</span><br><span class="line"></span><br><span class="line">​      `<span class="built_in">printf</span>(<span class="string">"You are not right"</span>);`</span><br><span class="line"></span><br><span class="line">​    `&#125;`</span><br><span class="line"></span><br><span class="line">`&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -97,44 +283,74 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/28/C/gets,puts%E5%87%BD%E6%95%B0/" data-id="ckb0u8cfz000sqgub7tqoe5mk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-C/操作字符串的函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2019-11-28T03:26:00.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/">C/操作字符串的函数</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C/操作字符串的函数</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-28 11:26:00 / 修改时间：23:27:50" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="操作字符串的函数"><a href="#操作字符串的函数" class="headerlink" title="操作字符串的函数"></a>操作字符串的函数</h1><h2 id="strcpy"><a href="#strcpy" class="headerlink" title="strcpy()"></a>strcpy()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"hello"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>];</span><br><span class="line"><span class="built_in">strcpy</span>(b,a);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"b:%s\n"</span>,b);&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="strcat"><a href="#strcat" class="headerlink" title="strcat()"></a>strcat()</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="comment">//strcat()将后面的字符串接到前面的字符串后面</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> a[<span class="number">100</span>]=<span class="string">"I love you,"</span>;</span><br><span class="line"><span class="keyword">char</span> b[<span class="number">100</span>]=<span class="string">"999!"</span>;</span><br><span class="line"><span class="built_in">strcat</span>(a,b);<span class="comment">//注意这里是连接了b字符串到a字符串</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"a:%s\n"</span>,a);&#125;<span class="comment">//输出的a字符串即是加工后的字符串</span></span><br></pre></td></tr></table></figure>
 
@@ -150,44 +366,80 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/28/C/%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%87%BD%E6%95%B0/" data-id="ckb0u8cg1000wqgub132g5jv4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Python/Python列表操作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/" class="article-date">
-  <time datetime="2019-11-28T03:26:00.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/">Python/Python列表操作</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">Python/Python列表操作</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-28 11:26:00" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-29 09:10:02" itemprop="dateModified" datetime="2019-11-29T09:10:02+08:00">2019-11-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="list操作"><a href="#list操作" class="headerlink" title="list操作"></a>list操作</h1><h2 id="索引及负数索引"><a href="#索引及负数索引" class="headerlink" title="索引及负数索引"></a>索引及负数索引</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#执行索引输出列表</span></span><br><span class="line">print(a[<span class="number">1</span>])</span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">3</span>])</span><br><span class="line">print(a[<span class="number">-1</span>])</span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">-1</span>])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''love</span></span><br><span class="line"><span class="string">['i', 'love', 'you']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['love']'''</span></span><br></pre></td></tr></table></figure>
+          <h1 id="list操作"><a href="#list操作" class="headerlink" title="list操作"></a>list操作</h1><h2 id="索引及负数索引"><a href="#索引及负数索引" class="headerlink" title="索引及负数索引"></a>索引及负数索引</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line"><span class="comment">#执行索引输出列表</span></span><br><span class="line">print(a[<span class="number">1</span>])</span><br><span class="line">print(a[<span class="number">0</span>:<span class="number">3</span>])</span><br><span class="line">print(a[<span class="number">-1</span>])</span><br><span class="line">print(a[<span class="number">1</span>:<span class="number">-1</span>])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''love</span></span><br><span class="line"><span class="string">['i', 'love', 'you']</span></span><br><span class="line"><span class="string">you</span></span><br><span class="line"><span class="string">['love']'''</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="元素的增加"><a href="#元素的增加" class="headerlink" title="元素的增加"></a>元素的增加</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="string">'i'</span>,<span class="string">'love'</span>,<span class="string">'you'</span>]</span><br><span class="line">a.append(<span class="string">"999"</span>)<span class="comment">#尾部➕1</span></span><br><span class="line">print(a[:])</span><br><span class="line">a.insert(<span class="number">4</span>,<span class="string">'very much!'</span>)<span class="comment">#指定位置➕</span></span><br><span class="line">print(a[:])</span><br><span class="line">a.extend([<span class="string">"do"</span>,<span class="string">'you know'</span>])<span class="comment">#尾部➕2***注意extend的使用格式***</span></span><br><span class="line">print(a[:])</span><br><span class="line"><span class="comment">#输出结果为：</span></span><br><span class="line"><span class="string">'''['i', 'love', 'you', '999']</span></span><br><span class="line"><span class="string">['i', 'love', 'you', '999', 'very much!']</span></span><br><span class="line"><span class="string">['i', 'love', 'you', '999', 'very much!', 'do', 'you know']</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
@@ -200,44 +452,80 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/28/Python/Python%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/" data-id="ckb0u8cif003zqgub8816df2f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Python/Python时间与日期" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/" class="article-date">
-  <time datetime="2019-11-28T03:26:00.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/">Python/Python时间与日期</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/" class="post-title-link" itemprop="url">Python/Python时间与日期</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-28 11:26:00" itemprop="dateCreated datePublished" datetime="2019-11-28T11:26:00+08:00">2019-11-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-29 00:54:22" itemprop="dateModified" datetime="2019-11-29T00:54:22+08:00">2019-11-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="Python时间与日期"><a href="#Python时间与日期" class="headerlink" title="Python时间与日期"></a>Python时间与日期</h1><h2 id="time-模块"><a href="#time-模块" class="headerlink" title="time()模块"></a>time()模块</h2><h3 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h3><blockquote>
+          <h1 id="Python时间与日期"><a href="#Python时间与日期" class="headerlink" title="Python时间与日期"></a>Python时间与日期</h1><h2 id="time-模块"><a href="#time-模块" class="headerlink" title="time()模块"></a>time()模块</h2><h3 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h3><blockquote>
 <p>时间间隔是以秒为单位的浮点小数。</p>
 </blockquote>
 <blockquote>
@@ -314,44 +602,74 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/28/Python/Python%E6%97%B6%E9%97%B4%E4%B8%8E%E6%97%A5%E6%9C%9F/" data-id="ckb0u8cin004dqgub31kc5gs2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-小说（一）/第五章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/28/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%BA%94%E7%AB%A0/" class="article-date">
-  <time datetime="2019-11-27T17:43:00.000Z" itemprop="datePublished">2019-11-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/">小说（一）</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/28/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%BA%94%E7%AB%A0/">第五章 再见了刘校长</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/28/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%BA%94%E7%AB%A0/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/28/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%BA%94%E7%AB%A0/" class="post-title-link" itemprop="url">第五章 再见了刘校长</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-28 01:43:00 / 修改时间：01:16:07" itemprop="dateCreated datePublished" datetime="2019-11-28T01:43:00+08:00">2019-11-28</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url" rel="index">
+                    <span itemprop="name">小说（一）</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>第五章 见了刘校长</p>
+          <p>第五章 见了刘校长</p>
 <p>中国人的现状就是看热闹不嫌人多，可是人人又都是十分知趣的。看热闹看到一定程度之后，人人都知道要逃之夭夭，免得被当事人记恨，热闹就不再热闹了。所以当高二三班的同学们看到事情都已经这样了，所有人又一哄而散了，只剩下美丽清纯的班花夏楚，浑身淋湿的班级一霸赵虎，还有就是那个废物陈涵。哦，不，废物如今不一定是废物了，至少不能再明目张胆地叫他废物。</p>
 <p>班花此时一脸震惊地看着陈涵，慢慢地走了前去，面对着白发飘逸的陈涵，问道：“刚刚是你做的吗？”</p>
 <p>陈涵又是一脸花痴相，不过在那种场景下，又有谁人能够不犯花痴呢？再加上面前的夏楚真的像极了紫涵，陈涵不过是想起了前世的爱人罢了，想起了那个为了自己能过活下去连性命都能够舍弃的姑娘。</p>
@@ -411,44 +729,80 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/28/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%BA%94%E7%AB%A0/" data-id="ckb0u8cj30053qgubg4xp8y2e" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-小说（一）/第四章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/27/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E5%9B%9B%E7%AB%A0/" class="article-date">
-  <time datetime="2019-11-26T22:53:00.000Z" itemprop="datePublished">2019-11-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/">小说（一）</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/27/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E5%9B%9B%E7%AB%A0/">第四章 上学第一天</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/27/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E5%9B%9B%E7%AB%A0/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/27/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E5%9B%9B%E7%AB%A0/" class="post-title-link" itemprop="url">第四章 上学第一天</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-27 06:53:00" itemprop="dateCreated datePublished" datetime="2019-11-27T06:53:00+08:00">2019-11-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-28 01:14:32" itemprop="dateModified" datetime="2019-11-28T01:14:32+08:00">2019-11-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url" rel="index">
+                    <span itemprop="name">小说（一）</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>第四章 上学第一天</p>
+          <p>第四章 上学第一天</p>
 <p>陈涵就这样面无表情地走进了校园，却让围观的人一度以为他是因为真的是个废物，即使是面对着这样不堪入耳的侮辱仍然不敢反驳，所以只好灰溜溜地溜进学校。可又有谁会知道，此时的陈涵已经不再是曾经那个愣头青了，因为他们根本就不是同一个人。而陈涵现在的表情和做法仅仅是因为他不在乎而已。那些趁着机会想嘲笑和侮辱陈涵的人想来也是无比幸运，因为至少他们还没有触碰到白发少年的底线，否则，任凭如何不在乎，陈涵也会将那些不知天高地厚的人碎尸万段。</p>
 <p>看到这里，或许你会以为这是一句玩笑话。其实不然，剑仙的名号岂是空穴来风。只不过，此世的剑仙有着一个更为重要的任务，即是探寻自己的长身之谜，再加上已隐居多年，剑仙的暴脾气也收敛了很多。</p>
 <p>就这样，陈涵一路走着，一路吸引了越来越多的围观群众。他们之中几乎所有人都是持着一种鄙夷和不屑的眼神，陈涵也装作没看见，其实只是见怪不怪而已。</p>
@@ -494,44 +848,80 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/27/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E5%9B%9B%E7%AB%A0/" data-id="ckb0u8cj40057qgubem77ahnn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Tensorflow/tensorflow" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/26/Tensorflow/tensorflow/" class="article-date">
-  <time datetime="2019-11-26T10:08:00.000Z" itemprop="datePublished">2019-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tensorflow/">Tensorflow</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/Tensorflow/tensorflow/">简单代码证明tensorflow安装且配置成功</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/26/Tensorflow/tensorflow/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/26/Tensorflow/tensorflow/" class="post-title-link" itemprop="url">简单代码证明tensorflow安装且配置成功</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-26 18:08:00" itemprop="dateCreated datePublished" datetime="2019-11-26T18:08:00+08:00">2019-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-27 06:55:53" itemprop="dateModified" datetime="2019-11-27T06:55:53+08:00">2019-11-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tensorflow/" itemprop="url" rel="index">
+                    <span itemprop="name">Tensorflow</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>为了验证Tensorflow是否正确安装，我躺了很多的坑，因为下载了最新版本的tensorflow—<br>2.0，导致很多之前版本的方法都用不了，而网上那些代码大多是老版本的，所以一直报错。最后找到了2.0的教程，终于证实了自己已经正确安装。</p>
+          <p>为了验证Tensorflow是否正确安装，我躺了很多的坑，因为下载了最新版本的tensorflow—<br>2.0，导致很多之前版本的方法都用不了，而网上那些代码大多是老版本的，所以一直报错。最后找到了2.0的教程，终于证实了自己已经正确安装。</p>
 <p>如果有时间，我可以考虑写一篇教程，帮助大家少走弯路。</p>
 <p>#这是第一个成功实现的tensorflow-2.0;</p>
 <p>i</p>
@@ -541,86 +931,152 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/26/Tensorflow/tensorflow/" data-id="ckb0u8cj7005dqgubdlgicitn" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Tensorflow/Tensorflow之自动求导实现" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/26/Tensorflow/Tensorflow%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E5%AE%9E%E7%8E%B0/" class="article-date">
-  <time datetime="2019-11-26T03:03:00.000Z" itemprop="datePublished">2019-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tensorflow/">Tensorflow</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/Tensorflow/Tensorflow%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E5%AE%9E%E7%8E%B0/">Tensorflow之自动求导实现</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/26/Tensorflow/Tensorflow%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E5%AE%9E%E7%8E%B0/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/26/Tensorflow/Tensorflow%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">Tensorflow之自动求导实现</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-26 11:03:00" itemprop="dateCreated datePublished" datetime="2019-11-26T11:03:00+08:00">2019-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-05 23:42:47" itemprop="dateModified" datetime="2019-12-05T23:42:47+08:00">2019-12-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tensorflow/" itemprop="url" rel="index">
+                    <span itemprop="name">Tensorflow</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自动求导机制</span></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf </span><br><span class="line"><span class="comment">#tf.Variable()用于声明一个变量，它需要一个初始值将其存储在initial_value中。</span></span><br><span class="line">x = tf.Variable(initial_value=<span class="number">3.</span>)<span class="comment">#Pyhon中可以使用整数后加小数点表示将该整数定义为浮点数类型。例如3.表示3.0</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> tape: </span><br><span class="line">    y = tf.math.log(x)<span class="comment">#这里math.log()表示的是底数为e(只是默认为e，可以修改)的对数函数，类似的，如果要计算y=x的平方的导数，将math.log()改为square即可</span></span><br><span class="line">y_grad = tape.gradient(y,x)</span><br><span class="line">print([y,y_grad])</span><br><span class="line"><span class="string">'''输出结果为：</span></span><br><span class="line"><span class="string">[&lt;tf.Tensor: id=93, shape=(), dtype=float32, numpy=1.0986123&gt;, &lt;tf.Tensor: id=96, shape=(), dtype=float32, numpy=0.33333334&gt;]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#自动求导机制</span></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf </span><br><span class="line"><span class="comment">#tf.Variable()用于声明一个变量，它需要一个初始值将其存储在initial_value中。</span></span><br><span class="line">x = tf.Variable(initial_value=<span class="number">3.</span>)<span class="comment">#Pyhon中可以使用整数后加小数点表示将该整数定义为浮点数类型。例如3.表示3.0</span></span><br><span class="line"><span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> tape: </span><br><span class="line">    y = tf.math.log(x)<span class="comment">#这里math.log()表示的是底数为e(只是默认为e，可以修改)的对数函数，类似的，如果要计算y=x的平方的导数，将math.log()改为square即可</span></span><br><span class="line">y_grad = tape.gradient(y,x)</span><br><span class="line">print([y,y_grad])</span><br><span class="line"><span class="string">'''输出结果为：</span></span><br><span class="line"><span class="string">[&lt;tf.Tensor: id=93, shape=(), dtype=float32, numpy=1.0986123&gt;, &lt;tf.Tensor: id=96, shape=(), dtype=float32, numpy=0.33333334&gt;]</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/26/Tensorflow/Tensorflow%E4%B9%8B%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC%E5%AE%9E%E7%8E%B0/" data-id="ckb0u8cj6005cqgubgr767sn3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-小说（一）/第三章 重返校园" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/26/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E9%87%8D%E8%BF%94%E6%A0%A1%E5%9B%AD/" class="article-date">
-  <time datetime="2019-11-26T02:20:00.000Z" itemprop="datePublished">2019-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/">小说（一）</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E9%87%8D%E8%BF%94%E6%A0%A1%E5%9B%AD/">第三章 重返校园</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/26/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E9%87%8D%E8%BF%94%E6%A0%A1%E5%9B%AD/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/26/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E9%87%8D%E8%BF%94%E6%A0%A1%E5%9B%AD/" class="post-title-link" itemprop="url">第三章 重返校园</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-26 10:20:00 / 修改时间：10:21:12" itemprop="dateCreated datePublished" datetime="2019-11-26T10:20:00+08:00">2019-11-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/" itemprop="url" rel="index">
+                    <span itemprop="name">小说（一）</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>第五章 重返校园<br>白发少年离开项羽陵墓以后，便来到了翘楚市。<br>翘楚市作为浙省的省会，繁华异常，恰逢计算机包括人工智能在内的互联网产业的兴起，翘楚市已经在全国打出名声，从一个名不经传的地级市一跃成为了一座名副其实的现代化大都市。</p>
+          <p>第五章 重返校园<br>白发少年离开项羽陵墓以后，便来到了翘楚市。<br>翘楚市作为浙省的省会，繁华异常，恰逢计算机包括人工智能在内的互联网产业的兴起，翘楚市已经在全国打出名声，从一个名不经传的地级市一跃成为了一座名副其实的现代化大都市。</p>
 <p>不过，白发少年选择翘楚市作为重返凡世的地点，并非是看中了翘楚市的繁华，毕竟他和项羽一样，天生喜欢清净，况且已经活了十万余年，试问这个世界上还有怎样的繁华是白发少年所没有见过的呢，又有什么东西是白发少年所痴迷的呢。繁华如帝王的宫殿都吸引不了他，珍贵如一座座金山银山都无法让他感兴趣，区区一个正在发展中的现代化都市，又能怎么样呢。就像网络上爆红的某首富一亿的小目标于世界首富而言不过是个笑话，但普通人却是惊讶不已一样，不同的人对财富和珍贵有着不同的定义，而这仅仅是因为身份不同，见识不同，仅此而已。<br>至于选择翘楚市只不过是刚好他发现在翘楚中学有一个各项特征都符合他期望的的高中生前不久却意外死亡，所以他决定冒名顶替，替代死亡学生走完本该走完的路，也为了自己寻求长生之谜答案准备一个合理的身份。</p>
 <p>来到翘楚市时，正好是周末，于是白发少年在一处不起眼的地方租了房子，这为的是不被外界人打扰到自己的清净，也为了避免前几世那些不知死活的仇家找上门来报仇。就这样，剑仙陈紫阳慢慢开启了这一世的新生活。</p>
 <p>第二周星期一，白发少年徒步来到了翘楚中学，他并没有坐车，因为车能有御剑快吗？21世纪的所有高科技出行工具，在剑仙的眼中不过就是一个天大的笑话。非但车比不上御剑，就算是飞机比之御剑又如何？白发少年选择走路，只不过是为了更好地了解这个世界而已，但还别说，世界的发展还真的挺快的，现在的一切比起前几世的真的是一个在天上，一个在地下。</p>
@@ -635,175 +1091,320 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/26/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E9%87%8D%E8%BF%94%E6%A0%A1%E5%9B%AD/" data-id="ckb0u8cj5005aqgub05h29w2l" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-C语言作业/问题实现2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/26/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E9%97%AE%E9%A2%98%E5%AE%9E%E7%8E%B02/" class="article-date">
-  <time datetime="2019-11-25T17:30:00.000Z" itemprop="datePublished">2019-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/">C语言作业</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E9%97%AE%E9%A2%98%E5%AE%9E%E7%8E%B02/">问题实现2</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2019/11/26/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E9%97%AE%E9%A2%98%E5%AE%9E%E7%8E%B02/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/26/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E9%97%AE%E9%A2%98%E5%AE%9E%E7%8E%B02/" class="post-title-link" itemprop="url">问题实现2</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-26 01:30:00" itemprop="dateCreated datePublished" datetime="2019-11-26T01:30:00+08:00">2019-11-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-29 18:38:39" itemprop="dateModified" datetime="2019-11-29T18:38:39+08:00">2019-11-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index">
+                    <span itemprop="name">C语言作业</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>//程序功能是:在 n 行 n 列的矩阵中，每行都有最大的数，程序求这 n 个最大数中<br>的最小值，完成程序并调试。</p>
+          <p>//程序功能是:在 n 行 n 列的矩阵中，每行都有最大的数，程序求这 n 个最大数中<br>的最小值，完成程序并调试。</p>
 <p>#include&lt;stdio.h&gt;</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">#<span class="meta">#<span class="meta-keyword">define</span> N 5`</span></span><br><span class="line"></span><br><span class="line">`**<span class="function"><span class="keyword">void</span>** <span class="title">mins</span><span class="params">(**<span class="keyword">int</span>** a[N][N])</span></span>;`</span><br><span class="line"></span><br><span class="line">`**void** mins(**int** a[N][N])`</span><br><span class="line"></span><br><span class="line">`&#123;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">int</span>** row,col,<span class="built_in">max</span>=<span class="number">0</span>,<span class="built_in">min</span>=<span class="number">0</span>;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">for</span>** (row=<span class="number">0</span>; row&lt;N; row++) &#123;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">for</span>** (<span class="built_in">max</span>=a[row][<span class="number">0</span>],col=<span class="number">1</span>;col&lt;N; col++) &#123;`</span><br><span class="line"></span><br><span class="line">​      `**<span class="keyword">if</span>** (<span class="built_in">max</span>&lt;a[row][col])&#123;`</span><br><span class="line"></span><br><span class="line">​        `<span class="built_in">max</span>=a[row][col];`</span><br><span class="line"></span><br><span class="line">​      `&#125;&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">if</span>** (row==<span class="number">0</span>)&#123;`</span><br><span class="line"></span><br><span class="line">​        `<span class="built_in">min</span>=<span class="built_in">max</span>;`</span><br><span class="line"></span><br><span class="line">​      `&#125;`</span><br><span class="line"></span><br><span class="line">​    `**<span class="keyword">else</span>** **<span class="keyword">if</span>** (<span class="built_in">max</span>&lt;<span class="built_in">min</span>)&#123;`</span><br><span class="line"></span><br><span class="line">​        `<span class="built_in">min</span>=<span class="built_in">max</span>;`</span><br><span class="line"></span><br><span class="line">​      `&#125;`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  `&#125;`</span><br><span class="line"></span><br><span class="line">  `<span class="built_in">printf</span>(<span class="string">"最小值是:%d\n"</span>,<span class="built_in">min</span>);`</span><br><span class="line"></span><br><span class="line">`&#125;`</span><br><span class="line"></span><br><span class="line">`**int** main()`</span><br><span class="line"></span><br><span class="line">`&#123;`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">int</span>** a1[N][N]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">40</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">21</span>,<span class="number">22</span>,<span class="number">23</span>,<span class="number">24</span>,<span class="number">25</span>,<span class="number">31</span>,<span class="number">32</span>,<span class="number">33</span>,<span class="number">34</span>,<span class="number">35</span>,<span class="number">41</span>,<span class="number">42</span>,<span class="number">43</span>,<span class="number">44</span>,<span class="number">500</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `mins(a1);`</span><br><span class="line"></span><br><span class="line">  `**<span class="keyword">int</span>** a2[N][N]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">10000</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">923</span>,<span class="number">21</span>,<span class="number">22</span>,<span class="number">23</span>,<span class="number">24</span>,<span class="number">25</span>,<span class="number">31</span>,<span class="number">32</span>,<span class="number">33</span>,<span class="number">34</span>,<span class="number">35</span>,<span class="number">41</span>,<span class="number">42</span>,<span class="number">43</span>,<span class="number">44</span>,<span class="number">500</span>&#125;;`</span><br><span class="line"></span><br><span class="line">  `mins(a2);`</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2019/11/26/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/%E9%97%AE%E9%A2%98%E5%AE%9E%E7%8E%B02/" data-id="ckb0u8cfi0008qgub0zfaggda" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/10/">&amp;laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/12/">下一页 &amp;raquo;</a>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
-</section>
-        
-          <aside id="sidebar">
+
+
+          </div>
+          
+
+        </div>
+          
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/">C语言作业</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lintcode%E5%88%B7%E9%A2%98/">Lintcode刷题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tensorflow/">Tensorflow</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/">小说（一）</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E8%89%BA/">文艺</a></li></ul>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Matlab/" style="font-size: 16.67px;">Matlab</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/06/03/Java/%E9%80%92%E5%BD%92/">Java/递归</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/01/HTML/21%E5%A4%A9%E5%AD%A6%E9%80%9AHTML+CSS+JavaScript%20Web%E5%BC%80%E5%8F%91/">HTML/21天学通HTML+CSS+JavaScript Web开发</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/01/HTML/HTML/">HTML/HTML</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/31/Java/%E4%BA%8C%E8%BF%9B%E5%88%B6IO/">Java/二进制IO</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/22/Java/JavaFx%20UI%E7%BB%84%E4%BB%B6%E5%92%8C%E5%A4%9A%E5%AA%92%E4%BD%93/">JavaFx UI组件和多媒体</a>
-          </li>
-        
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
       </ul>
-    </div>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nianchu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nianchu99?tab=projects" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nianchu99?tab=projects" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:l17623029272@163.com" title="E-Mail → mailto:l17623029272@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/2795043945/profile?topnav=1&wvr=6" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2795043945&#x2F;profile?topnav=1&amp;wvr=6" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
   
-</aside>
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-nianchu"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by nianchu</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共76.3k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 nianchu<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    </footer>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
   
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 
-  </div>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

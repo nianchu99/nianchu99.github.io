@@ -1,127 +1,327 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32X32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16X16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
 
-  
-  <title>nianchu-Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://www.nianchu.space').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    sidebarPadding: 40
+  };
+</script>
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="nianchu-Blog">
 <meta property="og:url" content="http:&#x2F;&#x2F;www.nianchu.space&#x2F;page&#x2F;8&#x2F;index.html">
 <meta property="og:site_name" content="nianchu-Blog">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.nianchu.space/page/8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>nianchu-Blog</title>
   
-    <link rel="alternate" href="/atom.xml" title="nianchu-Blog" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">nianchu-Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.nianchu.space"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-Python/filter函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2020-02-17T03:56:47.000Z" itemprop="datePublished">2020-02-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/">filter函数</a>
-    </h1>
-  
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">nianchu-Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>站点地图</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/nianchu99" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">filter函数</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-17 11:56:47 / 修改时间：15:35:14" itemprop="dateCreated datePublished" datetime="2020-02-17T11:56:47+08:00">2020-02-17</time>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># filter ： Python内建的filter函数用于过滤序列</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">和map()类似。filter也接收一个序列。区别是：filter把传入额函数依次作用于每个元素，然后根据</span></span><br><span class="line"><span class="string">返回值是True 还是Flase决定保留还是丢弃该元素</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">            <span class="comment">#在一个list中删掉偶数，只保留奇数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line">print(list(filter(is_odd, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>])))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把一个序列中的空字符串删掉</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_empty</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</span><br><span class="line"></span><br><span class="line">print(list(filter(not_empty,[<span class="string">'a'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>])))</span><br><span class="line"><span class="string">"""返回值：</span></span><br><span class="line"><span class="string">['a', 'B', 'C', 'D']</span></span><br><span class="line"><span class="string">注意到：filter函数返回的是一个lterator，也就是一个惰性序列，所以要强迫fliter完成计算结果，需要用到方法list</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># filter ： Python内建的filter函数用于过滤序列</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">和map()类似。filter也接收一个序列。区别是：filter把传入额函数依次作用于每个元素，然后根据</span></span><br><span class="line"><span class="string">返回值是True 还是Flase决定保留还是丢弃该元素</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">            <span class="comment">#在一个list中删掉偶数，只保留奇数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line">print(list(filter(is_odd, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>])))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把一个序列中的空字符串删掉</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_empty</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</span><br><span class="line"></span><br><span class="line">print(list(filter(not_empty,[<span class="string">'a'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>])))</span><br><span class="line"><span class="string">"""返回值：</span></span><br><span class="line"><span class="string">['a', 'B', 'C', 'D']</span></span><br><span class="line"><span class="string">注意到：filter函数返回的是一个lterator，也就是一个惰性序列，所以要强迫fliter完成计算结果，需要用到方法list</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/" data-id="ckb0u8cit004oqgub32pw1n4w" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
-    </footer>
-  </div>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Matlab/课程导入" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/" class="article-date">
-  <time datetime="2020-02-17T02:53:53.000Z" itemprop="datePublished">2020-02-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+  
+
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/">课程导入</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/" class="post-title-link" itemprop="url">课程导入</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-17 10:53:53 / 修改时间：11:34:30" itemprop="dateCreated datePublished" datetime="2020-02-17T10:53:53+08:00">2020-02-17</time>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="什么叫计算"><a href="#什么叫计算" class="headerlink" title="什么叫计算"></a>什么叫计算</h1><p>1 算术运算</p>
+          <h1 id="什么叫计算"><a href="#什么叫计算" class="headerlink" title="什么叫计算"></a>什么叫计算</h1><p>1 算术运算</p>
 <p>2 较复杂的运算：即根据已知量求出未知量</p>
 <h1 id="什么叫科学计算"><a href="#什么叫科学计算" class="headerlink" title="什么叫科学计算"></a>什么叫科学计算</h1><p>对于复杂的数值计算问题，可以利用计算机进行问题求解</p>
 <blockquote>
@@ -137,176 +337,316 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/" data-id="ckb0u8cid003wqgubba3ke8ab" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a></li></ul>
 
-    </footer>
-  </div>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Python/廖雪峰Python教程练习题_副本" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/" class="article-date">
-  <time datetime="2020-02-16T15:54:37.000Z" itemprop="datePublished">2020-02-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/">廖雪峰Python教程练习题</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/" class="post-title-link" itemprop="url">廖雪峰Python教程练习题</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-16 23:54:37" itemprop="dateCreated datePublished" datetime="2020-02-16T23:54:37+08:00">2020-02-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-24 23:20:16" itemprop="dateModified" datetime="2020-02-24T23:20:16+08:00">2020-02-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># names.py</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> name.capitalize()</span><br><span class="line"></span><br><span class="line">L1 = [<span class="string">'adam'</span>, <span class="string">'LISA'</span>, <span class="string">'barT'</span>]</span><br><span class="line">L2 = list(map(normalize, L1))</span><br><span class="line">print(L2)</span><br><span class="line"><span class="comment"># 求积</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prod</span><span class="params">(L)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">prod1</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * y</span><br><span class="line">    <span class="keyword">return</span> reduce(prod1, L)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))</span><br><span class="line"><span class="comment"># 转换字符串</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">先记住这个结果，等会实现需要用到</span></span><br><span class="line"><span class="string">a = '123.456'</span></span><br><span class="line"><span class="string">n = a.index('.')</span></span><br><span class="line"><span class="string">b = [x for x in a[:n]]</span></span><br><span class="line"><span class="string">print(b)</span></span><br><span class="line"><span class="string">结果：</span></span><br><span class="line"><span class="string">['1', '2', '3']</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2float</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">    n = s.index(<span class="string">'.'</span>)</span><br><span class="line">    s1 = list(map(int, [x <span class="keyword">for</span> x <span class="keyword">in</span> s[:n]]))</span><br><span class="line">    s2 = list(map(int, [y <span class="keyword">for</span> y <span class="keyword">in</span> s[n+<span class="number">1</span>: ]]))</span><br><span class="line">    <span class="keyword">return</span> reduce(fn,s1) + (reduce(fn, s2) / <span class="number">10</span> ** len(s2))</span><br><span class="line"></span><br><span class="line">print(str2float(<span class="string">'123.456'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">['Adam', 'Lisa', 'Bart']</span></span><br><span class="line"><span class="string">3 * 5 * 7 * 9 = 945</span></span><br><span class="line"><span class="string">123.456</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># names.py</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> name.capitalize()</span><br><span class="line"></span><br><span class="line">L1 = [<span class="string">'adam'</span>, <span class="string">'LISA'</span>, <span class="string">'barT'</span>]</span><br><span class="line">L2 = list(map(normalize, L1))</span><br><span class="line">print(L2)</span><br><span class="line"><span class="comment"># 求积</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prod</span><span class="params">(L)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">prod1</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * y</span><br><span class="line">    <span class="keyword">return</span> reduce(prod1, L)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))</span><br><span class="line"><span class="comment"># 转换字符串</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">先记住这个结果，等会实现需要用到</span></span><br><span class="line"><span class="string">a = '123.456'</span></span><br><span class="line"><span class="string">n = a.index('.')</span></span><br><span class="line"><span class="string">b = [x for x in a[:n]]</span></span><br><span class="line"><span class="string">print(b)</span></span><br><span class="line"><span class="string">结果：</span></span><br><span class="line"><span class="string">['1', '2', '3']</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2float</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">    n = s.index(<span class="string">'.'</span>)</span><br><span class="line">    s1 = list(map(int, [x <span class="keyword">for</span> x <span class="keyword">in</span> s[:n]]))</span><br><span class="line">    s2 = list(map(int, [y <span class="keyword">for</span> y <span class="keyword">in</span> s[n+<span class="number">1</span>: ]]))</span><br><span class="line">    <span class="keyword">return</span> reduce(fn,s1) + (reduce(fn, s2) / <span class="number">10</span> ** len(s2))</span><br><span class="line"></span><br><span class="line">print(str2float(<span class="string">'123.456'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">['Adam', 'Lisa', 'Bart']</span></span><br><span class="line"><span class="string">3 * 5 * 7 * 9 = 945</span></span><br><span class="line"><span class="string">123.456</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/02/16/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/" data-id="ckb0u8ciy004uqgubh4z0h7aq" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
 
-    </footer>
-  </div>
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Python/Python—函数式子编程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/" class="article-date">
-  <time datetime="2020-02-15T12:00:00.000Z" itemprop="datePublished">2020-02-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/">Python/Python—函数式子编程</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/" class="post-title-link" itemprop="url">Python/Python—函数式子编程</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-15 20:00:00" itemprop="dateCreated datePublished" datetime="2020-02-15T20:00:00+08:00">2020-02-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-16 10:16:07" itemprop="dateModified" datetime="2020-02-16T10:16:07+08:00">2020-02-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id=""><a href="#" class="headerlink" title=""></a></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一个最简单的高阶函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y,f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (f(x)+f(y))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(add(<span class="number">500</span>,<span class="number">20</span>,abs))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># map函数</span></span><br><span class="line"><span class="string">"""map函数接受两个参数，一个是函数，一个是lterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的lterable返回"""</span></span><br><span class="line"><span class="comment"># 代码实现：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sq</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x * x</span><br><span class="line">print(list(map(sq,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>])))</span><br><span class="line"><span class="comment">#reduce函数</span></span><br><span class="line"><span class="comment"># reduce函数：reduce把一个函数作用在一个序列[x1, x2, x3, …]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算</span></span><br><span class="line"><span class="comment">## 用reduce函数实现序列的求和</span></span><br><span class="line"><span class="comment"># 使用时需要先导入一个模块</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line">numbers = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">17</span>,<span class="number">19</span>]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">print(reduce(add,numbers))</span><br><span class="line"><span class="comment"># 其实用sum函数求和更简单</span></span><br><span class="line">print(sum(numbers))</span><br><span class="line"><span class="comment">## reduce的妙用：将[1，3，5，7，9，]变为整数13579</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">print(reduce(f,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>]))</span><br><span class="line"><span class="comment">## map + reduce 实现str转int</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">char2num</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">'0'</span>:<span class="number">0</span>,<span class="string">'1'</span>:<span class="number">1</span>,<span class="string">'2'</span>:<span class="number">2</span>,<span class="string">'3'</span>:<span class="number">3</span>,<span class="string">'4'</span>:<span class="number">4</span>,<span class="string">'5'</span>:<span class="number">5</span>,<span class="string">'6'</span>:<span class="number">6</span>,<span class="string">'7'</span>:<span class="number">7</span>,<span class="string">'8'</span>:<span class="number">8</span>,<span class="string">'9'</span>:<span class="number">9</span>&#125;[s]</span><br><span class="line"><span class="comment"># 上一行函数是简单的给出key调用字典的value。s必须在字典key里。关键在于字符串在python里是可以</span></span><br><span class="line"><span class="comment"># 被当做list用的。map(char2num, '13579')把字符串'13579'当list用，于是就变成了</span></span><br><span class="line"><span class="comment"># map(char2num, ['1','3','5','7','9'])得到的是[1, 3, 5, 7, 9]</span></span><br><span class="line">reduce(f,map(char2num, <span class="string">'13579'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string">[1, 9, 25, 49, 81]</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">13579</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一个最简单的高阶函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y,f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (f(x)+f(y))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(add(<span class="number">500</span>,<span class="number">20</span>,abs))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># map函数</span></span><br><span class="line"><span class="string">"""map函数接受两个参数，一个是函数，一个是lterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的lterable返回"""</span></span><br><span class="line"><span class="comment"># 代码实现：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sq</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x * x</span><br><span class="line">print(list(map(sq,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>])))</span><br><span class="line"><span class="comment">#reduce函数</span></span><br><span class="line"><span class="comment"># reduce函数：reduce把一个函数作用在一个序列[x1, x2, x3, …]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算</span></span><br><span class="line"><span class="comment">## 用reduce函数实现序列的求和</span></span><br><span class="line"><span class="comment"># 使用时需要先导入一个模块</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line">numbers = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">17</span>,<span class="number">19</span>]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">print(reduce(add,numbers))</span><br><span class="line"><span class="comment"># 其实用sum函数求和更简单</span></span><br><span class="line">print(sum(numbers))</span><br><span class="line"><span class="comment">## reduce的妙用：将[1，3，5，7，9，]变为整数13579</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">print(reduce(f,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>]))</span><br><span class="line"><span class="comment">## map + reduce 实现str转int</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">char2num</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">'0'</span>:<span class="number">0</span>,<span class="string">'1'</span>:<span class="number">1</span>,<span class="string">'2'</span>:<span class="number">2</span>,<span class="string">'3'</span>:<span class="number">3</span>,<span class="string">'4'</span>:<span class="number">4</span>,<span class="string">'5'</span>:<span class="number">5</span>,<span class="string">'6'</span>:<span class="number">6</span>,<span class="string">'7'</span>:<span class="number">7</span>,<span class="string">'8'</span>:<span class="number">8</span>,<span class="string">'9'</span>:<span class="number">9</span>&#125;[s]</span><br><span class="line"><span class="comment"># 上一行函数是简单的给出key调用字典的value。s必须在字典key里。关键在于字符串在python里是可以</span></span><br><span class="line"><span class="comment"># 被当做list用的。map(char2num, '13579')把字符串'13579'当list用，于是就变成了</span></span><br><span class="line"><span class="comment"># map(char2num, ['1','3','5','7','9'])得到的是[1, 3, 5, 7, 9]</span></span><br><span class="line">reduce(f,map(char2num, <span class="string">'13579'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string">[1, 9, 25, 49, 81]</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">13579</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
 
 
 
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/" data-id="ckb0u8cii0043qgubhpy27uw7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Python/sum函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2020-02-15T12:00:00.000Z" itemprop="datePublished">2020-02-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/">Python/sum函数</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Python/sum函数</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-15 20:00:00" itemprop="dateCreated datePublished" datetime="2020-02-15T20:00:00+08:00">2020-02-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-16 09:46:55" itemprop="dateModified" datetime="2020-02-16T09:46:55+08:00">2020-02-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 序列求和</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,]))</span><br><span class="line"><span class="comment"># sum函数的原型是sum(iterable,start).可以设置一个初始值</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,],<span class="number">5</span>))</span><br><span class="line"><span class="comment"># 展开2层的嵌套列表</span></span><br><span class="line">iterable = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]]</span><br><span class="line">print(sum(iterable,[<span class="number">0</span>]))<span class="comment"># 后面的start可以为空</span></span><br><span class="line"><span class="comment"># sum函数与下列函数等效</span></span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">    start += element</span><br><span class="line">print(start)</span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="comment"># sum 函数可以看作reduce()的特殊情况</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> add</span><br><span class="line">print(reduce(add,iterable,start))</span><br></pre></td></tr></table></figure>
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 序列求和</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,]))</span><br><span class="line"><span class="comment"># sum函数的原型是sum(iterable,start).可以设置一个初始值</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,],<span class="number">5</span>))</span><br><span class="line"><span class="comment"># 展开2层的嵌套列表</span></span><br><span class="line">iterable = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]]</span><br><span class="line">print(sum(iterable,[<span class="number">0</span>]))<span class="comment"># 后面的start可以为空</span></span><br><span class="line"><span class="comment"># sum函数与下列函数等效</span></span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">    start += element</span><br><span class="line">print(start)</span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="comment"># sum 函数可以看作reduce()的特殊情况</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> add</span><br><span class="line">print(reduce(add,iterable,start))</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/" data-id="ckb0u8ciw004tqgub5cw1231m" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Java/Java学习记录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="article-date">
-  <time datetime="2020-02-10T03:30:00.000Z" itemprop="datePublished">2020-02-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">Java/Java学习记录</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">Java/Java学习记录</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-10 11:30:00" itemprop="dateCreated datePublished" datetime="2020-02-10T11:30:00+08:00">2020-02-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-13 12:23:48" itemprop="dateModified" datetime="2020-02-13T12:23:48+08:00">2020-02-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h1 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h1><h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><h3 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (表达式) &#123; <span class="keyword">case</span> 值<span class="number">1</span>:</span><br><span class="line">语句组<span class="number">1</span> <span class="keyword">case</span> 值<span class="number">2</span>:</span><br><span class="line">语句组<span class="number">2</span> <span class="keyword">case</span> 值<span class="number">3</span>:</span><br><span class="line">语句组<span class="number">3</span> ...</span><br><span class="line"><span class="keyword">case</span> 判断值n: 语句组n</span><br><span class="line"><span class="keyword">default</span>: 语句组n+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h1><h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><h3 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (表达式) &#123; <span class="keyword">case</span> 值<span class="number">1</span>:</span><br><span class="line">语句组<span class="number">1</span> <span class="keyword">case</span> 值<span class="number">2</span>:</span><br><span class="line">语句组<span class="number">2</span> <span class="keyword">case</span> 值<span class="number">3</span>:</span><br><span class="line">语句组<span class="number">3</span> ...</span><br><span class="line"><span class="keyword">case</span> 判断值n: 语句组n</span><br><span class="line"><span class="keyword">default</span>: 语句组n+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>switch语句中“表达式”计算结果只能是int，byte，short，char类型，不能是long更不能是其他的类型。</p>
@@ -352,86 +692,146 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">println和print基本没什么差别，就是最后会换行</span><br></pre></td></tr></table></figure>
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/02/10/Java/Java%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" data-id="ckb0u8che0023qgub2r6z3mx4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Java/Java打印九九乘法表" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/" class="article-date">
-  <time datetime="2020-02-10T03:30:00.000Z" itemprop="datePublished">2020-02-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/">Java/Java打印九九乘法表</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/" class="post-title-link" itemprop="url">Java/Java打印九九乘法表</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-10 11:30:00 / 修改时间：15:55:33" itemprop="dateCreated datePublished" datetime="2020-02-10T11:30:00+08:00">2020-02-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> nianchu;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>,j = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(i= <span class="number">1</span>;i  &lt;= <span class="number">9</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++) &#123;</span><br><span class="line">				System.out.printf(<span class="string">"%d*%d=%d"</span>,j,i,j*i);</span><br><span class="line">				System.out.printf(<span class="string">"  "</span>);</span><br><span class="line">				<span class="keyword">if</span>(j==i) &#123;</span><br><span class="line">					System.out.printf(<span class="string">"%n"</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 输出结果：</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">1*1=1  </span></span><br><span class="line"><span class="comment">1*2=2  2*2=4  </span></span><br><span class="line"><span class="comment">1*3=3  2*3=6  3*3=9  </span></span><br><span class="line"><span class="comment">1*4=4  2*4=8  3*4=12  4*4=16  </span></span><br><span class="line"><span class="comment">1*5=5  2*5=10  3*5=15  4*5=20  5*5=25  </span></span><br><span class="line"><span class="comment">1*6=6  2*6=12  3*6=18  4*6=24  5*6=30  6*6=36  </span></span><br><span class="line"><span class="comment">1*7=7  2*7=14  3*7=21  4*7=28  5*7=35  6*7=42  7*7=49  </span></span><br><span class="line"><span class="comment">1*8=8  2*8=16  3*8=24  4*8=32  5*8=40  6*8=48  7*8=56  8*8=64  </span></span><br><span class="line"><span class="comment">1*9=9  2*9=18  3*9=27  4*9=36  5*9=45  6*9=54  7*9=63  8*9=72  9*9=81  </span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+          <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> nianchu;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[]args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>,j = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(i= <span class="number">1</span>;i  &lt;= <span class="number">9</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++) &#123;</span><br><span class="line">				System.out.printf(<span class="string">"%d*%d=%d"</span>,j,i,j*i);</span><br><span class="line">				System.out.printf(<span class="string">"  "</span>);</span><br><span class="line">				<span class="keyword">if</span>(j==i) &#123;</span><br><span class="line">					System.out.printf(<span class="string">"%n"</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 输出结果：</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment">1*1=1  </span></span><br><span class="line"><span class="comment">1*2=2  2*2=4  </span></span><br><span class="line"><span class="comment">1*3=3  2*3=6  3*3=9  </span></span><br><span class="line"><span class="comment">1*4=4  2*4=8  3*4=12  4*4=16  </span></span><br><span class="line"><span class="comment">1*5=5  2*5=10  3*5=15  4*5=20  5*5=25  </span></span><br><span class="line"><span class="comment">1*6=6  2*6=12  3*6=18  4*6=24  5*6=30  6*6=36  </span></span><br><span class="line"><span class="comment">1*7=7  2*7=14  3*7=21  4*7=28  5*7=35  6*7=42  7*7=49  </span></span><br><span class="line"><span class="comment">1*8=8  2*8=16  3*8=24  4*8=32  5*8=40  6*8=48  7*8=56  8*8=64  </span></span><br><span class="line"><span class="comment">1*9=9  2*9=18  3*9=27  4*9=36  5*9=45  6*9=54  7*9=63  8*9=72  9*9=81  </span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/02/10/Java/Java%E6%89%93%E5%8D%B0%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8/" data-id="ckb0u8chm002iqgub709f1iqx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Lintcode刷题/15.全排列" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/15.%E5%85%A8%E6%8E%92%E5%88%97/" class="article-date">
-  <time datetime="2020-01-19T14:06:00.000Z" itemprop="datePublished">2020-01-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Lintcode%E5%88%B7%E9%A2%98/">Lintcode刷题</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/15.%E5%85%A8%E6%8E%92%E5%88%97/">15.全排列</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/15.%E5%85%A8%E6%8E%92%E5%88%97/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/15.%E5%85%A8%E6%8E%92%E5%88%97/" class="post-title-link" itemprop="url">15.全排列</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-19 22:06:00 / 修改时间：22:08:40" itemprop="dateCreated datePublished" datetime="2020-01-19T22:06:00+08:00">2020-01-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
+                    <span itemprop="name">Lintcode刷题</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><strong>描述</strong></h3><p>给定一个数字列表，返回其所有可能的排列。</p>
+          <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><strong>描述</strong></h3><p>给定一个数字列表，返回其所有可能的排列。</p>
 <h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a><strong>样例</strong></h3><p><strong>样例 1：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：[1]</span><br><span class="line">输出：</span><br><span class="line">[</span><br><span class="line">  [1]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
@@ -445,217 +845,392 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/15.%E5%85%A8%E6%8E%92%E5%88%97/" data-id="ckb0u8cgt001cqgub3fwldmpu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Lintcode刷题/22.列表扁平化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/22.%E5%88%97%E8%A1%A8%E6%89%81%E5%B9%B3%E5%8C%96/" class="article-date">
-  <time datetime="2020-01-19T03:59:00.000Z" itemprop="datePublished">2020-01-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Lintcode%E5%88%B7%E9%A2%98/">Lintcode刷题</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/22.%E5%88%97%E8%A1%A8%E6%89%81%E5%B9%B3%E5%8C%96/">22.列表扁平化</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/22.%E5%88%97%E8%A1%A8%E6%89%81%E5%B9%B3%E5%8C%96/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/22.%E5%88%97%E8%A1%A8%E6%89%81%E5%B9%B3%E5%8C%96/" class="post-title-link" itemprop="url">22.列表扁平化</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-19 11:59:00 / 修改时间：11:59:51" itemprop="dateCreated datePublished" datetime="2020-01-19T11:59:00+08:00">2020-01-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
+                    <span itemprop="name">Lintcode刷题</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h3 id="22-列表扁平化"><a href="#22-列表扁平化" class="headerlink" title="22. 列表扁平化"></a>22. 列表扁平化</h3><p>给定一个列表，该列表中的每个元素要么是个列表，要么是整数。将其变成一个只包含整数的简单列表。</p>
+          <h3 id="22-列表扁平化"><a href="#22-列表扁平化" class="headerlink" title="22. 列表扁平化"></a>22. 列表扁平化</h3><p>给定一个列表，该列表中的每个元素要么是个列表，要么是整数。将其变成一个只包含整数的简单列表。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># @param nestedList a list, each element in the list</span></span><br><span class="line">    <span class="comment"># can be a list or integer, for example [1,2,[1,2]]</span></span><br><span class="line">    <span class="comment"># @return &#123;int[]&#125; a list of integer</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">flatten</span><span class="params">(self, nestedList)</span>:</span></span><br><span class="line">        a = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nestedList)):<span class="comment">#用于判断给定列表中的元素是否含有列表（注：这一目的主要是为了结束递归的死循环）</span></span><br><span class="line">            <span class="keyword">if</span> type(nestedList[i]) == list:<span class="comment">#如果有就将列表中的列表分别取出来放到新的列表中</span></span><br><span class="line">                <span class="keyword">for</span> j <span class="keyword">in</span> range(len(nestedList)):</span><br><span class="line">                    <span class="keyword">if</span> type(nestedList[j]) != list:</span><br><span class="line">                        a.append(nestedList[j])</span><br><span class="line">                    <span class="keyword">else</span>:</span><br><span class="line">                        <span class="keyword">for</span> k <span class="keyword">in</span> range(len(nestedList[j])):</span><br><span class="line">                            a.append((nestedList[j])[k])</span><br><span class="line">                <span class="keyword">return</span> Solution.flatten(self,a)<span class="comment">#使用递归完成多次“套娃”的情况</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> nestedList<span class="comment">#如果没有就直接返回这个列表</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nums = [<span class="number">4</span>,[<span class="number">3</span>,[<span class="number">2</span>,[<span class="number">1</span>]]]]</span><br><span class="line">so = Solution()</span><br><span class="line">print(so.flatten(nums))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">[4, 3, 2, 1]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
 
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/01/19/Lintcode%E5%88%B7%E9%A2%98/22.%E5%88%97%E8%A1%A8%E6%89%81%E5%B9%B3%E5%8C%96/" data-id="ckb0u8cgx001gqgubhwbyd02c" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
   
-</article>
-
-
   
-    <article id="post-Lintcode刷题/14.二分查找" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" class="article-date">
-  <time datetime="2020-01-17T15:22:00.000Z" itemprop="datePublished">2020-01-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Lintcode%E5%88%B7%E9%A2%98/">Lintcode刷题</a>
-  </div>
+  
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">14.二分查找</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">14.二分查找</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-17 23:22:00" itemprop="dateCreated datePublished" datetime="2020-01-17T23:22:00+08:00">2020-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-18 01:34:11" itemprop="dateModified" datetime="2020-01-18T01:34:11+08:00">2020-01-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
+                    <span itemprop="name">Lintcode刷题</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><strong>描述</strong></h3><p>给定一个排序的整数数组（升序）和一个要查找的整数<code>target</code>，用<code>O(logn)</code>的时间查找到target第一次出现的下标（从0开始），如果target不存在于数组中，返回<code>-1</code>。</p>
+          <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><strong>描述</strong></h3><p>给定一个排序的整数数组（升序）和一个要查找的整数<code>target</code>，用<code>O(logn)</code>的时间查找到target第一次出现的下标（从0开始），如果target不存在于数组中，返回<code>-1</code>。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param nums: The integer array.</span></span><br><span class="line"><span class="string">    @param target: Target to find.</span></span><br><span class="line"><span class="string">    @return: The first position of target. Position starts from 0.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">binarySearch</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">            low = <span class="number">0</span></span><br><span class="line">            high = len(nums) - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> low &lt;= high:</span><br><span class="line">                mid = low + (high - low) // <span class="number">2</span></span><br><span class="line">                <span class="keyword">if</span>  nums[mid] == target:</span><br><span class="line">                    <span class="keyword">while</span>(mid &gt;= <span class="number">0</span>):<span class="comment">#新增加的while和if用于解决有重复数字的情况，并保证每次都输出第一次出现的target的下标</span></span><br><span class="line">                        <span class="keyword">if</span> nums[mid] != target:</span><br><span class="line">                            <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">                        mid = mid - <span class="number">1</span></span><br><span class="line">                    <span class="keyword">if</span> mid &lt;= <span class="number">-1</span>:</span><br><span class="line">                        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">                    <span class="keyword">return</span> mid + <span class="number">1</span><span class="comment">#多减了一次，所以输出时+1</span></span><br><span class="line">                <span class="keyword">elif</span>  target &gt; nums[mid]:</span><br><span class="line">                    low = mid + <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    high = mid - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">nums = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">15</span>,<span class="number">18</span>]</span><br><span class="line">so = Solution()</span><br><span class="line">print(so.binarySearch(nums,<span class="number">9</span>))</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://www.nianchu.space/2020/01/17/Lintcode%E5%88%B7%E9%A2%98/14.%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/" data-id="ckb0u8cgw001eqgub83rdbfe4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
-
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/7/">&amp;laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/9/">下一页 &amp;raquo;</a>
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
-</section>
-        
-          <aside id="sidebar">
+
+
+          </div>
+          
+
+        </div>
+          
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80/">C语言</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/C%E8%AF%AD%E8%A8%80%E4%BD%9C%E4%B8%9A/">C语言作业</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Lintcode%E5%88%B7%E9%A2%98/">Lintcode刷题</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tensorflow/">Tensorflow</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E8%AF%B4%EF%BC%88%E4%B8%80%EF%BC%89/">小说（一）</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%87%E8%89%BA/">文艺</a></li></ul>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
+  <aside class="sidebar">
+    <div class="sidebar-inner">
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Matlab/" style="font-size: 16.67px;">Matlab</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/python/" style="font-size: 13.33px;">python</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/06/03/Java/%E9%80%92%E5%BD%92/">Java/递归</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/01/HTML/21%E5%A4%A9%E5%AD%A6%E9%80%9AHTML+CSS+JavaScript%20Web%E5%BC%80%E5%8F%91/">HTML/21天学通HTML+CSS+JavaScript Web开发</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/01/HTML/HTML/">HTML/HTML</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/31/Java/%E4%BA%8C%E8%BF%9B%E5%88%B6IO/">Java/二进制IO</a>
-          </li>
-        
-          <li>
-            <a href="/2020/05/22/Java/JavaFx%20UI%E7%BB%84%E4%BB%B6%E5%92%8C%E5%A4%9A%E5%AA%92%E4%BD%93/">JavaFx UI组件和多媒体</a>
-          </li>
-        
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
       </ul>
-    </div>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">nianchu</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/nianchu99?tab=projects" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;nianchu99?tab=projects" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/mailto:l17623029272@163.com" title="E-Mail → mailto:l17623029272@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/2795043945/profile?topnav=1&wvr=6" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;2795043945&#x2F;profile?topnav=1&amp;wvr=6" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/null" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
   </div>
 
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
   
-</aside>
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-nianchu"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">by nianchu</span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.5.0
+  </div>
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共76.3k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 nianchu<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+    </footer>
   </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
   
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 
-  </div>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
