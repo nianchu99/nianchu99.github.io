@@ -336,7 +336,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-25 01:04:29" itemprop="dateModified" datetime="2020-08-25T01:04:29+08:00">2020-08-25</time>
+                <time title="修改时间：2020-08-25 01:29:41" itemprop="dateModified" datetime="2020-08-25T01:29:41+08:00">2020-08-25</time>
               </span>
 
           
@@ -378,7 +378,7 @@
 <li><p>browser.find_element_by_tag_name(name): 匹配标签name的元素(大小写无关， <a>元素匹配’a’和’A’)</p>
 </li>
 </ul>
-<h3 id="WebElement的属性与方法"><a href="#WebElement的属性与方法" class="headerlink" title="WebElement的属性与方法"></a>WebElement的属性与方法</h3><img src="/Users/bowenkei/Library/Application Support/typora-user-images/image-20200824222536953.png" alt="image-20200824222536953" style="zoom:50%;" />
+<h3 id="WebElement的属性与方法"><a href="#WebElement的属性与方法" class="headerlink" title="WebElement的属性与方法"></a>WebElement的属性与方法</h3><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gi2f0sz896j30u00u9dtg.jpg" alt="image-20200824222536953" style="zoom:50%;" />
 
 <h3 id="寻找元素Demo"><a href="#寻找元素Demo" class="headerlink" title="寻找元素Demo"></a>寻找元素Demo</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">url = <span class="string">'https://nianchu.space/'</span>  <span class="comment"># 我的个人网站： nianchu.space</span></span><br><span class="line">browser=webdriver.Chrome()</span><br><span class="line">browser.get(url)</span><br><span class="line"><span class="comment"># try-except语句</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 寻找类名为'site-title'的元素</span></span><br><span class="line">    elem=browser.find_element_by_class_name(<span class="string">'site-title'</span>)</span><br><span class="line">    print(<span class="string">'Found &lt;%s&gt; element with that classname!'</span>%(elem.tag_name))</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">'Was not able to find an element with that name.'</span>)  <span class="comment"># Found &lt;span&gt; element with that classname!</span></span><br></pre></td></tr></table></figure>
 
