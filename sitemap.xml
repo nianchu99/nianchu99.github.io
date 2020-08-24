@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.nianchu.space/2020/08/24/introduce/</loc>
+    
+    <lastmod>2020-08-24T12:41:10.545Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.nianchu.space/2019/11/25/%E6%96%87%E8%89%BA/%E6%96%87%E8%89%BA%E8%AF%97/</loc>
+    
+    <lastmod>2020-08-24T12:38:56.830Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.nianchu.space/2020/07/22/Python/%E5%BB%96%E9%9B%AA%E5%B3%B0Pyhton3%E6%95%99%E7%A8%8B/Pyhton3/</loc>
     
-    <lastmod>2020-08-24T03:48:44.294Z</lastmod>
+    <lastmod>2020-08-24T10:06:14.707Z</lastmod>
     
   </url>
   
@@ -600,13 +614,6 @@
     <loc>http://www.nianchu.space/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/</loc>
     
     <lastmod>2020-02-16T01:46:55.112Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.nianchu.space/2019/11/25/%E6%96%87%E8%89%BA/%E6%96%87%E8%89%BA%E8%AF%97/</loc>
-    
-    <lastmod>2020-02-15T16:02:04.348Z</lastmod>
     
   </url>
   
