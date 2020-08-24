@@ -326,6 +326,400 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/08/14/XPath/xpath/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/14/XPath/xpath/" class="post-title-link" itemprop="url">XPath/xpath</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-14 23:03:26 / 修改时间：23:34:33" itemprop="dateCreated datePublished" datetime="2020-08-14T23:03:26+08:00">2020-08-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="XPath节点"><a href="#XPath节点" class="headerlink" title="XPath节点"></a>XPath节点</h1><p>节点</p>
+<p>基本值：无父或无子的节点</p>
+<p>项目： 基本值或者节点</p>
+<p>节点关系：</p>
+<ul>
+<li>父</li>
+<li>子</li>
+<li>同胞： 拥有相同父节点的节点</li>
+<li>先辈： 某节点的父、父的父</li>
+<li>后代： </li>
+</ul>
+<h1 id="Xpath语法"><a href="#Xpath语法" class="headerlink" title="Xpath语法"></a>Xpath语法</h1><p>路径表达式： </p>
+<ul>
+<li>Nodename: 选取此节点的所有子节点</li>
+<li>/：从根节点选取</li>
+<li>//： 从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置</li>
+<li>.：选取当前节点</li>
+<li>..： 选取当前节点的父节点</li>
+<li>@： 选取属性</li>
+</ul>
+<p><strong>谓语</strong>：</p>
+<p>谓语用来查找某个特定的节点或者包含某个指定的值的节点</p>
+<p>谓语被嵌在方括号中</p>
+<p><strong>选取未知节点：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*: 匹配任何元素节点</span><br><span class="line">@*：匹配任何属性节点</span><br><span class="line">node():匹配任何类型的节点</span><br></pre></td></tr></table></figure>
+
+<p><strong>选取若干路径</strong>：</p>
+<p>使用｜分割若干路径</p>
+<h1 id="Xpath轴-Axes"><a href="#Xpath轴-Axes" class="headerlink" title="Xpath轴(Axes)"></a>Xpath轴(Axes)</h1><p>轴可定义相对于当前节点的节点集</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ancestor: </span><br><span class="line">ancestor-or-self:</span><br><span class="line">attribute:</span><br><span class="line">child:</span><br><span class="line">descendant: 选取当前节点的所有后代节点</span><br><span class="line">descendant-or-self:</span><br><span class="line">following: 选取问文档中当前节点的结束标签之后的所有节点</span><br><span class="line">following-sibling: 选取当前节点之后的所有兄弟节点</span><br><span class="line">namespace: 选取当前节点的所有命名空间节点</span><br><span class="line">parent:</span><br><span class="line">preceding: 选取文档中当前节点的开始标签之前的所有节点</span><br><span class="line">preceding-sibling: 选取当前节点之前的所有同级节点</span><br><span class="line">self:</span><br></pre></td></tr></table></figure>
+
+<h1 id="Xpath运算符"><a href="#Xpath运算符" class="headerlink" title="Xpath运算符"></a>Xpath运算符</h1><p>xpath表达式可返回节点集、字符串、逻辑值以及数字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div: 除法</span><br><span class="line">mod: 计算除法的余数</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/08/11/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/11/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" class="post-title-link" itemprop="url">数据库/MySQL必知必会</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-11 10:29:39" itemprop="dateCreated datePublished" datetime="2020-08-11T10:29:39+08:00">2020-08-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-12 11:56:56" itemprop="dateModified" datetime="2020-08-12T11:56:56+08:00">2020-08-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="1-1-1-什么是数据库-database"><a href="#1-1-1-什么是数据库-database" class="headerlink" title="1.1.1 什么是数据库(database)"></a>1.1.1 什么是数据库(database)</h3><p>数据库(database)是一个以某种有组织的方式存储的数据集合</p>
+<h3 id="1-1-2-表-table"><a href="#1-1-2-表-table" class="headerlink" title="1.1.2 表(table)"></a>1.1.2 表(table)</h3><p>将资料放入文件柜，不是随意地扔进某个抽屉就完事，而是在文件柜中创建文件，然后将相关的资料放入特定的文件中。</p>
+<p>这个文件就是表。</p>
+<p>表是一种结构化的文件，可用来存储某种特定类型的数据。</p>
+<p>存储在表中的数据是一种类型的数据或一个清单。绝不应该将顾客的清单与订单的清单存储在同一个数据库表中。</p>
+<p>相同数据库中每一个表都有自己独一无二的名字。</p>
+<p>表有自己的模式(这个模式是一组信息，定义了数据在表中如何存储，如可以存储什么样的数据，数据如何分解，各部分信息如何命名等等)</p>
+<p>模式可以用来描述数据库中特定的表以及整个数据库(和其中表的关系)</p>
+<h3 id="1-1-3-列-column-和数据类型-datatype"><a href="#1-1-3-列-column-和数据类型-datatype" class="headerlink" title="1.1.3 列(column)和数据类型(datatype)"></a>1.1.3 列(column)和数据类型(datatype)</h3><p>表由列组成</p>
+<p>列(column): 表中的字段。所有的表都是由一个或多个列组成的。</p>
+<p>将数据库理解为一个网格，网格中的每一列存储同类型的信息。</p>
+<p>正确分解数据是找到某个特定信息的前提。</p>
+<p>数据库中每个列都有相应的数据类型。数据类型定义列可以存储的数据种类。</p>
+<h3 id="1-1-4-行-row-——-表中的一个记录"><a href="#1-1-4-行-row-——-表中的一个记录" class="headerlink" title="1.1.4 行(row)—— 表中的一个记录"></a>1.1.4 行(row)—— 表中的一个记录</h3><p>表中的数据都是按行存储的。</p>
+<p>行(row)和数据记录(record)在很大程度上，是可以相互替代的，但从技术上来说，行才是正确的术语</p>
+<h3 id="1-1-5-主键-primary-key-一列-或一组列-，其值能够唯一区分表中的每个行"><a href="#1-1-5-主键-primary-key-一列-或一组列-，其值能够唯一区分表中的每个行" class="headerlink" title="1.1.5 主键(primary key) - 一列(或一组列)，其值能够唯一区分表中的每个行"></a>1.1.5 主键(primary key) - 一列(或一组列)，其值能够唯一区分表中的每个行</h3><p>唯一标识表中每行的这个列(或这组列)称为主键。逐渐用来表示一个特定的行。</p>
+<p><strong>应该总是定义主键</strong></p>
+<p>表中的任何列都可以作为主键，只要它满足以下条件：</p>
+<ul>
+<li>任意两行都不具有相同的主键值</li>
+<li>每个行都必须具有一个主键值(主键列不允许NULL值)</li>
+</ul>
+<p>主键通常定义在表的一列上，但这并不是必需的，也可以一起使用多个列作为主键。使用多个列作为主键时，上述条件必须应用到构成主键的所有列，所有列值的组合必须是唯一的(但单个列的值可以不唯一)</p>
+<p><strong>主键的最好习惯</strong>：</p>
+<ul>
+<li>不更新主键列中的值</li>
+<li>不重用主键列的值</li>
+<li>不在主键列中使用可能会更改的值</li>
+</ul>
+<h2 id="1-2-什么是SQL"><a href="#1-2-什么是SQL" class="headerlink" title="1.2 什么是SQL"></a>1.2 什么是SQL</h2><p>是一种专为用来与数据库通信的语言</p>
+<p>设计SQL的目的是很好地完成一项任务，即提供一种从数据库中读写数据的简单有效的方法</p>
+<p>SQL的优点：</p>
+<ul>
+<li>SQL不是某个特定数据库供应商专有的语言。</li>
+<li>简单易学。</li>
+<li>SQL看上去很简单，但是它其实是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库操作。</li>
+</ul>
+<h1 id="第2章"><a href="#第2章" class="headerlink" title="第2章"></a>第2章</h1><h2 id="2-1-什么是MySQL"><a href="#2-1-什么是MySQL" class="headerlink" title="2.1 什么是MySQL"></a>2.1 什么是MySQL</h2><h3 id="2-1-1-客户机-服务器软件"><a href="#2-1-1-客户机-服务器软件" class="headerlink" title="2.1.1 客户机-服务器软件"></a>2.1.1 客户机-服务器软件</h3><p>与数据文件打交道的只有服务器软件。关于数据、数据添加、删除和数据更新的所有请求都由服务器软件完成。这些请求或更改来自运行客户机软件的计算机。</p>
+<p>为进行所有数据库交互，客户机软件都要与服务器软件进行通信。</p>
+<h3 id="2-2-1-mysql命令行实用程序"><a href="#2-2-1-mysql命令行实用程序" class="headerlink" title="2.2.1 mysql命令行实用程序"></a>2.2.1 mysql命令行实用程序</h3><ul>
+<li>命令输入在mysql&gt;之后</li>
+<li>命令；或\g结束。近按Enter不执行命令</li>
+<li>输入help或\h获得帮助</li>
+<li>输入quit或者exit退出命令行实用程序</li>
+</ul>
+<h2 id="3-2-选择数据库"><a href="#3-2-选择数据库" class="headerlink" title="3.2 选择数据库"></a>3.2 选择数据库</h2><p>执行任意数据库操作前，需要选择一个数据库。为此，可以使用USE关键字(key word)</p>
+<h1 id="第4章：-检索数据"><a href="#第4章：-检索数据" class="headerlink" title="第4章： 检索数据"></a>第4章： 检索数据</h1><p>使用SELECT语句从表中检索一个或多个数据列</p>
+<h2 id="4-1-SELECT语句"><a href="#4-1-SELECT语句" class="headerlink" title="4.1 SELECT语句"></a>4.1 SELECT语句</h2><p>最经常使用的关键字就是SELECT语句了。它的用途是从一个或多个表中检索信息</p>
+<p>使用SELECT检索表数据，必须至少给出两条信息——想选择什么，以及从什么地方选择</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT COLUMNNAME</span><br><span class="line">FROM TABLENAME;</span><br></pre></td></tr></table></figure>
+
+<p>*<em>未排序数据： *</em></p>
+<p>没有明确排序查询结果，则返回的数据的顺序没有特殊意义。</p>
+<p><strong>不区分大小写</strong>：</p>
+<p>SQL语句不区分大小写。许多SQL开发人员喜欢对所有的SQL关键字使用大写，而对所有列和表名使用小写。</p>
+<p><strong>忽略空格</strong>：在处理SQL语句时，其中的所有空格都被忽略。</p>
+<h2 id="4-3-检索多个列"><a href="#4-3-检索多个列" class="headerlink" title="4.3 检索多个列"></a>4.3 检索多个列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_id, prod_name,  prod_price </span><br><span class="line">FROM products;</span><br></pre></td></tr></table></figure>
+
+<p><strong>数据表示：</strong></p>
+<p>SQL语句一般返回原始的、无格式的数据。数据的格式化是一个显示问题，而不是一个检索问题。</p>
+<h2 id="4-4-检索所有列"><a href="#4-4-检索所有列" class="headerlink" title="4.4 检索所有列"></a>4.4 检索所有列</h2><p>使用通配符实现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * </span><br><span class="line">FROM products;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>使用通配符警示：</strong></p>
+<p>除非确实需要表中的每个列，否则最好别使用*通配符。因为检索不需要的列通常或降低检索和应用程序的性能。</p>
+<p>*<em>通配符优点： *</em></p>
+<p>可以检索出未知列</p>
+<h2 id="4-5-检索不同的行"><a href="#4-5-检索不同的行" class="headerlink" title="4.5 检索不同的行"></a>4.5 检索不同的行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT vend_id</span><br><span class="line">FROM products;</span><br></pre></td></tr></table></figure>
+
+<p>其中DISTINCT是不同的意思，注意它必须放在列名的前面</p>
+<p><strong>不能部分使用DISTINCT:</strong></p>
+<p>DISTINCT关键字应用于所有列而不仅是前置它的列</p>
+<p>(也就是说，如果检索的不仅仅是一个列，而是两个列，那么对于两个行来说，属于两个列中任何一列的数据不同，那么这两个行就算是不同的。)</p>
+<h2 id="4-6-限制结果"><a href="#4-6-限制结果" class="headerlink" title="4.6 限制结果"></a>4.6 限制结果</h2><p>SELECT 语句返回所有匹配的行。为了返回第一行或前几行，可以使用LIMIT。</p>
+<p>返回第一个5行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name</span><br><span class="line">FROM products</span><br><span class="line">LIMIT 5;</span><br></pre></td></tr></table></figure>
+
+<p>返回下一个5行：(前一个是开始的位置，后一个是要检索的行数):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT prod_name</span><br><span class="line">FROM products</span><br><span class="line">LIMIT 5, 5;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>行0:</strong></p>
+<p>检索出来额第一行为0而不是1</p>
+<p><strong>在行数不够时：</strong></p>
+<p>LIMIT中指定要检索的行数为检索的最大行数。如果没有足够的行(例如，给出LIMIT 10,5 但只有 13行)，MySQL将只返回它能返回的那么多行</p>
+<p><strong>LIMIT  4 OFFSET 3<em>==</em></strong>LIMIT 3 ,4**</p>
+<h2 id="4-7-使用完全限定的表名"><a href="#4-7-使用完全限定的表名" class="headerlink" title="4.7 使用完全限定的表名"></a>4.7 使用完全限定的表名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT tablename.columnname</span><br><span class="line">FROM databasename.tablename;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>第5章 —— 排序检索数据</p>
+<p>使用SELECT语句的ORDER BY子句，根据需要排序检索出的数据。</p>
+<h1 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h1><ul>
+<li>SHOW DATABASES; - 返回可用数据库的一个列表。</li>
+<li>SHOW TABlES； - 返回当前选择的数据库内的可用表的列表。</li>
+<li>SHOW COLUMN FROM 表名： 要求给出一个表名，它对每个字段返回一行，行中包含字段名、数据类型、是否允许NULL、键类型、默认值以及其他信息</li>
+<li>DISsCRIBE 表名——是SHOW COLUMNS FROM 表名的快捷键</li>
+<li>SHOW STATUS:用于显示广泛的服务器状态信息</li>
+<li>SHOW CREATE DATABASE和SHOW CREATE TABLE:分别用来显示创建特定数据库或表的MySQL语句。</li>
+<li>SHOW GRANTS：用来显示授权用户(所有用户或特定用户)的安全权限；</li>
+<li>SHOW ERRORS 和SHOW WARNINGS：用来显示服务器错误或警告信息。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/08/07/Matlab/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%8EMatlab/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/07/Matlab/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%8EMatlab/" class="post-title-link" itemprop="url">Matlab/数学建模与Matlab</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-07 08:50:46 / 修改时间：16:02:18" itemprop="dateCreated datePublished" datetime="2020-08-07T08:50:46+08:00">2020-08-07</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="数学建模与Matlab"><a href="#数学建模与Matlab" class="headerlink" title="数学建模与Matlab"></a>数学建模与Matlab</h1><p>数学建模是一个跨学科的竞赛，关乎生产生活中的实践问题</p>
+<h2 id="多项式拟合"><a href="#多项式拟合" class="headerlink" title="多项式拟合"></a>多项式拟合</h2><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">clc;</span><br><span class="line">clear;</span><br><span class="line"><span class="comment">%准备数据</span></span><br><span class="line">x=<span class="number">0</span>:<span class="number">0.2</span>:<span class="number">10</span>;</span><br><span class="line">y=<span class="number">0.25</span>*x+<span class="number">20</span>*<span class="built_in">sin</span>(x);</span><br><span class="line"><span class="comment">% 5阶多项式拟合</span></span><br><span class="line">p5=polyfit(x,y,<span class="number">5</span>);</span><br><span class="line">y5=polyval(p5,x);</span><br><span class="line"><span class="comment">% 8阶多项式拟合</span></span><br><span class="line">p8=polyfit(x,y,<span class="number">8</span>);</span><br><span class="line">y8=polyval(p8,x);</span><br><span class="line"><span class="comment">% 60阶多项式拟合</span></span><br><span class="line">p60=polyfit(x,y,<span class="number">60</span>);</span><br><span class="line">y60=polyval(p60,x);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">figure</span></span><br><span class="line"><span class="built_in">plot</span>(x,y,<span class="string">'ro'</span>);</span><br><span class="line"><span class="built_in">hold</span> on;</span><br><span class="line"><span class="built_in">plot</span>(x,y5,<span class="string">'b--'</span>);</span><br><span class="line"><span class="built_in">plot</span>(x,y8,<span class="string">'b:'</span>);</span><br><span class="line"><span class="built_in">plot</span>(x,y60,<span class="string">'r-.'</span>);</span><br><span class="line">xlabel(<span class="string">'x'</span>);</span><br><span class="line">ylabel(<span class="string">'y'</span>);</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">'原始数据'</span>,<span class="string">'5阶多项式'</span>,<span class="string">'8阶多项式'</span>,<span class="string">'60阶多项式'</span>);</span><br><span class="line"><span class="comment">% 小结： </span></span><br><span class="line"><span class="comment">% 使用pn=polyfit(x,y,n)获取拟合系数，其中x是原始x值，y是由原始x值计算出来的元素函数y值，其中n是你想进行的多项式拟合阶数</span></span><br><span class="line"><span class="comment">% 使用yn=polyval(p,x)可以获得拟合后的函数值</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/08/06/Python/Python-logging%E6%A8%A1%E5%9D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/06/Python/Python-logging%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">Python/Python-logging模块</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-06 23:34:23 / 修改时间：23:44:11" itemprop="dateCreated datePublished" datetime="2020-08-06T23:34:23+08:00">2020-08-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Python-logging模块"><a href="#Python-logging模块" class="headerlink" title="Python-logging模块"></a>Python-logging模块</h1><p>logging模块是Python内置的标准模块，主要用于输出运行日志，可以设置输出日志的等级、日志保存路径、日志文件回滚等等。</p>
+<p>logging的优点： </p>
+<ul>
+<li>可以通过设置不同的日志等级，在release版本中只输出重要信息，而不必显示大量的调试信息；</li>
+<li>print将所有信息都输出到标准输出中，严重影响开发者从标准输出中查看其它数据；logging则可以由开发者决定将信息输出到什么地方，以及怎么输出</li>
+</ul>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/07/31/Python/Python%E4%B8%AD%E7%9A%84pass%E8%AF%AD%E5%8F%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -976,7 +1370,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-12 12:27:50" itemprop="dateModified" datetime="2020-07-12T12:27:50+08:00">2020-07-12</time>
+                <time title="修改时间：2020-08-08 12:04:50" itemprop="dateModified" datetime="2020-08-08T12:04:50+08:00">2020-08-08</time>
               </span>
 
           
@@ -995,700 +1389,24 @@
 <p>像上面这样，同时使用重定向输入和输出会清空文件中的数据，从而引发java.util.NoSuchElementException: No line found 异常</p>
 <h4 id="1-1-9-7-标准绘图库-基本方法"><a href="#1-1-9-7-标准绘图库-基本方法" class="headerlink" title="1.1.9.7 标准绘图库(基本方法)"></a>1.1.9.7 标准绘图库(基本方法)</h4><p><strong>经验启发： 如何确定一个正方形(包括位置和大小)：</strong></p>
 <p>只需要确定正方形的中心位置，以及中心位置具体一条边的距离即可</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/06/12/Java/final%E5%85%B3%E9%94%AE%E5%AD%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/12/Java/final%E5%85%B3%E9%94%AE%E5%AD%97/" class="post-title-link" itemprop="url">Java/final关键字</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-06-12 15:22:40 / 修改时间：15:28:48" itemprop="dateCreated datePublished" datetime="2020-06-12T15:22:40+08:00">2020-06-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h1><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2><h3 id="修饰类"><a href="#修饰类" class="headerlink" title="修饰类"></a>修饰类</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfpjc1e86pj31d204ejsr.jpg" alt="image-20200612152537147"></p>
-<h3 id="修饰方法"><a href="#修饰方法" class="headerlink" title="修饰方法"></a>修饰方法</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfpjdid0lxj31c00e2q6g.jpg" alt="image-20200612152704529"></p>
-<h3 id="修饰变量"><a href="#修饰变量" class="headerlink" title="修饰变量"></a>修饰变量</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfpjeg367vj31bw0kyqb9.jpg" alt="image-20200612152758241"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/06/03/Java/%E9%80%92%E5%BD%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/03/Java/%E9%80%92%E5%BD%92/" class="post-title-link" itemprop="url">Java/递归</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-03 22:09:56" itemprop="dateCreated datePublished" datetime="2020-06-03T22:09:56+08:00">2020-06-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-06 10:21:55" itemprop="dateModified" datetime="2020-06-06T10:21:55+08:00">2020-06-06</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="第18章-递归"><a href="#第18章-递归" class="headerlink" title="第18章 递归"></a>第18章 递归</h1><h2 id="18-1-引言"><a href="#18-1-引言" class="headerlink" title="18.1 引言"></a>18.1 引言</h2><p>*<em>要点提示： *</em>递归是一种针对使用简单的循环难以编程实现的问题，提供优雅解决方案的技术</p>
-<p>有关H-树的知识： </p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gffgrtd6h3j31eo0kk4k7.jpg" alt="image-20200603222118178"></p>
-<p>使用递归就是使用递归方法编程，递归方法就是直接或间接调用自身的方法。递归是一个很有用的程序技术。</p>
-<h2 id="18-2-示例学习：-计算阶乘"><a href="#18-2-示例学习：-计算阶乘" class="headerlink" title="18.2 示例学习： 计算阶乘"></a>18.2 示例学习： 计算阶乘</h2><p>一个递归调用可以导致更多的递归调用，因为这个方法继续把每个子问题分解成新的子问题。要终止一个递归方法，问题最后必须达到一个终止条件。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gffhrsxlzfj315y0u01kx.jpg" alt="image-20200603225556923"></p>
-<p><strong>如果递归不能使问题简化并最终收敛到基础情况，就有可能出现无限递归。</strong></p>
-<h2 id="18-3-示例学习：-计算斐波那契数"><a href="#18-3-示例学习：-计算斐波那契数" class="headerlink" title="18.3 示例学习： 计算斐波那契数"></a>18.3 示例学习： 计算斐波那契数</h2><h2 id="18-4-使用递归解决问题"><a href="#18-4-使用递归解决问题" class="headerlink" title="18.4 使用递归解决问题"></a>18.4 使用递归解决问题</h2><p>所有的递归方法都具有下面的特点： </p>
-<ul>
-<li>这些方法使用if-else或switch语句来引导不同的情况</li>
-<li>一个或多个基础情况(最简单的情况)用来停止递归</li>
-<li>每个递归调用都会简化原始问题，让它不断地接近基础情况，直到它变成这种基础境况为止。</li>
+<h4 id="1-1-9-8-标准会图库-控制方法"><a href="#1-1-9-8-标准会图库-控制方法" class="headerlink" title="1.1.9.8 标准会图库(控制方法)"></a>1.1.9.8 标准会图库(控制方法)</h4><p>StdDraw.fillRectangle(x, y, rw, rh)中x，y是长方形左下角的坐标。以屏幕左下角为(0,0)作为标准</p>
+<h3 id="1-1-11-展望"><a href="#1-1-11-展望" class="headerlink" title="1.1.11 展望"></a>1.1.11 展望</h3><p>数据抽象： 主要思想是鼓励程序员定义自己的数据类型(一系列值和对这些值的操作)，而不仅仅是那些操作预定义的数据类型的静态方法。</p>
+<h2 id="1-2-数据抽象"><a href="#1-2-数据抽象" class="headerlink" title="1.2 数据抽象"></a>1.2 数据抽象</h2><p>抽象数据类型(ADT)是一种能够对使用者以藏数据表示的数据类型。</p>
+<p>抽象数据类型的主要不同之处在于它将数据和函数的实现关联，并将数据的表示方式隐藏起来。在使用抽象数据类型时，我们的注意力集中在API描述的操作上而不会去关心数据的表示；在实现抽象数据类型时，我们的注意力集中在数据本身并将实现对该数据的各种操作.</p>
+<h4 id="1-2-1-4-对象"><a href="#1-2-1-4-对象" class="headerlink" title="1.2.1.4 对象"></a>1.2.1.4 对象</h4><p>对象是能够承载数据类型的值的实体。所有对象都有三大重要特性：状态、标识和行为。对象的状态即数据类型中的值。对象的标识能够将一个对象区别于另一个对象。可以认为对象的标识就是它在内存中的位置。对象的行为就是数据类型的操作。</p>
+<h2 id="4-4-最短路径"><a href="#4-4-最短路径" class="headerlink" title="4.4 最短路径"></a>4.4 最短路径</h2><h3 id="4-4-1-最短路径的性质"><a href="#4-4-1-最短路径的性质" class="headerlink" title="4.4.1 最短路径的性质"></a>4.4.1 最短路径的性质</h3><ul>
+<li>路径是有向的</li>
+<li>权重不一定等于距离</li>
+<li>并不是所有顶点都是可到达的。如果t并不是从s可达的，那么就不存在任何路径，也就不存在最短路径</li>
+<li>负权重会使问题更复杂</li>
+<li>最短路径一般都是简单的。找到的最短路径都不会含有环</li>
+<li>最短路径不一定是唯一的</li>
+<li>可能存在平行边和字环：平行边的权重最小者才会被选上，最短路径也不可能包含自环(除非自环的权重为零)</li>
 </ul>
-<h2 id="18-5-递归辅助方法"><a href="#18-5-递归辅助方法" class="headerlink" title="18.5 递归辅助方法"></a>18.5 递归辅助方法</h2><p><strong>要点提示 ：</strong>有时候可以通过针对要解决的初始问题的类似问题定义一个递归方法，来找到初始问题的解决方法。这个新的方法称为递归辅助方法，初始问题可以通过调用递归辅助方法来得到解决。</p>
-<p>下面是实例： </p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gficrt1zkij310w0u0hdt.jpg" alt="image-20200606101938995"></p>
-<p><strong>划重点：</strong> </p>
-<p>在递归程序设计中定义第二个方法来接收附加的参数是一个常用的设计，这样的方法被称为递归辅助方法。</p>
-<h3 id="18-5-1-递归选择排序"><a href="#18-5-1-递归选择排序" class="headerlink" title="18.5.1 递归选择排序"></a>18.5.1 递归选择排序</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/06/01/HTML/21%E5%A4%A9%E5%AD%A6%E9%80%9AHTML+CSS+JavaScript%20Web%E5%BC%80%E5%8F%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/01/HTML/21%E5%A4%A9%E5%AD%A6%E9%80%9AHTML+CSS+JavaScript%20Web%E5%BC%80%E5%8F%91/" class="post-title-link" itemprop="url">HTML/21天学通HTML+CSS+JavaScript Web开发</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-01 14:29:32" itemprop="dateCreated datePublished" datetime="2020-06-01T14:29:32+08:00">2020-06-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-01 10:22:11" itemprop="dateModified" datetime="2020-08-01T10:22:11+08:00">2020-08-01</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h1><p>##第1章 何为Web发布</p>
-<h3 id="1-1-像Web发布者一样思考"><a href="#1-1-像Web发布者一样思考" class="headerlink" title="1.1 像Web发布者一样思考"></a>1.1 像Web发布者一样思考</h3><p>Web是： </p>
-<ul>
-<li>一个超文本信息系统</li>
-<li>跨平台的</li>
-<li>分布式的</li>
-<li>交互式的</li>
-</ul>
-<h4 id="1-1-1-Web是一个超文本信息系统"><a href="#1-1-1-Web是一个超文本信息系统" class="headerlink" title="1.1.1 Web是一个超文本信息系统"></a>1.1.1 Web是一个超文本信息系统</h4><p>超文本的含义： 不像看书那样以线性方式阅读，而是可以轻松从一个地方跳到另一个地方： 可以获取更详细的信息，再回过去阅读、跳到其他主题或者根据兴趣阅读。</p>
-<p>术语超文本，可以理解为链接。链接也可称为超链接。</p>
-<h4 id="1-1-2-Web是跨平台的"><a href="#1-1-2-Web是跨平台的" class="headerlink" title="1.1.2 Web是跨平台的"></a>1.1.2 Web是跨平台的</h4><p>跨平台意味着不管使用什么计算机硬件，也不管运行的是什么操作系统，装备的是什么显示器，都可以一样地访问Web信息。</p>
-<p>下面是书中提供的一个很有意思的观点： </p>
-<p><strong>跨平台是一种理想：</strong></p>
-<p>随着众多特殊功能、技术和媒体类型的推出，Web的跨平台性特征遭到了损害，Web发布者可以使用很多非标准特性，如Flash，但这样做将缩小其网站的受众范围，如果考虑到越来越多的人转而使用智能手机和移动设备来访问Web，Web发布者还必须做出如下选择： 专门创建用于移动设备的应用程序，还是打造跨平台兼容性更强的Web应用程序。该不该为特定平台提供更强大的功能而降低跨平台的灵活性呢？</p>
-<h4 id="1-1-3-Web是分布式的"><a href="#1-1-3-Web是分布式的" class="headerlink" title="1.1.3 Web是分布式的"></a>1.1.3 Web是分布式的</h4><p>Web为什么能成功地提供海量信息呢？因为这些信息分布在全球的数百万个网站中，而每个网站都分别存储其发布的信息。每个网站驻留在一台或者多台被称为Web服务器的计算机上。Web服务器也是计算机，只是负责侦听并相映Web浏览器的请求。我们使用Web浏览器时，请求服务器提供资源以便查看它。我们只是将浏览器指向网站，其他什么都没有做。</p>
-<p>网站是Web上一个发布信息的位置。您浏览网页时，浏览器连接到网络以获取该网页。每个网站、网站的每个 网页乃至每项信息都有独一无二的地址，这个地址被称为 ：统一资源定位符(URL).</p>
-<h4 id="1-1-4-Web是动态的"><a href="#1-1-4-Web是动态的" class="headerlink" title="1.1.4 Web是动态的"></a>1.1.4 Web是动态的</h4><p>重启浏览器可以获取Web上更新的信息</p>
-<p>当前，甚至都无须重新加载网页就能看到最新的信息。通过使用JavaScript可以实时地更新网页的内容。</p>
-<h4 id="1-1-5-Web是交互式的"><a href="#1-1-5-Web是交互式的" class="headerlink" title="1.1.5 Web是交互式的"></a>1.1.5 Web是交互式的</h4><p>Web的交互性是通过单击链接跳到其他网页实现的。除此之外，Web还可以让用户同发布者和其他用户交流。</p>
-<h3 id="1-2-Web浏览器"><a href="#1-2-Web浏览器" class="headerlink" title="1.2 Web浏览器"></a>1.2 Web浏览器</h3><p><strong>注意：</strong>仅当您确定只有使用特定浏览器的用户访问您的网站时，选择针对该浏览器进行开发才是合适的。</p>
-<h4 id="1-2-1-Web浏览器的作用"><a href="#1-2-1-Web浏览器的作用" class="headerlink" title="1.2.1 Web浏览器的作用"></a>1.2.1 Web浏览器的作用</h4><p>Web浏览器的核心作用是连接到We服务器并请求文档，再妥善地设置这些文档的格式并显示它们。</p>
-<p>Web浏览器还可显示本地计算机中的文件、下载并非用于显示的文件，甚至让用户能够发送和接受电子邮件。</p>
-<p>所有网页都是使用超文本标记语言HTML编写的，这种语言指定网页包含的文本、描述网页的结构、指定到其他文档和图像等多媒体。</p>
-<p>即使是同一个文件，不同浏览器设置其格式和显示的方式也可能不同，这取决于系统的功能以及浏览器的配置。</p>
-<h4 id="1-2-2-概述一些流行的Web浏览器"><a href="#1-2-2-概述一些流行的Web浏览器" class="headerlink" title="1.2.2 概述一些流行的Web浏览器"></a>1.2.2 概述一些流行的Web浏览器</h4><p><em>Google Chrome</em></p>
-<p>和Apple Safari使用的是一个HTML引擎——开源引擎WebKit.</p>
-<p><strong>注意：</strong></p>
-<p>如果要检查跨平台兼容性问题，请从IE 和 Firefox开始，再将Chrome也囊括进来。</p>
-<p><em>Firfox</em></p>
-<p>Firfox得以流行是因为它不存在困扰IE的安全问题。</p>
-<h3 id="1-3-Web服务器"><a href="#1-3-Web服务器" class="headerlink" title="1.3 Web服务器"></a>1.3 Web服务器</h3><p>要将网页发布到Web上，需要一个Web服务器。</p>
-<p>Web服务器是在计算机上运行的程序，负责响应Web浏览器的请求——向它提供URL指定的内容。运行服务器程序的计算机也被称为服务器。</p>
-<p><strong>您使用浏览器请求网页时，浏览器使用HTTP建立一条到服务器的Web连接。服务器接受连接，发送请求的文件，再关闭连接。接下来，浏览器对从服务器获取的信息设置格式。</strong></p>
-<p>在服务器端，可能有很多不同的浏览器连接到同一个服务器，该服务器负责处理所有这些请求。</p>
-<p>Web服务器还负责管理表单输入以及将表单和浏览器关联到运行在服务器上的数据库等程序。</p>
-<h3 id="1-4-统一资源定位符"><a href="#1-4-统一资源定位符" class="headerlink" title="1.4 统一资源定位符"></a>1.4 统一资源定位符</h3><p>URL为查找并访问信息提供了统一而一致的方法。</p>
-<p>还可以使用URL在文档中创建到另一个文档中的超文本链接。</p>
-<p>*<em>URL包含有关如下方面的信息： *</em></p>
-<ul>
-<li><p>如何获取信息(使用哪种协议： FTP,HTTP还是file)；</p>
-</li>
-<li><p>该信息所在计算机的Internet主机名(<a href="http://www.ncsa.uiuc.edu)等" target="_blank" rel="noopener">www.ncsa.uiuc.edu)等</a></p>
-</li>
-<li><p>该信息位于网站的哪个目录或位置</p>
-</li>
-</ul>
-<p>  还可以使用特殊的URL来完成发送邮件和运行JavaScript代码等任务</p>
-<h3 id="1-5-广义的Web发布"><a href="#1-5-广义的Web发布" class="headerlink" title="1.5 广义的Web发布"></a>1.5 广义的Web发布</h3><p>一般而言，网页都是根据别人创建的模版生成的，通常可以设置内容的格式——使用图形编辑器或让您能够避免使用HTML的简化标记。</p>
-<p>如果，发布的内容看起来不妥，要修复问题就必须懂HTML。</p>
-<p>需要区分由您控制的页面部分和您使用发布应用程序生成的部分。</p>
-<h3 id="1-7-作业"><a href="#1-7-作业" class="headerlink" title="1.7 作业"></a>1.7 作业</h3><h4 id="1-7-1-问与答"><a href="#1-7-1-问与答" class="headerlink" title="1.7.1 问与答"></a>1.7.1 问与答</h4><p>问： Web由谁负责运营？这些协议都是由谁控制的？这一切都是由谁管理的？</p>
-<p>万维网并非由某个组织拥有或控制。<strong>有两类组织给Web的外观和发展方向带来了重大影响：</strong></p>
-<ol>
-<li><p>万维网联盟(W3C)： 负责制定万维网标准和实施相关的规则，网址为：<a href="http://www.w3.org" target="_blank" rel="noopener">www.w3.org</a></p>
-</li>
-<li><p>浏览器开发商 ：一些关心Web未来的个人和公司成立了一个名为WHATWG——超文本应用技术工作组。HTML5规范就是WHATWG和W3C一起制定的。</p>
-<p>从现在开谁，WHATWG放弃了给HTML规范制定版本号，相反，HTML是一个“流动的标准”，将涵盖实验性功能和得到广泛支持的功能，旨在确保该规范紧跟发展步伐，涵盖浏览器开发商一致同意在其浏览器中添加的功能。</p>
-<h2 id="第2章-准备好工具"><a href="#第2章-准备好工具" class="headerlink" title="第2章 准备好工具"></a>第2章 准备好工具</h2><h3 id="2-1-网站剖析"><a href="#2-1-网站剖析" class="headerlink" title="2.1  网站剖析"></a>2.1  网站剖析</h3><ul>
-<li>网站： 一个或多个网页，它们以有意义的方式组织起来，一起描述了一项信息或者营造出一种效果。</li>
-<li>Web服务器： Internet或内联网中的计算机，在收到浏览器的请求时提供网页或其他文件(内联网是Internet协议但不对公众开放的网络)</li>
-<li>网页 ：网站上的入口页面，可链接到当前网站或者其他网站的页面。</li>
-<li>主页： 网站的入口页面，可链接到当前网站或者其他网站的页面。</li>
-</ul>
-</li>
-</ol>
-<p>网站都由Web服务器托管。</p>
-<p>网页有时也被称为Web文档。</p>
-<p>网页由HTML文档和其他部分组成。</p>
-<h3 id="2-2-为发布到Web准备好计算机"><a href="#2-2-为发布到Web准备好计算机" class="headerlink" title="2.2 为发布到Web准备好计算机"></a>2.2 为发布到Web准备好计算机</h3><p>学习如何从空白开始创建网站，就需要配置计算机，以便能够在本地创建和查看网页</p>
-<p>尝试Web发布，只有两款工具是必不可少的，就是文本编辑器和Web浏览器。</p>
-<h4 id="2-2-1-文本编辑器"><a href="#2-2-1-文本编辑器" class="headerlink" title="2.2.1 文本编辑器"></a>2.2.1 文本编辑器</h4><p>HTML属于纯文本文件，应使用处理纯文本的工具对其进行编辑。</p>
-<h4 id="2-2-2-Web浏览器"><a href="#2-2-2-Web浏览器" class="headerlink" title="2.2.2 Web浏览器"></a>2.2.2 Web浏览器</h4><p>下载Google Chrome</p>
-<p>###2.3 使用Google Chrome 开发者工具</p>
-<p>打开开发者工具的快捷键 ：</p>
-<ul>
-<li>Windows中为ctrl  + Shift + I</li>
-<li>Mac OS 中： Command + Option + I </li>
-</ul>
-<p>开发者工具是查看源代码这种概念的扩展，功能更加强大。</p>
-<p>开发者工具中包含很多选项卡，默认显示的是Element，其中包含的内容类似于网页的源代码。浏览器下载网页的时候，将其进行转换，让设置HTML格式并显示它的引擎能够明白。</p>
-<p>Element选项卡显示的是浏览器看到的HTML，而“查看源代码”显示的是浏览器下载的HTML。这两者有几个不同的地方。</p>
-<p>将鼠标指向Element选项卡中的元素，相应的网页部分将呈高亮显示，由此可以知道网页各部分与HTML源代码的对应关系。</p>
-<h3 id="2-4-您要在Web上做什么"><a href="#2-4-您要在Web上做什么" class="headerlink" title="2.4 您要在Web上做什么"></a>2.4 您要在Web上做什么</h3><p>对于要发布到Web上的东西，我在本书中称之为内容。</p>
-<h3 id="2-5-绘制网站线框图"><a href="#2-5-绘制网站线框图" class="headerlink" title="2.5 绘制网站线框图"></a>2.5 绘制网站线框图</h3><p>网络规划的下一步是确定如何在网页之间分配内容，并制定在网页之间导航的方案。</p>
-<h4 id="2-5-1-线框图是什么，为何需要绘制线框图"><a href="#2-5-1-线框图是什么，为何需要绘制线框图" class="headerlink" title="2.5.1 线框图是什么，为何需要绘制线框图"></a>2.5.1 线框图是什么，为何需要绘制线框图</h4><p>线框图是网站完成后的大致轮廓，指出了内容在网页之间的分配情况以及内容是如何彼此关联起来的。</p>
-<p>对于复杂的大型网站，线框图可节省大量的时间，避免众多的弯路。</p>
-<p>线框图，一般而言，是成组的文档或图像，每组表示网站中一种特定类型的网页。文档包含网页的粗略示意图指出了网页各各部分处于什么位置、占据多大空间以及将发挥的作用</p>
-<h4 id="2-5-2-线框图绘制小贴士"><a href="#2-5-2-线框图绘制小贴士" class="headerlink" title="2.5.2 线框图绘制小贴士"></a>2.5.2 线框图绘制小贴士</h4><ul>
-<li><p>如何在网页之间分配主题</p>
-<p>最佳的做法是，让每个页面都包含一个主题的信息。如果页面有好几屏长，也许该奖相应的主题按逻辑分成多个子主题。</p>
-<ul>
-<li>在网页之间导航的主要方式是什么？ </li>
-</ul>
-<p>需要链接。这些是文档中的主链接，让访客能够实现您确定的目标。向前、向后、向上的链接以及到主页的链接都属于主要的导航方式。</p>
-<ul>
-<li>要提供其他哪些导航方式</li>
-</ul>
-<p>除了简单的导航链接外，还可以包含与主要Web内容平行的额外信息，如术语表</p>
-<p>按字母顺序排列的概念索引、版权信息或职员页面。</p>
-<ul>
-<li>要在主页上放置哪些内容？</li>
-</ul>
-<p>主页上的内容应该有足够的吸引力，让目标受众留下来</p>
-<ul>
-<li>如何让访问内部网页的用户知道他身处何方？</li>
-</ul>
-<p>可以通过设计和导航实现这个目标。</p>
-<ul>
-<li>您的目标是什么？</li>
-</ul>
-<p>注意聚焦于你的目标</p>
-<h3 id="2-6-Web托管"><a href="#2-6-Web托管" class="headerlink" title="2.6 Web托管"></a>2.6 Web托管</h3><p>迟早需要将本地计算机上创建的网站放到Internet上，最简单的方法，是获取一个这样的Web托管账户，即让您能够将HTML文件、图像、样式和其他Web内容上传到一台Web服务器。</p>
-<h4 id="2-6-1-使用内容管理应用程序"><a href="#2-6-1-使用内容管理应用程序" class="headerlink" title="2.6.1 使用内容管理应用程序"></a>2.6.1 使用内容管理应用程序</h4><p>使用应用程序将内容发布到Web上：</p>
-<ul>
-<li>博客网站</li>
-<li>一些在线工具可以建立格式比博客更开放、更专业的网站</li>
-</ul>
-</li>
-</ul>
-<p>上述两种方式，通常只需填写表单并为网站选择URL和主题，然后就可以通过表单输入内容。</p>
-<h4 id="2-6-2-设置Web托管"><a href="#2-6-2-设置Web托管" class="headerlink" title="2.6.2 设置Web托管"></a>2.6.2 设置Web托管</h4><p>注册托管账户以便将网页发布到Web上的步骤如下： </p>
-<ol>
-<li>注册一个域名。</li>
-<li>选择一家Web托管公司并注册账户。</li>
-<li>将注册的域名同新创建的网站关联起来。</li>
-<li>开始上传内容。</li>
-</ol>
-<h2 id="第3章-HTML-和-CSS简介"><a href="#第3章-HTML-和-CSS简介" class="headerlink" title="第3章 HTML 和 CSS简介"></a>第3章 HTML 和 CSS简介</h2><h3 id="3-1-HTML是什么"><a href="#3-1-HTML是什么" class="headerlink" title="3.1 HTML是什么"></a>3.1 HTML是什么</h3><p>HTML指的是超文本标记语言</p>
-<h4 id="3-1-1-HTML定义了网页的结构"><a href="#3-1-1-HTML定义了网页的结构" class="headerlink" title="3.1.1 HTML定义了网页的结构"></a>3.1.1 HTML定义了网页的结构</h4><p>是一种描述文档结构而非实际呈现效果的语言。</p>
-<h4 id="3-1-2-HTML未定义网页的布局"><a href="#3-1-2-HTML未定义网页的布局" class="headerlink" title="3.1.2 HTML未定义网页的布局"></a>3.1.2 HTML未定义网页的布局</h4><p>HTML规范对页面的外观都未置一言。HTML标签只是指出元素是标题或列表，没有说明该如何设置标题或列表的格式。</p>
-<p><strong>注意：</strong>级联样式表(CSS)能够将复杂的格式设置应用于HTML标签。</p>
-<p><strong>应用于标签的视觉样式的发展历程</strong>：</p>
-<p>链接应该带有下划线并显示为蓝色，访问过的链接为紫色，要突出的文本为斜体……</p>
-<h4 id="3-1-3-HTML为何以这样的方式工作"><a href="#3-1-3-HTML为何以这样的方式工作" class="headerlink" title="3.1.3 HTML为何以这样的方式工作"></a>3.1.3 HTML为何以这样的方式工作</h4><p>设计原则： </p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfdmjruij4j31ac0927ip.jpg" alt="image-20200602081006343"></p>
-<h4 id="3-1-4-标记的工作原理"><a href="#3-1-4-标记的工作原理" class="headerlink" title="3.1.4 标记的工作原理"></a>3.1.4 标记的工作原理</h4><p>HTML是一种标记语言。</p>
-<p>HTML包含一组可供使用的预处理标签，不能编造标签来创建新样式或功能。</p>
-<p>不同的浏览器支持不同的标签。</p>
-<h3 id="3-2-HTML文件怎么样"><a href="#3-2-HTML文件怎么样" class="headerlink" title="3.2 HTML文件怎么样"></a>3.2 HTML文件怎么样</h3><p>HTM文件包含的以下内容： </p>
-<ul>
-<li>页面本身的内容</li>
-<li>HTML标签</li>
-</ul>
-<p><strong>HTML中在结束标签中出现的是”/“而不是反斜杠</strong></p>
-<p>有些标签只有起始标签或者结束标签；</p>
-<p>有些标签是荣国旗，在&lt;&gt;内包含额外的信息和文本；</p>
-<p>有些标签内部有额外的文本，提供了有关签名的额外信息。这些文本被称为属性，通常以name=value的形式定义的，位于标签名后面，并用一个空格与标签名分隔开。</p>
-<p><strong>HTML标签不区分大小写。</strong></p>
-<h4 id="3-2-1-文本格式设置和HTML"><a href="#3-2-1-文本格式设置和HTML" class="headerlink" title="3.2.1 文本格式设置和HTML"></a>3.2.1 文本格式设置和HTML</h4><p>分析HTML页面时，浏览器会忽略您为设置格式而添加的所有空白字符，包括多余的空格、制表符、换行符等</p>
-<p>在HTML中设置格式的唯一途径就是使用HTML标签。(此规则有两个例外，它们是标签<pre>和CSS属性pre)</p>
-<h3 id="3-3-HTML-属性"><a href="#3-3-HTML-属性" class="headerlink" title="3.3 HTML 属性"></a>3.3 HTML 属性</h3><p>可使用属性来修改HTML元素。属性是在元素的起始标签中指定的。</p>
-<p>很多元素有其特有的属性，<strong>也有适用于所有元素的全局元素。例如： ID属性指定一个标识符，用于唯一地标识页面元素。</strong></p>
-<p><strong>这些标识符主要供JavaScript和级联样式表使用。</strong></p>
-<p>class是一个全局属性，可用于建立元素编组。可给多个元素指定相同的class属性，以便在CSS或JavaScript中将这些元素作为一个编组来饮用它们。</p>
-<p>第三个全局属性是style</p>
-<h3 id="3-4-使用属性style"><a href="#3-4-使用属性style" class="headerlink" title="3.4 使用属性style"></a>3.4 使用属性style</h3><p>级联样式表告诉浏览器如何渲染HTML元素。</p>
-<p>CSS的优点在于，可以各种方式使用它。</p>
-<h4 id="3-4-1-在标签中指定样式"><a href="#3-4-1-在标签中指定样式" class="headerlink" title="3.4.1 在标签中指定样式"></a>3.4.1 在标签中指定样式</h4><h3 id="3-5-HTML标准简史"><a href="#3-5-HTML标准简史" class="headerlink" title="3.5 HTML标准简史"></a>3.5 HTML标准简史</h3><h4 id="3-5-1-XHTML"><a href="#3-5-1-XHTML" class="headerlink" title="3.5.1 XHTML"></a>3.5.1 XHTML</h4><p>XHTML文档必须是有效的XML。<strong>下面是规则：</strong></p>
-<ul>
-<li>所有标签小写</li>
-<li>没有结束标签的标签，必须在其标签后面加上反斜杠，例如<br> -> <br/></li>
-<li>所有属性都必须有值。如果某些属性没有与之相关联的值，XHTML要求将其值设置为属性名，即采用格式attribute = "attribute"</li>
-</ul>
-<h3 id="3-6-不断发展的最新标准HTML5"><a href="#3-6-不断发展的最新标准HTML5" class="headerlink" title="3.6 不断发展的最新标准HTML5"></a>3.6 不断发展的最新标准HTML5</h3><p>访问<a href="http://caniuse.com/" target="_blank" rel="noopener">http://caniuse.com/</a> ，查看HTML5的各项功能、支持该功能的浏览器版本以及其浏览器支持该功能的用户所占的百分比。</p>
-<h3 id="3-8-问与答"><a href="#3-8-问与答" class="headerlink" title="3.8  问与答"></a>3.8  问与答</h3><h4 id="3-8-1-可以使用HTML设置文本格式吗？"><a href="#3-8-1-可以使用HTML设置文本格式吗？" class="headerlink" title="3.8.1 可以使用HTML设置文本格式吗？"></a>3.8.1 可以使用HTML设置文本格式吗？</h4><p>可以对字符串设置一些格式。大多数设置文本格式的标签都已被CSS取代，但浏览器依然支持较旧的文本格式设置元素。</p>
-<h2 id="第4章-HTML基础知识"><a href="#第4章-HTML基础知识" class="headerlink" title="第4章 HTML基础知识"></a>第4章 HTML基础知识</h2><h4 id="4-1-定义页面的总体结构"><a href="#4-1-定义页面的总体结构" class="headerlink" title="4.1 定义页面的总体结构"></a>4.1 定义页面的总体结构</h4><p>HTML定义了三个用于定义页面总体结构以及提供简单标题信息的标签——<html>,<head>,<body></p>
-<p><strong>DOCTYPE标识符</strong>：</p>
-<p>它不是网页结构的标签，但是XHTML和HTML5都要求网页必须包含它。</p>
-<h4 id="4-1-1-标签"><a href="#4-1-1-标签" class="headerlink" title="4.1.1 标签"></a>4.1.1 标签<html></h4><p>网页的所有文本和HTML元素都必须放在起始和结束<html>标签之间。</p>
-<p>如果省略它，浏览器将会替你添加。</p>
-<h4 id="4-1-2-标签"><a href="#4-1-2-标签" class="headerlink" title="4.1.2 标签"></a>4.1.2 标签<head></h4><p>是一个容器，包含所有提供有关网页的信息的标签，但不包含将显示在网页中的信息。</p>
-<h4 id="4-1-3-标签"><a href="#4-1-3-标签" class="headerlink" title="4.1.3 标签"></a>4.1.3 标签<body></h4><p>结束HTML标签时，务必确保结束的时最近的未结束标签。</p>
-<h3 id="4-2-名称"><a href="#4-2-名称" class="headerlink" title="4.2 名称"></a>4.2 名称</h3><p>每个HTML页面都需要一个名称，它指出页面描述的是什么。用户浏览网页时，这个名称出现在浏览器的标题栏中。这个名称被浏览器用来创建书签；还被搜索引擎用来建立页面索引。</p>
-<p><strong>使用<title>标签指定名称</strong></p>
-<p><strong>将<title>标签放在<head>中</strong></p>
-<p><strong><title>不能包含其他标签</strong></p>
-<h3 id="4-3-标题"><a href="#4-3-标题" class="headerlink" title="4.3 标题"></a>4.3 标题</h3><p>HTML定义了6级标题</p>
-<p>在HTML文档中，缩进可以更好地展示层次结构。但是在展示的页面中，不会缩进。浏览器对缩进置若罔闻。</p>
-<p>*<em>警告： *</em>不要为了将文本显示为粗体或突出网页的某些部分而使用标题，这样做虽然会获得想要的效果，但标记表示的将不再是网页的结构。这样会影响搜索引擎、便利性和有些浏览器。</p>
-<p><strong>提示：</strong>从视觉效果来看，4-6级标题不是很有用，但是从文档结构的角度看，很有意义。另外，使用4-6级标题可以使用样式来获得想要的效果。</p>
-<h3 id="4-4-段落"><a href="#4-4-段落" class="headerlink" title="4.4 段落"></a>4.4 段落</h3></p>虽然并非 必不可少，但是对CSS确定段落的内容至关重要。
-
-<h3 id="4-5-注释"><a href="#4-5-注释" class="headerlink" title="4.5 注释"></a>4.5 注释</h3><p>分析HTML文件时，会忽略注释中的文本。但是，在浏览器中，用户可以使用“查看源代码”功能来查看注释，因此，对于不希望用户看到的东西，请不要将其放在注释中。</p>
-<p>格式： </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- This is comment --&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-7-问与答"><a href="#4-7-问与答" class="headerlink" title="4.7 问与答"></a>4.7 问与答</h3><h4 id="4-7-1-有些网页没有使用结构页面标签-、、-。那真的是必须包含它们吗？"><a href="#4-7-1-有些网页没有使用结构页面标签-、、-。那真的是必须包含它们吗？" class="headerlink" title="4.7.1 有些网页没有使用结构页面标签(、、)。那真的是必须包含它们吗？"></a>4.7.1 有些网页没有使用结构页面标签(<html>、<head>、<body>)。那真的是必须包含它们吗？</h4><p>除了<title>以外可以不包括，但是最好养成使用结构标签的习惯。</p>
-<h4 id="4-7-2-标签是用于添加网页内容的通用标签吗？"><a href="#4-7-2-标签是用于添加网页内容的通用标签吗？" class="headerlink" title="4.7.2 标签是用于添加网页内容的通用标签吗？"></a>4.7.2 标签<p>是用于添加网页内容的通用标签吗？</h4><p>不是，标签<div>才是用于添加网页内容的通用标签。标签<p>专用于在网页中添加文本段落。包括<div>在内的很多标签都不能放在标签<p>里面。</p>
-<h4 id="4-7-3-注释可以包含HTML标签"><a href="#4-7-3-注释可以包含HTML标签" class="headerlink" title="4.7.3 注释可以包含HTML标签"></a>4.7.3 注释可以包含HTML标签</h4><p>可以在注释中包含HTML标签，但是浏览器不会显示它们。使用注释来隐藏页面的某部分是一种常见的做法，通常这种做法叫做“注释掉”。</p>
-<h2 id="第5章-使用列表组织信息"><a href="#第5章-使用列表组织信息" class="headerlink" title="第5章 使用列表组织信息"></a>第5章 使用列表组织信息</h2><p><strong>知识导航：</strong></p>
-<ul>
-<li>如何创建编号列表</li>
-<li>如何创建项目列表</li>
-<li>如何创建定义列表(definition list)</li>
-<li>与列表相关的级联样式表(CSS)属性</li>
-</ul>
-<h3 id="5-1-列表概述"><a href="#5-1-列表概述" class="headerlink" title="5.1 列表概述"></a>5.1 列表概述</h3><p>列表分为： </p>
-<ul>
-<li>有序列表</li>
-<li>无序列表</li>
-<li>定义列表</li>
-</ul>
-<p>所有的列表标签都有如下特征 ：</p>
-<ul>
-<li>列表有指定类型的外部元素。<ul></ul>表示无序列表,<ol></ol>表示有序列表,<dl></dl>表示定义列表。</li>
-<li>每个列表项都有自己的标签：在词汇列表中为<dt>和<dd>.在其他列表中为<li></li>
-</ul>
-<h3 id="5-2-带编号的列表"><a href="#5-2-带编号的列表" class="headerlink" title="5.2 带编号的列表"></a>5.2 带编号的列表</h3><p>带编号的列表是<ol></ol>定义的，而其中的列表行是使用标签<li>和</li>定义的。</p>
-<p>显示有序列表时，列览器会缩进列表并编号。</p>
-<p><strong>仅当列表项的顺序很重要时，才应使用带编号的列表。</strong></p>
-<h4 id="5-2-1-定制有序列表"><a href="#5-2-1-定制有序列表" class="headerlink" title="5.2.1 定制有序列表"></a>5.2.1 定制有序列表</h4><p>定制的方法有两种： </p>
-<ul>
-<li><p>修改列表的编号样式(1.使用CSS属性list-style-type;2.使用属性[attribute]type——在html5中已经被舍弃)</p>
-</li>
-<li><p>修改编号本身。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfeu2l0967j31by0gugx1.jpg" alt="image-20200603091556411"></p>
-</li>
-</ul>
-<p>要指定列表使用的起始编号或字母，可使用属性start.不管指定的编号形式是什么，属性start的值必须时十进制数字。</p>
-<p>在任何列表项都可以添加一个value值以重新开始从这个列表项开始的序号。</p>
-<h3 id="5-3-无序列表"><a href="#5-3-无序列表" class="headerlink" title="5.3 无序列表"></a>5.3 无序列表</h3><p>无序列表通常称为项目符号列表，其中每个列表项都使用相同的项目符号，而不是编号。</p>
-<p>对于无序列表，各个浏览器标记每个列表项时默认使用的项目符号相同，但文本浏览器通常使用星号。</p>
-<h4 id="5-3-1-定制无序列表"><a href="#5-3-1-定制无序列表" class="headerlink" title="5.3.1 定制无序列表"></a>5.3.1 定制无序列表</h4><p>项目符号样式如下： </p>
-<ul>
-<li>disc: 圆盘，这是默认样式</li>
-<li>square:实心正方形</li>
-<li>circle:生成空心圆</li>
-</ul>
-<p>可以使用一幅画来自定义项目符号样式，例如： </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">style</span>=<span class="string">"list-style-image: url(/bullet.gif)"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Example<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>使用如下方式实现后续行与项目符号或列表符号对齐： </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">style</span>=<span class="string">"list-style-position: inside"</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>同时修改多个与列表相关的属性，可以像下面这样，同时指定三个值： 列表样式类型、列表样式位置和用作项目符号图像的url： </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">style</span>=<span class="string">"list-style: circle inside url("</span>")"&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="5-4-定义列表"><a href="#5-4-定义列表" class="headerlink" title="5.4 定义列表"></a>5.4 定义列表</h3><p>定义列表包含两部分： </p>
-<ul>
-<li>术语</li>
-<li>术语的定义</li>
-</ul>
-<p>定义列表的每部分都有其标签： 术语标签为<dt></dt>,定义标签<dd><dd>。它们往往成对存在。</p>
-<p>整个定义列表是使用标签<dl></dl>定义的。</p>
-<p>在浏览器中显示定义列表时，通常术语和定义是分开的并缩进定义。</p>
-<h3 id="5-5-嵌套列表"><a href="#5-5-嵌套列表" class="headerlink" title="5.5 嵌套列表"></a>5.5 嵌套列表</h3><p>在一个列表中放置另一个列表。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gffis1mo3gj31ey0esaos.jpg" alt="image-20200603233039568"></p>
-<h3 id="5-6-列表的其他用途"><a href="#5-6-列表的其他用途" class="headerlink" title="5.6 列表的其他用途"></a>5.6 列表的其他用途</h3><p>列表远不是简单的项目符号列表。很多常见的Web设计元素的结构都类似于列表。</p>
-<h3 id="5-8-作业"><a href="#5-8-作业" class="headerlink" title="5.8  作业"></a>5.8  作业</h3><h4 id="5-8-1-可修改列表项的缩进程度或让它们不缩进吗？"><a href="#5-8-1-可修改列表项的缩进程度或让它们不缩进吗？" class="headerlink" title="5.8.1 可修改列表项的缩进程度或让它们不缩进吗？"></a>5.8.1 可修改列表项的缩进程度或让它们不缩进吗？</h4><p>用于控制列表缩进程度的属性是 ：margin-left和padding-left，有些浏览器使用前者，有些浏览器使用后者。</p>
-<p>为了让文本按照特定的方式对齐，可以将边距(margin)设置为负值。</p>
-<h2 id="第6章-使用链接"><a href="#第6章-使用链接" class="headerlink" title="第6章 使用链接"></a>第6章 使用链接</h2><h3 id="6-1-创建链接"><a href="#6-1-创建链接" class="headerlink" title="6.1 创建链接"></a>6.1 创建链接</h3><p>使用URL创建链接，需要： </p>
-<ul>
-<li>要链接到的文件名(或者URL)</li>
-<li>用作可单击链接的文本</li>
-</ul>
-<p>在链接标签中，只有文本是在网页上可见的；单击链接时，浏览器将加载相关联的URL。</p>
-<h4 id="6-1-1-链接标签"><a href="#6-1-1-链接标签" class="headerlink" title="6.1.1 链接标签"></a>6.1.1 链接标签<a></h4><p><a></a>也被称为锚标签，因为它也可用于创建锚。链接标签最常用的用途是，用于创建到其他网页的链接。</p>
-<p>标签<a>必须包含一些属性。</p>
-<p>在链接标签中，最常见的属性是herf，它表示超文本引用，可以使用它来指定链接指向的文件名或URL。</p>
-<p>*<em>注意： *</em>在HTML5中，没有任何属性的<a>也是合法的，这种链接称为占位符链接，可将其与CSS和脚本结合起来使用。</p>
-<p>关于具体如何使用链接： </p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gffz85iunhj31di0g6grd.jpg" alt="image-20200604085951473"></p>
-<p>在链接中，文件名是区分大小写的，但是url不区分。</p>
-<p>有关标签嵌套的提醒： </p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gffzmcfesnj31au0bob0c.jpg" alt="image-20200604091329375"></p>
-<h3 id="6-2-使用相对和绝对路径链接到本地页面"><a href="#6-2-使用相对和绝对路径链接到本地页面" class="headerlink" title="6.2 使用相对和绝对路径链接到本地页面"></a>6.2 使用相对和绝对路径链接到本地页面</h3><p>*<em>注意： *</em>文件夹和目录说的是一码事，具体使用哪个取决于的是操作系统。</p>
-<p>要在链接中指定相对路径名，必须使用UNIX式路径，而不管使用的是什么操作系统。即，</p>
-<p>使用斜杠(/)来分隔目录名，并使用两点(..)来表示当前目录的父目录。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gffzrke0vmj31bk0ic7ip.jpg" alt="image-20200604091831046"></p>
-<h4 id="6-2-1-绝对路径名"><a href="#6-2-1-绝对路径名" class="headerlink" title="6.2.1 绝对路径名"></a>6.2.1 绝对路径名</h4><p>相对路径名通过指定相对于当前页面的位置来指定要链接到的页面，而绝对路径名，从顶级目录出发，要经过哪些目录才能到达这个文件。</p>
-<p>绝对路径总是以斜杠打头，以便与当前目录区分开来。斜杠后面从顶级目录出发，前往链接到的文件需要经过的所有目录。</p>
-<p>*<em>注意： *</em></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gffzv91xspj31ey0o0qnz.jpg" alt="image-20200604092202966"></p>
-<h4 id="6-2-2-该使用相对路径还是使用绝对路径"><a href="#6-2-2-该使用相对路径还是使用绝对路径" class="headerlink" title="6.2.2 该使用相对路径还是使用绝对路径"></a>6.2.2 该使用相对路径还是使用绝对路径</h4><p>合理混合使用这两种链接是最佳的选择。经验规则是： </p>
-<p>如果链接的页面属于同一个集合，就使用相对路径，否则，使用绝对路径。</p>
-<h3 id="6-3-链接到Web上的其他文档"><a href="#6-3-链接到Web上的其他文档" class="headerlink" title="6.3 链接到Web上的其他文档"></a>6.3 链接到Web上的其他文档</h3><p>要链接到Internet上的其他页面(远程页面)，也可以使用链接标签。</p>
-<p>使用<em></em>可以将字体设置为斜体。</p>
-<h3 id="6-4-链接到文档的特定位置"><a href="#6-4-链接到文档的特定位置" class="headerlink" title="6.4 链接到文档的特定位置"></a>6.4 链接到文档的特定位置</h3><p>要链接到另一个页面的特定位置，只需在链接的URL中指定要链接的元素的ID。</p>
-<p>也可以使用链接跳到网页中的特定元素。</p>
-<p>ID属性可用于页面的任何元素，唯一的要求是，每个ID在当前页面中是独一无二的。</p>
-<p>Id还可用于设置页面的样式。</p>
-<h4 id="6-4-1-创建链接和锚"><a href="#6-4-1-创建链接和锚" class="headerlink" title="6.4.1 创建链接和锚"></a>6.4.1 创建链接和锚</h4><p>创建一个锚的例子： </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">"part4"</span>&gt;</span>Part Four: Grapefruit from Heaven <span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在链接中指向一个锚： </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"mybgdoc.html#part"</span>&gt;</span>Go to part 4<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>其中#后面是id</p>
-<h4 id="6-4-2-标签的name属性"><a href="#6-4-2-标签的name属性" class="headerlink" title="6.4.2 标签的name属性"></a>6.4.2 标签<a>的name属性</h4><p>使用标签<a>创建锚时，不是使用属性herf来链接到特定的页面，而使用属性name来指出这是一个可链接的锚。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span>&gt;</span> name="part4"<span class="tag">&lt;/<span class="name">a</span>&gt;</span>Part Four : Grapefruit from Heaven </span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>建议不要不用属性name来创建锚链接，而是使用ID。ID属性适用于任何HTML元素，但是name只支持<a>标签。</p>
-<h4 id="6-4-3-链接到当前文档的其他元素"><a href="#6-4-3-链接到当前文档的其他元素" class="headerlink" title="6.4.3 链接到当前文档的其他元素"></a>6.4.3 链接到当前文档的其他元素</h4><p>在当前页面链接是，只需要6.4.1的锚的示例中#号后面的部分，包含#号在内。</p>
-<h3 id="6-5剖析URL"><a href="#6-5剖析URL" class="headerlink" title="6.5剖析URL"></a>6.5剖析URL</h3><p>URL：统一资源定位符</p>
-<h4 id="6-5-1-URL的组成成分"><a href="#6-5-1-URL的组成成分" class="headerlink" title="6.5.1 URL的组成成分"></a>6.5.1 URL的组成成分</h4><p>包含三部分： 协议，主机名，目录或文件名</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfh4l9mzr4j319o0e4dmq.jpg" alt="image-20200605085059262"></p>
-<p><strong>端口：</strong> URL的主机部分可能包含端口号。端口号让浏览器使用合适的协议链接到相应的网络端口。仅当相应请求的服务器被显式地设置为侦听特定端口时，才需要在URL中包含端口号。服务器默认端口是80，此时可以省略。</p>
-<p>当存在端口号时： </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://my-public-access-unix.com:155/pub/file</span><br></pre></td></tr></table></figure>
-
-<p>服务器的根url的路径为/，如<a href="http://www.example.com/" target="_blank" rel="noopener">http://www.example.com/</a></p>
-<p>很多url后面还有查询，它通过问号与URL的其他部分分开。查询由名称-值对组成，名称-值对之间用&分隔，而名称和值之间用等号=分隔。例如： </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.google.com/search?q=china&amp;oq=china&amp;aqs=chrome..69i57j69i61j69i60.6294j0j1&amp;sourceid=chrome&amp;ie=UTF-8</span><br></pre></td></tr></table></figure>
-
-<p>其中</p>
-<p>oq：上次搜索关键字</p>
-<p>ie：关键字编码格式</p>
-<h4 id="6-5-2-URL中的特殊字符"><a href="#6-5-2-URL中的特殊字符" class="headerlink" title="6.5.2 URL中的特殊字符"></a>6.5.2 URL中的特殊字符</h4><p>URL中的特殊字符是指除了大小写字母、数字0-9和下述符号外的字符： 美元$,连字符(-),下划线(_)句点(.)。</p>
-<p>使用特殊字符，要经过转义编码以防止它们被视为URL的一部分。而编码是由百分符号和两位十六进制数组成(0-9,A-F)的</p>
-<p>例如： </p>
-<p>空格： %20</p>
-<p>问号：%3e</p>
-<p>斜杠： %2f</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfh81cd0ymj31cc0iuauw.jpg" alt="image-20200605105015529"></p>
-<h4 id="6-5-3-属性rel"><a href="#6-5-3-属性rel" class="headerlink" title="6.5.3 属性rel"></a>6.5.3 属性rel</h4><p>rel是<a>的另一个属性，用于描述当前文档与链接到的文档之间的关系。</p>
-<p>这个属性有一组特定的可能取值，其中最著名的是nofollow，它让搜索引擎给链接到的文档排名时不要考虑这个链接，是一种防范搜索引擎作弊的手段。使用如下： </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.example.com/"</span> <span class="attr">ref</span>=<span class="string">"nofollow"</span>&gt;</span>Link to example site<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>关于rel更多的属性，请查看网站： </p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://microformats.org/wiki/existing-values</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="6-6-URL分类"><a href="#6-6-URL分类" class="headerlink" title="6.6 URL分类"></a>6.6 URL分类</h3><p>统一资源定位符规范定义了很多种URL。</p>
-<h4 id="6-6-1-HTTP-URL"><a href="#6-6-1-HTTP-URL" class="headerlink" title="6.6.1 HTTP URL"></a>6.6.1 HTTP URL</h4><p>是最长的URL类型。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfh8dt83qoj31cg0t8gt5.jpg" alt="image-20200605110207485"></p>
-<h4 id="6-6-2-匿名FTP-URL"><a href="#6-6-2-匿名FTP-URL" class="headerlink" title="6.6.2 匿名FTP URL"></a>6.6.2 匿名FTP URL</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfh8fp5qx8j31b40ti4qp.jpg" alt="image-20200605110403122"></p>
-<p>浏览器使用FTP来获取文件时，如果获取的是HTML文件，浏览器就将显示它，否则就将它保存在磁盘中。</p>
-<p>ps： 我在想那些打开链接就直接下载的URL应该就属于FTP URL。</p>
-<h4 id="6-6-3-非匿名-FTP-URL"><a href="#6-6-3-非匿名-FTP-URL" class="headerlink" title="6.6.3 非匿名 FTP URL"></a>6.6.3 非匿名 FTP URL</h4><p>总结就是： 尽量不使用，必须使用时使用专用的FTP客户端而不是浏览器。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfh8mpt5b0j31es0l0txx.jpg" alt="image-20200605111047982"></p>
-<h4 id="6-6-4-mailto-URL"><a href="#6-6-4-mailto-URL" class="headerlink" title="6.6.4 mailto URL"></a>6.6.4 mailto URL</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfh8r7fqaxj30u00w4kjl.jpg" alt="image-20200605111505682"></p>
-<h4 id="6-6-5-文件URL"><a href="#6-6-5-文件URL" class="headerlink" title="6.6.5 文件URL"></a>6.6.5 文件URL</h4><p>文件URL指向本地磁盘中的文件，即指向浏览器所在系统中的文件。(它们包含三个而不是两个斜杠)</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">file:///dirl/dir2/file</span></span><br></pre></td></tr></table></figure>
-
-<p>文件URL的另一个用途是，为浏览器指定一个本地启动页面，其中包含到经常访问的网站的链接。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfh8xh9xodj31bs0eqwxf.jpg" alt="image-20200605112109294"></p>
-<p>ps： 有点绕</p>
-<h3 id="6-8-问答"><a href="#6-8-问答" class="headerlink" title="6.8 问答"></a>6.8 问答</h3><h4 id="问：有办法在malto-URL中指定主题吗？"><a href="#问：有办法在malto-URL中指定主题吗？" class="headerlink" title="问：有办法在malto URL中指定主题吗？"></a>问：有办法在malto URL中指定主题吗？</h4><p>可以。具体见截图。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfhmw2jc0bj31bg08gdni.jpg" alt="image-20200605192408660"></p>
-<h2 id="第7章-使用HTML和CSS设置文本的格式"><a href="#第7章-使用HTML和CSS设置文本的格式" class="headerlink" title="第7章 使用HTML和CSS设置文本的格式"></a>第7章 使用HTML和CSS设置文本的格式</h2><h3 id="7-1-字符级元素"><a href="#7-1-字符级元素" class="headerlink" title="7.1 字符级元素"></a>7.1 字符级元素</h3><p>字符级元素指的是影响其他HTML标签中单词或字符的标签，它们修改这些文本的外观，使其不同于周围的文本，例如将其设置为粗体或带下划线。</p>
-<p><a>是字符级元素。</p>
-<p>可以在块级元素中嵌套字符级元素，也可以在字符级元素中嵌套块级元素。</p>
-<p>要修改文本中一系列字符的外观，可以使用： </p>
-<ul>
-<li>HTML语义标签或级联样式表(CSS)</li>
-</ul>
-<h4 id="7-1-1-HTML语义标签"><a href="#7-1-1-HTML语义标签" class="headerlink" title="7.1.1 HTML语义标签"></a>7.1.1 HTML语义标签</h4><p>语义标签描述了它包含的文本的定义，而不是这些文本在浏览器中的外观。例如 ：HTML语义标签可能指出它包含的内容是一个定义、代码片段或者要突出的单词。</p>
-<p>每个字符样式标签都有起始标签和结束标签，并影响包含在这两个标签之间的文本。下面是HTML一些语义标签： </p>
-<ul>
-<li><em>: 这个标签指出要以某种方式突出字符。大多数浏览器都将<em>显示为斜体。</li>
-<li><strong>使用这个标签时，字符比使用<em>时更加突出，通常显示为粗体</li>
-<li><code>: 这个标签指出它包含的文本是示例代码，应使用Courier等等宽字体显示。</li>
-<li><samp>:这个标签指出它包含的是示例文本，通常像<code>一样使用等宽字体显示。</li>
-<li><kbd>:这个标签标示需要用户输入的文本，也用等宽字体显示</li>
-<li><var>: 这个标签标示需要用实际值替换的变量或其他实体的名称，通常显示为斜体或下划线.</li>
-<li><dfn>: 这个标签标示定义。用于突出要定义或刚定义的单词(通常使用斜体表示)</li>
-<li><cite>: 这个标签标示引用的作品名，通常显示为斜体</li>
-<li><abbr>: 这个标签标示缩略语</li>
-</ul>
-<h4 id="7-1-2-HTML5-物理样式标签的变化"><a href="#7-1-2-HTML5-物理样式标签的变化" class="headerlink" title="7.1.2 HTML5 物理样式标签的变化"></a>7.1.2 HTML5 物理样式标签的变化</h4><p>物理样式： physical style.</p>
-<p>书上提示不要使用它们，而应该使用CSS或等价的语义标签。</p>
-<ul>
-<li><b>:通常显示为粗体的文本</li>
-<li><i>：通常显示为斜体的文本</li>
-<li><u>：通常显示为带下划线的文本</li>
-<li><samll>：使用小字号显示的文本</li>
-<li><sub>：下标</li>
-<li><sup>：上标</li>
-</ul>
-<h3 id="7-2-使用CSS设置字符的格式"><a href="#7-2-使用CSS设置字符的格式" class="headerlink" title="7.2 使用CSS设置字符的格式"></a>7.2 使用CSS设置字符的格式</h3><p>大多数标签都以某种方式影响其包含的文本的外观，但有一个标签对其包含的文本没有任何影戏，这就是标签<span>,它存在的目的就是要与样式表相关联。使用时，只需要用它来包含文本即可。</p>
-<p>单独使用<span>时没有任何效果，与属性结合起来，它可取代前面的所有标签，而且效果好很多。</p>
-<h4 id="7-2-1-text-decoration-属性"><a href="#7-2-1-text-decoration-属性" class="headerlink" title="7.2.1 text-decoration 属性"></a>7.2.1 text-decoration 属性</h4><p>text-decoration属性用于指定要对标签内的文本应用哪种装饰。这个属性的可取值包括： underline,overline,line-through和blink。</p>
-<h4 id="7-2-2-字体属性"><a href="#7-2-2-字体属性" class="headerlink" title="7.2.2 字体属性"></a>7.2.2 字体属性</h4><p>修改文本的外观时，可使用的一系列其他主要属性时字体属性。使用字体属性时，几乎可以修改浏览器渲染文本时使用的任何字体的任何方面。</p>
-<p>属性font-style可用于将文本设置为斜体，它有三种可能取值：normal,italic(像标签<i>那样渲染文本),oblique(标准字体的倾斜版本)。</p>
-<p>将文本设置为oblique 或italic时，浏览器将选择这两者中可用的那个。如果这两者都没有安装，浏览器通常会生成字体的倾斜版本。</p>
-<p>使用CSS来创建粗体文本。在HTML中，只有两种选择：要么为粗体，要么不为粗体。而使用CSS时，可以有更多的选择。实际上，文本要么为粗体，要么正常。要将文本设置为粗体，可以属性<strong>font-weight</strong>。这个值的属性的可能取值包括normal,bold,bolder,lighter以及100-900（以100为单位）</p>
-<p>提示： </p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfhqdxo4jpj31dc0ae7fi.jpg" alt="image-20200605212508661"></p>
-<p>还可以使用属性<strong>font-family</strong>来设置文本使用的字体系列；还可以指定文本使用特定的字体。</p>
-<p>指定字体系列时，具体使用哪种字体将取决于用户系统的首选项。</p>
-<p>指定字体系列时，可使用属性<strong>font-family</strong>,其值可能为serif, sans-serif,cursive,fantasy,monospase.</p>
-<p>使用CSS可以实现HTML标签无法实现的一种功能：<strong>font-variant</strong>.它可以渲染文本，即将小写字母替换为小型大写字母(small capital)字母，这个 属性有两个可能的取值： normal,small-caps.</p>
-<p>PS: 结果类似于下面这种，应该一看就知道是什么意思了：</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfhqodvajhj30m2024t8p.jpg" alt="image-20200605213512350"></p>
-<h3 id="7-3-预定格式的文本"><a href="#7-3-预定格式的文本" class="headerlink" title="7.3 预定格式的文本"></a>7.3 预定格式的文本</h3><p>HTML代码中包含的多余空白都会被浏览器删除，但是使用预定义格式文本标签<pre>时会有例外。对于放在标签<pre>和</pre>之前的文本，其中的所有空白都会保留在最终输出中，这可以用于在显示的页面中保留HTML代码中文本的距离。</p>
-<p>预定义格式的文本通常是使用Courier等等宽字体显示的。</p>
-<p>在包含在标签<pre>内的文本中，可食用链接标签和字体样式，但不能使用标题和段落等元素。</p>
-<p>应使用硬回车进行换行，并尽可能让每行的长度不超过60个字符。</p>
-<p>在预定义格式文本中慎用制表符，因为字表符在不同浏览器中代表不同字符。</p>
-<p>pre还非常适合用于快速而轻松地将纯文本格式文件(电子邮件)转换为HTML。</p>
-<p>标签pre还可用于在网页中创建ASCII艺术品。像下面这样： <img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfi8bo5kqnj30ii09k75c.jpg" alt="image-20200606074546132"></p>
-<h3 id="7-4-水平分割线-分隔"><a href="#7-4-水平分割线-分隔" class="headerlink" title="7.4 水平分割线(分隔)"></a>7.4 水平分割线(分隔)</h3><p>标签<hr>在网页中创建了一条水平线，它没有结束标签，也不包含任何文本。在HTML5中，这个标签被赋予了语义：主题分隔。这个标签一直都显示为一条水平线，现在的语义是：表示主题变了。</p>
-<p><strong>结束空元素</strong>：</p>
-<p>为了符合XHTML的要求，可以使用<hr/>作为结束标签。即使这个标签包含属性，斜杠也应位于标签名后面。 </p>
-<h4 id="7-4-1-的属性"><a href="#7-4-1-的属性" class="headerlink" title="7.4.1 的属性"></a>7.4.1 <hr>的属性</h4><ul>
-<li>size:指定水平线的粗细，单位为像素，默认为2像素，也是最细的水平线</li>
-<li>Width:指定水平线的水平宽度。可以将宽度指定为特定的像素级，也可以指定为屏幕宽度的百分比。</li>
-</ul>
-<p>PS: 这里说一下我看到这里时的困惑，size和width有什么不同呢？具体看下面的截图就能知道了。</p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfjp50csj8j322m0caq4l.jpg" alt="image-20200607141306694"></p>
-<p>如果指定的宽度比浏览器的宽度小，还可使用属性align指定水平线的对齐方式：</p>
-<ul>
-<li>左对齐:align="left"</li>
-<li>右对齐:align="right"</li>
-<li>居中:align="center"</li>
-</ul>
-<p>默认情况下，水平居中</p>
-<p>使用已摒弃的属性noshade让浏览器将水平线绘制为没有三维投影的普通线条。</p>
-<h3 id="7-5-换行"><a href="#7-5-换行" class="headerlink" title="7.5 换行"></a>7.5 换行<br></h3><p><br>在其所在的地方换行。浏览器遇到标签<br>时间，将重起一行显示它后面的文本，且缩进程度与当前元素的左边距相同。</p>
-<p>br仅仅是重起一行显示后续文本，它不会增加新行的行前距和行后距，也不会改变当前实体的字体和样式。</p>
-<h1 id="遗忘知识"><a href="#遗忘知识" class="headerlink" title="遗忘知识"></a>遗忘知识</h1><h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ul>
-<li><caption> : 表格的标题</li>
-<li><b>：加粗</li>
-</ul>
-<h1 id="自己没有解决但是上网找到解决方法的问题"><a href="#自己没有解决但是上网找到解决方法的问题" class="headerlink" title="自己没有解决但是上网找到解决方法的问题"></a>自己没有解决但是上网找到解决方法的问题</h1><ul>
-<li>HTML中嵌套表格时，最里面的表格按照常规方法是不能居中显示的，解决办法如下</li>
-</ul>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghb3jngmj7j31h803swit.jpg" alt="image-20200801102208275"></p>
-<p>- </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/06/01/HTML/HTML/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/01/HTML/HTML/" class="post-title-link" itemprop="url">HTML/HTML</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-06-01 10:22:20 / 修改时间：14:27:50" itemprop="dateCreated datePublished" datetime="2020-06-01T10:22:20+08:00">2020-06-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><p>全称： 超文本标记语言(HyperText Markup Language)</p>
-<p>##HTML文件的后缀： </p>
-<ul>
-<li>.html</li>
-<li>htm</li>
-</ul>
-<p>以上两种没有任何区别</p>
+<h1 id="有意思的问答"><a href="#有意思的问答" class="headerlink" title="有意思的问答"></a>有意思的问答</h1><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghj7hw7ba8j31dy05ujvd.jpg" alt="image-20200808104316694"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghj7pwlkjrj31dw064q8b.jpg" alt="image-20200808105104209"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghj7vs52hmj313i04cwhn.jpg" alt="image-20200808105641873"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghj7zfbsi0j31co046tcn.jpg" alt="image-20200808110013526"></p>
 
       
     </div>
@@ -1708,7 +1426,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1752,7 +1470,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">120</span>
+          <span class="site-state-item-count">124</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1824,7 +1542,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共89.1k字</span>
+  <span class="post-count">博客全站共92.4k字</span>
 </div>
 
         

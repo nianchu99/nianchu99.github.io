@@ -224,6 +224,295 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/17/Python/filter%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">filter函数</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-17 11:56:47 / 修改时间：15:35:14" itemprop="dateCreated datePublished" datetime="2020-02-17T11:56:47+08:00">2020-02-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># filter ： Python内建的filter函数用于过滤序列</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">和map()类似。filter也接收一个序列。区别是：filter把传入额函数依次作用于每个元素，然后根据</span></span><br><span class="line"><span class="string">返回值是True 还是Flase决定保留还是丢弃该元素</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">            <span class="comment">#在一个list中删掉偶数，只保留奇数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line">print(list(filter(is_odd, [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>])))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把一个序列中的空字符串删掉</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">not_empty</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> s <span class="keyword">and</span> s.strip()</span><br><span class="line"></span><br><span class="line">print(list(filter(not_empty,[<span class="string">'a'</span>, <span class="string">''</span>, <span class="literal">None</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>])))</span><br><span class="line"><span class="string">"""返回值：</span></span><br><span class="line"><span class="string">['a', 'B', 'C', 'D']</span></span><br><span class="line"><span class="string">注意到：filter函数返回的是一个lterator，也就是一个惰性序列，所以要强迫fliter完成计算结果，需要用到方法list</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/17/Matlab/%E8%AF%BE%E7%A8%8B%E5%AF%BC%E5%85%A5/" class="post-title-link" itemprop="url">课程导入</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-17 10:53:53 / 修改时间：11:34:30" itemprop="dateCreated datePublished" datetime="2020-02-17T10:53:53+08:00">2020-02-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="什么叫计算"><a href="#什么叫计算" class="headerlink" title="什么叫计算"></a>什么叫计算</h1><p>1 算术运算</p>
+<p>2 较复杂的运算：即根据已知量求出未知量</p>
+<h1 id="什么叫科学计算"><a href="#什么叫科学计算" class="headerlink" title="什么叫科学计算"></a>什么叫科学计算</h1><p>对于复杂的数值计算问题，可以利用计算机进行问题求解</p>
+<blockquote>
+<p>利用计算机进行数值计算的方法叫做数值计算</p>
+</blockquote>
+<h1 id="科学计算与Matlab语言的关系"><a href="#科学计算与Matlab语言的关系" class="headerlink" title="科学计算与Matlab语言的关系"></a>科学计算与Matlab语言的关系</h1><blockquote>
+<p>数值问题 ——&gt; 求解算法 ——&gt; 程序实现——&gt; 结果分析</p>
+</blockquote>
+<p>Matlab是矩阵实验室的缩写</p>
+<h2 id="Matlab语言的主要功能"><a href="#Matlab语言的主要功能" class="headerlink" title="Matlab语言的主要功能"></a>Matlab语言的主要功能</h2><p>例如：可以求解一元二次方程</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p = [<span class="number">1</span>,<span class="number">-3</span>,<span class="number">1</span>];</span><br><span class="line">x = roots(p)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/16/Python/media/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/16/Python/media/%E5%BB%96%E9%9B%AA%E5%B3%B0Python%E6%95%99%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98_%E5%89%AF%E6%9C%AC/" class="post-title-link" itemprop="url">廖雪峰Python教程练习题</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-16 23:54:37" itemprop="dateCreated datePublished" datetime="2020-02-16T23:54:37+08:00">2020-02-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-24 23:20:16" itemprop="dateModified" datetime="2020-02-24T23:20:16+08:00">2020-02-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># names.py</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">normalize</span><span class="params">(name)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> name.capitalize()</span><br><span class="line"></span><br><span class="line">L1 = [<span class="string">'adam'</span>, <span class="string">'LISA'</span>, <span class="string">'barT'</span>]</span><br><span class="line">L2 = list(map(normalize, L1))</span><br><span class="line">print(L2)</span><br><span class="line"><span class="comment"># 求积</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">prod</span><span class="params">(L)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">prod1</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * y</span><br><span class="line">    <span class="keyword">return</span> reduce(prod1, L)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">'3 * 5 * 7 * 9 ='</span>, prod([<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))</span><br><span class="line"><span class="comment"># 转换字符串</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">先记住这个结果，等会实现需要用到</span></span><br><span class="line"><span class="string">a = '123.456'</span></span><br><span class="line"><span class="string">n = a.index('.')</span></span><br><span class="line"><span class="string">b = [x for x in a[:n]]</span></span><br><span class="line"><span class="string">print(b)</span></span><br><span class="line"><span class="string">结果：</span></span><br><span class="line"><span class="string">['1', '2', '3']</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">str2float</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">    n = s.index(<span class="string">'.'</span>)</span><br><span class="line">    s1 = list(map(int, [x <span class="keyword">for</span> x <span class="keyword">in</span> s[:n]]))</span><br><span class="line">    s2 = list(map(int, [y <span class="keyword">for</span> y <span class="keyword">in</span> s[n+<span class="number">1</span>: ]]))</span><br><span class="line">    <span class="keyword">return</span> reduce(fn,s1) + (reduce(fn, s2) / <span class="number">10</span> ** len(s2))</span><br><span class="line"></span><br><span class="line">print(str2float(<span class="string">'123.456'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">['Adam', 'Lisa', 'Bart']</span></span><br><span class="line"><span class="string">3 * 5 * 7 * 9 = 945</span></span><br><span class="line"><span class="string">123.456</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/15/Python/Python%E2%80%94%E5%87%BD%E6%95%B0%E5%BC%8F%E5%AD%90%E7%BC%96%E7%A8%8B/" class="post-title-link" itemprop="url">Python/Python—函数式子编程</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-02-15 20:00:00" itemprop="dateCreated datePublished" datetime="2020-02-15T20:00:00+08:00">2020-02-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-16 10:16:07" itemprop="dateModified" datetime="2020-02-16T10:16:07+08:00">2020-02-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一个最简单的高阶函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y,f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (f(x)+f(y))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(add(<span class="number">500</span>,<span class="number">20</span>,abs))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># map函数</span></span><br><span class="line"><span class="string">"""map函数接受两个参数，一个是函数，一个是lterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的lterable返回"""</span></span><br><span class="line"><span class="comment"># 代码实现：</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sq</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x * x</span><br><span class="line">print(list(map(sq,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>])))</span><br><span class="line"><span class="comment">#reduce函数</span></span><br><span class="line"><span class="comment"># reduce函数：reduce把一个函数作用在一个序列[x1, x2, x3, …]上，这个函数必须接收两个参数，reduce把结果继续和序列的下一个元素做累积计算</span></span><br><span class="line"><span class="comment">## 用reduce函数实现序列的求和</span></span><br><span class="line"><span class="comment"># 使用时需要先导入一个模块</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line">numbers = [<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">11</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">17</span>,<span class="number">19</span>]</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">print(reduce(add,numbers))</span><br><span class="line"><span class="comment"># 其实用sum函数求和更简单</span></span><br><span class="line">print(sum(numbers))</span><br><span class="line"><span class="comment">## reduce的妙用：将[1，3，5，7，9，]变为整数13579</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(x,y)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">print(reduce(f,[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>]))</span><br><span class="line"><span class="comment">## map + reduce 实现str转int</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">char2num</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">'0'</span>:<span class="number">0</span>,<span class="string">'1'</span>:<span class="number">1</span>,<span class="string">'2'</span>:<span class="number">2</span>,<span class="string">'3'</span>:<span class="number">3</span>,<span class="string">'4'</span>:<span class="number">4</span>,<span class="string">'5'</span>:<span class="number">5</span>,<span class="string">'6'</span>:<span class="number">6</span>,<span class="string">'7'</span>:<span class="number">7</span>,<span class="string">'8'</span>:<span class="number">8</span>,<span class="string">'9'</span>:<span class="number">9</span>&#125;[s]</span><br><span class="line"><span class="comment"># 上一行函数是简单的给出key调用字典的value。s必须在字典key里。关键在于字符串在python里是可以</span></span><br><span class="line"><span class="comment"># 被当做list用的。map(char2num, '13579')把字符串'13579'当list用，于是就变成了</span></span><br><span class="line"><span class="comment"># map(char2num, ['1','3','5','7','9'])得到的是[1, 3, 5, 7, 9]</span></span><br><span class="line">reduce(f,map(char2num, <span class="string">'13579'</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string">[1, 9, 25, 49, 81]</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">13579</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -722,388 +1011,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/14/Python/Python%20itertools%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">Python/Python itertools模块</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-01-14 23:17:00" itemprop="dateCreated datePublished" datetime="2020-01-14T23:17:00+08:00">2020-01-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-15 19:10:00" itemprop="dateModified" datetime="2020-02-15T19:10:00+08:00">2020-02-15</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h1><p>Python内置的itertools模块中包含了一系列用来产生不同款类型迭代器的函数和类，这些函数的返回值都是一个迭代器。</p>
-<h1 id="迭代器函数类型"><a href="#迭代器函数类型" class="headerlink" title="迭代器函数类型"></a>迭代器函数类型</h1><p><em>无限迭代器</em>：生成一个无限序列，比如自然序列1，2，3，4…;</p>
-<p><em>有限迭代器</em>：接受一个或多个序列作为参数，进行组合、分组和过滤</p>
-<p><em>组合生成器</em>：序列的排列、组合，求序列的笛卡尔积等</p>
-<h2 id="无限迭代器"><a href="#无限迭代器" class="headerlink" title="无限迭代器"></a>无限迭代器</h2><h2 id="组合生成器"><a href="#组合生成器" class="headerlink" title="组合生成器"></a>组合生成器</h2><h3 id="product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"><a href="#product：-product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。" class="headerlink" title="product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。"></a>product： product用于求多个可迭代对象的组合，它跟嵌套的for循环等价。</h3><p><strong>示例</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">j = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> itertools.product(<span class="string">"12345"</span>,<span class="string">"ABCDE"</span>):</span><br><span class="line">    print(i,end=<span class="string">''</span>)</span><br><span class="line">    j = j+<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(<span class="string">""</span>)</span><br><span class="line">print(<span class="string">"一共有&#123;&#125;种组合"</span>.format(j))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果为:</span></span><br><span class="line"><span class="string">('1', 'A')('1', 'B')('1', 'C')('1', 'D')('1', 'E')('2', 'A')('2', 'B')('2', 'C')('2', 'D')('2', 'E')('3', 'A')('3', 'B')('3', 'C')('3', 'D')('3', 'E')('4', 'A')('4', 'B')('4', 'C')('4', 'D')('4', 'E')('5', 'A')('5', 'B')('5', 'C')('5', 'D')('5', 'E')</span></span><br><span class="line"><span class="string">一共有25种组合</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="permutations-用于生成一个全排列"><a href="#permutations-用于生成一个全排列" class="headerlink" title="permutations: 用于生成一个全排列"></a>permutations: 用于生成一个全排列</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.permutations(nums)))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">[(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="combinations-用于求序列的组合"><a href="#combinations-用于求序列的组合" class="headerlink" title="combinations:用于求序列的组合"></a>combinations:用于求序列的组合</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">nums = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">print(list(itertools.combinations(nums,<span class="number">2</span>)))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">[(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="⚠️注意区分product、permutations和combinations的区别"><a href="#⚠️注意区分product、permutations和combinations的区别" class="headerlink" title="⚠️注意区分product、permutations和combinations的区别"></a>⚠️注意区分product、permutations和combinations的区别</h4>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Python/Python%E5%B0%8F%E6%8A%80%E5%B7%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/14/Python/Python%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">Python/Python小技巧</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-01-14 23:17:00" itemprop="dateCreated datePublished" datetime="2020-01-14T23:17:00+08:00">2020-01-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-16 12:48:57" itemprop="dateModified" datetime="2020-02-16T12:48:57+08:00">2020-02-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1><h2 id="sorted-方法——可用于给字符串排序，通常是按照字母表的顺序"><a href="#sorted-方法——可用于给字符串排序，通常是按照字母表的顺序" class="headerlink" title="sorted()方法——可用于给字符串排序，通常是按照字母表的顺序"></a>sorted()方法——可用于给字符串排序，通常是按照字母表的顺序</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">"fadsfga"</span></span><br><span class="line">print(sorted(a))</span><br><span class="line"></span><br><span class="line"><span class="string">"""输出结果：</span></span><br><span class="line"><span class="string">['a', 'a', 'd', 'f', 'f', 'g', 's']</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="count-方法"><a href="#count-方法" class="headerlink" title="count()方法"></a>count()方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">'fnsadfgdsgsadfdsa'</span></span><br><span class="line">b = a.count(<span class="string">'f'</span>)</span><br><span class="line">print(b)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">3</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="ord-函数"><a href="#ord-函数" class="headerlink" title="ord()函数"></a>ord()函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## ord()函数# ord() 函数以一个字符作为参数，返回参数对应的 ASCII 数值，便于和后面捕捉的键位关联</span></span><br><span class="line"></span><br><span class="line">print(ord(<span class="string">'a'</span>))</span><br><span class="line">print(ord(<span class="string">'A'</span>))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">97</span></span><br><span class="line"><span class="string">65</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="二元、三元表达式"><a href="#二元、三元表达式" class="headerlink" title="二元、三元表达式"></a>二元、三元表达式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 二元表达式</span></span><br><span class="line"></span><br><span class="line">init = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">number = <span class="number">100</span> <span class="keyword">if</span> init <span class="keyword">else</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">print(number)</span><br><span class="line"></span><br><span class="line"><span class="comment">##三元表达</span></span><br><span class="line">wide= <span class="number">-1</span></span><br><span class="line"></span><br><span class="line">new_w = <span class="number">299</span> <span class="keyword">if</span>  wide&gt;<span class="number">0</span> <span class="keyword">else</span> <span class="string">'sdf'</span> <span class="keyword">if</span> wide==<span class="number">0</span> <span class="keyword">else</span> <span class="number">28</span></span><br><span class="line">print(new_w)</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">28</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="randrange——获取指定范围内的随机数"><a href="#randrange——获取指定范围内的随机数" class="headerlink" title="randrange——获取指定范围内的随机数"></a>randrange——获取指定范围内的随机数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## randrange---给定一个范围，获取范围之内的随机数</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">print(random.randrange(<span class="number">100</span>))</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="enumerate-函数"><a href="#enumerate-函数" class="headerlink" title="enumerate()函数"></a>enumerate()函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">names = <span class="string">'chenqiaochu'</span></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> enumerate(names):</span><br><span class="line">  print(key,value)</span><br><span class="line">  </span><br><span class="line"> <span class="string">'''output:</span></span><br><span class="line"><span class="string"> '''</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h2><p><strong><em>Python不能直接将包含小数点的字符串’1127437398.85751’ 转换为整数</em></strong></p>
-<h2 id="关于字典键值对的输入"><a href="#关于字典键值对的输入" class="headerlink" title="关于字典键值对的输入"></a>关于字典键值对的输入</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">'name'</span> : <span class="string">'重庆'</span>,<span class="string">'mather'</span> : <span class="string">'China'</span> &#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> a.keys():</span><br><span class="line">    print(key, a[key])</span><br><span class="line"><span class="string">'''输出结果：</span></span><br><span class="line"><span class="string">name 重庆</span></span><br><span class="line"><span class="string">mather China</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="关于字典"><a href="#关于字典" class="headerlink" title="关于字典"></a>关于字典</h2><h2 id="键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。"><a href="#键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。" class="headerlink" title="键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。"></a>键必须不可变，所以可以用数字，字符串或元组充当，所以用列表就不行。</h2><h2 id="字典内置函数总结："><a href="#字典内置函数总结：" class="headerlink" title="字典内置函数总结："></a>字典内置函数总结：</h2><p>1.cmp(dict1,dict2):比较两个元素</p>
-<p>(比较方法见：)</p>
-<blockquote>
-<p> <a href="https://blog.csdn.net/b_11111/article/details/52830590" target="_blank" rel="noopener">https://blog.csdn.net/b_11111/article/details/52830590</a></p>
-</blockquote>
-<p>2.len()计算字典元素个数，即键的总数</p>
-<p>3.str()输出字典可打印的字符串表示</p>
-<p>4.type返回变量的类型，如果变量是字典就返回字典类型</p>
-<h2 id="字典内置方法总结："><a href="#字典内置方法总结：" class="headerlink" title="字典内置方法总结："></a>字典内置方法总结：</h2><p>1.clear删除字典内的所有元素</p>
-<p>2.copy返回一个字典的浅复制</p>
-<p>3.fromkeys(sep,[,val]):创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值</p>
-<p>4.get(key)返回指定键的值，如果值不在字典中就返回None</p>
-<p>5.has_key(key)如果键在字典dict中返回true,否则返回flase</p>
-<p>6.items：以列表返回可遍历的(键值对)元组数组</p>
-<p>7.keys：以列表返回一个字典所有的键</p>
-<p>8.values:以列表返回字典中的所有值</p>
-<p>9.update(dice2):把字典dict2中键值对更新到dict中</p>
-<p>10.pop：删除给定键key所对应的值，也一同删除了键，返回值为被删除的值</p>
-<p>11.popitem:返回并删除字典中最后一对键和值</p>
-<h2 id="用字典中的元素创建一个新的字典"><a href="#用字典中的元素创建一个新的字典" class="headerlink" title="用字典中的元素创建一个新的字典"></a>用字典中的元素创建一个新的字典</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">dicts = &#123;&#125;</span><br><span class="line">dicts[<span class="string">'first'</span>] = <span class="string">"china"</span></span><br><span class="line">dicts[<span class="string">'lover'</span>] = <span class="string">'chongqing'</span></span><br><span class="line"># 用列表中的元素重新创建一个新列表</span><br><span class="line">dicts1 = &#123;&#125;</span><br><span class="line">print(dicts[<span class="string">'first'</span>])</span><br><span class="line">dicts1 = &#123;<span class="string">'a'</span>:dicts[<span class="string">'first'</span>],<span class="string">'b'</span>:dicts[<span class="string">'lover'</span>]&#125;</span><br><span class="line">print(dicts1)</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">&#123;'</span>a<span class="string">': '</span>chenqiaochu<span class="string">', '</span>b<span class="string">': '</span>leibowen<span class="string">'&#125;</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="变量可以指向函数"><a href="#变量可以指向函数" class="headerlink" title="变量可以指向函数"></a>变量可以指向函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">f = abs</span><br><span class="line">print(f(<span class="number">-100</span>))</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果:</span></span><br><span class="line"><span class="string">100</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="函数名其实就是指向函数的变"><a href="#函数名其实就是指向函数的变" class="headerlink" title="函数名其实就是指向函数的变"></a>函数名其实就是指向函数的变</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">abs =<span class="number">10</span></span><br><span class="line">print(abs)</span><br><span class="line">print(abs(<span class="number">-200</span>))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">10</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "/Users/bowenkei/Desktop/Python/项目2-数据可视化/test.py", line 3, in &lt;module&gt;</span></span><br><span class="line"><span class="string">    print(abs(-200))</span></span><br><span class="line"><span class="string">TypeError: 'int' object is not callable</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="comment"># 有结果可以看出，此时abs已经失去了原有函数的意思了</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="传入函数"><a href="#传入函数" class="headerlink" title="传入函数"></a>传入函数</h2><blockquote>
-<p>既然变量可以指向函数，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数。</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 最简单的高阶函数</span></span><br><span class="line"><span class="comment"># 一个最简单的高阶函数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x,y,f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (f(x)+f(y))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">print(add(<span class="number">500</span>,<span class="number">20</span>,abs))</span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">输出结果：</span></span><br><span class="line"><span class="string">520</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>编写高阶函数，就是让函数的参数能够接收别的函数。</p>
-<p>把函数作为参数传入，这样的函数称为高阶函数，函数式编程就是指这种高度抽象的编程范式。</p>
-</blockquote>
-<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><blockquote>
-<p>capitalize()函数 - 将字符串改为首位大写其余小写</p>
-</blockquote>
-<blockquote>
-<p>title()函数 - 将字符串改为每个单词都是首字母大写其余小写份形式</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/55.%E6%AF%94%E8%BE%83%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/55.%E6%AF%94%E8%BE%83%E5%AD%97%E7%AC%A6%E4%B8%B2/" class="post-title-link" itemprop="url">Lintcode刷题/55.比较字符串</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-14 23:15:00 / 修改时间：23:16:03" itemprop="dateCreated datePublished" datetime="2020-01-14T23:15:00+08:00">2020-01-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
-                    <span itemprop="name">Lintcode刷题</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="比较字符串"><a href="#比较字符串" class="headerlink" title="比较字符串"></a>比较字符串</h1><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a><strong>描述</strong></h3><p>比较两个字符串A和B，确定A中是否包含B中所有的字符。字符串A和B中的字符都是 <strong>大写字母</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param A: A string</span></span><br><span class="line"><span class="string">    @param B: A string</span></span><br><span class="line"><span class="string">    @return: if string A contains all of the characters in B return true else return false</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">compareStrings</span><span class="params">(self, A, B)</span>:</span></span><br><span class="line">        <span class="comment"># write your code here</span></span><br><span class="line">        <span class="comment">#此题采用了反向思维的方法，通过举出返回Flase的几种情况后，其余都是True</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> len(A) &lt; len(B):</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">if</span> len(A) == len(B):</span><br><span class="line">            <span class="keyword">return</span>(sorted(A) == sorted(B))</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> B:</span><br><span class="line">            <span class="keyword">if</span> A.count(i) &lt; B.count(i):</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/14/Lintcode%E5%88%B7%E9%A2%98/13.%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">13.字符串查找</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-14 21:13:00 / 修改时间：21:19:26" itemprop="dateCreated datePublished" datetime="2020-01-14T21:13:00+08:00">2020-01-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Lintcode%E5%88%B7%E9%A2%98/" itemprop="url" rel="index">
-                    <span itemprop="name">Lintcode刷题</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="13-字符串查找"><a href="#13-字符串查找" class="headerlink" title="13.字符串查找"></a>13.字符串查找</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    @param source:</span></span><br><span class="line"><span class="string">    @param target:</span></span><br><span class="line"><span class="string">    @return: return the index</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span><span class="params">(self, source, target)</span>:</span></span><br><span class="line">        geshu=<span class="number">0</span></span><br><span class="line">        a = len(source)</span><br><span class="line">        b = len(target)</span><br><span class="line">        <span class="keyword">if</span> source ==<span class="string">""</span> <span class="keyword">and</span> target ==<span class="string">""</span>:<span class="comment">#排除特殊情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> source !=<span class="string">""</span> <span class="keyword">and</span> target ==<span class="string">""</span>:<span class="comment">#继续排除特殊情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">elif</span> target <span class="keyword">not</span> <span class="keyword">in</span> source:<span class="comment">#被查找字符串不在已知字符串的情况</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span></span><br><span class="line">        <span class="keyword">else</span>:<span class="comment">#需要返回第一个出现位置的情况</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> range(a):</span><br><span class="line">                <span class="keyword">if</span> target[<span class="number">0</span>] == source[i]:</span><br><span class="line">                    <span class="keyword">for</span> j <span class="keyword">in</span> range(b):</span><br><span class="line">                        <span class="keyword">if</span> (i+j) &lt; a:<span class="comment">#避免字符串索引溢出</span></span><br><span class="line">                            <span class="keyword">if</span> source[i+j] == target[j]:</span><br><span class="line">                                geshu = geshu + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span> geshu == b:</span><br><span class="line">                             <span class="keyword">return</span> i</span><br><span class="line"></span><br><span class="line">so = Solution()</span><br><span class="line">print(so.strStr(<span class="string">"tartarget"</span>,<span class="string">"target"</span>))</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1147,7 +1059,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">120</span>
+          <span class="site-state-item-count">124</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1219,7 +1131,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共89.1k字</span>
+  <span class="post-count">博客全站共92.4k字</span>
 </div>
 
         

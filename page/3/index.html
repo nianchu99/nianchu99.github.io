@@ -224,6 +224,377 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/16/Swift/Swift%20Programming%20Language%20Book/Swift%E5%88%9D%E8%A7%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/16/Swift/Swift%20Programming%20Language%20Book/Swift%E5%88%9D%E8%A7%81/" class="post-title-link" itemprop="url">Swift/Swift Programming Language Book/Swift初见</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-16 00:36:44 / 修改时间：00:48:35" itemprop="dateCreated datePublished" datetime="2020-05-16T00:36:44+08:00">2020-05-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Swift初见"><a href="#Swift初见" class="headerlink" title="Swift初见"></a>Swift初见</h1><h2 id="简单值"><a href="#简单值" class="headerlink" title="简单值"></a>简单值</h2><p>使用let来宣告常数，使用var来宣告变数</p>
+<p>常数或者变数的型别必须和你赋给它们的值一样。但是不一定在声明的时候显示声明类型，因为编译器会自动推断类别。</p>
+<p>如果初始值没有提供足够的资讯(或者没有初始值)，就需要在变数后面宣告类型，用冒号分隔，例如：<br>let implicitDouble = 70.0<br>let explicitDouble: Double = 70</p>
+<p>值永远不会被隐式转换为其他类别。如果需要对值进行转换，需要显示转换 例如：<br>let label = “The width is “<br>let width = 94<br>let widthLabel = label + String(width)</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/07/Java/JavaFX%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/07/Java/JavaFX%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">Java/JavaFX基础</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-07 08:35:07" itemprop="dateCreated datePublished" datetime="2020-05-07T08:35:07+08:00">2020-05-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-18 14:49:46" itemprop="dateModified" datetime="2020-05-18T14:49:46+08:00">2020-05-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="JavaFX基础"><a href="#JavaFX基础" class="headerlink" title="JavaFX基础"></a>JavaFX基础</h1><h1 id="javaFX是学习面向对象编程的优秀教学工具"><a href="#javaFX是学习面向对象编程的优秀教学工具" class="headerlink" title="javaFX是学习面向对象编程的优秀教学工具"></a>javaFX是学习面向对象编程的优秀教学工具</h1><h2 id="JavaFX与Swing以及AWT的比较"><a href="#JavaFX与Swing以及AWT的比较" class="headerlink" title="JavaFX与Swing以及AWT的比较"></a>JavaFX与Swing以及AWT的比较</h2><p>要点提示： JavaFX用于开发富因特网应用</p>
+<p>富因特网应用是一种Web应用，可以表现一般桌面应用具有的特点和功能。JavaFX可以无缝地在桌面或者Web浏览器中运行。</p>
+<h2 id="JavaFX程序的基本结构"><a href="#JavaFX程序的基本结构" class="headerlink" title="JavaFX程序的基本结构"></a>JavaFX程序的基本结构</h2><p>要点提示 ： 抽象类 javafx . application . Application 定义编写 JavaFX 程序的基本框架 。</p>
+<h2 id="面板、UI组件以及形状"><a href="#面板、UI组件以及形状" class="headerlink" title="面板、UI组件以及形状"></a>面板、UI组件以及形状</h2><p>要点提示： 面板、UI组件以及形状是Node的子类型<br><img src="media/15888212935424.jpg" alt="-w247"><br>(各个部分的包含情况)</p>
+<h2 id="属性绑定"><a href="#属性绑定" class="headerlink" title="属性绑定"></a>属性绑定</h2><p>要点提示： 可以将一个目标对象绑定到源对象中。源对象的修改将自动反应到目标对象中。</p>
+<p>属性绑定： 将一个目标对象和一个源对象绑定。如果源对象中的值改变了，目标对象也将自动改变。目标对象称为绑定对象或者绑定属性，源对象称为可绑定对象或者可观察属性。</p>
+<p>一个属性既可以作为目标，也可以作为源。目标监听源中的变换，一旦源中发生变化，目标将自动更新自身。<br>一个目标采用bind方法和源进行绑定，如下所示：<br>target.bind(source);<br><img src="media/15888260461998.jpg" alt="-w660"><br>绑定的演示：<br><img src="media/15888263948826.jpg" alt="-w667"></p>
+<p><strong><em>双向绑定</em></strong><br>这样，一个属性的改变将反应到另一个对象上，反过来也一样，这样的绑定叫做双向绑定。如果目标和源同时是绑定属性和可观察熟悉你个，他们就可以使用bindBidirectional方法进行双向绑定。</p>
+<h2 id="节点的通用属性和方法"><a href="#节点的通用属性和方法" class="headerlink" title="节点的通用属性和方法"></a>节点的通用属性和方法</h2><p>要点提示： 抽象类Node定义来许多对于节点而言通用的属性和方法<br>节点具有通用属性；<br>JavaFx的样式属性称为JavaFx CSS</p>
+<p>设定样式的语法是styleName:value<br>一个节点的多个属性可以一起设置，通过分号(;)进行分隔。例如：<br>circle.setStyle(“-fx-stroke: black; -fx-fill: red”);<br>它等效于:<br>circle.setStyle(Color.Black);<br>circle.setFill(Color.Red);<br><em>如果使用了一个不正确的JavaFx CSS，程序依然可以编译和运行，但是样式会被忽略</em></p>
+<p>rotate属性可以设定一个以度为单位的角度，让节点围绕它的中心旋转该角度。如果设置的角度是正的，表示顺时针旋转，否则是逆时针旋转<br>例如：将一个按钮旋转80度<br>button.setRotate(80);</p>
+<h2 id="Color类"><a href="#Color类" class="headerlink" title="Color类"></a>Color类</h2><p>要点提示： Color类可以用于创建颜色</p>
+<p>JavaFx定义类抽象类Paint用于绘制节点。Javafx.scene.paint.Color是Paint的具体子类，用于封装颜色信息。具体如下：<br><img src="media/15894177223880.jpg" alt="-w1051"><br>可以通过一下构造方法创建颜色实例：<br>public Color(double r, double g, double b, double opacity);其中的每个double值的范围从0.0到1.0,由浅到深。opacity定义了一个颜色的透明度，也是从0.0到1.0，由完全透明到完全不透明。这称为RGB模型，A表示alpha值，是透明度的意思。</p>
+<p>Color color = new Color(0.25, 0.14, 0.333, 0.51);<br>Color类是不可修改的。当一个Color对象创建后，它的属性就不能再修改。brighter()返回一个具有更大的红、绿、蓝值的新的Color对象，而darker()方法返回一个具有更小的对象，opacity值与原来的Color对象中的值相同。</p>
+<p>采用静态方法color(r,g,b),color(r,g,b,opacity),rgb(r,g,b),rgb(r,g,b,opac ity)来创建一个颜色对象。</p>
+<p>另外一种方法是： 可以采用Color类中定义的许多标准颜色之一，如BEIGE(米色),BLACK,BLUE,CYAN,DARKGRAY,GREEN,LIGHTGRAY,MAGENTA(品红)，NAVY(海军蓝),ORANGE,PINK,SILVER,WHITE,YELLOW</p>
+<h2 id="Font类"><a href="#Font类" class="headerlink" title="Font类"></a>Font类</h2><p>要点提示： Font类描述字体名、粗细和大小<br>可以在渲染文字的时候设置字体信息。javafx.scene.text.Font类用于创建字体<br><img src="media/15894186146809.jpg" alt="-w1156"></p>
+<p>Font类实例可以用它的静态方法或者哦构造方法来创建，Font可以用它的名字、粗细、字体形态和大小来描述。Times,Courier和Arial是字体名字的示例。可以通过调用静态方法getFamilies()获得一个可用的字体系列名字列表。List是一个为列表定义通用方法的接口。ArrayList是List的一个具体实现。</p>
+<p>字体形态是两个常量：FontPosture.ITALTC(意大利文)和FONTPosture.REGULAR.下面语句生成两个字体。<br>Font font1 = new Font(“SansSerif”,16);<br>Font font2 = Font.font(“Times New Roman “,FontWeight.BOlD, FontPosture.ITALIC, 12)<br><strong>StackPane将节点置于中央，节点依次位于最上面</strong></p>
+<h2 id="Image和ImageView类"><a href="#Image和ImageView类" class="headerlink" title="Image和ImageView类"></a>Image和ImageView类</h2><p>要点提示： Image类表示一个图像，ImageView用于显示一个图像。</p>
+<p>javafx.scene.image.Image类表示一个图像，用于从一个特定的文件名或者一个URL载入一个图像。</p>
+<p>javafx.scene.image.ImageView是一个用于显示图像的节点。ImageView可以从一个Image对象产生。例如：以下代码从一个图像文件创建一个ImageView:<br>Image image = new Image(“image/us.gif”);<br>ImageView imageView = new ImageView(image);</p>
+<p>当然，也可以周姐从一个文件或者一个URL来创建一个ImageView</p>
+<p><img src="media/15894210170447.jpg" alt="-w1099"><br><img src="media/15894210336726.jpg" alt="-w1176"></p>
+<p>HOX是一种面板，他将所有的节点排列在水平的一行上。<br>seRoate方法在Node类中定义，可以用于任何节点。<br>Image对象可以被多个节点共享。<br>ImageView这样的节点是不能共享的。不能讲一个ImageView多次放入一个面板或者场景中。<br><strong>注意</strong>，务必将图像文件放在类文件的相同个目录中。</p>
+<p>如果使用URL来定位图像文件，必须提供URL协议http://</p>
+<p>pane.setPadding(new Insets(5, 5 ,5, 5)); // 用于设置节点到边缘的距离</p>
+<h2 id="布局面板"><a href="#布局面板" class="headerlink" title="布局面板"></a>布局面板</h2><p>要点提示：  javafx提供了许多种类型的面板，用于自动地将节点布局在希望的位置和大小。面板的种类有下面这些。</p>
+<p><img src="media/15894387106951.jpg" alt="-w1118"></p>
+<p>Pane通常用作显示形状的画布。</p>
+<p>Pane是所有特定面板的基类。</p>
+<p>特定的面板StackPane。节点放置在StackPane面板的中央。</p>
+<h3 id="FlowPane"><a href="#FlowPane" class="headerlink" title="FlowPane"></a>FlowPane</h3><p> FlowPane 将节点按照加入的次序，从左到右或者从上到下垂直组织。当一行或者一列排满的时候，开始新的一行或者一列。可以使用下面两个常数中的一个来确定节点是水平还是垂直排列：<br> Orientation.HORIZONTAL 或者 Orientation.VERTICAL。（默认是水平的）可以使用像素为单位指定节点之间的距离。FlowPane的类图如图所示：<br> <img src="media/15894392532482.jpg" alt="-w1066"></p>
+<p>其中数据域alignment、oritentation、hap和vgap是绑定属性。JavaFX中的每个绑定属性都有一个获取方法，例如getHgap()返回其值，一个设置方法，如sethGap(double)设置一个值，以及一个获取方法返回属性本身，(如hGapProperty())。对于一个ObjectProperty<T>类型的数据值，值的获取方法返回一个T类型的值，属性获取方法返回一个ObjectProperty<T>类型的属性值。</p>
+<p><strong>文本域这样的节点只能加到一个面板中一次。将一个节点加入到一个面板中多次或者不同面板中将引起运行时错误</strong></p>
+<p>一个节点只能放置在一个面板中。因此，面板和节点的关系是组合关系，使用一个填充的菱形表示。</p>
+<h3 id="GridPane"><a href="#GridPane" class="headerlink" title="GridPane"></a>GridPane</h3><p>GridPane将节点布局在一个网络(矩阵)中。节点放在一个指定的列和行索引中。GridPane的类图如下：<br><img src="media/15894418799041.jpg" alt="-w1203"></p>
+<p><strong>注意</strong><br>场景的大小没有设置时，场景会根据其中节点的大小自动计算。</p>
+<h3 id="BorderPane"><a href="#BorderPane" class="headerlink" title="BorderPane"></a>BorderPane</h3><p>BorderPane可以将节点放置在五个区域： 顶部、底部、左边、右边以及中间，分别使用：<br>setTop(node), setBottom(node),setLeft(node),setRight(node),setCenter(node)<br><img src="media/15895503639516.jpg" alt="-w1077"></p>
+<p><strong>注意</strong><br>面板自己就是一个节点，所以面板可以加入到另一个面板中。<br>如果要将一个节点从顶部区域移除，调用setTop(null);<br>如果一个区域没有被占据，那么不会分配空间给这个区域</p>
+<h3 id="HBox和VBox"><a href="#HBox和VBox" class="headerlink" title="HBox和VBox"></a>HBox和VBox</h3><p>HBox将它的字节点布局在单个水平行中。VBox将它的节点布局在单个垂直列中。<br>和FlowPane想比，HBox和VBox只能将节点布局在一行或者一列中，而不是将它的额节点布局在多行或者多列中。<br><img src="media/15895513038688.jpg" alt="-w1162"><br><img src="media/15895513685595.jpg" alt="-w1110"></p>
+<h2 id="形状"><a href="#形状" class="headerlink" title="形状"></a>形状</h2><p>JavaFx提供了多种形状类，用于绘制文本、直线、圆、矩形、椭圆、弧、多边形以及折线<br>Shape类是一个抽象基类，定义了所有形状的共有属性。这些属性有fill，stroke，strokeWidth。</p>
+<p>fill指定一个填充形状内部区域的颜色<br>stroke指定用于绘制形状边缘的颜色。<br>strokeWidth指定形状边缘的宽度。</p>
+<p><img src="media/15896010726056.jpg" alt="-w761"></p>
+<h3 id="Text"><a href="#Text" class="headerlink" title="Text"></a>Text</h3><p>Text类定义类一个节点，用于在一个起始点(x,y)处显示一个字符串。<br>Text对象通常置于一个面板中。</p>
+<p>对于一个面板，左上角是(0,0),右下角是(pane.getWidth(),pane.getHeight())</p>
+<p>一个字符串可以通过\n分隔从而显示在多行。<br>以下是Text的UML图：<br><img src="media/15896012798009.jpg" alt="-w1165"></p>
+<h3 id="Line"><a href="#Line" class="headerlink" title="Line"></a>Line</h3><p>一条线通过4个参数(startX, startY, endX, endY)连接两个点。Line类的UML图：<br><img src="media/15896020888659.jpg" alt="-w1116"></p>
+<h3 id="Rectangle"><a href="#Rectangle" class="headerlink" title="Rectangle"></a>Rectangle</h3><p>一个矩形通过参数x, y, width, height, arcWidth以及arcHeight定义。<br>矩形的左上角处于(x,y),参数aw(arcWidth)表示圆角处弧的水平直径，ah(arcHeight)表示圆角处弧的垂直直径。Rectangle的UML图如下：<br><img src="media/15896042504197.jpg" alt="-w1199"></p>
+<h3 id="Circle和Ellipse-椭圆"><a href="#Circle和Ellipse-椭圆" class="headerlink" title="Circle和Ellipse(椭圆)"></a>Circle和Ellipse(椭圆)</h3><p><img src="media/15896958010306.jpg" alt="-w1112"><br>对于Ellipse,其中的radiusX值的是a，radiusY指的是b(椭圆数学定义中的a和b)</p>
+<h3 id="Arc"><a href="#Arc" class="headerlink" title="Arc"></a>Arc</h3><p>一段弧可以认为是椭圆的一部分，由参数centerX, centerY, radiusX, radiusY, startAngle, length以及一个弧的类型(ArcType.OPEN, ArcType.CHORD或者ArcType.ROUND)来确定。 </p>
+<p>其中startAngle是起始角度，length是跨度(即弧所覆盖的角度)。</p>
+<p>角度使用度来作为单位，并且遵循通常的数学约定(即，0度是最东的方向，正的方向表示从最东方向开始顺时针方向的旋转角度)<br><img src="media/15897048959125.jpg" alt="-w1188"><br>单词解释： chord - 弦<br>不同类型弧长如下 ：<br><img src="media/15897049914944.jpg" alt="-w530"></p>
+<p>角度可以是负数。一个负的起始角度从最东的方向顺时针旋转一个角度。一个负的跨度角度从起始角度开始顺时针旋转一个角度<br>（一句话总结： 这里的正负就和数学中一样）</p>
+<h3 id="Polygon-多边形-和polyline-折线"><a href="#Polygon-多边形-和polyline-折线" class="headerlink" title="Polygon(多边形)和polyline(折线)"></a>Polygon(多边形)和polyline(折线)</h3><p>Polygon类定义一个连接一个点序列的多边形，polyline类类似于Polygon类，不同之处是Polyline类不会自动闭合。分别如下图所示：<br><img src="media/15897063079146.jpg" alt="-w1178"></p>
+<p><img src="media/15897063195567.jpg" alt="-w1169"></p>
+<h2 id="示例学习：-ClockPane-类"><a href="#示例学习：-ClockPane-类" class="headerlink" title="示例学习： ClockPane 类"></a>示例学习： ClockPane 类</h2><p>要点提示： 学习开发一个类，在面板中显示一个始终<br>ClockPane的合约图如下<br><img src="media/15897840550956.jpg" alt="-w1058"></p>
+<p>因为一分钟有60s，所以第二个指针的角度是:<br>second * (2*pi/60)<br>包含秒数的确切分钟数是(minute + second / 60)</p>
+<p>因为一小时有60分，因此分针的角度是(minute + second / 60) * (2pi/60)</p>
+<p>由于一个圆被分为12个小时，所以时针的角度是： (hour + minute / 60 + second / (60 + 60)) * (2pi/12)<br><img src="media/15897845812196.jpg" alt="-w1163"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/04/Java/Java-%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/04/Java/Java-%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">Java/Java-引用数据类型</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-04 22:16:58" itemprop="dateCreated datePublished" datetime="2020-05-04T22:16:58+08:00">2020-05-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-05 22:13:54" itemprop="dateModified" datetime="2020-05-05T22:13:54+08:00">2020-05-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java-引用数据类型与基本数据类型"><a href="#Java-引用数据类型与基本数据类型" class="headerlink" title="Java-引用数据类型与基本数据类型"></a>Java-引用数据类型与基本数据类型</h1><p><img src="media/15886035121002.jpg" alt="-w1012"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/30/Java/Java-%E9%BB%91%E9%A9%AC%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/30/Java/Java-%E9%BB%91%E9%A9%AC%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">Java/Java-黑马教程</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-30 13:56:40 / 修改时间：16:17:55" itemprop="dateCreated datePublished" datetime="2020-04-30T13:56:40+08:00">2020-04-30</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java-黑马教程"><a href="#Java-黑马教程" class="headerlink" title="Java-黑马教程"></a>Java-黑马教程</h1><h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><p>硬盘： 永久存储<br>内存： 临时存储</p>
+<p>I： input输入，读取<br>O： output输出，写入<br>流： 数据(字符，字节)<br>1字符=2字节=<br>1字节=8个二进制位（即8个byte）</p>
+<p>输入：把硬盘中的数据读取到内存中使用<br>输出 ：把内存中的数据写入到硬盘中保存<br><img src="media/15882264874443.jpg" alt="-w1448"></p>
+<h3 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h3><p>一切文件数据（文本、图片、视频）都是以字节方式存储的。<br>所以，字节流可以传输任意文件数据，在操作流的时候，我们要时刻明确，无论使用什么样的流对象，底层传输的始终是二进制数据</p>
+<h4 id="OutputStream-字节输出流"><a href="#OutputStream-字节输出流" class="headerlink" title="OutputStream 字节输出流"></a>OutputStream 字节输出流</h4><p>此抽象类是表示输出字节流的所有类的超类<br>定义了一些子类共性的成员方法。</p>
+<h5 id="FileOutputStream-文件字节输出流"><a href="#FileOutputStream-文件字节输出流" class="headerlink" title="FileOutputStream 文件字节输出流"></a>FileOutputStream 文件字节输出流</h5><p>作用： 把内存中的数据写入到硬盘的文件中</p>
+<p>构造方法： </p>
+<p>FileOutputStream(File file)<br>          创建一个向指定 File 对象表示的文件中写入数据的文件输出流。<br>FileOutputStream(String name)<br>          创建一个向具有指定名称的文件中写入数据的输出文件流。</p>
+<p>参数： 写入数据的目的地<br>string name：目的地是一个文件的路径<br>File file： 目的地是一个文件<br>构造方法的作用： </p>
+<ol>
+<li>创建一个FileOutputStream对象</li>
+<li>会根据构造方法中传递的文件/文件路径，创建一个空的文件</li>
+<li>会把FileOutputStream对象只想创建好的文件</li>
+</ol>
+<h5 id="写入数据"><a href="#写入数据" class="headerlink" title="写入数据"></a>写入数据</h5><p>原理：如果 内存 -&gt; 硬盘<br>java程序 — JVM（java虚拟机）— OS（操作系统）— OS调用写数据的方法 — 把数据写入到文件</p>
+<p>字节流的使用步骤(重点)</p>
+<ol>
+<li>创建一个FIleOutputStream对象，构造方法中传入数据的目的地</li>
+<li>调用FIleOutputStream对象中的方法write，把数据写入到文件中</li>
+<li>释放资源（这样可以节约内存，因为流的使用会占用一定的内存）</li>
+</ol>
+<p><strong><em>文件存储的原理和记事本打开</em></strong><br>写数据的时候会把十进制的整数转换为二进制的整数</p>
+<p>记事本在打开文件的时候都会查询编码表，把字节转换为字符表示，故如果写入为：<br>0-127 - 查询ASCII表<br>其他值：会查询系统默认码表（中文系统GBK）<br><img src="media/15882290494697.jpg" alt="-w1433"></p>
+<h6 id="一次写多个字节的方法"><a href="#一次写多个字节的方法" class="headerlink" title="一次写多个字节的方法"></a>一次写多个字节的方法</h6><p><img src="media/15882291991446.jpg" alt="-w706"><br>第一个：<br>用于一次写多个字节：</p>
+<ul>
+<li>如果写的第一个字节是正数（0-127），那么显示的时候会查询ASCII表</li>
+<li>如果写的第一个字节是负数，那么第一个字节会和第二个字节，连个字节组成一个中文显示，查询系统默认码表（GBK）</li>
+</ul>
+<p>第二个用来写字节数组的一部分：<br>int off: 数组的开始索引<br>int len: 写几个字节</p>
+<p>另外一种写入字符的方法：<br>使用String类中的方法把字符串，转换为字节数组</p>
+<h6 id="数据的续写和换行写"><a href="#数据的续写和换行写" class="headerlink" title="数据的续写和换行写"></a>数据的续写和换行写</h6><p>续写即追加写</p>
+<p>构造方法：<br>FileOutputStream(String name, boolean append)<br>          创建一个向具有指定 name 的文件中写入数据的输出文件流。<br>          FileOutputStream(File file, boolean append)<br>          创建一个向指定 File 对象表示的文件中写入数据的文件输出流。</p>
+<p>参数：<br>String name，File file ： 写入数据的目的地<br>boolean append： 续写开关</p>
+<ul>
+<li>true： 继续在文件末尾续写数据</li>
+<li>false： 创建一个新文件，覆盖</li>
+</ul>
+<p>换行写，写完数据之后写上换行符号</p>
+<h4 id="InputStream-字节输入流"><a href="#InputStream-字节输入流" class="headerlink" title="InputStream 字节输入流"></a>InputStream 字节输入流</h4><p>方法：<br>    int read()<br>          从此输入流中读取下一个数据字节。<br>int    read(byte[] b)<br>从此输入流中将 byte.length 个字节的数据读入一个 byte 数组中。<br>void    close()<br>          关闭此输入流并释放与此流关联的所有系统资源。</p>
+<h5 id="FileinputStream-文件字节输入流"><a href="#FileinputStream-文件字节输入流" class="headerlink" title="FileinputStream 文件字节输入流"></a>FileinputStream 文件字节输入流</h5><p><img src="media/15882331045281.jpg" alt="-w354"></p>
+<p>作用： 把硬盘文件中的数据，读取到内存中使用</p>
+<p>构造方法：<br><img src="media/15882332509769.jpg" alt="-w1110"></p>
+<p>参数：<br>读取文件的数据源<br>String name:文件的路径<br>File file: 文件<br>构造方法的作用：</p>
+<ol>
+<li><p>会创建一个FileInputStream对象</p>
+</li>
+<li><p>会把FileInputStream对象指向构造方法中要读取的文件</p>
+<p>读取数据的原理：<br>原理：如果 硬盘 -&gt; 内存<br>java程序 — JVM（java虚拟机）— OS（操作系统）— OS调用读数据的方法 — 读入文件<br>使用步骤：</p>
+<ol>
+<li>创建一个FileInputStream对象，构造方法中绑定要读取的数据</li>
+<li>使用FileInputStream对象中的方法read，读取文件<br>int read()读取文件中的一个字节并返回，读取到文件的末尾返回-1</li>
+<li>释放资源</li>
+</ol>
+</li>
+</ol>
+<p><strong><em>注意</em></strong><br>不知道文件中有多少字节，使用while循环<br>boolean表达式：while((len = fis.read())!= -1){<br>}<br>实际过程：<br>int len;<br>len = fis.read();<br>len = fis.read())!= -1</p>
+<p>而不能写成：<br>while((fis.read())!= -1){<br>System.out.println(fis.read())<br>}</p>
+<p> <strong><em>方法</em></strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/30/Java/Java-%E9%83%91%E8%8E%89%E7%89%88%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81%E8%AF%BE%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -731,280 +1102,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/09/Java/Java_%E5%A4%9A%E6%80%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/09/Java/Java_%E5%A4%9A%E6%80%81/" class="post-title-link" itemprop="url">Java/Java_多态</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-09 08:59:35 / 修改时间：09:32:34" itemprop="dateCreated datePublished" datetime="2020-04-09T08:59:35+08:00">2020-04-09</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java-多态"><a href="#Java-多态" class="headerlink" title="Java_多态"></a>Java_多态</h1><p>多态是同一个行为具有不同表现形式或形态的能力<br>多态就是同一个接口，使用不同的实例而执行不同的操作。</p>
-<h2 id="多态性的优点"><a href="#多态性的优点" class="headerlink" title="多态性的优点"></a>多态性的优点</h2><ul>
-<li>消除类型之间的耦合关系</li>
-<li>可替换性</li>
-<li>可扩充性</li>
-<li>借口性</li>
-<li>灵活性</li>
-<li>简化性<h2 id="多态存在的三个必要条件"><a href="#多态存在的三个必要条件" class="headerlink" title="多态存在的三个必要条件"></a>多态存在的三个必要条件</h2></li>
-<li>继承</li>
-<li>重写</li>
-<li>父类引用指向子类对象</li>
-</ul>
-<p>当使用多态方式调用方法时，首先检测父类中是否有该方法，如果没有，则编译错误；如果有，再去调用子类的同名方法。<br>多态的好处：可以使程序有良好的扩展，并可以对所有类的对象进行通用处理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">public class DuoTai &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        show(new Cat()); // 以Cat对象调用show方法</span><br><span class="line">        show(new Dog()); // 以Dog对象调用show方法</span><br><span class="line"></span><br><span class="line">        Animal a = new Cat(); // 向上转型</span><br><span class="line">        a.eat();               // 调用的是Cat的eat</span><br><span class="line">        Cat c = (Cat)a;         // 向下转型</span><br><span class="line">        c.work();               // 调用的是Cat的work</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void show(Animal a)&#123;</span><br><span class="line">        a.eat();</span><br><span class="line">        if (a instanceof Cat)&#123; // 猫做的事情</span><br><span class="line">            Cat c = (Cat)a;</span><br><span class="line">            c.work();</span><br><span class="line">        &#125;</span><br><span class="line">        else if (a instanceof Dog)&#123;  // 狗做的事情</span><br><span class="line">            Dog c = (Dog) a;</span><br><span class="line">            c.work();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">abstract class Animal&#123;</span><br><span class="line">    abstract void eat();</span><br><span class="line">&#125;</span><br><span class="line">class Cat extends Animal&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(&quot;吃鱼&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public void work()&#123;</span><br><span class="line">        System.out.println(&quot;抓老鼠&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Dog extends Animal&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void eat()&#123;</span><br><span class="line">        System.out.println(&quot;吃骨头&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public void work()&#123;</span><br><span class="line">        System.out.println(&quot;看家&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h2><p>虚函数的存在是为了多态<br>Java中其实并没有虚函数的概念，它的普通函数就相当于C++的虚函数，动态绑定是Java的默认行为。如果Java中不希望某个函数具有虚函数特性，可以加上final关键字编程非虚函数</p>
-<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>也就是子类能够重写父类的方法。<br>当子类对象调用重写的方法时，调用的是子类的方法，而不是父类中被重写的方法。<br>要想调用父类中被重写的方法，则必须使用关键字super。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/04/Python/Python-PIL%E5%8C%85%E4%B8%ADImage%E6%A8%A1%E5%9D%97%E7%9A%84convert()%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/04/Python/Python-PIL%E5%8C%85%E4%B8%ADImage%E6%A8%A1%E5%9D%97%E7%9A%84convert()%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B7%E4%BD%93%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">Python/Python-PIL包中Image模块的convert()函数的具体使用</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-04 20:39:12 / 修改时间：20:49:20" itemprop="dateCreated datePublished" datetime="2020-04-04T20:39:12+08:00">2020-04-04</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="PIL包中Image模块的convert-函数的具体使用"><a href="#PIL包中Image模块的convert-函数的具体使用" class="headerlink" title="PIL包中Image模块的convert()函数的具体使用"></a>PIL包中Image模块的convert()函数的具体使用</h1><h2 id="RGB到灰度转换公式"><a href="#RGB到灰度转换公式" class="headerlink" title="RGB到灰度转换公式"></a>RGB到灰度转换公式</h2><p>RGB到灰度转换公式：Y’ = 0.299 R  + 0.587 G + 0.114 B</p>
-<h2 id="convert-函数"><a href="#convert-函数" class="headerlink" title="convert 函数"></a>convert 函数</h2><p>convert函数，用于不同模式之间的转换。PIL中有9种不同模式，分别为1，L，P，RGB， RGBA, CMYK, YCbCr,I,F.</p>
-<p>其中模式”1”为二值图像，每个像素用8bit，0表示黑，255表示白。</p>
-<p>其中“L”为灰色图像，它的每个像素用8个bit表示，0表示黑，255表示白，其他数字表示不同的灰度。在PIL中，从模式“RGB”转换为“L”模式是按照下面的公式转换的。<br>L = 0.299 R  + 0.587 G + 0.114 B</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/02/Java/Java-static/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/02/Java/Java-static/" class="post-title-link" itemprop="url">Java/Java-static</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-02 09:24:41 / 修改时间：10:18:06" itemprop="dateCreated datePublished" datetime="2020-04-02T09:24:41+08:00">2020-04-02</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="static-详解"><a href="#static-详解" class="headerlink" title="static 详解"></a>static 详解</h1><h2 id="实例变量"><a href="#实例变量" class="headerlink" title="实例变量"></a>实例变量</h2><p>是一个java对象就有一个，100个对象就有100个。<br>实例变量存储在java对象内部，在堆内存中，在构造方法执行的时候初始化</p>
-<h2 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h2><p>所有对象的该变量值一样，这种特征属于类级别的特征，可以提升为整个模版的特征，可以在变量前添加static关键字修饰</p>
-<p>静态变量在类加载的时候初始化，不需要创建对象，内存就开辟了</p>
-<p>静态变量存储在方法区内存当中</p>
-<p>静态变量访问时直接用类名访问，而不用实例对象名</p>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>什么时候成员变量声明为实例变量？<br>    - 所有对象都有这个属性，但是这个属性的值会随着对象的变化而变化(不同的对象的这个属性具体的值不同)<br>什么时候成员变量声明为静态变量呢？<br>    - 所有对象都有这个属性，并且所有对象的这个属性的值是一样的，建议定义为静态变量，节省内存的开销。</p>
-<p>静态变量在类加载的时候初始化，内存在方法去内存中开辟/访问的时候不需要创建对象，直接使用”类名.静态变量名”的方式访问。(也可以用引用的方式访问，但是会被警告)</p>
-<p>所有静态的数据都可以采用类名.,也可以采用引用.,但是建议采用类名.的方式访问。<br>采用引用.的方式访问的时候，即使引用是null，也不会出现空指针异常。因为访问静态的数据不需要对象的存在。</p>
-<p>static关键字：<br>    - 翻译为静态<br>    - 修饰的方法是静态方法<br>    - 修饰的变量是静态变量<br>    - 所有static修饰的元素称为静态的，都可以可以采用类名.,也可以采用引用.,但是建议采用类名.的方式访问。<br>    - static修饰的所有元素都是类级别的特征，和具体的对象无关</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/01/Java/Java-BigInteger%E5%92%8CBigDecimal%E7%B1%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/01/Java/Java-BigInteger%E5%92%8CBigDecimal%E7%B1%BB/" class="post-title-link" itemprop="url">Java/Java-BigInteger和BigDecimal类</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-01 15:25:06 / 修改时间：17:44:17" itemprop="dateCreated datePublished" datetime="2020-04-01T15:25:06+08:00">2020-04-01</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java-BigInteger和BigDecimal类"><a href="#Java-BigInteger和BigDecimal类" class="headerlink" title="Java-BigInteger和BigDecimal类"></a>Java-BigInteger和BigDecimal类</h1><h2 id="要点提示：Java-BigInteger和BigDecimal类可以用于表示任意大小和精度的整数或者十进制数"><a href="#要点提示：Java-BigInteger和BigDecimal类可以用于表示任意大小和精度的整数或者十进制数" class="headerlink" title="要点提示：Java-BigInteger和BigDecimal类可以用于表示任意大小和精度的整数或者十进制数"></a>要点提示：Java-BigInteger和BigDecimal类可以用于表示任意大小和精度的整数或者十进制数</h2><h2 id="BigInteger"><a href="#BigInteger" class="headerlink" title="BigInteger"></a>BigInteger</h2><p> BigInteger的实例可以用来表示任意大小的整数。可以使用new  BigInteger(String) 和new BigDecimal(String)来创建 BigInteger 和 BigDecimal的实例，使用add、subtract、multiple、divide和remainder方法完成算术运算，使用compareTo方法比较两个大数字。</p>
-<p>对BigDecimal对象的精度没有限制。如果结果不能终止，那么divide方法会抛出ArithmeticException异常。但是，可以使用重载的divide(BigDecimal d, int scale, int roundingMode)方法来指定尺度和舍入方法来避免这个异常。这里的scale是指小数点后最小的整数位数。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1048,7 +1150,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">120</span>
+          <span class="site-state-item-count">124</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1120,7 +1222,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共89.1k字</span>
+  <span class="post-count">博客全站共92.4k字</span>
 </div>
 
         
