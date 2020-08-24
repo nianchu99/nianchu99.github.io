@@ -1,5 +1,5 @@
 http://www.nianchu.space/2020/08/24/introduce/
+http://www.nianchu.space/2020/08/24/Python/Python%E5%B0%8F%E9%A1%B9%E7%9B%AE/%E4%BD%BF%E7%94%A8selenium%E6%A8%A1%E5%9D%97%E6%8E%A7%E5%88%B6%E6%B5%8F%E8%A7%88%E5%99%A8/
 http://www.nianchu.space/2020/08/14/XPath/xpath/
 http://www.nianchu.space/2020/08/11/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/
 http://www.nianchu.space/2020/08/07/Matlab/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E4%B8%8EMatlab/
-http://www.nianchu.space/2020/08/06/Python/Python-logging%E6%A8%A1%E5%9D%97/

@@ -304,6 +304,109 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/08/24/Python/Python%E5%B0%8F%E9%A1%B9%E7%9B%AE/%E4%BD%BF%E7%94%A8selenium%E6%A8%A1%E5%9D%97%E6%8E%A7%E5%88%B6%E6%B5%8F%E8%A7%88%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/24/Python/Python%E5%B0%8F%E9%A1%B9%E7%9B%AE/%E4%BD%BF%E7%94%A8selenium%E6%A8%A1%E5%9D%97%E6%8E%A7%E5%88%B6%E6%B5%8F%E8%A7%88%E5%99%A8/" class="post-title-link" itemprop="url">使用selenium模块控制浏览器</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-24 00:00:00" itemprop="dateCreated datePublished" datetime="2020-08-24T00:00:00+08:00">2020-08-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-25 01:04:29" itemprop="dateModified" datetime="2020-08-25T01:04:29+08:00">2020-08-25</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>#使用selenium模块控制浏览器 </p>
+<blockquote>
+<p> selenium模块可以让Python直接控制浏览器，实际点击链接，填写登录信息。这就意味着Selenium与Requests和Beautiful Soup相比，它更高级但是它也更慢。</p>
+</blockquote>
+<h2 id="启动一个Chrome并打开百度首页"><a href="#启动一个Chrome并打开百度首页" class="headerlink" title="启动一个Chrome并打开百度首页"></a>启动一个Chrome并打开百度首页</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">browser = webdriver.Chrome()</span><br><span class="line">browser.get(<span class="string">'http://www.baidu.com'</span>)</span><br><span class="line">print(type(browser)) <span class="comment"># 这是一个WebDriver对象。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="在页面寻找元素"><a href="#在页面寻找元素" class="headerlink" title="在页面寻找元素"></a>在页面寻找元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">有两类方法可以用于寻找元素， 它们是findelements方法和findelement方法</span><br><span class="line">findelement方法返回一个WebElement对象，也就是说它只返回页面中所匹配的第一个元素</span><br><span class="line">findelements方法返回一个WebElement对象列表，它返回页面中所匹配的所有元素</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="selenium的WebDriver方法，用于寻找元素-只给出了findelement类型方法，findelements类型类似，是需要改动element为elements即可"><a href="#selenium的WebDriver方法，用于寻找元素-只给出了findelement类型方法，findelements类型类似，是需要改动element为elements即可" class="headerlink" title="selenium的WebDriver方法，用于寻找元素(只给出了findelement类型方法，findelements类型类似，是需要改动element为elements即可)"></a>selenium的WebDriver方法，用于寻找元素(只给出了findelement类型方法，findelements类型类似，是需要改动element为elements即可)</h3><ul>
+<li><p>browser,find_element_by_class_name(name): 使用CSS类name的元素</p>
+</li>
+<li><p>browser.find_element_by_class_selector(selector): 匹配CSS selector的元素</p>
+</li>
+<li><p>browser.find_element_by_id(id): 匹配id属性值的元素</p>
+</li>
+<li><p>browser.find_element_by_link_text(text)： 完全匹配提供的text的<a>元素</p>
+</li>
+<li><p>browser.find_element_by_partial_link_text(text)： 匹配包含提供的text的<a>元素</p>
+</li>
+<li><p>browser.find_element_by_name(name): 匹配name属性值的元素</p>
+</li>
+<li><p>browser.find_element_by_tag_name(name): 匹配标签name的元素(大小写无关， <a>元素匹配’a’和’A’)</p>
+</li>
+</ul>
+<h3 id="WebElement的属性与方法"><a href="#WebElement的属性与方法" class="headerlink" title="WebElement的属性与方法"></a>WebElement的属性与方法</h3><img src="/Users/bowenkei/Library/Application Support/typora-user-images/image-20200824222536953.png" alt="image-20200824222536953" style="zoom:50%;" />
+
+<h3 id="寻找元素Demo"><a href="#寻找元素Demo" class="headerlink" title="寻找元素Demo"></a>寻找元素Demo</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">url = <span class="string">'https://nianchu.space/'</span>  <span class="comment"># 我的个人网站： nianchu.space</span></span><br><span class="line">browser=webdriver.Chrome()</span><br><span class="line">browser.get(url)</span><br><span class="line"><span class="comment"># try-except语句</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 寻找类名为'site-title'的元素</span></span><br><span class="line">    elem=browser.find_element_by_class_name(<span class="string">'site-title'</span>)</span><br><span class="line">    print(<span class="string">'Found &lt;%s&gt; element with that classname!'</span>%(elem.tag_name))</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">'Was not able to find an element with that name.'</span>)  <span class="comment"># Found &lt;span&gt; element with that classname!</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="点击页面"><a href="#点击页面" class="headerlink" title="点击页面"></a>点击页面</h2><p><strong>WebElement对象有一个click()方法，可以使用它模拟鼠标在元素上点击。这个方法可以用于跳转链接，选择单选按钮，点击提交按钮等等</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line">browser.get(<span class="string">"https://nianchu.space/"</span>)</span><br><span class="line"></span><br><span class="line">linkElement = browser.find_element_by_link_text(<span class="string">'个人网站'</span>)</span><br><span class="line">print(type(linkElement))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开"个人网站链接"</span></span><br><span class="line">linkElement.click()</span><br></pre></td></tr></table></figure>
+
+<h2 id="填写并提交表单"><a href="#填写并提交表单" class="headerlink" title="填写并提交表单"></a>填写并提交表单</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">本来计划的是Google mail的登录演示，但是webdriver上无法完成，便改为了qq邮箱</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line"><span class="comment"># 下面的url很长，它是手机版QQ邮箱登录界面的主页</span></span><br><span class="line">browser.get(<span class="string">'https://ui.ptlogin2.qq.com/cgi-bin/login?style=9&amp;appid=522005705&amp;daid=4&amp;s_url=https%3A%2F%2Fw.mail.qq.com%2Fcgi-bin%2Flogin%3Fvt%3Dpassport%26vm%3Dwsk%26delegate_url%3D%26f%3Dxhtml%26target%3D&amp;hln_css=http%3A%2F%2Fmail.qq.com%2Fzh_CN%2Fhtmledition%2Fimages%2Flogo%2Fqqmail%2Fqqmail_logo_default_200h.png&amp;low_login=1&amp;hln_autologin=%E8%AE%B0%E4%BD%8F%E7%99%BB%E5%BD%95%E7%8A%B6%E6%80%81&amp;pt_no_onekey=1'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 按找给定的id进行匹配</span></span><br><span class="line">emailElem = browser.find_element_by_id(<span class="string">'u'</span>)</span><br><span class="line"><span class="comment"># 传入qq账号</span></span><br><span class="line">emailElem.send_keys(<span class="string">'1234567'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输入邮箱账号后需要点击下一步进行</span></span><br><span class="line">passWordElem = browser.find_element_by_id(<span class="string">'p'</span>)</span><br><span class="line"><span class="comment"># 传入密码</span></span><br><span class="line">passWordElem.send_keys(<span class="string">'1234567'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 点击确认登录</span></span><br><span class="line">goElem = browser.find_element_by_id(<span class="string">'go'</span>)</span><br><span class="line">goElem.click()</span><br></pre></td></tr></table></figure>
+
+<p>*<em>注意： 在任何元素上调用submit()方法，都等同于点击该元素所在表单的Submit按钮 *</em></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/08/14/XPath/xpath/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1719,94 +1822,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/07/11/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95(%E7%AC%AC%E5%9B%9B%E7%89%88)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/07/11/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AE%97%E6%B3%95(%E7%AC%AC%E5%9B%9B%E7%89%88)/" class="post-title-link" itemprop="url">算法与数据结构/算法(第四版)</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-07-11 17:13:51" itemprop="dateCreated datePublished" datetime="2020-07-11T17:13:51+08:00">2020-07-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-08 12:04:50" itemprop="dateModified" datetime="2020-08-08T12:04:50+08:00">2020-08-08</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="1-1-8-字符串"><a href="#1-1-8-字符串" class="headerlink" title="1.1.8 字符串"></a>1.1.8 字符串</h3><p>String类型是Java的一个数据类型，但并不是原始数据类型</p>
-<h4 id="1-1-8-1-字符串拼接"><a href="#1-1-8-1-字符串拼接" class="headerlink" title="1.1.8.1 字符串拼接"></a>1.1.8.1 字符串拼接</h4><h4 id="1-1-8-2-类型转换"><a href="#1-1-8-2-类型转换" class="headerlink" title="1.1.8.2 类型转换"></a>1.1.8.2 类型转换</h4><h4 id="1-1-8-3-自动转换"><a href="#1-1-8-3-自动转换" class="headerlink" title="1.1.8.3 自动转换"></a>1.1.8.3 自动转换</h4><h4 id="1-1-8-4-命令行参数"><a href="#1-1-8-4-命令行参数" class="headerlink" title="1.1.8.4 命令行参数"></a>1.1.8.4 命令行参数</h4><h4 id="1-1-9-5-重定向与管道"><a href="#1-1-9-5-重定向与管道" class="headerlink" title="1.1.9.5 重定向与管道"></a>1.1.9.5 重定向与管道</h4><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ggo0yg327cj319w02kgnv.jpg" alt="image-20200712112430202"></p>
-<p>像上面这样，同时使用重定向输入和输出会清空文件中的数据，从而引发java.util.NoSuchElementException: No line found 异常</p>
-<h4 id="1-1-9-7-标准绘图库-基本方法"><a href="#1-1-9-7-标准绘图库-基本方法" class="headerlink" title="1.1.9.7 标准绘图库(基本方法)"></a>1.1.9.7 标准绘图库(基本方法)</h4><p><strong>经验启发： 如何确定一个正方形(包括位置和大小)：</strong></p>
-<p>只需要确定正方形的中心位置，以及中心位置具体一条边的距离即可</p>
-<h4 id="1-1-9-8-标准会图库-控制方法"><a href="#1-1-9-8-标准会图库-控制方法" class="headerlink" title="1.1.9.8 标准会图库(控制方法)"></a>1.1.9.8 标准会图库(控制方法)</h4><p>StdDraw.fillRectangle(x, y, rw, rh)中x，y是长方形左下角的坐标。以屏幕左下角为(0,0)作为标准</p>
-<h3 id="1-1-11-展望"><a href="#1-1-11-展望" class="headerlink" title="1.1.11 展望"></a>1.1.11 展望</h3><p>数据抽象： 主要思想是鼓励程序员定义自己的数据类型(一系列值和对这些值的操作)，而不仅仅是那些操作预定义的数据类型的静态方法。</p>
-<h2 id="1-2-数据抽象"><a href="#1-2-数据抽象" class="headerlink" title="1.2 数据抽象"></a>1.2 数据抽象</h2><p>抽象数据类型(ADT)是一种能够对使用者以藏数据表示的数据类型。</p>
-<p>抽象数据类型的主要不同之处在于它将数据和函数的实现关联，并将数据的表示方式隐藏起来。在使用抽象数据类型时，我们的注意力集中在API描述的操作上而不会去关心数据的表示；在实现抽象数据类型时，我们的注意力集中在数据本身并将实现对该数据的各种操作.</p>
-<h4 id="1-2-1-4-对象"><a href="#1-2-1-4-对象" class="headerlink" title="1.2.1.4 对象"></a>1.2.1.4 对象</h4><p>对象是能够承载数据类型的值的实体。所有对象都有三大重要特性：状态、标识和行为。对象的状态即数据类型中的值。对象的标识能够将一个对象区别于另一个对象。可以认为对象的标识就是它在内存中的位置。对象的行为就是数据类型的操作。</p>
-<h2 id="4-4-最短路径"><a href="#4-4-最短路径" class="headerlink" title="4.4 最短路径"></a>4.4 最短路径</h2><h3 id="4-4-1-最短路径的性质"><a href="#4-4-1-最短路径的性质" class="headerlink" title="4.4.1 最短路径的性质"></a>4.4.1 最短路径的性质</h3><ul>
-<li>路径是有向的</li>
-<li>权重不一定等于距离</li>
-<li>并不是所有顶点都是可到达的。如果t并不是从s可达的，那么就不存在任何路径，也就不存在最短路径</li>
-<li>负权重会使问题更复杂</li>
-<li>最短路径一般都是简单的。找到的最短路径都不会含有环</li>
-<li>最短路径不一定是唯一的</li>
-<li>可能存在平行边和字环：平行边的权重最小者才会被选上，最短路径也不可能包含自环(除非自环的权重为零)</li>
-</ul>
-<h1 id="有意思的问答"><a href="#有意思的问答" class="headerlink" title="有意思的问答"></a>有意思的问答</h1><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghj7hw7ba8j31dy05ujvd.jpg" alt="image-20200808104316694"></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghj7pwlkjrj31dw064q8b.jpg" alt="image-20200808105104209"></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghj7vs52hmj313i04cwhn.jpg" alt="image-20200808105641873"></p>
-<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1ghj7zfbsi0j31co046tcn.jpg" alt="image-20200808110013526"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1855,7 +1870,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">125</span>
+          <span class="site-state-item-count">126</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1927,7 +1942,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共104.1k字</span>
+  <span class="post-count">博客全站共104.8k字</span>
 </div>
 
         
