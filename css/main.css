@@ -2877,7 +2877,7 @@ code {
 blockquote {
   padding: 0 15px;
   color: #000;
-  font-family: cursive;
+  font-family: PingFangSC-light, PingFangTC-light, Open Sans, Helvetica Neue, sans-serif;
   background-color: #f0faf9;
   border-left-color: #42c1b8;
 }
