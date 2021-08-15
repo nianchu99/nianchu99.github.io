@@ -224,6 +224,349 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/16/Java/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/16/Java/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">Java/java-抽象类和接口</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-04-16 08:48:24" itemprop="dateCreated datePublished" datetime="2020-04-16T08:48:24+08:00">2020-04-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-15 22:49:44" itemprop="dateModified" datetime="2020-06-15T22:49:44+08:00">2020-06-15</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><p>要点提示： 父类中定义了相关子类的共同行为。接口可以拥有定义类的共同行为(包括非相关的类)</p>
+<h2 id="抽象类-1"><a href="#抽象类-1" class="headerlink" title="抽象类"></a>抽象类</h2><p>要点提示： 抽象类不可以用于创建对象。抽象类可以包含抽象方法，这些方法将在具体的子类中实现。</p>
+<ul>
+<li><p>抽象类定义： 类的设计应该确保父类包含它的子类的共同特征。有时候，一个父类设计得非常抽象，以至于它都没任何具体的实例。这样的类称为抽象类。</p>
+</li>
+<li><p>抽象方法：<br><img src="media/15869985945845.jpg" alt="-w1084"></p>
+</li>
+<li><p>抽象类和常规类很像，但是不能使用new操作符创建它的实例。抽象方法只有定义而没有实现。他的实现由子类实现。一个包含对象方法的类的必须声明为抽象类。</p>
+</li>
+<li><p>抽象类的沟造方法定义为protected，它只能被子类使用。创建一个具体的子类的实例时，它的父类的构造方法被调用以初始化父类中定义的数据域。</p>
+</li>
+</ul>
+<h3 id="为何要使用抽象方法"><a href="#为何要使用抽象方法" class="headerlink" title="为何要使用抽象方法"></a>为何要使用抽象方法</h3><p>使用抽象方法以后，JVM在运行时可以根据对象的类型动态地决定调用哪一个方法。</p>
+<h3 id="抽象类的几点说明"><a href="#抽象类的几点说明" class="headerlink" title="抽象类的几点说明"></a>抽象类的几点说明</h3><ul>
+<li>抽象方法不能包含在非抽象类中。如果抽象父类的子类不能实现所有的抽象方法，那么子类也必须定义为抽象的。即在抽象类扩展的非抽象子类中，必须实现所有的抽象方法。另外，抽象方法是<em>非静态</em>的。</li>
+<li>抽象类不能使用new关键字来初始化。但是仍然可以定义它的构造方法，这个构造方法在它的子类的构造方法中调用。</li>
+<li>抽象方法的类必须是抽象的。但是，可以定义一个不包含抽象方法的抽象类。这种情况下，不能使用new创建该类的实例。这种类是用来定义新子类的基类的。</li>
+<li>子类可以覆盖分类的方法并将它定义为abstract。</li>
+<li>即使子类的父类是具体的，这个子类也可以是抽象的。</li>
+<li>不能使用new从一个抽象类创建一个实例。但是抽象类可以用作一种数据类型。<br>下面语句用来创建一个元素是GeometricObject类型的数组：<br>GeometricObject[] objects = new GeometricObject[10];<br>然后可以创建一个GeometricObject的实例，并将它的引用赋值给数组。<br>object[0] = new Circle();// Circle是GeometricObject的子类</li>
+</ul>
+<h2 id="示例学习：-抽象的Number类"><a href="#示例学习：-抽象的Number类" class="headerlink" title="示例学习： 抽象的Number类"></a>示例学习： 抽象的Number类</h2><p>要点提示： Number类是数值包装类、BigInteger以及BigDecimal的父类。</p>
+<h2 id="示例学习：-Calendar和GregorianCalendar"><a href="#示例学习：-Calendar和GregorianCalendar" class="headerlink" title="示例学习： Calendar和GregorianCalendar"></a>示例学习： Calendar和GregorianCalendar</h2><p>要点提示： GregorianCalendar是抽象类Calendar的一个具体子类。</p>
+<p>一个Date的实例表示以毫秒为精度的特定时刻。Calendar是一个抽象的基类，可以提取出详细的日历信息。例如： 年、月、日、小时、分钟和秒。<br>GregorianCalendar是一个支持公历的类。<br>Calendar类中的add方法是抽象的，因为它的实现依赖于某个具体的日历系统。</p>
+<p>可以使用new GregorianCalendar()利用当前时间构造一个默认的GregorianCalendar对象，可以使用GregorianCalendar(year, month, date)利用指定的year、month和date(日)构造一个GregorianCalendar对象。参数month是基于0的，即0代表1月</p>
+<p>在Calendar类中定义的get(int field)方法在从Calendar类中提取日期和时间信息方面是很有用的。日期和时间域都被定义为常量。</p>
+<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>要点提示： 接口是一种与类相似的结构，只包含常量和抽象方法</p>
+<p>接口在很多方面都与抽象类很相似，但是它的目的是指明相关或者不相关类的多个对象的共同行为。例如，使用正确的接口，可以指明这些对象是可比较的、可食用的，以及可克隆的。<br>定义接口：<br><img src="media/15870270601472.jpg" alt="-w975"></p>
+<p>在java中，接口被看作是一种特殊的类。就像常规类一样，每个接口都被编译为独立的字节码文件。使用接口或多或少有点像使用抽象类。即：</p>
+<ul>
+<li>可以使用接口作为引用变量的数据类型或类型转换的结果。</li>
+<li>不能使用new操作符创建接口的实例。</li>
+</ul>
+<p>可以使用Edible接口来明确一个对象是否是可食用的。这需要使用implements关键字让对象的类实现这个接口来完成。</p>
+<h2 id="Comparable接口"><a href="#Comparable接口" class="headerlink" title="Comparable接口"></a>Comparable接口</h2><p>要点提示： Comparable接口定义了compoareTo方法，用于比较对象。<br>接口的定义如下：<br>// Interface for comparing objects, defined in java.lang<br>package java.lang;<br>public interface Comparable<E><br>{ public int compareTo(E o);<br>}</p>
+<p>Comparable 方法判断这个对象相对于给定对象o的<em>顺序</em>，并且当这个对象小于、等于或大于给定对象o时，分别返回负整数、0或正整数。</p>
+<p>Comparable接口是一个泛型接口。在实现该接口时，泛型类型E被替换成一种具体的类型。</p>
+<p>由于所有Comparable对象都有compareTo方法，如果对象是Comparable接口类型的实例的话，Java API中的java.util.Arrays.sort(Object[])方法就可以使用compareTo方法对数组中的对象进行比较和排序。</p>
+<h2 id="Cloneable接口"><a href="#Cloneable接口" class="headerlink" title="Cloneable接口"></a>Cloneable接口</h2><p>要点提示： Cloneable接口给出了一个可克隆的对象。</p>
+<p>经常会出现需要创建一个对象拷贝的情况。为了实现这个目的，需要使用clone方法并理解Cloneable接口。</p>
+<p>接口通常包括常量和抽象方法，但是Cloneable接口是一个特殊情况。在java.lang包中的Cloneable接口的定义如下：<br>package java.lang;<br>public interface Cloneable {<br>}</p>
+<p>也就是说，这个接口是空的。<br>一个带空体的接口被称为标记接口(maker interface).一个标记接口及不包括常量也不包括方法。它用来表示一个类拥有某种特定的属性。实现Cloneable接口的类标记为可克隆的，而且它的对象可以使用在Object类中定义的clone()类方法。</p>
+<p>Java库中的很多类（例如，Date、Calendar和ArrayList）实现Cloneable。这样这些类的实例可以被克隆。</p>
+<p>为了定义一个自定义类来实现Cloneable接口，这个类必须覆盖Object类中的clone()方法。</p>
+<h3 id="浅复制、-深复制"><a href="#浅复制、-深复制" class="headerlink" title="浅复制、 深复制"></a>浅复制、 深复制</h3><p>意思是：<br>Object类中的clone方法将原始对象的每个数据域赋值给目标对象。如果一个数据域是基本类型，复制的就是它的值，例如，area(double 类型)的值从house1复制到house2.如果一个数据域是对象，复制的就只是该域的引用。例如，域whenBuilt是Date类，所以，它的引用被复制给house2。<br>因此，尽管，house1==house2为假，但是house1.whenBuilt==house2.whenBuilt为真。这称为浅复制(shallow copy)而不是深复制(deep copy),这意味着如果数据域是对象类型，那么复制的是对象的引用，而不是它的内容。</p>
+<h2 id="接口与抽象类"><a href="#接口与抽象类" class="headerlink" title="接口与抽象类"></a>接口与抽象类</h2><p>要点提示：一个类可以实现多个接口，但是只能继承一个父类。<br>接口的使用和抽象类的使用基本相似，但是，定义一个接口与定义一个抽象类有所不同。<br><img src="media/15870516633639.jpg" alt="-w1096"></p>
+<p>利用关键字extands，接口可以继承其他接口。这样的接口称为子接口(subinterface)。</p>
+<p>接口可以扩展其他接口而不是类。一个类可以扩展它的父类同时实现多个接口。</p>
+<p>所有的类共享一个根类Object，但是接口没有共同的根。<em>与此类似，接口也可以定义一种类型。一个接口类型的变量可以引用实现该接口的类的实例</em>。如果一个类实现了一个接口，那么这个接口就类似于该类的一个父类。可以将接口当作一种数据类型使用，将接口类型的变量转换为它的子类，反过来也可以。</p>
+<p>注意：类名是一个名词。接口名可以是形容词或者名词。</p>
+<p>设计指南：<br><img src="media/15870522012115.jpg" alt="-w1131"></p>
+<p>通常，推荐使用接口而非抽象类，因为接口可以定义非相关类共有的父类型。接口比类更灵活。</p>
+<h2 id="实例学习：-Rational类"><a href="#实例学习：-Rational类" class="headerlink" title="实例学习： Rational类"></a>实例学习： Rational类</h2><p>设计一个Rational类，用于表示和处理有理数。</p>
+<h2 id="类的设计原则"><a href="#类的设计原则" class="headerlink" title="类的设计原则"></a>类的设计原则</h2><p>要点提示： 类的设计原则有助于设计出合理的类</p>
+<h3 id="内聚性"><a href="#内聚性" class="headerlink" title="内聚性"></a>内聚性</h3><p>类应该描述一个单一的实体，而所有的类操作应该在逻辑上互相配合，只吃一个一致的目的。</p>
+<p>如果一个实体担负太多的职责，就应该按各自的职责分成几个类</p>
+<h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3><p>遵循标准Java程序设计风格和命名习惯。为类、数据域和方法选取具有信息的名字。通常的风格是将数据声明至于构造方法之前，并且将构造方法置于方法之前。</p>
+<p>选择名字要保持一致。给类似的操作选择不同的名字并非良好的实践。</p>
+<p>一般来说，应该具有一致性地提供一个公共无参构造方法，用于构建默认实例。如果一个类不支持无参的构造方法，要用文档写出原因。如果没有显式定义构造方法，即假定有一个空方法体的公共默认无参构造方法。</p>
+<p>如果不想用户创建类的对象，可以在类中声明一个私有的构造方法，Match类就是如此</p>
+<h3 id="封装性"><a href="#封装性" class="headerlink" title="封装性"></a>封装性</h3><p>一个类应该使用private修饰符隐藏其数据，以免用户直接访问它。这使类更易于维护。</p>
+<p><strong>只在</strong>希望数据域可读的情况下，才提供get方法；也只希望数据域可更新的情况下，才提供set方法。</p>
+<h3 id="清晰性"><a href="#清晰性" class="headerlink" title="清晰性"></a>清晰性</h3><p>类应该有一个很清晰的合约，从而易于解释和理解。</p>
+<p>用户可以以各种不同组合、顺序，以及在各种环境中结合使用多个类。因此，在设计一个类时，这个类不应该限制用户如何以及何时使用该类；以一种方式设计属性，以容许用户按值的任何顺序和任何组合来设置；设计方法应该使得实现的功能与它们出现的顺序无关。</p>
+<p>不应该声明一个来自其他数据域的数据域。<br>例如：<br><img src="media/15875645623585.jpg" alt="-w1122"></p>
+<h3 id="完整性"><a href="#完整性" class="headerlink" title="完整性"></a>完整性</h3><p>类是为许多不同用户的使用而设计的。为了能在一个广泛的应用中使用，一个类应该通过属性和方法提供多种方案以适应用户的不同需求。</p>
+<h3 id="实例和静态"><a href="#实例和静态" class="headerlink" title="实例和静态"></a>实例和静态</h3><p>依赖于类的具体实例的变量或方法必须是一个实例变量或方法。</p>
+<p>如果一个变量被类的所有实例所共享，那就应该将它声明为静态的。</p>
+<p>如果方法 不依赖于某个具体的实例，那就应该将它声明为静态方法。</p>
+<p>应该总是使用类名(而不是引用变量)引用静态变量和方法，以增强可读性并避免错误。</p>
+<p>不要从构造方法中传入参数初始化<em>静态</em>数据。最好使用set方法改变静态数据域。</p>
+<p>实例和静态是面向对象程序设计不可或缺的部分。数据域或方法要么是实例的，要么是静态的。不要错误地忽视了静态数据域或方法。</p>
+<p>构造方法永远都是实例方法，因为它是用来创建具体实例的。一个静态变量或方法可以从实例中调用，但是不能从静态方法中调用实例变量或方法。</p>
+<h3 id="继承和聚合"><a href="#继承和聚合" class="headerlink" title="继承和聚合"></a>继承和聚合</h3><p>继承和聚合之间的差异，就是is-a(是一种)和has-a(具有)之间的关系。<br>这里解释一下后者：<br>人具有名字，因此，可以使用<em>聚合</em>来对Person类和Name类之间的关系建模。</p>
+<h3 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h3><p>接口和抽象类都可以用于为对象指定共同的行为。</p>
+<p>如何决定是采用接口还是抽象类？<br>同常，比较强的is-a关系清晰地描述了父子关系，应该采用类的继承关系来建模。弱的is-a关系，也称为is-kind-of(是一类)关系，表明一个对象拥有某种属性。弱的is-a关系可以使用接口来建模。</p>
+<p>接口比抽象类更灵活，因为一个子类只能继承一个父类，但是却可以实现任意个数的接口。然而，接口不能具有具体的方法。可以结合接口和抽象类的优点，创建一个接口，使用一个抽象类来实现它。可以视其方便使用接口或抽象类。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/12/Java/Java-%E6%9C%89%E5%85%B3%E9%87%8D%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/12/Java/Java-%E6%9C%89%E5%85%B3%E9%87%8D%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Java/Java-有关重写的问题</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-12 18:25:11 / 修改时间：22:25:38" itemprop="dateCreated datePublished" datetime="2020-04-12T18:25:11+08:00">2020-04-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="有关重写的问题"><a href="#有关重写的问题" class="headerlink" title="有关重写的问题"></a>有关重写的问题</h1><h2 id="重写和覆盖的关系"><a href="#重写和覆盖的关系" class="headerlink" title="重写和覆盖的关系"></a>重写和覆盖的关系</h2><p><strong>* 重写就是覆盖 *</strong></p>
+<h3 id="需要注意的几点："><a href="#需要注意的几点：" class="headerlink" title="需要注意的几点："></a>需要注意的几点：</h3><ul>
+<li>仅当实例方法是可访问时，它才能被覆盖。因为私有方法在它的类本身以外是不能访问的，所以它不能被覆盖。如果子类中定义的方法在父类中是私有的，那么这两个方法完全没有关系。</li>
+<li>与实例方法一样，静态方法也能被继承。但是，静态方法不能被覆盖。如果父类中定义的静态方法在子类中重新被定义，那么在父类中定义的静态方法将被禁藏。可以使用语法: 父类名.静态方法名(superClassName.staticMethodName)调用隐藏的静态方法。<h3 id="重写与重载"><a href="#重写与重载" class="headerlink" title="重写与重载"></a>重写与重载</h3>不允许在子类中的一个方法具有和它父类中的方法完全相同的方法签名，但是返回值类型不同。这样会导致语法错误。</li>
+</ul>
+<p>子类中与其父类中的方法同名但具有不同参数类型的方法被称为重载。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/11/Java/Java-ArrayList%E7%B1%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/11/Java/Java-ArrayList%E7%B1%BB/" class="post-title-link" itemprop="url">Java/Java-ArrayList类</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-11 14:04:19 / 修改时间：15:07:54" itemprop="dateCreated datePublished" datetime="2020-04-11T14:04:19+08:00">2020-04-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ArrayList类"><a href="#ArrayList类" class="headerlink" title="ArrayList类"></a>ArrayList类</h1><p>要点提示：ArrayList 对象可以用于存储一个对象列表</p>
+<h2 id="用数组存储对象"><a href="#用数组存储对象" class="headerlink" title="用数组存储对象"></a>用数组存储对象</h2><p>数组可以用于存储一个一组对象，但是这个数组一旦创建，它的大小就固定了。Java提供ArrayList类来存锤不限定个数的对象。</p>
+<h2 id="ArrayList类-1"><a href="#ArrayList类-1" class="headerlink" title="ArrayList类"></a>ArrayList类</h2><p>ArrayList是一种泛型类，具有一个泛型类型E。创建一个ArrayList时，可以指定一个具体的类型来替换E。<br>ArrayList类详细：<br><img src="media/15865854188912.jpg" alt="-w1127"></p>
+<p>创建一个ArrayList，并且将其引用赋值给变量cities。该ArrayList对象可以用于存储字符串。例如：<br>ArrayList<String> cities = new ArrayList<String>();</p>
+<p>创建一个ArrayList并且将其引用赋值给变量dates。该ArrayList对象可以用于存储日期。<br>ArrayList<Date> dates = new ArrayList<Date>();</p>
+<p><strong>* 更新说明 *</strong><br><img src="media/15865856170194.jpg" alt="-w1039"></p>
+<h2 id="ArrayList和数组之间的异同"><a href="#ArrayList和数组之间的异同" class="headerlink" title="ArrayList和数组之间的异同"></a>ArrayList和数组之间的异同</h2><p><img src="media/15865871383307.jpg" alt="-w1171"><br><img src="media/15865871488543.jpg" alt="-w1169"></p>
+<p>分别对数组和ArrayList进行排序：<br><img src="media/15865888719004.jpg" alt="-w1133"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/11/Java/Java-%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2%E5%92%8Cinstanceof/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/11/Java/Java-%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2%E5%92%8Cinstanceof/" class="post-title-link" itemprop="url">Java/Java-对象转换和instanceof</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-11 11:12:04 / 修改时间：14:02:39" itemprop="dateCreated datePublished" datetime="2020-04-11T11:12:04+08:00">2020-04-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java-对象转换和instanceof"><a href="#Java-对象转换和instanceof" class="headerlink" title="Java-对象转换和instanceof"></a>Java-对象转换和instanceof</h1><p>要点提示：对象的引用可以类型转换为另外一种对象的引用，这称为对象转换。</p>
+<h2 id="对象转换"><a href="#对象转换" class="headerlink" title="对象转换"></a>对象转换</h2><h3 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h3><p>Object o = new Student();<br>Student类是Object类的一个子类</p>
+<h3 id="向上转换-upcasting"><a href="#向上转换-upcasting" class="headerlink" title="向上转换(upcasting)"></a>向上转换(upcasting)</h3><p>总是可以将一个子类的实例转换为一个父类的变脸，称为向上转换，因为子类的实例永远是它的父类的实例。(不需要使用转换记号”(子类名)”)</p>
+<h3 id="向下转换-downcasting"><a href="#向下转换-downcasting" class="headerlink" title="向下转换(downcasting)"></a>向下转换(downcasting)</h3><p>当把一个父类的实例转换为它的子类变量(称为向下转换)时，必须使用转换记号”(子类名)”进行显式转换，向编译器表明意图。</p>
+<p>为使转换成功，必须确保要转换的对象是子类的一个实例。如果父类对象不是子类的一个实例，就会出现一个运行异常ClassCastException.</p>
+<h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p>instanceof 是java中的关键字</p>
+<h3 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h3><p>(A和B都是对象)<br>A instanceof B //用来确定A是不是B的一个实例</p>
+<h3 id="⚠️"><a href="#⚠️" class="headerlink" title="⚠️"></a>⚠️</h3><p><strong>*注意 *</strong><br>对象成员访问运算符(.)优先于类型转换运算符。所以使用圆括号保证在点运算符(.)之前进行转换，例如：<br>((Circle)object).getArea();</p>
+<p>另外，对基本类型值进行转换不同于对对象引用进行转换。转换基本类型值返回一个新的值，例如：<br>int age = 45;<br>byte newAge = (byte)age;// A new value is assigned to newAge</p>
+<p>而转换一个对象引用不会创建一个新的对象。例如：<br>Object o = new Circle();<br>Circle c = (Circle)o; // No new object is created<br>现在，引用变量o和c指向同一个对象。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/09/Java/Java_instanceof/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -617,262 +960,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/31/Matlab/Matlab-%E7%9F%A9%E9%98%B5%E5%92%8C%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/31/Matlab/Matlab-%E7%9F%A9%E9%98%B5%E5%92%8C%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97/" class="post-title-link" itemprop="url">Matlab/Matlab-矩阵和数组运算</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-31 16:33:29 / 修改时间：16:41:18" itemprop="dateCreated datePublished" datetime="2020-03-31T16:33:29+08:00">2020-03-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Matlab-矩阵和数组运算"><a href="#Matlab-矩阵和数组运算" class="headerlink" title="Matlab-矩阵和数组运算"></a>Matlab-矩阵和数组运算</h1><p>矩阵运算有明确而严格的数学规则，矩阵运算规则是按照线性代数运算法则定义的；<br>数组运算是按照数组的元素逐个进行的。</p>
-<h2 id="1-矩阵运算的函数"><a href="#1-矩阵运算的函数" class="headerlink" title="1 矩阵运算的函数"></a>1 矩阵运算的函数</h2><ul>
-<li>det()</li>
-<li>rank()</li>
-<li>inv()</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/31/Java/Java-%E7%B1%BB%E7%9A%84%E6%8A%BD%E8%B1%A1%E5%92%8C%E5%B0%81%E8%A3%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/31/Java/Java-%E7%B1%BB%E7%9A%84%E6%8A%BD%E8%B1%A1%E5%92%8C%E5%B0%81%E8%A3%85/" class="post-title-link" itemprop="url">Java/Java-类的抽象和封装</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-31 10:07:42 / 修改时间：10:25:43" itemprop="dateCreated datePublished" datetime="2020-03-31T10:07:42+08:00">2020-03-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="类的抽象和封装"><a href="#类的抽象和封装" class="headerlink" title="类的抽象和封装"></a>类的抽象和封装</h1><p>要点提示： 类的抽象是指将类的实现和类的使用分离开，实现的细节被封装并且对用户隐藏，这被称为类的封装</p>
-<h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ul>
-<li><p>类的合约：<br>  从类外可以访问的方法和数据域的集合以及预期这些成员如何行为的描述，合称为“类的合约”</p>
-</li>
-<li><p>类的封装：<br>  实现的细节经过封装，对用户隐藏起来，这称为类的封装。</p>
-</li>
-<li><p>抽象数据类型： 类也被称为是一种抽象数据类型</p>
-<h2 id="形象比喻"><a href="#形象比喻" class="headerlink" title="形象比喻"></a>形象比喻</h2><p>类的实现就像是一个对客户隐藏的黑匣子。<br>客户通过类的合约使用该类</p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/28/Java/Java-%E5%90%91%E6%96%B9%E6%B3%95%E4%BC%A0%E9%80%92%E5%AF%B9%E8%B1%A1%E5%8F%82%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/28/Java/Java-%E5%90%91%E6%96%B9%E6%B3%95%E4%BC%A0%E9%80%92%E5%AF%B9%E8%B1%A1%E5%8F%82%E6%95%B0/" class="post-title-link" itemprop="url">Java/Java-向方法传递对象参数</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-28 22:29:15 / 修改时间：22:34:28" itemprop="dateCreated datePublished" datetime="2020-03-28T22:29:15+08:00">2020-03-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java-向方法传递对象参数"><a href="#Java-向方法传递对象参数" class="headerlink" title="Java-向方法传递对象参数"></a>Java-向方法传递对象参数</h1><h2 id="提示：给方法传递一个对象，是将对象的引用传递给方法"><a href="#提示：给方法传递一个对象，是将对象的引用传递给方法" class="headerlink" title="提示：给方法传递一个对象，是将对象的引用传递给方法"></a>提示：给方法传递一个对象，是将对象的引用传递给方法</h2><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>java 只用一个参数传递方式:值传递。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/28/Java/Java-%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/28/Java/Java-%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/" class="post-title-link" itemprop="url">Java/Java-对象数组</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-28 22:19:30 / 修改时间：22:25:37" itemprop="dateCreated datePublished" datetime="2020-03-28T22:19:30+08:00">2020-03-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java-对象数组"><a href="#Java-对象数组" class="headerlink" title="Java-对象数组"></a>Java-对象数组</h1><h2 id="要点提示：数组既可以存储基本类型值，也可以存储对象。"><a href="#要点提示：数组既可以存储基本类型值，也可以存储对象。" class="headerlink" title="要点提示：数组既可以存储基本类型值，也可以存储对象。"></a>要点提示：数组既可以存储基本类型值，也可以存储对象。</h2><h2 id="创建对象数组"><a href="#创建对象数组" class="headerlink" title="创建对象数组"></a>创建对象数组</h2><p>以下代码创建了10个Circle对象的数组<br>Circle[] circleArray= new Circle[10];</p>
-<h2 id="初始化数组"><a href="#初始化数组" class="headerlink" title="初始化数组"></a>初始化数组</h2><p>为了给一个对象数组进行初始化，可以通过循环实现<br>示例代码:<br>for(int i =0; i &lt; circleArray.length; i++){<br>    circleArray[i] = new Circle();<br>} </p>
-<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>当使用new操作符创建对象数组后，这个数组中的每个元素都是默认值为null的引用变量。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -921,7 +1008,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">126</span>
+          <span class="site-state-item-count">130</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -978,7 +1065,7 @@
 <div class="copyright">
   
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-nianchu"></i>
   </span>
@@ -993,7 +1080,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共104.8k字</span>
+  <span class="post-count">博客全站共105.5k字</span>
 </div>
 
         

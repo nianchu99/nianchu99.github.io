@@ -224,6 +224,426 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/22/Java/JavaFx%20UI%E7%BB%84%E4%BB%B6%E5%92%8C%E5%A4%9A%E5%AA%92%E4%BD%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/22/Java/JavaFx%20UI%E7%BB%84%E4%BB%B6%E5%92%8C%E5%A4%9A%E5%AA%92%E4%BD%93/" class="post-title-link" itemprop="url">JavaFx UI组件和多媒体</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-22 15:58:00" itemprop="dateCreated datePublished" datetime="2020-05-22T15:58:00+08:00">2020-05-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-27 16:01:44" itemprop="dateModified" datetime="2020-05-27T16:01:44+08:00">2020-05-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="JavaFx-UI组件和多媒体"><a href="#JavaFx-UI组件和多媒体" class="headerlink" title="JavaFx UI组件和多媒体"></a>JavaFx UI组件和多媒体</h1><h2 id="引言JavaFX提供了许多UI组件，用于开发全面的用户界面"><a href="#引言JavaFX提供了许多UI组件，用于开发全面的用户界面" class="headerlink" title="引言JavaFX提供了许多UI组件，用于开发全面的用户界面"></a>引言JavaFX提供了许多UI组件，用于开发全面的用户界面</h2><p>Oracle公司提供了可视化设计和开发GUI的工具。这使得程序员可以用最少的编码快速将图形用户界面(GUI)元素组装在一起，然而，任何工具都不是万能的。有时需要修改这些工具生成的程序。所以，理解JavaFx GUI程序设计的一些基本概念非常有必要。</p>
+<p><img src="media/15898826720171.jpg" alt="-w1120"></p>
+<p><img src="media/15898827040254.jpg" alt="-w1154"></p>
+<h2 id="Labeled和Label"><a href="#Labeled和Label" class="headerlink" title="Labeled和Label"></a>Labeled和Label</h2><p>要点提示 ：JavaFX提供了许多组件，用于开发全面的用户界面</p>
+<p>标签(label)是一个显示小段文字、一个节点或同时显示两者的区域。它通常用来给其他组件(通常是文本域)做标签。</p>
+<p>标签和按钮共享许多共同的属性。这些属性定义在Labeled类中。<br><img src="media/15898830157493.jpg" alt="-w1144"></p>
+<p>Label可以使用下面三种构造方法的其中之一进行构建，如图：<br><img src="media/15898830571137.jpg" alt="-w1080"></p>
+<p>Graphic属性可以是任何一个节点，比如一个形状、一个图像或者一个组件。</p>
+<p>*<em>注意： *</em><br>使用ContentDisplay()用于设置的不是标签相对于图像节点的位置，而是图像节点相对于标签的位置<br>HBox将所有节点放在水平线上</p>
+<h2 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h2><p>button是单击时触发动作时间的组件。JavaFx提供了常规按钮、开关按钮、复选框按钮和单选按钮。这些按钮的共同特性在ButtonBase和Label类中定义。</p>
+<p>按钮与标签非常相似，除了按钮具有定义在ButtonBase类中的onAction属性，该属性设置一个用于处理按钮动作的处理器。<br><img src="media/15898859183657.jpg" alt="-w1128"></p>
+<p>*<em>注意： *</em><br>BorderPane是这样一个面板： 将节点放置在顶部、右边、底部、左边以及中间区域</p>
+<h2 id="复选框"><a href="#复选框" class="headerlink" title="复选框"></a>复选框</h2><p>复选框用于提供给用户进行选择。<br>复选框提供了selected属性用于表明一个复选框是否被选中。 </p>
+<p><img src="media/15899068142632.jpg" alt="-w1113"></p>
+<p>VBox: 节点放在单列里<br>HBox： 节点放在单行里</p>
+<h2 id="单选按钮-radio-button"><a href="#单选按钮-radio-button" class="headerlink" title="单选按钮 radio button"></a>单选按钮 radio button</h2><p>又称为选项按钮，用于让用户从一组选项中选择一个单一的条目。</p>
+<p>外观上单选按钮类似于复选框<br>复选框是方形的，可以选中或者不选中<br>单选按钮显示一个圆，或是填充的或是空白的。分别对应选中和未选中<br>RadioButton是ToggleButton的子类。单选按钮和开关按钮的不同之处是，单选按钮显示一个圆，而开关按钮渲染成类似按钮<br><img src="media/15899400921265.jpg" alt="-w1142"></p>
+<p><img src="media/15899403065993.jpg" alt="-w1132"></p>
+<h2 id="文本域-text-filed"><a href="#文本域-text-filed" class="headerlink" title="文本域 text filed"></a>文本域 text filed</h2><p>可以用于输入或者显示一个字符串。<br>TextField是TextInputControl的子类。<br><img src="media/15899411471024.jpg" alt="-w1150"><br><em><em>注意： *</em><br>如果一个文本域用于输入密码，使用PasswordField来替代TextFiled。PasswordField继承自TextField，将输入文本隐藏为回显字符</em>…..</p>
+<h2 id="文本区域-TextArea"><a href="#文本区域-TextArea" class="headerlink" title="文本区域 TextArea"></a>文本区域 TextArea</h2><p>要点提示： TextArea允许用户输入多行文本<br>如果需要让用户输入多行文本，可以创建多个TextField的实例。<strong>或者</strong>选择使用TextArea，它允许用户输入多行文本<br><img src="media/15899420441135.jpg" alt="-w1120"></p>
+<p>TextArea提供滚动支持，但是通常而言，创建一个ScrollPane对象来包含一个TextArea的实例，并且让ScrolPane处理TextArea的滚动会更加方便。<br><em>提示</em>： 可以将任何节点放置在ScrollPane中。如果空间太大以至于不能在显示区域内完整显示，ScrollPane提供了垂直和水平方向的自动滚动支持</p>
+<h2 id="组合框-combo-box"><a href="#组合框-combo-box" class="headerlink" title="组合框 combo box"></a>组合框 combo box</h2><p>要点提示 ：组合框也称为选择列表(choice list)或下拉式列表(drop-down),他包含一个条目列表，用户能够从中进行选择。</p>
+<p>组合框可以限制用户的选择范围，并避免对输入数据有效性进行繁琐的检查。以下为ComBox类中的一些常用的属性和构造方法。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gezavug3g1j31m50u0wlt.jpg" alt="image-20200520224822234"></p>
+<p>ComboBox定义为一个泛型类。泛型T为保存在一个组合框中的元素指定元素类型。</p>
+<p>ComBox继承自ComBoxBase。ComBox可以触发一个ActionEvent事件。当一个条目被选中后，一个ActionEvent事件被触发。</p>
+<p><strong>ObservableList是Java.util.List的子接口,因此你可以将定义在List中的所用方法应用于ObservableList。</strong></p>
+<p><strong>JavaFX提供了一个静态方法FXCollections.observableArrayList(arrayOfElements)来从一个元素数组中创建一个ObservableList。</strong></p>
+<h2 id="列表视图-ListView"><a href="#列表视图-ListView" class="headerlink" title="列表视图 ListView"></a>列表视图 ListView</h2><p>ListView是一个泛型类。泛型T为存储在一个列表视图中的元素指定了元素类型。</p>
+<p>如下是： ListView的详细： </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf07xiv2vrj31rq0og7wh.jpg" alt="image-20200521175156890"></p>
+<p>getSelectionModel()方法返回一个SelectionModel实例，该实例包含了设置选择模式以及获得被选中的索引值和条目的方法。</p>
+<p>选择模式由以下连个常量之一定义，分别是SelectionMode.MULTIPLE和SelectionMode.SINGLE。它们表明可以选择单个还是多个条目。默认为SINGLE.</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf085neu1bj31qm0toquu.jpg" alt="image-20200521175948759"></p>
+<p><strong>注意⚠️</strong>：</p>
+<p>程序代码运行之后，在列表视图中具体实现多选需要结合特定的按键。例如在mac os上，按住command的同时，用鼠标多选项目即可。</p>
+<h2 id="滚动条-ScrollBar"><a href="#滚动条-ScrollBar" class="headerlink" title="滚动条 ScrollBar"></a>滚动条 ScrollBar</h2><p>要点提示： ScrollBar是一个允许用户从一个范围的值中进行选择的组件</p>
+<p>用户可以通过鼠标操作改变滚动条的值。</p>
+<p>ScrollBar的属性如下： </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf0fjj5m5dj31qz0u0hdt.jpg" alt="image-20200521221513304"></p>
+<p><strong>注意：</strong> 滚动条的轨道宽度对应于max + visibleAmount。当一个滚动条设置为它的最大值时，块的左侧位于max，右侧位于max + visibleAmount。</p>
+<p><strong>实际操作中的经验：</strong> 想要实现拖动滑动条移动Text的位置，必须将文本放在一个面板中，然后面板置于边框面板的中央。如果文本直接放在边框面板的中央，不能通过重设它的x和y属性改变文本的位置。</p>
+<h2 id="滑动条-Slider"><a href="#滑动条-Slider" class="headerlink" title="滑动条 Slider"></a>滑动条 Slider</h2><p>要点提示 ：Slider与ScrollBar类似，但是Slider有更多属性，并且可以以多种形式显示。Slider允许用户通过在一个有界的区间中滑动滑块，从而以图形方式选择一个值。滑动条可以显示区间中的主刻度以及次刻度。刻度之间的像素值是由majorTickUnit和minorTickUnit属性指定的，分别表示主像素和次要像素。</p>
+<p>滑块可以水平显示也可以垂直显示，可以带刻度可以不带刻度。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf0ysa4it8j31qi0t8hdt.jpg" alt="image-20200522092106948"></p>
+<p><strong>注意</strong>：垂直滚动条的值从上向下是增加的，但是垂直滑动条的值从上到下是减少的。</p>
+<h2 id="示例学习：-开发一个井字游戏"><a href="#示例学习：-开发一个井字游戏" class="headerlink" title="示例学习： 开发一个井字游戏"></a>示例学习： 开发一个井字游戏</h2><p>*<em>注意： *</em>在开发和测试一个Java项目时，可以采用渐进的方法。</p>
+<h2 id="视频和音频"><a href="#视频和音频" class="headerlink" title="视频和音频"></a>视频和音频</h2><p>*<em>要点提示： *</em>使用Media来获得媒体源，使用MediaPlayer类来播放和控制媒体，使用MediaView来显示视频。</p>
+<p>媒体(视频和音频)对于开发富因特网应用是必要的。</p>
+<p>JavaFX支持MP3、AIFF、WAV以及MPEG-4音频格式以及FLV和MPEG-4视频格式。</p>
+<p>Media类代表了一个媒体源，具有duration、width以及height属性。</p>
+<p>可以从一个Internet URL字符串中创建以一个Media对象。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf71dgaeehj31se0lk1kx.jpg" alt="image-20200527152400018"></p>
+<p>MediaPlayer类播放媒体，并通过一些属性来控制媒体播放，比如autoPlay、currentCount、cycleCount、mute、volume和totalDuration。可以从一个媒体对象来构建一个MediaPlayer对象，并使用pause()、play()方法来暂停和继续播放。</p>
+<p>MediaView类是Node的子类，提供MediaPlayer播放的Media视图。MediaView类提供了一些属性用于观看媒体。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf71h25jqkj31mh0u0hdt.jpg" alt="image-20200527152730968"></p>
+<p>Media,MediaPlayer,MediaView的关系如下：<br><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf72el0r5cj31py08ygth.jpg" alt="image-20200527155944537"></p>
+<p>一个Media对象支持实时流媒体。一个Media对象可以被多个播放器共享，并且不同的视图可以使用同一个MediaPlayer对象。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/22/Java/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E5%8A%A8%E7%94%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/22/Java/%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A8%8B%E5%92%8C%E5%8A%A8%E7%94%BB/" class="post-title-link" itemprop="url">Java/事件驱动编程和动画</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-22 10:32:31" itemprop="dateCreated datePublished" datetime="2020-05-22T10:32:31+08:00">2020-05-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-27 15:18:19" itemprop="dateModified" datetime="2020-05-27T15:18:19+08:00">2020-05-27</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Java-事件驱动编程和动画"><a href="#Java-事件驱动编程和动画" class="headerlink" title="Java 事件驱动编程和动画"></a>Java 事件驱动编程和动画</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>要点提示： 可以编写代码以处理诸如单击按钮、鼠标移动以及按键盘之类的时间。</p>
+<p>为了响应一个按钮单击事件，你需要编写代码来处理按钮单击动作。按钮是一个事件源对象，即动作起源的地方。需要创建一个能对一个按钮动作事件进行处理的对象，即事件处理器。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf10yxo1j2j31h00ccn5y.jpg" alt="image-20200522103644432"></p>
+<p>不是多有对象都可以成为一个动作事件的处理器。要成为一个动作事件的处理器，必须满足两个要求： </p>
+<ol>
+<li>该对象必须是EventHandler<T extends Event>接口的一个示例。接口定义了所有处理器的共同行为。T extends Event是一个Event子类型的泛型。</li>
+<li>EventHandler对象handler必须使用方法source.setOnAction(handler)和事件源对象注册</li>
+<li>EventHandler <ActionEvent> 接口包含了 handle ( ActionEvent ) 方法用于处理动作事件。你的处理器类必须覆盖这个方法来响应事件 。 15 ActionEvent 事件的代码 。</li>
+</ol>
+<h2 id="事件和事件源"><a href="#事件和事件源" class="headerlink" title="事件和事件源"></a>事件和事件源</h2><p>要点提示： 事件是从一个事件源上产生的对象。触发一个事件意味着产生一个事件并委托处理器处理该事件。</p>
+<p>事件驱动编程： 当运行一个Java GUI程序的时候，程序和用户进行交互，并且事件驱动它的执行。这称为事件驱动编程。 </p>
+<p>事件可以被定义为一个告知程序某件事发生的信号。</p>
+<p>事件由外部的用户动作，比如鼠标的移动、单击和键盘按键所触发。</p>
+<p>事件源对象： 产生一个事件并且出发它的组件称为事件源对象，或称为源对象或者源组件。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf11rhaq5ej31go0ictj7.jpg" alt="image-20200522110409887"></p>
+<p><strong>注意</strong>：如果一个组件可以触发一个事件，那么这个组件的任何子类都可以触发同样类型的事件。比如，每个JavaFX形状、布局面板和组件都可以触发MouseEvent和KeyEvent事件，因为Node是形状、布局面板和组件的超类。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf11uy6ln2j31i20u0qv5.jpg" alt="image-20200522110728861"></p>
+<h2 id="注册处理器和处理事件"><a href="#注册处理器和处理事件" class="headerlink" title="注册处理器和处理事件"></a>注册处理器和处理事件</h2><p><strong>要点提示</strong>： 处理器是一个对象，<strong>它必须通过一个事件源对象进行注册，并且它必须是一个恰当的事件处理接口的实例。</strong></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf124m0abdj31so0is7vo.jpg" alt="image-20200522111645923"></p>
+<p><strong>技巧：</strong>设计一个类来建模一个包含了支持方法的面板是一个好的策略，这样相关的方法和面板都耦在一个对象中来。</p>
+<h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><p>要点提示： 内部类，或者称为嵌套类，是一个定义在另外一个类范围中的类。内部类对于定义处理器非常有用。</p>
+<p>一个内部类可以如常规类一样使用。通常，在一个类只被它的外部类所使用的时候，才将它定义为内部类。</p>
+<p>一个内部类具有下面的特征：</p>
+<ul>
+<li>一个内部类被被编译为OuterClassName$InnerClassName的类。</li>
+<li>一个内部类可以引用定义在它所在的外部类中的数据和方法。所以，没有必要将外部类对象的引用传递给内部类的构造方法。内部类可以使程序更加精简。</li>
+<li>一个内部类可以使用可见性修饰符所定义，和应用于一个类中的成员的可见性规则一样</li>
+<li>一个内部类可以被定义为static。一个static的内部类可以使用外部类的名字所访问。一个static的内部类不能访问外部类中非静态成员。</li>
+<li>内部类对象通常在外部类中所创建。也可以从另外一个类中来创建一个内部类的对象。如果内部类是非静态的，你必须先创建一个外部类的实例，然后使用以下语法来创建一个内部类的对象。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OuterClass.InnerClass innerObject = outerObject.<span class="keyword">new</span> InnerClass();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果内部类是静态的，使用以下语法来创建一个内部类对象。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OuterClass.InnerClass innerObject = <span class="keyword">new</span> OuterClass.InnerClass();</span><br></pre></td></tr></table></figure>
+
+<p>内部类的用途： </p>
+<ul>
+<li>将相互依赖的类结合到一个主类中</li>
+<li>避免类名的冲突</li>
+</ul>
+<p>一个处理器类被设计为针对一个GUI组件创建一个处理器对象(比如，一个按钮)。处理器类不会被其他应用所共享，所以将它定义在主类里面作为一个内部类是恰如其分的。</p>
+<h2 id="匿名内部类处理器"><a href="#匿名内部类处理器" class="headerlink" title="匿名内部类处理器"></a>匿名内部类处理器</h2><p><strong>要点提示</strong>：一个匿名内部类是一个没有名字的内部类。它将进一步实现定义一个内部类以及创建一个内部类的实例。</p>
+<p>下面是一个内部类被匿名内部类替代的示例： </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf1a0ynvklj31sm0m81c4.jpg" alt="image-20200522154958242"></p>
+<p>匿名内部类的语法如下所示： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> superClassName/InterfaceName()&#123;</span><br><span class="line"><span class="comment">// Implement or override methods in superclass or interface</span></span><br><span class="line"><span class="comment">// Other methods if necessary</span></span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>匿名内部类是一种特殊类型的内部类，它被当作一个内部类对待，同时具有下面的特征： </p>
+<ul>
+<li>一个匿名内部类必须总是从一个父类继承或者实现一个接口，但是它不能有显式的extends或者implements子句</li>
+<li>一个匿名内部类必须实现父类或者接口中的所有抽象方法</li>
+<li>一个匿名内部类总是使用它父类的无参构造方法来创建一个实例。如果一个匿名内部类实现一个接口，构造方法是Object().</li>
+<li>一个匿名内部类被编译成一个名为OuterClassName$n.class。</li>
+</ul>
+<p>例如如果外部类Test有两个匿名的内部类，它们将被编译成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 使用lambda表达式简化事件处理</span><br><span class="line"></span><br><span class="line">要点提示： lambda表达式可以用于极大简化事件处理器的代码编写.</span><br><span class="line"></span><br><span class="line">lambda表达式可以被看作使用精简语法的匿名内部类。</span><br><span class="line"></span><br><span class="line">如图是将匿名内部类用lambda表达式代替的一个例子：</span><br><span class="line"></span><br><span class="line">![image-20200524001209498](https://tva1.sinaimg.cn/large/007S8ZIlly1gf2u5ud8zgj31qq0kmdrp.jpg)</span><br><span class="line"></span><br><span class="line">一个lambda表达式的基础语法是： </span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">(type1 parm1, type2 parm2, ...) -&gt; expression</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(type1 parm1, type2 parm2, ...) -&gt; &#123;statements;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一个参数的数据类型既可以显式声明，也可以由编译器隐式推断。如果只有一个参数，并且没有显示的数据类型，圆括号可以被省略。</p>
+<p>因而上面(截图)的例子可以表示为： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">e -&gt; &#123;</span><br><span class="line">  <span class="comment">// Code for processing event e</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3fxuqocej31v00l04qp.jpg" alt="image-20200524124547574"></p>
+<h2 id="示例学习：-贷款计算器"><a href="#示例学习：-贷款计算器" class="headerlink" title="示例学习： 贷款计算器"></a>示例学习： 贷款计算器</h2><h2 id="示例学习-鼠标事件"><a href="#示例学习-鼠标事件" class="headerlink" title="示例学习: 鼠标事件"></a>示例学习: 鼠标事件</h2><p><strong>要点提示：</strong>当一个鼠标按键在一个节点或者一个场景中被按下、释放、单击、移动或者拖动时，一个MouseEvent事件被触发。</p>
+<p>MouseEvent对象捕捉事件，例如和它相关的单击数、鼠标位置或者那个叫鼠标按键被按下： </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3kcgren1j31so0u0n49.jpg" alt="image-20200524151800627"></p>
+<p>四个常数——PRIMARY,SECONDARY,MIDDLE和None在MouseEvent中被定义，表明鼠标的左、右、中以及无按钮。shiyonggetButton()方法来探测哪个按钮被按下。</p>
+<p>在任何节点和场景都可触发鼠标事件。</p>
+<h2 id="键盘事件-KeyEvent"><a href="#键盘事件-KeyEvent" class="headerlink" title="键盘事件 KeyEvent"></a>键盘事件 KeyEvent</h2><p><strong>要点提示:</strong>在一个节点或者一个场景上面只要按下、释放或者敲击键盘，就会触发一个KeyEvent事件。</p>
+<p>键盘事件使得可以采用键盘来控制和执行动作，或者从键盘获得输入。KeyEvent对象描述了事件的性质(即，一个按键被按下释放或者敲击)以及键值。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3l1fsp2ej31ni0k4b11.jpg" alt="image-20200524154213607"></p>
+<p>每个键盘事件有一个相关的编码，可以通过KeyEvent的getCode()方法返回。键的编码是定义在KeyCode中的常量。KeyCode是一个enum类型的变量。</p>
+<p>对于按下键和释放键的事件，getCode()返回表中的值， getText()返回一个描述键的代码的字符串， getCharacter()返回一个空字符串。对于敲击键额事件，geCode()返回UNDEFINED, getcCharacter()返回相应的Unicode字符或者和敲击事件相关的一个字符序列。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3l7ne7h0j31us0gu4e3.jpg" alt="image-20200524154812371"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3l7uwigwj31ue0ho18h.jpg" alt="image-20200524154825125"></p>
+<p><strong>注意</strong></p>
+<p>在一个枚举类型值的switch语句中，case后面跟的是枚举常量。常量是不受限制的(unqalified)即无须加KeyCode等类限定。例如： 在case子句中使用keyCode.DOWN将出现错误。</p>
+<p>只有一个被拒交的节点可以接受KeyEvent事件。在一个text上调用requestFocus()使得text可以接受键盘输入。<strong>这个方法必须在舞台被显示后调用。</strong></p>
+<p><strong>注意：</strong> 单击一个按钮之后，circlePane将不再被聚焦，为了修复这个问题，可以在每次按钮被单击后，在circlePane上再次调用requestFocus()。</p>
+<h2 id="可观察对象的监听器"><a href="#可观察对象的监听器" class="headerlink" title="可观察对象的监听器"></a>可观察对象的监听器</h2><p>*<em>要点提示： *</em>可以通过添加一个监听器来处理可观察对象中的值的变化</p>
+<p>一个Observable类的实例被认为是一个可观察对象，它包含了一个addListener(InvalidationListener listener)方法用于添加监听器。监听器类必须实现InvalidationListenr接口以重写invalidate(Observable o)方法，从而可以处理值的改变。一旦observable中的值改变了，通过调用invalidate(Observable o)方法，监听器得到通知。每个绑定属性都是Observable的实例。  </p>
+<p>可以使用lambda来简化添加监听器的流程。注意处理器使用的是e，监听器使用的是ov。</p>
+<h2 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h2><p>*<em>要点提示： *</em>JavaFx中的Animaiton类为所有的动画制作提供了核心功能。</p>
+<p>JavaFX提供了许多Animation的具体子类。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3r5dr678j31ui0rchdt.jpg" alt="image-20200524191335802"></p>
+<p>其中autoReverse是一个Boolean属性，表示下一周期中动画是否要倒转方向。cycleCount表示了该动画的循环次数。使用Tiemline.INDEFINTE表示无限循环。rate定义了动画的速度。一个负的rate值表示动画的相反方向。status是只读属性，表明了动画的状态(Animation.Status.PAUSED、Animation.Status.RUNNING和Animation.Status.STOPPED)。方法pause(),play(),stop()分别表示暂停、播放和终止动画。</p>
+<h3 id="PathTrasition"><a href="#PathTrasition" class="headerlink" title="PathTrasition"></a>PathTrasition</h3><p>PathTrasition类制作一个在给定时间，节点沿着一条路从一个端点到另一个端点的移动动画，PathTransition是Animation的子类型。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf3rd7dkj4j31os0u0kjl.jpg" alt="image-20200524192103626"></p>
+<p>Duration类定义了持续事件。它是一个不可更改的类。这个类定义类常量INDEFINTE，ONE，UNKNOW和ZERO来代表一个无限循环、1毫秒、未知以及哦的持续时间。可以使用new Duration(double millis)来创建一个Duration实例，使用add、substract、multiply和divide方法来执行算数操作，还可以使用toHours(),toMinutes(),toSeconds()和tomMillis()来返回持续时间值中的小时数、分钟数、秒钟数和毫秒数。还可以使用comPareTo来比较两个持续时间。</p>
+<p>常量NONE和ORTHOGONAL_TO_TANGET在PathTransiton.OrientationType中定义。后者确定节点在沿着几何路径移动的过程中是否和路径的切线保持垂直。</p>
+<h2 id="FadeTransition"><a href="#FadeTransition" class="headerlink" title="FadeTransition"></a>FadeTransition</h2><p>FadeTransition类在一个给定的时间内，通过改变一个节点的透明度来产生动画。FadeTransition是Animation的子类型。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gf53fa5cbdj31tw0tahdt.jpg" alt="image-20200525230347355"></p>
+<h2 id="Timeline"><a href="#Timeline" class="headerlink" title="Timeline"></a>Timeline</h2><p>PathTransition和FadeTransition定义类的特定的动画。Timeline类可以通过使用一个或者更多的KeyFrame(关键帧)来编写任意动画。每个KeyFrame在一个给定的时间间隔内顺序执行。Timeline继承自Animation。</p>
+<p>通过new Timeline(KeyFrame… keyframe)来构建一个Timeline。</p>
+<p>一个KeyFrame可以使用以下语句来构建：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> KeyFrame(Duration duration, EeventHandler&lt;ActionEvent&gt; onFinished)</span><br></pre></td></tr></table></figure>
+
+<p>处理器onFinished方法当这个关键帧的持续时间结束后被调用。</p>
+<h2 id="示例学习-：弹球"><a href="#示例学习-：弹球" class="headerlink" title="示例学习 ：弹球"></a>示例学习 ：弹球</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/20/Java/W3Cschool/JavaFX/JavaFX%20%E5%A4%8D%E9%80%89%E6%A1%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/20/Java/W3Cschool/JavaFX/JavaFX%20%E5%A4%8D%E9%80%89%E6%A1%86/" class="post-title-link" itemprop="url">Java/W3Cschool/JavaFX/JavaFX 复选框</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-20 00:40:22" itemprop="dateCreated datePublished" datetime="2020-05-20T00:40:22+08:00">2020-05-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/17/Objective-C/Objective-C%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/O-C%20%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E5%AF%B9C%E7%9A%84%E6%89%A9%E5%B1%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/17/Objective-C/Objective-C%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/O-C%20%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E5%AF%B9C%E7%9A%84%E6%89%A9%E5%B1%95/" class="post-title-link" itemprop="url">Objective-C/Objective-C基础教程/O-C 第二章 对C的扩展</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-17 14:05:24" itemprop="dateCreated datePublished" datetime="2020-05-17T14:05:24+08:00">2020-05-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-20 20:27:53" itemprop="dateModified" datetime="2020-06-20T20:27:53+08:00">2020-06-20</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="对C的扩展"><a href="#对C的扩展" class="headerlink" title="对C的扩展"></a>对C的扩展</h1><h2 id="2-1-最简单的Object-C"><a href="#2-1-最简单的Object-C" class="headerlink" title="2.1 最简单的Object-C"></a>2.1 最简单的Object-C</h2><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfyt4thp8bj314y09skb3.jpg" alt="image-20200620155442707"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfytiqy5wnj314s0bu7q7.jpg" alt="image-20200620160810017"></p>
+<p>如果用户提供文件路径，argc值为1，如果提供了文件路径，argc将大于1.</p>
+<p>argv[0]:保存用户提供的文件名</p>
+<p> argv[1]:保存程序名字</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/17/Objective-C/Objective-C%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/O-C%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E5%90%AF%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -760,349 +1180,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/16/Java/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/16/Java/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="post-title-link" itemprop="url">Java/java-抽象类和接口</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-16 08:48:24" itemprop="dateCreated datePublished" datetime="2020-04-16T08:48:24+08:00">2020-04-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-15 22:49:44" itemprop="dateModified" datetime="2020-06-15T22:49:44+08:00">2020-06-15</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><p>要点提示： 父类中定义了相关子类的共同行为。接口可以拥有定义类的共同行为(包括非相关的类)</p>
-<h2 id="抽象类-1"><a href="#抽象类-1" class="headerlink" title="抽象类"></a>抽象类</h2><p>要点提示： 抽象类不可以用于创建对象。抽象类可以包含抽象方法，这些方法将在具体的子类中实现。</p>
-<ul>
-<li><p>抽象类定义： 类的设计应该确保父类包含它的子类的共同特征。有时候，一个父类设计得非常抽象，以至于它都没任何具体的实例。这样的类称为抽象类。</p>
-</li>
-<li><p>抽象方法：<br><img src="media/15869985945845.jpg" alt="-w1084"></p>
-</li>
-<li><p>抽象类和常规类很像，但是不能使用new操作符创建它的实例。抽象方法只有定义而没有实现。他的实现由子类实现。一个包含对象方法的类的必须声明为抽象类。</p>
-</li>
-<li><p>抽象类的沟造方法定义为protected，它只能被子类使用。创建一个具体的子类的实例时，它的父类的构造方法被调用以初始化父类中定义的数据域。</p>
-</li>
-</ul>
-<h3 id="为何要使用抽象方法"><a href="#为何要使用抽象方法" class="headerlink" title="为何要使用抽象方法"></a>为何要使用抽象方法</h3><p>使用抽象方法以后，JVM在运行时可以根据对象的类型动态地决定调用哪一个方法。</p>
-<h3 id="抽象类的几点说明"><a href="#抽象类的几点说明" class="headerlink" title="抽象类的几点说明"></a>抽象类的几点说明</h3><ul>
-<li>抽象方法不能包含在非抽象类中。如果抽象父类的子类不能实现所有的抽象方法，那么子类也必须定义为抽象的。即在抽象类扩展的非抽象子类中，必须实现所有的抽象方法。另外，抽象方法是<em>非静态</em>的。</li>
-<li>抽象类不能使用new关键字来初始化。但是仍然可以定义它的构造方法，这个构造方法在它的子类的构造方法中调用。</li>
-<li>抽象方法的类必须是抽象的。但是，可以定义一个不包含抽象方法的抽象类。这种情况下，不能使用new创建该类的实例。这种类是用来定义新子类的基类的。</li>
-<li>子类可以覆盖分类的方法并将它定义为abstract。</li>
-<li>即使子类的父类是具体的，这个子类也可以是抽象的。</li>
-<li>不能使用new从一个抽象类创建一个实例。但是抽象类可以用作一种数据类型。<br>下面语句用来创建一个元素是GeometricObject类型的数组：<br>GeometricObject[] objects = new GeometricObject[10];<br>然后可以创建一个GeometricObject的实例，并将它的引用赋值给数组。<br>object[0] = new Circle();// Circle是GeometricObject的子类</li>
-</ul>
-<h2 id="示例学习：-抽象的Number类"><a href="#示例学习：-抽象的Number类" class="headerlink" title="示例学习： 抽象的Number类"></a>示例学习： 抽象的Number类</h2><p>要点提示： Number类是数值包装类、BigInteger以及BigDecimal的父类。</p>
-<h2 id="示例学习：-Calendar和GregorianCalendar"><a href="#示例学习：-Calendar和GregorianCalendar" class="headerlink" title="示例学习： Calendar和GregorianCalendar"></a>示例学习： Calendar和GregorianCalendar</h2><p>要点提示： GregorianCalendar是抽象类Calendar的一个具体子类。</p>
-<p>一个Date的实例表示以毫秒为精度的特定时刻。Calendar是一个抽象的基类，可以提取出详细的日历信息。例如： 年、月、日、小时、分钟和秒。<br>GregorianCalendar是一个支持公历的类。<br>Calendar类中的add方法是抽象的，因为它的实现依赖于某个具体的日历系统。</p>
-<p>可以使用new GregorianCalendar()利用当前时间构造一个默认的GregorianCalendar对象，可以使用GregorianCalendar(year, month, date)利用指定的year、month和date(日)构造一个GregorianCalendar对象。参数month是基于0的，即0代表1月</p>
-<p>在Calendar类中定义的get(int field)方法在从Calendar类中提取日期和时间信息方面是很有用的。日期和时间域都被定义为常量。</p>
-<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>要点提示： 接口是一种与类相似的结构，只包含常量和抽象方法</p>
-<p>接口在很多方面都与抽象类很相似，但是它的目的是指明相关或者不相关类的多个对象的共同行为。例如，使用正确的接口，可以指明这些对象是可比较的、可食用的，以及可克隆的。<br>定义接口：<br><img src="media/15870270601472.jpg" alt="-w975"></p>
-<p>在java中，接口被看作是一种特殊的类。就像常规类一样，每个接口都被编译为独立的字节码文件。使用接口或多或少有点像使用抽象类。即：</p>
-<ul>
-<li>可以使用接口作为引用变量的数据类型或类型转换的结果。</li>
-<li>不能使用new操作符创建接口的实例。</li>
-</ul>
-<p>可以使用Edible接口来明确一个对象是否是可食用的。这需要使用implements关键字让对象的类实现这个接口来完成。</p>
-<h2 id="Comparable接口"><a href="#Comparable接口" class="headerlink" title="Comparable接口"></a>Comparable接口</h2><p>要点提示： Comparable接口定义了compoareTo方法，用于比较对象。<br>接口的定义如下：<br>// Interface for comparing objects, defined in java.lang<br>package java.lang;<br>public interface Comparable<E><br>{ public int compareTo(E o);<br>}</p>
-<p>Comparable 方法判断这个对象相对于给定对象o的<em>顺序</em>，并且当这个对象小于、等于或大于给定对象o时，分别返回负整数、0或正整数。</p>
-<p>Comparable接口是一个泛型接口。在实现该接口时，泛型类型E被替换成一种具体的类型。</p>
-<p>由于所有Comparable对象都有compareTo方法，如果对象是Comparable接口类型的实例的话，Java API中的java.util.Arrays.sort(Object[])方法就可以使用compareTo方法对数组中的对象进行比较和排序。</p>
-<h2 id="Cloneable接口"><a href="#Cloneable接口" class="headerlink" title="Cloneable接口"></a>Cloneable接口</h2><p>要点提示： Cloneable接口给出了一个可克隆的对象。</p>
-<p>经常会出现需要创建一个对象拷贝的情况。为了实现这个目的，需要使用clone方法并理解Cloneable接口。</p>
-<p>接口通常包括常量和抽象方法，但是Cloneable接口是一个特殊情况。在java.lang包中的Cloneable接口的定义如下：<br>package java.lang;<br>public interface Cloneable {<br>}</p>
-<p>也就是说，这个接口是空的。<br>一个带空体的接口被称为标记接口(maker interface).一个标记接口及不包括常量也不包括方法。它用来表示一个类拥有某种特定的属性。实现Cloneable接口的类标记为可克隆的，而且它的对象可以使用在Object类中定义的clone()类方法。</p>
-<p>Java库中的很多类（例如，Date、Calendar和ArrayList）实现Cloneable。这样这些类的实例可以被克隆。</p>
-<p>为了定义一个自定义类来实现Cloneable接口，这个类必须覆盖Object类中的clone()方法。</p>
-<h3 id="浅复制、-深复制"><a href="#浅复制、-深复制" class="headerlink" title="浅复制、 深复制"></a>浅复制、 深复制</h3><p>意思是：<br>Object类中的clone方法将原始对象的每个数据域赋值给目标对象。如果一个数据域是基本类型，复制的就是它的值，例如，area(double 类型)的值从house1复制到house2.如果一个数据域是对象，复制的就只是该域的引用。例如，域whenBuilt是Date类，所以，它的引用被复制给house2。<br>因此，尽管，house1==house2为假，但是house1.whenBuilt==house2.whenBuilt为真。这称为浅复制(shallow copy)而不是深复制(deep copy),这意味着如果数据域是对象类型，那么复制的是对象的引用，而不是它的内容。</p>
-<h2 id="接口与抽象类"><a href="#接口与抽象类" class="headerlink" title="接口与抽象类"></a>接口与抽象类</h2><p>要点提示：一个类可以实现多个接口，但是只能继承一个父类。<br>接口的使用和抽象类的使用基本相似，但是，定义一个接口与定义一个抽象类有所不同。<br><img src="media/15870516633639.jpg" alt="-w1096"></p>
-<p>利用关键字extands，接口可以继承其他接口。这样的接口称为子接口(subinterface)。</p>
-<p>接口可以扩展其他接口而不是类。一个类可以扩展它的父类同时实现多个接口。</p>
-<p>所有的类共享一个根类Object，但是接口没有共同的根。<em>与此类似，接口也可以定义一种类型。一个接口类型的变量可以引用实现该接口的类的实例</em>。如果一个类实现了一个接口，那么这个接口就类似于该类的一个父类。可以将接口当作一种数据类型使用，将接口类型的变量转换为它的子类，反过来也可以。</p>
-<p>注意：类名是一个名词。接口名可以是形容词或者名词。</p>
-<p>设计指南：<br><img src="media/15870522012115.jpg" alt="-w1131"></p>
-<p>通常，推荐使用接口而非抽象类，因为接口可以定义非相关类共有的父类型。接口比类更灵活。</p>
-<h2 id="实例学习：-Rational类"><a href="#实例学习：-Rational类" class="headerlink" title="实例学习： Rational类"></a>实例学习： Rational类</h2><p>设计一个Rational类，用于表示和处理有理数。</p>
-<h2 id="类的设计原则"><a href="#类的设计原则" class="headerlink" title="类的设计原则"></a>类的设计原则</h2><p>要点提示： 类的设计原则有助于设计出合理的类</p>
-<h3 id="内聚性"><a href="#内聚性" class="headerlink" title="内聚性"></a>内聚性</h3><p>类应该描述一个单一的实体，而所有的类操作应该在逻辑上互相配合，只吃一个一致的目的。</p>
-<p>如果一个实体担负太多的职责，就应该按各自的职责分成几个类</p>
-<h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3><p>遵循标准Java程序设计风格和命名习惯。为类、数据域和方法选取具有信息的名字。通常的风格是将数据声明至于构造方法之前，并且将构造方法置于方法之前。</p>
-<p>选择名字要保持一致。给类似的操作选择不同的名字并非良好的实践。</p>
-<p>一般来说，应该具有一致性地提供一个公共无参构造方法，用于构建默认实例。如果一个类不支持无参的构造方法，要用文档写出原因。如果没有显式定义构造方法，即假定有一个空方法体的公共默认无参构造方法。</p>
-<p>如果不想用户创建类的对象，可以在类中声明一个私有的构造方法，Match类就是如此</p>
-<h3 id="封装性"><a href="#封装性" class="headerlink" title="封装性"></a>封装性</h3><p>一个类应该使用private修饰符隐藏其数据，以免用户直接访问它。这使类更易于维护。</p>
-<p><strong>只在</strong>希望数据域可读的情况下，才提供get方法；也只希望数据域可更新的情况下，才提供set方法。</p>
-<h3 id="清晰性"><a href="#清晰性" class="headerlink" title="清晰性"></a>清晰性</h3><p>类应该有一个很清晰的合约，从而易于解释和理解。</p>
-<p>用户可以以各种不同组合、顺序，以及在各种环境中结合使用多个类。因此，在设计一个类时，这个类不应该限制用户如何以及何时使用该类；以一种方式设计属性，以容许用户按值的任何顺序和任何组合来设置；设计方法应该使得实现的功能与它们出现的顺序无关。</p>
-<p>不应该声明一个来自其他数据域的数据域。<br>例如：<br><img src="media/15875645623585.jpg" alt="-w1122"></p>
-<h3 id="完整性"><a href="#完整性" class="headerlink" title="完整性"></a>完整性</h3><p>类是为许多不同用户的使用而设计的。为了能在一个广泛的应用中使用，一个类应该通过属性和方法提供多种方案以适应用户的不同需求。</p>
-<h3 id="实例和静态"><a href="#实例和静态" class="headerlink" title="实例和静态"></a>实例和静态</h3><p>依赖于类的具体实例的变量或方法必须是一个实例变量或方法。</p>
-<p>如果一个变量被类的所有实例所共享，那就应该将它声明为静态的。</p>
-<p>如果方法 不依赖于某个具体的实例，那就应该将它声明为静态方法。</p>
-<p>应该总是使用类名(而不是引用变量)引用静态变量和方法，以增强可读性并避免错误。</p>
-<p>不要从构造方法中传入参数初始化<em>静态</em>数据。最好使用set方法改变静态数据域。</p>
-<p>实例和静态是面向对象程序设计不可或缺的部分。数据域或方法要么是实例的，要么是静态的。不要错误地忽视了静态数据域或方法。</p>
-<p>构造方法永远都是实例方法，因为它是用来创建具体实例的。一个静态变量或方法可以从实例中调用，但是不能从静态方法中调用实例变量或方法。</p>
-<h3 id="继承和聚合"><a href="#继承和聚合" class="headerlink" title="继承和聚合"></a>继承和聚合</h3><p>继承和聚合之间的差异，就是is-a(是一种)和has-a(具有)之间的关系。<br>这里解释一下后者：<br>人具有名字，因此，可以使用<em>聚合</em>来对Person类和Name类之间的关系建模。</p>
-<h3 id="接口和抽象类"><a href="#接口和抽象类" class="headerlink" title="接口和抽象类"></a>接口和抽象类</h3><p>接口和抽象类都可以用于为对象指定共同的行为。</p>
-<p>如何决定是采用接口还是抽象类？<br>同常，比较强的is-a关系清晰地描述了父子关系，应该采用类的继承关系来建模。弱的is-a关系，也称为is-kind-of(是一类)关系，表明一个对象拥有某种属性。弱的is-a关系可以使用接口来建模。</p>
-<p>接口比抽象类更灵活，因为一个子类只能继承一个父类，但是却可以实现任意个数的接口。然而，接口不能具有具体的方法。可以结合接口和抽象类的优点，创建一个接口，使用一个抽象类来实现它。可以视其方便使用接口或抽象类。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/12/Java/Java-%E6%9C%89%E5%85%B3%E9%87%8D%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/12/Java/Java-%E6%9C%89%E5%85%B3%E9%87%8D%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">Java/Java-有关重写的问题</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-12 18:25:11 / 修改时间：22:25:38" itemprop="dateCreated datePublished" datetime="2020-04-12T18:25:11+08:00">2020-04-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="有关重写的问题"><a href="#有关重写的问题" class="headerlink" title="有关重写的问题"></a>有关重写的问题</h1><h2 id="重写和覆盖的关系"><a href="#重写和覆盖的关系" class="headerlink" title="重写和覆盖的关系"></a>重写和覆盖的关系</h2><p><strong>* 重写就是覆盖 *</strong></p>
-<h3 id="需要注意的几点："><a href="#需要注意的几点：" class="headerlink" title="需要注意的几点："></a>需要注意的几点：</h3><ul>
-<li>仅当实例方法是可访问时，它才能被覆盖。因为私有方法在它的类本身以外是不能访问的，所以它不能被覆盖。如果子类中定义的方法在父类中是私有的，那么这两个方法完全没有关系。</li>
-<li>与实例方法一样，静态方法也能被继承。但是，静态方法不能被覆盖。如果父类中定义的静态方法在子类中重新被定义，那么在父类中定义的静态方法将被禁藏。可以使用语法: 父类名.静态方法名(superClassName.staticMethodName)调用隐藏的静态方法。<h3 id="重写与重载"><a href="#重写与重载" class="headerlink" title="重写与重载"></a>重写与重载</h3>不允许在子类中的一个方法具有和它父类中的方法完全相同的方法签名，但是返回值类型不同。这样会导致语法错误。</li>
-</ul>
-<p>子类中与其父类中的方法同名但具有不同参数类型的方法被称为重载。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/11/Java/Java-ArrayList%E7%B1%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/11/Java/Java-ArrayList%E7%B1%BB/" class="post-title-link" itemprop="url">Java/Java-ArrayList类</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-11 14:04:19 / 修改时间：15:07:54" itemprop="dateCreated datePublished" datetime="2020-04-11T14:04:19+08:00">2020-04-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="ArrayList类"><a href="#ArrayList类" class="headerlink" title="ArrayList类"></a>ArrayList类</h1><p>要点提示：ArrayList 对象可以用于存储一个对象列表</p>
-<h2 id="用数组存储对象"><a href="#用数组存储对象" class="headerlink" title="用数组存储对象"></a>用数组存储对象</h2><p>数组可以用于存储一个一组对象，但是这个数组一旦创建，它的大小就固定了。Java提供ArrayList类来存锤不限定个数的对象。</p>
-<h2 id="ArrayList类-1"><a href="#ArrayList类-1" class="headerlink" title="ArrayList类"></a>ArrayList类</h2><p>ArrayList是一种泛型类，具有一个泛型类型E。创建一个ArrayList时，可以指定一个具体的类型来替换E。<br>ArrayList类详细：<br><img src="media/15865854188912.jpg" alt="-w1127"></p>
-<p>创建一个ArrayList，并且将其引用赋值给变量cities。该ArrayList对象可以用于存储字符串。例如：<br>ArrayList<String> cities = new ArrayList<String>();</p>
-<p>创建一个ArrayList并且将其引用赋值给变量dates。该ArrayList对象可以用于存储日期。<br>ArrayList<Date> dates = new ArrayList<Date>();</p>
-<p><strong>* 更新说明 *</strong><br><img src="media/15865856170194.jpg" alt="-w1039"></p>
-<h2 id="ArrayList和数组之间的异同"><a href="#ArrayList和数组之间的异同" class="headerlink" title="ArrayList和数组之间的异同"></a>ArrayList和数组之间的异同</h2><p><img src="media/15865871383307.jpg" alt="-w1171"><br><img src="media/15865871488543.jpg" alt="-w1169"></p>
-<p>分别对数组和ArrayList进行排序：<br><img src="media/15865888719004.jpg" alt="-w1133"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/11/Java/Java-%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2%E5%92%8Cinstanceof/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/11/Java/Java-%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2%E5%92%8Cinstanceof/" class="post-title-link" itemprop="url">Java/Java-对象转换和instanceof</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-11 11:12:04 / 修改时间：14:02:39" itemprop="dateCreated datePublished" datetime="2020-04-11T11:12:04+08:00">2020-04-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java-对象转换和instanceof"><a href="#Java-对象转换和instanceof" class="headerlink" title="Java-对象转换和instanceof"></a>Java-对象转换和instanceof</h1><p>要点提示：对象的引用可以类型转换为另外一种对象的引用，这称为对象转换。</p>
-<h2 id="对象转换"><a href="#对象转换" class="headerlink" title="对象转换"></a>对象转换</h2><h3 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h3><p>Object o = new Student();<br>Student类是Object类的一个子类</p>
-<h3 id="向上转换-upcasting"><a href="#向上转换-upcasting" class="headerlink" title="向上转换(upcasting)"></a>向上转换(upcasting)</h3><p>总是可以将一个子类的实例转换为一个父类的变脸，称为向上转换，因为子类的实例永远是它的父类的实例。(不需要使用转换记号”(子类名)”)</p>
-<h3 id="向下转换-downcasting"><a href="#向下转换-downcasting" class="headerlink" title="向下转换(downcasting)"></a>向下转换(downcasting)</h3><p>当把一个父类的实例转换为它的子类变量(称为向下转换)时，必须使用转换记号”(子类名)”进行显式转换，向编译器表明意图。</p>
-<p>为使转换成功，必须确保要转换的对象是子类的一个实例。如果父类对象不是子类的一个实例，就会出现一个运行异常ClassCastException.</p>
-<h2 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h2><p>instanceof 是java中的关键字</p>
-<h3 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h3><p>(A和B都是对象)<br>A instanceof B //用来确定A是不是B的一个实例</p>
-<h3 id="⚠️"><a href="#⚠️" class="headerlink" title="⚠️"></a>⚠️</h3><p><strong>*注意 *</strong><br>对象成员访问运算符(.)优先于类型转换运算符。所以使用圆括号保证在点运算符(.)之前进行转换，例如：<br>((Circle)object).getArea();</p>
-<p>另外，对基本类型值进行转换不同于对对象引用进行转换。转换基本类型值返回一个新的值，例如：<br>int age = 45;<br>byte newAge = (byte)age;// A new value is assigned to newAge</p>
-<p>而转换一个对象引用不会创建一个新的对象。例如：<br>Object o = new Circle();<br>Circle c = (Circle)o; // No new object is created<br>现在，引用变量o和c指向同一个对象。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1151,7 +1228,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">126</span>
+          <span class="site-state-item-count">130</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1208,7 +1285,7 @@
 <div class="copyright">
   
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-nianchu"></i>
   </span>
@@ -1223,7 +1300,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共104.8k字</span>
+  <span class="post-count">博客全站共105.5k字</span>
 </div>
 
         

@@ -224,6 +224,284 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/Java/Java%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%AE%9E%E7%8E%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/12/Java/Java%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E5%AE%9E%E7%8E%B0/" class="post-title-link" itemprop="url">Java常用函数</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-12 23:40:00 / 修改时间：23:40:50" itemprop="dateCreated datePublished" datetime="2020-03-12T23:40:00+08:00">2020-03-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="冒泡排序-Java"><a href="#冒泡排序-Java" class="headerlink" title="冒泡排序(Java)"></a>冒泡排序(Java)</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span>[] indexOfSmallElement(<span class="keyword">double</span>[] array)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">double</span> exchange = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; ++i) &#123;</span><br><span class="line">  <span class="comment">// loop 1</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; array.length - i - <span class="number">1</span>; j++) &#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">      <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>])&#123;</span><br><span class="line">          exchange = array[j];</span><br><span class="line">          array[j] = array[j + <span class="number">1</span>];</span><br><span class="line">          array[j + <span class="number">1</span>] = exchange;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/Java/Java%E5%B8%B8%E8%A7%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/12/Java/Java%E5%B8%B8%E8%A7%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/" class="post-title-link" itemprop="url">Java/Java常见类型转换</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-12 14:44:07 / 修改时间：15:03:34" itemprop="dateCreated datePublished" datetime="2020-03-12T14:44:07+08:00">2020-03-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="常见类型转换"><a href="#常见类型转换" class="headerlink" title="常见类型转换"></a>常见类型转换</h1><h2 id="long-与-int"><a href="#long-与-int" class="headerlink" title="long 与 int"></a>long 与 int</h2><p>一.将long型转化为int型，这里的long型是基础类型：</p>
+<p>long   a = 10;     int b = (int)a;   </p>
+<p>二.将Long型转换为int 型的，这里的Long型是包装类型：</p>
+<p>Long a = 10; int b=a.intValue();</p>
+<p>三.将int型转化为long型，这里的int型是基础类型：</p>
+<p>int a = 10;long b = (int)a;</p>
+<p>四.将Integer型转化为long型，这里的Integer型是包装类型：</p>
+<p>int a = 10;Long b = a.longValue();</p>
+<h2 id="int-和-String"><a href="#int-和-String" class="headerlink" title="int 和 String"></a>int 和 String</h2><p><a href="https://blog.csdn.net/u012050154/article/details/51320638" target="_blank" rel="noopener">https://blog.csdn.net/u012050154/article/details/51320638</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/Java/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/12/Java/%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BD/" class="post-title-link" itemprop="url">Java/方法重载</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-12 08:47:09" itemprop="dateCreated datePublished" datetime="2020-03-12T08:47:09+08:00">2020-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-19 14:56:13" itemprop="dateModified" datetime="2020-03-19T14:56:13+08:00">2020-03-19</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="方法重载-overload"><a href="#方法重载-overload" class="headerlink" title="方法重载(overload)"></a>方法重载(overload)</h1><h2 id="适用于解决以下问题："><a href="#适用于解决以下问题：" class="headerlink" title="适用于解决以下问题："></a>适用于解决以下问题：</h2><p>调用功能相似方法时传统的做法是编写多个有着不同名字的方法，这样既麻烦且不美观</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>——方法重载(overload)</p>
+<h2 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h2><p>各个方法的功能都相似；</p>
+<h2 id="不是所有的语言都有这个机制"><a href="#不是所有的语言都有这个机制" class="headerlink" title="不是所有的语言都有这个机制"></a>不是所有的语言都有这个机制</h2><p>例如javascript没有这个机制</p>
+<h2 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h2><p>使用的方法名字一样，区分的依据是实参的数据类型；<br>程序员调用方法的时候比较方便，虽然调用的不同的方法，但是感觉就像是在使用一个方法一样，不需要记忆更多的方法；<br>同时代码更加美观。</p>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>功能不相似的时候尽可能让方法的方法名不同。</p>
+<h2 id="思考问题："><a href="#思考问题：" class="headerlink" title="思考问题："></a>思考问题：</h2><p> 1.方法重载又被称为：overload<br>2.什么时候考虑使用方法重载：<br>功能相似的时候，尽可能让方法名相同；<br>【但是：功能不同/不相似的时候，尽可能不使用方法重载】<br>3.满足什么条件才构成方法重载</p>
+<ul>
+<li>在同一个类中</li>
+<li>方法名相同</li>
+<li>参数列表不同：<ul>
+<li>数量不同</li>
+<li>顺序不同</li>
+<li>类型不同 </li>
+</ul>
+</li>
+</ul>
+<p>4.方法重载和什么有关系，和什么没有关系？</p>
+<ul>
+<li>方法重载和方法名 + 参数列表有关系</li>
+<li>方法重载和返回值类型无关</li>
+<li>方法重载和修饰符列表无关(即与是否有public等等无关)<h2 id="方法重载的具体应用"><a href="#方法重载的具体应用" class="headerlink" title="方法重载的具体应用"></a>方法重载的具体应用</h2>使用下面的自定义类，利用其中的各个重载方法就可以实现简单快速地输出各种类型的值。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SelfPrint</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">byte</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">short</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println( data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">long</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">float</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">double</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">boolean</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(<span class="keyword">char</span> data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">p</span><span class="params">(String data)</span></span>&#123;</span><br><span class="line">	System.out.println(data);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="构造方法也可以重载"><a href="#构造方法也可以重载" class="headerlink" title="构造方法也可以重载"></a>构造方法也可以重载</h3>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/12/%E8%B5%B7%E8%88%AA/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/12/%E8%B5%B7%E8%88%AA/%E7%BB%8F%E9%AA%8C%E4%B9%8B%E8%B0%88/" class="post-title-link" itemprop="url">起航/经验之谈</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-12 08:35:47 / 修改时间：08:38:09" itemprop="dateCreated datePublished" datetime="2020-03-12T08:35:47+08:00">2020-03-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="邮箱："><a href="#邮箱：" class="headerlink" title="邮箱："></a>邮箱：</h2><p>求职简历中邮箱不要使用@qq.com后缀的；</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/10/Matlab/Matlab%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -604,384 +882,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/06/Java/Java%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/06/Java/Java%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Java常用方法</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-03-06 19:07:42" itemprop="dateCreated datePublished" datetime="2020-03-06T19:07:42+08:00">2020-03-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-18 19:53:20" itemprop="dateModified" datetime="2020-03-18T19:53:20+08:00">2020-03-18</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java常用方法"><a href="#Java常用方法" class="headerlink" title="Java常用方法"></a>Java常用方法</h1><h2 id="toRadians"><a href="#toRadians" class="headerlink" title="toRadians"></a>toRadians</h2><p>作用：将以度数为单位的角度转换为以弧度为单位的角度</p>
-<h2 id="arraycopy-int-arr-int-star-int-arr2-int-start2-length"><a href="#arraycopy-int-arr-int-star-int-arr2-int-start2-length" class="headerlink" title="arraycopy(int[] arr, int star,int[] arr2, int start2, length);"></a>arraycopy(int[] arr, int star,int[] arr2, int start2, length);</h2><p>具体用法：<br>    5个参数，<br>第一个参数是要被复制的数组<br>第二个参数是被复制的数字开始复制的下标<br>第三个参数是目标数组，也就是要把数据放进来的数组<br>第四个参数是从目标数据第几个下标开始放入数据<br>第五个参数表示从被复制的数组中拿几个数值放到目标数组中</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/26/Matlab/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/26/Matlab/Matlab%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97/" class="post-title-link" itemprop="url">Matlab基本运算</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-26 22:28:17" itemprop="dateCreated datePublished" datetime="2020-02-26T22:28:17+08:00">2020-02-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-27 00:03:32" itemprop="dateModified" datetime="2020-02-27T00:03:32+08:00">2020-02-27</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h1><h2 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h2><h2 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h2><h2 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h2><p>左除</p>
-<p>右除法</p>
-<p>非奇异性矩阵是什么意思</p>
-<h2 id="点运算"><a href="#点运算" class="headerlink" title="点运算"></a>点运算</h2><h1 id="关系运算"><a href="#关系运算" class="headerlink" title="关系运算"></a>关系运算</h1><p>注意不等于的关系运算符是~=</p>
-<p>成立返回1，不成立返回0</p>
-<h1 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 总结：Matlab的运算都是在矩阵意义下进行的，单个数据的算术运算只是矩阵运算的一种特例</span></span><br><span class="line"><span class="comment">% 加减运算 ：</span></span><br><span class="line"><span class="comment">% 矩阵之间：</span></span><br><span class="line">A = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>] </span><br><span class="line">B = [<span class="number">7</span>:<span class="number">9</span>;<span class="number">100</span>:<span class="number">102</span>]</span><br><span class="line">B - A </span><br><span class="line"><span class="comment">% 矩阵和标量之间</span></span><br><span class="line">c = <span class="number">100</span>;</span><br><span class="line">B - c</span><br><span class="line"></span><br><span class="line"><span class="comment">% 乘法运算就只能在矩阵之间了，而且要求A的列数与B的行数相等，此时称A、B矩阵是可乘的，或称A和B两矩阵维数和大小相容：</span></span><br><span class="line">C = [<span class="number">1</span>:<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>];</span><br><span class="line">D = [<span class="number">11</span>,<span class="number">20</span>;<span class="number">12</span>,<span class="number">21</span>]</span><br><span class="line">D * C <span class="comment">% 特别注意，两矩阵相乘，A*B不等于就是B*A。要想成功计算，一定保证是A的列数与B的行数相等。是不能交换的。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 除法运算??在Matlab中，有两种不同的矩阵除法运算，一个是右除，一个是左除</span></span><br><span class="line"><span class="comment">% 书上说如果A矩阵是非奇异方阵，则B/A等效于B*inv(A),A/B等效于inv(A)*B.而这两种不同的计算方法的计算结果是不一样的。</span></span><br><span class="line"><span class="comment">% 但是对于两个标量来说，左除和右除的效果是一样的。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 乘方运算：一个矩阵的乘方运算可以表示成A ^x,要求：A为方阵，x为标量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 点运算</span></span><br><span class="line"><span class="comment">% 两矩阵进行点运算是指它们的对应元素进行相关运算，要求两矩阵同型。</span></span><br><span class="line">E = A;</span><br><span class="line">F = A.* E</span><br><span class="line"></span><br><span class="line"><span class="comment">% 关系运算 </span></span><br><span class="line"><span class="comment">% 当两个比较量是标量时，直接比较两个数字的大小，关系成立，表达式的结果为1，否则为0</span></span><br><span class="line"><span class="comment">% 当两个是同型的矩阵时，比较是对两矩阵相同位置的元素按标量关系运算规则逐个进行，最终结果是一个只有1和0的同型矩阵</span></span><br><span class="line"><span class="comment">% 当一个是标量，另一个是矩阵时，则把标量与矩阵中的每一个元素按标量规则进行比较，同样结果是一个只含有0和1的同型矩阵</span></span><br><span class="line">A1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>;<span class="number">4</span>:<span class="number">6</span>];</span><br><span class="line">A2 = [<span class="number">0</span>:<span class="number">2</span>;<span class="number">21</span>:<span class="number">23</span>];</span><br><span class="line">A3 = (A1&lt; A2)<span class="comment">% 结果：[0 0 0;1 1 1]</span></span><br><span class="line">A4 = (A2&gt;<span class="number">0</span>) <span class="comment">% 结果：[0 1 1;1 1 1]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 逻辑运算</span></span><br><span class="line"><span class="comment">% &amp;｜ ～</span></span><br><span class="line"><span class="comment">% &amp; :两个非零才为1</span></span><br><span class="line"><span class="comment">% ｜：一个非零则为1</span></span><br><span class="line"><span class="comment">% 若参与逻辑运算的是两个同型矩阵，那么将对矩阵相同位置上的元素按标量规则逐个进行运算，结果是包含0、1的同型矩阵</span></span><br><span class="line"><span class="comment">% 若参与逻辑运算的是一个标量和一个矩阵，则把标量与矩阵中的每一个元素按标量规则进行比较，同样结果是一个只含有0和1的同型矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 实例： 水仙花数</span></span><br><span class="line"></span><br><span class="line">m = [<span class="number">100</span>:<span class="number">999</span>]; <span class="comment">% 生成所有三位正整数</span></span><br><span class="line">m1 = <span class="built_in">rem</span>(m,<span class="number">10</span>); <span class="comment">% 个</span></span><br><span class="line">m2 = <span class="built_in">rem</span>(<span class="built_in">fix</span>(m/<span class="number">10</span>),<span class="number">10</span>);<span class="comment">% 十 </span></span><br><span class="line">m3 = <span class="built_in">fix</span>(m/<span class="number">100</span>); <span class="comment">% 百</span></span><br><span class="line"><span class="built_in">j</span> = <span class="built_in">find</span>(m == m1.^<span class="number">3</span>+m2.^<span class="number">3</span>+m3.^<span class="number">3</span>);<span class="comment">% 是水仙花数的序号</span></span><br><span class="line"><span class="built_in">i</span> = <span class="built_in">find</span>(~(m == m1.^<span class="number">3</span>+m2.^<span class="number">3</span>+m3.^<span class="number">3</span>)); <span class="comment">% 不是水仙花数的序号</span></span><br><span class="line"><span class="comment">% 然后分别传递给矩阵m</span></span><br><span class="line">result = m(<span class="built_in">j</span>) </span><br><span class="line">result1 = m(<span class="built_in">i</span>)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/26/Java/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI%5CO/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/26/Java/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E5%92%8C%E6%96%87%E6%9C%ACI%5CO/" class="post-title-link" itemprop="url">Java/Java-异常处理和文本I\O</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-26 15:13:19" itemprop="dateCreated datePublished" datetime="2020-02-26T15:13:19+08:00">2020-02-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-08 15:14:59" itemprop="dateModified" datetime="2020-06-08T15:14:59+08:00">2020-06-08</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Java-异常处理和文本I-O"><a href="#Java-异常处理和文本I-O" class="headerlink" title="Java-异常处理和文本I/O"></a>Java-异常处理和文本I/O</h1><h2 id="异常处理概述"><a href="#异常处理概述" class="headerlink" title="异常处理概述"></a>异常处理概述</h2><p>要点提示：异常是从方法抛出的。方法的调用者可以捕获以及处理该异常</p>
-<p>java可以让一个方法可以抛出一个异常，该异常可以被调用者捕获和处理。</p>
-<p>(书中的例子)在这种情况下，抛出的值为new ArithmeticException(“Divisor cannot be zero”),称为一个异常。异常就是一个从异常类创建的对象。在这种情况下，异常类就是java.lang.ArithmeticException.</p>
-<p>构造方法ArithmeticException(str)被调用用以构建一个异常，其中str是描述异常的消息。</p>
-<p>当异常被抛出时，正常的执行流程就会被中断。就它的名字所提示的，“抛出异常”就是将异常从一个地方传递到另一个地方。调用方法的语句包含在一个try块和一个catch块中。try块包含了正常情况下执行的代码。异常被catch块所捕获。catch块中的代码执行以处理异常。之后，catch块之后的语句被执行。</p>
-<p>throw语句类似于方法的调用，但不同于调用方法的是，它调用的是catch块。从某种意义上讲，catch块就像带参数的方法定义，这些参数匹配抛出的值的类型。但是，它不像方法，在执行catch块之后，程序控制不返回到throw语句；而是执行catch块之后的下一条语句。</p>
-<p>catch块的头部<br>catch(xxxException ex)<br>标识符ex的作用就像是方法中的参数。所以这个参数称为catch块的参数。ex之前的类型指定了catch块可以捕获的异常类型。一旦捕获该异常，就能从catch块体中的参数访问这个抛出的值。<br>try-throw-catch块的模版如下<br><img src="media/15878071407711.jpg" alt="-w732"></p>
-<p>一个异常可能是通过try块中的trow语句直接抛出，或者调用一个可能会抛出异常的方法而抛出</p>
-<h2 id="异常类型"><a href="#异常类型" class="headerlink" title="异常类型"></a>异常类型</h2><p>要点提示：异常使对象，而对象都采用类来定义。异常的根类是java.lang.Throwable。</p>
-<p>注意： 类名Error、Exception和RuntimeException有时候容易引起混淆。它们都是异常，这里讨论的错误都是发生在运行时。<br>Throwable类是所有异常的根。所有的java异常都直接或间接地继承自Throwable。可以通过继承<br>Exception或者Exception的子类来创建自己的异常类。</p>
-<p>异常类分为三种主要类型： </p>
-<ul>
-<li>系统异常(system error）是由java虚拟机抛出的，用Error类表示。Error类描述的是内部系统错误。这样的错误很少发生。如果发生，除了可以通知用户以及尽量稳妥地终止程序外，几乎什么都不能做。</li>
-<li>异常（exception）是用Exception类表示的，它描述的是由程序和外部环境所引起的错误，这些错误能被程序捕获和处理。<br><img src="media/15878081327997.jpg" alt="-w922"></li>
-<li>运行时异常（runtime exception）是用RuntimeException类表示的。它描述的是程序设计错误，例如，错误的类型转换、访问一个越界数组或数值错误。运行时异常通常是由Java虚拟机抛出的。</li>
-<li><img src="media/15878083370996.jpg" alt="-w951"><br>RuntimeException和Error以及它们的子类都被称为免检异常。所有其他异常都被称为必检异常，意思是说编译器会强制程序猿通过try-catch块处理它们，或者在方法头进行声明。</li>
-</ul>
-<p>大多数情况下，免检异常都会反映出程序设计上不可恢复的逻辑错误。</p>
-<p>免检异常可能在程序的任何一个地方出现。</p>
-<p>为避免过多地使用try-catch模块，java语言不强制要求程序猿编写代码捕获或声明免检异常。</p>
-<h2 id="关于异常处理的更多知识"><a href="#关于异常处理的更多知识" class="headerlink" title="关于异常处理的更多知识"></a>关于异常处理的更多知识</h2><p>要点提示： 异常的处理器是通过当前的方法开始，沿着方法调用链，按照异常的反向传播方向找到的。</p>
-<p>java的异常处理模型基于三种操作： 声明一个异常（declaring an exception）、抛出一个异常（throw an exception）和捕获一个异常（catching a exception）<br><img src="media/15878088878447.jpg" alt="-w909"></p>
-<h3 id="声明异常"><a href="#声明异常" class="headerlink" title="声明异常"></a>声明异常</h3><p><strong><em>在java中，当前执行的语句必属于某个方法。Java解释器调用main方法开始执行一个程序。</em></strong><br>每个方法都必须声明它可能抛出的必检异常的类型，因此java不要求在方法显式声明Error和RuntimeException。但是，方法要抛出的其他异常都必须在方法头中显式声明，这样，方法的调用者会被告知有异常。</p>
-<p>在方法中声明一个异常，要在方法头中使用关键字throws。</p>
-<p>public void myMethod() throws IOException</p>
-<p>如果方法可能会抛出多个异常，就可以在关键字throws之后添加一个用逗号分隔的异常列表。</p>
-<p>注意： <strong><em>如果方法没有在父类中声明异常，那么就不能在子类中对其进行继承来声明异常。</em></strong></p>
-<h3 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h3><p>检测到错误的程序可以创建一个合适的异常类型的i实例并抛出它，这就称为一个异常。<br>示例：<br><img src="media/15878094134772.jpg" alt="-w740"><br>注意： 通常，Java API中的每个异常至少有两个构造方法： 一个无参构造方法和一个带有描述这个异常的String参数的构造方法。这个参数就叫做异常消息（额exception message），它可以用getMessage()获取。</p>
-<p>提示： <strong>* 声明异常的关键字是throws， 抛出异常的关键字是throw *</strong></p>
-<h3 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h3><p><img src="media/15878096247534.jpg" alt="-w827"><br>如果在执行try块的过程中没有出现异常，则跳过catch子句。</p>
-<p>异常处理器： try块中的某条语句抛出异常，java就会跳过try中剩余的语句，然后开始查找处理这个异常的代码的过程。处理这个异常的代码称为异常处理器。</p>
-<p>寻找处理器的过程称为捕获一个异常。</p>
-<p>下面截图是详细说明<br><img src="media/15878314324548.jpg" alt="-w920"><br><img src="media/15878314425513.jpg" alt="-w902"></p>
-<p>注意： 一个通用的父类可以派生出各种异常类。如果一个catch块可以捕获一个父类的异常对象，它就能捕获那个父类的所有子类的异常对象。<br><img src="media/15878315889991.jpg" alt="-w865"><br><img src="media/15878316852638.jpg" alt="-w890"></p>
-<h3 id="从异常中获取信息"><a href="#从异常中获取信息" class="headerlink" title="从异常中获取信息"></a>从异常中获取信息</h3><p>异常对象包含过于异常的有价值的信息。</p>
-<p>Throwable类<br><img src="media/15878318295653.jpg" alt="-w827"><br>stackTraceElement[] 中的每个元素表示一个方法调用<br>stackTraceElement[] 数组中的元素有下列的方法可以调用：</p>
-<ul>
-<li>getMethodName() 获得每个元素的方法</li>
-<li>getClassName() 获得每个元素的类名</li>
-<li>getLineNumber() 获得每个元素的异常行号</li>
-</ul>
-<h3 id="示例学习：-声明、抛出和捕获异常"><a href="#示例学习：-声明、抛出和捕获异常" class="headerlink" title="示例学习： 声明、抛出和捕获异常"></a>示例学习： 声明、抛出和捕获异常</h3><p>不管是否在方法头中声明，每个方法都能抛出RuntimeException异常(免检异常)</p>
-<p>注意： 在异常事件中，执行仍然会继续。如果处理器没有捕获到这个异常，程序会突然中断。</p>
-<p>如果方法抛出RuntimeException和Error之外的异常，那么此方法就必须在try-catch块内调用</p>
-<h2 id="finally-语句"><a href="#finally-语句" class="headerlink" title="finally 语句"></a>finally 语句</h2><p>要点提示： 无论异常是否产生，finally子句总是会被执行的。<br>finally子句的语法：<br><img src="media/15878899426819.jpg" alt="-w739"><br>在任何情况下，finally块中的代码都会被执行，不论try块中是否出现异常或者是否被捕获。<br><img src="media/15878900814431.jpg" alt="-w888"></p>
-<h2 id="链式异常"><a href="#链式异常" class="headerlink" title="链式异常"></a>链式异常</h2><p>要点提示： 和其他异常一起抛出一个异常<br>catch块重新抛出原始的异常。有时候，可能需要同原始异常一起抛出一个新异常（带有附加信息），这称为链式异常。</p>
-<p>似乎是先抛出新异常，然后再抛出原始异常。</p>
-<h2 id="创建自定义异常类"><a href="#创建自定义异常类" class="headerlink" title="创建自定义异常类"></a>创建自定义异常类</h2><p>要点提示： 可以通过能够派生出java.lang.Exception 类来定义个自定义异常类</p>
-<p>java提供相当多的异常类，尽量不要使用它们而不要创建自己的异常类。</p>
-<p>当遇到不能用预定义的异常类恰当描述问题，那么就可以通过派生Exception类或其他子类。<br><img src="media/15878913236238.jpg" alt="-w944"></p>
-<p>提示：<br>Java API中的大多数异常都包含两个构造方法：一个无参构造方法和一个带消息参数的构造方法。</p>
-<p>要创建一个InvalidRadiusException类，必须传递一个半径。</p>
-<h2 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h2><p>本章介绍如何使用File类获取文件/目录的属性以及删除和重命名文件/目录，以及创建目录。<br>要点提示： File类包含了获得一个文件/目录的属性，以及对文件/目录进行改名和删除的方法。</p>
-<p>存储在程序中的数据是暂时的，当程序终止时它们就会丢失。为了能够永久地保存程序中创建的数据，需要将它们存储到磁盘或其他永久存储设备的文件中。</p>
-<p>在文件系统中，每个文件都存放在一个目录中。</p>
-<ul>
-<li>绝对文件名<br>是由文件名和它的完整路径以及驱动器字母组成。</li>
-</ul>
-<p>绝对文件是依赖机器的。</p>
-<ul>
-<li>相对文件名是相对于当前工作目录的。对于相对文件名而言，完整目录被忽略。</li>
-</ul>
-<p>File类意图提供了一种抽象，这种抽象是指以不依赖机器的方式来处理很多依赖于机器的文件和路径名的复杂性。</p>
-<p>File类包含许多获取文件属性的方法，以及重命名和删除文件和目录的方法。</p>
-<p><strong><em>但是</em></strong>，File类不包含读写文件内容的方法。<br><img src="media/15878963885056.jpg" alt="-w908"></p>
-<p>File类是文件名及其目录路径的一个<strong>包装类</strong>。<br><img src="media/15878965955605.jpg" alt="-w862"></p>
-<p>可以用File类的isDirectory()方法来判断这个对象是否表示一个目录，还可以使用isFile()方法来判断这个对象是否表示一个文件名。</p>
-<p><strong>警告</strong>：在Windows中目录的分隔符是反斜杠\，但是在Java中，反斜杠是一个特殊字符，应该写成\的形式。</p>
-<p><strong>注意：</strong>构建一个File实例并不会在机器上创建一个文件。不管文件是否存在，都可以创建任意文件名的File实例。可以调用File实例上的exists()方法来判断这个文件是否存在。</p>
-<p>在程序中，不要直接使用绝对文件名，因为这样可能会使程序不能在其他平台上工作。</p>
-<p>应该使用于当前目录相关的文件名。</p>
-<p>斜杠/是Java的目录分隔符，这点和UNIX是一样的。</p>
-<h2 id="文件输入和输出"><a href="#文件输入和输出" class="headerlink" title="文件输入和输出"></a>文件输入和输出</h2><p>要点提示： 使用Scanner类从文件中读取文本数据，使用PrintWriter类向文本文件输入数据。</p>
-<p>File对象封装了文件或路径的属性，但是它既不包括创建文件的方法，也不包括从/向文件读/写数据（称为数据输入输出，简称I/O）的方法。</p>
-<p>为了完成I/O操作，需要使用恰当的I/O类创建对象。这些对象包含从/向文件读/写数据的方法。</p>
-<p>文本文件本质上是存储在磁盘上的字符。</p>
-<h3 id="使用PrintWriter写数据"><a href="#使用PrintWriter写数据" class="headerlink" title="使用PrintWriter写数据"></a>使用PrintWriter写数据</h3><p>java.io.PrintWriter类可用来创建一个文本文件写入数据。首先，必须为一个文本文件创建一个PrintWriter对象。<br><img src="media/15879076595179.jpg" alt="-w615"></p>
-<p>PrintWriter对象上有print、println和printf方法，可以使用它们向文件写入数据。<br><img src="media/15879077241331.jpg" alt="-w916"></p>
-<p>Java强制要求编写代码来处理I/O异常。</p>
-<pre><code>System.out.println();是控制台的标准Java对象。</code></pre><p>必须使用close()方法关闭文件。如果没有调用该方法，数据就不能正确地保存在文件中。</p>
-<h3 id="使用try-with-resources-自动关闭资源"><a href="#使用try-with-resources-自动关闭资源" class="headerlink" title="使用try-with-resources 自动关闭资源"></a>使用try-with-resources 自动关闭资源</h3><p>程序员经常会忘记关闭文件。JDK 7 提供了下面的新的try-with-resources 语法来自动关闭文件。<br><img src="media/15879085940993.jpg" alt="-w458"></p>
-<p>关键字try后声明和创建了一个资源。<br><strong>注意：</strong> 资源放在括号中。资源必须是AutoCloseable的子类型，比如PrintWriter，具有一个close方法。</p>
-<p>资源的声明和创建必须是在同一行语句中，可以在括号中进行多个资源的声明和创建。紧接着就是资源声明的块中的语句使用资源。快结束后，资源的close()方法自动调用以关闭资源。使用try-with-resources不仅可以避免错误，还可以简化代码。</p>
-<h3 id="使用Scanner读数据"><a href="#使用Scanner读数据" class="headerlink" title="使用Scanner读数据"></a>使用Scanner读数据</h3><p>Scanner类用来从控制台读取字符串和基本数据类型数值。<br>Scanner可以将输入分为由空白字符串分隔的标记。为了能从键盘读取，需要为System.in创建一个Scanner。</p>
-<p>为了从文件中读取，为文件创建一个Scanner，如下<br>            Scanner input = new Scanner(new File(filename));</p>
-<p>如同给出了Scanner中常用的方法。<br><img src="media/15879097560591.jpg" alt="-w854"></p>
-<p>从文件中读取数据使没有必要管斌输入文件，但这样做是一种释放文件占用的资源的好方法。可以使用try-with-resources语法重写该程序。</p>
-<p>scanner中默认分隔符是空格，可以将分隔符理解为标记。</p>
-<h3 id="Scanner-如何工作"><a href="#Scanner-如何工作" class="headerlink" title="Scanner 如何工作"></a>Scanner 如何工作</h3><p>nextInt()等方法都被称为标记读取方法。因为它们会读取用分隔符分隔开的标记。默认情况下，分隔符是空格。<br>可以使用useDelimiter(String regex)方法设置新的分隔模式。</p>
-<p>输入方法的工作原理：<br>一个标记方法首先跳过任意分隔符，然后读取一个以分隔符结束的标记。然后，对于nextByte，nextShort等，这个标记就分别被自动地转换为一个byte，short等类型。对于next()方法而言是无须做转换的。如果标记和期望的类型不匹配，就会抛出一个运行异常java.util.InputMismathcException.</p>
-<p>方法next()和nextLine()都会读取一个字符串。前者读取一个由分隔符分隔的字符串，但是后者会读取一个以换行符结束的行。</p>
-<p><strong>注意：</strong>行分隔符是由系统定义的，在WIndows平台上是\r\n， 而在UNIX上是\n。</p>
-<p>为了得到特定平台上的行分隔符，使用<br>String lineSeparator = System.getProperty(“line.separator”);</p>
-<p>如果从键盘输入，每行就以回车键(Enter key)结束，它对应\n字符。</p>
-<p><strong><em>有关nextLine()的问题</em></strong><br><img src="media/15879714308600.jpg" alt="-w904"></p>
-<p>可以使用Scanner类从文件或者键盘读取数据。也可以使用Scanner类从一个字符串扫描数据。</p>
-<h3 id="实例学习：-替换文本"><a href="#实例学习：-替换文本" class="headerlink" title="实例学习： 替换文本"></a>实例学习： 替换文本</h3><p><img src="media/15879715940217.jpg" alt="-w887"></p>
-<h2 id="从Web上读取数据"><a href="#从Web上读取数据" class="headerlink" title="从Web上读取数据"></a>从Web上读取数据</h2><p>要点提示： 如同从电脑中的文件读取数据一样，也可以从Web上的文件中读取数据<br>URL全名：Uniform Resource Locator, 统一资源定位器</p>
-<p>为了读取一个文件，首先要使用java.net.URL类的构造方法，为该文件创建一个URL对象。</p>
-<p>要让URL类来识别一个有效的URL，前缀http:// 是必须的。</p>
-<p>创建一个URL对象后，可以使用URL类中定义的openStream()方法来打开输入流和用输入流创建如下Scanner对象。</p>
-<p>Scanner input = new Scanner(url.openStream());<br>(这里的意思是input就是给定url的内容)</p>
-<h2 id="实例学习：-Web-爬虫"><a href="#实例学习：-Web-爬虫" class="headerlink" title="实例学习： Web 爬虫"></a>实例学习： Web 爬虫</h2><p>要点提示： 学习开发一个程序，可以跟随超链接来遍历Web。<br>World Wide Web,缩写为WWW、W3或者Web，是一个因特网上的相互链接的超文本文档。使用Web浏览器，可以查看一个文档，以及跟随超链接查看其他文档。</p>
-<p>Web爬虫，可以跟随超链接来自动遍历Web的程序。</p>
-<p>客户程序从一个Web服务器上获取文件。</p>
-<p>程序的算法如下：<br><img src="media/15881308836609.jpg" alt="-w1048"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/26/JavaScript/JavaScript/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/26/JavaScript/JavaScript/" class="post-title-link" itemprop="url">JavaScript/JavaScript</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-26 15:13:19" itemprop="dateCreated datePublished" datetime="2020-02-26T15:13:19+08:00">2020-02-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-01 10:22:30" itemprop="dateModified" datetime="2020-06-01T10:22:30+08:00">2020-06-01</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h1><ol>
-<li>HTML 定义了网页的内容</li>
-<li>CSS 描述了网页的布局</li>
-<li>JavaScript 网页的行为</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1030,7 +930,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">126</span>
+          <span class="site-state-item-count">130</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1087,7 +987,7 @@
 <div class="copyright">
   
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-nianchu"></i>
   </span>
@@ -1102,7 +1002,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共104.8k字</span>
+  <span class="post-count">博客全站共105.5k字</span>
 </div>
 
         
