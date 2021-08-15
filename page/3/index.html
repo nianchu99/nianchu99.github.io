@@ -224,6 +224,163 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/31/Java/%E4%BA%8C%E8%BF%9B%E5%88%B6IO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/31/Java/%E4%BA%8C%E8%BF%9B%E5%88%B6IO/" class="post-title-link" itemprop="url">Java/二进制IO</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-05-31 19:11:01" itemprop="dateCreated datePublished" datetime="2020-05-31T19:11:01+08:00">2020-05-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-03 22:09:20" itemprop="dateModified" datetime="2020-06-03T22:09:20+08:00">2020-06-03</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="二进制I-O"><a href="#二进制I-O" class="headerlink" title="二进制I/O"></a>二进制I/O</h1><h2 id="17-1-引言"><a href="#17-1-引言" class="headerlink" title="17.1 引言"></a>17.1 引言</h2><p><strong>文件分类：</strong> </p>
+<p>可以使用文本编辑器进行处理(读取、创建或者修改)的文件被称为文本文件。所有</p>
+<p>所有其他的文件都被称为二进制文件。</p>
+<p>不能使用文本编辑器来读取二进制文件——它们是为让程序来读取而设计的。就像，Java源程序存储在文本文件中，可以使用文本编辑器读取，而Java类是二进制文件，由Java虚拟机读取。</p>
+<p>可以简单的认为： 文本文件是由字符序列构成的，而二进制是由位bit序列构成的。</p>
+<p>二进制文件的优势在于它的处理效率比文本文件高。</p>
+<h2 id="17-2-在Java中如何处理文本I-O"><a href="#17-2-在Java中如何处理文本I-O" class="headerlink" title="17.2 在Java中如何处理文本I/O"></a>17.2 在Java中如何处理文本I/O</h2><p>要点提示： 使用Scanner类读取文本数据，使用PrintWriter类写文本数据。</p>
+<p>File类： 封装了文件或路径属性，但是不包含从/向文件读/写数据的方法。</p>
+<p>I/O类： 包含从/向文件读/写数据的方法。</p>
+<p>输出对象： 输出流</p>
+<p>输入对象： 输入流</p>
+<h2 id="17-3-文本I-O与二进制I-O"><a href="#17-3-文本I-O与二进制I-O" class="headerlink" title="17.3 文本I/O与二进制I/O"></a>17.3 文本I/O与二进制I/O</h2><p><strong>要点提示 ：</strong>二进制I/O不涉及编码和解码，所以更高效</p>
+<p>计算机并不区分二进制文件和文本文件。所有的文件都是以二进制形式来存储的，从本质上来说，所有的文件都是二进制的。</p>
+<p>文本I/O能提供一层抽象，用于字符串层次的编码和解码。对于文本I/O，编码和解码是自动进行的。</p>
+<p>对于文本编辑器或文本输出程序创建的文件，应该使用文本输入来读取，对于Java二进制输出程序创建的文件，应该使用二进制输入来读取。</p>
+<p>二进制I/O不需要编码和解码，所以它的效率更高。同时，由于二进制文件与主机的编码方案无关，因此，它是可移植的。这也是Java的类文件存储为二进制文件的原因。</p>
+<h2 id="17-4-二进制I-O类"><a href="#17-4-二进制I-O类" class="headerlink" title="17.4 二进制I/O类"></a>17.4 二进制I/O类</h2><p>*<em>要点提示： *</em>抽象类InputStream是读取二进制数据的根类，抽象类是OutputStream是写入二进制数据的根类。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfbv5k8kqkj31dy0k6k5z.jpg" alt="image-20200531193633640"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfbv5x8lkdj31cy0ny1kx.jpg" alt="image-20200531193655448"></p>
+<p>注意： 二进制I/O类中所有方法都声明为抛出java.io.IOException或java.io.IOException的子类</p>
+<p>![image-20200531193942861](/Users/bowenkei/Library/Application Support/typora-user-images/image-20200531193942861.png)</p>
+<h3 id="17-4-1-FileInputStream和FileOutputStream"><a href="#17-4-1-FileInputStream和FileOutputStream" class="headerlink" title="17.4.1 FileInputStream和FileOutputStream"></a>17.4.1 FileInputStream和FileOutputStream</h3><p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfbvanos7bj318s0do4a6.jpg" alt="image-20200531194126051"></p>
+<p>如果为一个不存在的文件创建一个FileInputStream对象，将会发生java.io.FileNotFountException异常</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfbveid9yij31ce0e819x.jpg" alt="image-20200531194506941"></p>
+<p>使用FileOutputStream构造方法创建对象时，如果这个文件不存在，就会创建一个新的文件</p>
+<p>当文件已存在的时候，使用以下两个方法将会删除点文件中已经存在的内容： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileOutputStream(file: File)</span><br><span class="line">  FileOutputStream(filename: String)</span><br></pre></td></tr></table></figure>
+
+<p>为了既保留文件现有内容又可以给文件追加新数据，可以在创建一个FileOutputStream对象时，添加append参数，并将其值设置为true。</p>
+<p>几乎所有的I/O类都会抛出java.io.IOException。所以，必须在方法中声明会抛出java.io.IOException异常，或者将代码放到try-catch块中。</p>
+<p><strong>程序清单17-1使用二进制I/O将从1到10的10个字节值写入一个名为temp.dat的文件，再把他们从文件中读出来。</strong></p>
+<p>使用try-with-resource来声明和创建输入输出流，从而在使用后可以自动关闭。</p>
+<p>java.io.InputStream和java.io.OutputStream实现了AutoClosable接口。</p>
+<p>AutoClosable接口定义了close()方法，用来个关闭资源。任何AutoClosable类型的对象可以用于try-with-resources语法中，实现自动关闭。</p>
+<p>二进制文件可以从程序中读取它，但是不能用文本编辑器阅读它。</p>
+<p><strong>提示：</strong>当流不再使用时，记得使用close()方法将其关闭，或者使用try-with-resource语句自动关闭。不关闭流可能会在输出文件中造成数据受损，或导致其他的程序设计错误。</p>
+<p>*<em>注意： *</em>FileInputStream类的实例可以作为参数去构造一个Scanner=对象， FileOutputStream类的实例可以作为参数构造一个Printerwriter对象。可以创建一个PrintWriter对象来向文件中追加文本。如果xx.txt不存在，就会创建这个文件。如果xx.txt文件已经存在，就将新数据追加到该文件中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Printer(<span class="keyword">new</span> FileOutputStream(<span class="string">"xx.txt"</span>, <span class="keyword">true</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="FileterInputStream-和-FilterOutputStream"><a href="#FileterInputStream-和-FilterOutputStream" class="headerlink" title="FileterInputStream 和 FilterOutputStream"></a>FileterInputStream 和 FilterOutputStream</h3><p>过滤器数据流(file stream)是为某种目的过滤字节的数据流。读取整数值、双精度值和字符串，那就需要一个过滤类来包装字节输入流。使用过滤器类就可以读取整数值、双精度值和字符串，而不是字节或字符。</p>
+<p>FileterInputStream 和 FilterOutputStream是过滤数据的基类。需要处理基本数值类型时，就是用DataInputStream和DataOutputStream类来过滤字节。</p>
+<p>###DataInputStream和DataOutputStream </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfd1fe1k2fj31b80l27r0.jpg" alt="image-20200601195913906"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfd1fnrp7jj31cw0monow.jpg" alt="image-20200601195934714"></p>
+<p>基本类型的值不需要做任何转化就可以从内存复制到输出数据流。字符串的字符可以写成多种形式 ：</p>
+<ol>
+<li>二进制I/O中的字符与字符串</li>
+</ol>
+<p>一个统一码由两个字节构成。writerChar(char c )方法将字符c的统一码写入输出流。writerChars(String s )方法将字符串s中的所有字符的统一码写到输出流中。writeBytes(String s )方法将字符串s中的每个字符的统一码的低字节写入到输出流。统一码的高字节被抛弃。</p>
+<p>writeBytes(String s )方法适用于由ASCII码构成的字符串，ASCII码仅存储统一码的低字节。如果毕业字符串包含非ASCII码的字符，就必须使用writeChars方法实现写入这个字符串。</p>
+<p>writeUTF(String s )方法将两个字节的长度信息写入输入流，后面紧跟着的是字符串s中的每个字符的改进版UTF-8的形式。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfd1uojv8pj30u00zcb2a.jpg" alt="image-20200601201352901"></p>
+<p>*<em>警告： *</em></p>
+<p>应该按存储的顺序和格式读取文件中的数据。</p>
+<ol start="3">
+<li>检测文件的末尾</li>
+</ol>
+<p>如果达到InputStream的末尾之后还继续从中读取数据，就会发生EOFException异常。这个异常可以用来检查是否已经到达文件末尾。</p>
+<h3 id="BufferedInputStream-和-BufferedOutputStream"><a href="#BufferedInputStream-和-BufferedOutputStream" class="headerlink" title="BufferedInputStream 和 BufferedOutputStream"></a>BufferedInputStream 和 BufferedOutputStream</h3><p>BufferedInputStream 和 BufferedOutputStream没有包含新的方法，它们的方法都是从InputStream 和OutputStream继承而来的。它们在后来管理了一个缓冲区，根据要求自动从磁盘中读取数据和写入数据。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfe0eogrfpj31bm0i8dvx.jpg" alt="image-20200602160930843"></p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfe0fug543j31c80pukca.jpg" alt="image-20200602161036165"></p>
+<p>缓冲区指定大小是512字节。</p>
+<p>*<em>提示： *</em>应该总是使用缓冲区I/O来加速输入和输出。</p>
+<h2 id="17-5-示例学习：-复制文件"><a href="#17-5-示例学习：-复制文件" class="headerlink" title="17.5 示例学习： 复制文件"></a>17.5 示例学习： 复制文件</h2><h2 id="17-6-对象I-O"><a href="#17-6-对象I-O" class="headerlink" title="17.6 对象I/O"></a>17.6 对象I/O</h2><p><strong>要点提示：</strong>ObjectInputStream 和ObjectOutputStream类可以用于读/写可序列化的对象。</p>
+<p>ObjectInputStream 和ObjectOutputStream类除了实现基本数据类型与字符串的输入和输出之外，还可以实现对象的输入和输出。因而，可以使用ObjectInputStream 和ObjectOutputStream类代替DataInputStream和DataOutputStream。</p>
+<p>读取时为了得到所需的数据类型，必须使用Java安全的类型转换。例如： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date date = (Date)(inputStream.readObject());</span><br></pre></td></tr></table></figure>
+
+<p>readObject()方法可能会抛出ClassNotFoundException.注意使用时要抛出它</p>
+<h3 id="17-6-1-Serializable-接口"><a href="#17-6-1-Serializable-接口" class="headerlink" title="17.6.1 Serializable 接口"></a>17.6.1 Serializable 接口</h3><p>可以写入到输出流中的对象被称为可序化的。</p>
+<p>可序化对象的类必须实现Serializable接口。</p>
+<p>Serializable是一个标记接口。它没有方法，不需要在类中为实现Serializable接口增加额外的代码。实现这个接口可以启动Java的序列化机制，自动完成存储对象和数组的过程。</p>
+<p>Java提供一个内在机制自动完成写对象的过程。这个过程称为对象序列化(object serialization),它是在ObjectOutputStream中实现的。相反，读取对象的过程称作反对象序列化(object deserialization),它是在ObjectInputStream中实现的。</p>
+<p>试图存储一个不支持Serializable接口的对象会引起一个NotSerializableexception异常。</p>
+<p>当存储一个可序列化对象时，会对该对象的类进行编码。编码包括类名、类的签名、对象实例变量的值以及该对象引用的任何其他对象的闭团，但是不存储对象静态变量的值。</p>
+<p><strong>注意： 非序列化的数据域</strong></p>
+<p>如果一个对象是Serializable的实例，但它包含了非序列化的实例数据域，那么就不可以序列化这个对象。为了使该对象是可序列化的，需要给这些数据域加上关键字transient,告诉Java虚拟机将对象写入流时忽略这些数据域。看下面的例子： </p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfe7lzpgqtj31bi0e4ak6.jpg" alt="image-20200602201849302"></p>
+<p><strong>注意： 重复的对象</strong></p>
+<p>如果一个对象不止一次写入对象流，不会存储对象的多分副本。第一次写入一个对象时，就会为它创建一个序列号。Java虚拟机将对象的所有内容和序列号一起写入对象流。以后每次存储时，如果再写入相同的对象，就只存储序列号。读出这些对象时，它们的引用相同，因为在内存中实际上存储的只是一个对象。</p>
+<h3 id="17-6-2-序列化数组"><a href="#17-6-2-序列化数组" class="headerlink" title="17.6.2 序列化数组"></a>17.6.2 序列化数组</h3><p>如果数组中所有元素都是可序列化的，那这个数组就是可序列化的。一个完整的数组可以使用writeObject方法写入文件，随后使用readObject方法恢复。</p>
+<h2 id="17-7-随机访问文件"><a href="#17-7-随机访问文件" class="headerlink" title="17.7 随机访问文件"></a>17.7 随机访问文件</h2><p>*<em>要点提示： *</em>Java提供了RandomAccessFile类，允许从文件的任何位置进行数据的读写。</p>
+<p>只读的流或者只写的流被称为顺序(sequential)流。使用顺序流打开的文件被称为顺序访问文件。顺序访问文件的内容不能更新。</p>
+<p>使用RandomAccessFile类打开的文件称为随机访问文件。</p>
+<p>RandomAccessFile类实现了DateInput和DataOutput接口。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfexci82n0j31bc0u07wh.jpg" alt="image-20200603110915507"></p>
+<p>创建一个RandomAccessFile时，可以指定两种模式(“r”，“rw”)。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RandomAccessFile raf = <span class="keyword">new</span> RandomAccessFile(<span class="string">"test.dat"</span>, <span class="string">"rw"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>如果test.dat 已经存在，则创建raf以便访问这个文件，否则就创建一个名为test.dat的新文件，再创建raf以便访问这个文件。raf.length()返回给定时刻文件test.dat中的字节数。向文件中追加数据，raf.length就会增加。</p>
+<p><img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gfexlt416tj310r0u0b29.jpg" alt="image-20200603111803022"></p>
+<p>在RandomAccessFile中使用setLength(0)方法将文件长度设置为0。这样做的效果是将文件的原有内容删除。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/05/22/Java/JavaFx%20UI%E7%BB%84%E4%BB%B6%E5%92%8C%E5%A4%9A%E5%AA%92%E4%BD%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1072,119 +1229,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/30/Java/Java-%E9%83%91%E8%8E%89%E7%89%88%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81%E8%AF%BE%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/30/Java/Java-%E9%83%91%E8%8E%89%E7%89%88%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81%E8%AF%BE%E4%BB%B6/" class="post-title-link" itemprop="url">Java/Java-郑莉版输入输出流课件</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-30 09:36:46 / 修改时间：13:50:27" itemprop="dateCreated datePublished" datetime="2020-04-30T09:36:46+08:00">2020-04-30</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="郑莉版输入输出流课件"><a href="#郑莉版输入输出流课件" class="headerlink" title="郑莉版输入输出流课件"></a>郑莉版输入输出流课件</h1><p>在Java中将信息的输入与输出过程抽象为I/O流<br>I/O流一旦被创建就会自动打开<br>通过调用close方法，可以显式关闭任何一个流<br>如果流对象不再被引用，Java的回收机制也会隐式地关闭它<br><img src="media/15882111044109.jpg" alt="-w687"></p>
-<h2 id="读写数据的方法"><a href="#读写数据的方法" class="headerlink" title="读写数据的方法"></a>读写数据的方法</h2><p>不论数据从哪来，到哪去，也不论数据本身是何种类型，读写数据分方法大体上都是一样的<br><img src="media/15882113259367.jpg" alt="-w524"></p>
-<h2 id="I-O流的分类"><a href="#I-O流的分类" class="headerlink" title="I/O流的分类"></a>I/O流的分类</h2><ul>
-<li>从流的方向划分</li>
-</ul>
-<ul>
-<li>输入流</li>
-<li>输出流</li>
-</ul>
-<ul>
-<li>从流的分工划分</li>
-</ul>
-<ul>
-<li>节点流</li>
-<li>处理流</li>
-</ul>
-<ul>
-<li>从流的内容划分</li>
-</ul>
-<ul>
-<li>面向字符的流</li>
-<li>面向字节的流</li>
-</ul>
-<p><strong><em>自己补充了解：</em></strong><br>节点流和处理流的区别<br><img src="media/15882115576182.jpg" alt="-w568"></p>
-<h2 id="java-io-包的顶级层次结构"><a href="#java-io-包的顶级层次结构" class="headerlink" title="java.io 包的顶级层次结构"></a>java.io 包的顶级层次结构</h2><p>面向字符的流： 专门用于字符数据<br>面向字节的流： 用于一般目的<br><img src="media/15882126043831.jpg" alt="-w586"></p>
-<h2 id="面向字符的流"><a href="#面向字符的流" class="headerlink" title="面向字符的流"></a>面向字符的流</h2><ul>
-<li>针对字符数据的特点进行过优化，提供一些面向字符的有用特性</li>
-<li>源或目标通常是文本文件<h3 id="实现内部格式和文本文件中的外部格式之间的转换"><a href="#实现内部格式和文本文件中的外部格式之间的转换" class="headerlink" title="实现内部格式和文本文件中的外部格式之间的转换"></a>实现内部格式和文本文件中的外部格式之间的转换</h3><img src="media/15882130366292.jpg" alt="-w684"><h3 id="面向字符的抽象类Read和Writer"><a href="#面向字符的抽象类Read和Writer" class="headerlink" title="面向字符的抽象类Read和Writer"></a>面向字符的抽象类Read和Writer</h3></li>
-<li>java.io包中所有流的抽象基类</li>
-<li>Reader提供了输入字符的API</li>
-<li>Writer提供了输出字符的API</li>
-<li>它们的子类又分为两大类</li>
-</ul>
-<ul>
-<li>节点流： 从数据源读入数据或往目的地写出数据</li>
-<li>处理流： 对数据执行某种处理</li>
-</ul>
-<ul>
-<li>多数程序使用这两个抽象类的一系列子类来读入/写出文本信息</li>
-</ul>
-<ul>
-<li>例如： FileRader/FileWriter用来读写文本文件</li>
-</ul>
-<p>处理流和节点流一览：<br><img src="media/15882256079774.jpg" alt="-w670"></p>
-<h2 id="面向字节的流"><a href="#面向字节的流" class="headerlink" title="面向字节的流"></a>面向字节的流</h2><ul>
-<li>数据源或目标中含有非字符数据，必须用字节流来输入/输出。</li>
-<li>通常被用来读写诸如图片、声音之类的二进制数据</li>
-<li>绝大多数数据是被存储为二进制文件的，世界上的文本大约只能占到2%，通常二进制文件比含有相同数据量的文本文件小得多。</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1228,7 +1277,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1300,7 +1349,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共105.5k字</span>
+  <span class="post-count">博客全站共105.7k字</span>
 </div>
 
         

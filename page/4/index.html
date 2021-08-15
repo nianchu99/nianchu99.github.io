@@ -224,6 +224,114 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/30/Java/Java-%E9%83%91%E8%8E%89%E7%89%88%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81%E8%AF%BE%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/30/Java/Java-%E9%83%91%E8%8E%89%E7%89%88%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81%E8%AF%BE%E4%BB%B6/" class="post-title-link" itemprop="url">Java/Java-郑莉版输入输出流课件</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-30 09:36:46 / 修改时间：13:50:27" itemprop="dateCreated datePublished" datetime="2020-04-30T09:36:46+08:00">2020-04-30</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="郑莉版输入输出流课件"><a href="#郑莉版输入输出流课件" class="headerlink" title="郑莉版输入输出流课件"></a>郑莉版输入输出流课件</h1><p>在Java中将信息的输入与输出过程抽象为I/O流<br>I/O流一旦被创建就会自动打开<br>通过调用close方法，可以显式关闭任何一个流<br>如果流对象不再被引用，Java的回收机制也会隐式地关闭它<br><img src="media/15882111044109.jpg" alt="-w687"></p>
+<h2 id="读写数据的方法"><a href="#读写数据的方法" class="headerlink" title="读写数据的方法"></a>读写数据的方法</h2><p>不论数据从哪来，到哪去，也不论数据本身是何种类型，读写数据分方法大体上都是一样的<br><img src="media/15882113259367.jpg" alt="-w524"></p>
+<h2 id="I-O流的分类"><a href="#I-O流的分类" class="headerlink" title="I/O流的分类"></a>I/O流的分类</h2><ul>
+<li>从流的方向划分</li>
+</ul>
+<ul>
+<li>输入流</li>
+<li>输出流</li>
+</ul>
+<ul>
+<li>从流的分工划分</li>
+</ul>
+<ul>
+<li>节点流</li>
+<li>处理流</li>
+</ul>
+<ul>
+<li>从流的内容划分</li>
+</ul>
+<ul>
+<li>面向字符的流</li>
+<li>面向字节的流</li>
+</ul>
+<p><strong><em>自己补充了解：</em></strong><br>节点流和处理流的区别<br><img src="media/15882115576182.jpg" alt="-w568"></p>
+<h2 id="java-io-包的顶级层次结构"><a href="#java-io-包的顶级层次结构" class="headerlink" title="java.io 包的顶级层次结构"></a>java.io 包的顶级层次结构</h2><p>面向字符的流： 专门用于字符数据<br>面向字节的流： 用于一般目的<br><img src="media/15882126043831.jpg" alt="-w586"></p>
+<h2 id="面向字符的流"><a href="#面向字符的流" class="headerlink" title="面向字符的流"></a>面向字符的流</h2><ul>
+<li>针对字符数据的特点进行过优化，提供一些面向字符的有用特性</li>
+<li>源或目标通常是文本文件<h3 id="实现内部格式和文本文件中的外部格式之间的转换"><a href="#实现内部格式和文本文件中的外部格式之间的转换" class="headerlink" title="实现内部格式和文本文件中的外部格式之间的转换"></a>实现内部格式和文本文件中的外部格式之间的转换</h3><img src="media/15882130366292.jpg" alt="-w684"><h3 id="面向字符的抽象类Read和Writer"><a href="#面向字符的抽象类Read和Writer" class="headerlink" title="面向字符的抽象类Read和Writer"></a>面向字符的抽象类Read和Writer</h3></li>
+<li>java.io包中所有流的抽象基类</li>
+<li>Reader提供了输入字符的API</li>
+<li>Writer提供了输出字符的API</li>
+<li>它们的子类又分为两大类</li>
+</ul>
+<ul>
+<li>节点流： 从数据源读入数据或往目的地写出数据</li>
+<li>处理流： 对数据执行某种处理</li>
+</ul>
+<ul>
+<li>多数程序使用这两个抽象类的一系列子类来读入/写出文本信息</li>
+</ul>
+<ul>
+<li>例如： FileRader/FileWriter用来读写文本文件</li>
+</ul>
+<p>处理流和节点流一览：<br><img src="media/15882256079774.jpg" alt="-w670"></p>
+<h2 id="面向字节的流"><a href="#面向字节的流" class="headerlink" title="面向字节的流"></a>面向字节的流</h2><ul>
+<li>数据源或目标中含有非字符数据，必须用字节流来输入/输出。</li>
+<li>通常被用来读写诸如图片、声音之类的二进制数据</li>
+<li>绝大多数数据是被存储为二进制文件的，世界上的文本大约只能占到2%，通常二进制文件比含有相同数据量的文本文件小得多。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/04/16/Java/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -892,79 +1000,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/31/Matlab/Matlab-%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E8%AF%BE%E5%A0%82/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/31/Matlab/Matlab-%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97%E8%AF%BE%E5%A0%82/" class="post-title-link" itemprop="url">Matlab/Matlab-数值计算课堂</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-31 16:42:26 / 修改时间：19:01:43" itemprop="dateCreated datePublished" datetime="2020-03-31T16:42:26+08:00">2020-03-31</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="5Matlab-数值计算-课堂"><a href="#5Matlab-数值计算-课堂" class="headerlink" title="5Matlab-数值计算(课堂)"></a>5Matlab-数值计算(课堂)</h1><h2 id="5-1-线性方程组求解"><a href="#5-1-线性方程组求解" class="headerlink" title="5.1 线性方程组求解"></a>5.1 线性方程组求解</h2><h3 id="5-1-1-直接求接法"><a href="#5-1-1-直接求接法" class="headerlink" title="5.1.1 直接求接法"></a>5.1.1 直接求接法</h3><p>已知线性方程组： Ax=b;<br>其中A为已知的n阶方阵，b是含n个分量的已知列向量，而x为含n个分量的未知列向量。<br>如图：<br><img src="media/15856452203645.jpg" alt="-w893"></p>
-<ul>
-<li>1 逆矩阵解法<br>对于方程组Ax=b,根据线性代数知识可知,x=b/A;其中1/A为矩阵A的逆矩阵。<br>实例：求解线性方程组的解；<br><img src="media/15856455181525.jpg" alt="-w523"></li>
-</ul>
-<h2 id="5-2-非线性方程求解"><a href="#5-2-非线性方程求解" class="headerlink" title="5.2 非线性方程求解"></a>5.2 非线性方程求解</h2><p>非线性方程组通常很难求其解析解，更多的是通过数值分析求其近似值。</p>
-<h3 id="5-2-1-非线性方程数值求解基本原理"><a href="#5-2-1-非线性方程数值求解基本原理" class="headerlink" title="5.2.1 非线性方程数值求解基本原理"></a>5.2.1 非线性方程数值求解基本原理</h3><p>牛顿算法……</p>
-<ul>
-<li>1.solve 命令求解非线性方程</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1008,7 +1048,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1080,7 +1120,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共105.5k字</span>
+  <span class="post-count">博客全站共105.7k字</span>
 </div>
 
         

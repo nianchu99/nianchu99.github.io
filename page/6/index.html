@@ -224,6 +224,111 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/15/Python/Python%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/15/Python/Python%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">Python零散的知识</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-15 23:52:37" itemprop="dateCreated datePublished" datetime="2020-03-15T23:52:37+08:00">2020-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-20 16:16:57" itemprop="dateModified" datetime="2020-04-20T16:16:57+08:00">2020-04-20</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Python零散知识"><a href="#Python零散知识" class="headerlink" title="Python零散知识"></a>Python零散知识</h1><h2 id="range范围问题"><a href="#range范围问题" class="headerlink" title="range范围问题"></a>range范围问题</h2><ul>
+<li>range(1,10):包含1，但是不包含10</li>
+</ul>
+<h2 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h2><p>指数 **<br>取整 // </p>
+<h2 id="sys-exit"><a href="#sys-exit" class="headerlink" title="sys.exit()"></a>sys.exit()</h2><p>使用sys.exit()可以提前结束程序，使用时先导入sys</p>
+<h2 id="None"><a href="#None" class="headerlink" title="None"></a>None</h2><p>与java中null相对应的是none</p>
+<h2 id="print"><a href="#print" class="headerlink" title="print"></a>print</h2><p>print的返回值是None</p>
+<p>print默认换行，想要不换行。使用如下：<br>print(‘不换行’.end=’’)</p>
+<p>类似地，使用sep关键字参数，可以替换默认的分割字符串(空格)</p>
+<h2 id="global"><a href="#global" class="headerlink" title="global"></a>global</h2><p>Python中可以使用global声明一个全局变量</p>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>错误可以由try和except语句来处理。那些可能出错的语句被放在try子句中。如果发生错误，程序执行就转到接下来的except子句开始处。</p>
+<p><strong><em>需要注意的是</em></strong><br>，一旦执行跳到except子句的代码，就不会回到try子句。它会继续照常向下执行。</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>列表是一个值，它包含多个字构成的序列。术语“列表”指的是列表本身(它作为一个值，可以保存在变量中，或者传递给函数，而不是指列表之内的那些值)</p>
+<ul>
+<li><p>切片<br>包含第一个下标但是不包括第二个下标</p>
+</li>
+<li><p>列表连接和复制<br>像字符串一样，+用于列表连接，*用于列表复制</p>
+</li>
+<li><p>del语句用于删除</p>
+</li>
+<li><p>多重赋值技巧<br><img src="media/15873694897724.jpg" alt="-w661"></p>
+</li>
+<li><p>用index()方法在列表中查找值<br>返回下标</p>
+</li>
+<li><p>append和insert<br>前者将值添加到末尾，insert添加到指定位置</p>
+</li>
+<li><p>remove方法从列表中删除值<br>如果该值在列表中出现多次，只删除第一次出现的值</p>
+</li>
+<li><p>逆向排序<br>spam.sort(reverse=True)<br>其中spam是一个列表</p>
+</li>
+</ul>
+<p><strong>注意</strong><br>不能对既有数字又有字符串值的列表排序</p>
+<p>sort方法对字符串排序是，使用的是“ASCII”字符顺序</p>
+<ul>
+<li>列表和字符串的区别<br>列表是可变的，字符串是不可变的。<h2 id="元组和列表的区别"><a href="#元组和列表的区别" class="headerlink" title="元组和列表的区别"></a>元组和列表的区别</h2>元组符号： ()<br>元组也是不可变的。<br>元组不能让他的值被修改、添加和删除</li>
+</ul>
+<p><strong>注意</strong><br>如果元组中只有一个值，你可以在括号内该值后面跟上一个逗号，表明这种情况，否则，Python会认为你只是在一个普通括号内输入了一个值</p>
+<h2 id="受用list-和tuple-函数来转换类型"><a href="#受用list-和tuple-函数来转换类型" class="headerlink" title="受用list()和tuple()函数来转换类型"></a>受用list()和tuple()函数来转换类型</h2><p>前者是列表，后者是元组</p>
+<h2 id="列表的引用"><a href="#列表的引用" class="headerlink" title="列表的引用"></a>列表的引用</h2><p><img src="media/15873706020062.jpg" alt="-w623"></p>
+<h2 id="续行符-‘-’"><a href="#续行符-‘-’" class="headerlink" title="续行符 ‘\’"></a>续行符 ‘\’</h2><p>在行末使用\可以将一条指令写成多行</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/15/Matlab/Matlab%E7%9F%A9%E9%98%B5%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -994,71 +1099,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/03/14/Java/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%AC%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/14/Java/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E8%BD%AC%E5%8D%81%E8%BF%9B%E5%88%B6%E7%9A%84%E5%85%AC%E5%BC%8F/" class="post-title-link" itemprop="url">Java/十六进制转十进制的公式</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-03-14 11:36:01 / 修改时间：11:36:47" itemprop="dateCreated datePublished" datetime="2020-03-14T11:36:01+08:00">2020-03-14</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="十六进制转十进制的公式"><a href="#十六进制转十进制的公式" class="headerlink" title="十六进制转十进制的公式"></a>十六进制转十进制的公式</h1><p>(我自己从来没记过嘿嘿)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hexToDecimal</span><span class="params">(String hex)</span></span>&#123;</span><br><span class="line">       <span class="keyword">int</span> decimalValue = <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; hex.length(); i++) &#123;</span><br><span class="line">     <span class="comment">//</span></span><br><span class="line">       <span class="keyword">char</span> hexChar  = hex.charAt(i);</span><br><span class="line">       decimalValue = decimalValue * <span class="number">16</span> + hexCharToDecimal(hexChar);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> decimalValue;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1102,7 +1147,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1174,7 +1219,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共105.5k字</span>
+  <span class="post-count">博客全站共105.7k字</span>
 </div>
 
         

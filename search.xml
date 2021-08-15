@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android/ScrollText</title>
+    <url>/2021/08/14/Android/ScrollText/</url>
+    <content><![CDATA[<h1 id="scrolltext"><a href="#scrolltext" class="headerlink" title="scrolltext"></a>scrolltext</h1><h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><p>Use ScrollText , you can simply scroll any text. It supports horizontal and vertical scrolling, and you can customize the text color, background color, scroll speed, font size, etc.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><h3 id="library"><a href="#library" class="headerlink" title="library"></a>library</h3><p>By adding  the library to your project.</p>
+<h3 id="Maven-center"><a href="#Maven-center" class="headerlink" title="Maven center"></a>Maven center</h3><h2 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h2><h3 id="xml"><a href="#xml" class="headerlink" title="xml"></a>xml</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"scrollColor"</span> <span class="attr">format</span>=<span class="string">"reference|color"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"scrollSize"</span> <span class="attr">format</span>=<span class="string">"integer"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"scrollSpeed"</span> <span class="attr">format</span>=<span class="string">"integer"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"scrollContent"</span> <span class="attr">format</span>=<span class="string">"string"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"scrollBackColor"</span> <span class="attr">format</span>=<span class="string">"reference|color"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">attr</span> <span class="attr">name</span>=<span class="string">"android:orientation"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Getter</span></span><br><span class="line"><span class="keyword">int</span> color: getmColor();</span><br><span class="line"><span class="keyword">int</span> color: getBackColor();</span><br><span class="line">String content: getScrollString();</span><br><span class="line"><span class="keyword">boolean</span> isScroll: getIsScroll();</span><br><span class="line"><span class="comment">// (0 horizontal , 1 is vertical )</span></span><br><span class="line"><span class="keyword">int</span> orientation: getOrientation();</span><br><span class="line"><span class="keyword">int</span> textSize: getScrollSize();</span><br><span class="line"><span class="keyword">int</span> speed: getSpeed();</span><br><span class="line"><span class="comment">// Setter</span></span><br><span class="line">setmColor(<span class="keyword">int</span> color);</span><br><span class="line">setBackColor(<span class="keyword">int</span> color);</span><br><span class="line">setScrollString(String content);</span><br><span class="line">setIsScroll(<span class="keyword">boolean</span> isScroll);</span><br><span class="line">setOrientation(<span class="keyword">int</span> orientation);</span><br><span class="line">setScrollSize(<span class="keyword">int</span> textSize);</span><br><span class="line">setSpeed(<span class="keyword">int</span> spee);</span><br><span class="line"><span class="comment">// action</span></span><br><span class="line">start();</span><br><span class="line">pause();</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Detail"><a href="#Detail" class="headerlink" title="Detail"></a>Detail</h2><h3 id="Use-in-xml"><a href="#Use-in-xml" class="headerlink" title="Use in xml"></a>Use in xml</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">space.nianchu.scrolltext.ScrollTextView</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">android:id</span>=<span class="string">"@+id/text4"</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">app:scrollColor</span>=<span class="string">"#00FF00"</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">app:scrollSize</span>=<span class="string">"100"</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">app:scrollSpeed</span>=<span class="string">"5"</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">app:scrollContent</span>=<span class="string">"Nice to meet you."</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">app:scrollBackColor</span>=<span class="string">"#000000"</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">android:orientation</span>=<span class="string">"vertical"</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span></span><br><span class="line"><span class="tag">                   <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h3 id="Use-by-java"><a href="#Use-by-java" class="headerlink" title="Use by java"></a>Use by java</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ScrollTextView horizontalText1 = <span class="keyword">new</span> ScrollTextView(<span class="keyword">this</span>);</span><br><span class="line">        scrollTextAddByJavaLayout.addView(horizontalText1);</span><br><span class="line">        LinearLayout.LayoutParams params1 = (LinearLayout.LayoutParams) horizontalText1.getLayoutParams();</span><br><span class="line">        params1.gravity = Gravity.CENTER_HORIZONTAL;</span><br><span class="line">        params1.width = LinearLayout.LayoutParams.WRAP_CONTENT;</span><br><span class="line">        params1.height = LinearLayout.LayoutParams.WRAP_CONTENT;</span><br><span class="line">        horizontalText1.setLayoutParams(params1);</span><br><span class="line">        horizontalText1.start();</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Notice"><a href="#Notice" class="headerlink" title="Notice:"></a>Notice:</h3><p>*<em>No attribute is required. If there is no setting, the default is: *</em></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>scrollColor</td>
+<td>0xFF000000</td>
+</tr>
+<tr>
+<td>scrollSize</td>
+<td>100</td>
+</tr>
+<tr>
+<td>scrollSpeed</td>
+<td>5</td>
+</tr>
+<tr>
+<td>scrollContent</td>
+<td>Nice to meet you.</td>
+</tr>
+<tr>
+<td>scrollBackColor</td>
+<td>0xFFFFFFFF</td>
+</tr>
+<tr>
+<td>orientation</td>
+<td>1(0 horizontal , 1 is vertical )</td>
+</tr>
+</tbody></table>
+<h2 id="Screenshot-of-the-effect"><a href="#Screenshot-of-the-effect" class="headerlink" title="Screenshot of the effect"></a>Screenshot of the effect</h2><p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtgrcfjuqmg60860g24qf02.gif" alt="scrollText1"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtgr0ywbzsg608c0hitsr02.gif" alt="scrollText2"></p>
+<p><strong>More info, please see demo.</strong></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Java/Java注释规范</title>
     <url>/2020/11/12/Java/Java%E6%B3%A8%E9%87%8A%E8%A7%84%E8%8C%83/</url>
     <content><![CDATA[<h1 id="Java注释规范"><a href="#Java注释规范" class="headerlink" title="Java注释规范"></a>Java注释规范</h1><h2 id="文件注释"><a href="#文件注释" class="headerlink" title="文件注释"></a>文件注释</h2><h2 id="Javadoc文档注释"><a href="#Javadoc文档注释" class="headerlink" title="Javadoc文档注释"></a>Javadoc文档注释</h2><h2 id="文件注释-1"><a href="#文件注释-1" class="headerlink" title="文件注释"></a>文件注释</h2><h2 id="代码注释"><a href="#代码注释" class="headerlink" title="代码注释"></a>代码注释</h2>]]></content>

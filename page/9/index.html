@@ -224,6 +224,69 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/19/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="nianchu">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nianchu-Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/19/Java/java%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9F%A5%E6%89%BE/" class="post-title-link" itemprop="url">字符串查找</a>
+        </h1>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-19 00:58:05 / 修改时间：01:19:33" itemprop="dateCreated datePublished" datetime="2020-02-19T00:58:05+08:00">2020-02-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在String类中提供了indexOf和lastIndexOf方法用于查找字符或字符串，返回值是查找的字符串所在的位置，-1表示没有找到。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String的Char At(int index)方法可以返回索引index所在位置的字符</span><br></pre></td></tr></table></figure>
+
+<p><strong><em>实例代码</em></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">String sourceString = <span class="string">"There is a string accessing exemple"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获得字符串长度</span></span><br><span class="line"><span class="keyword">int</span> len = sourceString.length();</span><br><span class="line"><span class="comment">//获得索引位置16的字符串</span></span><br><span class="line"><span class="keyword">char</span> ch = sourceString.charAt(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//查找字符和子字符串</span></span><br><span class="line"><span class="keyword">int</span> firstChar1 = sourceString.indexOf(<span class="string">'r'</span>);<span class="comment">//从前往后搜索字符</span></span><br><span class="line"><span class="keyword">int</span> lastChar1 = sourceString.lastIndexOf(<span class="string">'r'</span>);<span class="comment">//从后往前搜索字符</span></span><br><span class="line"><span class="keyword">int</span> firststr1 = sourceString.indexOf(<span class="string">"ing"</span>);<span class="comment">//从前往后搜索字符串</span></span><br><span class="line"><span class="keyword">int</span> laststr1 = sourceString.lastIndexOf(<span class="string">"ing"</span>);<span class="comment">//从后往前搜索字符串</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> firstchar2 = sourceString.indexOf(<span class="string">'e'</span>, <span class="number">15</span>);<span class="comment">//从索引为15的位置开始</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 也就是说：indexOf和lastIndexOf都还可以接收一个开始的索引</span></span><br><span class="line"><span class="comment"> * 需要注意的是：如果没有找到，是不能够从头直接跳到尾巴去接着找，</span></span><br><span class="line"><span class="comment"> * 也不能从尾巴跳到头部去继续找，这种情况下，就只能算作找不到，</span></span><br><span class="line"><span class="comment"> * 返回-1</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/18/Java/java-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8B%BC%E6%8E%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -873,89 +936,11 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.nianchu.space/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="nianchu">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nianchu-Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/15/Python/sum%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">Python/sum函数</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-15 20:00:00" itemprop="dateCreated datePublished" datetime="2020-02-15T20:00:00+08:00">2020-02-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-16 09:46:55" itemprop="dateModified" datetime="2020-02-16T09:46:55+08:00">2020-02-16</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 序列求和</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,]))</span><br><span class="line"><span class="comment"># sum函数的原型是sum(iterable,start).可以设置一个初始值</span></span><br><span class="line">print(sum([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,],<span class="number">5</span>))</span><br><span class="line"><span class="comment"># 展开2层的嵌套列表</span></span><br><span class="line">iterable = [[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">5</span>,<span class="number">6</span>],[<span class="number">7</span>,<span class="number">8</span>]]</span><br><span class="line">print(sum(iterable,[<span class="number">0</span>]))<span class="comment"># 后面的start可以为空</span></span><br><span class="line"><span class="comment"># sum函数与下列函数等效</span></span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> element <span class="keyword">in</span> iterable:</span><br><span class="line">    start += element</span><br><span class="line">print(start)</span><br><span class="line">start = [<span class="number">0</span>]</span><br><span class="line"><span class="comment"># sum 函数可以看作reduce()的特殊情况</span></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"><span class="keyword">from</span> operator <span class="keyword">import</span> add</span><br><span class="line">print(reduce(add,iterable,start))</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -999,7 +984,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">130</span>
+          <span class="site-state-item-count">131</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1071,7 +1056,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共105.5k字</span>
+  <span class="post-count">博客全站共105.7k字</span>
 </div>
 
         
